@@ -1,0 +1,43 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu-batch",
+  "characterId": "hadori",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\hadori\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\hadori\\hadori-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\hadori\\processed-input.png",
+  "settings": {
+    "resolution": 160,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 8350,
+    "faces": 16704
+  },
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.353788,
+        0.0,
+        -0.228837
+      ],
+      [
+        0.353788,
+        1.78,
+        0.228837
+      ]
+    ]
+  },
+  "timings": {
+    "modelLoadSeconds": 31.344,
+    "preprocessSeconds": 4.863,
+    "reconstructionSeconds": 69.52,
+    "meshExtractionSeconds": 19.374,
+    "exportSeconds": 0.039
+  },
+  "torch": "2.13.0+cpu"
+}

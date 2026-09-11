@@ -1,0 +1,37 @@
+{
+  "characterId": "raon",
+  "source": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-triposr-v1.glb",
+  "runtime": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-blender-rigged-v1.glb",
+  "blend": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\blender\\raon-hero-pilot-v1.blend",
+  "vertices": 36287,
+  "triangles": 72566,
+  "materials": [
+    "Raon_Skin",
+    "Raon_GoldTrim",
+    "Raon_Hair",
+    "Raon_Shirt",
+    "Raon_Coat",
+    "Raon_Leather",
+    "Raon_Metal"
+  ],
+  "bones": 33,
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "sprint",
+    "jump",
+    "land",
+    "dodge",
+    "attackLight",
+    "attackHeavy",
+    "guard",
+    "hit",
+    "talkNeutral"
+  ],
+  "lods": {
+    "LOD0": 72566,
+    "LOD1": 39909,
+    "LOD2": 15963
+  }
+}

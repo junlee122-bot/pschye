@@ -1,0 +1,134 @@
+{
+  "schema": "raonjena.hitem3d-production-manifest",
+  "version": 1,
+  "provider": "Hitem3D",
+  "model": "hitem3dv2.1",
+  "resolution": "1536fast",
+  "faceCount": 1000000,
+  "pbr": true,
+  "format": "glb",
+  "characters": [
+    {
+      "characterId": "raon",
+      "characterName": "라온",
+      "sourceSheet": "/art/3d-inputs/raon-turnaround-v1.png",
+      "sourceDimensions": [1823, 863],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_44 (1).png",
+      "frontCrop": [28, 0, 400, 863],
+      "backCrop": [484, 0, 400, 863],
+      "leftCrop": [939, 0, 400, 863],
+      "rightCrop": [1395, 0, 400, 863],
+      "views": ["front", "back", "left", "right"],
+      "stage": "프시케 입단 초기"
+    },
+    {
+      "characterId": "hadori",
+      "characterName": "하도리",
+      "sourceSheet": "/art/archive/hadori-sheet.webp",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_44 (2).png",
+      "frontCrop": [95, 95, 405, 650],
+      "rightCrop": [535, 95, 365, 650],
+      "views": ["front", "right"],
+      "stage": "프시케 7기 1조장"
+    },
+    {
+      "characterId": "kazrin",
+      "characterName": "카즈린",
+      "sourceSheet": "/art/archive/kazrin-sheet.webp",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_44 (3).png",
+      "frontCrop": [175, 95, 330, 655],
+      "rightCrop": [540, 95, 365, 655],
+      "views": ["front", "right"],
+      "stage": "프시케 7기 3조장"
+    },
+    {
+      "characterId": "kain",
+      "characterName": "카인",
+      "sourceSheet": "/art/archive/kain-sheet.webp",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (4).png",
+      "frontCrop": [160, 95, 350, 655],
+      "rightCrop": [535, 95, 380, 655],
+      "views": ["front", "right"],
+      "stage": "프시케 7기 4조장"
+    },
+    {
+      "characterId": "leo",
+      "characterName": "레오",
+      "sourceSheet": "/art/archive/leo-sheet.webp",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (5).png",
+      "frontCrop": [165, 100, 330, 650],
+      "rightCrop": [545, 100, 340, 650],
+      "views": ["front", "right"],
+      "stage": "프시케 7기 5조장"
+    },
+    {
+      "characterId": "haechan",
+      "characterName": "해찬",
+      "sourceSheet": "/art/archive/haechan-sheet.png",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (6).png",
+      "frontCrop": [70, 35, 430, 720],
+      "rightCrop": [530, 35, 430, 720],
+      "views": ["front", "right"],
+      "stage": "대전쟁 전성기"
+    },
+    {
+      "characterId": "lami",
+      "characterName": "라미",
+      "sourceSheet": "/art/archive/lami-sheet.png",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (7).png",
+      "frontCrop": [145, 35, 370, 720],
+      "rightCrop": [525, 35, 420, 720],
+      "views": ["front", "right"],
+      "stage": "반란군 최고사령관"
+    },
+    {
+      "characterId": "jinhwon",
+      "characterName": "진훤",
+      "sourceSheet": "/art/archive/jinhwon-sheet.png",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (8).png",
+      "frontCrop": [85, 40, 425, 710],
+      "rightCrop": [525, 40, 410, 710],
+      "views": ["front", "right"],
+      "stage": "프시케 창설자"
+    },
+    {
+      "characterId": "maru",
+      "characterName": "마루",
+      "sourceSheet": "/art/archive/maru-sheet.png",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (9).png",
+      "frontCrop": [90, 40, 420, 710],
+      "rightCrop": [525, 40, 415, 710],
+      "views": ["front", "right"],
+      "stage": "은둔한 현자"
+    },
+    {
+      "characterId": "nabi-nia",
+      "characterName": "니아",
+      "sourceSheet": "/art/archive/nabi-nia-sheet.png",
+      "sourceDimensions": [1055, 1491],
+      "sourceFile": "ChatGPT Image 2026년 7월 16일 오전 07_33_45 (10).png",
+      "frontCrop": [520, 45, 410, 705],
+      "views": ["front"],
+      "stage": "전후 제국 여황제"
+    },
+    {
+      "characterId": "ann",
+      "characterName": "앤",
+      "sourceSheet": "/art/3d-inputs/ann-front-fidelity-v1.png",
+      "sourceDimensions": [1024, 1536],
+      "sourceFile": "ann-front-fidelity-v1.png",
+      "frontCrop": [0, 0, 1024, 1536],
+      "views": ["front"],
+      "stage": "프시케 1기 2조장",
+      "referenceTier": "fidelity-front-v1"
+    }
+  ]
+}

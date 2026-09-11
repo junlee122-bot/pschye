@@ -1,0 +1,43 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu-batch",
+  "characterId": "lami",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\lami\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\lami\\lami-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\lami\\processed-input.png",
+  "settings": {
+    "resolution": 160,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 14447,
+    "faces": 28874
+  },
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.409036,
+        0.0,
+        -0.338192
+      ],
+      [
+        0.409036,
+        1.78,
+        0.338192
+      ]
+    ]
+  },
+  "timings": {
+    "modelLoadSeconds": 34.021,
+    "preprocessSeconds": 2.653,
+    "reconstructionSeconds": 52.226,
+    "meshExtractionSeconds": 21.867,
+    "exportSeconds": 0.031
+  },
+  "torch": "2.13.0+cpu"
+}

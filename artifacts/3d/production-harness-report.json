@@ -1,0 +1,69 @@
+{
+  "schema": "raonjena.3d-production-harness",
+  "version": 1,
+  "generatedAt": "2026-07-31T21:20:58.075Z",
+  "status": "pass",
+  "executions": [
+    {
+      "script": "tools/3d/generate-procedural-glb.mjs",
+      "code": 0,
+      "stdout": "generated 48 GLB models\nraon: 41 meshes, 4704 triangles, 130592 bytes\nhadori: 33 meshes, 4440 triangles, 117868 bytes\nkazrin: 44 meshes, 4944 triangles, 136876 bytes\nkain: 35 meshes, 4536 triangles, 121256 bytes\nleo: 41 meshes, 4704 triangles, 130612 bytes\nchris: 33 meshes, 4440 triangles, 117832 bytes\nhaechan: 41 meshes, 4704 triangles, 130592 bytes\nlami: 44 meshes, 4872 triangles, 136388 bytes\njinhwon: 41 meshes, 4704 triangles, 130628 bytes\nann: 44 meshes, 4944 triangles, 136892 bytes\nmaru: 41 meshes, 4704 triangles, 130596 bytes\nnabi-nia: 44 meshes, 4872 triangles, 136436 bytes\ngaram: 41 meshes, 4776 triangles, 131116 bytes\nkangrim: 35 meshes, 4464 triangles, 120748 bytes\nguillaume: 33 meshes, 4512 triangles, 118376 bytes\nnight: 41 meshes, 4776 triangles, 131120 bytes\ndimitri: 41 meshes, 4704 triangles, 130612 bytes\nlaila: 44 meshes, 4872 triangles, 136360 bytes\nremesis: 41 meshes, 4704 triangles, 130588 bytes\nrose: 44 meshes, 4872 triangles, 136348 bytes\nluka: 35 meshes, 4464 triangles, 120740 bytes\nlucas: 41 meshes, 4704 triangles, 130608 bytes\nlist: 41 meshes, 4704 triangles, 130620 bytes\nmoira: 44 meshes, 4872 triangles, 136360 bytes\nmire: 35 meshes, 4464 triangles, 120760 bytes\nbao: 41 meshes, 4704 triangles, 130552 bytes\nbellatrice: 33 meshes, 4512 triangles, 118380 bytes\nboksonga: 41 meshes, 4776 triangles, 131112 bytes\nvolver: 41 meshes, 4704 triangles, 130596 bytes\nbrigitte: 41 meshes, 4704 triangles, 130588 bytes\nsebastian: 41 meshes, 4704 triangles, 130596 bytes\nspinoza: 41 meshes, 4704 triangles, 130600 bytes\nadeline: 41 meshes, 4704 triangles, 130616 bytes\nabel: 41 meshes, 4704 triangles, 130596 bytes\nakari: 41 meshes, 4704 triangles, 130592 bytes\nachero: 41 meshes, 4704 triangles, 130600 bytes\nevan: 41 meshes, 4704 triangles, 130600 bytes\neitan: 35 meshes, 4464 triangles, 120728 bytes\nyeri: 44 meshes, 4944 triangles, 136884 bytes\nelaine: 41 meshes, 4704 triangles, 130576 bytes\nchasey: 33 meshes, 4440 triangles, 117868 bytes\nkael: 33 meshes, 4440 triangles, 117864 bytes\nkampta: 41 meshes, 4704 triangles, 130640 bytes\ncolin: 35 meshes, 4464 triangles, 120740 bytes\ncrowd: 35 meshes, 4464 triangles, 120740 bytes\nkitty: 33 meshes, 4440 triangles, 117904 bytes\ntena-elion: 44 meshes, 4872 triangles, 136356 bytes\nperseus: 33 meshes, 4440 triangles, 117908 bytes",
+      "stderr": ""
+    },
+    {
+      "script": "tools/3d/generate-model-production-catalog.mjs",
+      "code": 0,
+      "stdout": "production catalog: 48 characters / 960 references / 48 maquettes",
+      "stderr": ""
+    },
+    {
+      "script": "tools/3d/model-quality-audit.mjs",
+      "code": 0,
+      "stdout": "3D model audit: 1 pass / 47 warn / 0 fail\nPASS raon-blender-rigged-v1 — 72566 triangles\nWARN hadori-triposr-v1 — 16704 triangles\nWARN kazrin-triposr-v1 — 24294 triangles\nWARN kain-triposr-v1 — 19302 triangles\nWARN leo-triposr-v1 — 12730 triangles\nWARN chris-procedural-v1 — 4440 triangles\nWARN haechan-triposr-v1 — 33236 triangles\nWARN lami-triposr-v1 — 28874 triangles\nWARN jinhwon-triposr-v1 — 21046 triangles\nWARN ann-triposr-v1 — 23122 triangles\nWARN maru-triposr-v1 — 28434 triangles\nWARN nabi-nia-triposr-v1 — 33516 triangles\nWARN garam-procedural-v1 — 4776 triangles\nWARN kangrim-procedural-v1 — 4464 triangles\nWARN guillaume-procedural-v1 — 4512 triangles\nWARN night-procedural-v1 — 4776 triangles\nWARN dimitri-procedural-v1 — 4704 triangles\nWARN laila-procedural-v1 — 4872 triangles\nWARN remesis-procedural-v1 — 4704 triangles\nWARN rose-procedural-v1 — 4872 triangles\nWARN luka-procedural-v1 — 4464 triangles\nWARN lucas-procedural-v1 — 4704 triangles\nWARN list-procedural-v1 — 4704 triangles\nWARN moira-procedural-v1 — 4872 triangles\nWARN mire-procedural-v1 — 4464 triangles\nWARN bao-procedural-v1 — 4704 triangles\nWARN bellatrice-procedural-v1 — 4512 triangles\nWARN boksonga-procedural-v1 — 4776 triangles\nWARN volver-procedural-v1 — 4704 triangles\nWARN brigitte-procedural-v1 — 4704 triangles\nWARN sebastian-procedural-v1 — 4704 triangles\nWARN spinoza-procedural-v1 — 4704 triangles\nWARN adeline-procedural-v1 — 4704 triangles\nWARN abel-procedural-v1 — 4704 triangles\nWARN akari-procedural-v1 — 4704 triangles\nWARN achero-procedural-v1 — 4704 triangles\nWARN evan-procedural-v1 — 4704 triangles\nWARN eitan-procedural-v1 — 4464 triangles\nWARN yeri-procedural-v1 — 4944 triangles\nWARN elaine-procedural-v1 — 4704 triangles\nWARN chasey-procedural-v1 — 4440 triangles\nWARN kael-procedural-v1 — 4440 triangles\nWARN kampta-procedural-v1 — 4704 triangles\nWARN colin-procedural-v1 — 4464 triangles\nWARN crowd-procedural-v1 — 4464 triangles\nWARN kitty-procedural-v1 — 4440 triangles\nWARN tena-elion-procedural-v1 — 4872 triangles\nWARN perseus-procedural-v1 — 4440 triangles",
+      "stderr": ""
+    },
+    {
+      "script": "tools/3d/character-fidelity-audit.mjs",
+      "code": 0,
+      "stdout": "Character fidelity: 10.7/100 average; 0/48 playable-production ready",
+      "stderr": ""
+    }
+  ],
+  "crossChecks": [
+    {
+      "id": "runtime-production-count",
+      "pass": true,
+      "actual": "48/48"
+    },
+    {
+      "id": "minimum-character-coverage",
+      "pass": true,
+      "actual": 48
+    },
+    {
+      "id": "twenty-variation-coverage",
+      "pass": true,
+      "actual": 20
+    },
+    {
+      "id": "glb-binary-integrity",
+      "pass": true,
+      "actual": {
+        "total": 48,
+        "pass": 1,
+        "warn": 47,
+        "fail": 0
+      }
+    },
+    {
+      "id": "production-gates-defined",
+      "pass": true,
+      "actual": 7
+    },
+    {
+      "id": "fidelity-report-covers-catalog",
+      "pass": true,
+      "actual": "48/48"
+    }
+  ]
+}

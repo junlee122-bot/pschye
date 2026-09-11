@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "variationCount": 20,
+  "characters": [
+    {"id":"lami","name":"라미","romanized":"LAMI","generation":"반란군","role":"총사령관 · 모든 체능의 어머니","weapon":"맨손격투","accent":"#765087","source":"public/art/archive/lami-sheet.png","sourceKind":"sheet","tags":["대전쟁","라미군","최고전력"]},
+    {"id":"haechan","name":"해찬","romanized":"HAECHAN","generation":"대전쟁 제1군단","role":"제1군단장 · 숨겨진 구원자","weapon":"장검 · 해찬류","accent":"#617c9e","source":"public/art/archive/haechan-sheet.png","sourceKind":"sheet","tags":["대전쟁","해찬류","극의"]},
+    {"id":"jinhwon","name":"진훤","romanized":"JINHWON","generation":"프시케 제1기","role":"창설자 · 전체 단장","weapon":"맨손격투 · 진훤류","accent":"#806d51","source":"public/art/archive/jinhwon-sheet.png","sourceKind":"sheet","tags":["제1기","렉스","기본기"]},
+    {"id":"ann","name":"앤","romanized":"ANN","generation":"프시케 제1기","role":"2조장 · 붉은 마녀","weapon":"창 · 봉","accent":"#a64c43","source":"public/art/archive/generation-01.webp","sourceKind":"groupPortrait","focus":[0.40,0.25,0.18,0.34],"tags":["제1기","바이올렛","창술"]},
+    {"id":"nabi-nia","name":"나비 / 니아","romanized":"NABI / NIA","generation":"황실 · 대전쟁 제2군단","role":"한 몸의 전쟁과 제국","weapon":"대형 도끼 · 실 함정","accent":"#86615d","source":"public/art/archive/nabi-nia-sheet.png","sourceKind":"sheet","tags":["여황제","이중자아","제2군단"]},
+    {"id":"kangrim","name":"강림","romanized":"KANGRIM","generation":"프시케 제1기","role":"3조장 · 봉인된 속도","weapon":"궁 · 고속기동","accent":"#50616d","source":"public/art/archive/generation-01.webp","sourceKind":"groupPortrait","focus":[0.54,0.25,0.17,0.34],"tags":["제1기","궁술","이능교관"]},
+    {"id":"mire","name":"미르","romanized":"MIRE","generation":"프시케 제1기","role":"4조장 · 용족 교관","weapon":"드래곤 체인","accent":"#4d5a50","source":"public/art/archive/generation-01.webp","sourceKind":"groupPortrait","focus":[0.68,0.25,0.18,0.35],"tags":["제1기","용족","실험체교관"]},
+    {"id":"maru","name":"마루","romanized":"MARU","generation":"프시케 제1기","role":"비공식 5조장 · 현자","weapon":"카운터 · 단검","accent":"#78684d","source":"public/art/archive/maru-sheet.png","sourceKind":"sheet","tags":["제1기","현자","계약"]},
+    {"id":"garam","name":"가람","romanized":"GARAM","generation":"대전쟁 제6군단","role":"혼혈 연합 지도자","weapon":"원소 운용","accent":"#a9a497","source":"public/art/archive/legends-past-present-02.webp","sourceKind":"sheet","tags":["제6군단","혼혈","해찬의 동조자"]},
+
+    {"id":"luka","name":"루카","romanized":"LUKA","generation":"프시케 제2기","role":"1조장 · 나비의 광신도","weapon":"대형 도끼","accent":"#a43e3e","source":"public/art/archive/generation-02.webp","sourceKind":"groupPortrait","focus":[0.22,0.25,0.18,0.34],"tags":["제2기","악마족","나비류"]},
+    {"id":"perseus","name":"페르세우스","romanized":"PERSEUS","generation":"프시케 제2기","role":"2조장 · 기본기의 교관","weapon":"철제 글러브","accent":"#806651","source":"public/art/archive/generation-02.webp","sourceKind":"groupPortrait","focus":[0.38,0.25,0.17,0.34],"tags":["제2기","복싱","진훤류"]},
+    {"id":"guillaume","name":"기욤","romanized":"GUILLAUME","generation":"프시케 제2기","role":"3조장 · 호쾌한 창시자","weapon":"기욤류 장창","accent":"#8a623e","source":"public/art/archive/generation-02.webp","sourceKind":"groupPortrait","focus":[0.53,0.25,0.18,0.34],"tags":["제2기","기욤류","바이올렛"]},
+    {"id":"spinoza","name":"스피노자","romanized":"SPINOZA","generation":"프시케 제2기","role":"4조장 · 제국 의회장","weapon":"지혜의 지팡이","accent":"#6d6454","source":"public/art/archive/generation-02.webp","sourceKind":"groupPortrait","focus":[0.68,0.25,0.17,0.34],"tags":["제2기","의회장","정보파악"]},
+    {"id":"kitty","name":"키티","romanized":"KITTY","generation":"프시케 제2기","role":"5조장 · 묘족 권사","weapon":"고양이 장갑","accent":"#c77b59","source":"public/art/archive/generation-02.webp","sourceKind":"groupPortrait","focus":[0.82,0.25,0.17,0.34],"tags":["제2기","묘족","마루"]},
+
+    {"id":"evan","name":"에반","romanized":"EVAN","generation":"해찬 제1사단","role":"카피얼 검사","weapon":"해찬류 장검","accent":"#6983a2","procedural":true,"gender":"female","hair":"ash","tags":["제1군단","이능복제","해찬류"]},
+    {"id":"eitan","name":"에이탄","romanized":"EITAN","generation":"해찬 제2사단","role":"스피드스터 검사","weapon":"쌍검","accent":"#547b88","procedural":true,"gender":"male","hair":"black","tags":["제1군단","스피드스터","해찬류"]},
+    {"id":"akari","name":"아카리","romanized":"AKARI","generation":"해찬 제3사단","role":"소리 증폭 검사","weapon":"장검 · 공명구","accent":"#7b6c92","procedural":true,"gender":"female","hair":"red","tags":["제1군단","소리증폭","해찬류"]},
+    {"id":"bellatrice","name":"벨라트리체","romanized":"BELLATRICE","generation":"앤 제2사단","role":"라티 · 앤류의 계승자","weapon":"장창","accent":"#b8aa92","procedural":true,"gender":"female","hair":"silver","tags":["제4군단","라티","앤류"]},
+    {"id":"boksonga","name":"복송아","romanized":"BOKSONGA","generation":"앤 제3사단","role":"봉술 사단장","weapon":"장봉","accent":"#c17d74","procedural":true,"gender":"female","hair":"peach","tags":["제4군단","봉술","제2기 초대 4조장"]},
+    {"id":"laila","name":"라일라","romanized":"LAILA","generation":"마루 제3사단","role":"상처치유 지원장","weapon":"치유 장갑","accent":"#70968d","procedural":true,"gender":"female","hair":"brown","tags":["제5군단","치유","도적길드"]},
+    {"id":"yeri","name":"예리","romanized":"YERI","generation":"가람 정예단","role":"화염 원소 운용자","weapon":"화염 단검","accent":"#b84e3d","procedural":true,"gender":"female","hair":"red","tags":["제6군단","불","혼혈"]},
+    {"id":"night","name":"나이트","romanized":"NIGHT","generation":"가람 정예단","role":"흙과 불의 전위","weapon":"대검","accent":"#635243","procedural":true,"gender":"male","hair":"black","tags":["제6군단","흙","불"]},
+    {"id":"colin","name":"콜린","romanized":"COLIN","generation":"가람 정예단","role":"물과 풀의 지원자","weapon":"원소 지팡이","accent":"#4c8174","procedural":true,"gender":"male","hair":"green","tags":["제6군단","물","풀"]},
+
+    {"id":"rose","name":"로즈","romanized":"ROSE","generation":"프시케 제4기","role":"1조장 · 전설의 4기","weapon":"장미창","accent":"#b6a58f","source":"public/art/archive/generation-04.webp","sourceKind":"groupPortrait","focus":[0.22,0.25,0.18,0.34],"tags":["제4기","앤류","바이올렛"]},
+    {"id":"chasey","name":"체이시","romanized":"CHASEY","generation":"프시케 제4기","role":"2조장 · 호족 격투가","weapon":"울프 해처","accent":"#675448","source":"public/art/archive/generation-04.webp","sourceKind":"groupPortrait","focus":[0.38,0.25,0.18,0.34],"tags":["제4기","호족","랑호법"]},
+    {"id":"bao","name":"바오","romanized":"BAO","generation":"프시케 제4기","role":"3조장 · 바오류 제어자","weapon":"수맥검","accent":"#6a6d72","source":"public/art/archive/generation-04.webp","sourceKind":"groupPortrait","focus":[0.53,0.25,0.17,0.34],"tags":["제4기","바오류","제어"]},
+    {"id":"list","name":"리스트","romanized":"LIST","generation":"프시케 제4기","role":"4조장 · 균형검의 원형","weapon":"균형검","accent":"#6f5d4f","source":"public/art/archive/generation-04.webp","sourceKind":"groupPortrait","focus":[0.67,0.25,0.17,0.34],"tags":["제4기","리스트류","검술"]},
+    {"id":"volver","name":"볼버","romanized":"VOLVER","generation":"프시케 제4기","role":"5조장 · 장거리 저격수","weapon":"장궁","accent":"#999088","source":"public/art/archive/generation-04.webp","sourceKind":"groupPortrait","focus":[0.82,0.25,0.18,0.34],"tags":["제4기","궁수","장거리저격"]},
+
+    {"id":"crowd","name":"크라우드","romanized":"CROWD","generation":"프시케 제5기","role":"1조장 · 전장 투척가","weapon":"투척 무기","accent":"#57493f","source":"public/art/generated/generation-05-mending.webp","sourceKind":"stripPortrait","focus":[0.09,0.47,0.18,0.86],"tags":["제5기","크라우드류","혁신"]},
+    {"id":"kampta","name":"캄프타","romanized":"KAMPTA","generation":"프시케 제5기","role":"2조장 · 반데닌 중재자","weapon":"화염 원소","accent":"#bd7446","source":"public/art/generated/generation-05-mending.webp","sourceKind":"stripPortrait","focus":[0.25,0.47,0.17,0.86],"tags":["제5기","반데닌","포용"]},
+    {"id":"adeline","name":"아델린","romanized":"ADELINE","generation":"프시케 제5기","role":"3조장 · 공명망 생존자","weapon":"단창 · 소형방패","accent":"#6d7177","source":"public/art/generated/generation-05-mending.webp","sourceKind":"stripPortrait","focus":[0.41,0.47,0.17,0.86],"tags":["제3기","제5기","공명망"]},
+    {"id":"brigitte","name":"브리짓 하벨","romanized":"BRIGITTE HAVEL","generation":"프시케 제5기","role":"4조장 · 재건의 보루","weapon":"대방패 · 공구망치","accent":"#865b43","source":"public/art/generated/generation-05-mending.webp","sourceKind":"stripPortrait","focus":[0.57,0.47,0.18,0.86],"tags":["제5기","보루류","재건"]},
+    {"id":"abel","name":"아벨 로렌","romanized":"ABEL LOREN","generation":"프시케 제5기","role":"5조장 · 귀환의 구조자","weapon":"구조봉","accent":"#8a7962","source":"public/art/generated/generation-05-mending.webp","sourceKind":"stripPortrait","focus":[0.73,0.47,0.16,0.86],"tags":["제5기","맥동감지","구조"]},
+    {"id":"moira","name":"모이라 벨","romanized":"MOIRA BELL","generation":"프시케 제5기","role":"정찰대장 · 길을 남긴 자","weapon":"갈고리 밧줄 · 쌍단검","accent":"#6d6257","source":"public/art/generated/generation-05-mending.webp","sourceKind":"stripPortrait","focus":[0.89,0.47,0.17,0.86],"tags":["제5기","유로류","정찰"]},
+
+    {"id":"sebastian","name":"세바스티안","romanized":"SEBASTIAN","generation":"프시케 제6기","role":"1조장 · 몰락 귀족","weapon":"대검","accent":"#c9a76c","source":"public/art/archive/generation-06.webp","sourceKind":"groupPortrait","focus":[0.22,0.25,0.18,0.34],"tags":["제6기","귀족","배신세대"]},
+    {"id":"elaine","name":"엘레인","romanized":"ELAINE","generation":"프시케 제6기","role":"2조장 · 불안한 연수","weapon":"단검 · 보우","accent":"#73565e","source":"public/art/archive/generation-06.webp","sourceKind":"groupPortrait","focus":[0.38,0.25,0.17,0.34],"tags":["제6기","기동","견제"]},
+    {"id":"lucas","name":"루카스","romanized":"LUCAS","generation":"프시케 제6기","role":"3조장 · 규율 위반자","weapon":"장검","accent":"#6e493e","source":"public/art/archive/generation-06.webp","sourceKind":"groupPortrait","focus":[0.68,0.25,0.18,0.34],"tags":["제6기","난전","교란"]},
+    {"id":"dimitri","name":"디미트리","romanized":"DIMITRI","generation":"프시케 제6기","role":"4조장 · 이익 우선주의","weapon":"레이피어","accent":"#8b7569","source":"public/art/archive/generation-06.webp","sourceKind":"groupPortrait","focus":[0.82,0.25,0.17,0.34],"tags":["제6기","지휘","후방"]},
+
+    {"id":"hadori","name":"하돌쇠 · 하도리","romanized":"HADORI","generation":"프시케 제7기","role":"1조장 · 총괄 리더","weapon":"강철 글러브","accent":"#56616a","source":"public/art/archive/hadori-sheet.webp","sourceKind":"sheet","tags":["제7기","나비류","괴력"]},
+    {"id":"raon","name":"라온","romanized":"RAON","generation":"프시케 제7기","role":"2조장 · 주인공","weapon":"장검 · 16꽃잎","accent":"#ad7445","source":"public/art/archive/raon-sheet.webp","sourceKind":"sheet","tags":["제7기","해찬류","라온류"]},
+    {"id":"kazrin","name":"카즈린","romanized":"KAZRIN","generation":"프시케 제7기","role":"3조장 · 백은의 창","weapon":"라티계 장창","accent":"#c6c5bc","source":"public/art/archive/kazrin-sheet.webp","sourceKind":"sheet","tags":["제7기","앤류","천재"]},
+    {"id":"kain","name":"카인","romanized":"KAIN","generation":"프시케 제7기","role":"4조장 · 오만한 계승자","weapon":"기욤류 장창","accent":"#7b644e","source":"public/art/archive/kain-sheet.webp","sourceKind":"sheet","tags":["제7기","라이벌","기욤류"]},
+    {"id":"leo","name":"레오","romanized":"LEO","generation":"프시케 제7기","role":"5조장 · 침묵의 중심","weapon":"진훤류 맨손격투","accent":"#9b907e","source":"public/art/archive/leo-sheet.webp","sourceKind":"sheet","tags":["제7기","진훤류","지도자"]},
+    {"id":"chris","name":"크리스","romanized":"CHRIS","generation":"프시케 제7기","role":"6조장 · 균형검사","weapon":"리스트류 세이버","accent":"#c29c60","source":"public/art/generated/chris-sheet.webp","sourceKind":"sheet","tags":["제7기","리스트류","바이올렛"]},
+
+    {"id":"tena-elion","name":"테나 엘리온","romanized":"TENA ELION","generation":"전후 제국 민간인","role":"시티즌 종업원 · 증언자","weapon":"기록과 증언","accent":"#a17667","procedural":true,"gender":"female","hair":"brown","tags":["시티즌","크리스","민간인"]},
+    {"id":"achero","name":"아케로","romanized":"ACHERO","generation":"체시 공화국","role":"권능 빛의 지배자","weapon":"빛의 권능","accent":"#c3a866","procedural":true,"gender":"male","hair":"white","tags":["체시","빛","공화국"]},
+    {"id":"remesis","name":"레메시스","romanized":"REMESIS","generation":"체시 공화국","role":"제1장로 · 처형대 명령권자","weapon":"천공의 검","accent":"#887662","procedural":true,"gender":"female","hair":"white","tags":["12장로","처형대","체시"]},
+    {"id":"kael","name":"카엘","romanized":"KAEL","generation":"체시 공화국","role":"제2장로 · 검투사 관리자","weapon":"의장검","accent":"#695f56","procedural":true,"gender":"male","hair":"blond","tags":["12장로","검투사","체시"]}
+  ]
+}

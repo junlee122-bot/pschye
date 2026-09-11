@@ -1,0 +1,122 @@
+{
+  "characterId": "raon",
+  "source": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-triposr-v1.glb",
+  "runtime": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-production-v2.glb",
+  "blend": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\blender\\raon-production-v2.blend",
+  "retopology": {
+    "mode": "quad-remesh-modifier-depth7",
+    "manual": false,
+    "status": "automated deformation candidate; manual edge-loop pass remains required",
+    "before": {
+      "vertices": 36287,
+      "polygons": 72566
+    },
+    "voxelStage": {
+      "vertices": 21177,
+      "polygons": 21232
+    },
+    "after": {
+      "vertices": 21177,
+      "polygons": 21232,
+      "quadRatio": 1.0
+    }
+  },
+  "vertices": 21177,
+  "polygons": 21232,
+  "materials": [
+    "Raon_Skin_PBR",
+    "Raon_Hair_PBR",
+    "Raon_Shirt_PBR",
+    "Raon_Coat_PBR",
+    "Raon_Leather_PBR",
+    "Raon_Metal_PBR",
+    "Raon_Gold_PBR"
+  ],
+  "textureResolution": 2048,
+  "textureFiles": [
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Coat_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Coat_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Coat_ORM.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Gold_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Gold_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Gold_ORM.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_HairCards_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Hair_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Hair_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Hair_ORM.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Leather_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Leather_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Leather_ORM.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Metal_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Metal_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Metal_ORM.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Shirt_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Shirt_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Shirt_ORM.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Skin_BaseColor.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Skin_Normal.png",
+    "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\textures\\raon\\v2\\Raon_Skin_ORM.png"
+  ],
+  "bones": 33,
+  "animations": [
+    "attackHeavy",
+    "attackLight",
+    "dodge",
+    "guard",
+    "hit",
+    "idle",
+    "jump",
+    "land",
+    "run",
+    "sprint",
+    "talkNeutral",
+    "walk",
+    "expressionSmile",
+    "expressionBlink",
+    "expressionConcern",
+    "expressionTalk"
+  ],
+  "shapeKeys": [
+    "Blink_Left",
+    "Blink_Right",
+    "Brow_Inner_Up",
+    "Brow_Down_Left",
+    "Brow_Down_Right",
+    "Jaw_Open",
+    "Mouth_Smile_Left",
+    "Mouth_Smile_Right",
+    "Mouth_Frown_Left",
+    "Mouth_Frown_Right",
+    "Mouth_Pucker",
+    "Mouth_Wide",
+    "Cheek_Puff",
+    "Nose_Sneer_Left",
+    "Nose_Sneer_Right",
+    "Viseme_AA",
+    "Viseme_OH",
+    "Viseme_FV",
+    "Eye_Look_Left",
+    "Eye_Look_Right"
+  ],
+  "hairCards": 32,
+  "lods": {
+    "LOD0": {
+      "polygons": 21232,
+      "triangles": 42464
+    },
+    "LOD1": {
+      "polygons": 23354,
+      "triangles": 23354
+    },
+    "LOD2": {
+      "polygons": 10616,
+      "triangles": 10616
+    }
+  },
+  "expressionAnimations": [
+    "expressionSmile",
+    "expressionBlink",
+    "expressionConcern",
+    "expressionTalk"
+  ]
+}

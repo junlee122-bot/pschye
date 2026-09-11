@@ -1,0 +1,362 @@
+{
+  "schema": "raonjena.unity-compatibility-audit",
+  "version": 1,
+  "generatedAt": "2026-08-31T09:28:08.277Z",
+  "target": "Unity 6 URP humanoid import candidate",
+  "actualUnityEditorValidation": false,
+  "status": "pass",
+  "note": "This is a deterministic GLB compatibility and deformation-data audit. A real Unity Editor import and animated camera/deformation pass is still required.",
+  "models": [
+    {
+      "label": "LOD0",
+      "path": "public/models/characters/raon/raon-production-v2.glb",
+      "bytes": 5427548,
+      "triangles": 42592,
+      "meshes": 2,
+      "nodes": 36,
+      "boneNames": [
+        "Head",
+        "Neck",
+        "LeftHand",
+        "LeftLowerArm",
+        "LeftUpperArm",
+        "LeftShoulder",
+        "RightHand",
+        "RightLowerArm",
+        "RightUpperArm",
+        "RightShoulder",
+        "UpperChest",
+        "Chest",
+        "Spine",
+        "LeftFoot",
+        "LeftLowerLeg",
+        "LeftUpperLeg",
+        "RightFoot",
+        "RightLowerLeg",
+        "RightUpperLeg",
+        "Hips"
+      ],
+      "missingBones": [],
+      "morphs": {
+        "count": 20,
+        "names": [
+          "Blink_Left",
+          "Blink_Right",
+          "Brow_Inner_Up",
+          "Brow_Down_Left",
+          "Brow_Down_Right",
+          "Jaw_Open",
+          "Mouth_Smile_Left",
+          "Mouth_Smile_Right",
+          "Mouth_Frown_Left",
+          "Mouth_Frown_Right",
+          "Mouth_Pucker",
+          "Mouth_Wide",
+          "Cheek_Puff",
+          "Nose_Sneer_Left",
+          "Nose_Sneer_Right",
+          "Viseme_AA",
+          "Viseme_OH",
+          "Viseme_FV",
+          "Eye_Look_Left",
+          "Eye_Look_Right"
+        ]
+      },
+      "materials": {
+        "count": 8,
+        "pbrBodyMaterials": 7,
+        "channels": {
+          "baseColor": true,
+          "metallicRoughness": true,
+          "normal": true,
+          "occlusion": true
+        },
+        "hairAlpha": true
+      },
+      "skin": {
+        "skins": 1,
+        "skinnedPrimitives": 8,
+        "maxInfluences": 2,
+        "maxWeightError": 0,
+        "hasSecondaryInfluences": false,
+        "finiteWeights": true,
+        "inverseBindMatricesFinite": true
+      },
+      "animations": {
+        "count": 16,
+        "names": [
+          "attackHeavy",
+          "attackLight",
+          "dodge",
+          "guard",
+          "hit",
+          "idle",
+          "jump",
+          "land",
+          "run",
+          "sprint",
+          "talkNeutral",
+          "walk",
+          "expressionSmile",
+          "expressionBlink",
+          "expressionConcern",
+          "expressionTalk"
+        ],
+        "durations": {
+          "attackHeavy": 0.8333,
+          "attackLight": 0.5,
+          "dodge": 0.75,
+          "guard": 1.25,
+          "hit": 0.3333,
+          "idle": 2.5,
+          "jump": 1,
+          "land": 0.75,
+          "run": 1,
+          "sprint": 0.8333,
+          "talkNeutral": 3.125,
+          "walk": 1.25,
+          "expressionSmile": 1,
+          "expressionBlink": 0.375,
+          "expressionConcern": 1.1667,
+          "expressionTalk": 1.3333
+        },
+        "finite": true
+      },
+      "imageFormats": [
+        "image/webp"
+      ],
+      "bounds": {
+        "minimum": [
+          -0.3927365243434906,
+          0.0005114638479426503,
+          -0.3646995723247528
+        ],
+        "maximum": [
+          0.39246758818626404,
+          1.7795171737670898,
+          0.37489941716194153
+        ],
+        "size": [
+          0.7852,
+          1.779,
+          0.7396
+        ]
+      }
+    },
+    {
+      "label": "LOD1",
+      "path": "public/models/characters/raon/raon-production-lod1-v2.glb",
+      "bytes": 2655916,
+      "triangles": 23482,
+      "meshes": 2,
+      "nodes": 36,
+      "boneNames": [
+        "Head",
+        "Neck",
+        "LeftHand",
+        "LeftLowerArm",
+        "LeftUpperArm",
+        "LeftShoulder",
+        "RightHand",
+        "RightLowerArm",
+        "RightUpperArm",
+        "RightShoulder",
+        "UpperChest",
+        "Chest",
+        "Spine",
+        "LeftFoot",
+        "LeftLowerLeg",
+        "LeftUpperLeg",
+        "RightFoot",
+        "RightLowerLeg",
+        "RightUpperLeg",
+        "Hips"
+      ],
+      "missingBones": [],
+      "morphs": {
+        "count": 0,
+        "names": []
+      },
+      "materials": {
+        "count": 8,
+        "pbrBodyMaterials": 7,
+        "channels": {
+          "baseColor": true,
+          "metallicRoughness": true,
+          "normal": true,
+          "occlusion": true
+        },
+        "hairAlpha": true
+      },
+      "skin": {
+        "skins": 1,
+        "skinnedPrimitives": 8,
+        "maxInfluences": 2,
+        "maxWeightError": 0,
+        "hasSecondaryInfluences": false,
+        "finiteWeights": true,
+        "inverseBindMatricesFinite": true
+      },
+      "animations": {
+        "count": 12,
+        "names": [
+          "attackHeavy",
+          "attackLight",
+          "dodge",
+          "guard",
+          "hit",
+          "idle",
+          "jump",
+          "land",
+          "run",
+          "sprint",
+          "talkNeutral",
+          "walk"
+        ],
+        "durations": {
+          "attackHeavy": 0.8333,
+          "attackLight": 0.5,
+          "dodge": 0.75,
+          "guard": 1.25,
+          "hit": 0.2917,
+          "idle": 2.5,
+          "jump": 1,
+          "land": 0.75,
+          "run": 1,
+          "sprint": 0.8333,
+          "talkNeutral": 3.125,
+          "walk": 1.25
+        },
+        "finite": true
+      },
+      "imageFormats": [
+        "image/webp"
+      ],
+      "bounds": {
+        "minimum": [
+          -0.3925681412220001,
+          0.0004916046163998544,
+          -0.3646995723247528
+        ],
+        "maximum": [
+          0.392697274684906,
+          1.7795171737670898,
+          0.37489941716194153
+        ],
+        "size": [
+          0.7853,
+          1.779,
+          0.7396
+        ]
+      }
+    },
+    {
+      "label": "LOD2",
+      "path": "public/models/characters/raon/raon-production-lod2-v2.glb",
+      "bytes": 2092940,
+      "triangles": 10744,
+      "meshes": 2,
+      "nodes": 36,
+      "boneNames": [
+        "Head",
+        "Neck",
+        "LeftHand",
+        "LeftLowerArm",
+        "LeftUpperArm",
+        "LeftShoulder",
+        "RightHand",
+        "RightLowerArm",
+        "RightUpperArm",
+        "RightShoulder",
+        "UpperChest",
+        "Chest",
+        "Spine",
+        "LeftFoot",
+        "LeftLowerLeg",
+        "LeftUpperLeg",
+        "RightFoot",
+        "RightLowerLeg",
+        "RightUpperLeg",
+        "Hips"
+      ],
+      "missingBones": [],
+      "morphs": {
+        "count": 0,
+        "names": []
+      },
+      "materials": {
+        "count": 8,
+        "pbrBodyMaterials": 7,
+        "channels": {
+          "baseColor": true,
+          "metallicRoughness": true,
+          "normal": true,
+          "occlusion": true
+        },
+        "hairAlpha": true
+      },
+      "skin": {
+        "skins": 1,
+        "skinnedPrimitives": 8,
+        "maxInfluences": 2,
+        "maxWeightError": 0,
+        "hasSecondaryInfluences": false,
+        "finiteWeights": true,
+        "inverseBindMatricesFinite": true
+      },
+      "animations": {
+        "count": 12,
+        "names": [
+          "attackHeavy",
+          "attackLight",
+          "dodge",
+          "guard",
+          "hit",
+          "idle",
+          "jump",
+          "land",
+          "run",
+          "sprint",
+          "talkNeutral",
+          "walk"
+        ],
+        "durations": {
+          "attackHeavy": 0.8333,
+          "attackLight": 0.5,
+          "dodge": 0.75,
+          "guard": 1.25,
+          "hit": 0.2917,
+          "idle": 2.5,
+          "jump": 1,
+          "land": 0.75,
+          "run": 1,
+          "sprint": 0.8333,
+          "talkNeutral": 3.125,
+          "walk": 1.25
+        },
+        "finite": true
+      },
+      "imageFormats": [
+        "image/webp"
+      ],
+      "bounds": {
+        "minimum": [
+          -0.39262479543685913,
+          -0.00003268428918090649,
+          -0.3648276627063751
+        ],
+        "maximum": [
+          0.39162105321884155,
+          1.7804672718048096,
+          0.3748675584793091
+        ],
+        "size": [
+          0.7842,
+          1.7805,
+          0.7397
+        ]
+      }
+    }
+  ],
+  "failures": []
+}

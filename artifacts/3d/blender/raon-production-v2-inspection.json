@@ -1,0 +1,88 @@
+{
+  "input": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-production-v2.glb",
+  "objects": [
+    {
+      "name": "Raon_Retopo_LOD0",
+      "vertices": 32583,
+      "polygons": 42464,
+      "materials": [
+        "Raon_Skin_PBR",
+        "Raon_Hair_PBR",
+        "Raon_Shirt_PBR",
+        "Raon_Coat_PBR",
+        "Raon_Leather_PBR",
+        "Raon_Metal_PBR",
+        "Raon_Gold_PBR"
+      ],
+      "colorAttributes": [],
+      "colorStats": {},
+      "uvLayers": [
+        "UVMap"
+      ],
+      "bounds": {
+        "min": [
+          -0.40743499994277954,
+          -0.4850652515888214,
+          0.0005113972001709044
+        ],
+        "max": [
+          0.3905784487724304,
+          0.44469961524009705,
+          1.6355359554290771
+        ]
+      }
+    },
+    {
+      "name": "Raon_HairCards",
+      "vertices": 256,
+      "polygons": 128,
+      "materials": [
+        "Raon_HairCards"
+      ],
+      "colorAttributes": [],
+      "colorStats": {},
+      "uvLayers": [
+        "UVMap"
+      ],
+      "bounds": {
+        "min": [
+          -0.48114335536956787,
+          -1.7274339199066162,
+          1.1212347745895386
+        ],
+        "max": [
+          0.07642851024866104,
+          -1.2060822248458862,
+          1.69114089012146
+        ]
+      }
+    },
+    {
+      "name": "Icosphere",
+      "vertices": 42,
+      "polygons": 80,
+      "materials": [],
+      "colorAttributes": [],
+      "colorStats": {},
+      "uvLayers": [
+        "UVMap"
+      ],
+      "bounds": {
+        "min": [
+          -0.9510578513145447,
+          -0.9999999403953552,
+          -1.0
+        ],
+        "max": [
+          0.9510578513145447,
+          0.9999999403953552,
+          1.0
+        ]
+      }
+    }
+  ],
+  "scene": {
+    "meshCount": 3,
+    "armatureCount": 1
+  }
+}

@@ -1,0 +1,106 @@
+import { Archive, BookOpenText, ChevronRight, Clock3, Footprints, HardDrive, RotateCcw, Sparkles } from 'lucide-react';
+import { getOriginStoryScene, originStoryScenes } from '../data/originStory';
+import { raonChoiceMeta } from '../data/story';
+import type { CampaignProfile, NavigationSection, RaonStoryChoiceId } from '../types';
+import type { CampaignSlotSummary } from '../game/persistence';
+
+interface TitleScreenProps {
+  activeSlot: number;
+  slots: CampaignSlotSummary[];
+  profile: CampaignProfile;
+  onNavigate: (section: NavigationSection) => void;
+  onReset: () => void;
+  onSelectSlot: (slot: number) => void;
+}
+
+export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, onSelectSlot }: TitleScreenProps) {
+  const hasProgress = profile.originStory.completedSceneIds.length > 0
+    || Object.keys(profile.originStory.choices).length > 0
+    || profile.completedMissions.length > 0
+    || Object.keys(profile.storyChoices).length > 0;
+  const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
+  const dominantPath = (Object.entries(profile.raonPath) as Array<[RaonStoryChoiceId, number]>)
+    .sort((left, right) => right[1] - left[1])[0];
+
+  const reset = () => {
+    if (window.confirm('현재 여정과 라온의 선택을 지우고 A.S. 84의 첫날부터 다시 시작할까요?')) onReset();
+  };
+
+  return (
+    <main className="title-screen raon-title-screen">
+      <div className="title-backdrop" aria-hidden="true" />
+      <div className="title-vignette" aria-hidden="true" />
+      <div className="title-content">
+        <div className="title-kicker">
+          <span>A.S. 84</span>
+          <i />
+          <span>THE SEVENTH GENERATION</span>
+        </div>
+        <h1>
+          라온제나
+          <span>RAONJENA</span>
+        </h1>
+        <p className="title-epigraph">
+          나는 카즈린을 따라 변방 마을을 나왔다.
+          <br />영웅의 검을 빌리기 전, 내 이야기는 그곳에서 시작됐다.
+        </p>
+
+        <div className="title-viewpoint-note">
+          <Footprints size={18} />
+          <div><strong>라온 시점 스토리 RPG</strong><span>선택 · 동료 관계 · 전투 · 기억이 하나의 여정으로 이어집니다.</span></div>
+        </div>
+
+        <div className="title-actions">
+          <button className="primary-action" onClick={() => onNavigate('campaign')}>
+            <Footprints size={18} />
+            {hasProgress ? '라온의 이야기 계속' : '변방 마을에서 시작'}
+            <ChevronRight size={18} />
+          </button>
+          <button className="secondary-action" onClick={() => onNavigate('codex')}>
+            <BookOpenText size={17} /> 드러난 진실
+          </button>
+          <button className="secondary-action" onClick={() => onNavigate('archive')}>
+            <Archive size={17} /> 인물 도감
+          </button>
+        </div>
+
+        <section className="title-save-slots" aria-label="여정 저장 슬롯">
+          <div className="title-save-heading"><HardDrive size={15} /><span>오프라인 자동 저장 · 슬롯 {activeSlot}</span></div>
+          <div className="title-save-grid">
+            {slots.map((slot) => (
+              <button
+                key={slot.slot}
+                className={slot.slot === activeSlot ? 'active' : ''}
+                onClick={() => onSelectSlot(slot.slot)}
+                aria-pressed={slot.slot === activeSlot}
+              >
+                <span>SLOT {String(slot.slot).padStart(2, '0')}</span>
+                <strong>{slot.exists ? slot.sceneTitle : '새로운 라온'}</strong>
+                <small><Clock3 size={11} /> {slot.exists ? `DAY ${slot.day} · 작전 ${slot.missions}` : '변방 마을에서 시작'}</small>
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <div className="title-status raon-title-status">
+          <div>
+            <Sparkles size={17} />
+            <span>{dominantPath && dominantPath[1] > 0 ? `지금의 라온 · ${raonChoiceMeta[dominantPath[0]].label}` : '아직 어떤 답도 고르지 않은 라온'}</span>
+          </div>
+          <div>
+            <span className={`status-dot ${hasProgress ? 'complete' : ''}`} />
+            <span>
+              {!profile.originStory.completed
+                ? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
+                : `입단 완료 · 작전 ${profile.completedMissions.length}건 · 여정 DAY ${profile.day}`}
+            </span>
+          </div>
+        </div>
+      </div>
+      <footer className="title-footer">
+        <span>ONE BOY · ONE BORROWED SWORD · ONE NEW ANSWER</span>
+        <button className="title-reset" onClick={reset}><RotateCcw size={12} /> 여정 초기화</button>
+      </footer>
+    </main>
+  );
+}

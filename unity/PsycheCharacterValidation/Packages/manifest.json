@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "com.unity.cloud.gltfast": "https://github.com/Unity-Technologies/com.unity.cloud.gltfast.git?path=/Packages/com.unity.cloud.gltfast",
+    "com.unity.render-pipelines.universal": "17.0.3",
+    "com.unity.test-framework": "1.4.5"
+  }
+}

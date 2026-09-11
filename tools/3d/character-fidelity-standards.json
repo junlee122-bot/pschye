@@ -1,0 +1,51 @@
+{
+  "schema": "raonjena.character-fidelity-standards",
+  "version": 1,
+  "philosophy": "AI reconstruction produces a review maquette, not a shippable character. Production approval requires authored topology, PBR materials, deformation, facial performance, motion and runtime LOD validation.",
+  "tiers": {
+    "maquette": {
+      "purpose": "silhouette, costume mass and camera readability review",
+      "minimumScore": 15
+    },
+    "verticalSlice": {
+      "purpose": "playable hero in the first village vertical slice",
+      "minimumScore": 72
+    },
+    "heroProduction": {
+      "purpose": "cinematic close-up and final action-adventure gameplay",
+      "minimumScore": 90
+    }
+  },
+  "targets": {
+    "lod0Triangles": { "min": 55000, "max": 95000 },
+    "lod1Ratio": 0.55,
+    "lod2Ratio": 0.22,
+    "textureSets": {
+      "face": 4096,
+      "body": 4096,
+      "hair": 2048,
+      "equipment": 4096
+    },
+    "requiredTextureChannels": ["baseColor", "normal", "metallic", "roughness", "ambientOcclusion"],
+    "minimumMaterials": 4,
+    "minimumSkins": 1,
+    "minimumMorphTargets": 20,
+    "heroMorphTargets": 52,
+    "minimumAnimations": 8,
+    "heroAnimations": 17,
+    "minimumLodLevels": 3,
+    "expectedCharacterHeightMeters": { "min": 1.45, "max": 2.15 }
+  },
+  "weightedGates": [
+    { "id": "reference", "label": "정면·측면·후면 비율 원화", "weight": 8 },
+    { "id": "mesh", "label": "유효한 실루엣과 해부학", "weight": 10 },
+    { "id": "topology", "label": "변형 가능한 수동 리토폴로지", "weight": 12 },
+    { "id": "materials", "label": "피부·눈·머리·장비 분리 PBR 재질", "weight": 14 },
+    { "id": "textures", "label": "베이크 및 텍스처 채널", "weight": 10 },
+    { "id": "rig", "label": "휴머노이드 스켈레톤과 스킨 웨이트", "weight": 14 },
+    { "id": "face", "label": "표정 블렌드셰이프와 시선", "weight": 14 },
+    { "id": "motion", "label": "이동·전투·상호작용 애니메이션", "weight": 10 },
+    { "id": "lod", "label": "LOD와 런타임 예산", "weight": 5 },
+    { "id": "engine", "label": "게임 카메라·조명·충돌 검증", "weight": 3 }
+  ]
+}

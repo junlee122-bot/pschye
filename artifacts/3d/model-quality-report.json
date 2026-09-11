@@ -1,0 +1,2276 @@
+{
+  "schema": "raonjena.model-quality-report",
+  "version": 1,
+  "generatedAt": "2026-08-31T09:28:00.054Z",
+  "thresholds": {
+    "lod0TriangleWarning": 120000,
+    "fileSizeWarningBytes": 31457280,
+    "requiredForPrototype": [
+      "valid glTF 2.0 GLB",
+      "mesh",
+      "node",
+      "POSITION bounds"
+    ],
+    "requiredForProduction": [
+      "skin",
+      "animation set",
+      "LOD chain",
+      "facial blend shapes"
+    ]
+  },
+  "summary": {
+    "total": 48,
+    "pass": 1,
+    "warn": 47,
+    "fail": 0
+  },
+  "results": [
+    {
+      "id": "raon-production-v2",
+      "characterId": "raon",
+      "runtimePath": "/models/characters/raon/raon-production-v2.glb",
+      "tier": "blender-production-candidate-v2",
+      "status": "pass",
+      "metrics": {
+        "bytes": 5427548,
+        "binaryBytes": 5127596,
+        "meshes": 2,
+        "nodes": 36,
+        "materials": 8,
+        "skins": 1,
+        "animations": 16,
+        "triangles": 42592,
+        "bounds": {
+          "minimum": [
+            -0.3927365243434906,
+            0.0005114638479426503,
+            -0.3646995723247528
+          ],
+          "maximum": [
+            0.39246758818626404,
+            1.7795171737670898,
+            0.37489941716194153
+          ],
+          "size": [
+            0.7852,
+            1.779,
+            0.7396
+          ]
+        }
+      },
+      "issues": []
+    },
+    {
+      "id": "hadori-triposr-v1",
+      "characterId": "hadori",
+      "runtimePath": "/models/characters/hadori/hadori-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 335048,
+        "binaryBytes": 334048,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 16704,
+        "bounds": {
+          "minimum": [
+            -0.3537880778312683,
+            0,
+            -0.22883661091327667
+          ],
+          "maximum": [
+            0.3537880778312683,
+            1.7799999713897705,
+            0.22883661091327667
+          ],
+          "size": [
+            0.7076,
+            1.78,
+            0.4577
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "kazrin-triposr-v1",
+      "characterId": "kazrin",
+      "runtimePath": "/models/characters/kazrin/kazrin-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 487044,
+        "binaryBytes": 486040,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 24294,
+        "bounds": {
+          "minimum": [
+            -0.35687705874443054,
+            0,
+            -0.3281555473804474
+          ],
+          "maximum": [
+            0.35687705874443054,
+            1.7799999713897705,
+            0.3281555473804474
+          ],
+          "size": [
+            0.7138,
+            1.78,
+            0.6563
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "kain-triposr-v1",
+      "characterId": "kain",
+      "runtimePath": "/models/characters/kain/kain-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 387264,
+        "binaryBytes": 386264,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 19302,
+        "bounds": {
+          "minimum": [
+            -0.40060049295425415,
+            0,
+            -0.2808466851711273
+          ],
+          "maximum": [
+            0.40060049295425415,
+            1.7799999713897705,
+            0.2808466851711273
+          ],
+          "size": [
+            0.8012,
+            1.78,
+            0.5617
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "leo-triposr-v1",
+      "characterId": "leo",
+      "runtimePath": "/models/characters/leo/leo-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 255760,
+        "binaryBytes": 254760,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 12730,
+        "bounds": {
+          "minimum": [
+            -0.2814919352531433,
+            0,
+            -0.23963838815689087
+          ],
+          "maximum": [
+            0.2814919352531433,
+            1.7799999713897705,
+            0.23963838815689087
+          ],
+          "size": [
+            0.563,
+            1.78,
+            0.4793
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "chris-procedural-v1",
+      "characterId": "chris",
+      "runtimePath": "/models/characters/chris/chris-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 117832,
+        "binaryBytes": 88128,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4440,
+        "bounds": {
+          "minimum": [
+            -0.5151685476303101,
+            -0.024578651413321495,
+            -0.3342696726322174
+          ],
+          "maximum": [
+            0.663623571395874,
+            1.8577134609222412,
+            0.3342696726322174
+          ],
+          "size": [
+            1.1788,
+            1.8823,
+            0.6685
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "haechan-triposr-v1",
+      "characterId": "haechan",
+      "runtimePath": "/models/characters/haechan/haechan-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 666108,
+        "binaryBytes": 665104,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 33236,
+        "bounds": {
+          "minimum": [
+            -0.4810631275177002,
+            0,
+            -0.31090885400772095
+          ],
+          "maximum": [
+            0.4810631275177002,
+            1.7799999713897705,
+            0.31090885400772095
+          ],
+          "size": [
+            0.9621,
+            1.78,
+            0.6218
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "lami-triposr-v1",
+      "characterId": "lami",
+      "runtimePath": "/models/characters/lami/lami-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 578644,
+        "binaryBytes": 577640,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 28874,
+        "bounds": {
+          "minimum": [
+            -0.40903571248054504,
+            0,
+            -0.3381924033164978
+          ],
+          "maximum": [
+            0.40903571248054504,
+            1.7799999713897705,
+            0.3381924033164978
+          ],
+          "size": [
+            0.8181,
+            1.78,
+            0.6764
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "jinhwon-triposr-v1",
+      "characterId": "jinhwon",
+      "runtimePath": "/models/characters/jinhwon/jinhwon-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 421888,
+        "binaryBytes": 420888,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 21046,
+        "bounds": {
+          "minimum": [
+            -0.3486105501651764,
+            0,
+            -0.3047538101673126
+          ],
+          "maximum": [
+            0.3486105501651764,
+            1.7799999713897705,
+            0.3047538101673126
+          ],
+          "size": [
+            0.6972,
+            1.78,
+            0.6095
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "ann-triposr-v1",
+      "characterId": "ann",
+      "runtimePath": "/models/characters/ann/ann-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 463732,
+        "binaryBytes": 462728,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 23122,
+        "bounds": {
+          "minimum": [
+            -0.47185853123664856,
+            0,
+            -0.3503645658493042
+          ],
+          "maximum": [
+            0.47185853123664856,
+            1.7799999713897705,
+            0.3503645658493042
+          ],
+          "size": [
+            0.9437,
+            1.78,
+            0.7007
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "maru-triposr-v1",
+      "characterId": "maru",
+      "runtimePath": "/models/characters/maru/maru-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 570128,
+        "binaryBytes": 569128,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 28434,
+        "bounds": {
+          "minimum": [
+            -0.3899640142917633,
+            0,
+            -0.3536570966243744
+          ],
+          "maximum": [
+            0.3899640142917633,
+            1.7799999713897705,
+            0.3536570966243744
+          ],
+          "size": [
+            0.7799,
+            1.78,
+            0.7073
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "nabi-nia-triposr-v1",
+      "characterId": "nabi-nia",
+      "runtimePath": "/models/characters/nabi-nia/nabi-nia-triposr-v1.glb",
+      "tier": "ai-generated-single-view-review",
+      "status": "warn",
+      "metrics": {
+        "bytes": 671480,
+        "binaryBytes": 670480,
+        "meshes": 1,
+        "nodes": 2,
+        "materials": 0,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 33516,
+        "bounds": {
+          "minimum": [
+            -0.5243741869926453,
+            0,
+            -0.477886438369751
+          ],
+          "maximum": [
+            0.5243741869926453,
+            1.7799999713897705,
+            0.477886438369751
+          ],
+          "size": [
+            1.0487,
+            1.78,
+            0.9558
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "NO_MATERIAL",
+          "message": "재질이 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "garam-procedural-v1",
+      "characterId": "garam",
+      "runtimePath": "/models/characters/garam/garam-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 131116,
+        "binaryBytes": 94560,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4776,
+        "bounds": {
+          "minimum": [
+            -0.5416629314422607,
+            -0.02584269642829895,
+            -0.35146066546440125
+          ],
+          "maximum": [
+            0.6719101071357727,
+            2.119101047515869,
+            0.35146066546440125
+          ],
+          "size": [
+            1.2136,
+            2.1449,
+            0.7029
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "kangrim-procedural-v1",
+      "characterId": "kangrim",
+      "runtimePath": "/models/characters/kangrim/kangrim-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 120748,
+        "binaryBytes": 89424,
+        "meshes": 35,
+        "nodes": 35,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4464,
+        "bounds": {
+          "minimum": [
+            -0.550494372844696,
+            -0.026264045387506485,
+            -0.3571909964084625
+          ],
+          "maximum": [
+            0.7091292142868042,
+            1.9850995540618896,
+            0.3571909964084625
+          ],
+          "size": [
+            1.2596,
+            2.0114,
+            0.7144
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "guillaume-procedural-v1",
+      "characterId": "guillaume",
+      "runtimePath": "/models/characters/guillaume/guillaume-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 118376,
+        "binaryBytes": 88656,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4512,
+        "bounds": {
+          "minimum": [
+            -0.5534381866455078,
+            -0.026404494419693947,
+            -0.3591011166572571
+          ],
+          "maximum": [
+            0.6865168809890747,
+            2.165168523788452,
+            0.3591011166572571
+          ],
+          "size": [
+            1.24,
+            2.1916,
+            0.7182
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "night-procedural-v1",
+      "characterId": "night",
+      "runtimePath": "/models/characters/night/night-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 131120,
+        "binaryBytes": 94560,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4776,
+        "bounds": {
+          "minimum": [
+            -0.5239999890327454,
+            -0.02500000037252903,
+            -0.3400000035762787
+          ],
+          "maximum": [
+            0.6499999761581421,
+            2.049999952316284,
+            0.3400000035762787
+          ],
+          "size": [
+            1.174,
+            2.075,
+            0.68
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "dimitri-procedural-v1",
+      "characterId": "dimitri",
+      "runtimePath": "/models/characters/dimitri/dimitri-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130612,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.550494372844696,
+            -0.026264045387506485,
+            -0.3571909964084625
+          ],
+          "maximum": [
+            0.7091292142868042,
+            1.9850995540618896,
+            0.3571909964084625
+          ],
+          "size": [
+            1.2596,
+            2.0114,
+            0.7144
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "laila-procedural-v1",
+      "characterId": "laila",
+      "runtimePath": "/models/characters/laila/laila-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 136360,
+        "binaryBytes": 97200,
+        "meshes": 44,
+        "nodes": 44,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4872,
+        "bounds": {
+          "minimum": [
+            -0.5092809200286865,
+            -0.02429775334894657,
+            -0.3304494321346283
+          ],
+          "maximum": [
+            0.656039297580719,
+            1.8364825248718262,
+            0.3304494321346283
+          ],
+          "size": [
+            1.1653,
+            1.8608,
+            0.6609
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "remesis-procedural-v1",
+      "characterId": "remesis",
+      "runtimePath": "/models/characters/remesis/remesis-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130588,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5181123614311218,
+            -0.024719100445508957,
+            -0.3361797630786896
+          ],
+          "maximum": [
+            0.6674157381057739,
+            1.8683290481567383,
+            0.3361797630786896
+          ],
+          "size": [
+            1.1855,
+            1.893,
+            0.6724
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "rose-procedural-v1",
+      "characterId": "rose",
+      "runtimePath": "/models/characters/rose/rose-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 136348,
+        "binaryBytes": 97200,
+        "meshes": 44,
+        "nodes": 44,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4872,
+        "bounds": {
+          "minimum": [
+            -0.5181123614311218,
+            -0.024719100445508957,
+            -0.3361797630786896
+          ],
+          "maximum": [
+            0.6674157381057739,
+            1.8683290481567383,
+            0.3361797630786896
+          ],
+          "size": [
+            1.1855,
+            1.893,
+            0.6724
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "luka-procedural-v1",
+      "characterId": "luka",
+      "runtimePath": "/models/characters/luka/luka-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 120740,
+        "binaryBytes": 89424,
+        "meshes": 35,
+        "nodes": 35,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4464,
+        "bounds": {
+          "minimum": [
+            -0.5063371062278748,
+            -0.02415730245411396,
+            -0.32853931188583374
+          ],
+          "maximum": [
+            0.6522471904754639,
+            1.825866937637329,
+            0.32853931188583374
+          ],
+          "size": [
+            1.1586,
+            1.85,
+            0.6571
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "lucas-procedural-v1",
+      "characterId": "lucas",
+      "runtimePath": "/models/characters/lucas/lucas-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130608,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5416629314422607,
+            -0.02584269642829895,
+            -0.35146066546440125
+          ],
+          "maximum": [
+            0.697752833366394,
+            1.9532530307769775,
+            0.35146066546440125
+          ],
+          "size": [
+            1.2394,
+            1.9791,
+            0.7029
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "list-procedural-v1",
+      "characterId": "list",
+      "runtimePath": "/models/characters/list/list-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130620,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5004494190216064,
+            -0.023876404389739037,
+            -0.324719101190567
+          ],
+          "maximum": [
+            0.6446629166603088,
+            1.804636001586914,
+            0.324719101190567
+          ],
+          "size": [
+            1.1451,
+            1.8285,
+            0.6494
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "moira-procedural-v1",
+      "characterId": "moira",
+      "runtimePath": "/models/characters/moira/moira-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 136360,
+        "binaryBytes": 97200,
+        "meshes": 44,
+        "nodes": 44,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4872,
+        "bounds": {
+          "minimum": [
+            -0.5328314900398254,
+            -0.025421347469091415,
+            -0.34573033452033997
+          ],
+          "maximum": [
+            0.6863763928413391,
+            1.9214065074920654,
+            0.34573033452033997
+          ],
+          "size": [
+            1.2192,
+            1.9468,
+            0.6915
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "mire-procedural-v1",
+      "characterId": "mire",
+      "runtimePath": "/models/characters/mire/mire-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 120760,
+        "binaryBytes": 89424,
+        "meshes": 35,
+        "nodes": 35,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4464,
+        "bounds": {
+          "minimum": [
+            -0.5004494190216064,
+            -0.023876404389739037,
+            -0.324719101190567
+          ],
+          "maximum": [
+            0.6446629166603088,
+            1.804636001586914,
+            0.324719101190567
+          ],
+          "size": [
+            1.1451,
+            1.8285,
+            0.6494
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "bao-procedural-v1",
+      "characterId": "bao",
+      "runtimePath": "/models/characters/bao/bao-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130552,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5563820004463196,
+            -0.02654494345188141,
+            -0.36101123690605164
+          ],
+          "maximum": [
+            0.7167134881019592,
+            2.0063304901123047,
+            0.36101123690605164
+          ],
+          "size": [
+            1.2731,
+            2.0329,
+            0.722
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "bellatrice-procedural-v1",
+      "characterId": "bellatrice",
+      "runtimePath": "/models/characters/bellatrice/bellatrice-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 118380,
+        "binaryBytes": 88656,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4512,
+        "bounds": {
+          "minimum": [
+            -0.5033932328224182,
+            -0.0240168534219265,
+            -0.3266292214393616
+          ],
+          "maximum": [
+            0.6244382262229919,
+            1.9693820476531982,
+            0.3266292214393616
+          ],
+          "size": [
+            1.1278,
+            1.9934,
+            0.6533
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "boksonga-procedural-v1",
+      "characterId": "boksonga",
+      "runtimePath": "/models/characters/boksonga/boksonga-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 131112,
+        "binaryBytes": 94560,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4776,
+        "bounds": {
+          "minimum": [
+            -0.5151685476303101,
+            -0.024578651413321495,
+            -0.3342696726322174
+          ],
+          "maximum": [
+            0.6390449404716492,
+            2.0154495239257812,
+            0.3342696726322174
+          ],
+          "size": [
+            1.1542,
+            2.04,
+            0.6685
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "volver-procedural-v1",
+      "characterId": "volver",
+      "runtimePath": "/models/characters/volver/volver-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130596,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5239999890327454,
+            -0.02500000037252903,
+            -0.3400000035762787
+          ],
+          "maximum": [
+            0.675000011920929,
+            1.8895599842071533,
+            0.3400000035762787
+          ],
+          "size": [
+            1.199,
+            1.9146,
+            0.68
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "brigitte-procedural-v1",
+      "characterId": "brigitte",
+      "runtimePath": "/models/characters/brigitte/brigitte-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130588,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5959668755531311,
+            -0.024719100445508957,
+            -0.41528090834617615
+          ],
+          "maximum": [
+            0.6674157381057739,
+            1.8683290481567383,
+            0.41528090834617615
+          ],
+          "size": [
+            1.2634,
+            1.893,
+            0.8306
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "sebastian-procedural-v1",
+      "characterId": "sebastian",
+      "runtimePath": "/models/characters/sebastian/sebastian-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130596,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5181123614311218,
+            -0.024719100445508957,
+            -0.3361797630786896
+          ],
+          "maximum": [
+            0.6674157381057739,
+            1.8683290481567383,
+            0.3361797630786896
+          ],
+          "size": [
+            1.1855,
+            1.893,
+            0.6724
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "spinoza-procedural-v1",
+      "characterId": "spinoza",
+      "runtimePath": "/models/characters/spinoza/spinoza-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130600,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5328314900398254,
+            -0.025421347469091415,
+            -0.34573033452033997
+          ],
+          "maximum": [
+            0.6863763928413391,
+            1.9214065074920654,
+            0.34573033452033997
+          ],
+          "size": [
+            1.2192,
+            1.9468,
+            0.6915
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "adeline-procedural-v1",
+      "characterId": "adeline",
+      "runtimePath": "/models/characters/adeline/adeline-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130616,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5416629314422607,
+            -0.02584269642829895,
+            -0.35146066546440125
+          ],
+          "maximum": [
+            0.697752833366394,
+            1.9532530307769775,
+            0.35146066546440125
+          ],
+          "size": [
+            1.2394,
+            1.9791,
+            0.7029
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "abel-procedural-v1",
+      "characterId": "abel",
+      "runtimePath": "/models/characters/abel/abel-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130596,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5534381866455078,
+            -0.026404494419693947,
+            -0.3591011166572571
+          ],
+          "maximum": [
+            0.7129213213920593,
+            1.9957150220870972,
+            0.3591011166572571
+          ],
+          "size": [
+            1.2664,
+            2.0221,
+            0.7182
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "akari-procedural-v1",
+      "characterId": "akari",
+      "runtimePath": "/models/characters/akari/akari-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130592,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5328314900398254,
+            -0.025421347469091415,
+            -0.34573033452033997
+          ],
+          "maximum": [
+            0.6863763928413391,
+            1.9214065074920654,
+            0.34573033452033997
+          ],
+          "size": [
+            1.2192,
+            1.9468,
+            0.6915
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "achero-procedural-v1",
+      "characterId": "achero",
+      "runtimePath": "/models/characters/achero/achero-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130600,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5122247338294983,
+            -0.024438202381134033,
+            -0.33235955238342285
+          ],
+          "maximum": [
+            0.6598314642906189,
+            1.8470979928970337,
+            0.33235955238342285
+          ],
+          "size": [
+            1.1721,
+            1.8715,
+            0.6647
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "evan-procedural-v1",
+      "characterId": "evan",
+      "runtimePath": "/models/characters/evan/evan-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130600,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5475505590438843,
+            -0.026123596355319023,
+            -0.35528090596199036
+          ],
+          "maximum": [
+            0.7053371071815491,
+            1.9744840860366821,
+            0.35528090596199036
+          ],
+          "size": [
+            1.2529,
+            2.0006,
+            0.7106
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "eitan-procedural-v1",
+      "characterId": "eitan",
+      "runtimePath": "/models/characters/eitan/eitan-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 120728,
+        "binaryBytes": 89424,
+        "meshes": 35,
+        "nodes": 35,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4464,
+        "bounds": {
+          "minimum": [
+            -0.5151685476303101,
+            -0.024578651413321495,
+            -0.3342696726322174
+          ],
+          "maximum": [
+            0.663623571395874,
+            1.8577134609222412,
+            0.3342696726322174
+          ],
+          "size": [
+            1.1788,
+            1.8823,
+            0.6685
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "yeri-procedural-v1",
+      "characterId": "yeri",
+      "runtimePath": "/models/characters/yeri/yeri-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 136884,
+        "binaryBytes": 97728,
+        "meshes": 44,
+        "nodes": 44,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4944,
+        "bounds": {
+          "minimum": [
+            -0.4975056052207947,
+            -0.023735955357551575,
+            -0.32280898094177246
+          ],
+          "maximum": [
+            0.6171348094940186,
+            1.9463483095169067,
+            0.3231118321418762
+          ],
+          "size": [
+            1.1146,
+            1.9701,
+            0.6459
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "elaine-procedural-v1",
+      "characterId": "elaine",
+      "runtimePath": "/models/characters/elaine/elaine-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130576,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.5181123614311218,
+            -0.024719100445508957,
+            -0.3361797630786896
+          ],
+          "maximum": [
+            0.6674157381057739,
+            1.8683290481567383,
+            0.3361797630786896
+          ],
+          "size": [
+            1.1855,
+            1.893,
+            0.6724
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "chasey-procedural-v1",
+      "characterId": "chasey",
+      "runtimePath": "/models/characters/chasey/chasey-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 117868,
+        "binaryBytes": 88128,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4440,
+        "bounds": {
+          "minimum": [
+            -0.5977247357368469,
+            -0.02429775334894657,
+            -0.40820226073265076
+          ],
+          "maximum": [
+            0.5977247357368469,
+            1.8364825248718262,
+            0.40820226073265076
+          ],
+          "size": [
+            1.1954,
+            1.8608,
+            0.8164
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "kael-procedural-v1",
+      "characterId": "kael",
+      "runtimePath": "/models/characters/kael/kael-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 117864,
+        "binaryBytes": 88128,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4440,
+        "bounds": {
+          "minimum": [
+            -0.5239999890327454,
+            -0.02500000037252903,
+            -0.3400000035762787
+          ],
+          "maximum": [
+            0.675000011920929,
+            1.8895599842071533,
+            0.3400000035762787
+          ],
+          "size": [
+            1.199,
+            1.9146,
+            0.68
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "kampta-procedural-v1",
+      "characterId": "kampta",
+      "runtimePath": "/models/characters/kampta/kampta-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 130640,
+        "binaryBytes": 94032,
+        "meshes": 41,
+        "nodes": 41,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4704,
+        "bounds": {
+          "minimum": [
+            -0.6460955142974854,
+            -0.026264045387506485,
+            -0.3571909964084625
+          ],
+          "maximum": [
+            0.6460955142974854,
+            1.9850995540618896,
+            0.3571909964084625
+          ],
+          "size": [
+            1.2922,
+            2.0114,
+            0.7144
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "colin-procedural-v1",
+      "characterId": "colin",
+      "runtimePath": "/models/characters/colin/colin-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 120740,
+        "binaryBytes": 89424,
+        "meshes": 35,
+        "nodes": 35,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4464,
+        "bounds": {
+          "minimum": [
+            -0.4945617914199829,
+            -0.023595506325364113,
+            -0.3208988904953003
+          ],
+          "maximum": [
+            0.6370786428451538,
+            1.7834049463272095,
+            0.3208988904953003
+          ],
+          "size": [
+            1.1316,
+            1.807,
+            0.6418
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "crowd-procedural-v1",
+      "characterId": "crowd",
+      "runtimePath": "/models/characters/crowd/crowd-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 120740,
+        "binaryBytes": 89424,
+        "meshes": 35,
+        "nodes": 35,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4464,
+        "bounds": {
+          "minimum": [
+            -0.5151685476303101,
+            -0.024578651413321495,
+            -0.3342696726322174
+          ],
+          "maximum": [
+            0.663623571395874,
+            1.8577134609222412,
+            0.3342696726322174
+          ],
+          "size": [
+            1.1788,
+            1.8823,
+            0.6685
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "kitty-procedural-v1",
+      "characterId": "kitty",
+      "runtimePath": "/models/characters/kitty/kitty-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 117904,
+        "binaryBytes": 88128,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4440,
+        "bounds": {
+          "minimum": [
+            -0.6288202404975891,
+            -0.025561798363924026,
+            -0.3476404547691345
+          ],
+          "maximum": [
+            0.6288202404975891,
+            1.932021975517273,
+            0.3476404547691345
+          ],
+          "size": [
+            1.2576,
+            1.9576,
+            0.6953
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "tena-elion-procedural-v1",
+      "characterId": "tena-elion",
+      "runtimePath": "/models/characters/tena-elion/tena-elion-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 136356,
+        "binaryBytes": 97200,
+        "meshes": 44,
+        "nodes": 44,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4872,
+        "bounds": {
+          "minimum": [
+            -0.5563820004463196,
+            -0.02654494345188141,
+            -0.36101123690605164
+          ],
+          "maximum": [
+            0.7167134881019592,
+            2.0063304901123047,
+            0.36101123690605164
+          ],
+          "size": [
+            1.2731,
+            2.0329,
+            0.722
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    },
+    {
+      "id": "perseus-procedural-v1",
+      "characterId": "perseus",
+      "runtimePath": "/models/characters/perseus/perseus-procedural-v1.glb",
+      "tier": "procedural-maquette",
+      "status": "warn",
+      "metrics": {
+        "bytes": 117908,
+        "binaryBytes": 88128,
+        "meshes": 33,
+        "nodes": 33,
+        "materials": 7,
+        "skins": 0,
+        "animations": 0,
+        "triangles": 4440,
+        "bounds": {
+          "minimum": [
+            -0.6150000095367432,
+            -0.02500000037252903,
+            -0.41999998688697815
+          ],
+          "maximum": [
+            0.6150000095367432,
+            1.8895599842071533,
+            0.41999998688697815
+          ],
+          "size": [
+            1.23,
+            1.9146,
+            0.84
+          ]
+        }
+      },
+      "issues": [
+        {
+          "severity": "warn",
+          "code": "RIG_PENDING",
+          "message": "스킨/본 리깅이 아직 없습니다."
+        },
+        {
+          "severity": "warn",
+          "code": "ANIMATION_PENDING",
+          "message": "애니메이션 클립이 아직 없습니다."
+        }
+      ]
+    }
+  ]
+}

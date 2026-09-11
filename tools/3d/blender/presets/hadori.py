@@ -1,0 +1,76 @@
+"""Hadori procedural character preset."""
+
+from character_spec import (
+    CharacterPreset,
+    HairSpec,
+    OutfitSpec,
+    Palette,
+    Proportions,
+    WeaponSpec,
+)
+
+
+PRESET = CharacterPreset(
+    id="hadori",
+    display_name="하도리",
+    english_name="Hadori",
+    role="프시케 제7기 제1조장 · 전선 지휘",
+    silhouette_note="짧은 흑발, 노출된 강한 상체, 초대형 강화 글러브와 중량 부츠",
+    source_art=(
+        "public/art/characters/hadori/01-origin.webp",
+        "public/art/characters/hadori/04-induction.webp",
+        "public/art/characters/hadori/14-signature.webp",
+        "public/art/characters/hadori/contact-sheet.webp",
+    ),
+    proportions=Proportions(
+        height_m=1.76,
+        head_ratio=7.15,
+        shoulder_width=0.51,
+        torso_length=0.50,
+        leg_length=0.87,
+        arm_length=0.75,
+        hand_scale=1.26,
+        build="powerful",
+    ),
+    palette=Palette(
+        skin=(0.60, 0.39, 0.27, 1.0),
+        hair=(0.018, 0.021, 0.025, 1.0),
+        eye=(0.16, 0.20, 0.22, 1.0),
+        cloth_primary=(0.025, 0.030, 0.035, 1.0),
+        cloth_secondary=(0.10, 0.105, 0.11, 1.0),
+        leather=(0.075, 0.050, 0.035, 1.0),
+        metal=(0.15, 0.17, 0.18, 1.0),
+        accent=(0.48, 0.50, 0.47, 1.0),
+    ),
+    hair=HairSpec(
+        style="bob",
+        length=0.22,
+        volume=0.95,
+        strand_count=14,
+        fringe_bias=-0.12,
+    ),
+    outfit=OutfitSpec(
+        sleeveless=True,
+        high_collar=True,
+        coat_tails=2,
+        coat_length=0.42,
+        shoulder_armor="none",
+        chest_armor=0.08,
+        forearm_armor=0.92,
+        gauntlet_scale=1.42,
+        boot_height=0.62,
+        asymmetry=0.04,
+    ),
+    weapon=WeaponSpec(
+        kind="gauntlets",
+        length=0.40,
+        blade_length=0.0,
+        blade_width=0.0,
+        guard_width=0.0,
+        grip_length=0.0,
+        ornament=0.12,
+    ),
+    expression="stoic",
+    seed=7011,
+    tags=("seventh-generation", "leader", "unarmed", "power-build"),
+)

@@ -1,0 +1,826 @@
+{
+  "generatedAt": "2026-07-26T22:44:29.004Z",
+  "locations": 85,
+  "storyVisualReferences": 946,
+  "uniqueAssetFiles": 952,
+  "totalBytes": 69580836,
+  "missingAssetCount": 0,
+  "missingAssets": [],
+  "categories": [
+    {
+      "id": "frontier",
+      "label": "변방과 마을",
+      "locations": 8,
+      "cover": "/art/locations/atlas-frontier.webp"
+    },
+    {
+      "id": "psyche",
+      "label": "프시케 시설",
+      "locations": 14,
+      "cover": "/art/locations/atlas-capital-psyche.webp"
+    },
+    {
+      "id": "capital",
+      "label": "제국 수도",
+      "locations": 20,
+      "cover": "/art/locations/atlas-capital-psyche.webp"
+    },
+    {
+      "id": "cursed-land",
+      "label": "저주받은 땅",
+      "locations": 11,
+      "cover": "/art/locations/atlas-cursed-land.webp"
+    },
+    {
+      "id": "cheshi",
+      "label": "체시 지배권",
+      "locations": 10,
+      "cover": "/art/locations/atlas-cheshi.webp"
+    },
+    {
+      "id": "denin",
+      "label": "데닌 영지",
+      "locations": 6,
+      "cover": "/art/locations/atlas-denin.webp"
+    },
+    {
+      "id": "battlefront",
+      "label": "전선과 작전지",
+      "locations": 10,
+      "cover": "/art/generated/campaign-world-map.webp"
+    },
+    {
+      "id": "memory",
+      "label": "기억과 금지구역",
+      "locations": 6,
+      "cover": "/art/generated/campaign-world-map.webp"
+    }
+  ],
+  "locationInventory": [
+    {
+      "id": "location-001-village-bell",
+      "name": "북서부 변방 마을",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초여름 새벽"
+    },
+    {
+      "id": "location-002-windmill-rivalry",
+      "name": "폐풍차 훈련터",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 정오"
+    },
+    {
+      "id": "location-003-river-anomaly",
+      "name": "저주받은 땅으로 흐르는 북쪽 수로",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "사흘 뒤 · 해 질 무렵"
+    },
+    {
+      "id": "location-004-selectors-arrive",
+      "name": "마을 회관과 공동 훈련장",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "일주일 뒤"
+    },
+    {
+      "id": "location-005-leave-home",
+      "name": "마을 골목과 라온의 집",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "출발 전날 밤"
+    },
+    {
+      "id": "location-006-capital-gate",
+      "name": "로헨 제국 수도 외곽",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "여정 5일째"
+    },
+    {
+      "id": "location-007-aptitude-hall",
+      "name": "프시케 기맥 검사장",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "선발 1일차"
+    },
+    {
+      "id": "location-008-field-exam",
+      "name": "폐허 도시 모의전장",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "선발 4일차"
+    },
+    {
+      "id": "location-009-suspended-candidate",
+      "name": "프시케 의무동과 훈련장",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "선발 5일차"
+    },
+    {
+      "id": "location-010-maru-door",
+      "name": "수도 구시가지 · 마루의 은신처",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "선발 8일차"
+    },
+    {
+      "id": "location-011-sixteen-petals",
+      "name": "폐수로와 버려진 제련소",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "선발 9~18일차"
+    },
+    {
+      "id": "location-012-captain-trials",
+      "name": "프시케 중앙 원형장",
+      "category": "프시케 시설",
+      "episodes": 2,
+      "scenes": 12,
+      "visuals": 22,
+      "firstTime": "제4조장 결정전"
+    },
+    {
+      "id": "location-013-one-hit",
+      "name": "프시케 원형장과 의무동",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "제1조장 도전전"
+    },
+    {
+      "id": "location-014-grey-bridge",
+      "name": "회색 교각과 피난민 호송로",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "입단식 당일"
+    },
+    {
+      "id": "location-015-bridge-debrief",
+      "name": "프시케 작전실과 기록보관소",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "첫 출전 다음 날"
+    },
+    {
+      "id": "location-016-citizen-cartridge",
+      "name": "수도 하층 술집 시티즌",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 여름"
+    },
+    {
+      "id": "location-017-mending-generation",
+      "name": "제5기 재건 구역",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "시티즌 사건 사흘 뒤"
+    },
+    {
+      "id": "location-018-empty-generation-road",
+      "name": "제3기 생존자 마을로 가는 폐선로",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 늦여름"
+    },
+    {
+      "id": "location-019-third-generation-wall",
+      "name": "제3기 생존자 마을",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 밤"
+    },
+    {
+      "id": "location-020-wingless-convoy",
+      "name": "북부 검문선과 설원 도로",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "수도 복귀 중"
+    },
+    {
+      "id": "location-021-sixth-provocation",
+      "name": "프시케 본부 공개 훈련장",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초가을"
+    },
+    {
+      "id": "location-022-sky-gunfire",
+      "name": "체시 부유요새",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초가을"
+    },
+    {
+      "id": "location-023-cheshi-prisoner",
+      "name": "프시케 임시 수용소",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "부유요새 사건 직후"
+    },
+    {
+      "id": "location-024-violet-infiltration",
+      "name": "황실 지하 기록층",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "사흘 뒤 · 자정"
+    },
+    {
+      "id": "location-025-nia-audience",
+      "name": "황궁 실의 정원",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "침입 다음 날"
+    },
+    {
+      "id": "location-026-cursed-border",
+      "name": "저주받은 땅 중립 회담장",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 가을"
+    },
+    {
+      "id": "location-027-garam-parley",
+      "name": "가람 진영의 혼혈 도시",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "회담 다음 날"
+    },
+    {
+      "id": "location-028-maru-contract",
+      "name": "마루의 지하 기록고",
+      "category": "기억과 금지구역",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 가을비"
+    },
+    {
+      "id": "location-029-stopped-petal",
+      "name": "집단 기억층 경계",
+      "category": "기억과 금지구역",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "기억 공명 직전"
+    },
+    {
+      "id": "location-030-denin-home",
+      "name": "데닌 변경 도시 아스텔",
+      "category": "데닌 영지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 18년 전"
+    },
+    {
+      "id": "location-031-execution-house",
+      "name": "아스텔 데닌 가문 저택",
+      "category": "데닌 영지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "사흘 뒤"
+    },
+    {
+      "id": "location-032-lami-recruits-haechan",
+      "name": "아스텔 폐허",
+      "category": "데닌 영지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "학살 다음 날"
+    },
+    {
+      "id": "location-033-rex-arena",
+      "name": "체시 수도 대경기장",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 17년 전"
+    },
+    {
+      "id": "location-034-anne-vanishes",
+      "name": "현상금 사냥꾼 야영지",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 시기"
+    },
+    {
+      "id": "location-035-nabi-injection",
+      "name": "체시 신성 주입 연구소",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 16년 전"
+    },
+    {
+      "id": "location-036-maru-execution",
+      "name": "체시 공개 처형장",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 15년 전"
+    },
+    {
+      "id": "location-037-garam-cursed-land",
+      "name": "저주받은 땅",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 14년 전"
+    },
+    {
+      "id": "location-038-six-captains-camp",
+      "name": "저주받은 땅 중앙 야영지",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 13년 전"
+    },
+    {
+      "id": "location-039-division-commanders",
+      "name": "각 군단의 첫 주둔지",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 12~10년 전"
+    },
+    {
+      "id": "location-040-first-joint-operation",
+      "name": "처형대 보급도시 카르멘",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 9년 전"
+    },
+    {
+      "id": "location-041-rebellion-prime",
+      "name": "카르멘 재공략과 해방 도시들",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 8~5년 전"
+    },
+    {
+      "id": "location-042-capital-campaign",
+      "name": "체시 공화국 수도권",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 4년 전"
+    },
+    {
+      "id": "location-043-surrendered-cheshi",
+      "name": "수도 외곽 포로 수용지",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 3년 전"
+    },
+    {
+      "id": "location-044-denin-village",
+      "name": "비전투 데닌 마을 벨루아",
+      "category": "데닌 영지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 2년 전"
+    },
+    {
+      "id": "location-045-light-plan",
+      "name": "반란군 최고지휘회의",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁 마지막 해"
+    },
+    {
+      "id": "location-046-rebellion-splits",
+      "name": "체시 수도와 반란군 본진",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "빛 점화 6시간 전"
+    },
+    {
+      "id": "location-047-haechan-lami-duel",
+      "name": "완전한 빛의 핵심 제단",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "빛 점화 10분 전"
+    },
+    {
+      "id": "location-048-incomplete-light",
+      "name": "체시 수도 전역",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 0"
+    },
+    {
+      "id": "location-049-postwar-montage",
+      "name": "폐허가 된 수도와 새 제국",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 0~12"
+    },
+    {
+      "id": "location-050-return-from-memory",
+      "name": "프시케 지하 기억보관소",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 새벽"
+    },
+    {
+      "id": "location-051-truth-at-dawn",
+      "name": "프시케 제7기 숙소와 작전실",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 동틀 무렵"
+    },
+    {
+      "id": "location-052-lame-swordsman",
+      "name": "프시케 회랑과 폐쇄 훈련장",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 오전"
+    },
+    {
+      "id": "location-053-first-corps-survivors",
+      "name": "수도 북문 지하 수로",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 오후"
+    },
+    {
+      "id": "location-054-empire-schism",
+      "name": "황궁 의회당",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 2일"
+    },
+    {
+      "id": "location-055-sixth-betrayal",
+      "name": "수도 남부 상업구와 병기고",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 저녁"
+    },
+    {
+      "id": "location-056-fifth-generation-defense",
+      "name": "붕괴한 남문과 지하 거주구",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 3일"
+    },
+    {
+      "id": "location-057-adeline-resonance",
+      "name": "남문 야전 치료소",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 밤"
+    },
+    {
+      "id": "location-058-fourth-generation-line",
+      "name": "수도 북부 고가수로",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 4일"
+    },
+    {
+      "id": "location-059-nia-nabi-crack",
+      "name": "황궁 함정 정원",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 심야"
+    },
+    {
+      "id": "location-060-luka-hadori",
+      "name": "황궁 아래 폐검투장",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 5일"
+    },
+    {
+      "id": "location-061-raon-haechan-training",
+      "name": "폐쇄된 제1군단 정원",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 6~8일"
+    },
+    {
+      "id": "location-062-kazrin-evan-duel",
+      "name": "동부 성벽 백화원",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 9일"
+    },
+    {
+      "id": "location-063-garam-tribunal",
+      "name": "중립 성당의 임시 재판정",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 10일"
+    },
+    {
+      "id": "location-064-cheshi-offensive",
+      "name": "수도 전역과 빛의 분화구",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 11일"
+    },
+    {
+      "id": "location-065-jinhwon-haechan-duel",
+      "name": "옛 검투장 중앙",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 12일"
+    },
+    {
+      "id": "location-066-jinhwon-death",
+      "name": "옛 검투장 의무실",
+      "category": "전선과 작전지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 해 질 무렵"
+    },
+    {
+      "id": "location-067-nabi-rampage",
+      "name": "침수되는 황궁과 중앙 광장",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 12일 밤"
+    },
+    {
+      "id": "location-068-leo-command",
+      "name": "프시케 중앙 통신탑",
+      "category": "프시케 시설",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 13일"
+    },
+    {
+      "id": "location-069-hadori-inheritance",
+      "name": "빛의 분화구 외곽",
+      "category": "기억과 금지구역",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 정오"
+    },
+    {
+      "id": "location-070-chris-tena-defense",
+      "name": "서부 시민구 술집 시티즌",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 13일 오후"
+    },
+    {
+      "id": "location-071-kain-final-choice",
+      "name": "중앙 병기열차",
+      "category": "제국 수도",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "같은 날 · 해 질 무렵"
+    },
+    {
+      "id": "location-072-raon-style-final",
+      "name": "완전한 빛의 분화구 중심",
+      "category": "기억과 금지구역",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 초겨울 14일"
+    },
+    {
+      "id": "location-073-coexistence-ending",
+      "name": "빛의 분화구와 재건 의회",
+      "category": "기억과 금지구역",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "A.S. 84 · 겨울의 첫 맑은 날"
+    },
+    {
+      "id": "location-074-unnamed-child",
+      "name": "기록에서 지워진 수용 구역",
+      "category": "기억과 금지구역",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁보다 약 120년 전"
+    },
+    {
+      "id": "location-075-cursed-land-born",
+      "name": "저주받은 땅 제0구역",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "이송 후 3년"
+    },
+    {
+      "id": "location-076-cheshi-cage",
+      "name": "저주받은 땅 폐도시",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "탈출 후 1년"
+    },
+    {
+      "id": "location-077-denin-betrayal",
+      "name": "데닌 지하 자치구 아르카",
+      "category": "데닌 영지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "탈출 후 2년"
+    },
+    {
+      "id": "location-078-first-human",
+      "name": "저주받은 땅 변두리 인간 촌락",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "탈출 후 3년"
+    },
+    {
+      "id": "location-079-nullification-awakens",
+      "name": "변두리 촌락 연합 훈련장",
+      "category": "변방과 마을",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "정착 후 5년"
+    },
+    {
+      "id": "location-080-mother-of-martial-arts",
+      "name": "저주받은 땅 자유 훈련도시",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "정착 후 12년"
+    },
+    {
+      "id": "location-081-achero-light",
+      "name": "자유 훈련도시와 체시 수도",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁보다 약 90년 전"
+    },
+    {
+      "id": "location-082-first-band",
+      "name": "저주받은 땅 연합촌",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁보다 약 70년 전"
+    },
+    {
+      "id": "location-083-first-betrayal-loss",
+      "name": "체시 처형탑과 연합촌",
+      "category": "체시 지배권",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁보다 약 65년 전"
+    },
+    {
+      "id": "location-084-salvation-becomes-extinction",
+      "name": "확장된 저주받은 땅 세력권",
+      "category": "저주받은 땅",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁보다 약 30년 전"
+    },
+    {
+      "id": "location-085-seeks-haechan",
+      "name": "처형대가 지나간 데닌 영지",
+      "category": "데닌 영지",
+      "episodes": 1,
+      "scenes": 6,
+      "visuals": 11,
+      "firstTime": "대전쟁보다 약 20년 전"
+    }
+  ]
+}

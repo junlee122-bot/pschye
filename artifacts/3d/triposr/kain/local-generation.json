@@ -1,0 +1,43 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu-batch",
+  "characterId": "kain",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\kain\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\kain\\kain-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\kain\\processed-input.png",
+  "settings": {
+    "resolution": 160,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 9665,
+    "faces": 19302
+  },
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.400601,
+        0.0,
+        -0.280847
+      ],
+      [
+        0.400601,
+        1.78,
+        0.280847
+      ]
+    ]
+  },
+  "timings": {
+    "modelLoadSeconds": 25.13,
+    "preprocessSeconds": 2.133,
+    "reconstructionSeconds": 68.124,
+    "meshExtractionSeconds": 22.157,
+    "exportSeconds": 0.04
+  },
+  "torch": "2.13.0+cpu"
+}

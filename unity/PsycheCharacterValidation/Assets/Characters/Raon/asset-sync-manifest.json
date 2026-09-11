@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-08-31T09:05:17.262Z",
+  "files": [
+    {
+      "source": "public/models/characters/raon/raon-production-v2.glb",
+      "target": "unity/PsycheCharacterValidation/Assets/Characters/Raon/raon-production-v2.glb",
+      "bytes": 5427548
+    },
+    {
+      "source": "public/models/characters/raon/raon-production-lod1-v2.glb",
+      "target": "unity/PsycheCharacterValidation/Assets/Characters/Raon/raon-production-lod1-v2.glb",
+      "bytes": 2655916
+    },
+    {
+      "source": "public/models/characters/raon/raon-production-lod2-v2.glb",
+      "target": "unity/PsycheCharacterValidation/Assets/Characters/Raon/raon-production-lod2-v2.glb",
+      "bytes": 2092940
+    }
+  ]
+}

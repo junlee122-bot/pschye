@@ -1,0 +1,15 @@
+[
+  {
+    "characterId": "ann",
+    "characterName": "앤",
+    "view": "front",
+    "sourceUrl": "http://127.0.0.1:4335/art/3d-inputs/ann-front-fidelity-v1.png",
+    "crop": [
+      0,
+      0,
+      1024,
+      1536
+    ],
+    "outputPath": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\ann\\front.jpg"
+  }
+]

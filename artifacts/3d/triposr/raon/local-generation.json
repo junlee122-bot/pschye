@@ -1,0 +1,42 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\raon\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\raon\\processed-input.png",
+  "settings": {
+    "resolution": 256,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 36287,
+    "faces": 72566
+  },
+  "timings": {
+    "modelLoadSeconds": 257.206,
+    "preprocessSeconds": 15.998,
+    "reconstructionSeconds": 66.53,
+    "meshExtractionSeconds": 99.762,
+    "exportSeconds": 0.051
+  },
+  "torch": "2.13.0+cpu",
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.395093,
+        0.0,
+        -0.376199
+      ],
+      [
+        0.395093,
+        1.78,
+        0.376199
+      ]
+    ]
+  }
+}

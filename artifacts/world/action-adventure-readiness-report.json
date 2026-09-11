@@ -1,0 +1,184 @@
+{
+  "schema": "raonjena.action-adventure-readiness-report",
+  "version": 1,
+  "generatedAt": "2026-07-31T19:18:37.647Z",
+  "target": "Raon-first, story-driven 3D action-adventure vertical slice",
+  "recommendedEngine": "Unity 6 URP",
+  "score": 69,
+  "assessment": "systems-prototype",
+  "verticalSlice": {
+    "title": "꽃잎이 피기 전",
+    "playtimeMinutes": 35,
+    "route": [
+      "라온의 집",
+      "첫 마을",
+      "바람 언덕길",
+      "폐허 수로",
+      "봉인된 감시탑",
+      "변화한 첫 마을"
+    ],
+    "playerPromise": "플레이어는 라온으로서 이동하고, 사람과 대화하고, 단서를 연결하고, 하나 이상의 방식으로 장애물을 해결하고, 자신의 선택이 바꾼 마을로 돌아온다."
+  },
+  "pillars": [
+    {
+      "id": "raon-pov",
+      "label": "라온 고정 시점",
+      "weight": 15,
+      "evidence": [
+        {
+          "file": "src/data/grandStory.ts",
+          "exists": true
+        },
+        {
+          "file": "src/components/VillageAdventure.tsx",
+          "exists": true
+        },
+        {
+          "file": "src/components/RaonMindPanel.tsx",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 15
+    },
+    {
+      "id": "choice-state",
+      "label": "선택과 월드 상태 변화",
+      "weight": 13,
+      "evidence": [
+        {
+          "file": "src/data/story.ts",
+          "exists": true
+        },
+        {
+          "file": "src/game/persistence.ts",
+          "exists": true
+        },
+        {
+          "file": "src/game/progression.ts",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 13
+    },
+    {
+      "id": "combat",
+      "label": "읽을 수 있는 실시간 전투",
+      "weight": 12,
+      "evidence": [
+        {
+          "file": "src/game/battleEngine.ts",
+          "exists": true
+        },
+        {
+          "file": "src/components/RaonActionBattle.tsx",
+          "exists": true
+        },
+        {
+          "file": "src/game/combatUx.ts",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 12
+    },
+    {
+      "id": "exploration",
+      "label": "3D 이동·등반·활강·발견",
+      "weight": 14,
+      "evidence": [],
+      "status": "missing",
+      "earnedWeight": 0
+    },
+    {
+      "id": "affordance",
+      "label": "체능 × 환경 상호작용",
+      "weight": 12,
+      "evidence": [
+        {
+          "file": "src/data/systems.ts",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 12
+    },
+    {
+      "id": "world-streaming",
+      "label": "구역 스트리밍과 재방문",
+      "weight": 9,
+      "evidence": [],
+      "status": "missing",
+      "earnedWeight": 0
+    },
+    {
+      "id": "ai-navigation",
+      "label": "NPC·적 내비게이션과 생활",
+      "weight": 8,
+      "evidence": [],
+      "status": "missing",
+      "earnedWeight": 0
+    },
+    {
+      "id": "cinematics",
+      "label": "대화·표정·카메라 연출",
+      "weight": 7,
+      "evidence": [
+        {
+          "file": "src/components/CharacterDialogueStage.tsx",
+          "exists": true
+        },
+        {
+          "file": "src/data/characterPresentation.ts",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 7
+    },
+    {
+      "id": "asset-streaming",
+      "label": "주소 기반 자산·LOD 예산",
+      "weight": 5,
+      "evidence": [
+        {
+          "file": "public/data/asset-catalog.json",
+          "exists": true
+        },
+        {
+          "file": "public/data/model-production-catalog.json",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 5
+    },
+    {
+      "id": "quality-harness",
+      "label": "자동 플레이테스트와 자산 게이트",
+      "weight": 5,
+      "evidence": [
+        {
+          "file": "tools/playtest-audit.mjs",
+          "exists": true
+        },
+        {
+          "file": "tools/3d/run-production-harness.mjs",
+          "exists": true
+        },
+        {
+          "file": "tools/3d/character-fidelity-audit.mjs",
+          "exists": true
+        }
+      ],
+      "status": "prototype-ready",
+      "earnedWeight": 5
+    }
+  ],
+  "nextCriticalPath": [
+    "3D 이동·등반·활강·발견",
+    "구역 스트리밍과 재방문",
+    "NPC·적 내비게이션과 생활"
+  ]
+}

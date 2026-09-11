@@ -1,0 +1,558 @@
+{
+  "schema": "raonjena.model-provider-overrides",
+  "version": 1,
+  "generatedAt": "2026-08-31T08:25:44.153Z",
+  "models": [
+    {
+      "id": "raon-production-v2",
+      "characterId": "raon",
+      "characterName": "라온",
+      "stage": "프시케 7기 입단 초기",
+      "runtimePath": "/models/characters/raon/raon-production-v2.glb",
+      "thumbnail": "/art/characters/raon/03-candidate.webp",
+      "sourceSheet": "/art/3d-inputs/raon-turnaround-v2.png",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "blender-production-candidate-v2",
+      "generator": "Blender 4.5 LTS automated quad-remesh, 2K PBR, skinned hair-card and facial-rig pipeline over TripoSR source mesh",
+      "intendedUpgrade": "Manual joint and facial edge-loop retopology, artist-authored PBR bake, facial sculpt polish and an actual Unity Editor deformation pass",
+      "bytes": 5427548,
+      "meshes": 2,
+      "materials": 8,
+      "nodes": 36,
+      "triangles": 42592,
+      "providerTaskId": "blender-production:raon:2026-08-31",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front",
+        "side",
+        "back"
+      ],
+      "lodFiles": [
+        "/models/characters/raon/raon-production-v2.glb",
+        "/models/characters/raon/raon-production-lod1-v2.glb",
+        "/models/characters/raon/raon-production-lod2-v2.glb"
+      ],
+      "fidelityEvidence": {
+        "authoredTopology": false,
+        "pbrMaterialSeparation": true,
+        "humanoidRig": true,
+        "animationReviewed": true,
+        "lodChain": true,
+        "engineValidated": false
+      },
+      "qualityGate": {
+        "status": "passed",
+        "tier": "blender-production-candidate-v2",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": true,
+          "requiresNode": true,
+          "requiresSkin": true,
+          "requiresAnimation": true,
+          "requiresLodChain": true,
+          "requiresMorphTargets": true,
+          "requiresPbrTextures": true
+        }
+      },
+      "blenderPilot": {
+        "version": "4.5.12 LTS",
+        "bones": 33,
+        "animations": 16,
+        "animationNames": [
+          "idle",
+          "walk",
+          "run",
+          "sprint",
+          "jump",
+          "land",
+          "dodge",
+          "attackLight",
+          "attackHeavy",
+          "guard",
+          "hit",
+          "talkNeutral",
+          "expressionSmile",
+          "expressionBlink",
+          "expressionConcern",
+          "expressionTalk"
+        ],
+        "lodTriangles": [
+          42592,
+          23482,
+          10744
+        ],
+        "blendSource": "artifacts/3d/blender/raon-production-v2.blend"
+      },
+      "productionAsset": {
+        "retopology": "automated quad-remesh deformation candidate",
+        "manualRetopology": false,
+        "quadRatio": 1.0,
+        "hairCards": 32,
+        "textureResolution": 2048,
+        "textureChannels": [
+          "baseColor",
+          "normal",
+          "metallicRoughness",
+          "occlusion"
+        ],
+        "shapeKeys": 20,
+        "bones": 33,
+        "animations": 16,
+        "lodTriangles": [
+          42592,
+          23482,
+          10744
+        ],
+        "unityCompatibility": "pass",
+        "actualUnityEditorValidation": false,
+        "validationReport": "artifacts/3d/unity/raon-unity-compatibility-report.json"
+      }
+    },
+    {
+      "id": "hadori-triposr-v1",
+      "characterId": "hadori",
+      "characterName": "하도리",
+      "stage": "프시케 제7기 1조장",
+      "runtimePath": "/models/characters/hadori/hadori-triposr-v1.glb",
+      "thumbnail": "/art/characters/hadori/03-candidate.webp",
+      "sourceSheet": "/art/archive/hadori-sheet.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 335048,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 16704,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T07:44:45.376Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "kazrin-triposr-v1",
+      "characterId": "kazrin",
+      "characterName": "카즈린",
+      "stage": "프시케 제7기 3조장",
+      "runtimePath": "/models/characters/kazrin/kazrin-triposr-v1.glb",
+      "thumbnail": "/art/characters/kazrin/03-candidate.webp",
+      "sourceSheet": "/art/archive/kazrin-sheet.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 487044,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 24294,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T07:44:45.589Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "kain-triposr-v1",
+      "characterId": "kain",
+      "characterName": "카인",
+      "stage": "프시케 제7기 4조장",
+      "runtimePath": "/models/characters/kain/kain-triposr-v1.glb",
+      "thumbnail": "/art/characters/kain/03-candidate.webp",
+      "sourceSheet": "/art/characters/kain/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 387264,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 19302,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T07:49:06.079Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "leo-triposr-v1",
+      "characterId": "leo",
+      "characterName": "레오",
+      "stage": "프시케 제7기 5조장",
+      "runtimePath": "/models/characters/leo/leo-triposr-v1.glb",
+      "thumbnail": "/art/characters/leo/03-candidate.webp",
+      "sourceSheet": "/art/characters/leo/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 255760,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 12730,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T07:49:06.361Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "haechan-triposr-v1",
+      "characterId": "haechan",
+      "characterName": "해찬",
+      "stage": "대전쟁 제1군단장",
+      "runtimePath": "/models/characters/haechan/haechan-triposr-v1.glb",
+      "thumbnail": "/art/characters/haechan/03-candidate.webp",
+      "sourceSheet": "/art/characters/haechan/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 666108,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 33236,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T08:28:49.187Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "lami-triposr-v1",
+      "characterId": "lami",
+      "characterName": "라미",
+      "stage": "대전쟁 반란군 총사령관",
+      "runtimePath": "/models/characters/lami/lami-triposr-v1.glb",
+      "thumbnail": "/art/characters/lami/03-candidate.webp",
+      "sourceSheet": "/art/characters/lami/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 578644,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 28874,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T08:28:49.526Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "jinhwon-triposr-v1",
+      "characterId": "jinhwon",
+      "characterName": "진훤",
+      "stage": "프시케 제1기 1조장",
+      "runtimePath": "/models/characters/jinhwon/jinhwon-triposr-v1.glb",
+      "thumbnail": "/art/characters/jinhwon/03-candidate.webp",
+      "sourceSheet": "/art/characters/jinhwon/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 421888,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 21046,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T08:28:49.882Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "maru-triposr-v1",
+      "characterId": "maru",
+      "characterName": "마루",
+      "stage": "프시케 비공식 제5조장",
+      "runtimePath": "/models/characters/maru/maru-triposr-v1.glb",
+      "thumbnail": "/art/characters/maru/03-candidate.webp",
+      "sourceSheet": "/art/characters/maru/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 570128,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 28434,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T08:28:50.264Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "nabi-nia-triposr-v1",
+      "characterId": "nabi-nia",
+      "characterName": "나비 / 니아",
+      "stage": "대전쟁 제2군단장 / 현 여황제",
+      "runtimePath": "/models/characters/nabi-nia/nabi-nia-triposr-v1.glb",
+      "thumbnail": "/art/characters/nabi-nia/03-candidate.webp",
+      "sourceSheet": "/art/characters/nabi-nia/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 671480,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 33516,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T08:28:50.681Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 160,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    },
+    {
+      "id": "ann-triposr-v1",
+      "characterId": "ann",
+      "characterName": "앤",
+      "stage": "프시케 제1기 2조장",
+      "runtimePath": "/models/characters/ann/ann-triposr-v1.glb",
+      "thumbnail": "/art/characters/ann/03-candidate.webp",
+      "sourceSheet": "/art/characters/ann/01-origin.webp",
+      "variationCount": 20,
+      "status": "review",
+      "productionTier": "ai-generated-single-view-review",
+      "generator": "Stability AI TripoSR",
+      "intendedUpgrade": "Multi-view reconstruction, retopology, humanoid rig, facial blendshapes, animation and LOD bake",
+      "bytes": 463732,
+      "meshes": 1,
+      "materials": 0,
+      "nodes": 2,
+      "triangles": 23122,
+      "providerTaskId": "stabilityai/TripoSR:2026-07-31T18:43:07.480Z",
+      "providerCoverUrl": "",
+      "sourceViews": [
+        "front"
+      ],
+      "qualityGate": {
+        "status": "passed",
+        "tier": "ai-single-view-review",
+        "checks": {
+          "minimumBytes": 100000,
+          "triangleRange": [
+            10000,
+            1500000
+          ],
+          "requiresMesh": true,
+          "requiresMaterial": false,
+          "requiresNode": true
+        }
+      },
+      "reconstruction": {
+        "space": "stabilityai/TripoSR",
+        "marchingCubesResolution": 128,
+        "removeBackground": true,
+        "foregroundRatio": 0.85
+      }
+    }
+  ]
+}

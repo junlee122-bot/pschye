@@ -1,0 +1,78 @@
+"""Kazrin procedural character preset."""
+
+from character_spec import (
+    CharacterPreset,
+    HairSpec,
+    OutfitSpec,
+    Palette,
+    Proportions,
+    WeaponSpec,
+)
+
+
+PRESET = CharacterPreset(
+    id="kazrin",
+    display_name="카즈린",
+    english_name="Kazrin",
+    role="프시케 제7기 제3조장 · 백은의 창",
+    silhouette_note="백은 포니테일, 흑백 비대칭 기사복, 길고 가는 앤류 장창",
+    source_art=(
+        "public/art/characters/kazrin/01-origin.webp",
+        "public/art/characters/kazrin/04-induction.webp",
+        "public/art/characters/kazrin/14-signature.webp",
+        "public/art/characters/kazrin/contact-sheet.webp",
+    ),
+    proportions=Proportions(
+        height_m=1.72,
+        head_ratio=7.55,
+        shoulder_width=0.37,
+        torso_length=0.48,
+        leg_length=0.92,
+        arm_length=0.70,
+        hand_scale=0.92,
+        build="athletic",
+    ),
+    palette=Palette(
+        skin=(0.82, 0.66, 0.55, 1.0),
+        hair=(0.73, 0.73, 0.70, 1.0),
+        eye=(0.36, 0.43, 0.46, 1.0),
+        cloth_primary=(0.025, 0.030, 0.037, 1.0),
+        cloth_secondary=(0.73, 0.71, 0.64, 1.0),
+        leather=(0.13, 0.09, 0.06, 1.0),
+        metal=(0.58, 0.60, 0.61, 1.0),
+        accent=(0.65, 0.47, 0.20, 1.0),
+    ),
+    hair=HairSpec(
+        style="ponytail",
+        length=0.68,
+        volume=1.0,
+        strand_count=20,
+        fringe_bias=0.10,
+        ponytail_height=0.72,
+    ),
+    outfit=OutfitSpec(
+        sleeveless=False,
+        high_collar=True,
+        coat_tails=4,
+        coat_length=0.82,
+        shoulder_armor="right",
+        chest_armor=0.52,
+        forearm_armor=0.72,
+        gauntlet_scale=0.94,
+        boot_height=0.66,
+        skirt_panels=4,
+        asymmetry=0.42,
+    ),
+    weapon=WeaponSpec(
+        kind="spear",
+        length=2.25,
+        blade_length=0.32,
+        blade_width=0.105,
+        guard_width=0.13,
+        grip_length=1.72,
+        ornament=0.52,
+    ),
+    expression="cold",
+    seed=7313,
+    tags=("seventh-generation", "spearswoman", "silver-hair", "ann-lineage"),
+)

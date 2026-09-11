@@ -1,0 +1,11 @@
+artifacts/
+docs/
+dist/
+tmp/
+.tmp/
+coverage/
+node_modules/
+.tools/
+*.log
+src/**/*.test.ts
+src/**/*.test.tsx

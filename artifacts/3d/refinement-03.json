@@ -1,0 +1,30 @@
+{
+  "iteration": 3,
+  "generatedAt": "2026-07-29T20:00:45.520Z",
+  "generationLog": "generated 3 GLB models\nraon: 41 meshes, 4704 triangles, 130592 bytes\nhadori: 33 meshes, 4440 triangles, 117868 bytes\nkazrin: 44 meshes, 4944 triangles, 136876 bytes",
+  "auditLog": "3D model audit: 0 pass / 3 warn / 0 fail\nWARN raon-procedural-v1 — 4704 triangles\nWARN hadori-procedural-v1 — 4440 triangles\nWARN kazrin-procedural-v1 — 4944 triangles",
+  "auditError": "",
+  "models": [
+    {
+      "id": "raon-procedural-v1",
+      "bytes": 130592,
+      "meshes": 41,
+      "triangles": 4704,
+      "status": "prototype"
+    },
+    {
+      "id": "hadori-procedural-v1",
+      "bytes": 117868,
+      "meshes": 33,
+      "triangles": 4440,
+      "status": "prototype"
+    },
+    {
+      "id": "kazrin-procedural-v1",
+      "bytes": 136876,
+      "meshes": 44,
+      "triangles": 4944,
+      "status": "prototype"
+    }
+  ]
+}

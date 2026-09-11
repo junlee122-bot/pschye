@@ -1,0 +1,76 @@
+"""Raon procedural character preset."""
+
+from character_spec import (
+    CharacterPreset,
+    HairSpec,
+    OutfitSpec,
+    Palette,
+    Proportions,
+    WeaponSpec,
+)
+
+
+PRESET = CharacterPreset(
+    id="raon",
+    display_name="라온",
+    english_name="Raon",
+    role="프시케 제7기 제2조장 · 미완의 검",
+    silhouette_note="가벼운 비대칭 경갑, 찢어진 장코트, 민첩한 한손검 실루엣",
+    source_art=(
+        "public/art/characters/raon/01-origin.webp",
+        "public/art/characters/raon/04-induction.webp",
+        "public/art/characters/raon/14-signature.webp",
+        "public/art/characters/raon/contact-sheet.webp",
+    ),
+    proportions=Proportions(
+        height_m=1.78,
+        head_ratio=7.35,
+        shoulder_width=0.42,
+        torso_length=0.51,
+        leg_length=0.92,
+        arm_length=0.73,
+        hand_scale=1.0,
+        build="lean",
+    ),
+    palette=Palette(
+        skin=(0.72, 0.50, 0.35, 1.0),
+        hair=(0.16, 0.085, 0.035, 1.0),
+        eye=(0.40, 0.23, 0.08, 1.0),
+        cloth_primary=(0.055, 0.065, 0.075, 1.0),
+        cloth_secondary=(0.56, 0.51, 0.42, 1.0),
+        leather=(0.16, 0.095, 0.045, 1.0),
+        metal=(0.24, 0.27, 0.30, 1.0),
+        accent=(0.72, 0.43, 0.16, 1.0),
+    ),
+    hair=HairSpec(
+        style="tousled",
+        length=0.18,
+        volume=1.08,
+        strand_count=18,
+        fringe_bias=0.35,
+    ),
+    outfit=OutfitSpec(
+        sleeveless=False,
+        high_collar=True,
+        coat_tails=5,
+        coat_length=0.72,
+        shoulder_armor="left",
+        chest_armor=0.20,
+        forearm_armor=0.62,
+        gauntlet_scale=1.0,
+        boot_height=0.48,
+        asymmetry=0.38,
+    ),
+    weapon=WeaponSpec(
+        kind="sword",
+        length=1.05,
+        blade_length=0.78,
+        blade_width=0.055,
+        guard_width=0.22,
+        grip_length=0.19,
+        ornament=0.22,
+    ),
+    expression="bright",
+    seed=1702,
+    tags=("seventh-generation", "swordsman", "asymmetric-armor", "protagonist"),
+)

@@ -1,0 +1,43 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu-batch",
+  "characterId": "maru",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\maru\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\maru\\maru-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\maru\\processed-input.png",
+  "settings": {
+    "resolution": 160,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 14245,
+    "faces": 28434
+  },
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.389964,
+        0.0,
+        -0.353657
+      ],
+      [
+        0.389964,
+        1.78,
+        0.353657
+      ]
+    ]
+  },
+  "timings": {
+    "modelLoadSeconds": 34.021,
+    "preprocessSeconds": 1.639,
+    "reconstructionSeconds": 38.188,
+    "meshExtractionSeconds": 26.987,
+    "exportSeconds": 0.041
+  },
+  "torch": "2.13.0+cpu"
+}

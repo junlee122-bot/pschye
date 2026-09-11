@@ -1,0 +1,63 @@
+{
+  "input": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-triposr-v1.glb",
+  "objects": [
+    {
+      "name": "geometry_0",
+      "vertices": 36287,
+      "polygons": 72566,
+      "materials": [
+        "DefaultMaterial"
+      ],
+      "colorAttributes": [
+        "Color"
+      ],
+      "colorStats": {
+        "Color": {
+          "domain": "CORNER",
+          "dataType": "BYTE_COLOR",
+          "linearMean": [
+            0.42205776128589756,
+            0.43471383479688536,
+            0.446734160410985,
+            1.0
+          ],
+          "srgbMean": [
+            0.6609958646133258,
+            0.6704272422719989,
+            0.678749727019522,
+            1.0
+          ],
+          "linearMin": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linearMax": [
+            0.8879231810569763,
+            0.838799238204956,
+            0.8069524765014648,
+            1.0
+          ]
+        }
+      },
+      "uvLayers": [],
+      "bounds": {
+        "min": [
+          -0.39509308338165283,
+          -0.3761994242668152,
+          0.0
+        ],
+        "max": [
+          0.39509308338165283,
+          0.3761994242668152,
+          1.7799999713897705
+        ]
+      }
+    }
+  ],
+  "scene": {
+    "meshCount": 1,
+    "armatureCount": 0
+  }
+}

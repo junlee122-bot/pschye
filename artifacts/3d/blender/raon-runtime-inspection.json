@@ -1,0 +1,94 @@
+{
+  "input": "C:\\Users\\이승준\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\raon\\raon-blender-rigged-v1.glb",
+  "objects": [
+    {
+      "name": "Raon_LOD0",
+      "vertices": 217647,
+      "polygons": 72566,
+      "materials": [
+        "Raon_Skin",
+        "Raon_GoldTrim",
+        "Raon_Hair",
+        "Raon_Shirt",
+        "Raon_Coat",
+        "Raon_Leather",
+        "Raon_Metal"
+      ],
+      "colorAttributes": [
+        "Color"
+      ],
+      "colorStats": {
+        "Color": {
+          "domain": "CORNER",
+          "dataType": "BYTE_COLOR",
+          "linearMean": [
+            0.42205776128589756,
+            0.43471383479688536,
+            0.446734160410985,
+            1.0
+          ],
+          "srgbMean": [
+            0.6609958646133258,
+            0.6704272422719989,
+            0.678749727019522,
+            1.0
+          ],
+          "linearMin": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "linearMax": [
+            0.8879231810569763,
+            0.838799238204956,
+            0.8069524765014648,
+            1.0
+          ]
+        }
+      },
+      "uvLayers": [
+        "UVMap"
+      ],
+      "bounds": {
+        "min": [
+          -0.40820401906967163,
+          -0.4930659532546997,
+          -7.377958866072731e-08
+        ],
+        "max": [
+          0.39096593856811523,
+          0.4561994969844818,
+          1.6362853050231934
+        ]
+      }
+    },
+    {
+      "name": "Icosphere",
+      "vertices": 42,
+      "polygons": 80,
+      "materials": [],
+      "colorAttributes": [],
+      "colorStats": {},
+      "uvLayers": [
+        "UVMap"
+      ],
+      "bounds": {
+        "min": [
+          -0.9510578513145447,
+          -0.9999999403953552,
+          -1.0
+        ],
+        "max": [
+          0.9510578513145447,
+          0.9999999403953552,
+          1.0
+        ]
+      }
+    }
+  ],
+  "scene": {
+    "meshCount": 2,
+    "armatureCount": 1
+  }
+}

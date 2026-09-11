@@ -1,0 +1,2357 @@
+{
+  "schema": "raonjena.character-fidelity-report",
+  "version": 1,
+  "generatedAt": "2026-08-31T09:05:26.456Z",
+  "standards": {
+    "schema": "raonjena.character-fidelity-standards",
+    "version": 1,
+    "philosophy": "AI reconstruction produces a review maquette, not a shippable character. Production approval requires authored topology, PBR materials, deformation, facial performance, motion and runtime LOD validation.",
+    "tiers": {
+      "maquette": {
+        "purpose": "silhouette, costume mass and camera readability review",
+        "minimumScore": 15
+      },
+      "verticalSlice": {
+        "purpose": "playable hero in the first village vertical slice",
+        "minimumScore": 72
+      },
+      "heroProduction": {
+        "purpose": "cinematic close-up and final action-adventure gameplay",
+        "minimumScore": 90
+      }
+    },
+    "targets": {
+      "lod0Triangles": {
+        "min": 55000,
+        "max": 95000
+      },
+      "lod1Ratio": 0.55,
+      "lod2Ratio": 0.22,
+      "textureSets": {
+        "face": 4096,
+        "body": 4096,
+        "hair": 2048,
+        "equipment": 4096
+      },
+      "requiredTextureChannels": [
+        "baseColor",
+        "normal",
+        "metallic",
+        "roughness",
+        "ambientOcclusion"
+      ],
+      "minimumMaterials": 4,
+      "minimumSkins": 1,
+      "minimumMorphTargets": 20,
+      "heroMorphTargets": 52,
+      "minimumAnimations": 8,
+      "heroAnimations": 17,
+      "minimumLodLevels": 3,
+      "expectedCharacterHeightMeters": {
+        "min": 1.45,
+        "max": 2.15
+      }
+    },
+    "weightedGates": [
+      {
+        "id": "reference",
+        "label": "정면·측면·후면 비율 원화",
+        "weight": 8
+      },
+      {
+        "id": "mesh",
+        "label": "유효한 실루엣과 해부학",
+        "weight": 10
+      },
+      {
+        "id": "topology",
+        "label": "변형 가능한 수동 리토폴로지",
+        "weight": 12
+      },
+      {
+        "id": "materials",
+        "label": "피부·눈·머리·장비 분리 PBR 재질",
+        "weight": 14
+      },
+      {
+        "id": "textures",
+        "label": "베이크 및 텍스처 채널",
+        "weight": 10
+      },
+      {
+        "id": "rig",
+        "label": "휴머노이드 스켈레톤과 스킨 웨이트",
+        "weight": 14
+      },
+      {
+        "id": "face",
+        "label": "표정 블렌드셰이프와 시선",
+        "weight": 14
+      },
+      {
+        "id": "motion",
+        "label": "이동·전투·상호작용 애니메이션",
+        "weight": 10
+      },
+      {
+        "id": "lod",
+        "label": "LOD와 런타임 예산",
+        "weight": 5
+      },
+      {
+        "id": "engine",
+        "label": "게임 카메라·조명·충돌 검증",
+        "weight": 3
+      }
+    ]
+  },
+  "summary": {
+    "total": 48,
+    "blocked": 37,
+    "maquette": 10,
+    "verticalSlice": 1,
+    "heroProduction": 0,
+    "averageScore": 11.7
+  },
+  "results": [
+    {
+      "characterId": "raon",
+      "characterName": "라온",
+      "runtimePath": "/models/characters/raon/raon-production-v2.glb",
+      "sourceTier": "blender-production-candidate-v2",
+      "score": 85,
+      "tier": "verticalSlice",
+      "metrics": {
+        "bytes": 5427548,
+        "triangles": 42592,
+        "materials": 8,
+        "skins": 1,
+        "morphTargets": 20,
+        "animations": 16,
+        "lodLevels": 3,
+        "textureChannels": {
+          "baseColor": true,
+          "normal": true,
+          "metallic": true,
+          "roughness": true,
+          "ambientOcclusion": true
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": true,
+        "textures": true,
+        "rig": true,
+        "face": true,
+        "motion": true,
+        "lod": true,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "hadori",
+      "characterName": "하도리",
+      "runtimePath": "/models/characters/hadori/hadori-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 335048,
+        "triangles": 16704,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "kazrin",
+      "characterName": "카즈린",
+      "runtimePath": "/models/characters/kazrin/kazrin-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 487044,
+        "triangles": 24294,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "kain",
+      "characterName": "카인",
+      "runtimePath": "/models/characters/kain/kain-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 387264,
+        "triangles": 19302,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "leo",
+      "characterName": "레오",
+      "runtimePath": "/models/characters/leo/leo-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 255760,
+        "triangles": 12730,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "chris",
+      "characterName": "크리스",
+      "runtimePath": "/models/characters/chris/chris-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 117832,
+        "triangles": 4440,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "haechan",
+      "characterName": "해찬",
+      "runtimePath": "/models/characters/haechan/haechan-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 666108,
+        "triangles": 33236,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "lami",
+      "characterName": "라미",
+      "runtimePath": "/models/characters/lami/lami-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 578644,
+        "triangles": 28874,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "jinhwon",
+      "characterName": "진훤",
+      "runtimePath": "/models/characters/jinhwon/jinhwon-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 421888,
+        "triangles": 21046,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "ann",
+      "characterName": "앤",
+      "runtimePath": "/models/characters/ann/ann-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 463732,
+        "triangles": 23122,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "maru",
+      "characterName": "마루",
+      "runtimePath": "/models/characters/maru/maru-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 570128,
+        "triangles": 28434,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "nabi-nia",
+      "characterName": "나비 / 니아",
+      "runtimePath": "/models/characters/nabi-nia/nabi-nia-triposr-v1.glb",
+      "sourceTier": "ai-generated-single-view-review",
+      "score": 18,
+      "tier": "maquette",
+      "metrics": {
+        "bytes": 671480,
+        "triangles": 33516,
+        "materials": 0,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": true,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "garam",
+      "characterName": "가람",
+      "runtimePath": "/models/characters/garam/garam-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 131116,
+        "triangles": 4776,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "kangrim",
+      "characterName": "강림",
+      "runtimePath": "/models/characters/kangrim/kangrim-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 120748,
+        "triangles": 4464,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "guillaume",
+      "characterName": "기욤",
+      "runtimePath": "/models/characters/guillaume/guillaume-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 118376,
+        "triangles": 4512,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "night",
+      "characterName": "나이트",
+      "runtimePath": "/models/characters/night/night-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 131120,
+        "triangles": 4776,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "dimitri",
+      "characterName": "디미트리",
+      "runtimePath": "/models/characters/dimitri/dimitri-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130612,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "laila",
+      "characterName": "라일라",
+      "runtimePath": "/models/characters/laila/laila-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 136360,
+        "triangles": 4872,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "remesis",
+      "characterName": "레메시스",
+      "runtimePath": "/models/characters/remesis/remesis-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130588,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "rose",
+      "characterName": "로즈",
+      "runtimePath": "/models/characters/rose/rose-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 136348,
+        "triangles": 4872,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "luka",
+      "characterName": "루카",
+      "runtimePath": "/models/characters/luka/luka-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 120740,
+        "triangles": 4464,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "lucas",
+      "characterName": "루카스",
+      "runtimePath": "/models/characters/lucas/lucas-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130608,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "list",
+      "characterName": "리스트",
+      "runtimePath": "/models/characters/list/list-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130620,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "moira",
+      "characterName": "모이라",
+      "runtimePath": "/models/characters/moira/moira-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 136360,
+        "triangles": 4872,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "mire",
+      "characterName": "미르",
+      "runtimePath": "/models/characters/mire/mire-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 120760,
+        "triangles": 4464,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "bao",
+      "characterName": "바오",
+      "runtimePath": "/models/characters/bao/bao-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130552,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "bellatrice",
+      "characterName": "벨라트리체",
+      "runtimePath": "/models/characters/bellatrice/bellatrice-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 118380,
+        "triangles": 4512,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "boksonga",
+      "characterName": "복송아",
+      "runtimePath": "/models/characters/boksonga/boksonga-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 131112,
+        "triangles": 4776,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "volver",
+      "characterName": "볼버",
+      "runtimePath": "/models/characters/volver/volver-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130596,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "brigitte",
+      "characterName": "브리짓",
+      "runtimePath": "/models/characters/brigitte/brigitte-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130588,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "sebastian",
+      "characterName": "세바스티안",
+      "runtimePath": "/models/characters/sebastian/sebastian-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130596,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "spinoza",
+      "characterName": "스피노자",
+      "runtimePath": "/models/characters/spinoza/spinoza-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130600,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "adeline",
+      "characterName": "아델린",
+      "runtimePath": "/models/characters/adeline/adeline-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130616,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "abel",
+      "characterName": "아벨",
+      "runtimePath": "/models/characters/abel/abel-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130596,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "akari",
+      "characterName": "아카리",
+      "runtimePath": "/models/characters/akari/akari-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130592,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "achero",
+      "characterName": "아케로",
+      "runtimePath": "/models/characters/achero/achero-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130600,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "evan",
+      "characterName": "에반",
+      "runtimePath": "/models/characters/evan/evan-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130600,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "eitan",
+      "characterName": "에이탄",
+      "runtimePath": "/models/characters/eitan/eitan-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 120728,
+        "triangles": 4464,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "yeri",
+      "characterName": "예리",
+      "runtimePath": "/models/characters/yeri/yeri-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 136884,
+        "triangles": 4944,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "elaine",
+      "characterName": "일레인",
+      "runtimePath": "/models/characters/elaine/elaine-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130576,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "chasey",
+      "characterName": "체이시",
+      "runtimePath": "/models/characters/chasey/chasey-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 117868,
+        "triangles": 4440,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "kael",
+      "characterName": "카엘",
+      "runtimePath": "/models/characters/kael/kael-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 117864,
+        "triangles": 4440,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "kampta",
+      "characterName": "캄프타",
+      "runtimePath": "/models/characters/kampta/kampta-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 130640,
+        "triangles": 4704,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "colin",
+      "characterName": "콜린",
+      "runtimePath": "/models/characters/colin/colin-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 120740,
+        "triangles": 4464,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "crowd",
+      "characterName": "크라우드",
+      "runtimePath": "/models/characters/crowd/crowd-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 120740,
+        "triangles": 4464,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "kitty",
+      "characterName": "키티",
+      "runtimePath": "/models/characters/kitty/kitty-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 117904,
+        "triangles": 4440,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "tena-elion",
+      "characterName": "테나 엘리온",
+      "runtimePath": "/models/characters/tena-elion/tena-elion-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 136356,
+        "triangles": 4872,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    },
+    {
+      "characterId": "perseus",
+      "characterName": "페르세우스",
+      "runtimePath": "/models/characters/perseus/perseus-procedural-v1.glb",
+      "sourceTier": "procedural-maquette",
+      "score": 8,
+      "tier": "blocked",
+      "metrics": {
+        "bytes": 117908,
+        "triangles": 4440,
+        "materials": 7,
+        "skins": 0,
+        "morphTargets": 0,
+        "animations": 0,
+        "lodLevels": 1,
+        "textureChannels": {
+          "baseColor": false,
+          "normal": false,
+          "metallic": false,
+          "roughness": false,
+          "ambientOcclusion": false
+        }
+      },
+      "gates": {
+        "reference": true,
+        "mesh": false,
+        "topology": false,
+        "materials": false,
+        "textures": false,
+        "rig": false,
+        "face": false,
+        "motion": false,
+        "lod": false,
+        "engine": false
+      },
+      "blockers": [
+        "유효한 실루엣과 해부학",
+        "변형 가능한 수동 리토폴로지",
+        "피부·눈·머리·장비 분리 PBR 재질",
+        "베이크 및 텍스처 채널",
+        "휴머노이드 스켈레톤과 스킨 웨이트",
+        "표정 블렌드셰이프와 시선",
+        "이동·전투·상호작용 애니메이션",
+        "LOD와 런타임 예산",
+        "게임 카메라·조명·충돌 검증"
+      ]
+    }
+  ]
+}

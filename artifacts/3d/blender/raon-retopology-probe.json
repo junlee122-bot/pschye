@@ -1,0 +1,61 @@
+{
+  "source": {
+    "vertices": 36287,
+    "polygons": 72566,
+    "polygonSizes": {
+      "3": 72566
+    },
+    "quadRatio": 0.0,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0
+  },
+  "candidates": [
+    {
+      "method": "quadriflow-recalculated",
+      "vertices": 36287,
+      "polygons": 72566,
+      "polygonSizes": {
+        "3": 72566
+      },
+      "quadRatio": 0.0,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    {
+      "method": "remesh-modifier",
+      "octreeDepth": 6,
+      "vertices": 4945,
+      "polygons": 4978,
+      "polygonSizes": {
+        "4": 4978
+      },
+      "quadRatio": 1.0,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 34
+    },
+    {
+      "method": "remesh-modifier",
+      "octreeDepth": 7,
+      "vertices": 21177,
+      "polygons": 21232,
+      "polygonSizes": {
+        "4": 21232
+      },
+      "quadRatio": 1.0,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 53
+    },
+    {
+      "method": "remesh-modifier",
+      "octreeDepth": 8,
+      "vertices": 86789,
+      "polygons": 86844,
+      "polygonSizes": {
+        "4": 86844
+      },
+      "quadRatio": 1.0,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 55
+    }
+  ]
+}

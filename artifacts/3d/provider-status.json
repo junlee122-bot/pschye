@@ -1,0 +1,83 @@
+{
+  "schema": "raonjena.3d-provider-status",
+  "version": 1,
+  "generatedAt": "2026-07-31T19:28:32.183Z",
+  "requestedProvider": "auto",
+  "characterId": "raon",
+  "cloudSpendAllowed": false,
+  "machine": {
+    "platform": "win32",
+    "architecture": "x64",
+    "freeDiskBytes": 432357376,
+    "localGpuClass": "integrated-1gb-detected",
+    "heavyDiffusionInstallAllowed": false
+  },
+  "providers": [
+    {
+      "id": "hitem3d",
+      "label": "Hi3D",
+      "kind": "cloud",
+      "configured": true,
+      "authenticated": true,
+      "balance": 0,
+      "available": false,
+      "reason": "insufficient-balance",
+      "qualityTier": "multi-view-high-density-pbr"
+    },
+    {
+      "id": "meshy",
+      "label": "Meshy 6",
+      "kind": "cloud",
+      "configured": false,
+      "available": false,
+      "reason": "api-key-missing",
+      "qualityTier": "multi-view-pbr-review"
+    },
+    {
+      "id": "triposr-local",
+      "label": "Stability AI TripoSR",
+      "kind": "local-cpu",
+      "configured": true,
+      "available": true,
+      "reason": "validated-existing-mesh",
+      "existingMesh": true,
+      "qualityTier": "single-view-review"
+    },
+    {
+      "id": "stable-fast-3d",
+      "label": "Stability AI Stable Fast 3D",
+      "kind": "local-gpu",
+      "configured": false,
+      "available": false,
+      "reason": "disabled-hardware-requires-about-6gb-vram",
+      "qualityTier": "single-view-textured-game-asset"
+    },
+    {
+      "id": "hunyuan3d-2",
+      "label": "Tencent Hunyuan3D 2",
+      "kind": "local-gpu",
+      "configured": false,
+      "available": false,
+      "reason": "disabled-hardware-requires-6gb-shape-or-16gb-shape-texture-vram",
+      "qualityTier": "high-resolution-shape-and-texture"
+    },
+    {
+      "id": "procedural",
+      "label": "Raonjena procedural maquette",
+      "kind": "local-node",
+      "configured": true,
+      "available": true,
+      "reason": "last-resort-prototype",
+      "qualityTier": "procedural-maquette"
+    }
+  ],
+  "fallbackOrder": [
+    "hitem3d",
+    "meshy",
+    "triposr-local",
+    "procedural"
+  ],
+  "selectedProvider": "triposr-local",
+  "selectionReason": "validated-existing-mesh",
+  "note": "Paid providers are skipped; no credits can be spent."
+}

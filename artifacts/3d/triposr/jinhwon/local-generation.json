@@ -1,0 +1,43 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu-batch",
+  "characterId": "jinhwon",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\jinhwon\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\jinhwon\\jinhwon-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\jinhwon\\processed-input.png",
+  "settings": {
+    "resolution": 160,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 10521,
+    "faces": 21046
+  },
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.348611,
+        0.0,
+        -0.304754
+      ],
+      [
+        0.348611,
+        1.78,
+        0.304754
+      ]
+    ]
+  },
+  "timings": {
+    "modelLoadSeconds": 34.021,
+    "preprocessSeconds": 1.785,
+    "reconstructionSeconds": 43.442,
+    "meshExtractionSeconds": 22.706,
+    "exportSeconds": 0.031
+  },
+  "torch": "2.13.0+cpu"
+}

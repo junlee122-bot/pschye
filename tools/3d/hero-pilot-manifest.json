@@ -1,0 +1,56 @@
+{
+  "schema": "raonjena.hero-character-pilot",
+  "version": 1,
+  "characterId": "raon",
+  "characterName": "라온",
+  "targetEngine": "Unity 6 URP",
+  "canonicalHeightMeters": 1.78,
+  "references": {
+    "originalSheet": "/art/archive/raon-sheet.webp",
+    "turnaround": "/art/3d-inputs/raon-turnaround-v2.png"
+  },
+  "productionTargets": {
+    "lod0Triangles": [55000, 95000],
+    "lod1Ratio": 0.55,
+    "lod2Ratio": 0.22,
+    "requiredMaterialSlots": [
+      "skin",
+      "eyes",
+      "hair",
+      "shirt",
+      "coat",
+      "leather",
+      "metal"
+    ],
+    "requiredTextureChannels": [
+      "baseColor",
+      "normal",
+      "metallic",
+      "roughness",
+      "ambientOcclusion"
+    ],
+    "requiredRig": [
+      "humanoid",
+      "twistBones",
+      "fingerBones",
+      "hairSecondary",
+      "coatSecondary"
+    ],
+    "requiredFacialShapes": 52,
+    "requiredAnimationClips": [
+      "idle",
+      "walk",
+      "run",
+      "sprint",
+      "jump",
+      "land",
+      "dodge",
+      "attackLight",
+      "attackHeavy",
+      "guard",
+      "hit",
+      "talkNeutral"
+    ]
+  },
+  "status": "turnaround-approved"
+}

@@ -1,0 +1,43 @@
+{
+  "provider": "Stability AI",
+  "model": "TripoSR",
+  "execution": "local-cpu-batch",
+  "characterId": "nabi-nia",
+  "input": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\hitem3d-inputs\\nabi-nia\\front.jpg",
+  "output": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\public\\models\\characters\\nabi-nia\\nabi-nia-triposr-v1.glb",
+  "processedInput": "C:\\Users\\\uc774\uc2b9\uc900\\Documents\\Codex\\2026-07-14\\junlee122-bot-pschye-https-github-com\\work\\pschye\\artifacts\\3d\\triposr\\nabi-nia\\processed-input.png",
+  "settings": {
+    "resolution": 160,
+    "chunkSize": 2048,
+    "foregroundRatio": 0.85
+  },
+  "mesh": {
+    "vertices": 16768,
+    "faces": 33516
+  },
+  "canonicalization": {
+    "upAxis": "Y",
+    "heightMeters": 1.78,
+    "grounded": true,
+    "bounds": [
+      [
+        -0.524374,
+        0.0,
+        -0.477886
+      ],
+      [
+        0.524374,
+        1.78,
+        0.477886
+      ]
+    ]
+  },
+  "timings": {
+    "modelLoadSeconds": 34.021,
+    "preprocessSeconds": 2.019,
+    "reconstructionSeconds": 36.27,
+    "meshExtractionSeconds": 23.07,
+    "exportSeconds": 0.048
+  },
+  "torch": "2.13.0+cpu"
+}
