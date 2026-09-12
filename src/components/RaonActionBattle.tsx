@@ -1,7 +1,15 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import Phaser from 'phaser';
 import { ArrowLeft, Crosshair, Gauge, HeartPulse, RotateCcw, Shield, Sparkles, Swords, Target, UsersRound } from 'lucide-react';
-import { createInitialBattleState, getObjectiveMaximumHp, type BattleDoctrine } from '../game/battleEngine';
+import { battleDifficultyOptions, type BattleDoctrine } from '../game/battleEngine';
+import {
+  ACTION_ORDER_COOLDOWN_SECONDS, ACTION_ROUND_SECONDS, addActionMorale, advanceActionRounds,
+  applyActionCompanion, applyActionFinisher, buildActionBattleResult, createActionBattleModel,
+  damageActionObjective, damageActionRaon, getActionAttack, getActionEnemyTarget,
+  getActionIncomingDamage, getActionRuleDescription, hitActionEnemy, interruptActionAttack,
+  recordActionRevelation, resolveActionOutcome, revealActionEnemy, type ActionBattleModel,
+} from '../game/actionBattleRules';
+import { raonChoiceMeta } from '../data/story';
 import { stabilizePhaserRuntime } from '../game/phaserRuntime';
 import type { BattleState, HeroDefinition, MissionDefinition, MissionDifficulty, RaonStoryChoiceId } from '../types';
 
@@ -11,7 +19,6 @@ const SNAPSHOT_EVENT = 'raonjena:action-snapshot';
 const COMPLETE_EVENT = 'raonjena:action-complete';
 const COMMAND_EVENT = 'raonjena:action-command';
 
-type CompanionOrder = 'guard' | 'pierce' | 'rally';
 type MoveDirection = 'up' | 'down' | 'left' | 'right';
 
 interface ActionBattleSnapshot {
@@ -23,6 +30,7 @@ interface ActionBattleSnapshot {
   combo: number;
   objectiveHp: number;
   objectiveMaxHp: number;
+  objectiveShield: number;
   enemiesRemaining: number;
   totalEnemies: number;
   elapsed: number;
@@ -30,20 +38,14 @@ interface ActionBattleSnapshot {
   dodgeReady: boolean;
   heavyReady: boolean;
   finisherReady: boolean;
-  cooldowns: Record<CompanionOrder, number>;
+  cooldowns: Record<string, number>;
   status: 'active' | 'victory' | 'defeat';
   prompt: string;
   breaks: number;
+  battle: BattleState;
 }
 
-interface SceneModel {
-  mission: MissionDefinition;
-  difficulty: MissionDifficulty;
-  doctrine: BattleDoctrine;
-  objectiveMaxHp: number;
-}
-
-let bootActionModel: SceneModel | null = null;
+let bootActionModel: ActionBattleModel | null = null;
 
 interface EnemyActor {
   id: string;
@@ -60,7 +62,6 @@ interface EnemyActor {
   speed: number;
   attackRange: number;
   ranged: boolean;
-  targetObjective: boolean;
   nextAttackAt: number;
   telegraphUntil: number;
   stunnedUntil: number;
@@ -80,30 +81,35 @@ interface RaonActionBattleProps {
   onSwitchMode: () => void;
 }
 
-const initialSnapshot: ActionBattleSnapshot = {
-  hp: 220,
-  maxHp: 220,
-  posture: 100,
-  maxPosture: 100,
-  focus: 0,
-  combo: 0,
-  objectiveHp: 100,
-  objectiveMaxHp: 100,
-  enemiesRemaining: 0,
-  totalEnemies: 0,
-  elapsed: 0,
-  parryReady: true,
-  dodgeReady: true,
-  heavyReady: true,
-  finisherReady: false,
-  cooldowns: { guard: 0, pierce: 0, rally: 0 },
-  status: 'active',
-  prompt: 'WASD로 움직이고 J로 첫 검격을 연결하십시오.',
-  breaks: 0,
-};
+function createInitialSnapshot(model: ActionBattleModel): ActionBattleSnapshot {
+  return {
+    hp: model.raon.maxHp,
+    maxHp: model.raon.maxHp,
+    posture: 100,
+    maxPosture: 100,
+    focus: model.initialState.morale,
+    combo: 0,
+    objectiveHp: model.initialState.carriageHp,
+    objectiveMaxHp: model.initialState.carriageHp,
+    objectiveShield: model.initialState.carriageShield,
+    enemiesRemaining: model.initialState.enemies.length,
+    totalEnemies: model.initialState.enemies.length,
+    elapsed: 0,
+    parryReady: true,
+    dodgeReady: true,
+    heavyReady: true,
+    finisherReady: model.initialState.morale >= 100,
+    cooldowns: {},
+    status: 'active',
+    prompt: 'WASD로 움직이고 J로 첫 검격을 연결하십시오.',
+    breaks: 0,
+    battle: model.initialState,
+  };
+}
 
 class RaonActionScene extends Phaser.Scene {
-  private model!: SceneModel;
+  private model!: ActionBattleModel;
+  private combat!: BattleState;
   private player!: Phaser.GameObjects.Container;
   private playerCore!: Phaser.GameObjects.Arc;
   private objective!: Phaser.GameObjects.Container;
@@ -111,15 +117,16 @@ class RaonActionScene extends Phaser.Scene {
   private enemies: EnemyActor[] = [];
   private keys!: Record<string, Phaser.Input.Keyboard.Key>;
   private cursors!: Phaser.Types.Input.Keyboard.CursorKeys;
-  private hp = 220;
-  private maxHp = 220;
+  private get hp() { return this.combat.heroes.find((hero) => hero.id === 'raon')?.hp ?? 0; }
+  private get maxHp() { return this.model.raon.maxHp; }
   private posture = 100;
   private maxPosture = 100;
-  private focus = 0;
+  private get focus() { return this.combat.morale; }
+  private set focus(value: number) { this.combat = { ...this.combat, morale: value }; }
   private combo = 0;
   private comboExpires = 0;
-  private objectiveHp = 100;
-  private objectiveMaxHp = 100;
+  private get objectiveHp() { return this.combat.carriageHp; }
+  private get objectiveMaxHp() { return this.model.initialState.carriageHp; }
   private startedAt = 0;
   private lastSnapshotAt = 0;
   private lightReadyAt = 0;
@@ -129,7 +136,7 @@ class RaonActionScene extends Phaser.Scene {
   private dodgeUntil = 0;
   private dodgeReadyAt = 0;
   private invulnerableUntil = 0;
-  private orderReadyAt: Record<CompanionOrder, number> = { guard: 0, pierce: 0, rally: 0 };
+  private orderReadyAt: Record<string, number> = {};
   private status: ActionBattleSnapshot['status'] = 'active';
   private prompt = '적의 붉은 예고에 Q로 맞받아치십시오.';
   private facing = new Phaser.Math.Vector2(1, 0);
@@ -146,15 +153,11 @@ class RaonActionScene extends Phaser.Scene {
   }
 
   create() {
-    const registryModel = this.game.registry.get('action-model') as SceneModel | undefined;
+    const registryModel = this.game.registry.get('action-model') as ActionBattleModel | undefined;
     const initialModel = registryModel ?? bootActionModel;
     if (!initialModel) throw new Error('Action scene created without a combat model.');
     this.model = initialModel;
-    const pressureMultiplier = this.model.difficulty === 'veteran' ? 0.86 : this.model.difficulty === 'story' ? 1.2 : 1;
-    this.maxHp = Math.round(220 * pressureMultiplier);
-    this.hp = this.maxHp;
-    this.objectiveMaxHp = this.model.objectiveMaxHp;
-    this.objectiveHp = this.objectiveMaxHp;
+    this.combat = this.model.initialState;
     this.startedAt = this.time.now;
 
     const shade = this.add.graphics();
@@ -171,7 +174,7 @@ class RaonActionScene extends Phaser.Scene {
     this.createEnemies();
 
     this.cursors = this.input.keyboard!.createCursorKeys();
-    this.keys = this.input.keyboard!.addKeys('W,A,S,D,J,K,Q,F,SHIFT,ONE,TWO,THREE') as Record<string, Phaser.Input.Keyboard.Key>;
+    this.keys = this.input.keyboard!.addKeys('W,A,S,D,J,K,Q,F,SHIFT,ONE,TWO,THREE,FOUR,FIVE') as Record<string, Phaser.Input.Keyboard.Key>;
     this.input.on('pointerdown', (pointer: Phaser.Input.Pointer) => {
       if (this.status !== 'active') return;
       if (pointer.rightButtonDown()) this.heavyAttack(this.time.now);
@@ -209,15 +212,14 @@ class RaonActionScene extends Phaser.Scene {
   }
 
   private createEnemies() {
-    const hpScale = this.model.difficulty === 'veteran' ? 1.22 : this.model.difficulty === 'story' ? 0.76 : 1;
-    const damageScale = this.model.difficulty === 'veteran' ? 1.2 : this.model.difficulty === 'story' ? 0.72 : 1;
     this.enemies = this.model.mission.enemies.map((definition, index) => {
       const x = 790 + (index % 2) * 210 + Math.floor(index / 2) * 50;
       const y = 185 + index * 105;
       const ranged = /sniper|rifle|gunner|observer|battery|purger|감시|저격|소총|포대|관측/.test(`${definition.id} ${definition.name}`.toLowerCase());
       const boss = Boolean(definition.boss);
       const elite = Boolean(definition.elite);
-      const maxHp = Math.round(definition.maxHp * hpScale * 0.82);
+      const maxHp = this.combat.enemies.find((enemy) => enemy.id === definition.id)!.hp;
+      const readHp = () => this.combat.enemies.find((enemy) => enemy.id === definition.id)?.hp ?? 0;
       const container = this.add.container(x, Math.min(610, y)).setDepth(20);
       const shadow = this.add.ellipse(0, 20, boss ? 70 : 52, 17, 0x000000, 0.46);
       const telegraph = this.add.circle(0, 0, boss ? 43 : 34, 0xa93d38, 0.03).setStrokeStyle(3, 0xf06b5e, 0.05);
@@ -234,15 +236,14 @@ class RaonActionScene extends Phaser.Scene {
         body,
         telegraph,
         healthBar,
-        hp: maxHp,
+        get hp() { return readHp(); },
         maxHp,
         posture: elite ? 72 : 48,
         maxPosture: elite ? 72 : 48,
-        damage: Math.round(definition.damage * damageScale * 0.72),
+        damage: getActionIncomingDamage(this.model, definition.id),
         speed: ranged ? 36 : boss ? 52 : 64,
         attackRange: ranged ? 455 : boss ? 125 : 94,
         ranged,
-        targetObjective: definition.targetPreference === 'objective',
         nextAttackAt: this.time.now + 2800 + index * 380,
         telegraphUntil: 0,
         stunnedUntil: 0,
@@ -252,6 +253,7 @@ class RaonActionScene extends Phaser.Scene {
   }
 
   private handleExternalCommand(command: string) {
+    if (this.status !== 'active') return;
     const now = this.time.now;
     const movement = command.match(/^move-(up|down|left|right)-(start|stop)$/);
     if (movement) {
@@ -264,7 +266,7 @@ class RaonActionScene extends Phaser.Scene {
     if (command === 'parry') this.startParry(now);
     if (command === 'dodge') this.startDodge(now);
     if (command === 'finisher') this.teamFinisher(now);
-    if (command === 'guard' || command === 'pierce' || command === 'rally') this.companionOrder(command, now);
+    if (command.startsWith('companion:')) this.companionOrder(command.slice('companion:'.length), now);
   }
 
   private livingEnemies() {
@@ -273,14 +275,21 @@ class RaonActionScene extends Phaser.Scene {
 
   private nearestEnemy(range = Number.POSITIVE_INFINITY) {
     return this.livingEnemies()
+      .filter((enemy) => this.combat.enemies.find((unit) => unit.id === enemy.id)?.revealed)
       .map((enemy) => ({ enemy, distance: Phaser.Math.Distance.Between(this.player.x, this.player.y, enemy.container.x, enemy.container.y) }))
       .filter((entry) => entry.distance <= range)
       .sort((left, right) => left.distance - right.distance)[0]?.enemy;
   }
 
   private damageEnemy(enemy: EnemyActor, damage: number, postureDamage: number, now: number) {
-    if (!enemy.alive) return;
-    enemy.hp = Math.max(0, enemy.hp - damage);
+    if (this.status !== 'active' || !enemy.alive) return;
+    const next = hitActionEnemy(this.combat, this.model, enemy.id, damage);
+    if (next === this.combat) return;
+    this.combat = next;
+    this.damageEnemyPosture(enemy, postureDamage, now);
+  }
+
+  private damageEnemyPosture(enemy: EnemyActor, postureDamage: number, now: number) {
     enemy.posture = Math.max(0, enemy.posture - postureDamage);
     const width = enemy.body.radius > 22 ? 92 : 68;
     enemy.healthBar.width = width * (enemy.hp / enemy.maxHp);
@@ -288,7 +297,7 @@ class RaonActionScene extends Phaser.Scene {
     this.cameras.main.shake(80, 0.0035);
     if (enemy.posture <= 0 && enemy.hp > 0) {
       enemy.posture = enemy.maxPosture;
-      enemy.stunnedUntil = now + 1700;
+      this.stunEnemy(enemy, now);
       this.focus = Math.min(100, this.focus + 22);
       this.breaks += 1;
       this.prompt = `${enemy.name} 브레이크! 강공격이나 동료 명령을 연결하십시오.`;
@@ -301,21 +310,28 @@ class RaonActionScene extends Phaser.Scene {
     }
   }
 
+  private stunEnemy(enemy: EnemyActor, now: number, duration = 1700) {
+    Object.assign(enemy, interruptActionAttack(enemy, now, duration));
+    this.tweens.killTweensOf(enemy.telegraph);
+    enemy.telegraph.setScale(1).setAlpha(0.15).setStrokeStyle(3, 0xffd77a, 0.35);
+  }
+
   private lightAttack(now: number) {
     if (this.status !== 'active' || now < this.lightReadyAt) return;
     this.lightReadyAt = now + 310;
     const enemy = this.nearestEnemy(142);
     if (!enemy) {
-      this.prompt = '검격이 닿지 않았습니다. 적에게 접근하거나 K 강공격으로 거리를 좁히십시오.';
+      this.prompt = '확인된 적에게 접근하십시오. 은폐 적은 첫 사격이나 동료 정찰 후 공격할 수 있습니다.';
       return;
     }
     this.combo = now <= this.comboExpires ? Math.min(12, this.combo + 1) : 1;
     this.comboExpires = now + 1450;
-    const damage = 22 + this.combo * 2;
-    this.damageEnemy(enemy, damage, 12 + this.combo, now);
-    this.focus = Math.min(100, this.focus + 4 + Math.floor(this.combo / 3));
+    const attack = getActionAttack(this.model, 'light', this.combo);
+    this.damageEnemy(enemy, attack.power, attack.posture, now);
+    this.combat = addActionMorale(this.combat, attack.morale);
     this.drawSlash(0xf6dfaa, 0.75);
     this.prompt = this.combo >= 4 ? `${this.combo} 연격 · K로 흐름을 마무리하십시오.` : '다음 검격을 1.4초 안에 연결하면 연격이 강해집니다.';
+    this.finishIfNeeded();
   }
 
   private heavyAttack(now: number) {
@@ -323,15 +339,20 @@ class RaonActionScene extends Phaser.Scene {
     this.heavyReadyAt = now + 1850;
     const enemy = this.nearestEnemy(185);
     if (!enemy) {
-      this.prompt = '강공격이 허공을 갈랐습니다. 붉은 예고를 패링한 뒤 사용하십시오.';
+      this.prompt = '강공격 사거리 안에 확인된 적이 없습니다. 은폐 해제 후 접근하십시오.';
       return;
     }
     this.combo = now <= this.comboExpires ? this.combo + 1 : 1;
     this.comboExpires = now + 1550;
-    this.damageEnemy(enemy, 48 + Math.min(36, this.combo * 3), 34, now);
-    this.focus = Math.min(100, this.focus + 10);
+    const attack = getActionAttack(this.model, 'heavy', this.combo);
+    this.damageEnemy(enemy, attack.power, attack.posture, now);
+    this.combat = addActionMorale(this.combat, attack.morale);
+    const revealed = this.combat.revelationTriggered;
+    this.combat = recordActionRevelation(this.combat, this.model, 'raon', this.model.heavySkill.id, enemy.id);
+    if (!revealed && this.combat.revelationTriggered) this.prompt = this.model.mission.revelation!.line;
     this.drawSlash(0xffb65f, 1.2);
     this.cameras.main.shake(130, 0.007);
+    this.finishIfNeeded();
   }
 
   private drawSlash(color: number, scale: number) {
@@ -359,58 +380,77 @@ class RaonActionScene extends Phaser.Scene {
     this.prompt = '회피 무적 0.34초 · 다음 공격의 측면을 잡으십시오.';
   }
 
-  private companionOrder(order: CompanionOrder, now: number) {
-    if (this.status !== 'active' || now < this.orderReadyAt[order]) return;
-    this.orderReadyAt[order] = now + 9000;
-    if (order === 'guard') {
-      this.objectiveHp = Math.min(this.objectiveMaxHp, this.objectiveHp + 38);
-      this.posture = Math.min(this.maxPosture, this.posture + 28);
+  private companionOrder(heroId: string, now: number) {
+    if (this.status !== 'active' || now < (this.orderReadyAt[heroId] ?? 0)) return;
+    const order = this.model.companions.find((entry) => entry.hero.id === heroId);
+    if (!order) return;
+    const revelation = this.model.mission.revelation;
+    const witness = revelation?.heroId === heroId
+      ? this.livingEnemies().find((enemy) => enemy.id === revelation.enemyId && this.combat.enemies.find((unit) => unit.id === enemy.id)?.revealed)
+      : undefined;
+    const target = order.skill.kind === 'reveal'
+      ? this.livingEnemies().find((enemy) => !this.combat.enemies.find((unit) => unit.id === enemy.id)?.revealed) ?? this.nearestEnemy()
+      : witness ?? this.nearestEnemy();
+    const before = this.combat;
+    this.combat = applyActionCompanion(before, this.model, heroId, target?.id);
+    if (this.combat === before) {
+      this.prompt = `${order.hero.name} 명령 불가 · 생존 상태와 확인된 표적을 확인하십시오.`;
+      return;
+    }
+    this.orderReadyAt[heroId] = now + ACTION_ORDER_COOLDOWN_SECONDS * 1000;
+    if (order.skill.kind === 'guard') {
       this.objectiveCore.setFillStyle(0xb9dde5, 0.9);
       this.time.delayedCall(350, () => this.objectiveCore.setFillStyle(0x8fb8c5, 0.5));
-      this.prompt = '하도리 명령 · 보호 목표와 라온의 자세를 복구했습니다.';
+      this.prompt = `${order.hero.name} · ${order.skill.name} — 목표 방벽 +${order.skill.power}, 사기 +${order.skill.morale}.`;
+    } else {
+      this.enemies.forEach((enemy) => {
+        const previous = before.enemies.find((unit) => unit.id === enemy.id);
+        if (previous && enemy.hp < previous.hp) this.damageEnemyPosture(enemy, order.skill.kind === 'reveal' ? 12 : 20, now);
+        const current = this.combat.enemies.find((unit) => unit.id === enemy.id);
+        if (current && current.hp > 0 && current.stunned > (previous?.stunned ?? 0)) this.stunEnemy(enemy, now);
+      });
+      this.prompt = `${order.hero.name} · ${order.skill.name} — ${order.skill.kind === 'reveal' ? '은폐 해제 · 노출 +2' : order.skill.id === 'duel-mark' ? '명중 · 노출 +1' : '명중'} · 사기 +${order.skill.morale}.`;
     }
-    if (order === 'pierce') {
-      const targets = this.livingEnemies().sort((left, right) => left.container.x - right.container.x).slice(0, 3);
-      targets.forEach((enemy, index) => this.time.delayedCall(index * 90, () => this.damageEnemy(enemy, 34, 20, this.time.now)));
-      this.prompt = '카즈린 명령 · 백은 궤도가 적의 전열을 관통합니다.';
-    }
-    if (order === 'rally') {
-      this.hp = Math.min(this.maxHp, this.hp + 42);
-      this.focus = Math.min(100, this.focus + 22);
-      this.prompt = '레오 명령 · 기본기의 호흡으로 체력과 집중을 회복했습니다.';
-    }
+    if (!before.revelationTriggered && this.combat.revelationTriggered) this.prompt = revelation!.line;
+    this.finishIfNeeded();
   }
 
   private teamFinisher(now: number) {
-    if (this.status !== 'active' || this.focus < 100) return;
-    this.focus = 0;
+    if (this.status !== 'active') return;
+    const before = this.combat;
+    this.combat = applyActionFinisher(before, this.model);
+    if (this.combat === before) return;
     this.combo = 0;
-    this.livingEnemies().forEach((enemy, index) => {
-      this.time.delayedCall(index * 75, () => this.damageEnemy(enemy, 76, 50, this.time.now));
+    this.enemies.forEach((enemy) => {
+      const previous = before.enemies.find((unit) => unit.id === enemy.id);
+      if (previous && enemy.hp < previous.hp) this.damageEnemyPosture(enemy, 50, now);
     });
     const flash = this.add.rectangle(WIDTH / 2, HEIGHT / 2, WIDTH, HEIGHT, 0xf6dfa7, 0.42).setDepth(80);
     this.tweens.add({ targets: flash, alpha: 0, duration: 440, onComplete: () => flash.destroy() });
     this.cameras.main.shake(320, 0.012);
-    this.prompt = '제7기 연계 · 라온이 만든 검로로 전원이 동시에 진입합니다.';
-    void now;
+    this.prompt = `16꽃잎 연계 · 편성된 생존 동료와 검로를 연결했습니다.${this.model.mission.battlefieldRule.id === 'fractured-truce' ? ' 중립 구역 8 피해.' : ''}`;
+    this.finishIfNeeded();
   }
 
   private resolveEnemyAttack(enemy: EnemyActor, now: number) {
-    const target = enemy.targetObjective ? this.objective : this.player;
+    const targetObjective = getActionEnemyTarget(this.model, this.combat, enemy.id) === 'objective';
+    const target = targetObjective ? this.objective : this.player;
     const distance = Phaser.Math.Distance.Between(enemy.container.x, enemy.container.y, target.x, target.y);
+    enemy.telegraphUntil = 0;
+    enemy.nextAttackAt = now + (enemy.ranged ? 2300 : 1550);
+    this.combat = revealActionEnemy(this.combat, enemy.id);
     if (distance > enemy.attackRange + 35) return;
 
-    if (!enemy.targetObjective && now <= this.parryUntil) {
-      enemy.telegraphUntil = 0;
-      enemy.nextAttackAt = now + 1850;
-      enemy.stunnedUntil = now + 1250;
-      this.damageEnemy(enemy, 14, 36, now);
-      this.focus = Math.min(100, this.focus + 18);
+    if (!targetObjective && now <= this.parryUntil) {
+      this.stunEnemy(enemy, now, 1250);
+      const attack = getActionAttack(this.model, 'parry');
+      this.damageEnemy(enemy, attack.power, attack.posture, now);
+      this.combat = addActionMorale(this.combat, attack.morale);
       this.prompt = `정확한 패링 · ${enemy.name}의 자세가 크게 무너졌습니다.`;
       return;
     }
 
-    if (!enemy.targetObjective && now <= this.invulnerableUntil) {
+    if (!targetObjective && now <= this.invulnerableUntil) {
       enemy.telegraphUntil = 0;
       enemy.nextAttackAt = now + 1100;
       this.focus = Math.min(100, this.focus + 8);
@@ -418,20 +458,21 @@ class RaonActionScene extends Phaser.Scene {
       return;
     }
 
-    if (enemy.targetObjective) {
-      this.objectiveHp = Math.max(0, this.objectiveHp - enemy.damage);
+    if (targetObjective) {
+      this.combat = damageActionObjective(this.combat, enemy.damage);
       this.objectiveCore.setFillStyle(0xd5675c, 0.9);
       this.time.delayedCall(240, () => this.objectiveCore.setFillStyle(0x8fb8c5, 0.5));
-      this.prompt = `${enemy.name}이(가) ${this.model.mission.objectiveLabel}을 공격했습니다. 하도리 명령 [1]로 복구하십시오.`;
+      this.prompt = `${enemy.name}이(가) ${this.model.mission.objectiveLabel}을 공격했습니다. 방벽 명령과 적 제압으로 보호하십시오.`;
     } else {
-      this.hp = Math.max(0, this.hp - enemy.damage);
-      this.posture = Math.max(0, this.posture - Math.round(enemy.damage * 1.3));
+      const previousHp = this.hp;
+      this.combat = damageActionRaon(this.combat, this.model, enemy.damage);
+      this.posture = Math.max(0, this.posture - Math.round((previousHp - this.hp) * 1.3));
       this.playerCore.setFillStyle(0xc94e43, 1);
       this.time.delayedCall(180, () => this.playerCore.setFillStyle(0x8b5b37, 1));
       if (this.posture <= 0) {
         this.posture = this.maxPosture * 0.45;
         this.invulnerableUntil = now + 620;
-        this.prompt = '라온의 자세가 붕괴했습니다. 거리를 벌리고 레오 명령 [3]을 사용하십시오.';
+        this.prompt = '라온의 자세가 붕괴했습니다. 거리를 벌려 자세가 회복될 시간을 확보하십시오.';
       }
     }
     enemy.telegraphUntil = 0;
@@ -441,12 +482,22 @@ class RaonActionScene extends Phaser.Scene {
 
   private updateEnemies(now: number, delta: number) {
     this.livingEnemies().forEach((enemy) => {
+      if (this.status !== 'active') return;
+      const unit = this.combat.enemies.find((entry) => entry.id === enemy.id);
+      enemy.container.setAlpha(unit?.revealed ? 1 : 0.3);
       if (now < enemy.stunnedUntil) {
         enemy.telegraph.setStrokeStyle(4, 0xffd77a, 0.8).setAlpha(0.65);
         return;
       }
+      if (enemy.stunnedUntil > 0) {
+        enemy.stunnedUntil = 0;
+        enemy.telegraph.setScale(1).setAlpha(0.05);
+      }
+      if (unit && unit.stunned > 0) this.combat = {
+        ...this.combat, enemies: this.combat.enemies.map((entry) => entry.id === enemy.id ? { ...entry, stunned: 0 } : entry),
+      };
       enemy.body.setStrokeStyle(3, enemy.maxPosture > 50 ? 0xe7a17e : 0xd88a73, 0.8);
-      const target = enemy.targetObjective ? this.objective : this.player;
+      const target = getActionEnemyTarget(this.model, this.combat, enemy.id) === 'objective' ? this.objective : this.player;
       const dx = target.x - enemy.container.x;
       const dy = target.y - enemy.container.y;
       const distance = Math.hypot(dx, dy) || 1;
@@ -462,7 +513,10 @@ class RaonActionScene extends Phaser.Scene {
         enemy.telegraph.setStrokeStyle(4, 0xff5c50, 1).setAlpha(1);
         this.tweens.add({ targets: enemy.telegraph, scale: { from: 0.75, to: 1.35 }, alpha: { from: 1, to: 0.2 }, duration: enemy.ranged ? 880 : 620 });
       }
-      if (enemy.telegraphUntil && now >= enemy.telegraphUntil) this.resolveEnemyAttack(enemy, now);
+      if (enemy.telegraphUntil && now >= enemy.telegraphUntil) {
+        this.resolveEnemyAttack(enemy, now);
+        this.finishIfNeeded();
+      }
     });
   }
 
@@ -480,26 +534,40 @@ class RaonActionScene extends Phaser.Scene {
       combo: this.combo,
       objectiveHp: this.objectiveHp,
       objectiveMaxHp: this.objectiveMaxHp,
+      objectiveShield: this.combat.carriageShield,
       enemiesRemaining: remaining,
       totalEnemies: this.enemies.length,
       elapsed: Math.max(0, (now - this.startedAt) / 1000),
       parryReady: now >= this.parryReadyAt,
       dodgeReady: now >= this.dodgeReadyAt,
       heavyReady: now >= this.heavyReadyAt,
-      finisherReady: this.focus >= 100,
-      cooldowns: {
-        guard: Math.max(0, (this.orderReadyAt.guard - now) / 1000),
-        pierce: Math.max(0, (this.orderReadyAt.pierce - now) / 1000),
-        rally: Math.max(0, (this.orderReadyAt.rally - now) / 1000),
-      },
+      finisherReady: this.focus >= 100 && !this.combat.finisherUsed && this.status === 'active',
+      cooldowns: Object.fromEntries(this.model.companions.map(({ hero }) => [hero.id, Math.max(0, ((this.orderReadyAt[hero.id] ?? 0) - now) / 1000)])),
       status: this.status,
       prompt: this.prompt,
       breaks: this.breaks,
+      battle: buildActionBattleResult(this.combat, this.breaks),
     } satisfies ActionBattleSnapshot);
+  }
+
+  private finishIfNeeded() {
+    if (this.status !== 'active') return true;
+    this.combat = resolveActionOutcome(this.combat);
+    if (this.combat.outcome === 'active') return false;
+    this.status = this.combat.outcome;
+    this.prompt = this.status === 'victory' ? '작전 완료 · 라온과 출격조가 전장을 확보했습니다.'
+      : this.hp <= 0 ? '라온이 쓰러졌습니다.' : this.objectiveHp <= 0 ? `${this.model.mission.objectiveLabel}을 지키지 못했습니다.` : '작전 제한 시간이 끝났습니다.';
+    this.emitSnapshot(true);
+    this.game.events.emit(COMPLETE_EVENT);
+    return true;
   }
 
   update(time: number, delta: number) {
     if (this.status !== 'active') return;
+    const previousRound = this.combat.round;
+    this.combat = advanceActionRounds(this.combat, this.model, Math.max(0, (time - this.startedAt) / 1000));
+    if (this.finishIfNeeded()) return;
+    if (this.combat.round !== previousRound) this.prompt = `${this.combat.round}라운드 · ${getActionRuleDescription(this.model.mission)}`;
     const horizontal = (this.cursors.left.isDown || this.keys.A.isDown || this.externalMovement.left ? -1 : 0)
       + (this.cursors.right.isDown || this.keys.D.isDown || this.externalMovement.right ? 1 : 0);
     const vertical = (this.cursors.up.isDown || this.keys.W.isDown || this.externalMovement.up ? -1 : 0)
@@ -519,27 +587,17 @@ class RaonActionScene extends Phaser.Scene {
     if (Phaser.Input.Keyboard.JustDown(this.keys.Q)) this.startParry(time);
     if (Phaser.Input.Keyboard.JustDown(this.keys.SHIFT)) this.startDodge(time);
     if (Phaser.Input.Keyboard.JustDown(this.keys.F)) this.teamFinisher(time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.ONE)) this.companionOrder('guard', time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.TWO)) this.companionOrder('pierce', time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.THREE)) this.companionOrder('rally', time);
+    this.model.companions.forEach(({ hero }, index) => {
+      const key = this.keys[['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'][index]];
+      if (key && Phaser.Input.Keyboard.JustDown(key)) this.companionOrder(hero.id, time);
+    });
+    if (this.finishIfNeeded()) return;
 
     if (time > this.comboExpires) this.combo = 0;
     this.posture = Math.min(this.maxPosture, this.posture + delta * 0.008);
     this.updateEnemies(time, delta);
 
-    if (this.livingEnemies().length === 0) {
-      this.status = 'victory';
-      this.prompt = '작전 완료 · 라온과 제7기가 전장을 확보했습니다.';
-      this.emitSnapshot(true);
-      this.game.events.emit(COMPLETE_EVENT);
-      return;
-    }
-    if (this.hp <= 0 || this.objectiveHp <= 0) {
-      this.status = 'defeat';
-      this.prompt = this.hp <= 0 ? '라온이 쓰러졌습니다.' : `${this.model.mission.objectiveLabel}을 지키지 못했습니다.`;
-      this.emitSnapshot(true);
-      return;
-    }
+    if (this.finishIfNeeded()) return;
     this.emitSnapshot();
   }
 }
@@ -553,35 +611,24 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
   const gameRef = useRef<Phaser.Game | null>(null);
   const completedRef = useRef(false);
   const [battleAttempt, setBattleAttempt] = useState(0);
-  const [snapshot, setSnapshot] = useState<ActionBattleSnapshot>(() => ({ ...initialSnapshot, objectiveMaxHp: getObjectiveMaximumHp(mission, doctrine, difficulty), objectiveHp: getObjectiveMaximumHp(mission, doctrine, difficulty), totalEnemies: mission.enemies.length, enemiesRemaining: mission.enemies.length }));
+  // Deployment values stay fixed during the attempt, including after rewards update the roster.
+  const [model] = useState(() => createActionBattleModel({ doctrine, difficulty, mission, heroes, raonStance, warPressure, bondSupport }));
+  const [snapshot, setSnapshot] = useState<ActionBattleSnapshot>(() => createInitialSnapshot(model));
   const [confirmExit, setConfirmExit] = useState(false);
-  const [guideOpen, setGuideOpen] = useState(() => window.localStorage.getItem('raonjena-action-guide-v1') !== 'seen');
-  const raon = heroes.find((hero) => hero.id === 'raon');
-  const objectiveMaxHp = useMemo(() => getObjectiveMaximumHp(mission, doctrine, difficulty), [difficulty, doctrine, mission]);
-
-  const buildResult = useCallback((current: ActionBattleSnapshot): BattleState => {
-    const base = createInitialBattleState(doctrine, mission, heroes, difficulty, raonStance, { warPressure, bondSupport });
-    return {
-      ...base,
-      round: Math.max(1, Math.ceil(current.elapsed / 24)),
-      carriageHp: Math.round(current.objectiveHp),
-      carriageShield: 0,
-      heroes: base.heroes.map((hero) => hero.id === 'raon' ? { ...hero, hp: Math.max(1, Math.round((current.hp / current.maxHp) * (raon?.maxHp ?? 112))) } : hero),
-      enemies: base.enemies.map((enemy) => ({ ...enemy, hp: 0, stunned: 1 })),
-      morale: Math.min(100, 52 + current.breaks * 8 + Math.round(current.focus / 4)),
-      outcome: 'victory',
-      finisherUsed: current.focus < 30,
-      breakCount: current.breaks,
-    };
-  }, [bondSupport, difficulty, doctrine, heroes, mission, raon?.maxHp, raonStance, warPressure]);
+  const [guideOpen, setGuideOpen] = useState(() => {
+    try {
+      return window.localStorage.getItem('raonjena-action-guide-v1') !== 'seen';
+    } catch {
+      return true;
+    }
+  });
+  const raon = model.raon;
   const onCompleteRef = useRef(onComplete);
-  const buildResultRef = useRef(buildResult);
-  const initialModelRef = useRef<SceneModel>({ mission, difficulty, doctrine, objectiveMaxHp });
+  const initialModelRef = useRef(model);
 
   useEffect(() => {
     onCompleteRef.current = onComplete;
-    buildResultRef.current = buildResult;
-  }, [buildResult, onComplete]);
+  }, [onComplete]);
 
   useEffect(() => {
     if (guideOpen || !hostRef.current || gameRef.current) return;
@@ -606,19 +653,18 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       if (completedRef.current) return;
       completedRef.current = true;
       const current = game.registry.get('last-action-snapshot') as ActionBattleSnapshot | undefined;
-      setSnapshot((latest) => {
-        onCompleteRef.current(buildResultRef.current(current ?? latest));
-        return latest;
-      });
+      if (current?.status === 'victory' && current.battle.outcome === 'victory') onCompleteRef.current(current.battle);
     };
-    game.events.on(SNAPSHOT_EVENT, (next: ActionBattleSnapshot) => {
+    const receiveSnapshot = (next: ActionBattleSnapshot) => {
       game.registry.set('last-action-snapshot', next);
       update(next);
-    });
+    };
+    game.events.on(SNAPSHOT_EVENT, receiveSnapshot);
     game.events.on(COMPLETE_EVENT, complete);
     gameRef.current = game;
     return () => {
       game.events.off(COMPLETE_EVENT, complete);
+      game.events.off(SNAPSHOT_EVENT, receiveSnapshot);
       stopRuntimeStabilizer();
       game.destroy(true);
       gameRef.current = null;
@@ -640,18 +686,16 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
     command(`move-${direction}-stop`);
   };
   const beginActionBattle = () => {
-    window.localStorage.setItem('raonjena-action-guide-v1', 'seen');
+    try {
+      window.localStorage.setItem('raonjena-action-guide-v1', 'seen');
+    } catch {
+      // The tutorial can still close when browser storage is unavailable.
+    }
     setGuideOpen(false);
   };
   const retry = () => {
     completedRef.current = false;
-    setSnapshot({
-      ...initialSnapshot,
-      objectiveMaxHp,
-      objectiveHp: objectiveMaxHp,
-      totalEnemies: mission.enemies.length,
-      enemiesRemaining: mission.enemies.length,
-    });
+    setSnapshot(createInitialSnapshot(model));
     setBattleAttempt((current) => current + 1);
   };
   const requestExit = () => {
@@ -669,7 +713,7 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
 
       <header className="action-header">
         <button onClick={requestExit}><ArrowLeft size={16} /> {confirmExit ? '다시 누르면 포기' : '작전 포기'}</button>
-        <div><span>{mission.operation} · RAON DIRECT CONTROL</span><strong>{mission.title}</strong><small>{mission.battlefieldRule.name}</small></div>
+        <div title={getActionRuleDescription(mission)}><span>{mission.operation} · {battleDifficultyOptions.find((option) => option.id === model.difficulty)?.label}</span><strong>{mission.title}</strong><small>{mission.battlefieldRule.name} · {snapshot.battle.round}/{mission.roundLimit}라운드 · 남은 {Math.max(0, mission.roundLimit * ACTION_ROUND_SECONDS - snapshot.elapsed).toFixed(0)}초</small></div>
         <button onClick={onSwitchMode}><Crosshair size={16} /> 전술 모드</button>
       </header>
 
@@ -678,7 +722,7 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
         <div className="action-vitals">
           <div><span><HeartPulse size={13} /> 생명</span><strong>{Math.ceil(snapshot.hp)} / {snapshot.maxHp}</strong></div>
           <i className="health"><b style={{ width: `${(snapshot.hp / snapshot.maxHp) * 100}%` }} /></i>
-          <div><span><Shield size={13} /> 자세</span><strong>{Math.ceil(snapshot.posture)}</strong></div>
+          <div><span><Shield size={13} /> 방어 {raon.armor} · 자세</span><strong>{Math.ceil(snapshot.posture)}</strong></div>
           <i className="posture"><b style={{ width: `${(snapshot.posture / snapshot.maxPosture) * 100}%` }} /></i>
         </div>
         <div className="action-combo"><span>CHAIN</span><strong>{String(snapshot.combo).padStart(2, '0')}</strong></div>
@@ -687,7 +731,7 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       <section className="action-objective-hud">
         <div><span>보호 목표</span><strong>{mission.objectiveLabel}</strong></div>
         <i><b style={{ width: `${Math.max(0, snapshot.objectiveHp / snapshot.objectiveMaxHp) * 100}%` }} /></i>
-        <small>{Math.ceil(snapshot.objectiveHp)} / {snapshot.objectiveMaxHp}</small>
+        <small>{Math.ceil(snapshot.objectiveHp)} / {snapshot.objectiveMaxHp} · 방벽 {snapshot.objectiveShield}</small>
       </section>
 
       <section className="action-enemy-hud">
@@ -695,9 +739,9 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       </section>
 
       <section className="action-focus-hud">
-        <div><Sparkles size={15} /><span>제7기 집중</span><strong>{Math.round(snapshot.focus)}%</strong></div>
+        <div><Sparkles size={15} /><span>출격조 사기</span><strong>{Math.round(snapshot.focus)}%</strong></div>
         <i><b style={{ width: `${snapshot.focus}%` }} /></i>
-        <button className={snapshot.finisherReady ? 'ready' : ''} disabled={!snapshot.finisherReady} onClick={() => command('finisher')}><kbd>F</kbd> 16꽃잎 연계</button>
+        <button className={snapshot.finisherReady ? 'ready' : ''} disabled={!snapshot.finisherReady || guideOpen} onClick={() => command('finisher')}><kbd>F</kbd> {snapshot.battle.finisherUsed ? '연계 사용 완료' : '16꽃잎 연계'}</button>
       </section>
 
       <section className="action-guide-strip" aria-live="polite">
@@ -722,17 +766,19 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       </section>
 
       <section className="action-command-bar">
-        <button onClick={() => command('light')}><kbd>J</kbd><span><strong>유동 베기</strong><small>연타 · 집중 축적</small></span></button>
-        <button disabled={!snapshot.heavyReady} onClick={() => command('heavy')}><kbd>K</kbd><span><strong>꽃잎 끊기</strong><small>{snapshot.heavyReady ? '자세 파괴' : '재정비 중'}</small></span></button>
-        <button disabled={!snapshot.parryReady} onClick={() => command('parry')}><kbd>Q</kbd><span><strong>흐름 읽기</strong><small>{snapshot.parryReady ? '예고 패링' : '호흡 회복'}</small></span></button>
-        <button disabled={!snapshot.dodgeReady} onClick={() => command('dodge')}><kbd>⇧</kbd><span><strong>간격 이탈</strong><small>{snapshot.dodgeReady ? '무적 회피' : '발걸음 회복'}</small></span></button>
+        <button disabled={guideOpen || snapshot.status !== 'active'} onClick={() => command('light')} title={`기초 위력 ${model.lightSkill.power} · 적 방어 차감 · 연격당 +2 · 사기 +${getActionAttack(model, 'light').morale}`}><kbd>J</kbd><span><strong>유동 베기</strong><small>위력 {model.lightSkill.power} · 연격 강화</small></span></button>
+        <button disabled={guideOpen || snapshot.status !== 'active' || !snapshot.heavyReady} onClick={() => command('heavy')} title={`기초 위력 ${model.heavySkill.power} · 적 방어 차감 · 연격당 +3 · 사기 +${getActionAttack(model, 'heavy').morale}`}><kbd>K</kbd><span><strong>꽃잎 끊기</strong><small>{snapshot.heavyReady ? `위력 ${model.heavySkill.power} · 자세 파괴` : '재정비 중'}</small></span></button>
+        <button disabled={guideOpen || snapshot.status !== 'active' || !snapshot.parryReady} onClick={() => command('parry')}><kbd>Q</kbd><span><strong>흐름 읽기</strong><small>{snapshot.parryReady ? '예고 패링' : '호흡 회복'}</small></span></button>
+        <button disabled={guideOpen || snapshot.status !== 'active' || !snapshot.dodgeReady} onClick={() => command('dodge')}><kbd>⇧</kbd><span><strong>간격 이탈</strong><small>{snapshot.dodgeReady ? '무적 회피' : '발걸음 회복'}</small></span></button>
       </section>
 
       <section className="action-companion-orders">
-        <span><UsersRound size={14} /> 동료 즉시 명령</span>
-        <button disabled={snapshot.cooldowns.guard > 0} onClick={() => command('guard')}><kbd>1</kbd><strong>하도리 · 철문</strong><small>{formatCooldown(snapshot.cooldowns.guard)}</small></button>
-        <button disabled={snapshot.cooldowns.pierce > 0} onClick={() => command('pierce')}><kbd>2</kbd><strong>카즈린 · 백은 궤도</strong><small>{formatCooldown(snapshot.cooldowns.pierce)}</small></button>
-        <button disabled={snapshot.cooldowns.rally > 0} onClick={() => command('rally')}><kbd>3</kbd><strong>레오 · 수문 호흡</strong><small>{formatCooldown(snapshot.cooldowns.rally)}</small></button>
+        <span><UsersRound size={14} /> 편성 동료 명령 · 재사용 {ACTION_ORDER_COOLDOWN_SECONDS}초</span>
+        {model.companions.map(({ hero, skill, slot }) => {
+          const alive = (snapshot.battle.heroes.find((unit) => unit.id === hero.id)?.hp ?? 0) > 0;
+          const cooldown = snapshot.cooldowns[hero.id] ?? 0;
+          return <button key={hero.id} disabled={guideOpen || snapshot.status !== 'active' || !alive || cooldown > 0} onClick={() => command(`companion:${hero.id}`)} title={`${skill.kind === 'guard' ? `목표 방벽 +${skill.power}` : `위력 ${skill.power}`} · 사기 +${skill.morale} · ${skill.description}`}><kbd>{slot}</kbd><strong>{hero.name} · {skill.name}</strong><small>{alive ? formatCooldown(cooldown) : '전투 불능'}</small></button>;
+        })}
       </section>
 
       {snapshot.status !== 'active' && (
@@ -755,12 +801,14 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
           <article>
             <span>RAON DIRECT CONTROL</span>
             <h2 id="action-guide-title">라온의 검을 직접 움직입니다</h2>
-            <p>전투는 안내를 닫은 뒤 시작됩니다. 적의 붉은 예고가 끝나기 전에 패링하거나 거리를 이탈하십시오.</p>
+            <p>전투는 안내를 닫은 뒤 시작됩니다. 성장·장비를 반영한 생명 {raon.maxHp}, 방어 {raon.armor}로 출격합니다.</p>
+            <p>{getActionRuleDescription(mission)}</p>
+            <p>{raonChoiceMeta[model.raonStance].label}: {raonChoiceMeta[model.raonStance].battleEffect} · {model.doctrine === 'shelter' ? '보호 교리' : '대응 사격 교리'} · 전쟁 압박 {model.warPressure}% · 현장 신뢰 {model.bondSupport}. 시작 사기 {model.initialState.morale}, 목표 방벽 {model.initialState.carriageShield}.</p>
             <div className="action-onboarding-steps">
               <section><kbd>WASD</kbd><strong>이동</strong><small>모바일에서는 왼쪽 이동 패드</small></section>
               <section><kbd>J · K</kbd><strong>검격</strong><small>연타로 집중, 강공격으로 자세 파괴</small></section>
               <section><kbd>Q · ⇧</kbd><strong>대응</strong><small>붉은 예고를 패링하거나 무적 회피</small></section>
-              <section><kbd>1 · 2 · 3</kbd><strong>동료 명령</strong><small>보호, 돌파, 회복을 즉시 요청</small></section>
+              <section><kbd>1 ~ {model.companions.length}</kbd><strong>편성 동료 명령</strong><small>방벽·표식·정찰 등 동료의 실제 기술</small></section>
             </div>
             <div className="action-onboarding-actions">
               <button onClick={onSwitchMode}><Target size={17} /> 전술 모드로 시작</button>

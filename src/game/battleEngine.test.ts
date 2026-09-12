@@ -84,6 +84,47 @@ describe('battleEngine', () => {
     expect(revealed.commandPoints).toBe(2);
   });
 
+  it('triggers the convoy guard revelation once when Kazrin protects a visible living witness', () => {
+    const convoy = missions.find((entry) => entry.id === 'wingless-convoy')!;
+    const initial = createInitialBattleState('shelter', convoy, heroDefinitions);
+    const guarded = applyHeroSkill(initial, convoy, heroDefinitions, 'kazrin', 'guardian-orbit');
+    expect(guarded.revelationTriggered).toBe(true);
+    expect(guarded.carriageShield).toBe(initial.carriageShield + 24);
+    expect(guarded.log.find((entry) => entry.message === convoy.revelation!.line))
+      .toMatchObject({ speaker: '붉은 깃발대장', tone: 'story' });
+
+    const nextRound = endPlayerTurn(guarded, convoy, heroDefinitions);
+    const repeated = applyHeroSkill(nextRound, convoy, heroDefinitions, 'kazrin', 'guardian-orbit');
+    expect(repeated.revelationTriggered).toBe(true);
+    expect(repeated.log.filter((entry) => entry.message === convoy.revelation!.line)).toHaveLength(1);
+  });
+
+  it.each(['hidden', 'dead'] as const)('does not trigger a guard revelation when its witness is %s', (condition) => {
+    const convoy = missions.find((entry) => entry.id === 'wingless-convoy')!;
+    const initial = createInitialBattleState('shelter', convoy, heroDefinitions);
+    const unavailableWitness = {
+      ...initial,
+      enemies: initial.enemies.map((enemy) => enemy.id === convoy.revelation!.enemyId
+        ? { ...enemy, revealed: condition !== 'hidden', hp: condition === 'dead' ? 0 : enemy.hp }
+        : enemy),
+    };
+    const guarded = applyHeroSkill(unavailableWitness, convoy, heroDefinitions, 'kazrin', 'guardian-orbit');
+    expect(guarded.carriageShield).toBe(initial.carriageShield + 24);
+    expect(guarded.revelationTriggered).toBe(false);
+    expect(guarded.log.some((entry) => entry.message === convoy.revelation!.line)).toBe(false);
+  });
+
+  it('requires the specified hero and guard skill for the convoy revelation', () => {
+    const convoy = missions.find((entry) => entry.id === 'wingless-convoy')!;
+    const initial = createInitialBattleState('shelter', convoy, heroDefinitions);
+    const otherGuard = applyHeroSkill(initial, convoy, heroDefinitions, 'hadori', 'iron-gate');
+    const otherSkill = applyHeroSkill(initial, convoy, heroDefinitions, 'kazrin', 'silver-line', convoy.revelation!.enemyId);
+    expect(otherGuard.revelationTriggered).toBe(false);
+    expect(otherSkill.revelationTriggered).toBe(false);
+    expect(otherGuard.log.some((entry) => entry.message === convoy.revelation!.line)).toBe(false);
+    expect(otherSkill.log.some((entry) => entry.message === convoy.revelation!.line)).toBe(false);
+  });
+
   it('builds a three-captain focus chain and breaks the target', () => {
     const initial = createInitialBattleState('counterfire', mission, heroDefinitions);
     const first = applyHeroSkill(initial, mission, heroDefinitions, 'chris', 'side-read', 'sky-sniper');

@@ -9,3 +9,15 @@ Thumbs.db
 .vercel
 .env.3d.local
 .tools/
+
+# Local credentials, downloaded runtimes and disposable work
+.env
+.env.*
+!.env.3d.example
+.tmp/
+tmp/
+.vercel-login.*
+**/.venv/
+**/__pycache__/
+*.pyc
+*.timestamp-*.mjs

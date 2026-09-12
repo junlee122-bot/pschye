@@ -1,5 +1,6 @@
 import { facilities, missions } from '../data/campaign';
 import { heroDefinitions } from '../data/battle';
+import { canUnlockHeroGrowthNode, getHeroGrowthBonuses, getHeroGrowthNode } from '../data/heroGrowth';
 import { getOriginStoryScene, originStoryStartId } from '../data/originStory';
 import { getRaonStoryBeat, raonChoiceConsequences } from '../data/story';
 import { craftRecipes, dailyActivities, dispatchOperations, getEquipment, strategicOrders } from '../data/systems';
@@ -22,7 +23,7 @@ import type {
   StrategicOrderId,
   TrainingFocus,
 } from '../types';
-import { deleteMirroredCampaignSlot, mirrorCampaignSlot, type CampaignSlotSummary } from './persistence';
+import { deleteMirroredCampaignSlot, isCampaignProfileCandidate, isSaveObject, mirrorCampaignSlot, nextCampaignSaveTimestamp, restoreMirroredCampaignSlot, type CampaignLoadResult, type CampaignSlotSummary } from './persistence';
 import { createWorldSimulationState, executeGameCommand } from './simulation';
 
 export const campaignStorageKey = 'raonjena-campaign-v10';
@@ -339,68 +340,144 @@ export function chooseRaonStoryPath(
 }
 
 export function getActiveCampaignSlot() {
-  const parsed = Number(window.localStorage.getItem(activeCampaignSlotKey));
-  return Number.isInteger(parsed) && parsed >= 1 && parsed <= 3 ? parsed : 1;
-}
-
-export function setActiveCampaignSlot(slot: number) {
-  window.localStorage.setItem(activeCampaignSlotKey, String(Math.max(1, Math.min(3, slot))));
-}
-
-export function loadCampaignProfile(slot = getActiveCampaignSlot()): CampaignProfile {
   try {
-    const slotKey = storageKeyForSlot(slot);
-    const stored = window.localStorage.getItem(slotKey)
-      ?? (slot === 1
-        ? window.localStorage.getItem(campaignStorageKey)
-          ?? legacyStorageKeys.map((key) => window.localStorage.getItem(key)).find(Boolean)
-        : null);
-    if (!stored) {
-      const legacyComplete = window.localStorage.getItem('raonjena-grey-bridge-complete') === 'true';
-      const fresh = createNewCampaignProfile();
-      return legacyComplete ? completeMission(fresh, missions[0], undefined).profile : fresh;
-    }
-    return migrateProfile(JSON.parse(stored) as Partial<CampaignProfile>);
+    const parsed = Number(window.localStorage.getItem(activeCampaignSlotKey));
+    return Number.isInteger(parsed) && parsed >= 1 && parsed <= 3 ? parsed : 1;
   } catch {
-    return createNewCampaignProfile();
+    return 1;
   }
 }
 
-export function saveCampaignProfile(profile: CampaignProfile, slot = getActiveCampaignSlot()) {
-  const serialized = JSON.stringify(profile);
-  window.localStorage.setItem(storageKeyForSlot(slot), serialized);
-  window.localStorage.setItem(`${storageKeyForSlot(slot)}-updated`, new Date().toISOString());
-  void mirrorCampaignSlot(slot, profile);
+export function setActiveCampaignSlot(slot: number) {
+  try {
+    window.localStorage.setItem(activeCampaignSlotKey, String(Math.max(1, Math.min(3, slot))));
+  } catch {
+    // The selected slot remains usable in memory when browser storage is denied.
+  }
+}
+
+type LocalCampaignRead =
+  | { status: 'found'; profile: CampaignProfile; updatedAt: number }
+  | { status: 'missing' | 'invalid' | 'unavailable' };
+
+function validateAndMigrateProfile(value: unknown): CampaignProfile | undefined {
+  if (!isCampaignProfileCandidate(value)) return undefined;
+  const sceneId = value.originStory?.currentSceneId;
+  if (sceneId !== undefined && getOriginStoryScene(sceneId).id !== sceneId) return undefined;
+  const payload: Partial<CampaignProfile> & { _savedAt?: unknown } = { ...value };
+  delete payload._savedAt;
+  return migrateProfile(payload);
+}
+
+function readLocalCampaign(key: string): LocalCampaignRead {
+  let stored: string | null;
+  try {
+    stored = window.localStorage.getItem(key);
+  } catch {
+    return { status: 'unavailable' };
+  }
+  if (stored === null) return { status: 'missing' };
+  try {
+    const parsed: unknown = JSON.parse(stored);
+    const profile = validateAndMigrateProfile(parsed);
+    if (!profile) return { status: 'invalid' };
+    let updatedAt = isSaveObject(parsed) && typeof parsed._savedAt === 'string' ? Date.parse(parsed._savedAt) || 0 : 0;
+    if (!updatedAt) {
+      try { updatedAt = Date.parse(window.localStorage.getItem(`${key}-updated`) ?? '') || 0; } catch { /* Timestamp is optional for legacy saves. */ }
+    }
+    return { status: 'found', profile, updatedAt };
+  } catch {
+    return { status: 'invalid' };
+  }
+}
+
+export async function loadCampaignProfile(slot = getActiveCampaignSlot()): Promise<CampaignLoadResult> {
+  const local = readLocalCampaign(storageKeyForSlot(slot));
+  const backup = await restoreMirroredCampaignSlot(slot);
+  if (backup.status === 'found') {
+    const record = backup.record;
+    const profile = isSaveObject(record) && record.slot === slot ? validateAndMigrateProfile(record.profile) : undefined;
+    if (profile) {
+      if (local.status === 'found') {
+        const backupUpdatedAt = isSaveObject(record) && typeof record.updatedAt === 'string' ? Date.parse(record.updatedAt) || 0 : 0;
+        if (local.updatedAt >= backupUpdatedAt) return { status: 'ready', profile: local.profile, source: 'local' };
+      }
+      return { status: 'ready', profile, source: 'backup' };
+    }
+    if (local.status === 'found') return { status: 'ready', profile: local.profile, source: 'local' };
+    return { status: 'blocked', message: '이 슬롯의 저장 기록과 백업을 확인할 수 없습니다. 기존 기록을 보존했습니다.' };
+  }
+  if (local.status === 'found') return { status: 'ready', profile: local.profile, source: 'local' };
+  if (backup.status === 'unavailable') {
+    return { status: 'blocked', message: '저장 백업을 읽지 못했습니다. 다시 읽거나 다른 슬롯을 선택해 주세요. 기존 기록은 보존됩니다.' };
+  }
+  if (local.status !== 'missing') {
+    return { status: 'blocked', message: '저장 기록을 읽지 못했고 복구할 백업이 없습니다. 기존 기록을 보존했습니다.' };
+  }
+
+  // Single-slot saves belong only to slot 1. Check the current backup before
+  // migrating an older local key, which might otherwise replace a newer save.
+  if (slot === 1) {
+    let invalidLegacy = false;
+    for (const key of [campaignStorageKey, ...legacyStorageKeys]) {
+      const legacy = readLocalCampaign(key);
+      if (legacy.status === 'found') return { status: 'ready', profile: legacy.profile, source: 'local' };
+      if (legacy.status !== 'missing') invalidLegacy = true;
+    }
+    if (invalidLegacy) return { status: 'blocked', message: '이전 버전의 여정을 읽지 못했습니다. 기존 기록을 보존했습니다.' };
+    try {
+      if (window.localStorage.getItem('raonjena-grey-bridge-complete') === 'true') {
+        return { status: 'ready', profile: completeMission(createNewCampaignProfile(), missions[0], undefined).profile, source: 'local' };
+      }
+    } catch {
+      return { status: 'blocked', message: '이전 여정의 저장 여부를 확인할 수 없습니다. 다시 읽어 주세요.' };
+    }
+  }
+  return { status: 'ready', profile: createNewCampaignProfile(), source: 'new' };
+}
+
+export async function saveCampaignProfile(profile: CampaignProfile, slot = getActiveCampaignSlot()): Promise<boolean> {
+  if (!isCampaignProfileCandidate(profile)) return false;
+  const previous = readLocalCampaign(storageKeyForSlot(slot));
+  const previousTimestamp = previous.status === 'found' ? previous.updatedAt : 0;
+  const updatedAt = nextCampaignSaveTimestamp(slot, previousTimestamp);
+  let localSaved = false;
+  try {
+    window.localStorage.setItem(storageKeyForSlot(slot), JSON.stringify({ ...profile, _savedAt: updatedAt }));
+    localSaved = true;
+    window.localStorage.setItem(`${storageKeyForSlot(slot)}-updated`, updatedAt);
+  } catch {
+    // A hydrated profile can still be saved to IndexedDB if LocalStorage is full.
+  }
+  const backupSaved = await mirrorCampaignSlot(slot, profile, updatedAt);
+  return localSaved || backupSaved;
 }
 
 export function deleteCampaignProfile(slot: number) {
-  window.localStorage.removeItem(storageKeyForSlot(slot));
-  window.localStorage.removeItem(`${storageKeyForSlot(slot)}-updated`);
+  try {
+    window.localStorage.removeItem(storageKeyForSlot(slot));
+    window.localStorage.removeItem(`${storageKeyForSlot(slot)}-updated`);
+  } catch {
+    // IndexedDB removal remains independent of LocalStorage availability.
+  }
   void deleteMirroredCampaignSlot(slot);
 }
 
 export function listCampaignSlots(): CampaignSlotSummary[] {
   return [1, 2, 3].map((slot) => {
-    const stored = window.localStorage.getItem(storageKeyForSlot(slot));
-    if (!stored) {
-      return { slot, exists: false, day: 1, originCompleted: false, sceneTitle: '새로운 여정', missions: 0 };
-    }
-    try {
-      const profile = migrateProfile(JSON.parse(stored) as Partial<CampaignProfile>);
+    const saved = readLocalCampaign(storageKeyForSlot(slot));
+    if (saved.status !== 'found') {
       return {
-        slot,
-        exists: true,
-        day: profile.day,
-        originCompleted: profile.originStory.completed,
-        sceneTitle: profile.originStory.completed
-          ? `작전 ${profile.completedMissions.length}건 완료`
-          : getOriginStoryScene(profile.originStory.currentSceneId).title,
-        missions: profile.completedMissions.length,
-        updatedAt: window.localStorage.getItem(`${storageKeyForSlot(slot)}-updated`) ?? undefined,
+        slot, exists: saved.status !== 'missing', day: 1, originCompleted: false, missions: 0,
+        sceneTitle: saved.status === 'missing' ? '새로운 여정' : '복구가 필요한 기록',
       };
-    } catch {
-      return { slot, exists: false, day: 1, originCompleted: false, sceneTitle: '복구가 필요한 기록', missions: 0 };
     }
+    const profile = saved.profile;
+    return {
+      slot, exists: true, day: profile.day, originCompleted: profile.originStory.completed,
+      sceneTitle: profile.originStory.completed ? `작전 ${profile.completedMissions.length}건 완료` : getOriginStoryScene(profile.originStory.currentSceneId).title,
+      missions: profile.completedMissions.length,
+    };
   });
 }
 
@@ -555,19 +632,21 @@ export function upgradeFacility(profile: CampaignProfile, facilityId: FacilityId
 
 export function unlockHeroNode(profile: CampaignProfile, heroId: string, nodeId: string) {
   const hero = profile.heroProgress[heroId];
-  if (!hero || hero.skillPoints <= 0 || hero.unlockedNodes.includes(nodeId)) return profile;
+  const definition = heroDefinitions.find((entry) => entry.id === heroId);
+  const node = getHeroGrowthNode(nodeId);
+  if (!hero || !definition || !node || !canUnlockHeroGrowthNode(hero, nodeId)) return profile;
   return {
     ...profile,
     heroProgress: {
       ...profile.heroProgress,
       [heroId]: {
         ...hero,
-        skillPoints: hero.skillPoints - 1,
+        skillPoints: hero.skillPoints - node.cost,
         unlockedNodes: [...hero.unlockedNodes, nodeId],
       },
     },
     activityLog: [
-      `${heroDefinitions.find((entry) => entry.id === heroId)?.name ?? heroId}의 체능 노드가 개방되었다.`,
+      `${definition.name}의 체능 「${node.name}」이 개방되었다.`,
       ...profile.activityLog,
     ].slice(0, 16),
   };
@@ -834,13 +913,15 @@ export function buildProgressedHeroes(profile: CampaignProfile): HeroDefinition[
     const hpBonus = progress ? equipmentBonus(progress, 'hp') : 0;
     const armorBonus = progress ? equipmentBonus(progress, 'armor') : 0;
     const powerBonus = progress ? equipmentBonus(progress, 'power') : 0;
+    const growthBonus = getHeroGrowthBonuses(progress?.unlockedNodes ?? []);
     return {
       ...hero,
-      maxHp: hero.maxHp + (level - 1) * 5 + infirmaryLevel * 3 + hpBonus,
-      armor: hero.armor + Math.floor((level - 1) / 2) + Math.floor(trainingLevel / 2) + armorBonus,
+      maxHp: hero.maxHp + (level - 1) * 5 + infirmaryLevel * 3 + hpBonus + growthBonus.hp,
+      armor: hero.armor + Math.floor((level - 1) / 2) + Math.floor(trainingLevel / 2) + armorBonus + growthBonus.armor,
       skills: hero.skills.map((skill) => ({
         ...skill,
-        power: skill.power + (level - 1) * 2 + forgeLevel * 2 + powerBonus,
+        power: skill.power + (level - 1) * 2 + forgeLevel * 2 + powerBonus + growthBonus.power,
+        morale: skill.morale + growthBonus.morale,
       })),
     };
   });

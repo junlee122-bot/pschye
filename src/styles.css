@@ -11263,8 +11263,13 @@ kbd { padding:2px 5px; border:1px solid rgba(235,207,150,.25); border-bottom-wid
     right: 10px;
     bottom: auto;
     left: auto;
-    width: 180px;
+    width: min(180px, calc(100vw - 176px));
     grid-template-columns: 1fr;
+    max-height: calc(100dvh - 400px);
+    min-height: 130px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
   }
 
   .action-companion-orders > span {
@@ -11274,11 +11279,39 @@ kbd { padding:2px 5px; border:1px solid rgba(235,207,150,.25); border-bottom-wid
   .action-companion-orders button {
     grid-template-columns: 22px 1fr;
     padding: 7px 8px;
+    min-height: 40px;
   }
 
   .action-companion-orders button small {
     display: none;
   }
+}
+
+/* Saving remains unavailable until the selected journey has been recovered. */
+.save-recovery {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 32px 20px;
+  color: #e2d5bd;
+  background: radial-gradient(ellipse at center, #24201b, #090a0c 70%);
+  text-align: center;
+}
+
+.save-recovery > strong { font-size: 1.2rem; }
+.save-recovery > p { max-width: 540px; margin: 0; line-height: 1.8; color: #b4ab9c; }
+.save-recovery > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 620px; }
+.save-recovery .secondary-action { min-height: 44px; }
+.save-failure-banner { z-index: 1000; }
+.save-failure-banner button { white-space: nowrap; }
+
+@media (max-width: 560px) {
+  .save-recovery > div { flex-direction: column; width: 100%; }
+  .save-recovery .secondary-action { justify-content: center; }
+  .save-failure-banner { left: 12px; right: 12px; width: auto; max-width: none; }
 }
 
 /* Asset production review lab */

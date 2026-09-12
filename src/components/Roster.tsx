@@ -1,6 +1,7 @@
 import { useState, type CSSProperties } from 'react';
 import { Check, ChevronRight, CircleDot, LockKeyhole, Shield, Sparkles, Swords, UserRound } from 'lucide-react';
 import { heroDefinitions } from '../data/battle';
+import { canUnlockHeroGrowthNode, getHeroGrowthEffectLabel, getHeroGrowthNode, heroGrowthNodes } from '../data/heroGrowth';
 import { characters } from '../data/lore';
 import { equipmentDefinitions, getEquipment } from '../data/systems';
 import { buildProgressedHeroes, getEquipmentSlotLabel } from '../game/progression';
@@ -11,13 +12,6 @@ interface RosterProps {
   onUnlockNode: (heroId: string, nodeId: string) => void;
   onEquip: (heroId: string, equipmentId: string) => void;
 }
-
-const nodeDefinitions = [
-  { id: 'foundation', name: '기초 교범', description: '해당 체능의 안전한 순환과 기본 자세.', cost: 0 },
-  { id: 'fieldcraft', name: '실전 응용', description: '복합 임무에서 기술 위력과 생존 판단을 강화한다.', cost: 1 },
-  { id: 'bond-technique', name: '연계 체능', description: '관계가 깊은 동료와 사기 획득량을 높인다.', cost: 1 },
-  { id: 'personal-style', name: '개인류의 씨앗', description: '선대의 기술에서 자신의 답을 분리하기 시작한다.', cost: 1 },
-];
 
 const rarityLabels = { common: '일반', rare: '희귀', epic: '영웅', legendary: '전설' };
 
@@ -79,13 +73,19 @@ export function Roster({ profile, onUnlockNode, onEquip }: RosterProps) {
         <section className="skill-tree panel">
           <div className="panel-heading horizontal"><div><span className="eyebrow">CHE-NEUNG PATH</span><h3>체능 성장선</h3></div><span className="skill-points">기술점 {progress.skillPoints}</span></div>
           <div className="skill-nodes">
-            {nodeDefinitions.map((node, index) => {
+            {heroGrowthNodes.map((node) => {
               const unlocked = progress.unlockedNodes.includes(node.id);
-              const available = index === 0 || progress.unlockedNodes.includes(nodeDefinitions[index - 1]?.id ?? '');
+              const available = canUnlockHeroGrowthNode(progress, node.id);
+              const missingRequirements = node.requires.filter((id) => !progress.unlockedNodes.includes(id));
               return (
-                <button key={node.id} className={unlocked ? 'unlocked' : available ? 'available' : 'locked'} disabled={unlocked || !available || progress.skillPoints < node.cost} onClick={() => onUnlockNode(selectedHero.id, node.id)}>
+                <button key={node.id} className={unlocked ? 'unlocked' : available ? 'available' : 'locked'} disabled={!available} onClick={() => onUnlockNode(selectedHero.id, node.id)}>
                   <span>{unlocked ? <Check size={17} /> : available ? <Sparkles size={17} /> : <LockKeyhole size={16} />}</span>
-                  <div><strong>{node.name}</strong><small>{node.description}</small></div>
+                  <div>
+                    <strong>{node.name}</strong>
+                    <small>{node.description}</small>
+                    <small>{getHeroGrowthEffectLabel(node)}</small>
+                    <small>{unlocked ? '습득 완료' : `기술점 ${node.cost}${missingRequirements.length ? ` · 선행: ${missingRequirements.map((id) => getHeroGrowthNode(id)?.name).join(', ')}` : progress.skillPoints < node.cost ? ' · 기술점 부족' : ''}`}</small>
+                  </div>
                 </button>
               );
             })}

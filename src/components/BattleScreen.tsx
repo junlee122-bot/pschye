@@ -27,7 +27,7 @@ import {
   getThreatForecast,
   type BattleDoctrine,
 } from '../game/battleEngine';
-import { getBattleRecommendation } from '../game/battleDecision';
+import { getBattleRecommendation, hasAvailableHeroAction } from '../game/battleDecision';
 import { calculateMissionGrade, getAdjustedMissionReward } from '../game/progression';
 import { getRaonStoryBeat, raonChoiceMeta } from '../data/story';
 import type { BattleState, HeroDefinition, MissionDefinition, MissionDifficulty, RaonStoryChoiceId } from '../types';
@@ -62,7 +62,10 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
   const [battleHistory, setBattleHistory] = useState<BattleState[]>([]);
   const [mobileConsoleOpen, setMobileConsoleOpen] = useState(false);
   const [confirmExit, setConfirmExit] = useState(false);
-  const [guideOpen, setGuideOpen] = useState(() => window.localStorage.getItem('raonjena-battle-guide-v2') !== 'seen');
+  const [guideOpen, setGuideOpen] = useState(() => {
+    try { return window.localStorage.getItem('raonjena-battle-guide-v2') !== 'seen'; }
+    catch { return true; }
+  });
   const [turnNotice, setTurnNotice] = useState<string | null>(null);
   const touchPreferred = useMemo(() => window.matchMedia?.('(pointer: coarse)').matches ?? false, []);
   const reportedVictory = useRef(false);
@@ -99,6 +102,10 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
   const recommendation = useMemo(() => {
     return getBattleRecommendation(battle, mission, heroes);
   }, [battle, heroes, mission]);
+  const hasAvailableAction = useMemo(
+    () => hasAvailableHeroAction(battle, mission, heroes),
+    [battle, heroes, mission],
+  );
 
   useEffect(() => {
     if (battle.outcome === 'victory' && !reportedVictory.current) {
@@ -190,7 +197,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
   };
 
   const finishTurn = () => {
-    if (battle.commandPoints > 0 && availableHeroes.length > 0) {
+    if (hasAvailableAction) {
       setTurnNotice(`아직 명령 ${battle.commandPoints}회가 남았습니다. 추천 명령을 실행하거나 행동 가능한 조장을 선택하십시오.`);
       setMobileConsoleOpen(true);
       return;
@@ -207,6 +214,15 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
     setBattleHistory([]);
     setSelectedHeroId(initialHero?.id ?? '');
     setSelectedSkillId(initialHero?.skills[0]?.id ?? '');
+    setMobileConsoleOpen(false);
+    setConfirmExit(false);
+    setTurnNotice(null);
+  };
+
+  const switchCombatMode = (next: 'action' | 'tactical') => {
+    if (!window.confirm('전투 방식을 바꾸면 현재 작전을 처음부터 다시 시작합니다. 전환하시겠습니까?')) return;
+    restart();
+    setCombatMode(next);
   };
 
   const requestExit = () => {
@@ -215,7 +231,8 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
   };
 
   const closeGuide = () => {
-    window.localStorage.setItem('raonjena-battle-guide-v2', 'seen');
+    try { window.localStorage.setItem('raonjena-battle-guide-v2', 'seen'); }
+    catch { /* The guide can still close when browser storage is denied. */ }
     setGuideOpen(false);
   };
 
@@ -279,7 +296,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
 
       if (event.code === 'Space') {
         event.preventDefault();
-        if (battle.commandPoints > 0 && availableHeroes.length > 0) {
+        if (hasAvailableAction) {
           setTurnNotice(`아직 명령 ${battle.commandPoints}회가 남았습니다. 추천 명령 [R]을 실행하거나 행동 가능한 조장을 선택하십시오.`);
           setMobileConsoleOpen(true);
           return;
@@ -314,7 +331,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
 
     window.addEventListener('keydown', handleTacticalKeys);
     return () => window.removeEventListener('keydown', handleTacticalKeys);
-  }, [availableHeroes.length, battle, combatMode, guideOpen, heroes, mission, recommendation, selectedHeroId]);
+  }, [battle, combatMode, guideOpen, hasAvailableAction, heroes, mission, recommendation, selectedHeroId]);
 
   if (combatMode === 'select') {
     return (
@@ -326,7 +343,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
         <section className="combat-mode-panel" aria-labelledby="combat-mode-title">
           <span>{mission.operation} · COMBAT APPROACH</span>
           <h1 id="combat-mode-title">라온은 어떻게 전장에 들어갈까?</h1>
-          <p>같은 이야기와 보상을 서로 다른 방식으로 진행합니다. 언제든 전투 중 다른 방식으로 전환할 수 있습니다.</p>
+          <p>같은 이야기와 보상을 서로 다른 방식으로 진행합니다. 전투 중 방식을 바꾸면 현재 작전을 처음부터 다시 시작합니다.</p>
           <div className="combat-mode-summary">
             <i />
             <div><small>{mission.battlefieldRule.name}</small><strong>{mission.title}</strong></div>
@@ -376,7 +393,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
           bondSupport={bondSupport}
           onComplete={onComplete}
           onExit={onExit}
-          onSwitchMode={() => setCombatMode('tactical')}
+          onSwitchMode={() => switchCombatMode('tactical')}
         />
       </Suspense>
     );
@@ -388,7 +405,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
         <div className="battle-header-actions">
           <button className={`icon-text-button ${confirmExit ? 'confirming' : ''}`} onClick={requestExit}><ArrowLeft size={17} /> {confirmExit ? '다시 누르면 포기' : '작전 포기'}</button>
           <button className="icon-text-button battle-undo" onClick={undoAction} disabled={battleHistory.length === 0 || battle.outcome !== 'active'}><Undo2 size={16} /> 행동 취소</button>
-          <button className="icon-text-button" onClick={() => setCombatMode('action')}><Swords size={16} /> 라온 액션</button>
+          <button className="icon-text-button" onClick={() => switchCombatMode('action')}><Swords size={16} /> 라온 액션</button>
         </div>
         <div>
           <span>{mission.operation}</span>
@@ -417,7 +434,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
           <i />
           <span className={battle.commandPoints > 0 ? 'active' : 'complete'}><b>2</b> 명령 {actionsUsed}/{difficultyRules.commandPoints}</span>
           <i />
-          <span className={battle.commandPoints === 0 || availableHeroes.length === 0 ? 'ready' : ''}><b>3</b> 적 행동</span>
+          <span className={!hasAvailableAction ? 'ready' : ''}><b>3</b> 적 행동</span>
         </div>
         <div className="battle-focus-status">
           <div><Link2 size={15} /><span>집중 연계</span></div>

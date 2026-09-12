@@ -18,6 +18,22 @@ function getReadyHeroes(battle: BattleState, heroes: HeroDefinition[]) {
   ));
 }
 
+/** A recommendation is a heuristic; turn availability follows actual skill rules. */
+export function hasAvailableHeroAction(
+  battle: BattleState,
+  mission: MissionDefinition,
+  heroes: HeroDefinition[],
+) {
+  if (battle.outcome !== 'active' || battle.commandPoints <= 0) return false;
+  return getReadyHeroes(battle, heroes).some((hero) => hero.skills.some((skill) => {
+    // Guard and area skills can spend a command without a selected target.
+    if (skill.kind === 'guard' || skill.kind === 'area') return true;
+    return battle.enemies.some((enemy) => getSkillDamagePreview(
+      battle, mission, heroes, hero.id, skill.id, enemy.id,
+    ) !== null);
+  }));
+}
+
 function getBestStrike(
   battle: BattleState,
   mission: MissionDefinition,

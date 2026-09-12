@@ -391,6 +391,19 @@ function resolveGuardSkill(
     `${skill.name} — ${mission.objectiveLabel}에 ${skill.power} 방벽을 전개했다.`,
     'hero',
   );
+  const revelation = mission.revelation;
+  const witness = updated.enemies.find((enemy) => enemy.id === revelation?.enemyId);
+  const witnessDefinition = mission.enemies.find((enemy) => enemy.id === revelation?.enemyId);
+  if (
+    revelation?.heroId === heroId
+    && revelation.skillId === skill.id
+    && witness && witness.hp > 0 && witness.revealed
+    && witnessDefinition
+    && !updated.revelationTriggered
+  ) {
+    updated = { ...updated, revelationTriggered: true };
+    updated = addLog(updated, witnessDefinition.name, revelation.line, 'story');
+  }
   return updated;
 }
 

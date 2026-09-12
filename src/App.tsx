@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { ArchiveGallery } from './components/ArchiveGallery';
 import { Activities } from './components/Activities';
 import { BattleScreen } from './components/BattleScreen';
@@ -18,6 +18,7 @@ import { getRaonStoryBeat } from './data/story';
 import { isVillageOriginScene } from './data/village';
 import type { BattleDoctrine } from './game/battleEngine';
 import { executeGameCommand } from './game/simulation';
+import { CampaignSlotSession } from './game/persistence';
 import {
   buildProgressedHeroes,
   advanceDay,
@@ -58,13 +59,17 @@ export function App() {
     return requestedSection && navigationSections.includes(requestedSection) ? requestedSection : 'title';
   });
   const [activeSlot, setActiveSlot] = useState(getActiveCampaignSlot);
-  const [profile, setProfile] = useState(() => loadCampaignProfile(activeSlot));
+  const [profile, setProfile] = useState(createNewCampaignProfile);
+  const [saveSession] = useState(() => new CampaignSlotSession());
+  const [loadAttempt, setLoadAttempt] = useState(0);
+  const [hydration, setHydration] = useState<{ slot: number; status: 'loading' | 'ready' | 'blocked'; message?: string }>({ slot: activeSlot, status: 'loading' });
   const [activeMissionId, setActiveMissionId] = useState<string | null>(null);
   const [focusedMissionId, setFocusedMissionId] = useState<string | undefined>();
   const [activeDoctrine, setActiveDoctrine] = useState<BattleDoctrine>('shelter');
   const [activeDifficulty, setActiveDifficulty] = useState<MissionDifficulty>('standard');
   const [activeStoryChoice, setActiveStoryChoice] = useState<RaonStoryChoiceId>('resolve');
   const [notice, setNotice] = useState<{ title: string; detail: string } | null>(null);
+  const [saveFailed, setSaveFailed] = useState(false);
   const activeMission = activeMissionId ? getMission(activeMissionId) : undefined;
   const progressedHeroes = useMemo(() => buildProgressedHeroes(profile), [profile]);
   const deployedHeroes = useMemo(
@@ -78,8 +83,27 @@ export function App() {
     : 0;
 
   useEffect(() => {
-    saveCampaignProfile(profile, activeSlot);
-  }, [activeSlot, profile]);
+    setHydration({ slot: activeSlot, status: 'loading' });
+    void saveSession.load(activeSlot, loadCampaignProfile).then((result) => {
+      if (!result) return;
+      if (result.status === 'ready') {
+        setProfile(result.profile);
+        setHydration({ slot: activeSlot, status: 'ready' });
+      } else {
+        setHydration({ slot: activeSlot, status: 'blocked', message: result.message });
+      }
+    });
+    return () => saveSession.invalidate();
+  }, [activeSlot, loadAttempt, saveSession]);
+
+  useEffect(() => {
+    if (hydration.status !== 'ready' || hydration.slot !== activeSlot || !saveSession.canSave(activeSlot)) return;
+    let active = true;
+    void saveCampaignProfile(profile, activeSlot).then((saved) => {
+      if (active && saveSession.canSave(activeSlot)) setSaveFailed(!saved);
+    });
+    return () => { active = false; };
+  }, [activeSlot, hydration, profile, saveSession]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -201,25 +225,64 @@ export function App() {
   }, []);
 
   const resetCampaign = useCallback(() => {
+    saveSession.startNew(activeSlot);
     setProfile(createNewCampaignProfile());
+    setHydration({ slot: activeSlot, status: 'ready' });
     setActiveMissionId(null);
     setFocusedMissionId(undefined);
     setSection('title');
-  }, []);
+  }, [activeSlot, saveSession]);
 
   const selectCampaignSlot = useCallback((slot: number) => {
+    if (slot === activeSlot) return;
+    saveSession.invalidate();
+    setHydration({ slot, status: 'loading' });
     setActiveCampaignSlot(slot);
     setActiveSlot(slot);
-    setProfile(loadCampaignProfile(slot));
     setActiveMissionId(null);
     setFocusedMissionId(undefined);
-  }, []);
+  }, [activeSlot, saveSession]);
+
+  const withSaveStatus = (content: ReactNode) => <>{content}{saveFailed && (
+    <aside className="game-notice save-failure-banner" role="alert">
+      <span>!</span><div><strong>최근 진행을 저장하지 못했습니다</strong><small>브라우저 저장 공간을 확인해 주세요. 저장 전 화면을 닫으면 최근 진행을 잃을 수 있습니다.</small></div>
+      <button onClick={() => {
+        if (saveSession.canSave(activeSlot)) void saveCampaignProfile(profile, activeSlot).then((saved) => {
+          if (saveSession.canSave(activeSlot)) setSaveFailed(!saved);
+        });
+      }}>다시 저장</button>
+    </aside>
+  )}</>;
+
+  if (hydration.status !== 'ready' || hydration.slot !== activeSlot) {
+    const loading = hydration.status === 'loading' || hydration.slot !== activeSlot;
+    return (
+      <main className="save-recovery" aria-busy={loading}>
+        {loading && <i />}
+        <strong>{loading ? `슬롯 ${activeSlot}의 여정을 불러오는 중...` : `슬롯 ${activeSlot}의 기록을 확인해 주세요`}</strong>
+        <p role="status">{loading ? '저장 기록과 복구 백업을 확인하고 있습니다.' : hydration.message}</p>
+        <div>
+          {!loading && <button className="secondary-action" onClick={() => setLoadAttempt((attempt) => attempt + 1)}>다시 읽기</button>}
+          {[1, 2, 3].filter((slot) => slot !== activeSlot).map((slot) => (
+            <button className="secondary-action" key={slot} onClick={() => selectCampaignSlot(slot)}>슬롯 {slot} 선택</button>
+          ))}
+          <button className="secondary-action" onClick={() => {
+            if (window.confirm(`슬롯 ${activeSlot}의 기존 기록을 새 여정으로 교체할까요?`)) resetCampaign();
+          }}>이 슬롯에서 새 여정 시작</button>
+        </div>
+      </main>
+    );
+  }
 
   if (section === 'title') {
-    return (
+    return withSaveStatus(
       <TitleScreen
         activeSlot={activeSlot}
-        slots={listCampaignSlots()}
+        slots={listCampaignSlots().map((slot) => slot.slot === activeSlot ? {
+          ...slot, exists: true, day: profile.day, originCompleted: profile.originStory.completed,
+          sceneTitle: profile.originStory.completed ? `작전 ${profile.completedMissions.length}건 완료` : getOriginStoryScene(profile.originStory.currentSceneId).title,
+          missions: profile.completedMissions.length,
+        } : slot)}
         profile={profile}
         onNavigate={navigate}
         onReset={resetCampaign}
@@ -231,7 +294,7 @@ export function App() {
   if (section === 'campaign' && !activeMission && !profile.originStory.completed) {
     const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
     if (isVillageOriginScene(originScene)) {
-      return (
+      return withSaveStatus(
         <Suspense fallback={<div className="full-engine-loading"><i /><span>변방 마을을 불러오는 중...</span></div>}>
           <VillageAdventure
             profile={profile}
@@ -243,7 +306,7 @@ export function App() {
         </Suspense>
       );
     }
-    return (
+    return withSaveStatus(
       <OriginStory
         profile={profile}
         onChoose={handleChooseOrigin}
@@ -253,7 +316,7 @@ export function App() {
     );
   }
 
-  return (
+  return withSaveStatus(
     <div className="app-shell">
       <TopNavigation current={section} onNavigate={navigate} />
       {!activeMission && section !== 'campaign' && <CommandDeck profile={profile} current={section} onNavigate={navigate} />}
