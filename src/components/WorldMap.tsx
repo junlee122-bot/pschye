@@ -1,8 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, Check, Crosshair, Flag, LockKeyhole, MapPinned, ShieldAlert } from 'lucide-react';
 import { missions } from '../data/campaign';
 import { regions } from '../data/lore';
 import { getMissionStatus } from '../game/progression';
+import { getKnownMissions } from '../game/storyAccess';
 import type { CampaignProfile } from '../types';
 
 interface WorldMapProps {
@@ -22,9 +23,15 @@ const nodePositions: Record<string, { left: string; top: string }> = {
 };
 
 export function WorldMap({ profile, onOpenMission }: WorldMapProps) {
-  const firstAvailable = missions.find((mission) => getMissionStatus(profile, mission) === 'available') ?? missions[0];
-  const [selectedMissionId, setSelectedMissionId] = useState(firstAvailable?.id ?? 'grey-bridge-escort');
-  const selectedMission = missions.find((mission) => mission.id === selectedMissionId) ?? missions[0];
+  const knownMissions = getKnownMissions(profile);
+  const knownMissionIds = new Set(knownMissions.map((mission) => mission.id));
+  const firstAvailable = knownMissions.find((mission) => getMissionStatus(profile, mission) === 'available') ?? knownMissions[0];
+  const [selectedMissionId, setSelectedMissionId] = useState(firstAvailable?.id);
+  const selectedMission = knownMissions.find((mission) => mission.id === selectedMissionId) ?? firstAvailable;
+  const visibleMissionId = selectedMission?.id;
+  useEffect(() => {
+    if (selectedMissionId !== visibleMissionId) setSelectedMissionId(visibleMissionId);
+  }, [selectedMissionId, visibleMissionId]);
   const selectedRegion = regions.find((region) => region.id === selectedMission?.regionId);
   const status = selectedMission ? getMissionStatus(profile, selectedMission) : 'locked';
   const fronts = useMemo(() => ({
@@ -55,15 +62,17 @@ export function WorldMap({ profile, onOpenMission }: WorldMapProps) {
           <img src="/art/generated/campaign-world-map.webp" alt="라온제나 제국과 주변 전선의 전략 지도" />
           <div className="map-darkener" />
           {missions.map((mission) => {
-            const missionStatus = getMissionStatus(profile, mission);
+            const known = knownMissionIds.has(mission.id);
+            const missionStatus = known ? getMissionStatus(profile, mission) : 'locked';
             const position = nodePositions[mission.id];
             return (
               <button
                 key={mission.id}
                 className={`operation-node ${missionStatus} ${selectedMission.id === mission.id ? 'selected' : ''}`}
                 style={position}
-                onClick={() => setSelectedMissionId(mission.id)}
-                aria-label={`${mission.title} ${missionStatus}`}
+                onClick={() => { if (known) setSelectedMissionId(mission.id); }}
+                disabled={!known}
+                aria-label={`${mission.operation} · ${known ? mission.title : '미공개 작전'} ${missionStatus}`}
               >
                 {missionStatus === 'complete' ? <Check size={15} /> : missionStatus === 'locked' ? <LockKeyhole size={14} /> : <Crosshair size={15} />}
                 <span>{mission.operation.replace('OPERATION ', '')}</span>
@@ -86,7 +95,7 @@ export function WorldMap({ profile, onOpenMission }: WorldMapProps) {
           <p>{selectedMission.summary}</p>
           <div className="region-brief">
             <Flag size={17} />
-            <div><span>{selectedRegion?.subtitle ?? 'UNKNOWN FRONT'}</span><strong>{selectedRegion?.name ?? selectedMission.regionId}</strong></div>
+            <div><span>작전 지역</span><strong>{selectedRegion?.name ?? selectedMission.regionId}</strong></div>
           </div>
           <div className="threat-meter">
             <div><span>권장 레벨</span><strong>Lv.{selectedMission.recommendedLevel}</strong></div>

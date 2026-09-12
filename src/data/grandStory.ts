@@ -4,11 +4,28 @@ export type GrandStorySagaId = 'petal-before-bloom' | 'erased-names' | 'six-bann
 export type GrandStoryController = 'raon-present' | 'raon-memory-observer';
 export type GrandStorySceneMode = 'dialogue' | 'exploration' | 'investigation' | 'training' | 'battle' | 'stealth' | 'command' | 'memory' | 'bond' | 'confrontation';
 export type GrandStoryScenePhase = 'arrival' | 'exploration' | 'bond' | 'confrontation' | 'decision' | 'consequence';
+export type GrandStoryCanonStatus = 'source-backed' | 'user-confirmed' | 'adaptation-draft' | 'undecided';
+
+export const grandStoryCanonStatusLabels: Record<GrandStoryCanonStatus, string> = {
+  'source-backed': '원전 근거',
+  'user-confirmed': '사용자 확정',
+  'adaptation-draft': '각색 초안',
+  undecided: '미정',
+};
+
+const adaptationNotice = '원전의 공개 구조를 바탕으로 만든 각색 초안입니다. 구체 사건·대사·선택 결과는 사용자 확정 정사가 아닙니다. 근거와 미정 항목은 docs/CANON_STATUS.md를 참조하세요.';
+const lamiOriginNotice = '각색 초안입니다. 최초의 빛 이후 반대파 변화는 원전 §4·15에 근거하며, 라미의 유년기 사건·상대 연대·빛 접근 방식은 미정입니다. 최초의 빛 이전 피난민의 데닌 혈통도 확정하지 않습니다.';
+const kainEndingNotice = '카인의 결말은 미정입니다(원전 §55·133·171.6.1). 병기열차 장면은 각색 후보이며 생사·속죄·영구 손상·최종전 합류를 확정하지 않습니다.';
+
+interface GrandStoryCanonMetadata {
+  canonStatus: GrandStoryCanonStatus;
+  canonNotice: string;
+}
 
 type StoryBeat = readonly [title: string, mode: GrandStorySceneMode, summary: string];
 type StoryChoiceSet = readonly [compassion: string, insight: string, resolve: string];
 
-export interface GrandStorySaga {
+export interface GrandStorySaga extends GrandStoryCanonMetadata {
   id: GrandStorySagaId;
   publicOrder: number;
   title: string;
@@ -20,7 +37,7 @@ export interface GrandStorySaga {
   color: string;
 }
 
-export interface GrandStoryEpisode {
+export interface GrandStoryEpisode extends GrandStoryCanonMetadata {
   id: string;
   sagaId: GrandStorySagaId;
   order: number;
@@ -37,7 +54,7 @@ export interface GrandStoryEpisode {
   cliffhanger: string;
 }
 
-export interface GrandStoryScene {
+export interface GrandStoryScene extends GrandStoryCanonMetadata {
   id: string;
   globalOrder: number;
   episodeId: string;
@@ -64,26 +81,31 @@ export const grandStorySagas: GrandStorySaga[] = [
   {
     id: 'petal-before-bloom', publicOrder: 1, title: '제1부 · 꽃잎이 피기 전', subtitle: '변방 소년이 제7기의 제2조장이 되기까지',
     period: 'A.S. 84 · 초여름', controller: 'raon-present', color: '#c89a58',
+    canonStatus: 'adaptation-draft', canonNotice: adaptationNotice,
     promise: '마을의 작은 선택이 프시케의 지휘 방식과 동료 관계를 만든다.', hiddenQuestion: '라온은 카즈린을 따라온 아이에서 스스로 선택하는 조장이 될 수 있는가?',
   },
   {
     id: 'erased-names', publicOrder: 2, title: '제2부 · 지워진 이름들', subtitle: '첫 임무와 제국의 공식 역사에 생긴 균열',
     period: 'A.S. 84 · 여름부터 가을', controller: 'raon-present', color: '#6688a8',
+    canonStatus: 'adaptation-draft', canonNotice: adaptationNotice,
     promise: '제7기의 실전 성장과 함께 해찬·제3기·가람에 관한 금지된 기록을 추적한다.', hiddenQuestion: '제국이 숨긴 진실을 드러내면서도 눈앞의 사람을 지킬 수 있는가?',
   },
   {
     id: 'six-banners', publicOrder: 3, title: '제3부 · 여섯 개의 깃발', subtitle: '해찬을 중심으로 본 대전쟁 세대의 군상극',
     period: 'A.S. 이전 · 체시 공화국 말기', controller: 'raon-memory-observer', color: '#8d6a9f',
+    canonStatus: 'adaptation-draft', canonNotice: adaptationNotice,
     promise: '라온은 기록 공명을 통해 1세대가 가족이 되고 다시 적이 되는 과정을 목격한다.', hiddenQuestion: '모두가 주저할 때 해찬은 왜 자신을 외면한 사람들까지 구했는가?',
   },
   {
     id: 'second-great-war', publicOrder: 4, title: '제4부 · 두 번째 대전쟁', subtitle: '과거의 영웅과 현재의 후계자들이 충돌하는 최종전',
     period: 'A.S. 84 · 겨울', controller: 'raon-present', color: '#a84f4f',
+    canonStatus: 'adaptation-draft', canonNotice: `${adaptationNotice} ${kainEndingNotice}`,
     promise: '해찬의 귀환, 진훤의 죽음, 나비의 폭주와 삼파전을 제7기의 선택으로 끝낸다.', hiddenQuestion: '라온은 해찬의 검을 계승하면서도 해찬의 고독과 자멸을 반복하지 않을 수 있는가?',
   },
   {
     id: 'lami-origin', publicOrder: 5, title: '종장 · 구원 이전의 라미', subtitle: '모든 이야기가 끝난 뒤 처음의 상처로 돌아간다',
     period: '대전쟁보다 오래전', controller: 'raon-memory-observer', color: '#6650a4',
+    canonStatus: 'adaptation-draft', canonNotice: lamiOriginNotice,
     promise: '라미를 이해시키되 멸종 계획을 면죄하지 않고, 그녀가 해찬을 찾아가는 순간에 끝난다.', hiddenQuestion: '라미는 언제부터 구원과 멸종을 같은 말로 믿게 되었는가?',
   },
 ];
@@ -103,7 +125,11 @@ function episode(
   beats: readonly StoryBeat[],
   cliffhanger: string,
 ): Omit<GrandStoryEpisode, 'order'> {
-  return { sagaId, id, chapter, title, time, location, viewpoint, cast, theme, choicePrompt, choices, beats, cliffhanger };
+  const canonStatus: GrandStoryCanonStatus = id === 'kain-final-choice' ? 'undecided' : 'adaptation-draft';
+  const canonNotice = id === 'kain-final-choice' || id === 'raon-style-final'
+    ? `${adaptationNotice} ${kainEndingNotice}`
+    : sagaId === 'lami-origin' ? lamiOriginNotice : adaptationNotice;
+  return { sagaId, id, chapter, title, time, location, viewpoint, cast, theme, choicePrompt, choices, beats, cliffhanger, canonStatus, canonNotice };
 }
 
 const petalBeforeBloom = [
@@ -823,21 +849,21 @@ const secondGreatWar = [
       ['끝까지 남은 검', 'battle', '크리스는 마지막 민간인이 통로를 지난 뒤 리스트류의 균형을 자기 검으로 완성해 입구를 지킨다.'],
     ], '붙잡힌 제6기 잔당은 카인이 중앙 병기열차를 빼앗아 빛 분화구로 가고 있다고 말한다.'),
 
-  episode('second-great-war', 'kain-final-choice', '34장 · 지킬 사람의 이름', '재능이 선택이 되는 날', '같은 날 · 해 질 무렵', '중앙 병기열차', '라온', ['라온', '카인', '카즈린', '제6기 잔당'], '끝까지 노력하지 않던 라이벌에게 완전하지 않은 회복의 기회 주기', '카인의 마지막 선택을 어떻게 이끌 것인가?',
+  episode('second-great-war', 'kain-final-choice', '34장 · 지킬 사람의 이름', '재능이 선택이 되는 날', '같은 날 · 해 질 무렵', '중앙 병기열차', '라온', ['라온', '카인', '카즈린', '제6기 잔당'], '패배 이후 책임을 마주하는 라이벌의 각색 후보 · 최종 결말 미정', '결말이 미정인 카인의 장면에서 어떤 선택을 검토할 것인가?',
     ['괴롭힘과 배신 가담 피해자에게 직접 책임질 기회를 준다.', '열차 폭약 구조를 읽는 카인의 조기교육을 살릴 역할을 맡긴다.', '카즈린의 인정이 아니라 자기 선택으로 돌아오라고 말한다.'], [
       ['훔친 열차', 'battle', '카인은 제6기 강경파에게 합류한 척 병기열차를 빼앗았지만 폭약 해제 방법을 몰라 분화구로 질주한다.'],
       ['늘 쉬운 상대', 'confrontation', '라온은 카인이 자신을 쉬운 승리로 골랐던 날을 꺼내고 카인은 패배 이후에도 달라지지 않았음을 인정한다.'],
       ['부모의 창술', 'investigation', '기욤과 벨라트리체에게 배운 정교한 찌르기가 폭약 연결핀을 순서대로 끊을 유일한 기술이 된다.'],
       ['카즈린의 거절', 'dialogue', '카즈린은 이번 선택으로 과거가 사라지지는 않으며 자신에게 잘 보이기 위한 희생도 받지 않겠다고 선을 긋는다.'],
-      ['자기 이유', 'command', '책임·능력·자기 선택 중 선택은 카인이 생존해 긴 속죄를 시작할지, 불완전한 상처를 입고도 도망치지 않을지 정한다.'],
-      ['마지막 연결핀', 'battle', '카인은 폭발 직전 열차를 분화구 밖으로 돌리고 오른손 감각을 잃지만 죽음으로 쉽게 갚는 대신 살아서 책임지기로 한다.'],
-    ], '병기열차가 빗나간 틈에 라미의 잔향이 빛의 핵심을 완전히 열고 세 진영을 종족별 환영으로 갈라놓는다.'),
+      ['자기 이유', 'command', '책임·능력·자기 선택은 검토할 갈래다. 어느 선택도 카인의 생존·속죄·신체 후유증을 확정하지 않는다.'],
+      ['마지막 연결핀', 'battle', '각색 초안에서는 카인이 연결핀을 끊으려는 시도까지만 제시한다. 성공 여부와 생사, 후유증, 이후 책임 방식은 미정이다.'],
+    ], '카인의 결말을 보류하고 빛 분화구로 시점을 옮기는 각색 초안이다. 다음 사건을 카인의 생존이나 희생 결과로 확정하지 않는다.'),
 
-  episode('second-great-war', 'raon-style-final', '35장 · 라온제나', '혼자 완성되지 않는 검', 'A.S. 84 · 초겨울 14일', '완전한 빛의 분화구 중심', '라온', ['라온', '해찬', '하도리', '카즈린', '레오', '크리스', '카인'], '해찬의 선택은 계승하고 자멸과 고독은 거부하는 라온류 완성', '라온류의 마지막 한 자리를 누구에게 맡길 것인가?',
-    ['하도리에게 충격을 받아내는 시작점을 맡긴다.', '카즈린과 카인에게 좌우 검로를 열게 한다.', '레오·크리스에게 전군과 퇴로를 연결하게 한다.'], [
+  episode('second-great-war', 'raon-style-final', '35장 · 라온제나', '혼자 완성되지 않는 검', 'A.S. 84 · 초겨울 14일', '완전한 빛의 분화구 중심', '라온', ['라온', '해찬', '하도리', '카즈린', '레오', '크리스'], '해찬의 선택은 계승하고 자멸과 고독은 거부하는 라온류 완성', '라온류의 마지막 한 자리를 누구에게 맡길 것인가?',
+    ['하도리에게 충격을 받아내는 시작점을 맡긴다.', '카즈린에게 동료들과 검로를 열 역할을 맡긴다.', '레오·크리스에게 전군과 퇴로를 연결하게 한다.'], [
       ['각자의 멸종 환영', 'memory', '라미 잔향은 인간·체시·데닌·반데닌에게 상대 종족이 자신을 죽이는 미래를 보여주며 먼저 공격하게 만든다.'],
       ['해찬의 한 걸음', 'battle', '해찬은 다시 극의를 쓰려 하지만 다리가 버티지 못하고 라온이 검을 받아 혼자 태울 미래를 거부한다.'],
-      ['여섯 개의 시작점', 'command', '하도리·카즈린·카인·레오·크리스가 각자 충격·공간·사선·지휘·퇴로를 맡아 라온의 검로를 공동으로 만든다.'],
+      ['동료들의 시작점', 'command', '하도리·카즈린·레오·크리스가 충격·공간·지휘·퇴로를 나누어 맡아 라온의 검로를 공동으로 만드는 각색 초안이다. 카인의 최종전 참여 여부는 결말 확정 뒤 검토한다.'],
       ['멈춤이 있는 꽃잎', 'battle', '라온은 연속 가속 사이마다 관찰과 동료 신호를 넣고 부담을 전신과 진형에 분산해 부서지지 않는 흐름을 완성한다.'],
       ['라온류의 이름', 'command', '시작점 선택은 최종 기술의 연출을 달리하지만 어떤 경로에서도 한 사람만의 극의가 되지 않는다.'],
       ['빛의 핵심을 닫다', 'battle', '라온은 존재 정보를 베는 대신 종족별 공포를 연결한 잔향만 끊어 누구도 소거하지 않고 빛을 잠재운다.'],
@@ -855,10 +881,10 @@ const secondGreatWar = [
 ];
 
 const lamiOrigin = [
-  episode('lami-origin', 'unnamed-child', '종장 1장 · 이름 이전', '별빛 머리의 아이', '대전쟁보다 약 120년 전', '기록에서 지워진 수용 구역', '전쟁이 끝난 뒤 기억을 읽는 라온', ['어린 라미', '체시 관리인', '데닌 노동자', '이름 없는 아이들'], '출생의 비밀보다 처음 사람으로 불리지 못한 경험', '불완전한 기억에서 무엇을 사실로 확정하지 않을 것인가?',
+  episode('lami-origin', 'unnamed-child', '종장 1장 · 이름 이전', '별빛 머리의 아이', '최초의 빛 이전 · 세부 연대 미정', '기록에서 지워진 수용 구역', '전쟁이 끝난 뒤 기억을 읽는 라온', ['어린 라미', '체시 관리인', '수용 구역 노동자', '이름 없는 아이들'], '출생의 비밀보다 처음 사람으로 불리지 못한 경험', '불완전한 기억에서 무엇을 사실로 확정하지 않을 것인가?',
     ['아이들이 서로를 돌본 행동만 확실한 진실로 남긴다.', '종족 표식과 실험 기록의 모순을 분리해 기록한다.', '라미의 출생 종족은 증거가 생길 때까지 미정으로 둔다.'], [
       ['번호로 부르는 방', 'memory', '보라색 머리의 아이는 이름 대신 검체 번호로 불리고 같은 방의 아이들이 몰래 별빛이라는 별명을 붙인다.'],
-      ['서로 다른 기록', 'investigation', '체시 장부는 그녀를 인간, 데닌 장부는 실험체, 찢긴 문서는 회수 대상이라 적어 정확한 혈통을 확정할 수 없다.'],
+      ['서로 다른 기록', 'investigation', '체시 장부는 그녀를 인간, 수용 구역 장부는 실험체, 찢긴 문서는 회수 대상이라 적어 정확한 혈통을 확정할 수 없다. 이 기록들의 존재 역시 각색 초안이다.'],
       ['첫 번째 주먹', 'confrontation', '관리인이 쓰러진 아이를 끌고 가려 하자 라미는 배운 적 없는 자세로 손목을 꺾고 모두의 처벌을 혼자 받는다.'],
       ['빵 한 조각의 분배', 'bond', '라미는 자기 몫을 여섯 조각으로 나누며 훗날 군단을 묶는 카리스마가 명령보다 생존 분배에서 시작됐음을 보여준다.'],
       ['미정으로 남기는 용기', 'command', '돌봄·기록·유보 중 선택은 독자가 라미의 정체보다 선택을 먼저 보게 하는 종장의 원칙을 정한다.'],
@@ -866,9 +892,9 @@ const lamiOrigin = [
     ], '다음 날 수용 구역 전체가 저주받은 땅으로 이송된다.'),
 
   episode('lami-origin', 'cursed-land-born', '종장 1장 · 이름 이전', '권능이 죽는 땅', '이송 후 3년', '저주받은 땅 제0구역', '전쟁이 끝난 뒤 기억을 읽는 라온', ['어린 라미', '실험체 아이들', '체시 연구단'], '라미의 사능과 저주받은 땅이 서로를 만든 과정', '권능 무효화가 처음 발현한 순간 무엇을 지키려 했는가?',
-    ['권능 실험에 끌려간 아이들을 보호한다.', '땅의 광물·빛 잔해·라미의 반응을 관찰한다.', '연구단의 권능이 꺼진 틈에 수용소 문을 연다.'], [
+    ['권능 실험에 끌려간 아이들을 보호한다.', '땅의 광물·실험 장치·라미의 반응을 관찰한다.', '연구단의 권능이 꺼진 틈에 수용소 문을 연다.'], [
       ['빛이 머물지 않는 흙', 'exploration', '제0구역에서는 체시의 권능이 약해지고 붉은 결정이 신성을 빨아들여 생물과 기후를 뒤튼다.'],
-      ['강제 공명 실험', 'investigation', '연구단은 라미를 고대 빛 잔해와 연결해 권능을 안정화하려 하지만 주변 장치가 연쇄적으로 꺼진다.'],
+      ['강제 공명 실험', 'investigation', '연구단은 라미를 실험 장치와 연결해 권능을 안정화하려 하지만 주변 장치가 연쇄적으로 꺼지는 각색 초안이다. 장치의 기원과 저주받은 땅의 형성 원리는 미정이다.'],
       ['범위의 탄생', 'memory', '다른 아이의 심장이 멎는 순간 라미의 분노가 원형으로 퍼지고 모든 권능이 일정 거리 안에서 사라진다.'],
       ['신이 아닌 몸', 'battle', '권능을 잃은 체시 연구원과 아이들이 같은 육체 조건이 되자 라미는 맨손으로 처음 승리한다.'],
       ['무효화의 첫 사용', 'command', '보호·관찰·탈출 중 선택은 라미의 사능을 파괴가 아니라 불평등을 지우는 힘으로 처음 인식하게 한다.'],
@@ -883,32 +909,33 @@ const lamiOrigin = [
       ['날개를 자른 명령', 'memory', '의사는 아이들을 보내기 위해 자기 날개를 미끼로 남기고 라미는 선한 개인이 체제에 죽는 장면을 목격한다.'],
       ['구분할 수 있었던 순간', 'command', '은혜·한계·생존 중 선택은 라미가 훗날 모든 체시를 하나로 묶어 증오하게 된 비극적 단순화를 드러낸다.'],
       ['남겨진 약병', 'bond', '라미는 의사의 약병을 버리지 못하지만 이름은 끝내 묻지 않아 기억 속 체시를 예외로만 남긴다.'],
-    ], '폐도시를 빠져나온 일행을 붉은 머리의 데닌 자치대가 맞이한다.'),
+    ], '폐도시를 빠져나온 일행을 피난 공동체의 경비대가 맞이한다. 이들의 혈통은 확정하지 않는다.'),
 
-  episode('lami-origin', 'denin-betrayal', '종장 2장 · 두 번의 배신', '붉은 머리의 국경', '탈출 후 2년', '데닌 지하 자치구 아르카', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '데닌 장로', '탈출 아이들', '체시 추격대'], '피해자 집단도 다른 약자를 희생할 수 있다는 경험', '데닌 자치구의 배신을 어떻게 해석할 것인가?',
-    ['아이들을 숨겨준 평범한 데닌 주민을 장로와 구분한다.', '장로가 체시와 맺은 생존 협정의 문서를 확보한다.', '넘겨질 아이들을 데리고 정면으로 탈출한다.'], [
-      ['붉은 머리의 식탁', 'bond', '데닌 주민들은 자기들도 날개와 사능을 빼앗긴 피해자라며 아이들을 가족처럼 먹이고 재운다.'],
+  // Keep the legacy ID for saved scene references; this draft no longer identifies the pre-light community as Denin.
+  episode('lami-origin', 'denin-betrayal', '종장 2장 · 두 번의 배신', '닫힌 피난처', '탈출 이후 · 세부 연대 미정', '지하 피난구역', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '피난 공동체 장로', '탈출 아이들', '체시 추격대'], '피해자 집단도 다른 약자를 희생할 수 있다는 경험', '피난 공동체의 배신을 어떻게 해석할 것인가?',
+    ['아이들을 숨겨준 평범한 주민을 장로와 구분한다.', '장로가 체시와 맺은 생존 협정의 문서를 확보한다.', '넘겨질 아이들을 데리고 정면으로 탈출한다.'], [
+      ['피난민의 식탁', 'bond', '주민들은 자기들도 체시에게 쫓겨난 피해자라며 아이들을 가족처럼 먹이고 재운다.'],
       ['장로의 계산', 'investigation', '자치구 장로들은 전체 공동체를 살리기 위해 라미 일행을 체시 추격대에 넘기는 비밀 협정을 맺는다.'],
       ['잠긴 피난문', 'confrontation', '라미는 어제 자신을 안아준 주민과 오늘 문을 잠근 경비가 같은 사람임을 보고 신뢰와 집단 판단을 구분하지 못한다.'],
-      ['주민들의 반란', 'battle', '일부 데닌은 장로 명령을 거부해 라미를 돕지만 전투 중 양쪽 모두 큰 희생을 입는다.'],
-      ['배신의 범위', 'command', '개인·문서·돌파 중 선택은 데닌 전체를 배신자로 일반화하는 라미의 잘못이 어디서 시작됐는지 보여준다.'],
-      ['두 종족의 목록', 'memory', '라미는 체시와 데닌을 같은 원한 목록에 적고 자신을 도운 이름들은 목록 밖 여백에 따로 남긴다.'],
+      ['주민들의 반란', 'battle', '일부 주민은 장로 명령을 거부해 라미를 돕지만 전투 중 양쪽 모두 큰 희생을 입는다.'],
+      ['배신의 범위', 'command', '개인·문서·돌파 중 선택은 피난 공동체 전체를 배신자로 일반화하는 라미의 잘못을 드러내는 각색 후보다.'],
+      ['원한의 목록', 'memory', '라미는 체시 추격대와 피난 공동체를 원한 목록에 적고 자신을 도운 이름들은 목록 밖 여백에 따로 남긴다.'],
     ], '저주받은 땅 가장자리에서 처음 만난 인간 마을이 라미 일행을 조건 없이 들여보낸다.'),
 
-  episode('lami-origin', 'first-human', '종장 3장 · 인간이라는 편', '조건 없는 문', '탈출 후 3년', '저주받은 땅 변두리 인간 촌락', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '인간 촌장', '아이들', '데닌 난민'], '라미가 인간을 유일한 구원 대상으로 선택한 감정적 이유', '인간 마을의 환대를 이상화하지 않으려면 무엇을 함께 볼 것인가?',
-    ['이름과 종족을 묻지 않고 먹인 촌장의 선택을 본다.', '마을이 데닌 난민을 경계하는 모순도 기록한다.', '라미가 처음으로 다른 사람의 일을 나눠 맡는 과정을 본다.'], [
+  episode('lami-origin', 'first-human', '종장 3장 · 인간이라는 편', '조건 없는 문', '피난처 도착 이후 · 세부 연대 미정', '저주받은 땅 변두리 인간 촌락', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '인간 촌장', '아이들', '다른 피난민'], '라미가 인간을 유일한 구원 대상으로 선택한 감정적 이유', '인간 마을의 환대를 이상화하지 않으려면 무엇을 함께 볼 것인가?',
+    ['이름과 종족을 묻지 않고 먹인 촌장의 선택을 본다.', '마을이 다른 피난민을 경계하는 모순도 기록한다.', '라미가 처음으로 다른 사람의 일을 나눠 맡는 과정을 본다.'], [
       ['문 앞의 수프', 'bond', '촌장은 출신을 묻기 전에 수프를 내주고 라미는 대가 없는 호의를 처음 이해하지 못한다.'],
       ['라미라는 이름', 'dialogue', '마을 아이가 별빛 머리를 보고 라미라 부르며 검체 번호보다 먼저 부를 수 있는 이름을 준다.'],
-      ['인간의 울타리', 'investigation', '마을은 라미 일행은 받으면서 붉은 머리 데닌 난민에게는 식량 부족을 이유로 문을 닫으려 한다.'],
-      ['울타리를 넓히다', 'command', '라미는 데닌 난민까지 받자고 싸워 승리하지만 인간에게 받은 은혜와 데닌에 대한 분노를 분리하지 못한다.'],
+      ['인간의 울타리', 'investigation', '마을은 라미 일행은 받으면서 뒤따라온 피난민에게는 식량 부족을 이유로 문을 닫으려 한다.'],
+      ['울타리를 넓히다', 'command', '라미는 다른 피난민까지 받자고 싸워 승리하지만 인간에게 받은 은혜와 앞선 피난 공동체에 대한 분노를 분리하지 못한다.'],
       ['편을 고르는 마음', 'command', '환대·모순·노동 중 선택은 인간 전체를 선으로 일반화하는 또 다른 단순화가 시작됐음을 보인다.'],
-      ['첫 번째 방어전', 'battle', '라미는 체시 징세대에 맞서 인간과 데닌 주민을 함께 지키며 모든 무예를 빨리 익히는 재능을 드러낸다.'],
+      ['첫 번째 방어전', 'battle', '라미는 체시 징세대에 맞서 마을 주민과 피난민을 함께 지키며 모든 무예를 빨리 익히는 재능을 드러낸다.'],
     ], '전투를 본 떠돌이 무예가들이 라미에게 각자의 기술을 가르치겠다고 모여든다.'),
 
   episode('lami-origin', 'nullification-awakens', '종장 3장 · 인간이라는 편', '신을 끄는 원', '정착 후 5년', '변두리 촌락 연합 훈련장', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '인간 무예가들', '초기 동료'], '사능을 통제 가능한 전술로 바꾸는 과정과 그 대가', '권능 무효화 범위를 어떻게 사용할 것인가?',
     ['권능 피해를 받는 민간인 주변에만 좁게 펼친다.', '범위와 지속 시간, 동료 능력까지 꺼지는 조건을 실험한다.', '체시 수비대의 권능이 겹치는 순간 전장 전체를 덮는다.'], [
       ['원을 그리는 호흡', 'training', '라미는 분노로만 터지던 사능을 호흡·발바닥 압력·시선으로 일정한 반경에 묶는다.'],
-      ['아군도 꺼진다', 'investigation', '무효화는 적만 고르지 않아 동료의 이능과 보호 장치까지 약화시키는 위험이 확인된다.'],
+      ['아군도 꺼진다', 'investigation', '무효화 범위 안에서는 동료의 권능도 꺼질 수 있다는 위험을 검토한다. 이능과 사능까지 무효화하는 능력으로 확대하지 않는다.'],
       ['신 없는 결투', 'battle', '권능에 의존하던 체시 장교는 원 안에서 평범한 육체가 되고 라미는 맨손 기본기로 압도한다.'],
       ['두려워진 동료', 'dialogue', '초기 동료들은 라미가 자신들의 힘도 언제든 지울 수 있음을 알고 존경과 공포를 동시에 품는다.'],
       ['원의 윤리', 'command', '보호·검증·전면전 중 선택은 사능을 해방 도구와 절대 통제 도구 사이 어디에 놓을지 드러낸다.'],
@@ -925,15 +952,15 @@ const lamiOrigin = [
       ['어머니라는 별명', 'bond', '제자들은 라미를 모든 체능의 어머니라 부르고 라미는 가족이라는 말 앞에서 처음 웃음을 감추지 못한다.'],
     ], '아케로가 자유 훈련도시를 없애기 위해 권능 빛의 원형을 시험한다.'),
 
-  episode('lami-origin', 'achero-light', '종장 4장 · 모든 체능의 어머니', '첫 번째 빛의 개변', '대전쟁보다 약 90년 전', '자유 훈련도시와 체시 수도', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '아케로', '체시 반대파', '데닌의 선조'], '아케로의 빛과 라미의 멸종 계획이 이어지는 역사적 고리', '빛의 개변에서 라미가 무엇을 배우고 무엇을 잘못 배웠는가?',
-    ['반대파 체시의 희생과 데닌 탄생을 생존자 관점에서 본다.', '빛이 생명과 존재 정보를 대가로 작동하는 구조를 기억한다.', '라미가 빛을 무효화하지 못한 최초의 패배를 본다.'], [
+  episode('lami-origin', 'achero-light', '종장 4장 · 모든 체능의 어머니', '첫 번째 빛의 개변', '최초의 빛 · 발생 연대 미정', '자유 훈련도시와 체시 수도', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '아케로', '체시 반대파'], '아케로의 빛과 라미의 멸종 계획이 이어지는 역사적 고리', '빛의 개변에서 라미가 무엇을 배우고 무엇을 잘못 배웠는가?',
+    ['반대파 체시의 희생과 변화를 생존자 관점에서 본다.', '빛이 생명과 존재 정보를 대가로 작동하는 구조를 기억한다.', '라미가 빛을 무효화하지 못한 최초의 패배를 본다.'], [
       ['아케로의 제안', 'dialogue', '아케로는 인간 노예제를 받아들이면 자유도시 일부를 살려주겠다고 제안하고 라미는 협상을 모욕으로 받아들인다.'],
       ['반대파의 목숨', 'investigation', '체시 반대파 지도자들은 인간을 지키려 하지만 아케로는 그들의 존재를 빛의 연료로 묶는다.'],
-      ['붉은 머리의 탄생', 'memory', '빛이 터지며 반대파와 후손은 날개·사능을 잃고 붉은 머리의 데닌으로 변한다.'],
+      ['붉은 머리의 탄생', 'memory', '원전에서 아케로의 빛 이후 반대파는 붉은 머리가 되고 날개·사능을 잃는다. 데닌이 이들 자신을 뜻하는지 후손의 별도 명칭인지는 미정이다.'],
       ['무효화되지 않는 중심', 'battle', '라미의 사능은 바깥 권능을 끄지만 이미 타인의 목숨으로 점화된 빛의 핵심까지 지우지 못한다.'],
       ['빛에서 배운 오류', 'command', '생존자·구조·패배 중 선택은 라미가 존재 정보 소거를 훗날 역이용하려 한 논리를 드러낸다.'],
-      ['남은 사람들의 원망', 'confrontation', '데닌 생존자 일부는 라미가 협상하지 않아 자신들이 저주받았다며 그녀를 비난하고 두 집단의 상처가 다시 갈라진다.'],
-    ], '라미는 아케로의 빛 설계 일부를 훔치고 “언젠가 이 빛을 주인에게 돌려주겠다”고 맹세한다.'),
+      ['남은 사람들의 원망', 'confrontation', '변화를 겪은 반대파 생존자 일부가 라미에게 원망을 돌리는 장면은 각색 후보다. 이들을 곧바로 데닌이라 부를 수 있는지는 미정이다.'],
+    ], '라미가 아케로의 빛에 접근한 구체 방식은 미정이다. 설계 탈취는 검토했던 각색 후보로만 남긴다.'),
 
   episode('lami-origin', 'first-band', '종장 5장 · 해방군 이전', '깃발 없는 사람들', '대전쟁보다 약 70년 전', '저주받은 땅 연합촌', '전쟁이 끝난 뒤 기억을 읽는 라온', ['라미', '초기 동료들', '인간·데닌·이종족 피난민'], '군대 이전의 공동체와 라미가 사랑받았던 이유', '첫 무리를 운영할 때 어떤 원칙을 세울 것인가?',
     ['식량과 잠자리를 종족이 아니라 필요에 따라 나눈다.', '결정 기록과 반대 의견을 누구나 볼 수 있게 남긴다.', '가장 위험한 임무는 라미가 먼저 맡는 원칙을 세운다.'], [
@@ -1023,6 +1050,8 @@ export const grandStoryScenes: GrandStoryScene[] = grandStoryEpisodes.flatMap((e
       viewpoint: entry.viewpoint,
       cast: entry.cast,
       summary,
+      canonStatus: entry.canonStatus,
+      canonNotice: entry.canonNotice,
       playerGoal: modeGoals[mode],
       choicePrompt: isDecision ? entry.choicePrompt : undefined,
       choices: isDecision

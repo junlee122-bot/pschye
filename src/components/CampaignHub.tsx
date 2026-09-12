@@ -30,6 +30,7 @@ import {
   getNarrativeCheckChance,
 } from '../game/progression';
 import { battleDifficultyOptions, type BattleDoctrine } from '../game/battleEngine';
+import { getKnownMissions } from '../game/storyAccess';
 import { RaonMindPanel } from './RaonMindPanel';
 import { CharacterDialogueStage } from './CharacterDialogueStage';
 import type {
@@ -71,20 +72,33 @@ export function CampaignHub({
   onToggleHero,
   onChooseStory,
 }: CampaignHubProps) {
-  const firstAvailable = missions.find((mission) => getMissionStatus(profile, mission) === 'available') ?? missions[0];
-  const [selectedMissionId, setSelectedMissionId] = useState(focusMissionId ?? firstAvailable?.id ?? 'grey-bridge-escort');
+  const knownMissions = getKnownMissions(profile);
+  const knownMissionIds = new Set(knownMissions.map((mission) => mission.id));
+  const firstAvailable = knownMissions.find((mission) => getMissionStatus(profile, mission) === 'available') ?? knownMissions[0];
+  const allowedFocusId = knownMissions.find((mission) => mission.id === focusMissionId)?.id;
+  const [selectedMissionId, setSelectedMissionId] = useState(allowedFocusId ?? firstAvailable?.id);
   const [doctrine, setDoctrine] = useState<BattleDoctrine>('shelter');
   const [difficulty, setDifficulty] = useState<MissionDifficulty>('standard');
   const [storyStage, setStoryStage] = useState<StoryStage>('scene');
 
   useEffect(() => {
-    if (focusMissionId) {
-      setSelectedMissionId(focusMissionId);
+    if (allowedFocusId) {
+      setSelectedMissionId(allowedFocusId);
       setStoryStage('scene');
     }
-  }, [focusMissionId]);
+  }, [allowedFocusId]);
 
-  const selectedMission = missions.find((mission) => mission.id === selectedMissionId) ?? missions[0];
+  const selectedMission = knownMissions.find((mission) => mission.id === selectedMissionId)
+    ?? knownMissions.find((mission) => mission.id === allowedFocusId)
+    ?? firstAvailable;
+  const visibleMissionId = selectedMission?.id;
+  useEffect(() => {
+    if (selectedMissionId === visibleMissionId) return;
+    setSelectedMissionId(visibleMissionId);
+    setStoryStage('scene');
+    setDifficulty('standard');
+    setDoctrine('shelter');
+  }, [selectedMissionId, visibleMissionId]);
   const storyBeat = selectedMission ? getRaonStoryBeat(selectedMission.id) : undefined;
   const selectedChoiceId = selectedMission ? profile.storyChoices[selectedMission.id] : undefined;
   const selectedChoice = storyBeat?.choices.find((choice) => choice.id === selectedChoiceId);
@@ -122,6 +136,7 @@ export function CampaignHub({
   const fieldDirection = getFieldSceneDirection(selectedChoice?.id);
 
   const selectMission = (missionId: string) => {
+    if (!knownMissionIds.has(missionId)) return;
     setSelectedMissionId(missionId);
     setStoryStage('scene');
     setDifficulty('standard');
@@ -170,18 +185,20 @@ export function CampaignHub({
 
       <nav className="story-chapter-rail" aria-label="라온의 장면 목록">
         {missions.map((mission, index) => {
-          const status = getMissionStatus(profile, mission);
+          const known = knownMissionIds.has(mission.id);
+          const status = known ? getMissionStatus(profile, mission) : 'locked';
           return (
             <button
               key={mission.id}
               className={`${status} ${mission.id === selectedMission.id ? 'selected' : ''}`}
               onClick={() => selectMission(mission.id)}
-              disabled={status === 'locked'}
+              disabled={!known}
+              aria-label={`${mission.operation} · ${known ? mission.title : '미공개 작전'}`}
               aria-current={mission.id === selectedMission.id ? 'step' : undefined}
             >
               <span>{status === 'complete' ? <Check size={14} /> : status === 'locked' ? <LockKeyhole size={13} /> : index + 1}</span>
-              <div><small>{mission.operation}</small><strong>{mission.title}</strong></div>
-              {profile.missionGrades[mission.id] && <b>{profile.missionGrades[mission.id]}</b>}
+              <div><small>{mission.operation}</small><strong>{known ? mission.title : '미공개 작전'}</strong></div>
+              {known && profile.missionGrades[mission.id] && <b>{profile.missionGrades[mission.id]}</b>}
             </button>
           );
         })}

@@ -175,7 +175,7 @@ export function LocationAtlas() {
               <span>DISCOVERED LOCATIONS</span>
               <h3>{filteredLocations.length}개 장소</h3>
             </div>
-            <small>{query.trim() ? '검색 결과' : '정사 등장 순서'}</small>
+            <small>{query.trim() ? '검색 결과' : '제작 초안 순서'}</small>
           </header>
           <div className="location-index-scroll">
             {filteredLocations.map((location, index) => (

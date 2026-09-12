@@ -2,7 +2,7 @@ import { useState, type CSSProperties } from 'react';
 import { Check, ChevronRight, CircleDot, LockKeyhole, Shield, Sparkles, Swords, UserRound } from 'lucide-react';
 import { heroDefinitions } from '../data/battle';
 import { canUnlockHeroGrowthNode, getHeroGrowthEffectLabel, getHeroGrowthNode, heroGrowthNodes } from '../data/heroGrowth';
-import { characters } from '../data/lore';
+import { getPlayerCharacters } from '../game/storyAccess';
 import { equipmentDefinitions, getEquipment } from '../data/systems';
 import { buildProgressedHeroes, getEquipmentSlotLabel } from '../game/progression';
 import type { CampaignProfile } from '../types';
@@ -19,7 +19,7 @@ export function Roster({ profile, onUnlockNode, onEquip }: RosterProps) {
   const [selectedHeroId, setSelectedHeroId] = useState('raon');
   const selectedHero = heroDefinitions.find((hero) => hero.id === selectedHeroId) ?? heroDefinitions[0];
   const progress = selectedHero ? profile.heroProgress[selectedHero.id] : undefined;
-  const lore = characters.find((character) => character.id === selectedHero?.id);
+  const lore = getPlayerCharacters(profile).find((character) => character.id === selectedHero?.id);
   const progressedHero = buildProgressedHeroes(profile).find((hero) => hero.id === selectedHero?.id);
   const unlockedEquipment = equipmentDefinitions.filter((equipment) => profile.inventory.includes(equipment.id));
   if (!selectedHero || !progress) return null;

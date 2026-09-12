@@ -777,7 +777,7 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
         {model.companions.map(({ hero, skill, slot }) => {
           const alive = (snapshot.battle.heroes.find((unit) => unit.id === hero.id)?.hp ?? 0) > 0;
           const cooldown = snapshot.cooldowns[hero.id] ?? 0;
-          return <button key={hero.id} disabled={guideOpen || snapshot.status !== 'active' || !alive || cooldown > 0} onClick={() => command(`companion:${hero.id}`)} title={`${skill.kind === 'guard' ? `목표 방벽 +${skill.power}` : `위력 ${skill.power}`} · 사기 +${skill.morale} · ${skill.description}`}><kbd>{slot}</kbd><strong>{hero.name} · {skill.name}</strong><small>{alive ? formatCooldown(cooldown) : '전투 불능'}</small></button>;
+          return <button key={hero.id} disabled={guideOpen || snapshot.status !== 'active' || !alive || cooldown > 0} onClick={() => command(`companion:${hero.id}`)} title={`${skill.kind === 'guard' ? `목표 방벽 +${skill.power}` : `위력 ${skill.power}`} · 사기 +${skill.morale} · 재사용 ${ACTION_ORDER_COOLDOWN_SECONDS}초`}><kbd>{slot}</kbd><strong>{hero.name} · {skill.name}</strong><small>{alive ? formatCooldown(cooldown) : '전투 불능'}</small></button>;
         })}
       </section>
 

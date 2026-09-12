@@ -57,10 +57,10 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
             <ChevronRight size={18} />
           </button>
           <button className="secondary-action" onClick={() => onNavigate('codex')}>
-            <BookOpenText size={17} /> 드러난 진실
+            <BookOpenText size={17} /> 만난 사람
           </button>
           <button className="secondary-action" onClick={() => onNavigate('archive')}>
-            <Archive size={17} /> 인물 도감
+            <Archive size={17} /> 여정 화첩
           </button>
         </div>
 

@@ -11014,7 +11014,10 @@ kbd { padding:2px 5px; border:1px solid rgba(235,207,150,.25); border-bottom-wid
 }
 
 .action-onboarding > article {
-  width: min(760px, 96vw);
+  width: min(760px, 100%);
+  min-width: 0;
+  max-height: calc(100dvh - 44px);
+  overflow-y: auto;
   padding: clamp(24px, 4vw, 42px);
   border: 1px solid rgba(226, 195, 133, .28);
   background: linear-gradient(145deg, #19191d, #090b0f);
@@ -11995,4 +11998,47 @@ kbd { padding:2px 5px; border:1px solid rgba(235,207,150,.25); border-bottom-wid
   .asset-variant-review > div {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
+}
+
+.player-records .record-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 22px;
+}
+.player-records .search-field { min-width: 0; max-width: 100%; }
+.player-records > .search-field { padding: 14px 18px; margin-bottom: 22px; }
+.player-memory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.player-memory-card { min-width: 0; overflow: hidden; }
+.player-memory-card > img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.player-memory-card > div, .player-testimony { padding: 24px; }
+.player-memory-card h3, .player-testimony h3 { margin: 10px 0; color: #e7dac1; }
+.player-memory-card p, .player-memory-card blockquote, .player-testimony blockquote { line-height: 1.8; color: #bfb7a9; overflow-wrap: anywhere; }
+.player-memory-card blockquote, .player-testimony blockquote { margin: 14px 0 0; border-left: 2px solid #a7844e; padding-left: 14px; }
+.player-memory-grid > .empty-state { grid-column: 1 / -1; }
+.player-album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.player-album-card { display: flex; flex-direction: column; gap: 10px; padding: 16px; text-align: left; cursor: pointer; color: #e5d7bd; min-width: 0; }
+.player-album-card > img { width: 100%; height: 230px; object-fit: cover; }
+.player-album-card > span { color: #a9a194; line-height: 1.6; }
+.record-body p { white-space: pre-line; }
+.author-workspace { max-width: 1600px; margin: 0 auto; padding: 24px; }
+.author-workspace-header { padding: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; gap: 16px; }
+.author-workspace-header p { color: #b7ae9b; }
+.author-workspace a { color: #e7c994; }
+.author-workspace > nav { margin-bottom: 24px; }
+.canon-status { color: #f0c485 !important; border: 1px solid #806437; padding: 4px 8px; width: fit-content; }
+.canon-notice { font-size: .8rem; line-height: 1.7; color: #d9bd8f !important; }
+.top-navigation button:disabled { opacity: .4; cursor: not-allowed; }
+@media (max-width: 680px) {
+  .player-memory-grid { grid-template-columns: minmax(0, 1fr); }
+  .player-album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .player-album-card { padding: 10px; }
+  .player-album-card > img { height: 160px; }
+  .player-memory-card > div, .player-testimony { padding: 18px; }
+  .author-workspace { padding: 12px; }
+  .author-workspace-header { flex-direction: column; }
+  .author-workspace > nav { flex-wrap: wrap; }
 }

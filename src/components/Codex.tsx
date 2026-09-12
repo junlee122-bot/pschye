@@ -1,11 +1,11 @@
 import { useMemo, useState, type CSSProperties } from 'react';
 import { ChevronRight, Search, ShieldQuestion } from 'lucide-react';
-import { characters } from '../data/lore';
-import type { CharacterEra, CharacterRecord } from '../types';
+import { getPlayerCharacters } from '../game/storyAccess';
+import type { CampaignProfile, CharacterEra } from '../types';
 import { CharacterDetail } from './CharacterDetail';
 
 interface CodexProps {
-  battleCompleted: boolean;
+  profile: CampaignProfile;
 }
 
 const eraOptions: Array<{ id: '전체' | CharacterEra; label: string }> = [
@@ -16,10 +16,12 @@ const eraOptions: Array<{ id: '전체' | CharacterEra; label: string }> = [
   { id: '5기', label: '봉합의 5기' },
 ];
 
-export function Codex({ battleCompleted }: CodexProps) {
+export function Codex({ profile }: CodexProps) {
   const [era, setEra] = useState<'전체' | CharacterEra>('전체');
   const [query, setQuery] = useState('');
-  const [selected, setSelected] = useState<CharacterRecord | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const characters = useMemo(() => getPlayerCharacters(profile), [profile]);
+  const selected = characters.find((character) => character.id === selectedId);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase();
     return characters.filter((character) => {
@@ -32,15 +34,15 @@ export function Codex({ battleCompleted }: CodexProps) {
           .includes(normalized);
       return matchesEra && matchesQuery;
     });
-  }, [era, query]);
+  }, [characters, era, query]);
 
   return (
     <section className="codex-page page-enter">
       <header className="page-heading">
         <div>
           <span className="eyebrow">ARCHIVUM PERSONARUM</span>
-          <h2>프시케 인물 도감</h2>
-          <p>첫인상, 제국의 기록, 생존자의 증언이 같은 사람을 서로 다르게 말한다.</p>
+          <h2>만난 사람</h2>
+          <p>여정에서 알게 된 사람과 직접 확보한 현장 증언을 기록합니다.</p>
         </div>
         <div className="codex-counter">
           <strong>{String(filtered.length).padStart(2, '0')}</strong>
@@ -50,7 +52,7 @@ export function Codex({ battleCompleted }: CodexProps) {
 
       <div className="codex-toolbar">
         <div className="era-filters">
-          {eraOptions.map((option) => (
+          {eraOptions.filter((option) => option.id === '전체' || characters.some((character) => character.era === option.id)).map((option) => (
             <button key={option.id} className={era === option.id ? 'active' : ''} onClick={() => setEra(option.id)}>
               {option.label}
             </button>
@@ -67,7 +69,7 @@ export function Codex({ battleCompleted }: CodexProps) {
           <button
             className="character-card"
             key={character.id}
-            onClick={() => setSelected(character)}
+            onClick={() => setSelectedId(character.id)}
             style={{ '--accent': character.accent } as CSSProperties}
           >
             <img src={character.art} alt="" loading="lazy" />
@@ -91,9 +93,10 @@ export function Codex({ battleCompleted }: CodexProps) {
 
       {selected && (
         <CharacterDetail
+          key={selected.id}
           character={selected}
-          truthUnlocked={battleCompleted}
-          onClose={() => setSelected(null)}
+          truthUnlocked={Boolean(selected.hiddenTruth)}
+          onClose={() => setSelectedId(null)}
         />
       )}
     </section>

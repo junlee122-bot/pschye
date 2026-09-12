@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   getEpisodeScenes,
+  getGrandStoryEpisode,
   getSagaEpisodes,
   grandStoryEpisodeCount,
   grandStoryEpisodes,
@@ -88,5 +89,62 @@ describe('grand story atlas', () => {
       expect(scene.cast.length).toBeGreaterThan(0);
       expect(scene.continuity.length).toBeGreaterThan(5);
     }
+  });
+
+  it('does not promote scene plans to confirmed canon when generating the atlas', () => {
+    for (const saga of grandStorySagas) {
+      expect(saga.canonStatus, saga.id).toBe('adaptation-draft');
+      expect(saga.canonNotice, saga.id).toContain('각색 초안');
+    }
+    for (const entry of grandStoryEpisodes) {
+      expect(['adaptation-draft', 'undecided'], entry.id).toContain(entry.canonStatus);
+      for (const scene of getEpisodeScenes(entry.id)) {
+        expect(scene.canonStatus, scene.id).toBe(entry.canonStatus);
+        expect(scene.canonNotice, scene.id).toBe(entry.canonNotice);
+      }
+    }
+  });
+
+  it('leaves Kain’s outcome unresolved instead of guaranteeing survival, injury, or final battle participation', () => {
+    const ending = getGrandStoryEpisode('kain-final-choice');
+    expect(ending?.canonStatus).toBe('undecided');
+    expect(ending?.canonNotice).toContain('§55·133·171.6.1');
+    expect(ending?.beats.at(-1)?.[2]).toContain('성공 여부와 생사, 후유증, 이후 책임 방식은 미정');
+    expect(ending?.cliffhanger).toContain('카인의 생존이나 희생 결과로 확정하지 않는다');
+    const scenes = getEpisodeScenes('kain-final-choice');
+    expect(scenes).toHaveLength(6);
+    expect(scenes.every((scene) => scene.canonStatus === 'undecided')).toBe(true);
+    expect(scenes.map((scene) => scene.summary).join(' ')).not.toMatch(/오른손 감각을 잃|살아서 책임지기로 한다|생존해 긴 속죄를 시작/);
+
+    const finalBattle = getGrandStoryEpisode('raon-style-final');
+    expect(finalBattle?.cast).not.toContain('카인');
+    expect(finalBattle?.choices.join(' ')).not.toContain('카인');
+    expect(finalBattle?.canonNotice).toContain('최종전 합류를 확정하지 않습니다');
+  });
+
+  it('does not place Denin traits or remnants of the first light before the first light', () => {
+    const episodes = getSagaEpisodes('lami-origin');
+    const firstLightIndex = episodes.findIndex((entry) => entry.id === 'achero-light');
+    expect(firstLightIndex).toBeGreaterThan(0);
+    const beforeLight = episodes.slice(0, firstLightIndex);
+    const corpus = beforeLight.flatMap((entry) => [
+      entry.title, entry.location, entry.theme, entry.choicePrompt,
+      ...entry.cast, ...entry.choices, ...entry.beats.flat(), entry.cliffhanger,
+    ]).join(' ');
+    expect(corpus).not.toMatch(/데닌|붉은 머리|날개와 사능을 빼앗|고대 빛|빛 잔해/);
+    expect(beforeLight.find((entry) => entry.id === 'denin-betrayal')?.title).toBe('닫힌 피난처');
+    expect(getEpisodeScenes('denin-betrayal')).toHaveLength(6);
+    expect(episodes[0]?.time).toContain('연대 미정');
+    expect(episodes[firstLightIndex]?.time).toContain('연대 미정');
+  });
+
+  it('preserves the sourced first-light change without deciding Denin ancestry or Lami’s access to the light', () => {
+    const firstLight = getGrandStoryEpisode('achero-light');
+    expect(firstLight?.canonStatus).toBe('adaptation-draft');
+    const change = firstLight?.beats.find(([title]) => title === '붉은 머리의 탄생')?.[2];
+    expect(change).toContain('아케로의 빛 이후 반대파는 붉은 머리가 되고 날개·사능을 잃는다');
+    expect(change).toContain('데닌이 이들 자신을 뜻하는지 후손의 별도 명칭인지는 미정');
+    expect(firstLight?.cliffhanger).toContain('빛에 접근한 구체 방식은 미정');
+    expect(firstLight?.cliffhanger).not.toContain('설계 일부를 훔치고');
   });
 });

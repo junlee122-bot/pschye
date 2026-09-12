@@ -20,6 +20,7 @@ import {
   getEpisodeScenes,
   getGrandStoryEpisode,
   getSagaEpisodes,
+  grandStoryCanonStatusLabels,
   grandStoryEpisodeCount,
   grandStorySagas,
   grandStorySceneCount,
@@ -119,8 +120,8 @@ export function StoryAtlas() {
       <section className="story-atlas-hero panel">
         <div>
           <span className="eyebrow"><BookOpenText size={14} /> RAON POV / GRAND STORY ATLAS</span>
-          <h3>라온의 선택으로 읽는 516개 장면</h3>
-          <p>현재에서 영웅을 믿고, 과거에서 그들을 사랑한 뒤, 다시 현재에서 선대의 결론을 넘어섭니다.</p>
+          <h3>516개 장면 제작 원장</h3>
+          <p>전체 서사의 각색 초안입니다. 플레이 완료 장면 수나 정사 확정 범위를 뜻하지 않습니다.</p>
         </div>
         <div className="story-atlas-metrics" aria-label="대서사 규모">
           <span><b>{grandStorySagas.length}</b> 사가</span>
@@ -242,9 +243,11 @@ export function StoryAtlas() {
                 </section>
                 <section className="story-episode-header panel" style={{ '--saga-color': selectedSaga.color } as CSSProperties}>
                   <div className="story-episode-title">
+                    <span className="canon-status">{grandStoryCanonStatusLabels[selectedEpisode.canonStatus]}</span>
                     <span>{selectedEpisode.chapter} · EPISODE {String(selectedEpisode.order).padStart(2, '0')}</span>
                     <h3>{selectedEpisode.title}</h3>
                     <p>{selectedEpisode.theme}</p>
+                    <p className="canon-notice">{selectedEpisode.canonNotice}</p>
                   </div>
                   <div className="story-episode-meta">
                     <span><Clock3 size={14} /> {selectedEpisode.time}</span>

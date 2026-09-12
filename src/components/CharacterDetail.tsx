@@ -10,7 +10,7 @@ interface CharacterDetailProps {
 
 export function CharacterDetail({ character, truthUnlocked, onClose }: CharacterDetailProps) {
   const [layer, setLayer] = useState<'official' | 'truth'>('official');
-  const canReadTruth = truthUnlocked || character.era === '7기' || character.era === '5기';
+  const canReadTruth = truthUnlocked && Boolean(character.hiddenTruth);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -37,10 +37,10 @@ export function CharacterDetail({ character, truthUnlocked, onClose }: Character
         <div className="detail-copy">
           <div className="record-switch">
             <button className={layer === 'official' ? 'active' : ''} onClick={() => setLayer('official')}>
-              <Shield size={15} /> 공식 기록
+              <Shield size={15} /> 인물 기록
             </button>
             <button className={layer === 'truth' ? 'active' : ''} onClick={() => setLayer('truth')}>
-              {canReadTruth ? <Eye size={15} /> : <LockKeyhole size={15} />} 진실 기록
+              {canReadTruth ? <Eye size={15} /> : <LockKeyhole size={15} />} 확보한 증언
             </button>
           </div>
 
@@ -58,21 +58,21 @@ export function CharacterDetail({ character, truthUnlocked, onClose }: Character
             ) : (
               <div className="redacted-record">
                 <LockKeyhole size={21} />
-                <p>회색 교각에서 「배신자의 꽃잎」 단서를 확보하면 이 기록이 복원됩니다.</p>
+                <p>아직 이 인물과 관련된 현장 증언을 확보하지 못했습니다. 전투에서 증언을 이끌어 내고 승리하면 기록됩니다.</p>
               </div>
             )}
           </section>
 
-          <blockquote><Quote size={17} /> {character.quote}</blockquote>
+          {character.quote && <blockquote><Quote size={17} /> {character.quote}</blockquote>}
 
-          <section className="reader-journey">
-            <span className="eyebrow">CHARACTER JOURNEY</span>
+          {character.readerJourney.length > 0 && <section className="reader-journey">
+            <span className="eyebrow">함께한 기록</span>
             <div>
               {character.readerJourney.map((stage, index) => (
                 <span key={stage}><i>{String(index + 1).padStart(2, '0')}</i>{stage}</span>
               ))}
             </div>
-          </section>
+          </section>}
 
           <div className="keyword-row">
             <Swords size={15} />

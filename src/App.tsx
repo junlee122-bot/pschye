@@ -1,5 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArchiveGallery } from './components/ArchiveGallery';
+import { PlayerArchive } from './components/PlayerArchive';
 import { Activities } from './components/Activities';
 import { BattleScreen } from './components/BattleScreen';
 import { CampaignHub } from './components/CampaignHub';
@@ -19,6 +19,7 @@ import { isVillageOriginScene } from './data/village';
 import type { BattleDoctrine } from './game/battleEngine';
 import { executeGameCommand } from './game/simulation';
 import { CampaignSlotSession } from './game/persistence';
+import { isAuthorWorkspace } from './game/storyAccess';
 import {
   buildProgressedHeroes,
   advanceDay,
@@ -49,11 +50,19 @@ import {
 import type { BattleState, DailyActivityId, FacilityId, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus } from './types';
 
 const VillageAdventure = lazy(() => import('./components/VillageAdventure').then((module) => ({ default: module.VillageAdventure })));
+const AuthorWorkspace = import.meta.env.DEV ? lazy(() => import('./components/AuthorWorkspace').then((module) => ({ default: module.AuthorWorkspace }))) : null;
 const navigationSections: NavigationSection[] = [
   'title', 'campaign', 'world', 'roster', 'headquarters', 'activities', 'chronicle', 'codex', 'archive',
 ];
 
 export function App() {
+  if (AuthorWorkspace && isAuthorWorkspace(import.meta.env.DEV, window.location.search)) {
+    return <Suspense fallback={<div className="save-recovery">제작 자료를 불러오는 중...</div>}><AuthorWorkspace /></Suspense>;
+  }
+  return <CampaignApp />;
+}
+
+function CampaignApp() {
   const [section, setSection] = useState<NavigationSection>(() => {
     const requestedSection = new URLSearchParams(window.location.search).get('section') as NavigationSection | null;
     return requestedSection && navigationSections.includes(requestedSection) ? requestedSection : 'title';
@@ -291,6 +300,10 @@ export function App() {
     );
   }
 
+  if (!profile.originStory.completed && ['world', 'roster', 'headquarters', 'activities'].includes(section)) {
+    return withSaveStatus(<div className="app-shell"><TopNavigation current={section} onNavigate={navigate} campaignUnlocked={false} /><main className="empty-state"><h2>입단 후에 열리는 기록입니다.</h2><p>먼저 변방 마을에서 라온의 여정을 이어가십시오.</p><button className="secondary-action" onClick={() => navigate('campaign')}>여정 계속</button></main></div>);
+  }
+
   if (section === 'campaign' && !activeMission && !profile.originStory.completed) {
     const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
     if (isVillageOriginScene(originScene)) {
@@ -318,7 +331,7 @@ export function App() {
 
   return withSaveStatus(
     <div className="app-shell">
-      <TopNavigation current={section} onNavigate={navigate} />
+      <TopNavigation current={section} onNavigate={navigate} campaignUnlocked={profile.originStory.completed} />
       {!activeMission && section !== 'campaign' && <CommandDeck profile={profile} current={section} onNavigate={navigate} />}
       <main className={`app-main ${activeMission ? 'app-main-battle' : ''}`}>
         {section === 'campaign' && activeMission && (
@@ -362,9 +375,9 @@ export function App() {
         {section === 'roster' && (
           <Roster profile={profile} onUnlockNode={handleUnlockNode} onEquip={handleEquipItem} />
         )}
-        {section === 'chronicle' && <Chronicle />}
-        {section === 'codex' && <Codex battleCompleted={profile.completedMissions.length > 0} />}
-        {section === 'archive' && <ArchiveGallery />}
+        {section === 'chronicle' && <Chronicle profile={profile} />}
+        {section === 'codex' && <Codex profile={profile} />}
+        {section === 'archive' && <PlayerArchive profile={profile} />}
       </main>
       {notice && (
         <div className="game-notice" role="status" aria-live="polite">

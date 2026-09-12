@@ -553,17 +553,29 @@ function applyFactionChanges(
 }
 
 export function completeMission(profile: CampaignProfile, mission: MissionDefinition, state?: BattleState) {
+  const witnessId = `witness-${mission.id}`;
+  const newWitness = Boolean(mission.revelation)
+    && state?.missionId === mission.id
+    && state.outcome === 'victory'
+    && state.revelationTriggered === true
+    && !profile.unlockedRecords.includes(witnessId);
+  const witnessLog = `현장 증언 확보 · 「${mission.title}」에서 직접 확인한 기록.`;
   if (profile.completedMissions.includes(mission.id)) {
     const grade = calculateMissionGrade(state);
     const previousGrade = profile.missionGrades[mission.id] ?? 'C';
     const gradeRank = { S: 4, A: 3, B: 2, C: 1 } as const;
     const improved = gradeRank[grade] > gradeRank[previousGrade];
     return {
-      profile: improved
+      profile: improved || newWitness
         ? {
             ...profile,
-            missionGrades: { ...profile.missionGrades, [mission.id]: grade },
-            activityLog: [`${mission.operation} 재현 기록을 ${grade}등급으로 갱신했다.`, ...profile.activityLog].slice(0, 16),
+            missionGrades: improved ? { ...profile.missionGrades, [mission.id]: grade } : profile.missionGrades,
+            unlockedRecords: newWitness ? [...profile.unlockedRecords, witnessId] : profile.unlockedRecords,
+            activityLog: [
+              ...(improved ? [`${mission.operation} 재현 기록을 ${grade}등급으로 갱신했다.`] : []),
+              ...(newWitness ? [witnessLog] : []),
+              ...profile.activityLog,
+            ].slice(0, 16),
           }
         : profile,
       grade: improved ? grade : previousGrade,
@@ -584,7 +596,7 @@ export function completeMission(profile: CampaignProfile, mission: MissionDefini
   const unlockedRecords = [
     ...profile.unlockedRecords,
     `mission-${mission.id}`,
-    ...(mission.revelation ? [`truth-${mission.id}`] : []),
+    ...(newWitness ? [witnessId] : []),
   ];
   const inventory = mission.reward.equipmentId
     ? [...new Set([...profile.inventory, mission.reward.equipmentId])]
@@ -609,6 +621,7 @@ export function completeMission(profile: CampaignProfile, mission: MissionDefini
       unlockedRecords: [...new Set(unlockedRecords)],
       activityLog: [
         `${mission.operation} 「${mission.title}」 ${grade}등급 완료.`,
+        ...(newWitness ? [witnessLog] : []),
         ...(mission.reward.equipmentId ? [`장비 「${getEquipment(mission.reward.equipmentId)?.name}」 회수.`] : []),
         ...profile.activityLog,
       ].slice(0, 16),

@@ -33,7 +33,7 @@ const voiceDefinitions = [
   },
   {
     id: 'legacy',
-    title: '멈춘 꽃잎',
+    title: '물려받은 검',
     subtitle: '해찬의 검이 남긴 질문을 듣는다',
     icon: History,
     accent: '#a994d8',

@@ -14,6 +14,7 @@ import {
   type VillageAmbience,
 } from '../data/village';
 import { stabilizePhaserRuntime } from '../game/phaserRuntime';
+import { isVillageTargetReady, updateVillageReadiness, type VillageReadiness } from '../game/villageInteraction';
 import type { CampaignProfile, OriginStoryChoice, RaonStoryChoiceId } from '../types';
 
 const WIDTH = 1280;
@@ -81,7 +82,7 @@ class FrontierVillageScene extends Phaser.Scene {
   private cursors?: Phaser.Types.Input.Keyboard.CursorKeys;
   private keys?: Record<'W' | 'A' | 'S' | 'D' | 'E', Phaser.Input.Keyboard.Key>;
   private currentModel!: VillageModel;
-  private ready = false;
+  private readiness?: VillageReadiness;
   private lastPositionBroadcast = 0;
   private lastLandmark?: string;
   private readonly blockedZones = [
@@ -111,6 +112,9 @@ class FrontierVillageScene extends Phaser.Scene {
     const initialModel = registryModel ?? bootVillageModel;
     if (!initialModel) throw new Error('Village scene started without a world model.');
     this.currentModel = initialModel;
+    this.readiness = undefined;
+    this.lastPositionBroadcast = 0;
+    this.lastLandmark = undefined;
 
     this.background = this.add.image(WIDTH / 2, HEIGHT / 2, `village-map-${initialModel.ambience}`)
       .setDisplaySize(WIDTH, HEIGHT)
@@ -140,6 +144,7 @@ class FrontierVillageScene extends Phaser.Scene {
     });
 
     this.cameras.main.fadeIn(650, 12, 13, 12);
+    this.publishReadiness(true);
     this.broadcastPosition();
   }
 
@@ -282,6 +287,9 @@ class FrontierVillageScene extends Phaser.Scene {
 
   private syncModel(model: VillageModel) {
     const ambienceChanged = this.currentModel.ambience !== model.ambience;
+    const targetChanged = this.currentModel.sceneId !== model.sceneId
+      || this.currentModel.targetX !== model.targetX || this.currentModel.targetY !== model.targetY
+      || this.currentModel.targetName !== model.targetName || this.currentModel.targetSprite !== model.targetSprite;
     this.currentModel = model;
     if (ambienceChanged) {
       this.cameras.main.fadeOut(180, 10, 11, 10);
@@ -290,12 +298,27 @@ class FrontierVillageScene extends Phaser.Scene {
         this.cameras.main.fadeIn(300, 10, 11, 10);
       });
     }
-    this.target?.destroy(true);
-    this.target = this.createTarget(model);
+    if (targetChanged) {
+      this.target?.destroy(true);
+      this.target = this.createTarget(model);
+    }
+    // React may subscribe after scene creation or synchronize a new target
+    // while the player is stationary. Republish the live geometry in both cases.
+    this.publishReadiness(true);
   }
 
   private virtualMove(vector: { x: number; y: number }) {
     this.movePlayer(vector.x, vector.y, 28);
+    this.publishReadiness();
+    this.broadcastPosition();
+  }
+
+  private publishReadiness(force = false) {
+    if (!this.player || !this.target) return false;
+    const next = updateVillageReadiness(this.readiness, this.currentModel.sceneId, this.player, this.target);
+    if (force || next !== this.readiness) this.game.events.emit(READY_EVENT, next);
+    this.readiness = next;
+    return next.nearTarget;
   }
 
   private sanitizeSpawn(x: number, y: number) {
@@ -347,13 +370,8 @@ class FrontierVillageScene extends Phaser.Scene {
       this.playerSprite.y = Phaser.Math.Linear(this.playerSprite.y, 0, 0.18);
     }
 
-    const distance = Phaser.Math.Distance.Between(this.player.x, this.player.y, this.target.x, this.target.y);
-    const ready = distance < 94;
-    if (ready !== this.ready) {
-      this.ready = ready;
-      this.game.events.emit(READY_EVENT, ready);
-    }
-    if (ready && Phaser.Input.Keyboard.JustDown(this.keys.E)) this.game.events.emit(OPEN_EVENT);
+    const ready = this.publishReadiness();
+    if (ready && Phaser.Input.Keyboard.JustDown(this.keys.E)) this.game.events.emit(OPEN_EVENT, this.currentModel.sceneId);
 
     if (time - this.lastPositionBroadcast > 120) {
       this.lastPositionBroadcast = time;
@@ -380,8 +398,10 @@ export function VillageAdventure({ profile, onChoose, onAdvance, onExit, onMove 
   const interaction = getVillageInteraction(scene);
   const selectedChoiceId = profile.originStory.choices[scene.id];
   const selectedChoice = scene.choices.find((choice) => choice.id === selectedChoiceId);
-  const [nearTarget, setNearTarget] = useState(false);
-  const [dialogueOpen, setDialogueOpen] = useState(false);
+  const [readiness, setReadiness] = useState<VillageReadiness>();
+  const [dialogueSceneId, setDialogueSceneId] = useState<string | null>(null);
+  const nearTarget = isVillageTargetReady(scene.id, readiness);
+  const dialogueOpen = dialogueSceneId === scene.id;
   const [playerPosition, setPlayerPosition] = useState<VillagePosition>({
     x: profile.world.village.playerX,
     y: profile.world.village.playerY,
@@ -434,12 +454,13 @@ export function VillageAdventure({ profile, onChoose, onAdvance, onExit, onMove 
         onMoveRef.current?.(position.x, position.y, position.landmark);
       }
     };
-    game.events.on(READY_EVENT, setNearTarget);
-    game.events.on(OPEN_EVENT, () => setDialogueOpen(true));
+    game.events.on(READY_EVENT, setReadiness);
+    game.events.on(OPEN_EVENT, setDialogueSceneId);
     game.events.on(POSITION_EVENT, handlePosition);
     gameRef.current = game;
     return () => {
-      game.events.off(READY_EVENT, setNearTarget);
+      game.events.off(READY_EVENT, setReadiness);
+      game.events.off(OPEN_EVENT, setDialogueSceneId);
       game.events.off(POSITION_EVENT, handlePosition);
       stopRuntimeStabilizer();
       game.destroy(true);
@@ -451,16 +472,14 @@ export function VillageAdventure({ profile, onChoose, onAdvance, onExit, onMove 
   useEffect(() => {
     gameRef.current?.registry.set('village-model', model);
     gameRef.current?.events.emit(MODEL_EVENT, model);
-    setNearTarget(false);
-    setDialogueOpen(false);
   }, [model]);
 
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && dialogueOpen) setDialogueOpen(false);
+      if (event.key === 'Escape' && dialogueOpen) setDialogueSceneId(null);
       if (event.key === 'Enter' && dialogueOpen && selectedChoice) {
         onAdvance();
-        setDialogueOpen(false);
+        setDialogueSceneId(null);
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -520,14 +539,14 @@ export function VillageAdventure({ profile, onChoose, onAdvance, onExit, onMove 
       </div>
 
       {nearTarget && !dialogueOpen && (
-        <button className="village-interact-prompt" onClick={() => setDialogueOpen(true)}>
+        <button className="village-interact-prompt" onClick={() => setDialogueSceneId(scene.id)}>
           <kbd>E</kbd><span><small>{scene.speakerRole}</small><strong>{interaction.prompt}</strong></span>
         </button>
       )}
 
       {dialogueOpen && (
         <section className="village-dialogue-layer" style={{ '--speaker-accent': scene.speakerId === 'kain' ? '#9b7358' : '#d4c5a0' } as CSSProperties}>
-          <button className="village-dialogue-backdrop" aria-label="대화 닫기" onClick={() => setDialogueOpen(false)} />
+          <button className="village-dialogue-backdrop" aria-label="대화 닫기" onClick={() => setDialogueSceneId(null)} />
           <article className="village-dialogue-panel">
             <div className="village-speaker-visual">
               <img src={scene.speakerArt} alt={`${scene.speakerName} 설정화`} />
@@ -552,7 +571,7 @@ export function VillageAdventure({ profile, onChoose, onAdvance, onExit, onMove 
               {selectedChoice && (
                 <div className="village-choice-result">
                   <BookOpenText size={18} /><div><small>세계가 기억한 선택</small><strong>{selectedChoice.result}</strong></div>
-                  <button onClick={() => { onAdvance(); setDialogueOpen(false); }}>{scene.nextSceneId ? '다음 목표' : '여정 계속'} <ArrowRight size={17} /></button>
+                  <button onClick={() => { onAdvance(); setDialogueSceneId(null); }}>{scene.nextSceneId ? '다음 목표' : '여정 계속'} <ArrowRight size={17} /></button>
                 </div>
               )}
             </div>
