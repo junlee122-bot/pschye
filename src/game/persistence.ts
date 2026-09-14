@@ -1,5 +1,7 @@
 import type { CampaignProfile } from '../types';
 import { isVillageRescueState } from './villageRescue';
+import { isCampaignBattleAttempt } from './battleCheckpointValidation';
+import { canChooseMissionStory, isMissionStoryChoice } from './missionAccess';
 
 const databaseName = 'raonjena-saves';
 const storeName = 'campaign-slots';
@@ -99,6 +101,7 @@ const outcome = oneOf('clear', 'costly');
 // Old versions may omit fields introduced later. Present fields still need a
 // valid shape: spreading malformed data over defaults is not a migration.
 const campaignShape = objectWith({
+  battleAttempt: isCampaignBattleAttempt,
   version: number(1, 10, true), commanderName: text, day: number(1, Infinity, true),
   commandLevel: number(1, Infinity, true), renown: count, supplies: count, intel: count, relics: count,
   commandActions: number(0, 3, true), activeSquad: strings, inventory: strings,
@@ -133,6 +136,14 @@ export function isCampaignProfileCandidate(value: unknown): value is Partial<Cam
     && isSaveObject(value.heroProgress) && strings(value.completedMissions)
     && campaignShape(value);
   if (!valid) return false;
+  if (value.battleAttempt !== undefined) {
+    const candidate = value as unknown as CampaignProfile;
+    const attempt = candidate.battleAttempt!;
+    if (!isSaveObject(value.originStory) || !isSaveObject(value.storyChoices)
+      || !canChooseMissionStory(candidate, attempt.missionId) || !isMissionStoryChoice(attempt.missionId, candidate.storyChoices[attempt.missionId])
+      || (!attempt.settled && attempt.raonStance !== candidate.storyChoices[attempt.missionId])
+      || (attempt.settled && !candidate.completedMissions.includes(attempt.missionId))) return false;
+  }
   const origin = value.originStory;
   if (!isSaveObject(origin) || !('villageRescue' in origin)) return true;
   const rescue = origin.villageRescue;

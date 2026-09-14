@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import {
   AlertTriangle,
   ArrowLeft,
@@ -28,9 +28,10 @@ import {
   type BattleDoctrine,
 } from '../game/battleEngine';
 import { getBattleRecommendation, hasAvailableHeroAction } from '../game/battleDecision';
+import type { ActionBattleCheckpoint } from '../game/actionBattleCheckpoint';
 import { calculateMissionGrade, getAdjustedMissionReward } from '../game/progression';
 import { getRaonStoryBeat, raonChoiceMeta } from '../data/story';
-import type { BattleState, HeroDefinition, MissionDefinition, MissionDifficulty, RaonStoryChoiceId } from '../types';
+import type { BattleState, CampaignBattleAttempt, CampaignBattleCheckpointPatch, CampaignBattleMode, HeroDefinition, MissionDefinition, MissionDifficulty, RaonStoryChoiceId } from '../types';
 import { BattleTutorial } from './BattleTutorial';
 
 const PhaserBattlefield = lazy(async () => ({
@@ -42,6 +43,9 @@ const RaonActionBattle = lazy(async () => ({
 }));
 
 interface BattleScreenProps {
+  initialAttempt?: CampaignBattleAttempt;
+  onCheckpoint?: (checkpoint: CampaignBattleCheckpointPatch) => void;
+  onRestart?: (mode: CampaignBattleMode) => void;
   doctrine: BattleDoctrine;
   difficulty: MissionDifficulty;
   mission: MissionDefinition;
@@ -53,22 +57,21 @@ interface BattleScreenProps {
   onExit: () => void;
 }
 
-export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance, warPressure, bondSupport, onComplete, onExit }: BattleScreenProps) {
-  const [combatMode, setCombatMode] = useState<'select' | 'action' | 'tactical'>('select');
-  const [battle, setBattle] = useState(() => createInitialBattleState(doctrine, mission, heroes, difficulty, raonStance, { warPressure, bondSupport }));
+export function BattleScreen({ initialAttempt, onCheckpoint, onRestart, doctrine, difficulty, mission, heroes, raonStance, warPressure, bondSupport, onComplete, onExit }: BattleScreenProps) {
+  const [combatMode, setCombatMode] = useState<CampaignBattleMode>(initialAttempt?.mode ?? 'select');
+  const [battle, setBattle] = useState(() => initialAttempt?.battle ?? createInitialBattleState(doctrine, mission, heroes, difficulty, raonStance, { warPressure, bondSupport }));
   const initialHero = heroes.find((hero) => hero.id === 'raon') ?? heroes[0];
-  const [selectedHeroId, setSelectedHeroId] = useState(initialHero?.id ?? '');
-  const [selectedSkillId, setSelectedSkillId] = useState(initialHero?.skills[0]?.id ?? '');
-  const [battleHistory, setBattleHistory] = useState<BattleState[]>([]);
+  const [selectedHeroId, setSelectedHeroId] = useState(initialAttempt?.tactical?.selectedHeroId ?? initialHero?.id ?? '');
+  const [selectedSkillId, setSelectedSkillId] = useState(initialAttempt?.tactical?.selectedSkillId ?? initialHero?.skills[0]?.id ?? '');
+  const [battleHistory, setBattleHistory] = useState<BattleState[]>(initialAttempt?.tactical?.history ?? []);
   const [mobileConsoleOpen, setMobileConsoleOpen] = useState(false);
-  const [confirmExit, setConfirmExit] = useState(false);
   const [guideOpen, setGuideOpen] = useState(() => {
     try { return window.localStorage.getItem('raonjena-battle-guide-v2') !== 'seen'; }
     catch { return true; }
   });
   const [turnNotice, setTurnNotice] = useState<string | null>(null);
   const touchPreferred = useMemo(() => window.matchMedia?.('(pointer: coarse)').matches ?? false, []);
-  const reportedVictory = useRef(false);
+  const reportedVictory = useRef(initialAttempt?.settled ?? false);
   const selectedHero = heroes.find((hero) => hero.id === selectedHeroId);
   const selectedSkill = selectedHero?.skills.find((skill) => skill.id === selectedSkillId);
   const livingEnemies = useMemo(
@@ -98,6 +101,9 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
     .sort((left, right) => right[1] - left[1])[0];
   const focusTarget = mission.enemies.find((enemy) => enemy.id === battle.focusTargetId);
   const storyBeat = getRaonStoryBeat(mission.id);
+  const checkpointAction = useCallback((action: ActionBattleCheckpoint) => {
+    onCheckpoint?.({ mode: 'action', battle: action.battle, action });
+  }, [onCheckpoint]);
 
   const recommendation = useMemo(() => {
     return getBattleRecommendation(battle, mission, heroes);
@@ -107,12 +113,22 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
     [battle, heroes, mission],
   );
 
+  // Persist the terminal checkpoint before its settlement callback. Both parent
+  // updates are functional, so a crash between them can be settled on reload.
   useEffect(() => {
-    if (battle.outcome === 'victory' && !reportedVictory.current) {
+    if (combatMode === 'action') return;
+    onCheckpoint?.({
+      mode: combatMode, battle,
+      ...(combatMode === 'tactical' ? { tactical: { history: battleHistory, selectedHeroId, selectedSkillId } } : {}),
+    });
+  }, [battle, battleHistory, combatMode, onCheckpoint, selectedHeroId, selectedSkillId]);
+
+  useEffect(() => {
+    if (combatMode === 'tactical' && battle.outcome === 'victory' && !reportedVictory.current) {
       reportedVictory.current = true;
       onComplete(battle);
     }
-  }, [battle, onComplete]);
+  }, [battle, combatMode, onComplete]);
 
   useEffect(() => {
     if (battle.outcome !== 'active') return;
@@ -124,12 +140,6 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
       setSelectedSkillId(next.skills[0]?.id ?? '');
     }
   }, [battle, heroes, selectedHeroId]);
-
-  useEffect(() => {
-    if (!confirmExit) return;
-    const timeout = window.setTimeout(() => setConfirmExit(false), 3200);
-    return () => window.clearTimeout(timeout);
-  }, [confirmExit]);
 
   useEffect(() => {
     if (!turnNotice) return;
@@ -209,25 +219,31 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
   };
 
   const restart = () => {
+    if (onRestart) { onRestart(combatMode); return; }
     reportedVictory.current = false;
     setBattle(createInitialBattleState(doctrine, mission, heroes, difficulty, raonStance, { warPressure, bondSupport }));
     setBattleHistory([]);
     setSelectedHeroId(initialHero?.id ?? '');
     setSelectedSkillId(initialHero?.skills[0]?.id ?? '');
     setMobileConsoleOpen(false);
-    setConfirmExit(false);
     setTurnNotice(null);
   };
 
   const switchCombatMode = (next: 'action' | 'tactical') => {
     if (!window.confirm('전투 방식을 바꾸면 현재 작전을 처음부터 다시 시작합니다. 전환하시겠습니까?')) return;
+    if (onRestart) { onRestart(next); return; }
     restart();
     setCombatMode(next);
   };
 
   const requestExit = () => {
-    if (confirmExit) onExit();
-    else setConfirmExit(true);
+    onCheckpoint?.({ mode: combatMode, battle, ...(combatMode === 'tactical' ? { tactical: { history: battleHistory, selectedHeroId, selectedSkillId } } : {}) });
+    onExit();
+  };
+
+  const chooseCombatMode = (mode: 'action' | 'tactical') => {
+    onCheckpoint?.({ mode, battle, ...(mode === 'tactical' ? { tactical: { history: [], selectedHeroId, selectedSkillId } } : {}) });
+    setCombatMode(mode);
   };
 
   const closeGuide = () => {
@@ -350,7 +366,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
             <span>{difficultyLabel}</span>
           </div>
           <div className="combat-mode-grid">
-            <button className="combat-mode-card action" onClick={() => setCombatMode('action')}>
+            <button className="combat-mode-card action" onClick={() => chooseCombatMode('action')}>
               <div><Swords size={28} /><span>RAON DIRECT</span></div>
               <h2>라온 직접 조작</h2>
               <p>이동, 검격, 패링과 회피를 직접 연결하는 실시간 액션 전투입니다.</p>
@@ -361,7 +377,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
               </ul>
               <strong>액션 전투 시작 <ChevronRight size={18} /></strong>
             </button>
-            <button className={`combat-mode-card tactical ${touchPreferred ? 'recommended' : ''}`} onClick={() => setCombatMode('tactical')}>
+            <button className={`combat-mode-card tactical ${touchPreferred ? 'recommended' : ''}`} onClick={() => chooseCombatMode('tactical')}>
               {touchPreferred && <em>현재 기기 추천</em>}
               <div><Target size={28} /><span>PSYCHE COMMAND</span></div>
               <h2>제7기 전술 지휘</h2>
@@ -384,6 +400,9 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
     return (
       <Suspense fallback={<div className="full-engine-loading"><i /><strong>라온 전투 엔진 구성 중</strong><span>직접 조작 전장을 준비하고 있습니다.</span></div>}>
         <RaonActionBattle
+          initialCheckpoint={initialAttempt?.action}
+          onCheckpoint={checkpointAction}
+          onRestart={onRestart ? () => onRestart('action') : undefined}
           doctrine={doctrine}
           difficulty={difficulty}
           mission={mission}
@@ -403,7 +422,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
     <section className="battle-page page-enter">
       <header className="battle-header">
         <div className="battle-header-actions">
-          <button className={`icon-text-button ${confirmExit ? 'confirming' : ''}`} onClick={requestExit}><ArrowLeft size={17} /> {confirmExit ? '다시 누르면 포기' : '작전 포기'}</button>
+          <button className="icon-text-button" onClick={requestExit}><ArrowLeft size={17} /> {battle.outcome === 'active' ? '저장하고 나가기' : '작전 지도로'}</button>
           <button className="icon-text-button battle-undo" onClick={undoAction} disabled={battleHistory.length === 0 || battle.outcome !== 'active'}><Undo2 size={16} /> 행동 취소</button>
           <button className="icon-text-button" onClick={() => switchCombatMode('action')}><Swords size={16} /> 라온 액션</button>
         </div>
@@ -605,7 +624,7 @@ export function BattleScreen({ doctrine, difficulty, mission, heroes, raonStance
               </div>
             )}
             {battle.outcome === 'victory' && <div className="battle-performance"><span>완료 라운드 <strong>{battle.round}</strong></span><span>집중 파쇄 <strong>{battle.breakCount}</strong></span><span>생존 조장 <strong>{battle.heroes.filter((hero) => hero.hp > 0).length}/{battle.heroes.length}</strong></span></div>}
-            {battle.outcome === 'victory' && <small className="grade-note">재현 작전에서는 자원 대신 최고 등급 기록만 갱신됩니다.</small>}
+            {battle.outcome === 'victory' && <small className="grade-note">자원·경험치 보상은 첫 승리 때 한 번 지급됩니다. 재현 작전은 최고 등급과 새 목격 기록을 갱신합니다.</small>}
             <div>
               <button onClick={restart}><RotateCcw size={16} /> 다시 시도</button>
               <button className="primary" onClick={onExit}>라온의 여정으로 <ChevronRight size={16} /></button>

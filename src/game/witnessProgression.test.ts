@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { heroDefinitions } from '../data/battle';
 import { missions } from '../data/campaign';
 import type { BattleState, MissionDefinition } from '../types';
-import { createInitialBattleState } from './battleEngine';
-import { completeMission, createNewCampaignProfile } from './progression';
+import { completeMission } from './progression';
+import { missionReadyProfile, victoriousBattle } from './campaignTestFixtures';
 
 const mission = missions[0]!;
 const witnessId = `witness-${mission.id}`;
@@ -11,8 +10,7 @@ const legacyTruthId = `truth-${mission.id}`;
 
 function witnessedVictory(changes: Partial<BattleState> = {}): BattleState {
   return {
-    ...createInitialBattleState('shelter', mission, heroDefinitions),
-    outcome: 'victory',
+    ...victoriousBattle(missionReadyProfile(), mission, { round: 1 }),
     revelationTriggered: true,
     ...changes,
   };
@@ -20,7 +18,7 @@ function witnessedVictory(changes: Partial<BattleState> = {}): BattleState {
 
 describe('verified mission witness records', () => {
   it('records a matching victorious revelation alongside normal first-clear progression', () => {
-    const fresh = createNewCampaignProfile();
+    const fresh = missionReadyProfile();
     const result = completeMission(fresh, mission, witnessedVictory());
     expect(result.firstClear).toBe(true);
     expect(result.profile.completedMissions).toContain(mission.id);
@@ -39,23 +37,23 @@ describe('verified mission witness records', () => {
     ['no actual revelation', witnessedVictory({ revelationTriggered: false })],
   ];
   it.each(unverifiedResults)('does not issue a witness for %s', (_label, state) => {
-    const result = completeMission(createNewCampaignProfile(), mission, state);
+    const result = completeMission(missionReadyProfile(), mission, state);
     expect(result.profile.unlockedRecords).not.toContain(witnessId);
     expect(result.profile.unlockedRecords).not.toContain(legacyTruthId);
-    // Keep the existing completion/import path intact; only evidence is gated.
-    expect(result.profile.unlockedRecords).toContain(`mission-${mission.id}`);
+    expect(result.firstClear).toBe(_label === 'no actual revelation');
+    expect(result.profile.completedMissions.includes(mission.id)).toBe(_label === 'no actual revelation');
   });
 
-  it('requires a revelation defined on the mission', () => {
-    const withoutRevelation: MissionDefinition = { ...mission, revelation: undefined };
-    const result = completeMission(createNewCampaignProfile(), withoutRevelation, witnessedVictory());
+  it('requires an official mission before issuing any witness', () => {
+    const unknownMission: MissionDefinition = { ...mission, id: 'unknown-mission' };
+    const result = completeMission(missionReadyProfile(), unknownMission, witnessedVictory());
     expect(result.profile.unlockedRecords).not.toContain(witnessId);
   });
 
   it('preserves legacy truth records without treating them as verified witnesses', () => {
-    const legacy = createNewCampaignProfile();
+    const legacy = missionReadyProfile();
     legacy.unlockedRecords.push(legacyTruthId);
-    const cleared = completeMission(legacy, mission).profile;
+    const cleared = completeMission(legacy, mission, witnessedVictory({ revelationTriggered: false })).profile;
     expect(cleared.unlockedRecords).toContain(legacyTruthId);
     expect(cleared.unlockedRecords).not.toContain(witnessId);
     const witnessed = completeMission(cleared, mission, witnessedVictory()).profile;
@@ -64,7 +62,7 @@ describe('verified mission witness records', () => {
   });
 
   it('allows a lower-grade replay to add the missing witness without repeating rewards', () => {
-    const cleared = completeMission(createNewCampaignProfile(), mission, witnessedVictory({ revelationTriggered: false })).profile;
+    const cleared = completeMission(missionReadyProfile(), mission, witnessedVictory({ revelationTriggered: false })).profile;
     expect(cleared.missionGrades[mission.id]).toBe('S');
     const replay = completeMission(cleared, mission, witnessedVictory({ round: mission.roundLimit }));
     expect(replay.firstClear).toBe(false);
@@ -79,7 +77,7 @@ describe('verified mission witness records', () => {
   });
 
   it('does not add witnesses on a failed, unverified, or mismatched replay', () => {
-    const cleared = completeMission(createNewCampaignProfile(), mission, witnessedVictory({ revelationTriggered: false })).profile;
+    const cleared = completeMission(missionReadyProfile(), mission, witnessedVictory({ revelationTriggered: false })).profile;
     for (const [, state] of unverifiedResults) {
       const replay = completeMission(cleared, mission, state);
       expect(replay.profile).toBe(cleared);
@@ -88,7 +86,7 @@ describe('verified mission witness records', () => {
   });
 
   it('records a grade improvement and new witness together without another first-clear reward', () => {
-    const cleared = completeMission(createNewCampaignProfile(), mission).profile;
+    const cleared = completeMission(missionReadyProfile(), mission, victoriousBattle(missionReadyProfile())).profile;
     expect(cleared.missionGrades[mission.id]).toBe('B');
     const replay = completeMission(cleared, mission, witnessedVictory());
     expect(replay.firstClear).toBe(false);
@@ -101,7 +99,7 @@ describe('verified mission witness records', () => {
   });
 
   it('does not duplicate a previously acquired witness or replay log', () => {
-    const cleared = completeMission(createNewCampaignProfile(), mission, witnessedVictory()).profile;
+    const cleared = completeMission(missionReadyProfile(), mission, witnessedVictory()).profile;
     const replay = completeMission(cleared, mission, witnessedVictory());
     expect(replay.profile).toBe(cleared);
     expect(replay.profile.unlockedRecords.filter((id) => id === witnessId)).toHaveLength(1);

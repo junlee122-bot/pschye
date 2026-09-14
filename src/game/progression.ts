@@ -27,6 +27,8 @@ import { deleteMirroredCampaignSlot, isCampaignProfileCandidate, isSaveObject, m
 import { createWorldSimulationState, executeGameCommand } from './simulation';
 import { createVillageRescue, isVillageRescueChoiceId } from './villageRescue';
 import { getVillageRescue, migrateVillageRescue, villageRescueSceneId } from './villageRescueProgression';
+import { canChooseMissionStory, canLaunchMission, isMissionStoryChoice } from './missionAccess';
+import { isBattleStateCheckpoint, sameBattleCheckpoint } from './battleCheckpointValidation';
 
 export const campaignStorageKey = 'raonjena-campaign-v10';
 export const activeCampaignSlotKey = 'raonjena-active-slot';
@@ -301,6 +303,8 @@ export function chooseRaonStoryPath(
   missionId: string,
   choiceId: RaonStoryChoiceId,
 ) {
+  if (!canChooseMissionStory(profile, missionId) || !isMissionStoryChoice(missionId, choiceId)
+    || (profile.battleAttempt?.missionId === missionId && !profile.battleAttempt.settled)) return profile;
   const previous = profile.storyChoices[missionId];
   if (previous === choiceId) return profile;
   const storyBeat = getRaonStoryBeat(missionId);
@@ -317,7 +321,7 @@ export function chooseRaonStoryPath(
   if (previous) raonPath[previous] = Math.max(0, raonPath[previous] - 1);
   raonPath[choiceId] += 1;
   const labels: Record<RaonStoryChoiceId, string> = { compassion: '연민', insight: '통찰', resolve: '결의' };
-  return {
+  const next: CampaignProfile = {
     ...profile,
     raonPath,
     storyChoices: { ...profile.storyChoices, [missionId]: choiceId },
@@ -344,6 +348,10 @@ export function chooseRaonStoryPath(
       ...profile.activityLog,
     ].slice(0, 16),
   };
+  // A new answer prepares a new deployment. Keeping the old settled result
+  // would let its retry restore a stance that contradicts this new choice.
+  if (profile.battleAttempt?.settled && profile.battleAttempt.missionId === missionId) delete next.battleAttempt;
+  return next;
 }
 
 export function getActiveCampaignSlot() {
@@ -434,7 +442,7 @@ export async function loadCampaignProfile(slot = getActiveCampaignSlot()): Promi
     if (invalidLegacy) return { status: 'blocked', message: '이전 버전의 여정을 읽지 못했습니다. 기존 기록을 보존했습니다.' };
     try {
       if (window.localStorage.getItem('raonjena-grey-bridge-complete') === 'true') {
-        return { status: 'ready', profile: completeMission(createNewCampaignProfile(), missions[0], undefined).profile, source: 'local' };
+        return { status: 'ready', profile: applyMissionCompletion(createNewCampaignProfile(), missions[0]).profile, source: 'local' };
       }
     } catch {
       return { status: 'blocked', message: '이전 여정의 저장 여부를 확인할 수 없습니다. 다시 읽어 주세요.' };
@@ -489,7 +497,7 @@ export function listCampaignSlots(): CampaignSlotSummary[] {
 }
 
 export function isMissionUnlocked(profile: CampaignProfile, mission: MissionDefinition) {
-  return profile.originStory.completed && mission.prerequisites.every((id) => profile.completedMissions.includes(id));
+  return canChooseMissionStory(profile, mission.id);
 }
 
 export function placeHeadquartersRoom(profile: CampaignProfile, slot: number, facilityId: FacilityId) {
@@ -503,6 +511,7 @@ export function placeHeadquartersRoom(profile: CampaignProfile, slot: number, fa
 }
 
 export function getMissionStatus(profile: CampaignProfile, mission: MissionDefinition) {
+  if (!missions.some((entry) => entry.id === mission.id)) return 'locked' as const;
   if (profile.completedMissions.includes(mission.id)) return 'complete' as const;
   if (isMissionUnlocked(profile, mission) && mission.enemies.length > 0) return 'available' as const;
   if (isMissionUnlocked(profile, mission)) return 'preview' as const;
@@ -560,6 +569,20 @@ function applyFactionChanges(
 }
 
 export function completeMission(profile: CampaignProfile, mission: MissionDefinition, state?: BattleState) {
+  const canonical = missions.find((entry) => entry.id === mission.id);
+  const attempt = profile.battleAttempt?.missionId === mission.id ? profile.battleAttempt : undefined;
+  const heroes = attempt?.heroes ?? buildProgressedHeroes(profile).filter((hero) => profile.activeSquad.includes(hero.id));
+  if (!canonical || !state || state.outcome !== 'victory' || !canLaunchMission(profile, mission.id)
+    || (profile.battleAttempt && !profile.battleAttempt.settled && (!attempt || !sameBattleCheckpoint(attempt.battle, state)))
+    || !isBattleStateCheckpoint(state, {
+      mission: canonical, heroes, raonStance: attempt?.raonStance ?? profile.storyChoices[mission.id], mode: attempt?.mode,
+      difficulty: attempt?.difficulty, warPressure: attempt?.warPressure, bondSupport: attempt?.bondSupport, doctrine: attempt?.doctrine,
+    })) return { profile, firstClear: false, grade: profile.missionGrades[mission.id] ?? 'C' as const };
+  return applyMissionCompletion(profile, canonical, state);
+}
+
+// Only the pre-slot legacy completion flag may import a result without a battle.
+function applyMissionCompletion(profile: CampaignProfile, mission: MissionDefinition, state?: BattleState) {
   const witnessId = `witness-${mission.id}`;
   const newWitness = Boolean(mission.revelation)
     && state?.missionId === mission.id

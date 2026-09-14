@@ -31,6 +31,8 @@ import {
 } from '../game/progression';
 import { battleDifficultyOptions, type BattleDoctrine } from '../game/battleEngine';
 import { getKnownMissions } from '../game/storyAccess';
+import { hasValidCampaignSquad } from '../game/missionAccess';
+import { BattleResumeCard } from './BattleResumeCard';
 import { RaonMindPanel } from './RaonMindPanel';
 import { CharacterDialogueStage } from './CharacterDialogueStage';
 import type {
@@ -47,6 +49,8 @@ interface CampaignHubProps {
   onNavigate: (section: NavigationSection) => void;
   onToggleHero: (heroId: string) => void;
   onChooseStory: (missionId: string, choiceId: RaonStoryChoiceId) => void;
+  onResumeBattle?: () => void;
+  onDiscardBattle?: () => void;
 }
 
 const choiceIcons = {
@@ -71,6 +75,8 @@ export function CampaignHub({
   onNavigate,
   onToggleHero,
   onChooseStory,
+  onResumeBattle,
+  onDiscardBattle,
 }: CampaignHubProps) {
   const knownMissions = getKnownMissions(profile);
   const knownMissionIds = new Set(knownMissions.map((mission) => mission.id));
@@ -105,6 +111,9 @@ export function CampaignHub({
   const narrativeCheck = selectedMission ? profile.narrativeChecks[selectedMission.id] : undefined;
   const relationshipMemory = selectedMission ? profile.relationshipMemories[selectedMission.id] : undefined;
   const missionStatus = selectedMission ? getMissionStatus(profile, selectedMission) : 'locked';
+  const pendingBattle = profile.battleAttempt && !profile.battleAttempt.settled;
+  const choiceLocked = Boolean(pendingBattle && profile.battleAttempt?.missionId === selectedMission?.id);
+  const squadValid = hasValidCampaignSquad(profile);
 
   useEffect(() => {
     if (selectedChoice) setDoctrine(selectedChoice.doctrine);
@@ -145,6 +154,7 @@ export function CampaignHub({
   };
 
   const chooseStory = (choiceId: RaonStoryChoiceId) => {
+    if (choiceLocked) return;
     const choice = storyBeat.choices.find((entry) => entry.id === choiceId);
     if (!choice) return;
     onChooseStory(selectedMission.id, choiceId);
@@ -165,6 +175,9 @@ export function CampaignHub({
           <i><b style={{ width: `${(actCompleted / Math.max(1, missions.length)) * 100}%` }} /></i>
         </div>
       </header>
+
+      <BattleResumeCard profile={profile} onResume={onResumeBattle ?? (() => onNavigate('campaign'))} onDiscard={onDiscardBattle} />
+      {pendingBattle && <p className="battle-preparation-notice">저장된 작전을 이어가거나 진행을 정리하면 새로 출전할 수 있습니다. 편성·성장·장비·교리·난이도 변경은 다음 새 출전에 적용됩니다.</p>}
 
       <section className="origin-recap-card">
         <div className="origin-recap-lead">
@@ -275,6 +288,7 @@ export function CampaignHub({
           <h3>{storyBeat.question}</h3>
           <p>정답은 없습니다. 선택은 라온의 성향과 이번 전투의 시작 조건을 바꿉니다.</p>
         </div>
+        {choiceLocked && <p className="battle-preparation-notice">저장된 작전을 이어갈 때는 출전 당시 선택을 유지합니다. 새 선택은 진행을 정리한 뒤 고를 수 있습니다.</p>}
         <div className="story-choice-grid">
           {storyBeat.choices.map((choice) => {
             const Icon = choiceIcons[choice.id];
@@ -285,7 +299,7 @@ export function CampaignHub({
                 key={choice.id}
                 className={`story-choice-card choice-${choice.id} ${selected ? 'selected' : ''}`}
                 onClick={() => chooseStory(choice.id)}
-                disabled={!playable}
+                disabled={!playable || choiceLocked}
                 aria-pressed={selected}
               >
                 <span className="choice-icon"><Icon size={19} /></span>
@@ -397,12 +411,14 @@ export function CampaignHub({
             </div>
             <button
               className="story-launch-button"
-              disabled={!playable || !selectedChoice || profile.activeSquad.length < 4}
+              disabled={!playable || !selectedChoice || !squadValid || Boolean(pendingBattle)}
+              aria-describedby={pendingBattle || !squadValid ? 'battle-launch-reason' : undefined}
               onClick={() => onLaunch(selectedMission.id, doctrine, difficulty)}
             >
               {missionStatus === 'complete' ? '이 장면 다시 걷기' : '라온으로 출전하기'} <ArrowRight size={18} />
             </button>
           </div>
+          {(pendingBattle || !squadValid) && <p className="battle-launch-reason" id="battle-launch-reason">{pendingBattle ? '저장된 작전을 이어가거나 진행을 정리한 뒤 새로 출전하세요.' : !profile.activeSquad.includes('raon') ? '라온을 포함한 4~6명을 편성해야 출전할 수 있습니다. 출격조에 라온을 추가하세요.' : '라온을 포함한 4~6명의 출격조를 확인하세요.'}</p>}
         </section>
       </div>
 
@@ -420,12 +436,12 @@ export function CampaignHub({
                 key={hero.id}
                 className={deployed ? 'deployed' : ''}
                 style={{ '--accent': hero.accent } as CSSProperties}
-                onClick={() => !isRaon && onToggleHero(hero.id)}
-                disabled={isRaon}
+                onClick={() => (!isRaon || !deployed) && onToggleHero(hero.id)}
+                disabled={isRaon && deployed}
                 aria-pressed={deployed}
               >
                 <img src={hero.art} alt={`${hero.name} 설정화`} />
-                <span><strong>{hero.name}</strong><small>{isRaon ? '주인공 · 고정' : deployed ? '동행' : '대기'}</small></span>
+                <span><strong>{hero.name}</strong><small>{isRaon ? deployed ? '주인공 · 고정' : '주인공 · 편성 필요' : deployed ? '동행' : '대기'}</small></span>
                 {deployed && <Check size={14} />}
               </button>
             );

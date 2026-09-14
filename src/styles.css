@@ -10425,6 +10425,7 @@ button:focus-visible,
 
 .village-adventure,.action-battle-page { position:relative; width:100vw; height:100vh; min-height:620px; overflow:hidden; background-color:#080b08; background-position:center; background-size:cover; isolation:isolate; }
 .app-main.app-main-battle { width:100%; max-width:none; margin:0; padding:0; }
+.app-main-battle .battle-page { margin:0; }
 .app-main-battle .action-battle-page { width:100%; height:calc(100dvh - 68px); min-height:552px; }
 .village-engine,.action-engine { position:absolute; inset:0; }
 .village-engine { background:#11140f; }

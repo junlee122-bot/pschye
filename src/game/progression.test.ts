@@ -4,6 +4,7 @@ import { originStoryScenes } from '../data/originStory';
 import { strategicOrders } from '../data/systems';
 import { applyVillageRescueAction, completeVillageRescueReturn, startVillageRescue } from './villageRescueProgression';
 import { villageRescueReturnPoint } from './villageRescue';
+import { missionReadyProfile, victoriousBattle } from './campaignTestFixtures';
 import {
   advanceDay,
   advanceOriginStory,
@@ -84,7 +85,7 @@ describe('campaign progression', () => {
   });
 
   it('tracks Raon story choices without double-counting revisions', () => {
-    const profile = createNewCampaignProfile();
+    const profile = { ...missionReadyProfile(), storyChoices: {} };
     const compassionate = chooseRaonStoryPath(profile, 'grey-bridge-escort', 'compassion');
     const revised = chooseRaonStoryPath(compassionate, 'grey-bridge-escort', 'insight');
     const unchanged = chooseRaonStoryPath(revised, 'grey-bridge-escort', 'insight');
@@ -96,10 +97,10 @@ describe('campaign progression', () => {
   });
 
   it('turns a story choice into a deterministic check and remembered relationship beat', () => {
-    const profile = createNewCampaignProfile();
+    const profile = { ...missionReadyProfile(), storyChoices: {} };
     const chance = getNarrativeCheckChance(profile, 'compassion', 'hadori');
     const decided = chooseRaonStoryPath(profile, 'grey-bridge-escort', 'compassion');
-    const repeated = chooseRaonStoryPath(createNewCampaignProfile(), 'grey-bridge-escort', 'compassion');
+    const repeated = chooseRaonStoryPath(profile, 'grey-bridge-escort', 'compassion');
     const memory = decided.relationshipMemories['grey-bridge-escort'];
 
     expect(decided.narrativeChecks['grey-bridge-escort']?.chance).toBe(chance);
@@ -129,49 +130,31 @@ describe('campaign progression', () => {
     expect(getMissionStatus(profile, firstMission)).toBe('available');
     expect(getMissionStatus(profile, secondMission)).toBe('locked');
 
-    const cleared = completeMission(profile, firstMission).profile;
+    const decided = chooseRaonStoryPath(profile, firstMission.id, 'resolve');
+    const cleared = completeMission(decided, firstMission, victoriousBattle(decided, firstMission)).profile;
     expect(getMissionStatus(cleared, secondMission)).toBe('available');
     expect(cleared.supplies).toBe(profile.supplies + firstMission.reward.supplies);
     expect(cleared.completedMissions).toContain(firstMission.id);
   });
 
   it('does not duplicate first-clear rewards', () => {
-    const profile = createNewCampaignProfile();
+    const profile = missionReadyProfile();
     const mission = missions[0];
     expect(mission).toBeDefined();
     if (!mission) return;
 
-    const first = completeMission(profile, mission);
-    const replay = completeMission(first.profile, mission);
+    const first = completeMission(profile, mission, victoriousBattle(profile, mission));
+    const replay = completeMission(first.profile, mission, victoriousBattle(first.profile, mission));
     expect(first.firstClear).toBe(true);
     expect(replay.firstClear).toBe(false);
     expect(replay.profile.supplies).toBe(first.profile.supplies);
   });
 
   it('improves replay grades without duplicating rewards', () => {
-    const profile = createNewCampaignProfile();
+    const profile = missionReadyProfile();
     const mission = missions[0]!;
-    const first = completeMission(profile, mission).profile;
-    const replayState = {
-      missionId: mission.id,
-      difficulty: 'standard' as const,
-      round: 1,
-      roundLimit: mission.roundLimit,
-      commandPoints: 2,
-      morale: 100,
-      carriageHp: mission.objectiveBaseHp,
-      carriageShield: 0,
-      heroes: [],
-      enemies: [],
-      log: [],
-      outcome: 'victory' as const,
-      finisherUsed: false,
-      revelationTriggered: false,
-      focusTargetId: undefined,
-      focusChain: [],
-      breakCount: 0,
-      raonStance: 'resolve' as const,
-    };
+    const first = completeMission(profile, mission, victoriousBattle(profile, mission)).profile;
+    const replayState = victoriousBattle(first, mission, { round: 1 });
     const replay = completeMission(first, mission, replayState);
     expect(replay.profile.missionGrades[mission.id]).toBe('S');
     expect(replay.profile.supplies).toBe(first.supplies);
@@ -227,9 +210,9 @@ describe('campaign progression', () => {
   });
 
   it('resolves dispatch rewards only once', () => {
-    const profile = createNewCampaignProfile();
+    const profile = missionReadyProfile();
     const firstMission = missions[0]!;
-    const cleared = completeMission(profile, firstMission).profile;
+    const cleared = completeMission(profile, firstMission, victoriousBattle(profile, firstMission)).profile;
     const dispatched = resolveDispatch(cleared, 'bridge-salvage');
     const repeated = resolveDispatch(dispatched, 'bridge-salvage');
     expect(dispatched.completedDispatches).toContain('bridge-salvage');
@@ -238,8 +221,8 @@ describe('campaign progression', () => {
   });
 
   it('changes faction standings when a mission is cleared', () => {
-    const profile = createNewCampaignProfile();
-    const cleared = completeMission(profile, missions[0]!).profile;
+    const profile = missionReadyProfile();
+    const cleared = completeMission(profile, missions[0]!, victoriousBattle(profile)).profile;
     expect(cleared.factions.civilians).toBeGreaterThan(profile.factions.civilians);
     expect(cleared.factions.cheshi).toBeLessThan(profile.factions.cheshi);
   });

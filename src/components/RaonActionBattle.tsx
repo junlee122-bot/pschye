@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
+import { flushSync } from 'react-dom';
 import Phaser from 'phaser';
 import { ArrowLeft, Crosshair, Gauge, HeartPulse, RotateCcw, Shield, Sparkles, Swords, Target, UsersRound } from 'lucide-react';
 import { battleDifficultyOptions, type BattleDoctrine } from '../game/battleEngine';
@@ -11,6 +12,7 @@ import {
 } from '../game/actionBattleRules';
 import { raonChoiceMeta } from '../data/story';
 import { stabilizePhaserRuntime } from '../game/phaserRuntime';
+import { captureActionBattleCheckpoint, isActionBattleCheckpoint, restoreActionBattleCheckpoint, type ActionBattleCheckpoint } from '../game/actionBattleCheckpoint';
 import type { BattleState, HeroDefinition, MissionDefinition, MissionDifficulty, RaonStoryChoiceId } from '../types';
 
 const WIDTH = 1280;
@@ -18,6 +20,8 @@ const HEIGHT = 720;
 const SNAPSHOT_EVENT = 'raonjena:action-snapshot';
 const COMPLETE_EVENT = 'raonjena:action-complete';
 const COMMAND_EVENT = 'raonjena:action-command';
+const CHECKPOINT_EVENT = 'raonjena:action-checkpoint';
+const FLUSH_EVENT = 'raonjena:action-flush';
 
 type MoveDirection = 'up' | 'down' | 'left' | 'right';
 
@@ -79,31 +83,35 @@ interface RaonActionBattleProps {
   onComplete: (state: BattleState) => void;
   onExit: () => void;
   onSwitchMode: () => void;
+  initialCheckpoint?: ActionBattleCheckpoint;
+  onCheckpoint?: (checkpoint: ActionBattleCheckpoint) => void;
+  onRestart?: () => void;
 }
 
-function createInitialSnapshot(model: ActionBattleModel): ActionBattleSnapshot {
+function createInitialSnapshot(model: ActionBattleModel, checkpoint?: ActionBattleCheckpoint): ActionBattleSnapshot {
+  const battle = checkpoint?.battle ?? model.initialState;
   return {
-    hp: model.raon.maxHp,
+    hp: battle.heroes.find((hero) => hero.id === 'raon')?.hp ?? 0,
     maxHp: model.raon.maxHp,
-    posture: 100,
+    posture: checkpoint?.player.posture ?? 100,
     maxPosture: 100,
-    focus: model.initialState.morale,
-    combo: 0,
-    objectiveHp: model.initialState.carriageHp,
+    focus: battle.morale,
+    combo: checkpoint?.player.combo ?? 0,
+    objectiveHp: battle.carriageHp,
     objectiveMaxHp: model.initialState.carriageHp,
-    objectiveShield: model.initialState.carriageShield,
-    enemiesRemaining: model.initialState.enemies.length,
+    objectiveShield: battle.carriageShield,
+    enemiesRemaining: battle.enemies.filter((enemy) => enemy.hp > 0).length,
     totalEnemies: model.initialState.enemies.length,
-    elapsed: 0,
-    parryReady: true,
-    dodgeReady: true,
-    heavyReady: true,
-    finisherReady: model.initialState.morale >= 100,
-    cooldowns: {},
-    status: 'active',
-    prompt: 'WASD로 움직이고 J로 첫 검격을 연결하십시오.',
-    breaks: 0,
-    battle: model.initialState,
+    elapsed: checkpoint?.elapsed ?? 0,
+    parryReady: !checkpoint?.timers.parry,
+    dodgeReady: !checkpoint?.timers.dodge,
+    heavyReady: !checkpoint?.timers.heavy,
+    finisherReady: battle.morale >= 100 && !battle.finisherUsed && battle.outcome === 'active',
+    cooldowns: Object.fromEntries(Object.entries(checkpoint?.orders ?? {}).map(([id, ms]) => [id, ms / 1000])),
+    status: battle.outcome,
+    prompt: checkpoint ? '저장한 작전입니다. 이어가기를 누르면 같은 시점에서 재개합니다.' : 'WASD로 움직이고 J로 첫 검격을 연결하십시오.',
+    breaks: battle.breakCount,
+    battle,
   };
 }
 
@@ -127,8 +135,9 @@ class RaonActionScene extends Phaser.Scene {
   private comboExpires = 0;
   private get objectiveHp() { return this.combat.carriageHp; }
   private get objectiveMaxHp() { return this.model.initialState.carriageHp; }
-  private startedAt = 0;
+  private battleTime = 0;
   private lastSnapshotAt = 0;
+  private lastCheckpointAt = 0;
   private lightReadyAt = 0;
   private heavyReadyAt = 0;
   private parryUntil = 0;
@@ -157,8 +166,10 @@ class RaonActionScene extends Phaser.Scene {
     const initialModel = registryModel ?? bootActionModel;
     if (!initialModel) throw new Error('Action scene created without a combat model.');
     this.model = initialModel;
-    this.combat = this.model.initialState;
-    this.startedAt = this.time.now;
+    const checkpoint = this.game.registry.get('action-checkpoint') as ActionBattleCheckpoint | undefined;
+    if (checkpoint && !isActionBattleCheckpoint(checkpoint, this.model)) throw new Error('저장된 액션 전투 상태가 현재 출전 정보와 맞지 않습니다.');
+    this.battleTime = (checkpoint?.elapsed ?? 0) * 1000;
+    this.combat = checkpoint ? restoreActionBattleCheckpoint(checkpoint, this.battleTime).battle : this.model.initialState;
 
     const shade = this.add.graphics();
     shade.fillGradientStyle(0x20252c, 0x20252c, 0x07090d, 0x07090d, 1, 1, 1, 1).fillRect(0, 0, WIDTH, HEIGHT);
@@ -172,19 +183,82 @@ class RaonActionScene extends Phaser.Scene {
     this.objective = this.createObjective();
     this.player = this.createPlayer();
     this.createEnemies();
+    if (checkpoint) this.restoreCheckpoint(checkpoint);
 
     this.cursors = this.input.keyboard!.createCursorKeys();
     this.keys = this.input.keyboard!.addKeys('W,A,S,D,J,K,Q,F,SHIFT,ONE,TWO,THREE,FOUR,FIVE') as Record<string, Phaser.Input.Keyboard.Key>;
     this.input.on('pointerdown', (pointer: Phaser.Input.Pointer) => {
       if (this.status !== 'active') return;
-      if (pointer.rightButtonDown()) this.heavyAttack(this.time.now);
-      else this.lightAttack(this.time.now);
+      if (pointer.rightButtonDown()) this.heavyAttack(this.battleTime);
+      else this.lightAttack(this.battleTime);
+      this.emitCheckpoint(true);
     });
     this.game.events.on(COMMAND_EVENT, this.handleExternalCommand, this);
+    this.game.events.on(FLUSH_EVENT, this.flushCheckpoint, this);
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => {
       this.game.events.off(COMMAND_EVENT, this.handleExternalCommand, this);
+      this.game.events.off(FLUSH_EVENT, this.flushCheckpoint, this);
     });
     this.emitSnapshot(true);
+    this.emitCheckpoint(true);
+    if (this.status !== 'active') this.game.events.emit(COMPLETE_EVENT);
+  }
+
+  private restoreCheckpoint(checkpoint: ActionBattleCheckpoint) {
+    const restored = restoreActionBattleCheckpoint(checkpoint, this.battleTime);
+    this.combat = restored.battle;
+    this.status = restored.battle.outcome;
+    this.breaks = restored.battle.breakCount;
+    this.player.setPosition(restored.player.x, restored.player.y);
+    this.facing.set(restored.player.facingX, restored.player.facingY);
+    this.player.setScale(this.facing.x < 0 ? -1 : 1, 1);
+    this.posture = restored.player.posture;
+    this.combo = restored.player.combo;
+    this.lightReadyAt = restored.timers.light;
+    this.heavyReadyAt = restored.timers.heavy;
+    this.parryReadyAt = restored.timers.parry;
+    this.dodgeReadyAt = restored.timers.dodge;
+    this.parryUntil = restored.timers.parryWindow;
+    this.dodgeUntil = restored.timers.dodgeWindow;
+    this.invulnerableUntil = restored.timers.invulnerable;
+    this.comboExpires = restored.timers.combo;
+    this.orderReadyAt = restored.orders;
+    this.player.setAlpha(checkpoint.timers.invulnerable > 0 ? 0.42 : 1);
+    this.enemies.forEach((enemy) => {
+      const saved = restored.enemies.find((actor) => actor.id === enemy.id)!;
+      enemy.container.setPosition(saved.x, saved.y);
+      enemy.posture = saved.posture;
+      enemy.nextAttackAt = saved.nextAttack;
+      enemy.telegraphUntil = saved.telegraph;
+      enemy.stunnedUntil = saved.stunned;
+      enemy.alive = enemy.hp > 0;
+      enemy.container.setVisible(enemy.alive).setAlpha(this.combat.enemies.find((unit) => unit.id === enemy.id)?.revealed ? 1 : 0.3);
+      enemy.healthBar.width = (enemy.body.radius > 22 ? 92 : 68) * enemy.hp / enemy.maxHp;
+      if (checkpoint.enemies.find((actor) => actor.id === enemy.id)!.telegraph > 0) {
+        // Damage happens synchronously at the deadline. Rebuild only the unfinished warning animation.
+        const duration = saved.telegraph - this.battleTime;
+        const ratio = Math.min(1, duration / (enemy.ranged ? 880 : 620));
+        enemy.telegraph.setStrokeStyle(4, 0xff5c50, 1).setScale(1.35 - 0.6 * ratio).setAlpha(0.2 + 0.8 * ratio);
+        this.tweens.add({ targets: enemy.telegraph, scale: 1.35, alpha: 0.2, duration });
+      }
+    });
+    this.prompt = this.status === 'active' ? '저장된 위치와 남은 재사용 시간으로 작전을 이어갑니다.' : this.status === 'victory' ? '저장된 작전 완료 기록입니다.' : '저장된 작전 실패 기록입니다.';
+  }
+
+  private flushCheckpoint() { this.emitSnapshot(true); this.emitCheckpoint(true); }
+
+  private emitCheckpoint(force = false) {
+    if (!this.player || (!force && this.battleTime - this.lastCheckpointAt < 1000)) return;
+    this.lastCheckpointAt = this.battleTime;
+    const checkpoint = captureActionBattleCheckpoint({
+      battle: buildActionBattleResult(this.combat, this.breaks), elapsed: this.battleTime / 1000,
+      player: { x: this.player.x, y: this.player.y, facingX: this.facing.x, facingY: this.facing.y, posture: this.posture, combo: this.combo },
+      timers: { light: this.lightReadyAt, heavy: this.heavyReadyAt, parry: this.parryReadyAt, dodge: this.dodgeReadyAt, parryWindow: this.parryUntil, dodgeWindow: this.dodgeUntil, invulnerable: this.invulnerableUntil, combo: this.comboExpires },
+      orders: Object.fromEntries(this.model.companions.map(({ hero }) => [hero.id, this.orderReadyAt[hero.id] ?? 0])),
+      enemies: this.enemies.map((enemy) => ({ id: enemy.id, x: enemy.container.x, y: enemy.container.y, posture: enemy.posture, nextAttack: enemy.nextAttackAt, telegraph: enemy.telegraphUntil, stunned: enemy.stunnedUntil })),
+    }, this.battleTime);
+    this.game.registry.set('last-action-checkpoint', checkpoint);
+    this.game.events.emit(CHECKPOINT_EVENT, checkpoint);
   }
 
   private createPlayer() {
@@ -218,7 +292,7 @@ class RaonActionScene extends Phaser.Scene {
       const ranged = /sniper|rifle|gunner|observer|battery|purger|감시|저격|소총|포대|관측/.test(`${definition.id} ${definition.name}`.toLowerCase());
       const boss = Boolean(definition.boss);
       const elite = Boolean(definition.elite);
-      const maxHp = this.combat.enemies.find((enemy) => enemy.id === definition.id)!.hp;
+      const maxHp = this.model.initialState.enemies.find((enemy) => enemy.id === definition.id)!.hp;
       const readHp = () => this.combat.enemies.find((enemy) => enemy.id === definition.id)?.hp ?? 0;
       const container = this.add.container(x, Math.min(610, y)).setDepth(20);
       const shadow = this.add.ellipse(0, 20, boss ? 70 : 52, 17, 0x000000, 0.46);
@@ -244,7 +318,7 @@ class RaonActionScene extends Phaser.Scene {
         speed: ranged ? 36 : boss ? 52 : 64,
         attackRange: ranged ? 455 : boss ? 125 : 94,
         ranged,
-        nextAttackAt: this.time.now + 2800 + index * 380,
+        nextAttackAt: this.battleTime + 2800 + index * 380,
         telegraphUntil: 0,
         stunnedUntil: 0,
         alive: true,
@@ -252,13 +326,14 @@ class RaonActionScene extends Phaser.Scene {
     });
   }
 
-  private handleExternalCommand(command: string) {
+  private handleExternalCommand(command: string, checkpoint = true) {
     if (this.status !== 'active') return;
-    const now = this.time.now;
+    const now = this.battleTime;
     const movement = command.match(/^move-(up|down|left|right)-(start|stop)$/);
     if (movement) {
       const direction = movement[1] as MoveDirection;
       this.externalMovement[direction] = movement[2] === 'start';
+      if (checkpoint) this.emitCheckpoint(true);
       return;
     }
     if (command === 'light') this.lightAttack(now);
@@ -267,6 +342,7 @@ class RaonActionScene extends Phaser.Scene {
     if (command === 'dodge') this.startDodge(now);
     if (command === 'finisher') this.teamFinisher(now);
     if (command.startsWith('companion:')) this.companionOrder(command.slice('companion:'.length), now);
+    if (checkpoint) this.emitCheckpoint(true);
   }
 
   private livingEnemies() {
@@ -293,7 +369,8 @@ class RaonActionScene extends Phaser.Scene {
     enemy.posture = Math.max(0, enemy.posture - postureDamage);
     const width = enemy.body.radius > 22 ? 92 : 68;
     enemy.healthBar.width = width * (enemy.hp / enemy.maxHp);
-    this.tweens.add({ targets: enemy.container, x: enemy.container.x + this.facing.x * 18, y: enemy.container.y + this.facing.y * 18, yoyo: true, duration: 90 });
+    // Impact animation is cosmetic: actor coordinates must not depend on an unfinished tween.
+    this.tweens.add({ targets: enemy.body, scale: 1.18, yoyo: true, duration: 90 });
     this.cameras.main.shake(80, 0.0035);
     if (enemy.posture <= 0 && enemy.hp > 0) {
       enemy.posture = enemy.maxPosture;
@@ -521,7 +598,7 @@ class RaonActionScene extends Phaser.Scene {
   }
 
   private emitSnapshot(force = false) {
-    const now = this.time.now;
+    const now = this.battleTime;
     if (!force && now - this.lastSnapshotAt < 90) return;
     this.lastSnapshotAt = now;
     const remaining = this.livingEnemies().length;
@@ -537,7 +614,7 @@ class RaonActionScene extends Phaser.Scene {
       objectiveShield: this.combat.carriageShield,
       enemiesRemaining: remaining,
       totalEnemies: this.enemies.length,
-      elapsed: Math.max(0, (now - this.startedAt) / 1000),
+      elapsed: now / 1000,
       parryReady: now >= this.parryReadyAt,
       dodgeReady: now >= this.dodgeReadyAt,
       heavyReady: now >= this.heavyReadyAt,
@@ -558,14 +635,19 @@ class RaonActionScene extends Phaser.Scene {
     this.prompt = this.status === 'victory' ? '작전 완료 · 라온과 출격조가 전장을 확보했습니다.'
       : this.hp <= 0 ? '라온이 쓰러졌습니다.' : this.objectiveHp <= 0 ? `${this.model.mission.objectiveLabel}을 지키지 못했습니다.` : '작전 제한 시간이 끝났습니다.';
     this.emitSnapshot(true);
+    this.emitCheckpoint(true);
     this.game.events.emit(COMPLETE_EVENT);
     return true;
   }
 
-  update(time: number, delta: number) {
+  update(_time: number, delta: number) {
     if (this.status !== 'active') return;
+    // Only simulated frames advance combat. Returning from an offline tab never consumes its absence.
+    this.battleTime += Math.min(100, Math.max(0, delta));
+    const time = this.battleTime;
+    const step = Math.min(100, Math.max(0, delta));
     const previousRound = this.combat.round;
-    this.combat = advanceActionRounds(this.combat, this.model, Math.max(0, (time - this.startedAt) / 1000));
+    this.combat = advanceActionRounds(this.combat, this.model, time / 1000);
     if (this.finishIfNeeded()) return;
     if (this.combat.round !== previousRound) this.prompt = `${this.combat.round}라운드 · ${getActionRuleDescription(this.model.mission)}`;
     const horizontal = (this.cursors.left.isDown || this.keys.A.isDown || this.externalMovement.left ? -1 : 0)
@@ -577,28 +659,34 @@ class RaonActionScene extends Phaser.Scene {
       vector.normalize();
       this.facing.copy(vector);
       const speed = time <= this.dodgeUntil ? 530 : 245;
-      this.player.x = Phaser.Math.Clamp(this.player.x + vector.x * speed * (delta / 1000), 72, WIDTH - 72);
-      this.player.y = Phaser.Math.Clamp(this.player.y + vector.y * speed * (delta / 1000), 104, HEIGHT - 72);
+      this.player.x = Phaser.Math.Clamp(this.player.x + vector.x * speed * (step / 1000), 72, WIDTH - 72);
+      this.player.y = Phaser.Math.Clamp(this.player.y + vector.y * speed * (step / 1000), 104, HEIGHT - 72);
       this.player.setScale(vector.x < 0 ? -1 : 1, 1);
     }
 
-    if (Phaser.Input.Keyboard.JustDown(this.keys.J)) this.lightAttack(time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.K)) this.heavyAttack(time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.Q)) this.startParry(time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.SHIFT)) this.startDodge(time);
-    if (Phaser.Input.Keyboard.JustDown(this.keys.F)) this.teamFinisher(time);
+    // Keyboard actions and due enemy hits form one frame transaction. Save after both resolve.
+    let commanded = false;
+    const frameCommand = (command: string) => { commanded = true; this.handleExternalCommand(command, false); };
+    if (Phaser.Input.Keyboard.JustDown(this.keys.J)) frameCommand('light');
+    if (Phaser.Input.Keyboard.JustDown(this.keys.K)) frameCommand('heavy');
+    if (Phaser.Input.Keyboard.JustDown(this.keys.Q)) frameCommand('parry');
+    if (Phaser.Input.Keyboard.JustDown(this.keys.SHIFT)) frameCommand('dodge');
+    if (Phaser.Input.Keyboard.JustDown(this.keys.F)) frameCommand('finisher');
     this.model.companions.forEach(({ hero }, index) => {
       const key = this.keys[['ONE', 'TWO', 'THREE', 'FOUR', 'FIVE'][index]];
-      if (key && Phaser.Input.Keyboard.JustDown(key)) this.companionOrder(hero.id, time);
+      if (key && Phaser.Input.Keyboard.JustDown(key)) frameCommand(`companion:${hero.id}`);
     });
     if (this.finishIfNeeded()) return;
 
     if (time > this.comboExpires) this.combo = 0;
-    this.posture = Math.min(this.maxPosture, this.posture + delta * 0.008);
-    this.updateEnemies(time, delta);
+    this.posture = Math.min(this.maxPosture, this.posture + step * 0.008);
+    this.player.setAlpha(time < this.invulnerableUntil ? 0.42 : 1);
+    this.playerCore.setFillStyle(time < this.parryUntil ? 0xe0c078 : 0x8b5b37, 1);
+    this.updateEnemies(time, step);
 
     if (this.finishIfNeeded()) return;
     this.emitSnapshot();
+    this.emitCheckpoint(commanded);
   }
 }
 
@@ -606,16 +694,23 @@ function formatCooldown(value: number) {
   return value <= 0 ? 'READY' : `${value.toFixed(1)}s`;
 }
 
-export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonStance, warPressure, bondSupport, onComplete, onExit, onSwitchMode }: RaonActionBattleProps) {
+export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonStance, warPressure, bondSupport, onComplete, onExit, onSwitchMode, initialCheckpoint, onCheckpoint, onRestart }: RaonActionBattleProps) {
   const hostRef = useRef<HTMLDivElement>(null);
   const gameRef = useRef<Phaser.Game | null>(null);
   const completedRef = useRef(false);
+  const skipCleanupFlush = useRef(false);
   const [battleAttempt, setBattleAttempt] = useState(0);
   // Deployment values stay fixed during the attempt, including after rewards update the roster.
   const [model] = useState(() => createActionBattleModel({ doctrine, difficulty, mission, heroes, raonStance, warPressure, bondSupport }));
-  const [snapshot, setSnapshot] = useState<ActionBattleSnapshot>(() => createInitialSnapshot(model));
-  const [confirmExit, setConfirmExit] = useState(false);
+  const [entryCheckpoint] = useState(() => {
+    if (initialCheckpoint && !isActionBattleCheckpoint(initialCheckpoint, model)) throw new Error('저장된 작전 체크포인트를 복구할 수 없습니다.');
+    return initialCheckpoint ? restoreActionBattleCheckpoint(initialCheckpoint, 0) : undefined;
+  });
+  const checkpointRef = useRef(entryCheckpoint);
+  const [snapshot, setSnapshot] = useState<ActionBattleSnapshot>(() => createInitialSnapshot(model, entryCheckpoint));
+  const [resumeOpen, setResumeOpen] = useState(entryCheckpoint?.battle.outcome === 'active');
   const [guideOpen, setGuideOpen] = useState(() => {
+    if (entryCheckpoint) return false;
     try {
       return window.localStorage.getItem('raonjena-action-guide-v1') !== 'seen';
     } catch {
@@ -624,14 +719,18 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
   });
   const raon = model.raon;
   const onCompleteRef = useRef(onComplete);
+  const onCheckpointRef = useRef(onCheckpoint);
   const initialModelRef = useRef(model);
+  const paused = guideOpen || resumeOpen;
 
   useEffect(() => {
     onCompleteRef.current = onComplete;
-  }, [onComplete]);
+    onCheckpointRef.current = onCheckpoint;
+  }, [onComplete, onCheckpoint]);
 
   useEffect(() => {
-    if (guideOpen || !hostRef.current || gameRef.current) return;
+    if (paused || !hostRef.current || gameRef.current) return;
+    skipCleanupFlush.current = false;
     bootActionModel = initialModelRef.current;
     const game = new Phaser.Game({
       type: Phaser.CANVAS,
@@ -645,32 +744,69 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
       render: { antialias: true, pixelArt: false, clearBeforeRender: true },
       input: { keyboard: true, mouse: true, touch: true },
-      callbacks: { preBoot: (bootingGame) => bootingGame.registry.set('action-model', initialModelRef.current) },
+      callbacks: { preBoot: (bootingGame) => {
+        bootingGame.registry.set('action-model', initialModelRef.current);
+        bootingGame.registry.set('action-checkpoint', checkpointRef.current);
+      } },
     });
     const stopRuntimeStabilizer = stabilizePhaserRuntime(game, 'RaonActionScene');
     const update = (next: ActionBattleSnapshot) => setSnapshot(next);
     const complete = () => {
       if (completedRef.current) return;
       completedRef.current = true;
-      const current = game.registry.get('last-action-snapshot') as ActionBattleSnapshot | undefined;
-      if (current?.status === 'victory' && current.battle.outcome === 'victory') onCompleteRef.current(current.battle);
+      const current = game.registry.get('last-action-checkpoint') as ActionBattleCheckpoint | undefined;
+      if (current?.battle.outcome === 'victory') onCompleteRef.current(current.battle);
     };
     const receiveSnapshot = (next: ActionBattleSnapshot) => {
       game.registry.set('last-action-snapshot', next);
       update(next);
     };
+    const receiveCheckpoint = (checkpoint: ActionBattleCheckpoint) => {
+      checkpointRef.current = checkpoint;
+      onCheckpointRef.current?.(checkpoint);
+    };
     game.events.on(SNAPSHOT_EVENT, receiveSnapshot);
+    game.events.on(CHECKPOINT_EVENT, receiveCheckpoint);
     game.events.on(COMPLETE_EVENT, complete);
     gameRef.current = game;
+    const alreadyCreated = game.registry.get('last-action-checkpoint') as ActionBattleCheckpoint | undefined;
+    if (alreadyCreated) {
+      receiveCheckpoint(alreadyCreated);
+      setSnapshot(createInitialSnapshot(initialModelRef.current, alreadyCreated));
+      if (alreadyCreated.battle.outcome !== 'active') complete();
+    }
     return () => {
+      if (!skipCleanupFlush.current) game.events.emit(FLUSH_EVENT);
       game.events.off(COMPLETE_EVENT, complete);
       game.events.off(SNAPSHOT_EVENT, receiveSnapshot);
+      game.events.off(CHECKPOINT_EVENT, receiveCheckpoint);
       stopRuntimeStabilizer();
       game.destroy(true);
       gameRef.current = null;
       bootActionModel = null;
     };
-  }, [battleAttempt, guideOpen]);
+  }, [battleAttempt, paused]);
+
+  useEffect(() => {
+    const flush = () => gameRef.current?.events.emit(FLUSH_EVENT);
+    // Browser teardown cannot wait for the next render/effect. Commit the final
+    // checkpoint now so the parent's autosave reaches its synchronous LocalStorage write.
+    const flushBeforeUnload = () => flushSync(() => { flush(); });
+    const hide = () => {
+      if (document.visibilityState === 'hidden' && gameRef.current) {
+        flush();
+        if (checkpointRef.current?.battle.outcome === 'active') setResumeOpen(true);
+      }
+    };
+    window.addEventListener('pagehide', flushBeforeUnload);
+    window.addEventListener('beforeunload', flushBeforeUnload);
+    document.addEventListener('visibilitychange', hide);
+    return () => {
+      window.removeEventListener('pagehide', flushBeforeUnload);
+      window.removeEventListener('beforeunload', flushBeforeUnload);
+      document.removeEventListener('visibilitychange', hide);
+    };
+  }, []);
 
   const command = (value: string) => gameRef.current?.events.emit(COMMAND_EVENT, value);
   const startMove = (direction: MoveDirection, event: ReactPointerEvent<HTMLButtonElement>) => {
@@ -692,19 +828,23 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       // The tutorial can still close when browser storage is unavailable.
     }
     setGuideOpen(false);
+    setResumeOpen(false);
   };
   const retry = () => {
+    skipCleanupFlush.current = true;
+    checkpointRef.current = undefined;
+    if (onRestart) { onRestart(); return; }
     completedRef.current = false;
     setSnapshot(createInitialSnapshot(model));
+    setResumeOpen(false);
+    setGuideOpen(false);
     setBattleAttempt((current) => current + 1);
   };
   const requestExit = () => {
-    if (confirmExit) onExit();
-    else {
-      setConfirmExit(true);
-      window.setTimeout(() => setConfirmExit(false), 2800);
-    }
+    gameRef.current?.events.emit(FLUSH_EVENT);
+    onExit();
   };
+  const switchMode = () => { gameRef.current?.events.emit(FLUSH_EVENT); onSwitchMode(); };
 
   return (
     <main className="action-battle-page" style={{ backgroundImage: `linear-gradient(180deg, rgba(5, 7, 11, .5), rgba(2, 3, 5, .92)), url(${mission.background})` }}>
@@ -712,9 +852,9 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       <div className="action-vignette" aria-hidden="true" />
 
       <header className="action-header">
-        <button onClick={requestExit}><ArrowLeft size={16} /> {confirmExit ? '다시 누르면 포기' : '작전 포기'}</button>
+        <button onClick={requestExit}><ArrowLeft size={16} /> 저장하고 나가기</button>
         <div title={getActionRuleDescription(mission)}><span>{mission.operation} · {battleDifficultyOptions.find((option) => option.id === model.difficulty)?.label}</span><strong>{mission.title}</strong><small>{mission.battlefieldRule.name} · {snapshot.battle.round}/{mission.roundLimit}라운드 · 남은 {Math.max(0, mission.roundLimit * ACTION_ROUND_SECONDS - snapshot.elapsed).toFixed(0)}초</small></div>
-        <button onClick={onSwitchMode}><Crosshair size={16} /> 전술 모드</button>
+        <button onClick={switchMode}><Crosshair size={16} /> 전술 모드</button>
       </header>
 
       <section className="action-raon-hud">
@@ -741,11 +881,12 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       <section className="action-focus-hud">
         <div><Sparkles size={15} /><span>출격조 사기</span><strong>{Math.round(snapshot.focus)}%</strong></div>
         <i><b style={{ width: `${snapshot.focus}%` }} /></i>
-        <button className={snapshot.finisherReady ? 'ready' : ''} disabled={!snapshot.finisherReady || guideOpen} onClick={() => command('finisher')}><kbd>F</kbd> {snapshot.battle.finisherUsed ? '연계 사용 완료' : '16꽃잎 연계'}</button>
+        <button className={snapshot.finisherReady ? 'ready' : ''} disabled={!snapshot.finisherReady || paused} onClick={() => command('finisher')}><kbd>F</kbd> {snapshot.battle.finisherUsed ? '연계 사용 완료' : '16꽃잎 연계'}</button>
       </section>
 
       <section className="action-guide-strip" aria-live="polite">
         <Gauge size={16} /><p>{snapshot.prompt}</p><span>{snapshot.elapsed.toFixed(1)}s</span>
+        {snapshot.status === 'active' && !paused && <button onClick={() => { gameRef.current?.events.emit(FLUSH_EVENT); setResumeOpen(true); }}>일시정지</button>}
       </section>
 
       <section className="action-movement-pad" aria-label="라온 이동 패드">
@@ -754,6 +895,7 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
           <button
             key={direction}
             className={direction}
+            disabled={paused || snapshot.status !== 'active'}
             aria-label={`${direction === 'up' ? '위' : direction === 'down' ? '아래' : direction === 'left' ? '왼쪽' : '오른쪽'}으로 이동`}
             onPointerDown={(event) => startMove(direction, event)}
             onPointerUp={(event) => stopMove(direction, event)}
@@ -766,10 +908,10 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
       </section>
 
       <section className="action-command-bar">
-        <button disabled={guideOpen || snapshot.status !== 'active'} onClick={() => command('light')} title={`기초 위력 ${model.lightSkill.power} · 적 방어 차감 · 연격당 +2 · 사기 +${getActionAttack(model, 'light').morale}`}><kbd>J</kbd><span><strong>유동 베기</strong><small>위력 {model.lightSkill.power} · 연격 강화</small></span></button>
-        <button disabled={guideOpen || snapshot.status !== 'active' || !snapshot.heavyReady} onClick={() => command('heavy')} title={`기초 위력 ${model.heavySkill.power} · 적 방어 차감 · 연격당 +3 · 사기 +${getActionAttack(model, 'heavy').morale}`}><kbd>K</kbd><span><strong>꽃잎 끊기</strong><small>{snapshot.heavyReady ? `위력 ${model.heavySkill.power} · 자세 파괴` : '재정비 중'}</small></span></button>
-        <button disabled={guideOpen || snapshot.status !== 'active' || !snapshot.parryReady} onClick={() => command('parry')}><kbd>Q</kbd><span><strong>흐름 읽기</strong><small>{snapshot.parryReady ? '예고 패링' : '호흡 회복'}</small></span></button>
-        <button disabled={guideOpen || snapshot.status !== 'active' || !snapshot.dodgeReady} onClick={() => command('dodge')}><kbd>⇧</kbd><span><strong>간격 이탈</strong><small>{snapshot.dodgeReady ? '무적 회피' : '발걸음 회복'}</small></span></button>
+        <button disabled={paused || snapshot.status !== 'active'} onClick={() => command('light')} title={`기초 위력 ${model.lightSkill.power} · 적 방어 차감 · 연격당 +2 · 사기 +${getActionAttack(model, 'light').morale}`}><kbd>J</kbd><span><strong>유동 베기</strong><small>위력 {model.lightSkill.power} · 연격 강화</small></span></button>
+        <button disabled={paused || snapshot.status !== 'active' || !snapshot.heavyReady} onClick={() => command('heavy')} title={`기초 위력 ${model.heavySkill.power} · 적 방어 차감 · 연격당 +3 · 사기 +${getActionAttack(model, 'heavy').morale}`}><kbd>K</kbd><span><strong>꽃잎 끊기</strong><small>{snapshot.heavyReady ? `위력 ${model.heavySkill.power} · 자세 파괴` : '재정비 중'}</small></span></button>
+        <button disabled={paused || snapshot.status !== 'active' || !snapshot.parryReady} onClick={() => command('parry')}><kbd>Q</kbd><span><strong>흐름 읽기</strong><small>{snapshot.parryReady ? '예고 패링' : '호흡 회복'}</small></span></button>
+        <button disabled={paused || snapshot.status !== 'active' || !snapshot.dodgeReady} onClick={() => command('dodge')}><kbd>⇧</kbd><span><strong>간격 이탈</strong><small>{snapshot.dodgeReady ? '무적 회피' : '발걸음 회복'}</small></span></button>
       </section>
 
       <section className="action-companion-orders">
@@ -777,7 +919,7 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
         {model.companions.map(({ hero, skill, slot }) => {
           const alive = (snapshot.battle.heroes.find((unit) => unit.id === hero.id)?.hp ?? 0) > 0;
           const cooldown = snapshot.cooldowns[hero.id] ?? 0;
-          return <button key={hero.id} disabled={guideOpen || snapshot.status !== 'active' || !alive || cooldown > 0} onClick={() => command(`companion:${hero.id}`)} title={`${skill.kind === 'guard' ? `목표 방벽 +${skill.power}` : `위력 ${skill.power}`} · 사기 +${skill.morale} · 재사용 ${ACTION_ORDER_COOLDOWN_SECONDS}초`}><kbd>{slot}</kbd><strong>{hero.name} · {skill.name}</strong><small>{alive ? formatCooldown(cooldown) : '전투 불능'}</small></button>;
+          return <button key={hero.id} disabled={paused || snapshot.status !== 'active' || !alive || cooldown > 0} onClick={() => command(`companion:${hero.id}`)} title={`${skill.kind === 'guard' ? `목표 방벽 +${skill.power}` : `위력 ${skill.power}`} · 사기 +${skill.morale} · 재사용 ${ACTION_ORDER_COOLDOWN_SECONDS}초`}><kbd>{slot}</kbd><strong>{hero.name} · {skill.name}</strong><small>{alive ? formatCooldown(cooldown) : '전투 불능'}</small></button>;
         })}
       </section>
 
@@ -790,20 +932,20 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
             <p>브레이크 {snapshot.breaks}회 · 전투 {snapshot.elapsed.toFixed(1)}초 · 목표 내구 {Math.ceil(snapshot.objectiveHp)}</p>
             <div>
               {snapshot.status === 'defeat' && <button onClick={retry}><RotateCcw size={16} /> 다시 도전</button>}
-              <button onClick={onExit}><ArrowLeft size={16} /> 작전 지도로</button>
+              <button onClick={requestExit}><ArrowLeft size={16} /> 작전 지도로</button>
             </div>
           </article>
         </div>
       )}
 
-      {guideOpen && (
+      {paused && (
         <div className="action-onboarding" role="dialog" aria-modal="true" aria-labelledby="action-guide-title">
           <article>
             <span>RAON DIRECT CONTROL</span>
-            <h2 id="action-guide-title">라온의 검을 직접 움직입니다</h2>
-            <p>전투는 안내를 닫은 뒤 시작됩니다. 성장·장비를 반영한 생명 {raon.maxHp}, 방어 {raon.armor}로 출격합니다.</p>
+            <h2 id="action-guide-title">{resumeOpen ? '작전 이어가기' : '라온의 검을 직접 움직입니다'}</h2>
+            <p>{resumeOpen ? '저장된 위치·생명·자세·사기와 남은 기술 대기시간으로 이어갑니다. 이 화면을 닫기 전까지 전투 시간은 흐르지 않습니다.' : `전투는 안내를 닫은 뒤 시작됩니다. 성장·장비를 반영한 생명 ${raon.maxHp}, 방어 ${raon.armor}로 출격합니다.`}</p>
             <p>{getActionRuleDescription(mission)}</p>
-            <p>{raonChoiceMeta[model.raonStance].label}: {raonChoiceMeta[model.raonStance].battleEffect} · {model.doctrine === 'shelter' ? '보호 교리' : '대응 사격 교리'} · 전쟁 압박 {model.warPressure}% · 현장 신뢰 {model.bondSupport}. 시작 사기 {model.initialState.morale}, 목표 방벽 {model.initialState.carriageShield}.</p>
+            <p>{raonChoiceMeta[model.raonStance].label}: {raonChoiceMeta[model.raonStance].battleEffect} · {model.doctrine === 'shelter' ? '보호 교리' : '대응 사격 교리'} · 전쟁 압박 {model.warPressure}% · 현장 신뢰 {model.bondSupport}. {resumeOpen ? '현재' : '시작'} 사기 {snapshot.focus}, 목표 방벽 {snapshot.objectiveShield}.</p>
             <div className="action-onboarding-steps">
               <section><kbd>WASD</kbd><strong>이동</strong><small>모바일에서는 왼쪽 이동 패드</small></section>
               <section><kbd>J · K</kbd><strong>검격</strong><small>연타로 집중, 강공격으로 자세 파괴</small></section>
@@ -811,8 +953,8 @@ export function RaonActionBattle({ doctrine, difficulty, mission, heroes, raonSt
               <section><kbd>1 ~ {model.companions.length}</kbd><strong>편성 동료 명령</strong><small>방벽·표식·정찰 등 동료의 실제 기술</small></section>
             </div>
             <div className="action-onboarding-actions">
-              <button onClick={onSwitchMode}><Target size={17} /> 전술 모드로 시작</button>
-              <button className="primary" onClick={beginActionBattle}><Swords size={17} /> 액션 전투 시작</button>
+              <button onClick={switchMode}><Target size={17} /> 전술 모드로 시작</button>
+              <button className="primary" onClick={beginActionBattle}><Swords size={17} /> {resumeOpen ? '작전 이어가기' : '액션 전투 시작'}</button>
             </div>
           </article>
         </div>

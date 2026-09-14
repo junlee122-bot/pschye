@@ -4,6 +4,8 @@ import { raonChoiceMeta } from '../data/story';
 import type { CampaignProfile, NavigationSection, RaonStoryChoiceId } from '../types';
 import type { CampaignSlotSummary } from '../game/persistence';
 import { getVillageRescue } from '../game/villageRescueProgression';
+import { getKnownMissions } from '../game/storyAccess';
+import { BattleResumeCard } from './BattleResumeCard';
 
 interface TitleScreenProps {
   activeSlot: number;
@@ -12,9 +14,13 @@ interface TitleScreenProps {
   onNavigate: (section: NavigationSection) => void;
   onReset: () => void;
   onSelectSlot: (slot: number) => void;
+  onResumeBattle?: () => void;
 }
 
-export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, onSelectSlot }: TitleScreenProps) {
+export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, onSelectSlot, onResumeBattle }: TitleScreenProps) {
+  const savedBattle = profile.originStory.completed && profile.battleAttempt
+    && getKnownMissions(profile).some((mission) => mission.id === profile.battleAttempt?.missionId)
+    ? profile.battleAttempt : undefined;
   const hasProgress = profile.originStory.completedSceneIds.length > 0
     || Object.keys(profile.originStory.choices).length > 0
     || profile.completedMissions.length > 0
@@ -60,9 +66,9 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
         </div>
 
         <div className="title-actions">
-          <button className="primary-action" onClick={() => onNavigate('campaign')}>
+          <button className="primary-action" onClick={() => savedBattle && onResumeBattle ? onResumeBattle() : onNavigate('campaign')}>
             <Footprints size={18} />
-            {hasProgress ? '라온의 이야기 계속' : '변방 마을에서 시작'}
+            {savedBattle ? savedBattle.battle.outcome === 'active' ? '저장된 작전 이어하기' : '저장된 결과 보기' : hasProgress ? '라온의 이야기 계속' : '변방 마을에서 시작'}
             <ChevronRight size={18} />
           </button>
           <button className="secondary-action" onClick={() => onNavigate('codex')}>
@@ -72,6 +78,8 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
             <Archive size={17} /> 여정 화첩
           </button>
         </div>
+
+        <BattleResumeCard profile={profile} compact />
 
         <section className="title-save-slots" aria-label="여정 저장 슬롯">
           <div className="title-save-heading"><HardDrive size={15} /><span>오프라인 자동 저장 · 슬롯 {activeSlot}</span></div>

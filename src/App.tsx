@@ -1,4 +1,4 @@
-import { lazy, Suspense, useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { PlayerArchive } from './components/PlayerArchive';
 import { Activities } from './components/Activities';
 import { BattleScreen } from './components/BattleScreen';
@@ -14,27 +14,23 @@ import { TopNavigation } from './components/TopNavigation';
 import { WorldMap } from './components/WorldMap';
 import { getMission } from './data/campaign';
 import { getOriginStoryScene } from './data/originStory';
-import { getRaonStoryBeat } from './data/story';
 import { isVillageOriginScene } from './data/village';
 import type { BattleDoctrine } from './game/battleEngine';
 import { executeGameCommand } from './game/simulation';
 import { CampaignSlotSession } from './game/persistence';
 import { isAuthorWorkspace } from './game/storyAccess';
+import { abandonCampaignBattle, beginCampaignBattle, restartCampaignBattle, saveCampaignBattleCheckpoint, settleCampaignBattle } from './game/campaignBattle';
 import { applyVillageRescueAction, completeVillageRescueReturn, getVillageRescue, retryVillageRescue, startVillageRescue } from './game/villageRescueProgression';
 import {
-  buildProgressedHeroes,
   advanceDay,
   advanceOriginStory,
-  completeMission,
   createNewCampaignProfile,
   craftEquipment,
   claimDailyOrders,
   chooseRaonStoryPath,
   chooseOriginStoryPath,
   equipHeroItem,
-  getBondKey,
   getActiveCampaignSlot,
-  getWarPressure,
   listCampaignSlots,
   loadCampaignProfile,
   placeHeadquartersRoom,
@@ -48,7 +44,7 @@ import {
   unlockHeroNode,
   upgradeFacility,
 } from './game/progression';
-import type { BattleState, DailyActivityId, FacilityId, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
+import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, DailyActivityId, FacilityId, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
 
 const VillageAdventure = lazy(() => import('./components/VillageAdventure').then((module) => ({ default: module.VillageAdventure })));
 const VillageRescueEncounter = lazy(() => import('./components/VillageRescueEncounter').then((module) => ({ default: module.VillageRescueEncounter })));
@@ -56,6 +52,7 @@ const AuthorWorkspace = import.meta.env.DEV ? lazy(() => import('./components/Au
 const navigationSections: NavigationSection[] = [
   'title', 'campaign', 'world', 'roster', 'headquarters', 'activities', 'chronicle', 'codex', 'archive',
 ];
+const createBattleAttemptId = () => crypto.randomUUID();
 
 export function App() {
   if (AuthorWorkspace && isAuthorWorkspace(import.meta.env.DEV, window.location.search)) {
@@ -76,29 +73,23 @@ function CampaignApp() {
   const [hydration, setHydration] = useState<{ slot: number; status: 'loading' | 'ready' | 'blocked'; message?: string }>({ slot: activeSlot, status: 'loading' });
   const [activeMissionId, setActiveMissionId] = useState<string | null>(null);
   const [focusedMissionId, setFocusedMissionId] = useState<string | undefined>();
-  const [activeDoctrine, setActiveDoctrine] = useState<BattleDoctrine>('shelter');
-  const [activeDifficulty, setActiveDifficulty] = useState<MissionDifficulty>('standard');
-  const [activeStoryChoice, setActiveStoryChoice] = useState<RaonStoryChoiceId>('resolve');
+  const [battleSession, setBattleSession] = useState(0);
+  const liveBattleSession = useRef(0);
   const [notice, setNotice] = useState<{ title: string; detail: string } | null>(null);
   const [saveFailed, setSaveFailed] = useState(false);
-  const activeMission = activeMissionId ? getMission(activeMissionId) : undefined;
-  const progressedHeroes = useMemo(() => buildProgressedHeroes(profile), [profile]);
-  const deployedHeroes = useMemo(
-    () => progressedHeroes.filter((hero) => profile.activeSquad.includes(hero.id)),
-    [profile.activeSquad, progressedHeroes],
-  );
-  const activeStoryBeat = activeMission ? getRaonStoryBeat(activeMission.id) : undefined;
-  const activeWarPressure = getWarPressure(profile).value;
-  const activeBondSupport = activeStoryBeat
-    ? profile.bondLevels[getBondKey('raon', activeStoryBeat.companionId)] ?? 0
-    : 0;
+  const attempt = profile.battleAttempt;
+  const activeAttempt = attempt?.missionId === activeMissionId ? attempt : undefined;
+  const activeAttemptId = activeAttempt?.id;
+  const activeMission = activeAttempt ? getMission(activeAttempt.missionId) : undefined;
 
   useEffect(() => {
     setHydration({ slot: activeSlot, status: 'loading' });
     void saveSession.load(activeSlot, loadCampaignProfile).then((result) => {
       if (!result) return;
       if (result.status === 'ready') {
-        setProfile(result.profile);
+        const pending = result.profile.battleAttempt;
+        setProfile(pending?.battle.outcome === 'victory' && !pending.settled
+          ? settleCampaignBattle(result.profile, pending.id, pending.battle) : result.profile);
         setHydration({ slot: activeSlot, status: 'ready' });
       } else {
         setHydration({ slot: activeSlot, status: 'blocked', message: result.message });
@@ -133,22 +124,56 @@ function CampaignApp() {
   const navigate = useCallback((nextSection: NavigationSection) => {
     setSection(nextSection);
     if (nextSection !== 'campaign') setActiveMissionId(null);
-  }, []);
+    else if (profile.battleAttempt) setActiveMissionId(profile.battleAttempt.missionId);
+  }, [profile.battleAttempt]);
 
   const launchMission = useCallback((missionId: string, doctrine: BattleDoctrine, difficulty: MissionDifficulty) => {
+    const id = createBattleAttemptId();
+    if (beginCampaignBattle(profile, missionId, doctrine, difficulty, id) === profile) {
+      setNotice({ title: '출전 준비 확인', detail: '진행 중인 작전을 먼저 이어가거나 정리하고, 선택과 출격조 편성을 확인해 주세요.' });
+      return;
+    }
+    setProfile((current) => beginCampaignBattle(current, missionId, doctrine, difficulty, id));
     setActiveMissionId(missionId);
-    setActiveDoctrine(doctrine);
-    setActiveDifficulty(difficulty);
-    setActiveStoryChoice(profile.storyChoices[missionId] ?? 'resolve');
     setSection('campaign');
-  }, [profile.storyChoices]);
+  }, [profile]);
+
+  const checkpointBattle = useCallback((patch: CampaignBattleCheckpointPatch) => {
+    if (!activeAttemptId || liveBattleSession.current !== battleSession || !saveSession.canSave(activeSlot)) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? saveCampaignBattleCheckpoint(current, activeAttemptId, patch) : current);
+  }, [activeAttemptId, activeSlot, battleSession, saveSession]);
 
   const finishMission = useCallback((state: BattleState) => {
-    const mission = getMission(state.missionId);
-    if (!mission) return;
-    setProfile((current) => completeMission(current, mission, state).profile);
-    setNotice({ title: '작전 기록 반영', detail: `${mission.title} 전투 결과와 최고 등급을 저장했습니다.` });
-  }, []);
+    if (!activeAttemptId || liveBattleSession.current !== battleSession || !saveSession.canSave(activeSlot)) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? settleCampaignBattle(current, activeAttemptId, state) : current);
+  }, [activeAttemptId, activeSlot, battleSession, saveSession]);
+
+  const restartBattle = useCallback((mode: CampaignBattleMode) => {
+    if (!activeAttemptId || liveBattleSession.current !== battleSession || !saveSession.canSave(activeSlot)) return;
+    const nextId = createBattleAttemptId();
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? restartCampaignBattle(current, activeAttemptId, nextId, mode) : current);
+  }, [activeAttemptId, activeSlot, battleSession, saveSession]);
+
+  const resumeBattle = () => {
+    if (!profile.battleAttempt) return;
+    setSection('campaign');
+    setActiveMissionId(profile.battleAttempt.missionId);
+  };
+
+  const discardBattle = () => {
+    const saved = profile.battleAttempt;
+    if (!saved || !window.confirm('저장된 작전 진행을 정리하고 출전 준비로 돌아갈까요? 이미 받은 보상과 이야기 선택은 유지됩니다.')) return;
+    setProfile((current) => abandonCampaignBattle(current, saved.id));
+    setActiveMissionId(null);
+  };
+
+  const leaveBattle = () => {
+    if (activeAttempt?.settled) setProfile((current) => abandonCampaignBattle(current, activeAttempt.id));
+    setActiveMissionId(null);
+  };
 
   const openMission = useCallback((missionId: string) => {
     setFocusedMissionId(missionId);
@@ -243,6 +268,8 @@ function CampaignApp() {
   }, []);
 
   const resetCampaign = useCallback(() => {
+    liveBattleSession.current += 1;
+    setBattleSession(liveBattleSession.current);
     saveSession.startNew(activeSlot);
     setProfile(createNewCampaignProfile());
     setHydration({ slot: activeSlot, status: 'ready' });
@@ -253,6 +280,8 @@ function CampaignApp() {
 
   const selectCampaignSlot = useCallback((slot: number) => {
     if (slot === activeSlot) return;
+    liveBattleSession.current += 1;
+    setBattleSession(liveBattleSession.current);
     saveSession.invalidate();
     setHydration({ slot, status: 'loading' });
     setActiveCampaignSlot(slot);
@@ -305,6 +334,7 @@ function CampaignApp() {
         onNavigate={navigate}
         onReset={resetCampaign}
         onSelectSlot={selectCampaignSlot}
+        onResumeBattle={resumeBattle}
       />
     );
   }
@@ -350,20 +380,24 @@ function CampaignApp() {
 
   return withSaveStatus(
     <div className="app-shell">
-      <TopNavigation current={section} onNavigate={navigate} campaignUnlocked={profile.originStory.completed} />
+      {!activeMission && <TopNavigation current={section} onNavigate={navigate} campaignUnlocked={profile.originStory.completed} />}
       {!activeMission && section !== 'campaign' && <CommandDeck profile={profile} current={section} onNavigate={navigate} />}
       <main className={`app-main ${activeMission ? 'app-main-battle' : ''}`}>
-        {section === 'campaign' && activeMission && (
+        {section === 'campaign' && activeMission && activeAttempt && (
           <BattleScreen
-            doctrine={activeDoctrine}
-            difficulty={activeDifficulty}
+            key={`${activeSlot}:${activeAttempt.id}`}
+            initialAttempt={activeAttempt}
+            doctrine={activeAttempt.doctrine}
+            difficulty={activeAttempt.difficulty}
             mission={activeMission}
-            heroes={deployedHeroes}
-            raonStance={activeStoryChoice}
-            warPressure={activeWarPressure}
-            bondSupport={activeBondSupport}
+            heroes={activeAttempt.heroes}
+            raonStance={activeAttempt.raonStance}
+            warPressure={activeAttempt.warPressure}
+            bondSupport={activeAttempt.bondSupport}
+            onCheckpoint={checkpointBattle}
+            onRestart={restartBattle}
             onComplete={finishMission}
-            onExit={() => setActiveMissionId(null)}
+            onExit={leaveBattle}
           />
         )}
         {section === 'campaign' && !activeMission && (
@@ -374,6 +408,8 @@ function CampaignApp() {
             onNavigate={navigate}
             onToggleHero={handleToggleSquadMember}
             onChooseStory={handleChooseStory}
+            onResumeBattle={resumeBattle}
+            onDiscardBattle={discardBattle}
           />
         )}
         {section === 'world' && <WorldMap profile={profile} onOpenMission={openMission} />}

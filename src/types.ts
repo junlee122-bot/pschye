@@ -159,6 +159,34 @@ export interface BattleState {
   bondSupport?: number;
 }
 
+export type CampaignBattleMode = 'select' | 'tactical' | 'action';
+export interface TacticalBattleCheckpoint {
+  history: BattleState[];
+  selectedHeroId: string;
+  selectedSkillId: string;
+}
+export interface CampaignBattleAttempt {
+  id: string;
+  missionId: string;
+  doctrine: 'shelter' | 'counterfire';
+  difficulty: MissionDifficulty;
+  raonStance: RaonStoryChoiceId;
+  warPressure: number;
+  bondSupport: number;
+  heroes: HeroDefinition[];
+  mode: CampaignBattleMode;
+  battle: BattleState;
+  tactical?: TacticalBattleCheckpoint;
+  action?: ActionBattleCheckpoint;
+  settled: boolean;
+}
+export interface CampaignBattleCheckpointPatch {
+  mode?: CampaignBattleMode;
+  battle?: BattleState;
+  tactical?: TacticalBattleCheckpoint;
+  action?: ActionBattleCheckpoint;
+}
+
 export type RaonStoryChoiceId = 'compassion' | 'insight' | 'resolve';
 
 export interface RaonPathStats {
@@ -487,6 +515,7 @@ export interface CraftRecipe {
 export type FacilityId = 'training' | 'archive' | 'infirmary' | 'forge' | 'violet';
 
 export interface CampaignProfile {
+  battleAttempt?: CampaignBattleAttempt;
   version: number;
   commanderName: string;
   day: number;
@@ -530,3 +559,4 @@ export interface FacilityDefinition {
   baseCost: number;
   art: string;
 }
+import type { ActionBattleCheckpoint } from './game/actionBattleCheckpoint';

@@ -1,0 +1,26 @@
+.battle-resume-card { min-width:0; max-width:100%; margin:20px 0; padding:20px; border:1px solid #c8a46550; background:linear-gradient(115deg,#24201bde,#12181bea); color:#e7ddc9; text-align:left; }
+.battle-resume-heading { display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+.battle-resume-heading>div { min-width:0; }
+.battle-resume-eyebrow { display:flex; align-items:center; gap:7px; color:#baa174; font-size:11px; }
+.battle-resume-heading h3 { margin:8px 0 0; font:500 20px/1.5 'Noto Serif KR',serif; overflow-wrap:anywhere; }
+.battle-resume-status { max-width:100%; padding:6px 9px; border:1px solid #ac9a7544; color:#bfc8bd; font-size:11px; line-height:1.5; }
+.battle-resume-status.victory { color:#d6c08e; }.battle-resume-status.defeat { color:#dbaca0; }
+.battle-resume-stats { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,.65fr) minmax(0,1.3fr); gap:14px; margin:18px 0 12px; }
+.battle-resume-stats>div { min-width:0; }.battle-resume-stats dt { color:#8f998f; font-size:11px; line-height:1.6; }.battle-resume-stats dd { margin:4px 0 0; color:#e5d9c0; font-size:13px; line-height:1.6; overflow-wrap:anywhere; }
+.battle-resume-fixed { display:flex; align-items:flex-start; gap:7px; margin:0; color:#b3ac9c; font-size:12px; line-height:1.7; }.battle-resume-fixed svg { flex-shrink:0; margin-top:3px; }.battle-resume-fixed span { min-width:0; }
+.battle-resume-help { margin:9px 0 0; color:#b8aaa0; font-size:12px; line-height:1.7; }
+.battle-resume-actions { display:flex; flex-wrap:wrap; gap:9px; margin-top:17px; }
+.battle-resume-actions button { min-width:0; max-width:100%; min-height:44px; display:flex; align-items:center; justify-content:center; gap:9px; padding:10px 14px; font-size:13px; line-height:1.5; cursor:pointer; }
+.battle-resume-primary { border:1px solid #d5b575; background:#b99a62; color:#191a16; }.battle-resume-discard { border:1px solid #afa18244; background:transparent; color:#bbb3a1; }
+.battle-resume-actions button:focus-visible { outline:2px solid #f0d9a4; outline-offset:3px; }
+.title-content .battle-resume-card { width:min(650px,100%); margin-top:24px; }.battle-resume-card.compact { padding:16px 18px; }.battle-resume-card.compact h3 { font-size:18px; }
+.battle-preparation-notice { margin:12px 0 18px; padding:12px 15px; border-left:2px solid #b69a63; background:#b79d6310; color:#c2b89e; font-size:12px; line-height:1.8; }
+.battle-launch-reason { margin:12px 0 0; color:#d1b59b; font-size:12px; line-height:1.8; }
+@media(max-width:560px) {
+  .battle-resume-card,.battle-resume-card.compact { padding:16px 13px; }
+  .battle-resume-stats { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 12px; }
+  .battle-resume-stats>div:last-child { grid-column:1/-1; }
+  .battle-resume-actions { display:grid; grid-template-columns:1fr; }
+  .battle-resume-actions button { width:100%; }
+  .battle-resume-heading h3 { font-size:18px; }
+}

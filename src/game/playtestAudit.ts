@@ -396,11 +396,19 @@ export function runPlaytestAudit(campaignRuns = 240): PlaytestAuditResult {
   for (let run = 1; run <= campaignRuns; run += 1) {
     const random = createSeededRandom(0x9e3779b9 ^ run);
     let profile = createNewCampaignProfile();
+    profile = { ...profile, originStory: { ...profile.originStory, completed: true } };
     const style = styles[(run - 1) % styles.length]!;
     const difficulty = difficulties[(run - 1) % difficulties.length]!;
     const doctrine = doctrines[(run - 1) % doctrines.length]!;
     const stance = stances[(run - 1) % stances.length]!;
     for (const mission of missions) {
+      // This balance audit visits every operation independently, even after a
+      // previous simulated defeat. Explicit fixtures satisfy the public gate.
+      profile = {
+        ...profile,
+        completedMissions: [...new Set([...profile.completedMissions, ...mission.prerequisites])],
+        storyChoices: { ...profile.storyChoices, [mission.id]: stance },
+      };
       const heroes = buildProgressedHeroes(profile).filter(
         (hero) => profile.activeSquad.includes(hero.id),
       );

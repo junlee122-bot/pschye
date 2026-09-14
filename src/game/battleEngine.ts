@@ -70,8 +70,6 @@ export function getObjectiveMaximumHp(
   return mission.objectiveBaseHp + (doctrine === 'shelter' ? 17 : 0) + getDifficultyRules(difficulty).objectiveHp;
 }
 
-let logSequence = 1;
-
 function createUnit(id: string, maxHp: number, revealed = true): BattleUnitState {
   return {
     id,
@@ -94,7 +92,7 @@ function addLog(
     ...state,
     log: [
       ...state.log,
-      { id: logSequence++, round: state.round, speaker, message, tone },
+      { id: Math.max(0, ...state.log.map((entry) => entry.id)) + 1, round: state.round, speaker, message, tone },
     ].slice(-18),
   };
 }
@@ -107,7 +105,6 @@ export function createInitialBattleState(
   raonStance?: RaonStoryChoiceId,
   context: BattleContextModifiers = {},
 ): BattleState {
-  logSequence = 1;
   const shelter = doctrine === 'shelter';
   const difficultyRules = getDifficultyRules(difficulty);
   const resolvedStance = raonStance ?? 'resolve';
@@ -133,7 +130,7 @@ export function createInitialBattleState(
     })),
     log: [
       {
-        id: logSequence++,
+        id: 1,
         round: 1,
         speaker: '작전 기록',
         message: shelter
@@ -725,20 +722,15 @@ export function triggerTeamFinisher(
 }
 
 function checkOutcome(state: BattleState, mission: MissionDefinition): BattleState {
+  if (state.carriageHp <= 0 || state.heroes.every((hero) => hero.hp <= 0)) {
+    return addLog({ ...state, outcome: 'defeat' }, '작전 실패', mission.defeatText, 'system');
+  }
   if (state.enemies.every((enemy) => enemy.hp <= 0)) {
     return addLog(
       { ...state, outcome: 'victory' },
       '작전 성공',
       mission.victoryText,
       'story',
-    );
-  }
-  if (state.carriageHp <= 0 || state.heroes.every((hero) => hero.hp <= 0)) {
-    return addLog(
-      { ...state, outcome: 'defeat' },
-      '작전 실패',
-      mission.defeatText,
-      'system',
     );
   }
   return state;
