@@ -3,6 +3,7 @@ import { getOriginStoryScene, originStoryScenes } from '../data/originStory';
 import { raonChoiceMeta } from '../data/story';
 import type { CampaignProfile, NavigationSection, RaonStoryChoiceId } from '../types';
 import type { CampaignSlotSummary } from '../game/persistence';
+import { getVillageRescue } from '../game/villageRescueProgression';
 
 interface TitleScreenProps {
   activeSlot: number;
@@ -19,6 +20,14 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
     || profile.completedMissions.length > 0
     || Object.keys(profile.storyChoices).length > 0;
   const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
+  const rescue = originScene.id === 'river-incident' ? getVillageRescue(profile) : undefined;
+  const rescueResume = rescue ? {
+    ready: '수로 구출 준비 · 선택한 방법으로 시작',
+    active: `수로 구출 중 · ${rescue.turn}턴 · 체력 ${rescue.hp}`,
+    failed: '수로 구출 재도전 대기',
+    return: '아이 구출 완료 · 마을로 돌아가는 길',
+    complete: '무사 귀환 확인 완료 · 선발 공고일로',
+  }[rescue.phase] : undefined;
   const dominantPath = (Object.entries(profile.raonPath) as Array<[RaonStoryChoiceId, number]>)
     .sort((left, right) => right[1] - left[1])[0];
 
@@ -91,7 +100,7 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
             <span className={`status-dot ${hasProgress ? 'complete' : ''}`} />
             <span>
               {!profile.originStory.completed
-                ? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
+                ? rescueResume ?? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
                 : `입단 완료 · 작전 ${profile.completedMissions.length}건 · 여정 DAY ${profile.day}`}
             </span>
           </div>

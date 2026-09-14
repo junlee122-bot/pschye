@@ -2,6 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { facilities, missions } from '../data/campaign';
 import { originStoryScenes } from '../data/originStory';
 import { strategicOrders } from '../data/systems';
+import { applyVillageRescueAction, completeVillageRescueReturn, startVillageRescue } from './villageRescueProgression';
+import { villageRescueReturnPoint } from './villageRescue';
 import {
   advanceDay,
   advanceOriginStory,
@@ -36,6 +38,15 @@ function completeOriginStory() {
   let profile = createNewCampaignProfile();
   for (const scene of originStoryScenes) {
     profile = chooseOriginStoryPath(profile, scene.id, scene.choices[0].id);
+    if (scene.id === 'river-incident') {
+      profile = startVillageRescue(profile);
+      for (let step = 0; step < 3; step += 1) profile = applyVillageRescueAction(profile, { type: 'move', dx: 1, dy: 0 });
+      for (let step = 0; step < 3; step += 1) profile = applyVillageRescueAction(profile, { type: 'assist' });
+      for (let step = 0; step < 3; step += 1) profile = applyVillageRescueAction(profile, { type: 'move', dx: -1, dy: 0 });
+      profile = completeVillageRescueReturn({ ...profile, world: { ...profile.world, village: {
+        ...profile.world.village, playerX: villageRescueReturnPoint.x, playerY: villageRescueReturnPoint.y,
+      } } });
+    }
     profile = advanceOriginStory(profile);
   }
   return profile;

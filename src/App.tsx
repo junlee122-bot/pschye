@@ -20,6 +20,7 @@ import type { BattleDoctrine } from './game/battleEngine';
 import { executeGameCommand } from './game/simulation';
 import { CampaignSlotSession } from './game/persistence';
 import { isAuthorWorkspace } from './game/storyAccess';
+import { applyVillageRescueAction, completeVillageRescueReturn, getVillageRescue, retryVillageRescue, startVillageRescue } from './game/villageRescueProgression';
 import {
   buildProgressedHeroes,
   advanceDay,
@@ -47,9 +48,10 @@ import {
   unlockHeroNode,
   upgradeFacility,
 } from './game/progression';
-import type { BattleState, DailyActivityId, FacilityId, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus } from './types';
+import type { BattleState, DailyActivityId, FacilityId, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
 
 const VillageAdventure = lazy(() => import('./components/VillageAdventure').then((module) => ({ default: module.VillageAdventure })));
+const VillageRescueEncounter = lazy(() => import('./components/VillageRescueEncounter').then((module) => ({ default: module.VillageRescueEncounter })));
 const AuthorWorkspace = import.meta.env.DEV ? lazy(() => import('./components/AuthorWorkspace').then((module) => ({ default: module.AuthorWorkspace }))) : null;
 const navigationSections: NavigationSection[] = [
   'title', 'campaign', 'world', 'roster', 'headquarters', 'activities', 'chronicle', 'codex', 'archive',
@@ -226,6 +228,13 @@ function CampaignApp() {
     setProfile((current) => advanceOriginStory(current));
   }, []);
 
+  const handleStartVillageRescue = useCallback(() => setProfile(startVillageRescue), []);
+  const handleVillageRescueAction = useCallback((action: VillageRescueAction) => {
+    setProfile((current) => applyVillageRescueAction(current, action));
+  }, []);
+  const handleRetryVillageRescue = useCallback(() => setProfile(retryVillageRescue), []);
+  const handleVillageRescueReturn = useCallback(() => setProfile(completeVillageRescueReturn), []);
+
   const handleVillageMove = useCallback((x: number, y: number, landmark?: string) => {
     setProfile((current) => ({
       ...current,
@@ -306,6 +315,14 @@ function CampaignApp() {
 
   if (section === 'campaign' && !activeMission && !profile.originStory.completed) {
     const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
+    const rescue = getVillageRescue(profile);
+    if (originScene.id === 'river-incident' && rescue && ['active', 'failed'].includes(rescue.phase)) {
+      return withSaveStatus(
+        <Suspense fallback={<div className="full-engine-loading">수로 구출을 불러오는 중...</div>}>
+          <VillageRescueEncounter state={rescue} onAction={handleVillageRescueAction} onRetry={handleRetryVillageRescue} onExit={() => setSection('title')} />
+        </Suspense>,
+      );
+    }
     if (isVillageOriginScene(originScene)) {
       return withSaveStatus(
         <Suspense fallback={<div className="full-engine-loading"><i /><span>변방 마을을 불러오는 중...</span></div>}>
@@ -314,6 +331,8 @@ function CampaignApp() {
             onChoose={handleChooseOrigin}
             onAdvance={handleAdvanceOrigin}
             onMove={handleVillageMove}
+            onStartRescue={handleStartVillageRescue}
+            onRescueReturn={handleVillageRescueReturn}
             onExit={() => setSection('title')}
           />
         </Suspense>

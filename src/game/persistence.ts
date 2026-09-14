@@ -1,4 +1,5 @@
 import type { CampaignProfile } from '../types';
+import { isVillageRescueState } from './villageRescue';
 
 const databaseName = 'raonjena-saves';
 const storeName = 'campaign-slots';
@@ -116,7 +117,7 @@ const campaignShape = objectWith({
   storyChoices: recordOf(stance),
   narrativeChecks: recordOf(objectWith({ choiceId: stance, chance: number(0, 100), roll: number(1, 100), outcome }, false)),
   relationshipMemories: recordOf(objectWith({ missionId: text, companionId: text, choiceId: stance, text, reaction: text, outcome }, false)),
-  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count }),
+  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState }),
   world: objectWith({
     minutes: number(), phase: oneOf('dawn', 'day', 'dusk', 'night'), weather: oneOf('clear', 'wind', 'rain', 'ash'), currentRegion: text,
     discoveredLocations: strings, eventJournal: strings,
@@ -128,9 +129,17 @@ const campaignShape = objectWith({
 });
 
 export function isCampaignProfileCandidate(value: unknown): value is Partial<CampaignProfile> {
-  return isSaveObject(value) && number(1, Infinity, true)(value.day)
+  const valid = isSaveObject(value) && number(1, Infinity, true)(value.day)
     && isSaveObject(value.heroProgress) && strings(value.completedMissions)
     && campaignShape(value);
+  if (!valid) return false;
+  const origin = value.originStory;
+  if (!isSaveObject(origin) || !('villageRescue' in origin)) return true;
+  const rescue = origin.villageRescue;
+  return isVillageRescueState(rescue) && isSaveObject(origin.choices)
+    && origin.choices['river-incident'] === rescue.choiceId
+    && (rescue.phase === 'complete' || (origin.currentSceneId === 'river-incident' && origin.completed === false
+      && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('river-incident')));
 }
 
 // A slow database open must not let an older snapshot overwrite a newer save.

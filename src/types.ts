@@ -244,6 +244,23 @@ export interface OriginStoryProgress {
   choices: Record<string, string>;
   flags: string[];
   selectionScore: number;
+  villageRescue?: VillageRescueState;
+}
+
+export type VillageRescueChoiceId = 'save-child' | 'mark-safe-route' | 'draw-the-beast';
+export type VillageRescueAction = { type: 'move'; dx: number; dy: number } | { type: 'assist' } | { type: 'guard' };
+export interface VillageRescueState {
+  phase: 'ready' | 'active' | 'failed' | 'return' | 'complete';
+  choiceId: VillageRescueChoiceId;
+  attempt: number;
+  turn: number;
+  hp: number;
+  x: number;
+  y: number;
+  threatRow: number;
+  progress: number;
+  markedColumns: number[];
+  log: string[];
 }
 
 export type WorldTimePhase = 'dawn' | 'day' | 'dusk' | 'night';

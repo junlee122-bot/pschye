@@ -25,6 +25,8 @@ import type {
 } from '../types';
 import { deleteMirroredCampaignSlot, isCampaignProfileCandidate, isSaveObject, mirrorCampaignSlot, nextCampaignSaveTimestamp, restoreMirroredCampaignSlot, type CampaignLoadResult, type CampaignSlotSummary } from './persistence';
 import { createWorldSimulationState, executeGameCommand } from './simulation';
+import { createVillageRescue, isVillageRescueChoiceId } from './villageRescue';
+import { getVillageRescue, migrateVillageRescue, villageRescueSceneId } from './villageRescueProgression';
 
 export const campaignStorageKey = 'raonjena-campaign-v10';
 export const activeCampaignSlotKey = 'raonjena-active-slot';
@@ -130,7 +132,7 @@ function migrateProfile(parsed: Partial<CampaignProfile>): CampaignProfile {
   const defaults = createNewCampaignProfile();
   const activeSquad = parsed.activeSquad?.filter((id) => heroDefinitions.some((hero) => hero.id === id));
   const inventory = parsed.inventory?.filter((id) => Boolean(getEquipment(id))) ?? [];
-  return {
+  return migrateVillageRescue({
     ...defaults,
     ...parsed,
     version: 10,
@@ -175,7 +177,7 @@ function migrateProfile(parsed: Partial<CampaignProfile>): CampaignProfile {
         completedErrands: parsed.world?.village?.completedErrands ?? defaults.world.village.completedErrands,
       },
     },
-  };
+  });
 }
 
 function clamp(value: number, minimum: number, maximum: number) {
@@ -223,6 +225,8 @@ export function chooseOriginStoryPath(
   if (scene.id !== profile.originStory.currentSceneId) return profile;
   const choice = scene.choices.find((entry) => entry.id === choiceId);
   if (!choice) return profile;
+  const rescue = sceneId === villageRescueSceneId && isVillageRescueChoiceId(choiceId)
+    ? createVillageRescue(choiceId) : undefined;
 
   const pathLabels: Record<RaonStoryChoiceId, string> = { compassion: '연민', insight: '통찰', resolve: '결의' };
   const raonPath = { ...profile.raonPath, [choice.path]: profile.raonPath[choice.path] + 1 };
@@ -234,7 +238,7 @@ export function chooseOriginStoryPath(
     npcId: scene.speakerId,
     choiceId,
     affinity: speakerIsCompanion ? 4 : 2,
-    fact: choice.result,
+    fact: rescue ? `수로 구출 방법을 정했다: ${choice.title}` : choice.result,
   });
 
   return {
@@ -243,8 +247,9 @@ export function chooseOriginStoryPath(
     originStory: {
       ...profile.originStory,
       choices: { ...profile.originStory.choices, [sceneId]: choiceId },
-      flags: [...new Set([...profile.originStory.flags, choice.flag])],
+      flags: rescue ? profile.originStory.flags : [...new Set([...profile.originStory.flags, choice.flag])],
       selectionScore: profile.originStory.selectionScore + choice.score,
+      ...(rescue ? { villageRescue: rescue } : {}),
     },
     bondLevels: speakerIsCompanion
       ? { ...profile.bondLevels, [bondKey]: Math.min(100, (profile.bondLevels[bondKey] ?? 0) + 4) }
@@ -261,6 +266,8 @@ export function advanceOriginStory(profile: CampaignProfile) {
   if (profile.originStory.completed) return profile;
   const scene = getOriginStoryScene(profile.originStory.currentSceneId);
   if (!profile.originStory.choices[scene.id]) return profile;
+  if (scene.id === villageRescueSceneId && !profile.originStory.completedSceneIds.includes(scene.id)
+    && getVillageRescue(profile)?.phase !== 'complete') return profile;
   const completedSceneIds = [...new Set([...profile.originStory.completedSceneIds, scene.id])];
 
   if (scene.nextSceneId) {
