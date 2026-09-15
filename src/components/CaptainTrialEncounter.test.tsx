@@ -1,5 +1,8 @@
+// @vitest-environment jsdom
+import { act, useState } from 'react';
+import { createRoot, type Root } from 'react-dom/client';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { captainTrialApproaches, captainTrialDefinitions } from '../data/captainTrial';
 import { getOriginStoryScene } from '../data/originStory';
 import { createCaptainTrial, resolveCaptainTrialAction } from '../game/captainTrial';
@@ -228,5 +231,64 @@ describe('captain trial saved and public records', () => {
     expect(fresh).toContain('변방 마을에서 시작');
     expect(fresh).not.toContain('대결 준비');
     expect(fresh).not.toContain('의무동');
+  });
+});
+
+describe('captain trial command focus', () => {
+  const actEnvironment = globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT?: boolean };
+  let previousActEnvironment: boolean | undefined;
+  let container: HTMLDivElement;
+  let root: Root;
+  let currentState: CaptainTrialState;
+  beforeAll(() => { previousActEnvironment = actEnvironment.IS_REACT_ACT_ENVIRONMENT; actEnvironment.IS_REACT_ACT_ENVIRONMENT = true; });
+  afterAll(() => { actEnvironment.IS_REACT_ACT_ENVIRONMENT = previousActEnvironment; });
+  beforeEach(() => { container = document.createElement('div'); document.body.append(container); root = createRoot(container); });
+  afterEach(() => { act(() => root.unmount()); container.remove(); });
+
+  function mount(initial: CaptainTrialState) {
+    function Session() {
+      const [state, setState] = useState(initial);
+      currentState = state;
+      return <CaptainTrialEncounter state={state} onStart={noop}
+        onAction={(action) => setState((current) => resolveCaptainTrialAction(current, action))}
+        onComplete={() => setState((current) => completeCaptainTrial(profileAt(current), current.sceneId, current.attempt).originStory.captainTrials![current.sceneId]!)}
+        onRetry={noop} onAdvance={noop} onExit={noop} />;
+    }
+    act(() => root.render(<Session />));
+  }
+  function submit(action: CaptainTrialAction) {
+    act(() => container.querySelector<HTMLInputElement>(`input[value="${action}"]`)!.click());
+    const form = container.querySelector('form')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    expect(button.disabled).toBe(false);
+    button.focus();
+    // jsdom needs explicit submission; native Tab/Enter is verified separately in Edge.
+    act(() => form.requestSubmit(button));
+  }
+
+  it('focuses an available unselected command after each turn, skipping exhausted defenses', () => {
+    mount(createCaptainTrial('captain-trials', 'break-spear-not-kain', 1));
+    expect(document.activeElement).toBe(container.querySelector('h1'));
+    for (const [index, action] of (['parry', 'counter', 'sidestep', 'counter'] as const).entries()) {
+      submit(action);
+      expect(currentState.turn).toBe(index + 1);
+      expect(currentState.phase).toBe('active');
+      expect(document.activeElement).toBe(container.querySelector('input:not(:disabled)'));
+      expect(container.querySelectorAll('input:checked')).toHaveLength(0);
+      expect(container.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled).toBe(true);
+    }
+    expect(currentState.breath).toBe(0);
+    expect(document.activeElement).toBe(container.querySelector('input[value="recover"]'));
+  });
+
+  it('keeps resolved and confirmed victory focus on the result instead of the removed command form', () => {
+    mount(createCaptainTrial('captain-trials', 'use-sixteenth-gap', 1));
+    for (const action of ['parry', 'counter', 'sidestep', 'counter', 'parry', 'counter'] as const) submit(action);
+    expect(currentState.phase).toBe('resolved');
+    expect(document.activeElement).toBe(container.querySelector('.captain-trial-message'));
+    expect(container.querySelector('form')).toBeNull();
+    act(() => container.querySelector<HTMLButtonElement>('.captain-trial-message button')!.click());
+    expect(currentState.phase).toBe('complete');
+    expect(document.activeElement).toBe(container.querySelector('.captain-trial-message'));
   });
 });

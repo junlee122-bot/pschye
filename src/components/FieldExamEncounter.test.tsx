@@ -1,5 +1,8 @@
+// @vitest-environment jsdom
+import { act, useState } from 'react';
+import { createRoot, type Root } from 'react-dom/client';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { fieldExamApproaches } from '../data/fieldExam';
 import { getOriginStoryScene } from '../data/originStory';
 import { createFieldExam, resolveFieldExamPlan } from '../game/fieldExam';
@@ -161,5 +164,91 @@ describe('field exam resume and earned memories', () => {
     expect(legacyTitle).not.toContain('폐광 구조 준비');
     expect(legacyTitle).not.toContain('폐광 구조 중');
     expect(renderToStaticMarkup(<Chronicle profile={advanced} />)).toContain(getOriginStoryScene('field-exam').choices[1].result);
+  });
+});
+
+describe('field exam command focus', () => {
+  const actEnvironment = globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT?: boolean };
+  let previousActEnvironment: boolean | undefined;
+  let container: HTMLDivElement;
+  let root: Root;
+  let currentState: FieldExamState;
+
+  beforeAll(() => {
+    previousActEnvironment = actEnvironment.IS_REACT_ACT_ENVIRONMENT;
+    actEnvironment.IS_REACT_ACT_ENVIRONMENT = true;
+  });
+  afterAll(() => { actEnvironment.IS_REACT_ACT_ENVIRONMENT = previousActEnvironment; });
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.append(container);
+    root = createRoot(container);
+  });
+  afterEach(() => {
+    act(() => root.unmount());
+    container.remove();
+  });
+
+  function mount(choice: FieldExamChoiceId) {
+    function Session() {
+      const [state, setState] = useState(() => createFieldExam(choice, 1));
+      currentState = state;
+      return <FieldExamEncounter state={state} onStart={noop}
+        onPlan={(plan) => setState((current) => resolveFieldExamPlan(current, plan))}
+        onReturn={() => setState((current) => completeFieldExamReturn(profileAt(current), current.attempt).originStory.fieldExam!)}
+        onRetry={noop} onAdvance={noop} onExit={noop} />;
+    }
+    act(() => root.render(<Session />));
+  }
+  function command(actor: 'raon' | 'leo', order: 'left' | 'right' | 'brace') {
+    return container.querySelector<HTMLInputElement>(`input[name="field-exam-${actor}"][value="${order}"]`)!;
+  }
+  function submit(raon: 'left' | 'right' | 'brace', leo: 'left' | 'right' | 'brace') {
+    act(() => { command('raon', raon).click(); command('leo', leo).click(); });
+    const form = container.querySelector('form')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    expect(button.disabled).toBe(false);
+    button.focus();
+    // jsdom does not synthesize native Enter submission or Tab navigation.
+    // Exercise the same focused form submit; the native sequence is checked in Edge.
+    act(() => form.requestSubmit(button));
+  }
+
+  it('returns focus to the first command after each active turn without selecting or submitting it', () => {
+    mount('split-route');
+    expect(document.activeElement).toBe(container.querySelector('h1'));
+    for (let turn = 1; turn <= 2; turn += 1) {
+      submit('left', 'right');
+      expect(currentState.turn).toBe(turn);
+      expect(currentState.phase).toBe('active');
+      expect(document.activeElement).toBe(command('raon', 'left'));
+      expect(container.querySelectorAll('input:checked')).toHaveLength(0);
+      expect(container.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled).toBe(true);
+    }
+  });
+
+  it('skips the newly completed route when focusing the next command', () => {
+    mount('rescue-team');
+    submit('left', 'left');
+    submit('left', 'brace');
+    expect(currentState.phase).toBe('active');
+    expect(currentState.left).toBe(3);
+    expect(command('raon', 'left').disabled).toBe(true);
+    expect(document.activeElement).toBe(command('raon', 'right'));
+    expect(command('raon', 'right').checked).toBe(false);
+  });
+
+  it.each(['split-route', 'rescue-team'] as const)('keeps %s result focus on the outcome, including confirmed withdrawal', (choice) => {
+    mount(choice);
+    for (let turn = 0; turn < 3; turn += 1) submit('left', 'right');
+    const result = container.querySelector('.field-exam-stage-message')!;
+    expect(document.activeElement).toBe(result);
+    expect(container.querySelector('form')).toBeNull();
+    expect(currentState.phase).toBe(choice === 'split-route' ? 'return' : 'failed');
+    if (choice === 'split-route') {
+      act(() => result.querySelector<HTMLButtonElement>('button')!.click());
+      expect(currentState.phase).toBe('complete');
+      expect(document.activeElement).toBe(container.querySelector('.field-exam-stage-message'));
+    }
   });
 });

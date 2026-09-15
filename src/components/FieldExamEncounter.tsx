@@ -22,6 +22,8 @@ const actors = [{ id: 'raon', name: '라온', portrait: '/art/portraits/raon-v1.
 export function FieldExamEncounter({ state, onStart, onPlan, onRetry, onReturn, onAdvance, onExit }: Props) {
   const [orders, setOrders] = useState<Partial<FieldExamPlan>>({});
   const resultRef = useRef<HTMLElement>(null);
+  const commandRef = useRef<HTMLFormElement>(null);
+  const previousTurn = useRef(state.turn);
   const approach = fieldExamApproaches[state.choiceId];
   const active = state.phase === 'active';
   const firstSupport = state.choiceId === 'defy-order' && state.turn === 0;
@@ -35,9 +37,12 @@ export function FieldExamEncounter({ state, onStart, onPlan, onRetry, onReturn, 
   const status = { ready: '구조 준비', active: '구조 지휘', failed: '시도 중단', return: '철수 확인 대기', complete: '전원 철수 완료' }[state.phase];
 
   useEffect(() => {
+    const nextCommand = state.phase === 'active' && state.turn > previousTurn.current;
+    previousTurn.current = state.turn;
     if (['failed', 'return', 'complete'].includes(state.phase)) resultRef.current?.focus();
+    else if (nextCommand) commandRef.current?.querySelector<HTMLInputElement>('input:not(:disabled)')?.focus();
     else document.getElementById('field-exam-title')?.focus({ preventScroll: true });
-  }, [state.phase]);
+  }, [state.phase, state.turn]);
 
   const executePlan = (event: FormEvent) => {
     event.preventDefault();
@@ -86,7 +91,7 @@ export function FieldExamEncounter({ state, onStart, onPlan, onRetry, onReturn, 
           <ul><li>라온과 레오의 명령을 고르고 함께 실행합니다.</li><li>한 통로에 구조 명령을 세 번 보내면 지원자가 출구에 도착합니다.</li><li>받치기로 버팀을 회복하세요. 0이 되면 이번 시도를 중단합니다.</li><li>명령을 실행할 때만 시간이 흐릅니다.</li></ul>
           <button className="field-exam-primary" onClick={onStart}>구조 지휘 시작 <ArrowRight size={17} /></button>
         </section>}
-        {active && <form onSubmit={executePlan}>
+        {active && <form ref={commandRef} onSubmit={executePlan}>
           <div className="field-exam-console-title"><span>02 / 동료에게 명령</span><h2>각자의 역할을 정하세요.</h2><p>명령 두 개를 함께 실행합니다. 통로 하나에 집중하거나, 역할을 나눌 수 있습니다.</p></div>
           {actors.map((actor) => <fieldset className="field-exam-orders" key={actor.id}>
             <legend><img src={actor.portrait} alt="" /><span>{actor.name}</span><small>{actor.id === 'raon' && firstSupport ? '첫 명령 · 받치기' : '한 가지 명령 선택'}</small></legend>

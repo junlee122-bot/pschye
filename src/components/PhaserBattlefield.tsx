@@ -315,7 +315,8 @@ class TacticalBattleScene extends Phaser.Scene {
       container.add(this.add.text(0, 62, `피해 예고 -${hero.incoming}`, { fontSize: '10px', color: '#e68179', backgroundColor: '#1c0d0e' }).setOrigin(0.5, 0));
     }
 
-    selection.setInteractive(new Phaser.Geom.Circle(0, 0, 52), Phaser.Geom.Circle.Contains)
+    // Phaser tests local input coordinates after adding the shape's display origin.
+    selection.setInteractive(new Phaser.Geom.Circle(selection.displayOriginX, selection.displayOriginY, 52), Phaser.Geom.Circle.Contains)
       .on('pointerup', () => this.game.events.emit(HERO_EVENT, hero.id))
       .on('pointerover', () => this.tweens.add({ targets: container, scale: 1.08, duration: 100 }))
       .on('pointerout', () => this.tweens.add({ targets: container, scale: 1, duration: 100 }));
@@ -356,7 +357,7 @@ class TacticalBattleScene extends Phaser.Scene {
       container.add(preview);
     }
 
-    ring.setInteractive(new Phaser.Geom.Circle(0, 0, enemy.boss ? 54 : 46), Phaser.Geom.Circle.Contains)
+    ring.setInteractive(new Phaser.Geom.Circle(ring.displayOriginX, ring.displayOriginY, enemy.boss ? 54 : 46), Phaser.Geom.Circle.Contains)
       .on('pointerup', () => {
         this.playCommandTrail(this.model.heroes.find((hero) => hero.selected), enemy);
         this.game.events.emit(ENEMY_EVENT, enemy.id);
@@ -386,9 +387,10 @@ class TacticalBattleScene extends Phaser.Scene {
     const trail = this.add.graphics().setDepth(30);
     trail.lineStyle(5, 0xf0d17d, 0.82).lineBetween(hero.x, hero.y, enemy.x, enemy.y);
     this.tweens.add({ targets: trail, alpha: 0, duration: 260, onComplete: () => trail.destroy() });
-    this.cameras.main.zoomTo(1.018, 90, 'Cubic.Out', true, (_camera, progress) => {
-      if (progress === 1) this.cameras.main.zoomTo(1, 160, 'Cubic.In');
+    this.cameras.main.once(Phaser.Cameras.Scene2D.Events.ZOOM_COMPLETE, () => {
+      this.cameras.main.zoomTo(1, 160, Phaser.Math.Easing.Cubic.In, true);
     });
+    this.cameras.main.zoomTo(1.018, 90, Phaser.Math.Easing.Cubic.Out, true);
   }
 
   private floatDamage(x: number, y: number, amount: number, index: number) {

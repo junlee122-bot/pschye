@@ -27,6 +27,8 @@ const signed = (value: number) => value > 0 ? `+${value}` : String(value);
 export function CaptainTrialEncounter({ state, onStart, onAction, onRetry, onComplete, onAdvance, onExit }: Props) {
   const [selected, setSelected] = useState<CaptainTrialAction>();
   const resultRef = useRef<HTMLElement>(null);
+  const commandRef = useRef<HTMLFormElement>(null);
+  const previousStep = useRef({ sceneId: state.sceneId, turn: state.turn });
   const definition = captainTrialDefinitions[state.sceneId];
   const approach = state.choiceId ? captainTrialApproaches[state.choiceId] : undefined;
   const hadori = state.sceneId === 'hadori-wall';
@@ -39,9 +41,12 @@ export function CaptainTrialEncounter({ state, onStart, onAction, onRetry, onCom
   const counterNeedsBreath = active && !hadori && intent === 'recover' && state.opening && state.breath === 0;
 
   useEffect(() => {
+    const nextCommand = state.phase === 'active' && state.sceneId === previousStep.current.sceneId && state.turn > previousStep.current.turn;
+    previousStep.current = { sceneId: state.sceneId, turn: state.turn };
     if (['failed', 'resolved', 'complete'].includes(state.phase)) resultRef.current?.focus();
+    else if (nextCommand) commandRef.current?.querySelector<HTMLInputElement>('input:not(:disabled)')?.focus();
     else document.getElementById('captain-trial-title')?.focus({ preventScroll: true });
-  }, [state.phase, state.sceneId]);
+  }, [state.phase, state.sceneId, state.turn]);
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
@@ -70,7 +75,7 @@ export function CaptainTrialEncounter({ state, onStart, onAction, onRetry, onCom
         {!hadori && <><dl className="captain-trial-stats" aria-live="polite"><div><dt>균형</dt><dd>{state.poise}<small> / 6</small></dd></div><div><dt>호흡</dt><dd>{state.breath}<small> / 4</small></dd></div><div><dt>동작</dt><dd>{state.turn}<small> / {captainTrialRules.turnLimit}</small></dd></div></dl><div className="captain-trial-meter" role="meter" aria-label="라온의 균형" aria-valuemin={0} aria-valuemax={6} aria-valuenow={state.poise}>{Array.from({ length: 6 }, (_, index) => <i className={index < state.poise ? 'filled' : ''} key={index} />)}</div></>}
         {state.phase === 'ready' && <section className="captain-trial-message"><span>{hadori ? '제1조장 도전전' : '선택한 마음으로'}</span><h2>{hadori ? '남은 한 사람을 향해.' : '이제 선택을 검로로.'}</h2><p>{approach?.pending ?? definition.prelude}</p>{!hadori && <ul><li>찌르기는 창 흘리기, 넓은 공격은 비켜딛기로 받습니다.</li><li>상대가 거둘 때, 만들어 둔 틈에 검로를 잇습니다.</li><li>호흡이 부족하면 거리를 두세요. 균형이 0이 되면 다시 시도합니다.</li><li>동작을 실행할 때만 공방이 진행됩니다.</li></ul>}<button className="captain-trial-primary" onClick={onStart}>{hadori ? '하도리 앞에 서기' : '대결 시작'} <ArrowRight size={17} /></button></section>}
         {active && hadori && <section className="captain-trial-message"><span>라온의 첫 발</span><h2>배운 검을 어디까지 이을 수 있을까.</h2><p>라온은 하도리 앞에서 자세를 잡습니다. 자신의 발로 그 거리에 들어섭니다.</p><button className="captain-trial-primary" onClick={() => onAction('challenge')}>첫 발을 내딛기 <Footprints size={17} /></button></section>}
-        {active && !hadori && <form onSubmit={submit}>
+        {active && !hadori && <form ref={commandRef} onSubmit={submit}>
           <div className="captain-trial-console-title"><span>라온의 대응</span><h2>{counterReady ? '열린 틈을 이을 차례.' : '읽고, 흘리고, 다시 잇기.'}</h2><p className="captain-trial-inline-cue">{cue.label} · {counterReady ? '반격 가능' : counterNeedsBreath ? '호흡을 되찾을 차례' : cue.hint}</p></div>
           <fieldset className="captain-trial-actions"><legend>이번 공방의 동작</legend>{actions.map(({ id, label, Icon, description }) => {
             const allowed = canApplyCaptainTrialAction(state, id);

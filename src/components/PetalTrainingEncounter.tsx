@@ -31,6 +31,8 @@ const petalMarks = Array.from({ length: 16 }, (_, index) => {
 export function PetalTrainingEncounter({ state, onStart, onAction, onRetry, onComplete, onAdvance, onExit }: Props) {
   const [selected, setSelected] = useState<PetalTrainingAction>();
   const resultRef = useRef<HTMLElement>(null);
+  const commandRef = useRef<HTMLFormElement>(null);
+  const previousTurn = useRef(state.turn);
   const active = state.phase === 'active';
   const approach = petalTrainingApproaches[state.choiceId];
   const legal = active && selected !== undefined && canApplyPetalTrainingAction(state, selected);
@@ -38,9 +40,12 @@ export function PetalTrainingEncounter({ state, onStart, onAction, onRetry, onCo
   const stage = Math.min(3, Math.floor(state.petals / 4));
 
   useEffect(() => {
+    const nextCommand = state.phase === 'active' && state.turn > previousTurn.current;
+    previousTurn.current = state.turn;
     if (['failed', 'review', 'complete'].includes(state.phase)) resultRef.current?.focus();
+    else if (nextCommand) commandRef.current?.querySelector<HTMLInputElement>('input:not(:disabled)')?.focus();
     else document.getElementById('petal-training-title')?.focus({ preventScroll: true });
-  }, [state.phase]);
+  }, [state.phase, state.turn]);
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
@@ -80,7 +85,7 @@ export function PetalTrainingEncounter({ state, onStart, onAction, onRetry, onCo
         <div className="petal-training-live" aria-live="polite"><span>궤적 <strong>{state.petals} / 16</strong></span><span>몸의 부담 <strong>{state.burden} / 8</strong></span><span>동작 <strong>{state.turn} / 10</strong></span></div>
         <div className={`petal-training-burden ${state.burden >= 6 ? 'high' : ''}`} role="meter" aria-label="몸의 부담" aria-valuemin={0} aria-valuemax={8} aria-valuenow={state.burden}>{Array.from({ length: 8 }, (_, index) => <i className={index < state.burden ? 'filled' : ''} key={index} />)}</div>
         {state.phase === 'ready' && <section className="petal-training-message"><span>수련 준비</span><h2>모양보다, 이어지는 이유.</h2><p>{approach.pending}</p><p>{approach.instruction}</p><ul><li>10번의 동작 안에 열여섯 궤적을 잇습니다.</li><li>부담이 8에 닿으면 마지막 궤적에서도 멈춥니다.</li><li>호흡을 고르면 진행을 잃지 않고 부담을 낮춥니다.</li><li>동작은 여러 날의 수련 중 한 번의 연습을 나타냅니다.</li></ul><button className="petal-training-primary" onClick={onStart}>궤적 수련 시작 <ArrowRight size={17} /></button></section>}
-        {active && <form onSubmit={submit}>
+        {active && <form ref={commandRef} onSubmit={submit}>
           <div className="petal-training-console-title"><span>다음 동작</span><h2>계속 잇거나, 숨을 고르거나.</h2><p>몸에 여유를 남겨 두고 열여섯 번째 발까지 이어가세요.</p></div>
           <fieldset className="petal-training-actions"><legend>라온의 수련 동작</legend>{actions.map(({ id, label, Icon, description }) => {
             const allowed = canApplyPetalTrainingAction(state, id);

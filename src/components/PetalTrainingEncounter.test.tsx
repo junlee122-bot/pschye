@@ -1,5 +1,8 @@
+// @vitest-environment jsdom
+import { act, useState } from 'react';
+import { createRoot, type Root } from 'react-dom/client';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { describe, expect, it } from 'vitest';
+import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { petalTrainingApproaches } from '../data/petalTraining';
 import { getOriginStoryScene } from '../data/originStory';
 import { createPetalTraining, resolvePetalTrainingAction } from '../game/petalTraining';
@@ -150,5 +153,65 @@ describe('petal training earned records', () => {
     delete advanced.originStory.petalTraining;
     expect(renderToStaticMarkup(<Chronicle profile={advanced} />)).toContain(getOriginStoryScene('sixteen-petals').choices[1].result);
     expect(title(advanced)).toContain('재능이 예상하지 못한 검');
+  });
+});
+
+describe('petal training command focus', () => {
+  const actEnvironment = globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT?: boolean };
+  let previousActEnvironment: boolean | undefined;
+  let container: HTMLDivElement;
+  let root: Root;
+  let currentState: PetalTrainingState;
+  beforeAll(() => { previousActEnvironment = actEnvironment.IS_REACT_ACT_ENVIRONMENT; actEnvironment.IS_REACT_ACT_ENVIRONMENT = true; });
+  afterAll(() => { actEnvironment.IS_REACT_ACT_ENVIRONMENT = previousActEnvironment; });
+  beforeEach(() => { container = document.createElement('div'); document.body.append(container); root = createRoot(container); });
+  afterEach(() => { act(() => root.unmount()); container.remove(); });
+
+  function mount(initial: PetalTrainingState) {
+    function Session() {
+      const [state, setState] = useState(initial);
+      currentState = state;
+      return <PetalTrainingEncounter state={state} onStart={noop}
+        onAction={(action) => setState((current) => resolvePetalTrainingAction(current, action))}
+        onComplete={() => setState((current) => completePetalTraining(profileAt(current), current.attempt).originStory.petalTraining!)}
+        onRetry={noop} onAdvance={noop} onExit={noop} />;
+    }
+    act(() => root.render(<Session />));
+  }
+  function submit(action: PetalTrainingAction) {
+    act(() => container.querySelector<HTMLInputElement>(`input[value="${action}"]`)!.click());
+    const form = container.querySelector('form')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    expect(button.disabled).toBe(false);
+    button.focus();
+    // jsdom needs explicit submission; native Tab/Enter is verified separately in Edge.
+    act(() => form.requestSubmit(button));
+  }
+
+  it('focuses the next unselected action each turn, then preserves review and completion focus', () => {
+    mount(createPetalTraining('distribute-weight', 1));
+    expect(document.activeElement).toBe(container.querySelector('h1'));
+    for (let turn = 1; turn <= 6; turn += 1) {
+      submit('balance');
+      expect(currentState.turn).toBe(turn);
+      if (turn < 6) {
+        expect(document.activeElement).toBe(container.querySelector('input[value="trace"]'));
+        expect(container.querySelectorAll('input:checked')).toHaveLength(0);
+        expect(container.querySelector<HTMLButtonElement>('button[type="submit"]')!.disabled).toBe(true);
+      }
+    }
+    expect(currentState.phase).toBe('review');
+    expect(document.activeElement).toBe(container.querySelector('.petal-training-message'));
+    act(() => container.querySelector<HTMLButtonElement>('.petal-training-message button')!.click());
+    expect(currentState.phase).toBe('complete');
+    expect(document.activeElement).toBe(container.querySelector('.petal-training-message'));
+  });
+
+  it('focuses the interruption instead of a removed form when the final petal reaches the burden limit', () => {
+    mount(practice('step-beyond-fall', ['trace', 'trace', 'balance']));
+    submit('trace');
+    expect(currentState).toMatchObject({ phase: 'failed', petals: 16, burden: 8 });
+    expect(document.activeElement).toBe(container.querySelector('[role="alert"]'));
+    expect(container.querySelector('form')).toBeNull();
   });
 });
