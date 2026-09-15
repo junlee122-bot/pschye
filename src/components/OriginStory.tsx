@@ -61,13 +61,23 @@ export function OriginStory({ profile, onChoose, onAdvance, onExit }: OriginStor
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.defaultPrevented || event.repeat || event.isComposing
+        || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      if (event.target instanceof Element && event.target.closest(
+        'button, a, input, select, textarea, [contenteditable]:not([contenteditable="false"])',
+      )) return;
       if (event.key === 'Enter' && selectedChoice) {
+        event.preventDefault();
         onAdvance();
         return;
       }
+      if (!['1', '2', '3'].includes(event.key)) return;
       const index = Number(event.key) - 1;
       const choice = scene.choices[index];
-      if (!selectedChoice && choice) onChoose(scene.id, choice.id);
+      if (!selectedChoice && choice) {
+        event.preventDefault();
+        onChoose(scene.id, choice.id);
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);

@@ -87,6 +87,9 @@ function CampaignApp() {
   const activeAttempt = attempt?.missionId === activeMissionId ? attempt : undefined;
   const activeAttemptId = activeAttempt?.id;
   const activeMission = activeAttempt ? getMission(activeAttempt.missionId) : undefined;
+  const villageRescue = getVillageRescue(profile);
+  const rescueAttempt = villageRescue?.attempt;
+  const rescueTurn = villageRescue?.turn;
   const fieldExam = getFieldExam(profile);
   const fieldAttempt = fieldExam?.attempt;
   const fieldTurn = fieldExam?.turn;
@@ -262,8 +265,9 @@ function CampaignApp() {
   }, []);
 
   const handleChooseOrigin = useCallback((sceneId: string, choiceId: string) => {
-    setProfile((current) => chooseOriginStoryPath(current, sceneId, choiceId));
-  }, []);
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? chooseOriginStoryPath(current, sceneId, choiceId) : current);
+  }, [activeSlot, battleSession, saveSession]);
 
   const handleAdvanceOrigin = useCallback(() => {
     setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
@@ -327,19 +331,34 @@ function CampaignApp() {
       ? completeCaptainTrial(current, trialSceneId, trialAttempt) : current);
   }, [activeSlot, battleSession, trialSceneId, trialAttempt, saveSession]);
 
-  const handleStartVillageRescue = useCallback(() => setProfile(startVillageRescue), []);
+  const handleStartVillageRescue = useCallback(() => {
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? startVillageRescue(current) : current);
+  }, [activeSlot, battleSession, saveSession]);
   const handleVillageRescueAction = useCallback((action: VillageRescueAction) => {
-    setProfile((current) => applyVillageRescueAction(current, action));
-  }, []);
-  const handleRetryVillageRescue = useCallback(() => setProfile(retryVillageRescue), []);
-  const handleVillageRescueReturn = useCallback(() => setProfile(completeVillageRescueReturn), []);
+    if (rescueAttempt === undefined || rescueTurn === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.villageRescue?.attempt === rescueAttempt && current.originStory.villageRescue.turn === rescueTurn
+      ? applyVillageRescueAction(current, action) : current);
+  }, [activeSlot, battleSession, rescueAttempt, rescueTurn, saveSession]);
+  const handleRetryVillageRescue = useCallback(() => {
+    if (rescueAttempt === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.villageRescue?.attempt === rescueAttempt ? retryVillageRescue(current) : current);
+  }, [activeSlot, battleSession, rescueAttempt, saveSession]);
+  const handleVillageRescueReturn = useCallback(() => {
+    if (rescueAttempt === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.villageRescue?.attempt === rescueAttempt ? completeVillageRescueReturn(current) : current);
+  }, [activeSlot, battleSession, rescueAttempt, saveSession]);
 
   const handleVillageMove = useCallback((x: number, y: number, landmark?: string) => {
-    setProfile((current) => ({
-      ...current,
-      world: executeGameCommand(current.world, { type: 'move', x, y, landmark }).state,
-    }));
-  }, []);
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.currentSceneId === profile.originStory.currentSceneId && !current.originStory.completed ? {
+        ...current,
+        world: executeGameCommand(current.world, { type: 'move', x, y, landmark }).state,
+      } : current);
+  }, [activeSlot, battleSession, profile.originStory.currentSceneId, saveSession]);
 
   const resetCampaign = useCallback(() => {
     liveBattleSession.current += 1;
