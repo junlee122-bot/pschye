@@ -104,6 +104,8 @@ public/
 
 ## 문서
 
+- [다른 로컬에서 이어받기](docs/HANDOFF_CURRENT.md)
+- [젤다·붉은사막 수준을 위한 제작 조사](docs/AAA_PRODUCTION_RESEARCH.md)
 - [Unity 3인칭 조작 기반과 검증 상태](docs/THIRD_PERSON_FOUNDATION.md)
 - [게임 설계](docs/GAME_DESIGN.md)
 - [대형 RPG 확장 로드맵](docs/EXPANSION_ROADMAP.md)
