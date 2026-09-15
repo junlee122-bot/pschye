@@ -6,6 +6,7 @@ import { applyVillageRescueAction, completeVillageRescueReturn, startVillageResc
 import { villageRescueReturnPoint } from './villageRescue';
 import { applyFieldExamPlan, completeFieldExamReturn, startFieldExam } from './fieldExamProgression';
 import { applyPetalTrainingAction, completePetalTraining, startPetalTraining } from './petalTrainingProgression';
+import { applyCaptainTrialAction, completeCaptainTrial, startCaptainTrial } from './captainTrialProgression';
 import { missionReadyProfile, victoriousBattle } from './campaignTestFixtures';
 import {
   advanceDay,
@@ -40,6 +41,11 @@ import {
 function completeOriginStory() {
   let profile = createNewCampaignProfile();
   for (const scene of originStoryScenes) {
+    if (scene.id === 'hadori-wall') {
+      profile = startCaptainTrial(profile, scene.id);
+      profile = applyCaptainTrialAction(profile, scene.id, 1, 0, 'challenge');
+      profile = completeCaptainTrial(profile, scene.id, 1);
+    }
     profile = chooseOriginStoryPath(profile, scene.id, scene.choices[0].id);
     if (scene.id === 'river-incident') {
       profile = startVillageRescue(profile);
@@ -64,6 +70,14 @@ function completeOriginStory() {
         profile = applyPetalTrainingAction(profile, 1, profile.originStory.petalTraining!.turn, action);
       }
       profile = completePetalTraining(profile, 1);
+    }
+    if (scene.id === 'captain-trials' || scene.id === 'kazrin-duel') {
+      profile = startCaptainTrial(profile, scene.id);
+      const actions = scene.id === 'captain-trials'
+        ? ['parry', 'counter', 'sidestep', 'counter', 'recover', 'recover', 'sidestep', 'counter'] as const
+        : ['sidestep', 'parry', 'counter', 'sidestep', 'recover', 'recover', 'sidestep', 'parry', 'counter', 'sidestep', 'recover', 'recover', 'sidestep', 'parry', 'counter'] as const;
+      for (const action of actions) profile = applyCaptainTrialAction(profile, scene.id, 1, profile.originStory.captainTrials![scene.id]!.turn, action);
+      profile = completeCaptainTrial(profile, scene.id, 1);
     }
     profile = advanceOriginStory(profile);
   }

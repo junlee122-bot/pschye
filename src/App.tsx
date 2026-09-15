@@ -23,6 +23,7 @@ import { abandonCampaignBattle, beginCampaignBattle, restartCampaignBattle, save
 import { applyVillageRescueAction, completeVillageRescueReturn, getVillageRescue, retryVillageRescue, startVillageRescue } from './game/villageRescueProgression';
 import { applyFieldExamPlan, completeFieldExamReturn, getFieldExam, retryFieldExam, startFieldExam } from './game/fieldExamProgression';
 import { applyPetalTrainingAction, completePetalTraining, getPetalTraining, retryPetalTraining, startPetalTraining } from './game/petalTrainingProgression';
+import { applyCaptainTrialAction, completeCaptainTrial, getCaptainTrial, retryCaptainTrial, startCaptainTrial } from './game/captainTrialProgression';
 import {
   advanceDay,
   advanceOriginStory,
@@ -46,12 +47,13 @@ import {
   unlockHeroNode,
   upgradeFacility,
 } from './game/progression';
-import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, DailyActivityId, FacilityId, FieldExamPlan, MissionDifficulty, NavigationSection, PetalTrainingAction, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
+import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, CaptainTrialAction, DailyActivityId, FacilityId, FieldExamPlan, MissionDifficulty, NavigationSection, PetalTrainingAction, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
 
 const VillageAdventure = lazy(() => import('./components/VillageAdventure').then((module) => ({ default: module.VillageAdventure })));
 const VillageRescueEncounter = lazy(() => import('./components/VillageRescueEncounter').then((module) => ({ default: module.VillageRescueEncounter })));
 const FieldExamEncounter = lazy(() => import('./components/FieldExamEncounter').then((module) => ({ default: module.FieldExamEncounter })));
 const PetalTrainingEncounter = lazy(() => import('./components/PetalTrainingEncounter').then((module) => ({ default: module.PetalTrainingEncounter })));
+const CaptainTrialEncounter = lazy(() => import('./components/CaptainTrialEncounter').then((module) => ({ default: module.CaptainTrialEncounter })));
 const AuthorWorkspace = import.meta.env.DEV ? lazy(() => import('./components/AuthorWorkspace').then((module) => ({ default: module.AuthorWorkspace }))) : null;
 const navigationSections: NavigationSection[] = [
   'title', 'campaign', 'world', 'roster', 'headquarters', 'activities', 'chronicle', 'codex', 'archive',
@@ -91,6 +93,10 @@ function CampaignApp() {
   const petalTraining = getPetalTraining(profile);
   const trainingAttempt = petalTraining?.attempt;
   const trainingTurn = petalTraining?.turn;
+  const captainTrial = getCaptainTrial(profile);
+  const trialSceneId = captainTrial?.sceneId;
+  const trialAttempt = captainTrial?.attempt;
+  const trialTurn = captainTrial?.turn;
 
   useEffect(() => {
     setHydration({ slot: activeSlot, status: 'loading' });
@@ -300,6 +306,27 @@ function CampaignApp() {
       ? completePetalTraining(current, trainingAttempt) : current);
   }, [activeSlot, battleSession, trainingAttempt, saveSession]);
 
+  const handleStartCaptainTrial = useCallback(() => {
+    if (!trialSceneId) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? startCaptainTrial(current, trialSceneId) : current);
+  }, [activeSlot, battleSession, trialSceneId, saveSession]);
+  const handleCaptainTrialAction = useCallback((action: CaptainTrialAction) => {
+    if (!trialSceneId || trialAttempt === undefined || trialTurn === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? applyCaptainTrialAction(current, trialSceneId, trialAttempt, trialTurn, action) : current);
+  }, [activeSlot, battleSession, trialSceneId, trialAttempt, trialTurn, saveSession]);
+  const handleRetryCaptainTrial = useCallback(() => {
+    if (!trialSceneId || trialAttempt === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? retryCaptainTrial(current, trialSceneId, trialAttempt) : current);
+  }, [activeSlot, battleSession, trialSceneId, trialAttempt, saveSession]);
+  const handleCompleteCaptainTrial = useCallback(() => {
+    if (!trialSceneId || trialAttempt === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? completeCaptainTrial(current, trialSceneId, trialAttempt) : current);
+  }, [activeSlot, battleSession, trialSceneId, trialAttempt, saveSession]);
+
   const handleStartVillageRescue = useCallback(() => setProfile(startVillageRescue), []);
   const handleVillageRescueAction = useCallback((action: VillageRescueAction) => {
     setProfile((current) => applyVillageRescueAction(current, action));
@@ -393,6 +420,15 @@ function CampaignApp() {
   if (section === 'campaign' && !activeMission && !profile.originStory.completed) {
     const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
     const rescue = getVillageRescue(profile);
+    if (captainTrial && !(captainTrial.sceneId === 'hadori-wall' && captainTrial.phase === 'complete')) {
+      return withSaveStatus(
+        <Suspense fallback={<div className="full-engine-loading">중앙 원형장의 대결을 불러오는 중...</div>}>
+          <CaptainTrialEncounter key={`${activeSlot}:${battleSession}:${captainTrial.sceneId}:${captainTrial.attempt}`} state={captainTrial}
+            onStart={handleStartCaptainTrial} onAction={handleCaptainTrialAction} onRetry={handleRetryCaptainTrial}
+            onComplete={handleCompleteCaptainTrial} onAdvance={handleAdvanceOrigin} onExit={() => setSection('title')} />
+        </Suspense>,
+      );
+    }
     if (originScene.id === 'sixteen-petals' && petalTraining) {
       return withSaveStatus(
         <Suspense fallback={<div className="full-engine-loading">폐정원의 수련을 불러오는 중...</div>}>

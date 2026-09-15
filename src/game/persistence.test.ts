@@ -130,6 +130,7 @@ describe('campaign save recovery', () => {
     (profile: Record<string, unknown>) => { profile.battleAttempt = {}; },
     (profile: Record<string, unknown>) => { profile.originStory = { currentSceneId: 'field-exam', fieldExam: {} }; },
     (profile: Record<string, unknown>) => { profile.originStory = { currentSceneId: 'sixteen-petals', petalTraining: {} }; },
+    (profile: Record<string, unknown>) => { profile.originStory = { currentSceneId: 'captain-trials', captainTrials: { 'captain-trials': {} } }; },
   ])('rejects structurally invalid local data before migration', async (corrupt) => {
     const profile = rememberedProfile();
     const damaged = structuredClone(profile) as unknown as Record<string, unknown>;

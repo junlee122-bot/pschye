@@ -1,7 +1,9 @@
 import type { CampaignProfile } from '../types';
+import { getOriginStoryScene } from '../data/originStory';
 import { isVillageRescueState } from './villageRescue';
 import { isFieldExamState } from './fieldExam';
 import { isPetalTrainingState } from './petalTraining';
+import { isCaptainTrialSceneId, isCaptainTrialState } from './captainTrial';
 import { isCampaignBattleAttempt } from './battleCheckpointValidation';
 import { canChooseMissionStory, isMissionStoryChoice } from './missionAccess';
 
@@ -122,7 +124,7 @@ const campaignShape = objectWith({
   storyChoices: recordOf(stance),
   narrativeChecks: recordOf(objectWith({ choiceId: stance, chance: number(0, 100), roll: number(1, 100), outcome }, false)),
   relationshipMemories: recordOf(objectWith({ missionId: text, companionId: text, choiceId: stance, text, reaction: text, outcome }, false)),
-  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState, fieldExam: isFieldExamState, petalTraining: isPetalTrainingState }),
+  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState, fieldExam: isFieldExamState, petalTraining: isPetalTrainingState, captainTrials: recordOf(isCaptainTrialState) }),
   world: objectWith({
     minutes: number(), phase: oneOf('dawn', 'day', 'dusk', 'night'), weather: oneOf('clear', 'wind', 'rain', 'ash'), currentRegion: text,
     discoveredLocations: strings, eventJournal: strings,
@@ -168,6 +170,19 @@ export function isCampaignProfileCandidate(value: unknown): value is Partial<Cam
       || origin.choices['sixteen-petals'] !== training.choiceId
       || (training.phase !== 'complete' && !(origin.currentSceneId === 'sixteen-petals' && origin.completed === false
         && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('sixteen-petals')))) return false;
+  }
+  if ('captainTrials' in origin) {
+    if (!isSaveObject(origin.captainTrials) || !isSaveObject(origin.choices) || !Array.isArray(origin.completedSceneIds)) return false;
+    for (const [sceneId, trial] of Object.entries(origin.captainTrials)) {
+      if (!isCaptainTrialSceneId(sceneId) || !isCaptainTrialState(trial) || trial.sceneId !== sceneId) return false;
+      const choiceId = origin.choices[sceneId];
+      if (sceneId === 'hadori-wall') {
+        if (choiceId !== undefined && (trial.phase !== 'complete' || !getOriginStoryScene(sceneId).choices.some((choice) => choice.id === choiceId))) return false;
+      } else if (choiceId !== trial.choiceId) return false;
+      if (trial.phase === 'complete') {
+        if (origin.currentSceneId !== sceneId && !origin.completedSceneIds.includes(sceneId)) return false;
+      } else if (origin.currentSceneId !== sceneId || origin.completed !== false || origin.completedSceneIds.includes(sceneId)) return false;
+    }
   }
   return true;
 }

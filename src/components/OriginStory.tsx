@@ -1,4 +1,4 @@
-import { useEffect, type CSSProperties } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 import {
   ArrowLeft,
   BookOpenText,
@@ -43,6 +43,7 @@ function ChoiceIcon({ choice }: { choice: OriginStoryChoice }) {
 }
 
 export function OriginStory({ profile, onChoose, onAdvance, onExit }: OriginStoryProps) {
+  const headingRef = useRef<HTMLHeadingElement>(null);
   const scene = getOriginStoryScene(profile.originStory.currentSceneId);
   const selectedChoiceId = profile.originStory.choices[scene.id];
   const selectedChoice = scene.choices.find((choice) => choice.id === selectedChoiceId);
@@ -53,6 +54,10 @@ export function OriginStory({ profile, onChoose, onAdvance, onExit }: OriginStor
     .filter((entry) => profile.originStory.choices[entry.id])
     .slice(-4)
     .reverse();
+
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, [scene.id]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -98,7 +103,7 @@ export function OriginStory({ profile, onChoose, onAdvance, onExit }: OriginStor
 
           <div className="origin-heading">
             <span>RAON'S ORIGIN · SCENE {String(scene.sequence).padStart(2, '0')}</span>
-            <h1>{scene.title}</h1>
+            <h1 ref={headingRef} tabIndex={-1}>{scene.title}</h1>
             <p>{scene.subtitle}</p>
           </div>
 

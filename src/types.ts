@@ -275,6 +275,24 @@ export interface OriginStoryProgress {
   villageRescue?: VillageRescueState;
   fieldExam?: FieldExamState;
   petalTraining?: PetalTrainingState;
+  captainTrials?: Partial<Record<CaptainTrialSceneId, CaptainTrialState>>;
+}
+
+export type CaptainTrialSceneId = 'captain-trials' | 'kazrin-duel' | 'hadori-wall';
+export type CaptainTrialChoiceId = 'break-spear-not-kain' | 'use-sixteenth-gap' | 'declare-my-name'
+  | 'trust-her-recovery' | 'change-old-rhythm' | 'step-beside-not-behind';
+export type CaptainTrialAction = 'parry' | 'sidestep' | 'counter' | 'recover' | 'challenge';
+export interface CaptainTrialState {
+  sceneId: CaptainTrialSceneId;
+  choiceId?: CaptainTrialChoiceId;
+  phase: 'ready' | 'active' | 'failed' | 'resolved' | 'complete';
+  attempt: number;
+  turn: number;
+  poise: number;
+  breath: number;
+  progress: number;
+  opening: boolean;
+  log: string[];
 }
 
 export type PetalTrainingChoiceId = 'remember-voices' | 'distribute-weight' | 'step-beyond-fall';

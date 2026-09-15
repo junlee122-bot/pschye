@@ -31,6 +31,8 @@ import { createFieldExam, isFieldExamChoiceId } from './fieldExam';
 import { fieldExamSceneId, getFieldExam, migrateFieldExam } from './fieldExamProgression';
 import { createPetalTraining, isPetalTrainingChoiceId } from './petalTraining';
 import { getPetalTraining, migratePetalTraining, petalTrainingSceneId } from './petalTrainingProgression';
+import { createCaptainTrial, isCaptainTrialChoiceForScene, isCaptainTrialSceneId } from './captainTrial';
+import { getCaptainTrial, migrateCaptainTrials } from './captainTrialProgression';
 import { canChooseMissionStory, canLaunchMission, isMissionStoryChoice } from './missionAccess';
 import { isBattleStateCheckpoint, sameBattleCheckpoint } from './battleCheckpointValidation';
 
@@ -138,7 +140,7 @@ function migrateProfile(parsed: Partial<CampaignProfile>): CampaignProfile {
   const defaults = createNewCampaignProfile();
   const activeSquad = parsed.activeSquad?.filter((id) => heroDefinitions.some((hero) => hero.id === id));
   const inventory = parsed.inventory?.filter((id) => Boolean(getEquipment(id))) ?? [];
-  return migratePetalTraining(migrateFieldExam(migrateVillageRescue({
+  return migrateCaptainTrials(migratePetalTraining(migrateFieldExam(migrateVillageRescue({
     ...defaults,
     ...parsed,
     version: 10,
@@ -183,7 +185,7 @@ function migrateProfile(parsed: Partial<CampaignProfile>): CampaignProfile {
         completedErrands: parsed.world?.village?.completedErrands ?? defaults.world.village.completedErrands,
       },
     },
-  })));
+  }))));
 }
 
 function clamp(value: number, minimum: number, maximum: number) {
@@ -231,12 +233,16 @@ export function chooseOriginStoryPath(
   if (scene.id !== sceneId || scene.id !== profile.originStory.currentSceneId) return profile;
   const choice = scene.choices.find((entry) => entry.id === choiceId);
   if (!choice) return profile;
+  if (sceneId === 'hadori-wall' && !profile.originStory.completedSceneIds.includes(sceneId)
+    && getCaptainTrial(profile)?.phase !== 'complete') return profile;
   const rescue = sceneId === villageRescueSceneId && isVillageRescueChoiceId(choiceId)
     ? createVillageRescue(choiceId) : undefined;
   const fieldExam = sceneId === fieldExamSceneId && isFieldExamChoiceId(choiceId)
     ? createFieldExam(choiceId) : undefined;
   const petalTraining = sceneId === petalTrainingSceneId && isPetalTrainingChoiceId(choiceId)
     ? createPetalTraining(choiceId) : undefined;
+  const captainTrial = isCaptainTrialSceneId(sceneId) && isCaptainTrialChoiceForScene(sceneId, choiceId)
+    && !profile.originStory.completedSceneIds.includes(sceneId) ? createCaptainTrial(sceneId, choiceId) : undefined;
 
   const pathLabels: Record<RaonStoryChoiceId, string> = { compassion: '연민', insight: '통찰', resolve: '결의' };
   const raonPath = { ...profile.raonPath, [choice.path]: profile.raonPath[choice.path] + 1 };
@@ -250,7 +256,8 @@ export function chooseOriginStoryPath(
     affinity: speakerIsCompanion ? 4 : 2,
     fact: rescue ? `수로 구출 방법을 정했다: ${choice.title}`
       : fieldExam ? `폐광 구조 방법을 정했다: ${choice.title}`
-      : petalTraining ? `열여섯 꽃잎을 수련할 방법을 정했다: ${choice.title}` : choice.result,
+      : petalTraining ? `열여섯 꽃잎을 수련할 방법을 정했다: ${choice.title}`
+      : captainTrial ? `대결에서 보여 줄 검을 정했다: ${choice.title}` : choice.result,
   });
 
   return {
@@ -259,11 +266,12 @@ export function chooseOriginStoryPath(
     originStory: {
       ...profile.originStory,
       choices: { ...profile.originStory.choices, [sceneId]: choiceId },
-      flags: rescue || fieldExam || petalTraining ? profile.originStory.flags : [...new Set([...profile.originStory.flags, choice.flag])],
+      flags: rescue || fieldExam || petalTraining || captainTrial ? profile.originStory.flags : [...new Set([...profile.originStory.flags, choice.flag])],
       selectionScore: profile.originStory.selectionScore + choice.score,
       ...(rescue ? { villageRescue: rescue } : {}),
       ...(fieldExam ? { fieldExam } : {}),
       ...(petalTraining ? { petalTraining } : {}),
+      ...(captainTrial ? { captainTrials: { ...profile.originStory.captainTrials, [captainTrial.sceneId]: captainTrial } } : {}),
     },
     bondLevels: speakerIsCompanion
       ? { ...profile.bondLevels, [bondKey]: Math.min(100, (profile.bondLevels[bondKey] ?? 0) + 4) }
@@ -286,6 +294,9 @@ export function advanceOriginStory(profile: CampaignProfile) {
     && getFieldExam(profile)?.phase !== 'complete') return profile;
   if (scene.id === petalTrainingSceneId && !profile.originStory.completedSceneIds.includes(scene.id)
     && getPetalTraining(profile)?.phase !== 'complete') return profile;
+  if (isCaptainTrialSceneId(scene.id) && !profile.originStory.completedSceneIds.includes(scene.id)
+    && !(scene.id === 'hadori-wall' && !profile.originStory.captainTrials?.[scene.id] && profile.originStory.choices[scene.id])
+    && getCaptainTrial(profile)?.phase !== 'complete') return profile;
   const completedSceneIds = [...new Set([...profile.originStory.completedSceneIds, scene.id])];
 
   if (scene.nextSceneId) {
