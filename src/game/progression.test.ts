@@ -4,6 +4,7 @@ import { originStoryScenes } from '../data/originStory';
 import { strategicOrders } from '../data/systems';
 import { applyVillageRescueAction, completeVillageRescueReturn, startVillageRescue } from './villageRescueProgression';
 import { villageRescueReturnPoint } from './villageRescue';
+import { applyFieldExamPlan, completeFieldExamReturn, startFieldExam } from './fieldExamProgression';
 import { missionReadyProfile, victoriousBattle } from './campaignTestFixtures';
 import {
   advanceDay,
@@ -47,6 +48,14 @@ function completeOriginStory() {
       profile = completeVillageRescueReturn({ ...profile, world: { ...profile.world, village: {
         ...profile.world.village, playerX: villageRescueReturnPoint.x, playerY: villageRescueReturnPoint.y,
       } } });
+    }
+    if (scene.id === 'field-exam') {
+      profile = startFieldExam(profile);
+      profile = applyFieldExamPlan(profile, 1, 0, { raon: 'left', leo: 'right' });
+      profile = applyFieldExamPlan(profile, 1, 1, { raon: 'brace', leo: 'left' });
+      profile = applyFieldExamPlan(profile, 1, 2, { raon: 'left', leo: 'right' });
+      profile = applyFieldExamPlan(profile, 1, 3, { raon: 'brace', leo: 'right' });
+      profile = completeFieldExamReturn(profile, 1);
     }
     profile = advanceOriginStory(profile);
   }

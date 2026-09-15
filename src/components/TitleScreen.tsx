@@ -4,6 +4,7 @@ import { raonChoiceMeta } from '../data/story';
 import type { CampaignProfile, NavigationSection, RaonStoryChoiceId } from '../types';
 import type { CampaignSlotSummary } from '../game/persistence';
 import { getVillageRescue } from '../game/villageRescueProgression';
+import { getFieldExam } from '../game/fieldExamProgression';
 import { getKnownMissions } from '../game/storyAccess';
 import { BattleResumeCard } from './BattleResumeCard';
 
@@ -27,6 +28,14 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
     || Object.keys(profile.storyChoices).length > 0;
   const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
   const rescue = originScene.id === 'river-incident' ? getVillageRescue(profile) : undefined;
+  const fieldExam = getFieldExam(profile);
+  const fieldResume = fieldExam ? {
+    ready: '폐광 구조 준비 · 선택한 방침으로 시작',
+    active: `폐광 구조 중 · ${fieldExam.turn}턴 · 통로 버팀 ${fieldExam.integrity}`,
+    failed: '폐광 구조 재도전 대기',
+    return: '지원자 둘 출구 도착 · 함께 철수할 차례',
+    complete: '폐광 전원 철수 완료 · 선발 12일차로',
+  }[fieldExam.phase] : undefined;
   const rescueResume = rescue ? {
     ready: '수로 구출 준비 · 선택한 방법으로 시작',
     active: `수로 구출 중 · ${rescue.turn}턴 · 체력 ${rescue.hp}`,
@@ -108,7 +117,7 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
             <span className={`status-dot ${hasProgress ? 'complete' : ''}`} />
             <span>
               {!profile.originStory.completed
-                ? rescueResume ?? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
+                ? fieldResume ?? rescueResume ?? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
                 : `입단 완료 · 작전 ${profile.completedMissions.length}건 · 여정 DAY ${profile.day}`}
             </span>
           </div>

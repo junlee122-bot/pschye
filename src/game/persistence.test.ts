@@ -128,6 +128,7 @@ describe('campaign save recovery', () => {
     (profile: Record<string, unknown>) => { profile.world = { npcMemories: { kazrin: { rememberedFacts: 'broken' } } }; },
     (profile: Record<string, unknown>) => { profile.originStory = { currentSceneId: 'missing-scene' }; },
     (profile: Record<string, unknown>) => { profile.battleAttempt = {}; },
+    (profile: Record<string, unknown>) => { profile.originStory = { currentSceneId: 'field-exam', fieldExam: {} }; },
   ])('rejects structurally invalid local data before migration', async (corrupt) => {
     const profile = rememberedProfile();
     const damaged = structuredClone(profile) as unknown as Record<string, unknown>;

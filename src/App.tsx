@@ -21,6 +21,7 @@ import { CampaignSlotSession } from './game/persistence';
 import { isAuthorWorkspace } from './game/storyAccess';
 import { abandonCampaignBattle, beginCampaignBattle, restartCampaignBattle, saveCampaignBattleCheckpoint, settleCampaignBattle } from './game/campaignBattle';
 import { applyVillageRescueAction, completeVillageRescueReturn, getVillageRescue, retryVillageRescue, startVillageRescue } from './game/villageRescueProgression';
+import { applyFieldExamPlan, completeFieldExamReturn, getFieldExam, retryFieldExam, startFieldExam } from './game/fieldExamProgression';
 import {
   advanceDay,
   advanceOriginStory,
@@ -44,10 +45,11 @@ import {
   unlockHeroNode,
   upgradeFacility,
 } from './game/progression';
-import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, DailyActivityId, FacilityId, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
+import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, DailyActivityId, FacilityId, FieldExamPlan, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
 
 const VillageAdventure = lazy(() => import('./components/VillageAdventure').then((module) => ({ default: module.VillageAdventure })));
 const VillageRescueEncounter = lazy(() => import('./components/VillageRescueEncounter').then((module) => ({ default: module.VillageRescueEncounter })));
+const FieldExamEncounter = lazy(() => import('./components/FieldExamEncounter').then((module) => ({ default: module.FieldExamEncounter })));
 const AuthorWorkspace = import.meta.env.DEV ? lazy(() => import('./components/AuthorWorkspace').then((module) => ({ default: module.AuthorWorkspace }))) : null;
 const navigationSections: NavigationSection[] = [
   'title', 'campaign', 'world', 'roster', 'headquarters', 'activities', 'chronicle', 'codex', 'archive',
@@ -81,6 +83,9 @@ function CampaignApp() {
   const activeAttempt = attempt?.missionId === activeMissionId ? attempt : undefined;
   const activeAttemptId = activeAttempt?.id;
   const activeMission = activeAttempt ? getMission(activeAttempt.missionId) : undefined;
+  const fieldExam = getFieldExam(profile);
+  const fieldAttempt = fieldExam?.attempt;
+  const fieldTurn = fieldExam?.turn;
 
   useEffect(() => {
     setHydration({ slot: activeSlot, status: 'loading' });
@@ -250,8 +255,27 @@ function CampaignApp() {
   }, []);
 
   const handleAdvanceOrigin = useCallback(() => {
-    setProfile((current) => advanceOriginStory(current));
-  }, []);
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.currentSceneId === profile.originStory.currentSceneId ? advanceOriginStory(current) : current);
+  }, [activeSlot, battleSession, profile.originStory.currentSceneId, saveSession]);
+
+  const handleStartFieldExam = useCallback(() => {
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot) ? startFieldExam(current) : current);
+  }, [activeSlot, battleSession, saveSession]);
+  const handleFieldExamPlan = useCallback((plan: FieldExamPlan) => {
+    if (fieldAttempt === undefined || fieldTurn === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? applyFieldExamPlan(current, fieldAttempt, fieldTurn, plan) : current);
+  }, [activeSlot, battleSession, fieldAttempt, fieldTurn, saveSession]);
+  const handleRetryFieldExam = useCallback(() => {
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.fieldExam?.attempt === fieldAttempt ? retryFieldExam(current) : current);
+  }, [activeSlot, battleSession, fieldAttempt, saveSession]);
+  const handleFieldExamReturn = useCallback(() => {
+    if (fieldAttempt === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? completeFieldExamReturn(current, fieldAttempt) : current);
+  }, [activeSlot, battleSession, fieldAttempt, saveSession]);
 
   const handleStartVillageRescue = useCallback(() => setProfile(startVillageRescue), []);
   const handleVillageRescueAction = useCallback((action: VillageRescueAction) => {
@@ -346,6 +370,15 @@ function CampaignApp() {
   if (section === 'campaign' && !activeMission && !profile.originStory.completed) {
     const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
     const rescue = getVillageRescue(profile);
+    if (originScene.id === 'field-exam' && fieldExam) {
+      return withSaveStatus(
+        <Suspense fallback={<div className="full-engine-loading">폐광 구조 현장을 불러오는 중...</div>}>
+          <FieldExamEncounter key={`${activeSlot}:${battleSession}:${fieldExam.attempt}`} state={fieldExam}
+            onStart={handleStartFieldExam} onPlan={handleFieldExamPlan} onRetry={handleRetryFieldExam}
+            onReturn={handleFieldExamReturn} onAdvance={handleAdvanceOrigin} onExit={() => setSection('title')} />
+        </Suspense>,
+      );
+    }
     if (originScene.id === 'river-incident' && rescue && ['active', 'failed'].includes(rescue.phase)) {
       return withSaveStatus(
         <Suspense fallback={<div className="full-engine-loading">수로 구출을 불러오는 중...</div>}>

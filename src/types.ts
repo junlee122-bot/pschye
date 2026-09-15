@@ -273,6 +273,24 @@ export interface OriginStoryProgress {
   flags: string[];
   selectionScore: number;
   villageRescue?: VillageRescueState;
+  fieldExam?: FieldExamState;
+}
+
+export type FieldExamChoiceId = 'rescue-team' | 'split-route' | 'defy-order';
+export type FieldExamOrder = 'left' | 'right' | 'brace';
+export interface FieldExamPlan {
+  raon: FieldExamOrder;
+  leo: FieldExamOrder;
+}
+export interface FieldExamState {
+  phase: 'ready' | 'active' | 'failed' | 'return' | 'complete';
+  choiceId: FieldExamChoiceId;
+  attempt: number;
+  turn: number;
+  integrity: number;
+  left: number;
+  right: number;
+  log: string[];
 }
 
 export type VillageRescueChoiceId = 'save-child' | 'mark-safe-route' | 'draw-the-beast';

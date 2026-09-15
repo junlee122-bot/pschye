@@ -27,6 +27,8 @@ import { deleteMirroredCampaignSlot, isCampaignProfileCandidate, isSaveObject, m
 import { createWorldSimulationState, executeGameCommand } from './simulation';
 import { createVillageRescue, isVillageRescueChoiceId } from './villageRescue';
 import { getVillageRescue, migrateVillageRescue, villageRescueSceneId } from './villageRescueProgression';
+import { createFieldExam, isFieldExamChoiceId } from './fieldExam';
+import { fieldExamSceneId, getFieldExam, migrateFieldExam } from './fieldExamProgression';
 import { canChooseMissionStory, canLaunchMission, isMissionStoryChoice } from './missionAccess';
 import { isBattleStateCheckpoint, sameBattleCheckpoint } from './battleCheckpointValidation';
 
@@ -134,7 +136,7 @@ function migrateProfile(parsed: Partial<CampaignProfile>): CampaignProfile {
   const defaults = createNewCampaignProfile();
   const activeSquad = parsed.activeSquad?.filter((id) => heroDefinitions.some((hero) => hero.id === id));
   const inventory = parsed.inventory?.filter((id) => Boolean(getEquipment(id))) ?? [];
-  return migrateVillageRescue({
+  return migrateFieldExam(migrateVillageRescue({
     ...defaults,
     ...parsed,
     version: 10,
@@ -179,7 +181,7 @@ function migrateProfile(parsed: Partial<CampaignProfile>): CampaignProfile {
         completedErrands: parsed.world?.village?.completedErrands ?? defaults.world.village.completedErrands,
       },
     },
-  });
+  }));
 }
 
 function clamp(value: number, minimum: number, maximum: number) {
@@ -224,11 +226,13 @@ export function chooseOriginStoryPath(
 ) {
   if (profile.originStory.completed || profile.originStory.choices[sceneId]) return profile;
   const scene = getOriginStoryScene(sceneId);
-  if (scene.id !== profile.originStory.currentSceneId) return profile;
+  if (scene.id !== sceneId || scene.id !== profile.originStory.currentSceneId) return profile;
   const choice = scene.choices.find((entry) => entry.id === choiceId);
   if (!choice) return profile;
   const rescue = sceneId === villageRescueSceneId && isVillageRescueChoiceId(choiceId)
     ? createVillageRescue(choiceId) : undefined;
+  const fieldExam = sceneId === fieldExamSceneId && isFieldExamChoiceId(choiceId)
+    ? createFieldExam(choiceId) : undefined;
 
   const pathLabels: Record<RaonStoryChoiceId, string> = { compassion: '연민', insight: '통찰', resolve: '결의' };
   const raonPath = { ...profile.raonPath, [choice.path]: profile.raonPath[choice.path] + 1 };
@@ -240,7 +244,8 @@ export function chooseOriginStoryPath(
     npcId: scene.speakerId,
     choiceId,
     affinity: speakerIsCompanion ? 4 : 2,
-    fact: rescue ? `수로 구출 방법을 정했다: ${choice.title}` : choice.result,
+    fact: rescue ? `수로 구출 방법을 정했다: ${choice.title}`
+      : fieldExam ? `폐광 구조 방법을 정했다: ${choice.title}` : choice.result,
   });
 
   return {
@@ -249,9 +254,10 @@ export function chooseOriginStoryPath(
     originStory: {
       ...profile.originStory,
       choices: { ...profile.originStory.choices, [sceneId]: choiceId },
-      flags: rescue ? profile.originStory.flags : [...new Set([...profile.originStory.flags, choice.flag])],
+      flags: rescue || fieldExam ? profile.originStory.flags : [...new Set([...profile.originStory.flags, choice.flag])],
       selectionScore: profile.originStory.selectionScore + choice.score,
       ...(rescue ? { villageRescue: rescue } : {}),
+      ...(fieldExam ? { fieldExam } : {}),
     },
     bondLevels: speakerIsCompanion
       ? { ...profile.bondLevels, [bondKey]: Math.min(100, (profile.bondLevels[bondKey] ?? 0) + 4) }
@@ -270,6 +276,8 @@ export function advanceOriginStory(profile: CampaignProfile) {
   if (!profile.originStory.choices[scene.id]) return profile;
   if (scene.id === villageRescueSceneId && !profile.originStory.completedSceneIds.includes(scene.id)
     && getVillageRescue(profile)?.phase !== 'complete') return profile;
+  if (scene.id === fieldExamSceneId && !profile.originStory.completedSceneIds.includes(scene.id)
+    && getFieldExam(profile)?.phase !== 'complete') return profile;
   const completedSceneIds = [...new Set([...profile.originStory.completedSceneIds, scene.id])];
 
   if (scene.nextSceneId) {

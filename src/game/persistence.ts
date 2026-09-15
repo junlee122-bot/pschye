@@ -1,5 +1,6 @@
 import type { CampaignProfile } from '../types';
 import { isVillageRescueState } from './villageRescue';
+import { isFieldExamState } from './fieldExam';
 import { isCampaignBattleAttempt } from './battleCheckpointValidation';
 import { canChooseMissionStory, isMissionStoryChoice } from './missionAccess';
 
@@ -120,7 +121,7 @@ const campaignShape = objectWith({
   storyChoices: recordOf(stance),
   narrativeChecks: recordOf(objectWith({ choiceId: stance, chance: number(0, 100), roll: number(1, 100), outcome }, false)),
   relationshipMemories: recordOf(objectWith({ missionId: text, companionId: text, choiceId: stance, text, reaction: text, outcome }, false)),
-  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState }),
+  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState, fieldExam: isFieldExamState }),
   world: objectWith({
     minutes: number(), phase: oneOf('dawn', 'day', 'dusk', 'night'), weather: oneOf('clear', 'wind', 'rain', 'ash'), currentRegion: text,
     discoveredLocations: strings, eventJournal: strings,
@@ -145,12 +146,22 @@ export function isCampaignProfileCandidate(value: unknown): value is Partial<Cam
       || (attempt.settled && !candidate.completedMissions.includes(attempt.missionId))) return false;
   }
   const origin = value.originStory;
-  if (!isSaveObject(origin) || !('villageRescue' in origin)) return true;
-  const rescue = origin.villageRescue;
-  return isVillageRescueState(rescue) && isSaveObject(origin.choices)
-    && origin.choices['river-incident'] === rescue.choiceId
-    && (rescue.phase === 'complete' || (origin.currentSceneId === 'river-incident' && origin.completed === false
-      && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('river-incident')));
+  if (!isSaveObject(origin)) return true;
+  if ('villageRescue' in origin) {
+    const rescue = origin.villageRescue;
+    if (!isVillageRescueState(rescue) || !isSaveObject(origin.choices)
+      || origin.choices['river-incident'] !== rescue.choiceId
+      || (rescue.phase !== 'complete' && !(origin.currentSceneId === 'river-incident' && origin.completed === false
+        && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('river-incident')))) return false;
+  }
+  if ('fieldExam' in origin) {
+    const exam = origin.fieldExam;
+    if (!isFieldExamState(exam) || !isSaveObject(origin.choices)
+      || origin.choices['field-exam'] !== exam.choiceId
+      || (exam.phase !== 'complete' && !(origin.currentSceneId === 'field-exam' && origin.completed === false
+        && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('field-exam')))) return false;
+  }
+  return true;
 }
 
 // A slow database open must not let an older snapshot overwrite a newer save.
