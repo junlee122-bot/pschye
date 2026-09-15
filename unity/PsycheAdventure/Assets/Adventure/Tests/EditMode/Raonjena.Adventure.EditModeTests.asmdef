@@ -1,0 +1,8 @@
+{
+  "name": "Raonjena.Adventure.EditModeTests",
+  "rootNamespace": "Raonjena.Adventure.Tests",
+  "references": ["Raonjena.Adventure.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

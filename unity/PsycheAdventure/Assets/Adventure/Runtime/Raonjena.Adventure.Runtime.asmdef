@@ -1,0 +1,6 @@
+{
+  "name": "Raonjena.Adventure.Runtime",
+  "rootNamespace": "Raonjena.Adventure",
+  "references": ["glTFast", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime"],
+  "autoReferenced": true
+}

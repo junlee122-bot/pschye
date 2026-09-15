@@ -69,6 +69,8 @@
 
 ## 실행
 
+웹 서사·전투 설계실은 아래 명령으로 실행합니다. Unity 3D 본편의 첫 조작 기반은 [PsycheAdventure 시작 안내](unity/PsycheAdventure/README.md)에 있습니다. Unity 기반은 현재 소스 구현 단계이며 Editor 컴파일·플레이 검증은 대기 중입니다.
+
 ```bash
 pnpm install
 pnpm dev
@@ -102,6 +104,7 @@ public/
 
 ## 문서
 
+- [Unity 3인칭 조작 기반과 검증 상태](docs/THIRD_PERSON_FOUNDATION.md)
 - [게임 설계](docs/GAME_DESIGN.md)
 - [대형 RPG 확장 로드맵](docs/EXPANSION_ROADMAP.md)
 - [정사 판정](docs/CANON_STATUS.md)

@@ -1,0 +1,7 @@
+{
+  "name": "Raonjena.Adventure.PlayModeTests",
+  "rootNamespace": "Raonjena.Adventure.Tests",
+  "references": ["Raonjena.Adventure.Runtime"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}
