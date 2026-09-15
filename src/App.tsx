@@ -22,6 +22,7 @@ import { isAuthorWorkspace } from './game/storyAccess';
 import { abandonCampaignBattle, beginCampaignBattle, restartCampaignBattle, saveCampaignBattleCheckpoint, settleCampaignBattle } from './game/campaignBattle';
 import { applyVillageRescueAction, completeVillageRescueReturn, getVillageRescue, retryVillageRescue, startVillageRescue } from './game/villageRescueProgression';
 import { applyFieldExamPlan, completeFieldExamReturn, getFieldExam, retryFieldExam, startFieldExam } from './game/fieldExamProgression';
+import { applyPetalTrainingAction, completePetalTraining, getPetalTraining, retryPetalTraining, startPetalTraining } from './game/petalTrainingProgression';
 import {
   advanceDay,
   advanceOriginStory,
@@ -45,11 +46,12 @@ import {
   unlockHeroNode,
   upgradeFacility,
 } from './game/progression';
-import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, DailyActivityId, FacilityId, FieldExamPlan, MissionDifficulty, NavigationSection, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
+import type { BattleState, CampaignBattleCheckpointPatch, CampaignBattleMode, DailyActivityId, FacilityId, FieldExamPlan, MissionDifficulty, NavigationSection, PetalTrainingAction, RaonStoryChoiceId, TrainingFocus, VillageRescueAction } from './types';
 
 const VillageAdventure = lazy(() => import('./components/VillageAdventure').then((module) => ({ default: module.VillageAdventure })));
 const VillageRescueEncounter = lazy(() => import('./components/VillageRescueEncounter').then((module) => ({ default: module.VillageRescueEncounter })));
 const FieldExamEncounter = lazy(() => import('./components/FieldExamEncounter').then((module) => ({ default: module.FieldExamEncounter })));
+const PetalTrainingEncounter = lazy(() => import('./components/PetalTrainingEncounter').then((module) => ({ default: module.PetalTrainingEncounter })));
 const AuthorWorkspace = import.meta.env.DEV ? lazy(() => import('./components/AuthorWorkspace').then((module) => ({ default: module.AuthorWorkspace }))) : null;
 const navigationSections: NavigationSection[] = [
   'title', 'campaign', 'world', 'roster', 'headquarters', 'activities', 'chronicle', 'codex', 'archive',
@@ -86,6 +88,9 @@ function CampaignApp() {
   const fieldExam = getFieldExam(profile);
   const fieldAttempt = fieldExam?.attempt;
   const fieldTurn = fieldExam?.turn;
+  const petalTraining = getPetalTraining(profile);
+  const trainingAttempt = petalTraining?.attempt;
+  const trainingTurn = petalTraining?.turn;
 
   useEffect(() => {
     setHydration({ slot: activeSlot, status: 'loading' });
@@ -277,6 +282,24 @@ function CampaignApp() {
       ? completeFieldExamReturn(current, fieldAttempt) : current);
   }, [activeSlot, battleSession, fieldAttempt, saveSession]);
 
+  const handleStartPetalTraining = useCallback(() => {
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot) ? startPetalTraining(current) : current);
+  }, [activeSlot, battleSession, saveSession]);
+  const handlePetalTrainingAction = useCallback((action: PetalTrainingAction) => {
+    if (trainingAttempt === undefined || trainingTurn === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? applyPetalTrainingAction(current, trainingAttempt, trainingTurn, action) : current);
+  }, [activeSlot, battleSession, trainingAttempt, trainingTurn, saveSession]);
+  const handleRetryPetalTraining = useCallback(() => {
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      && current.originStory.petalTraining?.attempt === trainingAttempt ? retryPetalTraining(current) : current);
+  }, [activeSlot, battleSession, trainingAttempt, saveSession]);
+  const handleCompletePetalTraining = useCallback(() => {
+    if (trainingAttempt === undefined) return;
+    setProfile((current) => liveBattleSession.current === battleSession && saveSession.canSave(activeSlot)
+      ? completePetalTraining(current, trainingAttempt) : current);
+  }, [activeSlot, battleSession, trainingAttempt, saveSession]);
+
   const handleStartVillageRescue = useCallback(() => setProfile(startVillageRescue), []);
   const handleVillageRescueAction = useCallback((action: VillageRescueAction) => {
     setProfile((current) => applyVillageRescueAction(current, action));
@@ -370,6 +393,15 @@ function CampaignApp() {
   if (section === 'campaign' && !activeMission && !profile.originStory.completed) {
     const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
     const rescue = getVillageRescue(profile);
+    if (originScene.id === 'sixteen-petals' && petalTraining) {
+      return withSaveStatus(
+        <Suspense fallback={<div className="full-engine-loading">폐정원의 수련을 불러오는 중...</div>}>
+          <PetalTrainingEncounter key={`${activeSlot}:${battleSession}:${petalTraining.attempt}`} state={petalTraining}
+            onStart={handleStartPetalTraining} onAction={handlePetalTrainingAction} onRetry={handleRetryPetalTraining}
+            onComplete={handleCompletePetalTraining} onAdvance={handleAdvanceOrigin} onExit={() => setSection('title')} />
+        </Suspense>,
+      );
+    }
     if (originScene.id === 'field-exam' && fieldExam) {
       return withSaveStatus(
         <Suspense fallback={<div className="full-engine-loading">폐광 구조 현장을 불러오는 중...</div>}>

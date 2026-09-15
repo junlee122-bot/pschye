@@ -5,6 +5,7 @@ import { strategicOrders } from '../data/systems';
 import { applyVillageRescueAction, completeVillageRescueReturn, startVillageRescue } from './villageRescueProgression';
 import { villageRescueReturnPoint } from './villageRescue';
 import { applyFieldExamPlan, completeFieldExamReturn, startFieldExam } from './fieldExamProgression';
+import { applyPetalTrainingAction, completePetalTraining, startPetalTraining } from './petalTrainingProgression';
 import { missionReadyProfile, victoriousBattle } from './campaignTestFixtures';
 import {
   advanceDay,
@@ -56,6 +57,13 @@ function completeOriginStory() {
       profile = applyFieldExamPlan(profile, 1, 2, { raon: 'left', leo: 'right' });
       profile = applyFieldExamPlan(profile, 1, 3, { raon: 'brace', leo: 'right' });
       profile = completeFieldExamReturn(profile, 1);
+    }
+    if (scene.id === 'sixteen-petals') {
+      profile = startPetalTraining(profile);
+      for (const action of ['trace', 'trace', 'trace', 'breathe', 'trace', 'trace', 'balance'] as const) {
+        profile = applyPetalTrainingAction(profile, 1, profile.originStory.petalTraining!.turn, action);
+      }
+      profile = completePetalTraining(profile, 1);
     }
     profile = advanceOriginStory(profile);
   }

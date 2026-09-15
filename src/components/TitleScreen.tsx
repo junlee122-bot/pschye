@@ -5,6 +5,7 @@ import type { CampaignProfile, NavigationSection, RaonStoryChoiceId } from '../t
 import type { CampaignSlotSummary } from '../game/persistence';
 import { getVillageRescue } from '../game/villageRescueProgression';
 import { getFieldExam } from '../game/fieldExamProgression';
+import { getPetalTraining } from '../game/petalTrainingProgression';
 import { getKnownMissions } from '../game/storyAccess';
 import { BattleResumeCard } from './BattleResumeCard';
 
@@ -29,6 +30,14 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
   const originScene = getOriginStoryScene(profile.originStory.currentSceneId);
   const rescue = originScene.id === 'river-incident' ? getVillageRescue(profile) : undefined;
   const fieldExam = getFieldExam(profile);
+  const petalTraining = getPetalTraining(profile);
+  const trainingResume = petalTraining ? {
+    ready: '마루 수련 준비 · 선택한 방침으로 시작',
+    active: `마루 수련 중 · 궤적 ${petalTraining.petals}/16 · 부담 ${petalTraining.burden}/8`,
+    failed: '마루 수련 · 쉬고 다시 연습할 차례',
+    review: '열여섯 궤적 연결 · 마루 앞 마무리 대기',
+    complete: '마루 수련 마무리 · 조장 선발전으로',
+  }[petalTraining.phase] : undefined;
   const fieldResume = fieldExam ? {
     ready: '폐광 구조 준비 · 선택한 방침으로 시작',
     active: `폐광 구조 중 · ${fieldExam.turn}턴 · 통로 버팀 ${fieldExam.integrity}`,
@@ -117,7 +126,7 @@ export function TitleScreen({ activeSlot, slots, profile, onNavigate, onReset, o
             <span className={`status-dot ${hasProgress ? 'complete' : ''}`} />
             <span>
               {!profile.originStory.completed
-                ? fieldResume ?? rescueResume ?? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
+                ? trainingResume ?? fieldResume ?? rescueResume ?? `서장 ${Math.min(originScene.sequence, originStoryScenes.length)} / ${originStoryScenes.length} · ${originScene.title}`
                 : `입단 완료 · 작전 ${profile.completedMissions.length}건 · 여정 DAY ${profile.day}`}
             </span>
           </div>

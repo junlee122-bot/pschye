@@ -1,6 +1,7 @@
 import type { CampaignProfile } from '../types';
 import { isVillageRescueState } from './villageRescue';
 import { isFieldExamState } from './fieldExam';
+import { isPetalTrainingState } from './petalTraining';
 import { isCampaignBattleAttempt } from './battleCheckpointValidation';
 import { canChooseMissionStory, isMissionStoryChoice } from './missionAccess';
 
@@ -121,7 +122,7 @@ const campaignShape = objectWith({
   storyChoices: recordOf(stance),
   narrativeChecks: recordOf(objectWith({ choiceId: stance, chance: number(0, 100), roll: number(1, 100), outcome }, false)),
   relationshipMemories: recordOf(objectWith({ missionId: text, companionId: text, choiceId: stance, text, reaction: text, outcome }, false)),
-  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState, fieldExam: isFieldExamState }),
+  originStory: objectWith({ currentSceneId: text, completed: boolean, completedSceneIds: strings, choices: recordOf(text), flags: strings, selectionScore: count, villageRescue: isVillageRescueState, fieldExam: isFieldExamState, petalTraining: isPetalTrainingState }),
   world: objectWith({
     minutes: number(), phase: oneOf('dawn', 'day', 'dusk', 'night'), weather: oneOf('clear', 'wind', 'rain', 'ash'), currentRegion: text,
     discoveredLocations: strings, eventJournal: strings,
@@ -160,6 +161,13 @@ export function isCampaignProfileCandidate(value: unknown): value is Partial<Cam
       || origin.choices['field-exam'] !== exam.choiceId
       || (exam.phase !== 'complete' && !(origin.currentSceneId === 'field-exam' && origin.completed === false
         && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('field-exam')))) return false;
+  }
+  if ('petalTraining' in origin) {
+    const training = origin.petalTraining;
+    if (!isPetalTrainingState(training) || !isSaveObject(origin.choices)
+      || origin.choices['sixteen-petals'] !== training.choiceId
+      || (training.phase !== 'complete' && !(origin.currentSceneId === 'sixteen-petals' && origin.completed === false
+        && Array.isArray(origin.completedSceneIds) && !origin.completedSceneIds.includes('sixteen-petals')))) return false;
   }
   return true;
 }

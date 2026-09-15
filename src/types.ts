@@ -274,6 +274,19 @@ export interface OriginStoryProgress {
   selectionScore: number;
   villageRescue?: VillageRescueState;
   fieldExam?: FieldExamState;
+  petalTraining?: PetalTrainingState;
+}
+
+export type PetalTrainingChoiceId = 'remember-voices' | 'distribute-weight' | 'step-beyond-fall';
+export type PetalTrainingAction = 'trace' | 'balance' | 'breathe';
+export interface PetalTrainingState {
+  phase: 'ready' | 'active' | 'failed' | 'review' | 'complete';
+  choiceId: PetalTrainingChoiceId;
+  attempt: number;
+  turn: number;
+  petals: number;
+  burden: number;
+  log: string[];
 }
 
 export type FieldExamChoiceId = 'rescue-team' | 'split-route' | 'defy-order';
