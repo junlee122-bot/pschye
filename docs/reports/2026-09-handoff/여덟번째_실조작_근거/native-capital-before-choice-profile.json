@@ -1,0 +1,309 @@
+{
+  "version": 10,
+  "commanderName": "라온",
+  "day": 1,
+  "commandLevel": 1,
+  "renown": 0,
+  "supplies": 320,
+  "intel": 40,
+  "relics": 0,
+  "commandActions": 3,
+  "activeSquad": [
+    "hadori",
+    "raon",
+    "kazrin",
+    "kain",
+    "leo",
+    "chris"
+  ],
+  "inventory": [
+    "breaker-gauntlet",
+    "petal-training-blade",
+    "silver-orbit-lance",
+    "valder-heir-spear",
+    "gate-wraps",
+    "equilibrium-sabre",
+    "field-kit"
+  ],
+  "factions": {
+    "empire": 20,
+    "civilians": 10,
+    "cursed": 0,
+    "cheshi": -10
+  },
+  "completedDispatches": [],
+  "activityCounts": {},
+  "bondLevels": {
+    "kazrin:raon": 12,
+    "kain:raon": 4
+  },
+  "dailyCommandStats": {
+    "training": 0,
+    "bond": 0,
+    "field": 0
+  },
+  "dailyRewardClaimed": false,
+  "careerStats": {
+    "missions": 0,
+    "trainings": 0,
+    "bonds": 0,
+    "fieldActivities": 0,
+    "crafts": 0,
+    "dispatches": 0,
+    "perfectDays": 0
+  },
+  "claimedStrategicOrders": [],
+  "completedMissions": [],
+  "missionGrades": {},
+  "heroProgress": {
+    "hadori": {
+      "level": 3,
+      "xp": 0,
+      "bond": 12,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "breaker-gauntlet",
+        "field-kit"
+      ]
+    },
+    "raon": {
+      "level": 3,
+      "xp": 8,
+      "bond": 15,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "petal-training-blade",
+        "field-kit"
+      ]
+    },
+    "kazrin": {
+      "level": 2,
+      "xp": 16,
+      "bond": 18,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "silver-orbit-lance",
+        "field-kit"
+      ]
+    },
+    "kain": {
+      "level": 2,
+      "xp": 24,
+      "bond": 21,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "valder-heir-spear",
+        "field-kit"
+      ]
+    },
+    "leo": {
+      "level": 2,
+      "xp": 32,
+      "bond": 24,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "gate-wraps",
+        "field-kit"
+      ]
+    },
+    "chris": {
+      "level": 2,
+      "xp": 40,
+      "bond": 27,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "equilibrium-sabre",
+        "field-kit"
+      ]
+    }
+  },
+  "facilities": {
+    "training": 1,
+    "archive": 1,
+    "infirmary": 1,
+    "forge": 0,
+    "violet": 0
+  },
+  "unlockedRecords": [
+    "official-salvation"
+  ],
+  "activityLog": [
+    "돌아올 곳을 정하는 밤 · 라온은 통찰의 선택을 남겼다.",
+    "열두 해마다 열리는 문 · 라온은 통찰의 선택을 남겼다.",
+    "수로 구출 완료 · 라온의 이능 적성이 처음으로 명확하게 드러난다.",
+    "물속에서 들린 공포 · 라온은 통찰의 선택을 남겼다.",
+    "창을 든 아이와 빈손인 아이 · 라온은 통찰의 선택을 남겼다.",
+    "밀밭 너머의 종소리 · 라온은 통찰의 선택을 남겼다.",
+    "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+  ],
+  "raonPath": {
+    "compassion": 0,
+    "insight": 5,
+    "resolve": 0
+  },
+  "originStory": {
+    "currentSceneId": "capital-gate",
+    "completed": false,
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night"
+    ],
+    "choices": {
+      "village-dawn": "watch-kazrin",
+      "windmill-trouble": "read-shoulder",
+      "river-incident": "mark-safe-route",
+      "recruiters-arrive": "learn-what-i-saw",
+      "departure-night": "promise-question"
+    },
+    "flags": [
+      "observed-ann-style",
+      "read-kain-spear",
+      "awakened-route-sight",
+      "motive-truth",
+      "promise-question-history"
+    ],
+    "selectionScore": 14,
+    "villageRescue": {
+      "phase": "complete",
+      "choiceId": "mark-safe-route",
+      "attempt": 1,
+      "turn": 9,
+      "hp": 2,
+      "x": 0,
+      "y": 1,
+      "threatRow": 0,
+      "progress": 3,
+      "markedColumns": [
+        1,
+        2,
+        3
+      ],
+      "log": [
+        "카즈린과 모두의 귀환을 확인했다.",
+        "아이와 라온이 둑으로 빠져나왔다. 마을의 카즈린에게 돌아가 확인하자.",
+        "라온이 1열 2행으로 이동했다.",
+        "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+        "라온이 2열 2행으로 이동했다.",
+        "라온이 3열 2행으로 이동했다.",
+        "4열에 안전한 발판을 표시했다. (3/3)",
+        "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+        "라온이 4열 2행으로 이동했다.",
+        "3열에 안전한 발판을 표시했다. (2/3)",
+        "라온이 3열 2행으로 이동했다.",
+        "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+        "2열에 안전한 발판을 표시했다. (1/3)",
+        "라온이 2열 2행으로 이동했다.",
+        "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+      ]
+    }
+  },
+  "storyChoices": {},
+  "narrativeChecks": {},
+  "relationshipMemories": {},
+  "world": {
+    "minutes": 360,
+    "phase": "dawn",
+    "weather": "clear",
+    "currentRegion": "frontier-village",
+    "discoveredLocations": [
+      "frontier-village"
+    ],
+    "npcMemories": {
+      "kazrin": {
+        "affinity": 12,
+        "lastChoice": "promise-question",
+        "rememberedFacts": [
+          "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+          "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+          "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+          "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+        ],
+        "lastSeenDay": 1
+      },
+      "kain": {
+        "affinity": 4,
+        "lastChoice": "read-shoulder",
+        "rememberedFacts": [
+          "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+        ],
+        "lastSeenDay": 1
+      },
+      "bellatrice": {
+        "affinity": 2,
+        "lastChoice": "learn-what-i-saw",
+        "rememberedFacts": [
+          "이능 적성 검사가 라온의 선발 과정에 추가된다."
+        ],
+        "lastSeenDay": 1
+      }
+    },
+    "village": {
+      "playerX": 982,
+      "playerY": 270,
+      "visitedLandmarks": [
+        "마을 공동회관",
+        "폐풍차 훈련터",
+        "저주받은 수로",
+        "오래된 풍차 언덕"
+      ],
+      "completedErrands": []
+    },
+    "headquartersLayout": [
+      {
+        "slot": 0,
+        "facilityId": "training"
+      },
+      {
+        "slot": 1,
+        "facilityId": "archive"
+      },
+      {
+        "slot": 2,
+        "facilityId": "infirmary"
+      },
+      {
+        "slot": 3,
+        "facilityId": "forge"
+      },
+      {
+        "slot": 4,
+        "facilityId": "violet"
+      }
+    ],
+    "eventJournal": [
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "새 장소 발견 · 오래된 풍차 언덕",
+      "bellatrice은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "새 장소 발견 · 저주받은 수로",
+      "kain은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "새 장소 발견 · 폐풍차 훈련터",
+      "새 장소 발견 · 마을 공동회관",
+      "A.S. 84 · 변방 마을의 새벽이 밝았다."
+    ]
+  },
+  "_savedAt": "2026-09-15T01:51:45.168Z"
+}

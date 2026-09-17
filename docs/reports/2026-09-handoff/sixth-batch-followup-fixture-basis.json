@@ -1,0 +1,22 @@
+[
+  {
+    "kind": "field",
+    "sourceRoot": "<LOCAL_REPOSITORY>\\tmp\\fifth-batch-review\\dist",
+    "sourceEntry": "/assets/index-CRxl8JzP.js",
+    "targetRoot": "<LOCAL_REPOSITORY>\\tmp\\sixth-batch-followup\\field-dist",
+    "origin": "http://127.0.0.1:4400",
+    "originalSha256": "a3b64f26a968f830f68ceb4e533be808870ed2921affc6d72d9fa8beafeb00fe",
+    "patchedSha256": "06312ac4f3e8b19835f2b4a7c0bbc3059d2337cee6f7fcdcba132f6913d07b36",
+    "modification": "Only fixture origin guard and fixture origin label changed; game source/assets unchanged."
+  },
+  {
+    "kind": "village",
+    "sourceRoot": "<LOCAL_REPOSITORY>\\tmp\\third-batch-review\\dist",
+    "sourceEntry": "/assets/index-Wxcxb7NC.js",
+    "targetRoot": "<LOCAL_REPOSITORY>\\tmp\\sixth-batch-followup\\village-dist",
+    "origin": "http://127.0.0.1:4401",
+    "originalSha256": "282336417239efdd29def6ba15e96cd7519fd1ba61af68a1c7e127dc44fbe18b",
+    "patchedSha256": "856c55423ae4aa401c3f17b9e3a58df793b614104b5307e287f791602bb6b4d7",
+    "modification": "Only fixture origin guard and fixture origin label changed; game source/assets unchanged."
+  }
+]

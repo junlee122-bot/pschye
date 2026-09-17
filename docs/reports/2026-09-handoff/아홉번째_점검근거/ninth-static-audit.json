@@ -1,0 +1,439 @@
+{
+  "reviewedAt": "2026-09-15T06:18:41.573Z",
+  "repository": "<LOCAL_REPOSITORY>",
+  "head": "3f7922abbeabc0ef936ee56f268bc7d394db58db",
+  "scope": "Static metadata, references and protected path review; launcher/docs excluded. No Unity execution.",
+  "staticChecksPassed": true,
+  "unityCompiled": false,
+  "unityTestsExecuted": false,
+  "unityPlayerBuilt": false,
+  "errors": [],
+  "counts": {
+    "assetFiles": 18,
+    "metaFiles": 28,
+    "uniqueGuids": 28,
+    "csharpFiles": 12,
+    "assemblies": 4,
+    "sceneObjects": 4
+  },
+  "manifest": {
+    "dependencies": {
+      "com.unity.cloud.gltfast": "6.20.0",
+      "com.unity.render-pipelines.universal": "17.0.3",
+      "com.unity.test-framework": "1.4.5",
+      "com.unity.modules.animation": "1.0.0",
+      "com.unity.modules.audio": "1.0.0",
+      "com.unity.modules.imgui": "1.0.0",
+      "com.unity.modules.imageconversion": "1.0.0",
+      "com.unity.modules.jsonserialize": "1.0.0",
+      "com.unity.modules.physics": "1.0.0",
+      "com.unity.modules.ui": "1.0.0",
+      "com.unity.modules.unitywebrequest": "1.0.0",
+      "com.unity.modules.unitywebrequesttexture": "1.0.0"
+    }
+  },
+  "assemblies": [
+    {
+      "file": "Assets/Adventure/Editor/Raonjena.Adventure.Editor.asmdef",
+      "name": "Raonjena.Adventure.Editor",
+      "rootNamespace": "Raonjena.Adventure.Editor",
+      "references": [
+        "Raonjena.Adventure.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
+      ],
+      "includePlatforms": [
+        "Editor"
+      ],
+      "autoReferenced": true
+    },
+    {
+      "file": "Assets/Adventure/Runtime/Raonjena.Adventure.Runtime.asmdef",
+      "name": "Raonjena.Adventure.Runtime",
+      "rootNamespace": "Raonjena.Adventure",
+      "references": [
+        "glTFast",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Core.Runtime"
+      ],
+      "autoReferenced": true
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/Raonjena.Adventure.EditModeTests.asmdef",
+      "name": "Raonjena.Adventure.EditModeTests",
+      "rootNamespace": "Raonjena.Adventure.Tests",
+      "references": [
+        "Raonjena.Adventure.Runtime"
+      ],
+      "includePlatforms": [
+        "Editor"
+      ],
+      "optionalUnityReferences": [
+        "TestAssemblies"
+      ],
+      "autoReferenced": false
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/Raonjena.Adventure.PlayModeTests.asmdef",
+      "name": "Raonjena.Adventure.PlayModeTests",
+      "rootNamespace": "Raonjena.Adventure.Tests",
+      "references": [
+        "Raonjena.Adventure.Runtime"
+      ],
+      "optionalUnityReferences": [
+        "TestAssemblies"
+      ],
+      "autoReferenced": false
+    }
+  ],
+  "assemblyRefs": [
+    {
+      "from": "Raonjena.Adventure.Editor",
+      "reference": "Raonjena.Adventure.Runtime",
+      "resolution": "project"
+    },
+    {
+      "from": "Raonjena.Adventure.Editor",
+      "reference": "Unity.RenderPipelines.Universal.Runtime",
+      "resolution": "official-package-name"
+    },
+    {
+      "from": "Raonjena.Adventure.Editor",
+      "reference": "Unity.RenderPipelines.Core.Runtime",
+      "resolution": "official-package-name"
+    },
+    {
+      "from": "Raonjena.Adventure.Runtime",
+      "reference": "glTFast",
+      "resolution": "official-package-name"
+    },
+    {
+      "from": "Raonjena.Adventure.Runtime",
+      "reference": "Unity.RenderPipelines.Universal.Runtime",
+      "resolution": "official-package-name"
+    },
+    {
+      "from": "Raonjena.Adventure.Runtime",
+      "reference": "Unity.RenderPipelines.Core.Runtime",
+      "resolution": "official-package-name"
+    },
+    {
+      "from": "Raonjena.Adventure.EditModeTests",
+      "reference": "Raonjena.Adventure.Runtime",
+      "resolution": "project"
+    },
+    {
+      "from": "Raonjena.Adventure.PlayModeTests",
+      "reference": "Raonjena.Adventure.Runtime",
+      "resolution": "project"
+    }
+  ],
+  "duplicateGuids": [],
+  "guidsReferenced": [
+    {
+      "file": "Assets/Adventure/Scenes/RaonFoundation.unity",
+      "guid": "e2793e9393605b84441aba602586a0b1",
+      "resolved": "Assets/Adventure/Runtime/FoundationBootstrap.cs"
+    },
+    {
+      "file": "ProjectSettings/EditorBuildSettings.asset",
+      "guid": "a8baf7ba8fff2d70d325ec0e5ac621b5",
+      "resolved": "Assets/Adventure/Scenes/RaonFoundation.unity"
+    }
+  ],
+  "sceneScriptRefs": [
+    {
+      "fileId": "11500000",
+      "guid": "e2793e9393605b84441aba602586a0b1",
+      "resolved": [
+        "Assets/Adventure/Runtime/FoundationBootstrap.cs"
+      ]
+    }
+  ],
+  "buildScenePaths": [
+    "Assets/Adventure/Scenes/RaonFoundation.unity"
+  ],
+  "testCounts": [
+    {
+      "file": "Assets/Adventure/Tests/EditMode/MovementMathTests.cs",
+      "methods": 5,
+      "testCases": 3
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/RaonVisualTests.cs",
+      "methods": 2,
+      "testCases": 11
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/RaonMovementPlayModeTests.cs",
+      "methods": 9,
+      "testCases": 0
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/ThirdPersonCameraPlayModeTests.cs",
+      "methods": 4,
+      "testCases": 0
+    }
+  ],
+  "protectedInventory": [
+    {
+      "path": "web",
+      "exists": false,
+      "trackedFiles": 0
+    },
+    {
+      "path": "src",
+      "exists": true,
+      "trackedFiles": 117
+    },
+    {
+      "path": "public",
+      "exists": true,
+      "trackedFiles": 2181
+    },
+    {
+      "path": "unity/PsycheCharacterValidation",
+      "exists": true,
+      "trackedFiles": 9
+    }
+  ],
+  "protectedChanges": "",
+  "protectedUntracked": "",
+  "fontModuleAssessment": {
+    "missingManifestDependencyFound": false,
+    "fontAssembly": "UnityEngine.TextRenderingModule",
+    "imguiUsesFontDirectly": true,
+    "separateTextRenderingUpmPackageListedInUnity6000Manual": false,
+    "assessment": "The official Unity 6000.0 sources expose Font and GUIStyle.font and the built-in package catalog has no com.unity.modules.textrendering package. No extra manifest package is evidenced for this IMGUI HUD. Runtime asmdef keeps default engine references. Actual 6000.0.75f1 compile/render remains unverified."
+  },
+  "sources": [
+    "https://docs.unity3d.com/6000.0/Documentation/Manual/pack-build.html",
+    "https://raw.githubusercontent.com/Unity-Technologies/UnityCsReference/6000.0/Modules/TextRendering/TextRendering.bindings.cs",
+    "https://raw.githubusercontent.com/Unity-Technologies/UnityCsReference/6000.0/Modules/IMGUI/GUIStyle.bindings.cs",
+    "https://raw.githubusercontent.com/Unity-Technologies/Graphics/6000.0/staging/Packages/com.unity.render-pipelines.universal/Runtime/Unity.RenderPipelines.Universal.Runtime.asmdef",
+    "https://raw.githubusercontent.com/Unity-Technologies/Graphics/6000.0/staging/Packages/com.unity.render-pipelines.core/Runtime/Unity.RenderPipelines.Core.Runtime.asmdef"
+  ],
+  "localOfficialPackage": "work/ninth-gltfast-6.20/package",
+  "limitations": [
+    "Exact Unity 6000.0.75f1/URP17.0.3 package resolution and compilation were not executed.",
+    "URP assembly names checked against official 6000.0/staging source.",
+    "Generated pipeline/global settings are created by Editor PrepareProject and were not generated in this source-only audit.",
+    "No Unity native object, shader, skinning or input test was run."
+  ],
+  "hashes": [
+    {
+      "file": "Assets/Adventure/Editor/FoundationProject.cs",
+      "sha256": "1c46b53a1f1de5b16bd640aef31e2742978013613f9b75fdb89d74dabd3f44bb"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/FoundationBootstrap.cs",
+      "sha256": "1cbcb79da0c942d20448f77669336b3fd1fe310fd428d638176e238d0e44de87"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/FoundationHud.cs",
+      "sha256": "07326b0826e059c725cd1fcc5f7b841244e2fd3156d3f64180cecd2d071213be"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/FoundationInputDriver.cs",
+      "sha256": "ac6a68bbe4eb3ddf4a2ceb042d866d5f8d6e421aec60444ae1d0ef2ad8fd4f47"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/MovementMath.cs",
+      "sha256": "b153e5c1a1d27b8ac9e29dde4f15cb67039fc23279cbcd6906b54a99917ba791"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/RaonMotor.cs",
+      "sha256": "6a75bda1c3ba7464acde459b94ce70262feb9114683bbc940d0d397900e48f94"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/RaonVisual.cs",
+      "sha256": "99bd7898a4d3754f8f1a9a998182de3a0ea680270a179f6db2cfa213837f9b66"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/ThirdPersonCameraRig.cs",
+      "sha256": "82e0b9abcd159d6d41268ed1e197127c3092f8273431ef82a710d3f9593f3d9a"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/MovementMathTests.cs",
+      "sha256": "ae958552578045017b5374d361997de719b17639efdac6487493a556b181d065"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/RaonVisualTests.cs",
+      "sha256": "865b345dc2e0a1645d0b41d53ecff342266bb8ec4bc3f6a4404fe03cbfa641f8"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/RaonMovementPlayModeTests.cs",
+      "sha256": "7a380abb1e78e1bf1701ea2359b86ee582b7c9cb9b0e948a97ab06685937aaca"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/ThirdPersonCameraPlayModeTests.cs",
+      "sha256": "4d15dadc8b64ed2b944c40624acc8231f615720709206404b2c4f3f06c977ed4"
+    },
+    {
+      "file": "Assets/Adventure/Editor/Raonjena.Adventure.Editor.asmdef",
+      "sha256": "5a0a343f3736ee13fe733d8dcc0eec8394fd41125ac14261c19084f9619adc3f"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/Raonjena.Adventure.Runtime.asmdef",
+      "sha256": "c669dadde46fdfafca1f8098f34ef7e01e3903020968b628cecc87b7dbd45b24"
+    },
+    {
+      "file": "Assets/Adventure/Scenes/RaonFoundation.unity",
+      "sha256": "d9d3f1c94b08443c5fc5792143b29a0535e15e02711d083bf6b176cdd0247eed"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/Raonjena.Adventure.EditModeTests.asmdef",
+      "sha256": "a0bb5c73ab336e92cf989cabaf53abe6cae8da82cef58606d014b6b6810cb016"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/Raonjena.Adventure.PlayModeTests.asmdef",
+      "sha256": "c6a1c619cbe14303e09a3fc4af940f40e7b39bfbe02c182e31641c90fb03ea39"
+    },
+    {
+      "file": "Assets/Adventure/Editor/FoundationProject.cs.meta",
+      "sha256": "c8688f873a2921facf52fbed7f68b7518d6290d2bf9a14c088d5d169303a052d"
+    },
+    {
+      "file": "Assets/Adventure/Editor/Raonjena.Adventure.Editor.asmdef.meta",
+      "sha256": "a9f481a460e9b54e40c6196fe95576f05c31369c7ebae3a1430abc578e26e128"
+    },
+    {
+      "file": "Assets/Adventure/Editor.meta",
+      "sha256": "bec96f882f511c8ea96b5eb0825ee2fc6a1a6dac91dfa45f794cc47d407bcd14"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/FoundationBootstrap.cs.meta",
+      "sha256": "b1eb81956be6864d3be89d1c730c91030be45c580a8ce1d293a8b04b25a840de"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/FoundationHud.cs.meta",
+      "sha256": "66298398cf51da722dd2b5cd00e3762ce742875db0f8e641f5da56c87c000105"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/FoundationInputDriver.cs.meta",
+      "sha256": "d89600d3351b6fb74a66542b87014c6d1756506ef3a67fabb7675d24af18157e"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/MovementMath.cs.meta",
+      "sha256": "cd6bed9fe8f402a42a185615f7e26926b37180439a1618abc48d3c5d3fb24df1"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/Raonjena.Adventure.Runtime.asmdef.meta",
+      "sha256": "9f30bb53862643bb1f478be6fbfb15d87ca281009ce1e1ade3f42a1b95f59119"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/RaonMotor.cs.meta",
+      "sha256": "c8f32574daeb239c325c52f0c1bb31eea3646bea39f1d01ea9bea8fdf852a6b1"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/RaonVisual.cs.meta",
+      "sha256": "98405702c6473155171ced2e463cbd47096f28974a510f73231ef0dc93676559"
+    },
+    {
+      "file": "Assets/Adventure/Runtime/ThirdPersonCameraRig.cs.meta",
+      "sha256": "b3951298014f59c2be6661813c9ee54c2eaa3f0697742012546adcd3fc5e0504"
+    },
+    {
+      "file": "Assets/Adventure/Runtime.meta",
+      "sha256": "b960cf565a71b91bbc6128fa8d70896cbedeac1522547861e674eab2c1da728f"
+    },
+    {
+      "file": "Assets/Adventure/Scenes/RaonFoundation.unity.meta",
+      "sha256": "e79a5a8efb91fa0a4bce75a27da8e9890ae6aea1ce2493d168b6cc869e952143"
+    },
+    {
+      "file": "Assets/Adventure/Scenes.meta",
+      "sha256": "1e1691412349aa0f844c74ce32499b2209e85a7bfd9f606d1371b49747a97cef"
+    },
+    {
+      "file": "Assets/Adventure/Settings.meta",
+      "sha256": "c04e218aa40ef9c60b2d3b7727a6c04499c4f239a60de1bb0f9cc985b158b172"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/MovementMathTests.cs.meta",
+      "sha256": "2d908053b8cebd47affa332fbd35d9235ca272a4d2df2958116b9bb6d4a5df1f"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/Raonjena.Adventure.EditModeTests.asmdef.meta",
+      "sha256": "2500f2f2fad7ba5da1b4969f8deeb9f21e3fd4869dfaa75ea0901ea9b6aeb8b5"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode/RaonVisualTests.cs.meta",
+      "sha256": "7068c93e65bc929bc7ef5baad597bd03b731af1f5d36192a006ac7113b26dc09"
+    },
+    {
+      "file": "Assets/Adventure/Tests/EditMode.meta",
+      "sha256": "f995912390e2c000b4a3b363162ad71608a129283353855701bff1b7299ac27c"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/Raonjena.Adventure.PlayModeTests.asmdef.meta",
+      "sha256": "6b7a99debfe66cc7b0ee83e3081e0d560b194c765863ee3f9eebf332663d852a"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/RaonMovementPlayModeTests.cs.meta",
+      "sha256": "f9006e12817e3e84b342306e6477618bda83681594b4e945a98cff42bd47c8a7"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode/ThirdPersonCameraPlayModeTests.cs.meta",
+      "sha256": "50d3a578947fbf33a113e6c931367f2fd3a5fbbc6148f2224cd7278d64920a08"
+    },
+    {
+      "file": "Assets/Adventure/Tests/PlayMode.meta",
+      "sha256": "3e057b8b9ffca74e4f02dedda9821c1c23e0f30ddb6b9ed8eeec1b7093876c42"
+    },
+    {
+      "file": "Assets/Adventure/Tests.meta",
+      "sha256": "53cb7d57bf303b1a23bdc30a5f980b1d54cdf26a32236b5e8cf0ff5980766236"
+    },
+    {
+      "file": "Assets/Adventure.meta",
+      "sha256": "65b60946ee423df83a4956e27a1478bf1be447643ffe58f02ff8d2b4370a60f9"
+    },
+    {
+      "file": "Assets/StreamingAssets/Raon/raon-unity-runtime.glb.meta",
+      "sha256": "fdb805a776622852cfbcfc8ad8d4bbf236174b4f92996a1c0de52e852b09dc6e"
+    },
+    {
+      "file": "Assets/StreamingAssets/Raon.meta",
+      "sha256": "295cc69c003a132e2149bb3ba759d96ac02f44d50b53a0ca470ac0ec019a8aac"
+    },
+    {
+      "file": "Assets/StreamingAssets.meta",
+      "sha256": "7f889da006f58cde6b0761b3fcf2be4eeffc0651b3dea6d9489ccc7bff59b876"
+    },
+    {
+      "file": "Packages/manifest.json",
+      "sha256": "c663d0104d16fc2eb910056888a0a231037292952e5766ae84f3aeda8303bc65"
+    },
+    {
+      "file": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "f1602d70fc488767a13969e0160b3fad2b1c1b48c374a92a65b162379ebd6036"
+    },
+    {
+      "file": "ProjectSettings/ProjectSettings.asset",
+      "sha256": "6d7ebed4d8140f5da6a75223f1e128a87601adf3a7942177abff8cc634abbe12"
+    },
+    {
+      "file": "ProjectSettings/EditorBuildSettings.asset",
+      "sha256": "98577ad98a028536e50351657775ad662ba039cac64ae926893040edfe452527"
+    }
+  ],
+  "webRootFilesChecked": [
+    "package.json",
+    "pnpm-lock.yaml",
+    "index.html",
+    "vite.config.ts",
+    "tsconfig.json",
+    "tsconfig.app.json",
+    "tsconfig.node.json",
+    "eslint.config.js"
+  ],
+  "webRootFilesDiff": "",
+  "runtimeModel": {
+    "file": "Assets/StreamingAssets/Raon/raon-unity-runtime.glb",
+    "exists": true,
+    "bytes": 20174828,
+    "sha256": "d8fe6ac954d634bafd36b67428b071bdd141b69cd80032df89fa8795d2e7ad20",
+    "unityImportVerified": false
+  }
+}

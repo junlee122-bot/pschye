@@ -1,0 +1,238 @@
+{
+  "verifiedAt": "2026-09-15T00:39:58.649Z",
+  "commit": "f8ae64bde818358353a561952438f1aa9cfc3fbc",
+  "previous": "d059ed53fa5d4d53d4be687195ba65cc2288df95",
+  "files": 15,
+  "workingTreeClean": true,
+  "sourceStoryAndFormalCombatUnchanged": true,
+  "tests": {
+    "passed": 312,
+    "files": 22
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "build": {
+    "checkedAt": "2026-09-15T00:29:27.585Z",
+    "productionEntry": "assets/index-CUmyZMq6.js",
+    "petalTrainingEntry": "assets/PetalTrainingEncounter-vFRe0c2n.js",
+    "petalTrainingStyles": [
+      "assets/PetalTrainingEncounter-BapYr2BC.css"
+    ],
+    "authorChunksAbsent": true,
+    "battleVillageAndFieldEntriesRetained": true,
+    "chunks": [
+      "_VillagePrologue-CzsfmA2_.js",
+      "_VillagePrologue-DpY55hrw.css",
+      "_icons-Bpcrx_db.js",
+      "_phaser-CSP61uFZ.js",
+      "_phaserRuntime-nOZ7DIWJ.js",
+      "_react-9LjzQdLw.js",
+      "index.html",
+      "src/components/FieldExamEncounter.tsx",
+      "src/components/PetalTrainingEncounter.tsx",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx",
+      "src/components/VillageRescueEncounter.tsx"
+    ]
+  },
+  "browser": {
+    "checkedAt": "2026-09-15T00:39:02.582Z",
+    "summary": "통찰 수련의 실제 선택·키보드 동작·저장 재개·6동작 마무리·조장 선발전 진입을 확인했다. 16꽃잎/부담8 실패 시드의 표시와 실제 재도전도 확인했다.",
+    "sourceCommit": "f8ae64b",
+    "fixtureSourceMatchesProduction": true,
+    "production": {
+      "entry": "index-CUmyZMq6.js",
+      "encounter": "PetalTrainingEncounter-vFRe0c2n.js",
+      "css": "PetalTrainingEncounter-BapYr2BC.css"
+    },
+    "fixture": {
+      "entry": "index-CNNWrG5Y.js",
+      "encounter": "PetalTrainingEncounter-BXB2Tg3f.js",
+      "css": "PetalTrainingEncounter-BapYr2BC.css"
+    },
+    "origin": "http://127.0.0.1:4402",
+    "passed": [
+      "선택 전 장면 시드에서 실제 통찰 선택 → 수련 준비 → 시작 버튼으로 active에 진입했다.",
+      "첫 동작은 trace 라디오 클릭 뒤 Right로 balance 선택, Tab으로 제출 버튼에 초점, Enter로 실행했다. 실제 turn1/petals3/burden1이며 선택이 초기화됐다.",
+      "타이틀 이동 → 실제 새로고침 → 이야기 계속으로 수련을 재개했다. 재개 전후 실제 save/load 전체 요약이 동일했다.",
+      "실제 UI로 balance를 총 6회 실행해 review/turn6/petals16/burden6에 도달했다. 완료 전 flag와 완료 기억은 없고 수련 방법 기억만 있었다.",
+      "마루 앞에서 수련 마무리를 실제 클릭해 complete가 됐고 조장 선발전으로 버튼을 통해 captain-trials/재능이 예상하지 못한 검/최종 조장 선발전 화면으로 이동했다.",
+      "최종 저장은 selectionScore7, maruAffinity2, bondLevels빈객체, petals-distributed flag 및 완료 기억을 보유했다. 선택 전과 heroProgress/파생 HP·armor·skill/자원이 동일했다.",
+      "실제 core API의 결의 trace→trace→balance→trace 실패 시드는 petals16/burden8/turn4/failed였고 UI는 잠시 멈춤·부담 한계·다시 연습으로 표시했다.",
+      "실패 시드에서 쉬고 다시 연습을 실제 클릭했다. attempt2/active/turn0/petals0/burden0으로 초기화됐고 score7/affinity2/heroProgress/파생수치/자원이 유지됐다.",
+      "390px 폼·완료·상단 SVG 캡처 모두 document/client/body 폭381, viewport390으로 가로 넘침이 없었다. 선택·제출 버튼, 완료 문구·다음 버튼, 16꽃잎 그림의 배치를 육안 확인했다."
+    ],
+    "remaining": [
+      "연민·결의 경로 전체 실제 UI 완주 및 320px 화면은 이번 범위에서 실행하지 않았다.",
+      "앞선 10개 서장 장면과 수로 구출·야외 선발 과정은 이번 fixture에서 실제 플레이하지 않았다.",
+      "이전 묶음의 야외 선발 rescue-team/defy-order 실제 완주와 마을 카즈린 귀환 확인은 이번 수련 검증과 별개의 미확인 항목이다."
+    ],
+    "limitations": [
+      "앞선 10개 장면 완료 ID는 시드 준비다. 통찰은 현재 장면 선택부터 실제 UI로 진행했고 실패 경로 4동작은 실제 core API 시드다. 실패의 재도전 버튼만 실제 UI로 실행했다.",
+      "별도 production-mode fixture가 실제 App/CSS를 가져온다. fixture chunk 이름은 production과 다르며 원본 src/dist는 수정하지 않았다.",
+      "warn/error 최근 조회(limit12)는 빈 배열이었으며 모든 세션·브라우저 오류가 없다고 단정하지 않는다.",
+      "이번 새 4402 탭에서는 transport 실패가 발생하지 않았다. 과거 별도 follow-up 탭 실패는 해당 보고서에 남겨 두었다.",
+      "전체 312개 테스트·타입·ESLint·production build 통과는 루트가 실행한 자동 검사이며 이 수동 검증 결과와 구분한다."
+    ],
+    "screenshots": [
+      "<LOCAL_WORKSPACE>/outputs/sixth-batch-browser-form-390.png",
+      "<LOCAL_WORKSPACE>/outputs/sixth-batch-browser-complete-390.png",
+      "<LOCAL_WORKSPACE>/outputs/sixth-batch-browser-garden-390.png"
+    ],
+    "evidence": [
+      "<LOCAL_WORKSPACE>/outputs/sixth-batch-browser-save-evidence.json",
+      "<LOCAL_WORKSPACE>/outputs/sixth-batch-browser-review.md"
+    ],
+    "observed": {
+      "resumeEqual": true,
+      "finalChecks": {
+        "scene": "captain-trials",
+        "phase": "complete",
+        "score": 7,
+        "maruAffinity": 2,
+        "bondLevels": {},
+        "flags": [
+          "petals-distributed"
+        ],
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+          "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+        ],
+        "heroProgressUnchanged": true,
+        "heroStatsUnchanged": true,
+        "resourcesUnchanged": true
+      },
+      "retryChecks": {
+        "failed": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        },
+        "retry": {
+          "attempt": 2,
+          "burden": 0,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 0,
+          "phase": "active",
+          "turn": 0
+        },
+        "score": 7,
+        "affinity": 2,
+        "flags": [],
+        "unchangedScore": true,
+        "unchangedAffinity": true,
+        "unchangedHeroes": true,
+        "unchangedStats": true,
+        "unchangedResources": true
+      },
+      "viewport": {
+        "form": {
+          "body": 381,
+          "client": 381,
+          "scroll": 381,
+          "width": 390
+        },
+        "complete": {
+          "body": 381,
+          "client": 381,
+          "scroll": 381,
+          "width": 390
+        },
+        "garden": {
+          "body": 381,
+          "client": 381,
+          "scroll": 381,
+          "width": 390
+        }
+      },
+      "warnErrorLogs": {
+        "requestedLimit": 12,
+        "entries": []
+      }
+    },
+    "cleanup": {
+      "viewportReset": true,
+      "ownServerSession": 5238,
+      "ownServerStopped": true,
+      "port4402Closed": true,
+      "originalUserStorageTouched": false,
+      "originalSourceOrDistModified": false,
+      "otherUserProcessesStopped": false
+    }
+  },
+  "followup": {
+    "checkedAt": "2026-09-15T00:19:45Z",
+    "summary": "새4400 전용 탭에서 App 타이틀과 fixture 도구는 열렸지만 선택 직전 시드 준비 중 CUA debugger 연결이 끊겼다. 한 번의 재연결도 실패하여 추가 시도를 중단했다. 연민·결의 두 경로 완주와 마을 귀환 확인은 이번 후속에서 검증하지 못했다.",
+    "origin": "http://127.0.0.1:4400",
+    "preparedOrigins": [
+      "http://127.0.0.1:4400",
+      "http://127.0.0.1:4401"
+    ],
+    "buildBasis": {
+      "requestedHead": "d059ed53fa5d4d53d4be687195ba65cc2288df95",
+      "fieldOriginalEntry": "index-CRxl8JzP.js",
+      "fieldOriginalSource": "d059ed5와 동일한 fifth-batch production fixture",
+      "method": "재빌드 없이 ignored tmp/sixth-batch-followup 아래 HTML/entry를 복사하고 fixture origin guard와 안내만4398→4400으로 변경. 나머지 게임 해시 자산은 읽기 전용 재사용.",
+      "villageOriginalEntry": "index-Wxcxb7NC.js",
+      "villageSource": "기존 third-batch snapshot;4396→4401 guard만 변경해 준비했으나 실제 탭 진입 미시도.",
+      "sourceModified": false,
+      "originalDistModified": false
+    },
+    "passed": [],
+    "observed": [
+      "새 탭1908172956에서4400 App 타이틀, 신규 테스트 슬롯1, 검증 도구가 렌더됐다.",
+      "'선택 전 장면 시드' 버튼을 실제 클릭했다. 마지막 정상 AX 상태는 '4400 격리 실습 기록 준비 중…'이었으며 이후 장면/저장 완료는 확인하지 못했다."
+    ],
+    "remaining": [
+      "rescue-team: 실제 선택부터 구조·철수·선발12일차까지의 수동 완주.",
+      "defy-order: 실제 선택부터 첫 턴 라온 brace 제한·하도리 인계·구조·철수·선발12일차까지의 수동 완주.",
+      "이전 village return 상태에서 실제 카즈린 귀환 확정→일주일 뒤 다음 장면.",
+      "선택 직전 시드의 이번4400 저장 완료 여부도 연결 단절 이후 확인하지 못했다."
+    ],
+    "limitations": [
+      "실제 선택은 시작하지 못했다. 기존 split-route 완주 및 세 경로 core-test 근거와 혼동하지 않는다.",
+      "선택 직전까지의 서장 완료를 시드하려 했으며 이 과정은 이전 서장 수동 플레이가 아니다.",
+      "getAXState가 'Debugger unattached'로 실패했고, 한 번의 getTab 재연결도 같은 오류였다. 무한 재시도 없이 중단했으며 추가 마을 탭도 열지 않았다.",
+      "4401용 legacy village fixture는 준비만 했으며 최신 d059ed5에서의 마을 UI 검증 근거로 사용하지 않는다.",
+      "이번 실패 이후 스크린샷과 browser warn/error 로그는 수집하지 못했다. 앱 실패로 단정할 근거도 없다.",
+      "기존 사용자 origin/storage는 접근하지 않았다.4400/4401만 전용으로 준비했다."
+    ],
+    "screenshots": [],
+    "evidence": [
+      "<LOCAL_WORKSPACE>/outputs/sixth-batch-followup-fixture-basis.json"
+    ],
+    "cleanup": {
+      "viewportOverrideApplied": false,
+      "serverSession": 15579,
+      "serverStopped": true,
+      "ports": [
+        4400,
+        4401
+      ],
+      "serverExitCode": 1,
+      "method": "Ctrl+C",
+      "sourceModified": false,
+      "originalDistModified": false
+    }
+  },
+  "remotePush": false
+}

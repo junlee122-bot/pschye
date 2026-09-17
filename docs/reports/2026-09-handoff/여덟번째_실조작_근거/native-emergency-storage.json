@@ -1,0 +1,2869 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "http://127.0.0.1:4409",
+      "localStorage": [
+        {
+          "name": "raonjena-campaign-v10-slot-1-updated",
+          "value": "2026-09-15T02:25:02.244Z"
+        },
+        {
+          "name": "raonjena-campaign-v10-slot-1",
+          "value": "{\"version\":10,\"commanderName\":\"라온\",\"day\":1,\"commandLevel\":1,\"renown\":0,\"supplies\":320,\"intel\":40,\"relics\":0,\"commandActions\":3,\"activeSquad\":[\"hadori\",\"raon\",\"kazrin\",\"kain\",\"leo\",\"chris\"],\"inventory\":[\"breaker-gauntlet\",\"petal-training-blade\",\"silver-orbit-lance\",\"valder-heir-spear\",\"gate-wraps\",\"equilibrium-sabre\",\"field-kit\"],\"factions\":{\"empire\":20,\"civilians\":10,\"cursed\":0,\"cheshi\":-10},\"completedDispatches\":[],\"activityCounts\":{},\"bondLevels\":{\"kazrin:raon\":16,\"kain:raon\":8,\"leo:raon\":4,\"hadori:raon\":16},\"dailyCommandStats\":{\"training\":0,\"bond\":0,\"field\":0},\"dailyRewardClaimed\":false,\"careerStats\":{\"missions\":0,\"trainings\":0,\"bonds\":0,\"fieldActivities\":0,\"crafts\":0,\"dispatches\":0,\"perfectDays\":0},\"claimedStrategicOrders\":[],\"completedMissions\":[],\"missionGrades\":{},\"heroProgress\":{\"hadori\":{\"level\":3,\"xp\":0,\"bond\":12,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"breaker-gauntlet\",\"field-kit\"]},\"raon\":{\"level\":3,\"xp\":8,\"bond\":15,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"petal-training-blade\",\"field-kit\"]},\"kazrin\":{\"level\":2,\"xp\":16,\"bond\":18,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"silver-orbit-lance\",\"field-kit\"]},\"kain\":{\"level\":2,\"xp\":24,\"bond\":21,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"valder-heir-spear\",\"field-kit\"]},\"leo\":{\"level\":2,\"xp\":32,\"bond\":24,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"gate-wraps\",\"field-kit\"]},\"chris\":{\"level\":2,\"xp\":40,\"bond\":27,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"equilibrium-sabre\",\"field-kit\"]}},\"facilities\":{\"training\":1,\"archive\":1,\"infirmary\":1,\"forge\":0,\"violet\":0},\"unlockedRecords\":[\"official-salvation\",\"psyche-generation-07\",\"raon-origin\"],\"activityLog\":[\"라온은 통찰의 답을 선택했다 · 뜻을 온전히 전했다.\",\"프시케 제7기 입단 · 라온이 제2조장으로 첫 작전을 배정받았다.\",\"여섯 명의 조장 · 라온은 통찰의 선택을 남겼다.\",\"한 방 · 라온은 통찰의 선택을 남겼다.\",\"조장 선발 대결 · 마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다.\",\"따라온 사람을 넘어서는 순간 · 라온은 통찰의 선택을 남겼다.\",\"조장 선발 대결 · 카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다.\",\"재능이 예상하지 못한 검 · 라온은 통찰의 선택을 남겼다.\",\"열여섯 꽃잎 수련 완료 · 훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다.\",\"힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.\",\"라면을 끓이는 현자 · 라온은 통찰의 선택을 남겼다.\",\"발전 보류 · 라온은 통찰의 선택을 남겼다.\",\"폐광 구조 완료 · 라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다.\",\"이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.\",\"검보다 먼저 열린 감각 · 라온은 통찰의 선택을 남겼다.\",\"영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다.\"],\"raonPath\":{\"compassion\":0,\"insight\":16,\"resolve\":0},\"originStory\":{\"currentSceneId\":\"seventh-oath\",\"completed\":true,\"completedSceneIds\":[\"village-dawn\",\"windmill-trouble\",\"river-incident\",\"recruiters-arrive\",\"departure-night\",\"capital-gate\",\"aptitude-exam\",\"field-exam\",\"suspended-candidate\",\"maru-door\",\"sixteen-petals\",\"captain-trials\",\"kazrin-duel\",\"hadori-wall\",\"seventh-oath\"],\"choices\":{\"village-dawn\":\"watch-kazrin\",\"windmill-trouble\":\"read-shoulder\",\"river-incident\":\"mark-safe-route\",\"recruiters-arrive\":\"learn-what-i-saw\",\"departure-night\":\"promise-question\",\"capital-gate\":\"identify-poison\",\"aptitude-exam\":\"study-sight\",\"field-exam\":\"split-route\",\"suspended-candidate\":\"trace-forbidden-style\",\"maru-door\":\"challenge-analysis\",\"sixteen-petals\":\"distribute-weight\",\"captain-trials\":\"use-sixteenth-gap\",\"kazrin-duel\":\"change-old-rhythm\",\"hadori-wall\":\"ask-what-she-saw\",\"seventh-oath\":\"oath-question\"},\"flags\":[\"observed-ann-style\",\"read-kain-spear\",\"awakened-route-sight\",\"motive-truth\",\"promise-question-history\",\"found-selection-sabotage\",\"studied-route-sight\",\"field-split-command\",\"traced-haechan-style\",\"read-maru-hesitation\",\"petals-distributed\",\"countered-kain-perfectly\",\"outgrew-kazrin-memory\",\"learned-from-instant-loss\",\"oath-question\"],\"selectionScore\":72,\"villageRescue\":{\"phase\":\"complete\",\"choiceId\":\"mark-safe-route\",\"attempt\":1,\"turn\":9,\"hp\":2,\"x\":0,\"y\":1,\"threatRow\":0,\"progress\":3,\"markedColumns\":[1,2,3],\"log\":[\"카즈린과 모두의 귀환을 확인했다.\",\"아이와 라온이 둑으로 빠져나왔다. 마을의 카즈린에게 돌아가 확인하자.\",\"라온이 1열 2행으로 이동했다.\",\"실험체의 돌진에 휩쓸렸다. 체력 -1.\",\"라온이 2열 2행으로 이동했다.\",\"라온이 3열 2행으로 이동했다.\",\"4열에 안전한 발판을 표시했다. (3/3)\",\"실험체의 돌진에 휩쓸렸다. 체력 -1.\",\"라온이 4열 2행으로 이동했다.\",\"3열에 안전한 발판을 표시했다. (2/3)\",\"라온이 3열 2행으로 이동했다.\",\"실험체의 돌진에 휩쓸렸다. 체력 -1.\",\"2열에 안전한 발판을 표시했다. (1/3)\",\"라온이 2열 2행으로 이동했다.\",\"아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다.\"]},\"fieldExam\":{\"phase\":\"complete\",\"choiceId\":\"split-route\",\"attempt\":1,\"turn\":3,\"integrity\":2,\"left\":3,\"right\":3,\"log\":[\"지원자들과 모두 함께 폐광에서 철수했다.\",\"두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.\",\"3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2\",\"2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4\",\"1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5\",\"라온과 레오가 두 갱도의 상태를 살폈다.\"]},\"petalTraining\":{\"phase\":\"complete\",\"choiceId\":\"distribute-weight\",\"attempt\":1,\"turn\":6,\"petals\":16,\"burden\":6,\"log\":[\"마루 앞에서 이번 수련을 마무리했다.\",\"열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.\",\"6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8\",\"5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8\",\"4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8\",\"3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8\",\"2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8\",\"1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8\",\"검로와 몸의 부담을 살피며 수련을 시작했다.\"]},\"captainTrials\":{\"captain-trials\":{\"sceneId\":\"captain-trials\",\"choiceId\":\"use-sixteenth-gap\",\"phase\":\"complete\",\"attempt\":1,\"turn\":6,\"poise\":6,\"breath\":1,\"progress\":3,\"opening\":false,\"log\":[\"대결의 결과를 확인했다.\",\"상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.\",\"6번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3\",\"5번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3\",\"4번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3\",\"3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3\",\"2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3\",\"1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3\",\"상대의 움직임과 호흡을 살피며 대결을 준비했다.\"]},\"kazrin-duel\":{\"sceneId\":\"kazrin-duel\",\"choiceId\":\"change-old-rhythm\",\"phase\":\"complete\",\"attempt\":1,\"turn\":9,\"poise\":6,\"breath\":1,\"progress\":3,\"opening\":false,\"log\":[\"대결의 결과를 확인했다.\",\"상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.\",\"9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3\",\"8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3\",\"7번째 동작 · 비켜딛기 · 균형 6, 호흡 2, 승부 진행 2 / 3\",\"6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3\",\"5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3\",\"4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3\",\"3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3\",\"2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3\",\"1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3\",\"상대의 움직임과 호흡을 살피며 대결을 준비했다.\"]},\"hadori-wall\":{\"sceneId\":\"hadori-wall\",\"phase\":\"complete\",\"attempt\":1,\"turn\":1,\"poise\":0,\"breath\":4,\"progress\":0,\"opening\":false,\"log\":[\"하도리와의 대결이 끝났음을 확인했다. 이제 패배 뒤의 말을 고를 차례다.\",\"첫발을 내디딘 순간, 하도리의 한 방에 대결이 끝났다.\",\"하도리가 원형장에서 라온을 기다린다.\"]}}},\"storyChoices\":{\"grey-bridge-escort\":\"insight\"},\"narrativeChecks\":{\"grey-bridge-escort\":{\"choiceId\":\"insight\",\"chance\":92,\"roll\":66,\"outcome\":\"clear\"}},\"relationshipMemories\":{\"grey-bridge-escort\":{\"missionId\":\"grey-bridge-escort\",\"companionId\":\"hadori\",\"choiceId\":\"insight\",\"text\":\"하도리은(는) 라온이 보이는 적보다 그 뒤의 이유를 먼저 의심했다.\",\"reaction\":\"동료는 라온이 자신이 놓친 틈까지 읽었다고 인정했다.\",\"outcome\":\"clear\"}},\"world\":{\"minutes\":360,\"phase\":\"dawn\",\"weather\":\"clear\",\"currentRegion\":\"frontier-village\",\"discoveredLocations\":[\"frontier-village\"],\"npcMemories\":{\"kazrin\":{\"affinity\":16,\"lastChoice\":\"change-old-rhythm\",\"rememberedFacts\":[\"라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.\",\"수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다\",\"라온의 이능 적성이 처음으로 명확하게 드러난다.\",\"카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다.\",\"대결에서 보여 줄 검을 정했다: 카즈린이 기억하는 라온의 박자를 버린다\",\"마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다.\"],\"lastSeenDay\":1},\"kain\":{\"affinity\":8,\"lastChoice\":\"use-sixteenth-gap\",\"rememberedFacts\":[\"완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.\",\"대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다\",\"카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다.\"],\"lastSeenDay\":1},\"bellatrice\":{\"affinity\":2,\"lastChoice\":\"learn-what-i-saw\",\"rememberedFacts\":[\"이능 적성 검사가 라온의 선발 과정에 추가된다.\"],\"lastSeenDay\":1},\"jinhwon\":{\"affinity\":4,\"lastChoice\":\"oath-question\",\"rememberedFacts\":[\"선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다.\",\"라온은 삭제된 역사를 추적하는 관찰자의 길을 택한다.\"],\"lastSeenDay\":1},\"kangrim\":{\"affinity\":2,\"lastChoice\":\"study-sight\",\"rememberedFacts\":[\"라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다.\"],\"lastSeenDay\":1},\"leo\":{\"affinity\":4,\"lastChoice\":\"split-route\",\"rememberedFacts\":[\"폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다\",\"라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다.\"],\"lastSeenDay\":1},\"hadori\":{\"affinity\":8,\"lastChoice\":\"ask-what-she-saw\",\"rememberedFacts\":[\"해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다.\",\"하도리는 열두 번째 꽃잎부터 라온의 다리가 무너졌다고 정확히 말해 준다.\"],\"lastSeenDay\":1},\"maru\":{\"affinity\":4,\"lastChoice\":\"distribute-weight\",\"rememberedFacts\":[\"마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.\",\"열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다\",\"훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다.\"],\"lastSeenDay\":1}},\"village\":{\"playerX\":982,\"playerY\":270,\"visitedLandmarks\":[\"마을 공동회관\",\"폐풍차 훈련터\",\"저주받은 수로\",\"오래된 풍차 언덕\"],\"completedErrands\":[]},\"headquartersLayout\":[{\"slot\":0,\"facilityId\":\"training\"},{\"slot\":1,\"facilityId\":\"archive\"},{\"slot\":2,\"facilityId\":\"infirmary\"},{\"slot\":3,\"facilityId\":\"forge\"},{\"slot\":4,\"facilityId\":\"violet\"}],\"eventJournal\":[\"jinhwon은(는) 라온의 선택을 기억한다.\",\"hadori은(는) 라온의 선택을 기억한다.\",\"kazrin은(는) 라온의 선택을 기억한다.\",\"kazrin은(는) 라온의 선택을 기억한다.\",\"kain은(는) 라온의 선택을 기억한다.\",\"kain은(는) 라온의 선택을 기억한다.\",\"maru은(는) 라온의 선택을 기억한다.\",\"maru은(는) 라온의 선택을 기억한다.\",\"maru은(는) 라온의 선택을 기억한다.\",\"hadori은(는) 라온의 선택을 기억한다.\",\"leo은(는) 라온의 선택을 기억한다.\",\"leo은(는) 라온의 선택을 기억한다.\",\"kangrim은(는) 라온의 선택을 기억한다.\",\"jinhwon은(는) 라온의 선택을 기억한다.\",\"kazrin은(는) 라온의 선택을 기억한다.\",\"새 장소 발견 · 오래된 풍차 언덕\",\"bellatrice은(는) 라온의 선택을 기억한다.\",\"kazrin은(는) 라온의 선택을 기억한다.\",\"kazrin은(는) 라온의 선택을 기억한다.\",\"새 장소 발견 · 저주받은 수로\",\"kain은(는) 라온의 선택을 기억한다.\",\"kazrin은(는) 라온의 선택을 기억한다.\",\"새 장소 발견 · 폐풍차 훈련터\",\"새 장소 발견 · 마을 공동회관\",\"A.S. 84 · 변방 마을의 새벽이 밝았다.\"]},\"battleAttempt\":{\"id\":\"c302cfdf-04fc-421c-9988-bf53eab02db4\",\"missionId\":\"grey-bridge-escort\",\"doctrine\":\"counterfire\",\"difficulty\":\"standard\",\"raonStance\":\"insight\",\"warPressure\":18,\"bondSupport\":16,\"heroes\":[{\"id\":\"hadori\",\"name\":\"하도리\",\"title\":\"제1조장 · 전선 지휘\",\"maxHp\":197,\"armor\":24,\"art\":\"/art/portraits/hadori-v1.webp\",\"accent\":\"#8ea1ac\",\"position\":{\"x\":18,\"y\":57},\"skills\":[{\"id\":\"iron-gate\",\"name\":\"철문\",\"description\":\"호송 마차 앞에 서서 32의 방벽을 세운다.\",\"kind\":\"guard\",\"power\":37,\"morale\":12,\"target\":\"carriage\"},{\"id\":\"ground-break\",\"name\":\"지반 파쇄\",\"description\":\"적 하나를 강타하고 다음 적 행동을 봉쇄한다.\",\"kind\":\"damage\",\"power\":47,\"morale\":10,\"target\":\"enemy\"}]},{\"id\":\"raon\",\"name\":\"라온\",\"title\":\"제2조장 · 미완의 검\",\"maxHp\":139,\"armor\":12,\"art\":\"/art/portraits/raon-v1.webp\",\"accent\":\"#cb9150\",\"position\":{\"x\":30,\"y\":42},\"skills\":[{\"id\":\"sixteen-petals\",\"name\":\"16꽃잎\",\"description\":\"마루의 기억에서 복원한 해찬류. 노출된 적에게 더 깊이 파고든다.\",\"kind\":\"damage\",\"power\":53,\"morale\":18,\"target\":\"enemy\"},{\"id\":\"unfinished-flow\",\"name\":\"미완의 유동\",\"description\":\"검로를 흩어 모든 확인된 적에게 피해를 준다.\",\"kind\":\"area\",\"power\":34,\"morale\":14,\"target\":\"all-enemies\"}]},{\"id\":\"kazrin\",\"name\":\"카즈린\",\"title\":\"제3조장 · 백은의 창\",\"maxHp\":142,\"armor\":15,\"art\":\"/art/portraits/kazrin-v1.webp\",\"accent\":\"#d8d9cf\",\"position\":{\"x\":38,\"y\":63},\"skills\":[{\"id\":\"silver-line\",\"name\":\"백은 궤도\",\"description\":\"방어를 꿰뚫는 정밀한 라티계 앤류 찌르기.\",\"kind\":\"damage\",\"power\":54,\"morale\":11,\"target\":\"enemy\"},{\"id\":\"guardian-orbit\",\"name\":\"호위 궤도\",\"description\":\"승리보다 보호를 택해 호송 마차에 24의 방벽을 세운다.\",\"kind\":\"guard\",\"power\":31,\"morale\":18,\"target\":\"carriage\"}]},{\"id\":\"kain\",\"name\":\"카인\",\"title\":\"제4조장 · 발데르의 창\",\"maxHp\":152,\"armor\":16,\"art\":\"/art/portraits/kain-v1.webp\",\"accent\":\"#a88b70\",\"position\":{\"x\":22,\"y\":74},\"skills\":[{\"id\":\"duel-mark\",\"name\":\"결투 표식\",\"description\":\"적의 중심을 읽고 공격한 뒤 노출 상태를 남긴다.\",\"kind\":\"damage\",\"power\":45,\"morale\":10,\"target\":\"enemy\"},{\"id\":\"valder-pierce\",\"name\":\"발데르 관통\",\"description\":\"자신의 체력 12를 대가로 오만할 만큼 강한 일격을 가한다.\",\"kind\":\"damage\",\"power\":66,\"morale\":8,\"target\":\"enemy\"}]},{\"id\":\"leo\",\"name\":\"레오\",\"title\":\"제5조장 · 침묵의 중심\",\"maxHp\":174,\"armor\":21,\"art\":\"/art/portraits/leo-v1.webp\",\"accent\":\"#b7a98e\",\"position\":{\"x\":31,\"y\":78},\"skills\":[{\"id\":\"gate-stance\",\"name\":\"진훤류 수문\",\"description\":\"기본기를 반복해 호송 마차에 36의 방벽을 세운다.\",\"kind\":\"guard\",\"power\":40,\"morale\":14,\"target\":\"carriage\"},{\"id\":\"silent-counter\",\"name\":\"침묵의 반격\",\"description\":\"흔들리지 않는 자세로 반격하고 자신에게 16의 방벽을 얻는다.\",\"kind\":\"damage\",\"power\":37,\"morale\":16,\"target\":\"enemy\"}]},{\"id\":\"chris\",\"name\":\"크리스\",\"title\":\"제6조장 · 균형검\",\"maxHp\":131,\"armor\":11,\"art\":\"/art/portraits/chris-v1.webp\",\"accent\":\"#d4aa64\",\"position\":{\"x\":42,\"y\":80},\"skills\":[{\"id\":\"side-read\",\"name\":\"측면 유도\",\"description\":\"숨은 적을 찾아내고 2중 노출을 남긴다.\",\"kind\":\"reveal\",\"power\":19,\"morale\":24,\"target\":\"enemy\"},{\"id\":\"equilibrium-blade\",\"name\":\"리스트류 균형검\",\"description\":\"가볍게 보이지만 빈틈없는 서양식 연속 베기.\",\"kind\":\"damage\",\"power\":42,\"morale\":17,\"target\":\"enemy\"}]}],\"mode\":\"select\",\"settled\":false,\"battle\":{\"missionId\":\"grey-bridge-escort\",\"difficulty\":\"standard\",\"round\":1,\"roundLimit\":6,\"commandPoints\":3,\"morale\":29,\"carriageHp\":118,\"carriageShield\":0,\"heroes\":[{\"id\":\"hadori\",\"hp\":197,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":true},{\"id\":\"raon\",\"hp\":139,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":true},{\"id\":\"kazrin\",\"hp\":142,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":true},{\"id\":\"kain\",\"hp\":152,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":true},{\"id\":\"leo\",\"hp\":174,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":true},{\"id\":\"chris\",\"hp\":131,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":true}],\"enemies\":[{\"id\":\"sky-sniper\",\"hp\":138,\"shield\":0,\"acted\":false,\"exposed\":0,\"stunned\":0,\"revealed\":false},{\"id\":\"rifleman-a\",\"hp\":78,\"shield\":0,\"acted\":false,\"exposed\":1,\"stunned\":0,\"revealed\":true},{\"id\":\"rifleman-b\",\"hp\":78,\"shield\":0,\"acted\":false,\"exposed\":1,\"stunned\":0,\"revealed\":true},{\"id\":\"wing-lancer\",\"hp\":96,\"shield\":0,\"acted\":false,\"exposed\":1,\"stunned\":0,\"revealed\":true}],\"log\":[{\"id\":1,\"round\":1,\"speaker\":\"작전 기록\",\"message\":\"크리스의 제안으로 선행 정찰을 보냈다. 제7기의 사기가 상승한다.\",\"tone\":\"story\"}],\"outcome\":\"active\",\"finisherUsed\":false,\"revelationTriggered\":false,\"focusChain\":[],\"breakCount\":0,\"raonStance\":\"insight\",\"warPressure\":18,\"bondSupport\":16}},\"_savedAt\":\"2026-09-15T02:25:02.244Z\"}"
+        }
+      ],
+      "indexedDB": [
+        {
+          "name": "raonjena-saves",
+          "version": 1,
+          "stores": [
+            {
+              "name": "campaign-slots",
+              "autoIncrement": false,
+              "keyPath": "slot",
+              "records": [
+                {
+                  "valueEncoded": {
+                    "o": [
+                      {
+                        "k": "slot",
+                        "v": 1
+                      },
+                      {
+                        "k": "profile",
+                        "v": {
+                          "o": [
+                            {
+                              "k": "version",
+                              "v": 10
+                            },
+                            {
+                              "k": "commanderName",
+                              "v": "라온"
+                            },
+                            {
+                              "k": "day",
+                              "v": 1
+                            },
+                            {
+                              "k": "commandLevel",
+                              "v": 1
+                            },
+                            {
+                              "k": "renown",
+                              "v": 0
+                            },
+                            {
+                              "k": "supplies",
+                              "v": 320
+                            },
+                            {
+                              "k": "intel",
+                              "v": 40
+                            },
+                            {
+                              "k": "relics",
+                              "v": 0
+                            },
+                            {
+                              "k": "commandActions",
+                              "v": 3
+                            },
+                            {
+                              "k": "activeSquad",
+                              "v": {
+                                "a": [
+                                  "hadori",
+                                  "raon",
+                                  "kazrin",
+                                  "kain",
+                                  "leo",
+                                  "chris"
+                                ],
+                                "id": 3
+                              }
+                            },
+                            {
+                              "k": "inventory",
+                              "v": {
+                                "a": [
+                                  "breaker-gauntlet",
+                                  "petal-training-blade",
+                                  "silver-orbit-lance",
+                                  "valder-heir-spear",
+                                  "gate-wraps",
+                                  "equilibrium-sabre",
+                                  "field-kit"
+                                ],
+                                "id": 4
+                              }
+                            },
+                            {
+                              "k": "factions",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "empire",
+                                    "v": 20
+                                  },
+                                  {
+                                    "k": "civilians",
+                                    "v": 10
+                                  },
+                                  {
+                                    "k": "cursed",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "cheshi",
+                                    "v": -10
+                                  }
+                                ],
+                                "id": 5
+                              }
+                            },
+                            {
+                              "k": "completedDispatches",
+                              "v": {
+                                "a": [],
+                                "id": 6
+                              }
+                            },
+                            {
+                              "k": "activityCounts",
+                              "v": {
+                                "o": [],
+                                "id": 7
+                              }
+                            },
+                            {
+                              "k": "bondLevels",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "kazrin:raon",
+                                    "v": 16
+                                  },
+                                  {
+                                    "k": "kain:raon",
+                                    "v": 8
+                                  },
+                                  {
+                                    "k": "leo:raon",
+                                    "v": 4
+                                  },
+                                  {
+                                    "k": "hadori:raon",
+                                    "v": 16
+                                  }
+                                ],
+                                "id": 8
+                              }
+                            },
+                            {
+                              "k": "dailyCommandStats",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "training",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "bond",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "field",
+                                    "v": 0
+                                  }
+                                ],
+                                "id": 9
+                              }
+                            },
+                            {
+                              "k": "dailyRewardClaimed",
+                              "v": false
+                            },
+                            {
+                              "k": "careerStats",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "missions",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "trainings",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "bonds",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "fieldActivities",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "crafts",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "dispatches",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "perfectDays",
+                                    "v": 0
+                                  }
+                                ],
+                                "id": 10
+                              }
+                            },
+                            {
+                              "k": "claimedStrategicOrders",
+                              "v": {
+                                "a": [],
+                                "id": 11
+                              }
+                            },
+                            {
+                              "k": "completedMissions",
+                              "v": {
+                                "a": [],
+                                "id": 12
+                              }
+                            },
+                            {
+                              "k": "missionGrades",
+                              "v": {
+                                "o": [],
+                                "id": 13
+                              }
+                            },
+                            {
+                              "k": "heroProgress",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "hadori",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "level",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "xp",
+                                          "v": 0
+                                        },
+                                        {
+                                          "k": "bond",
+                                          "v": 12
+                                        },
+                                        {
+                                          "k": "skillPoints",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "unlockedNodes",
+                                          "v": {
+                                            "a": [
+                                              "foundation"
+                                            ],
+                                            "id": 16
+                                          }
+                                        },
+                                        {
+                                          "k": "equipment",
+                                          "v": {
+                                            "a": [
+                                              "breaker-gauntlet",
+                                              "field-kit"
+                                            ],
+                                            "id": 17
+                                          }
+                                        }
+                                      ],
+                                      "id": 15
+                                    }
+                                  },
+                                  {
+                                    "k": "raon",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "level",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "xp",
+                                          "v": 8
+                                        },
+                                        {
+                                          "k": "bond",
+                                          "v": 15
+                                        },
+                                        {
+                                          "k": "skillPoints",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "unlockedNodes",
+                                          "v": {
+                                            "a": [
+                                              "foundation"
+                                            ],
+                                            "id": 19
+                                          }
+                                        },
+                                        {
+                                          "k": "equipment",
+                                          "v": {
+                                            "a": [
+                                              "petal-training-blade",
+                                              "field-kit"
+                                            ],
+                                            "id": 20
+                                          }
+                                        }
+                                      ],
+                                      "id": 18
+                                    }
+                                  },
+                                  {
+                                    "k": "kazrin",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "level",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "xp",
+                                          "v": 16
+                                        },
+                                        {
+                                          "k": "bond",
+                                          "v": 18
+                                        },
+                                        {
+                                          "k": "skillPoints",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "unlockedNodes",
+                                          "v": {
+                                            "a": [
+                                              "foundation"
+                                            ],
+                                            "id": 22
+                                          }
+                                        },
+                                        {
+                                          "k": "equipment",
+                                          "v": {
+                                            "a": [
+                                              "silver-orbit-lance",
+                                              "field-kit"
+                                            ],
+                                            "id": 23
+                                          }
+                                        }
+                                      ],
+                                      "id": 21
+                                    }
+                                  },
+                                  {
+                                    "k": "kain",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "level",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "xp",
+                                          "v": 24
+                                        },
+                                        {
+                                          "k": "bond",
+                                          "v": 21
+                                        },
+                                        {
+                                          "k": "skillPoints",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "unlockedNodes",
+                                          "v": {
+                                            "a": [
+                                              "foundation"
+                                            ],
+                                            "id": 25
+                                          }
+                                        },
+                                        {
+                                          "k": "equipment",
+                                          "v": {
+                                            "a": [
+                                              "valder-heir-spear",
+                                              "field-kit"
+                                            ],
+                                            "id": 26
+                                          }
+                                        }
+                                      ],
+                                      "id": 24
+                                    }
+                                  },
+                                  {
+                                    "k": "leo",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "level",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "xp",
+                                          "v": 32
+                                        },
+                                        {
+                                          "k": "bond",
+                                          "v": 24
+                                        },
+                                        {
+                                          "k": "skillPoints",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "unlockedNodes",
+                                          "v": {
+                                            "a": [
+                                              "foundation"
+                                            ],
+                                            "id": 28
+                                          }
+                                        },
+                                        {
+                                          "k": "equipment",
+                                          "v": {
+                                            "a": [
+                                              "gate-wraps",
+                                              "field-kit"
+                                            ],
+                                            "id": 29
+                                          }
+                                        }
+                                      ],
+                                      "id": 27
+                                    }
+                                  },
+                                  {
+                                    "k": "chris",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "level",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "xp",
+                                          "v": 40
+                                        },
+                                        {
+                                          "k": "bond",
+                                          "v": 27
+                                        },
+                                        {
+                                          "k": "skillPoints",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "unlockedNodes",
+                                          "v": {
+                                            "a": [
+                                              "foundation"
+                                            ],
+                                            "id": 31
+                                          }
+                                        },
+                                        {
+                                          "k": "equipment",
+                                          "v": {
+                                            "a": [
+                                              "equilibrium-sabre",
+                                              "field-kit"
+                                            ],
+                                            "id": 32
+                                          }
+                                        }
+                                      ],
+                                      "id": 30
+                                    }
+                                  }
+                                ],
+                                "id": 14
+                              }
+                            },
+                            {
+                              "k": "facilities",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "training",
+                                    "v": 1
+                                  },
+                                  {
+                                    "k": "archive",
+                                    "v": 1
+                                  },
+                                  {
+                                    "k": "infirmary",
+                                    "v": 1
+                                  },
+                                  {
+                                    "k": "forge",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "violet",
+                                    "v": 0
+                                  }
+                                ],
+                                "id": 33
+                              }
+                            },
+                            {
+                              "k": "unlockedRecords",
+                              "v": {
+                                "a": [
+                                  "official-salvation",
+                                  "psyche-generation-07",
+                                  "raon-origin"
+                                ],
+                                "id": 34
+                              }
+                            },
+                            {
+                              "k": "activityLog",
+                              "v": {
+                                "a": [
+                                  "라온은 통찰의 답을 선택했다 · 뜻을 온전히 전했다.",
+                                  "프시케 제7기 입단 · 라온이 제2조장으로 첫 작전을 배정받았다.",
+                                  "여섯 명의 조장 · 라온은 통찰의 선택을 남겼다.",
+                                  "한 방 · 라온은 통찰의 선택을 남겼다.",
+                                  "조장 선발 대결 · 마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다.",
+                                  "따라온 사람을 넘어서는 순간 · 라온은 통찰의 선택을 남겼다.",
+                                  "조장 선발 대결 · 카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다.",
+                                  "재능이 예상하지 못한 검 · 라온은 통찰의 선택을 남겼다.",
+                                  "열여섯 꽃잎 수련 완료 · 훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다.",
+                                  "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+                                  "라면을 끓이는 현자 · 라온은 통찰의 선택을 남겼다.",
+                                  "발전 보류 · 라온은 통찰의 선택을 남겼다.",
+                                  "폐광 구조 완료 · 라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다.",
+                                  "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+                                  "검보다 먼저 열린 감각 · 라온은 통찰의 선택을 남겼다.",
+                                  "영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다."
+                                ],
+                                "id": 35
+                              }
+                            },
+                            {
+                              "k": "raonPath",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "compassion",
+                                    "v": 0
+                                  },
+                                  {
+                                    "k": "insight",
+                                    "v": 16
+                                  },
+                                  {
+                                    "k": "resolve",
+                                    "v": 0
+                                  }
+                                ],
+                                "id": 36
+                              }
+                            },
+                            {
+                              "k": "originStory",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "currentSceneId",
+                                    "v": "seventh-oath"
+                                  },
+                                  {
+                                    "k": "completed",
+                                    "v": true
+                                  },
+                                  {
+                                    "k": "completedSceneIds",
+                                    "v": {
+                                      "a": [
+                                        "village-dawn",
+                                        "windmill-trouble",
+                                        "river-incident",
+                                        "recruiters-arrive",
+                                        "departure-night",
+                                        "capital-gate",
+                                        "aptitude-exam",
+                                        "field-exam",
+                                        "suspended-candidate",
+                                        "maru-door",
+                                        "sixteen-petals",
+                                        "captain-trials",
+                                        "kazrin-duel",
+                                        "hadori-wall",
+                                        "seventh-oath"
+                                      ],
+                                      "id": 38
+                                    }
+                                  },
+                                  {
+                                    "k": "choices",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "village-dawn",
+                                          "v": "watch-kazrin"
+                                        },
+                                        {
+                                          "k": "windmill-trouble",
+                                          "v": "read-shoulder"
+                                        },
+                                        {
+                                          "k": "river-incident",
+                                          "v": "mark-safe-route"
+                                        },
+                                        {
+                                          "k": "recruiters-arrive",
+                                          "v": "learn-what-i-saw"
+                                        },
+                                        {
+                                          "k": "departure-night",
+                                          "v": "promise-question"
+                                        },
+                                        {
+                                          "k": "capital-gate",
+                                          "v": "identify-poison"
+                                        },
+                                        {
+                                          "k": "aptitude-exam",
+                                          "v": "study-sight"
+                                        },
+                                        {
+                                          "k": "field-exam",
+                                          "v": "split-route"
+                                        },
+                                        {
+                                          "k": "suspended-candidate",
+                                          "v": "trace-forbidden-style"
+                                        },
+                                        {
+                                          "k": "maru-door",
+                                          "v": "challenge-analysis"
+                                        },
+                                        {
+                                          "k": "sixteen-petals",
+                                          "v": "distribute-weight"
+                                        },
+                                        {
+                                          "k": "captain-trials",
+                                          "v": "use-sixteenth-gap"
+                                        },
+                                        {
+                                          "k": "kazrin-duel",
+                                          "v": "change-old-rhythm"
+                                        },
+                                        {
+                                          "k": "hadori-wall",
+                                          "v": "ask-what-she-saw"
+                                        },
+                                        {
+                                          "k": "seventh-oath",
+                                          "v": "oath-question"
+                                        }
+                                      ],
+                                      "id": 39
+                                    }
+                                  },
+                                  {
+                                    "k": "flags",
+                                    "v": {
+                                      "a": [
+                                        "observed-ann-style",
+                                        "read-kain-spear",
+                                        "awakened-route-sight",
+                                        "motive-truth",
+                                        "promise-question-history",
+                                        "found-selection-sabotage",
+                                        "studied-route-sight",
+                                        "field-split-command",
+                                        "traced-haechan-style",
+                                        "read-maru-hesitation",
+                                        "petals-distributed",
+                                        "countered-kain-perfectly",
+                                        "outgrew-kazrin-memory",
+                                        "learned-from-instant-loss",
+                                        "oath-question"
+                                      ],
+                                      "id": 40
+                                    }
+                                  },
+                                  {
+                                    "k": "selectionScore",
+                                    "v": 72
+                                  },
+                                  {
+                                    "k": "villageRescue",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "phase",
+                                          "v": "complete"
+                                        },
+                                        {
+                                          "k": "choiceId",
+                                          "v": "mark-safe-route"
+                                        },
+                                        {
+                                          "k": "attempt",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "turn",
+                                          "v": 9
+                                        },
+                                        {
+                                          "k": "hp",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "x",
+                                          "v": 0
+                                        },
+                                        {
+                                          "k": "y",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "threatRow",
+                                          "v": 0
+                                        },
+                                        {
+                                          "k": "progress",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "markedColumns",
+                                          "v": {
+                                            "a": [
+                                              1,
+                                              2,
+                                              3
+                                            ],
+                                            "id": 42
+                                          }
+                                        },
+                                        {
+                                          "k": "log",
+                                          "v": {
+                                            "a": [
+                                              "카즈린과 모두의 귀환을 확인했다.",
+                                              "아이와 라온이 둑으로 빠져나왔다. 마을의 카즈린에게 돌아가 확인하자.",
+                                              "라온이 1열 2행으로 이동했다.",
+                                              "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+                                              "라온이 2열 2행으로 이동했다.",
+                                              "라온이 3열 2행으로 이동했다.",
+                                              "4열에 안전한 발판을 표시했다. (3/3)",
+                                              "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+                                              "라온이 4열 2행으로 이동했다.",
+                                              "3열에 안전한 발판을 표시했다. (2/3)",
+                                              "라온이 3열 2행으로 이동했다.",
+                                              "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+                                              "2열에 안전한 발판을 표시했다. (1/3)",
+                                              "라온이 2열 2행으로 이동했다.",
+                                              "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+                                            ],
+                                            "id": 43
+                                          }
+                                        }
+                                      ],
+                                      "id": 41
+                                    }
+                                  },
+                                  {
+                                    "k": "fieldExam",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "phase",
+                                          "v": "complete"
+                                        },
+                                        {
+                                          "k": "choiceId",
+                                          "v": "split-route"
+                                        },
+                                        {
+                                          "k": "attempt",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "turn",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "integrity",
+                                          "v": 2
+                                        },
+                                        {
+                                          "k": "left",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "right",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "log",
+                                          "v": {
+                                            "a": [
+                                              "지원자들과 모두 함께 폐광에서 철수했다.",
+                                              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+                                              "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+                                              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+                                              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+                                              "라온과 레오가 두 갱도의 상태를 살폈다."
+                                            ],
+                                            "id": 45
+                                          }
+                                        }
+                                      ],
+                                      "id": 44
+                                    }
+                                  },
+                                  {
+                                    "k": "petalTraining",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "phase",
+                                          "v": "complete"
+                                        },
+                                        {
+                                          "k": "choiceId",
+                                          "v": "distribute-weight"
+                                        },
+                                        {
+                                          "k": "attempt",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "turn",
+                                          "v": 6
+                                        },
+                                        {
+                                          "k": "petals",
+                                          "v": 16
+                                        },
+                                        {
+                                          "k": "burden",
+                                          "v": 6
+                                        },
+                                        {
+                                          "k": "log",
+                                          "v": {
+                                            "a": [
+                                              "마루 앞에서 이번 수련을 마무리했다.",
+                                              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+                                              "6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8",
+                                              "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+                                              "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+                                              "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+                                              "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+                                              "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+                                              "검로와 몸의 부담을 살피며 수련을 시작했다."
+                                            ],
+                                            "id": 47
+                                          }
+                                        }
+                                      ],
+                                      "id": 46
+                                    }
+                                  },
+                                  {
+                                    "k": "captainTrials",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "captain-trials",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "sceneId",
+                                                "v": "captain-trials"
+                                              },
+                                              {
+                                                "k": "choiceId",
+                                                "v": "use-sixteenth-gap"
+                                              },
+                                              {
+                                                "k": "phase",
+                                                "v": "complete"
+                                              },
+                                              {
+                                                "k": "attempt",
+                                                "v": 1
+                                              },
+                                              {
+                                                "k": "turn",
+                                                "v": 6
+                                              },
+                                              {
+                                                "k": "poise",
+                                                "v": 6
+                                              },
+                                              {
+                                                "k": "breath",
+                                                "v": 1
+                                              },
+                                              {
+                                                "k": "progress",
+                                                "v": 3
+                                              },
+                                              {
+                                                "k": "opening",
+                                                "v": false
+                                              },
+                                              {
+                                                "k": "log",
+                                                "v": {
+                                                  "a": [
+                                                    "대결의 결과를 확인했다.",
+                                                    "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+                                                    "6번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+                                                    "5번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+                                                    "4번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+                                                    "3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+                                                    "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+                                                    "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+                                                    "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+                                                  ],
+                                                  "id": 50
+                                                }
+                                              }
+                                            ],
+                                            "id": 49
+                                          }
+                                        },
+                                        {
+                                          "k": "kazrin-duel",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "sceneId",
+                                                "v": "kazrin-duel"
+                                              },
+                                              {
+                                                "k": "choiceId",
+                                                "v": "change-old-rhythm"
+                                              },
+                                              {
+                                                "k": "phase",
+                                                "v": "complete"
+                                              },
+                                              {
+                                                "k": "attempt",
+                                                "v": 1
+                                              },
+                                              {
+                                                "k": "turn",
+                                                "v": 9
+                                              },
+                                              {
+                                                "k": "poise",
+                                                "v": 6
+                                              },
+                                              {
+                                                "k": "breath",
+                                                "v": 1
+                                              },
+                                              {
+                                                "k": "progress",
+                                                "v": 3
+                                              },
+                                              {
+                                                "k": "opening",
+                                                "v": false
+                                              },
+                                              {
+                                                "k": "log",
+                                                "v": {
+                                                  "a": [
+                                                    "대결의 결과를 확인했다.",
+                                                    "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+                                                    "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+                                                    "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+                                                    "7번째 동작 · 비켜딛기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+                                                    "6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+                                                    "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+                                                    "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+                                                    "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+                                                    "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+                                                    "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+                                                    "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+                                                  ],
+                                                  "id": 52
+                                                }
+                                              }
+                                            ],
+                                            "id": 51
+                                          }
+                                        },
+                                        {
+                                          "k": "hadori-wall",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "sceneId",
+                                                "v": "hadori-wall"
+                                              },
+                                              {
+                                                "k": "phase",
+                                                "v": "complete"
+                                              },
+                                              {
+                                                "k": "attempt",
+                                                "v": 1
+                                              },
+                                              {
+                                                "k": "turn",
+                                                "v": 1
+                                              },
+                                              {
+                                                "k": "poise",
+                                                "v": 0
+                                              },
+                                              {
+                                                "k": "breath",
+                                                "v": 4
+                                              },
+                                              {
+                                                "k": "progress",
+                                                "v": 0
+                                              },
+                                              {
+                                                "k": "opening",
+                                                "v": false
+                                              },
+                                              {
+                                                "k": "log",
+                                                "v": {
+                                                  "a": [
+                                                    "하도리와의 대결이 끝났음을 확인했다. 이제 패배 뒤의 말을 고를 차례다.",
+                                                    "첫발을 내디딘 순간, 하도리의 한 방에 대결이 끝났다.",
+                                                    "하도리가 원형장에서 라온을 기다린다."
+                                                  ],
+                                                  "id": 54
+                                                }
+                                              }
+                                            ],
+                                            "id": 53
+                                          }
+                                        }
+                                      ],
+                                      "id": 48
+                                    }
+                                  }
+                                ],
+                                "id": 37
+                              }
+                            },
+                            {
+                              "k": "storyChoices",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "grey-bridge-escort",
+                                    "v": "insight"
+                                  }
+                                ],
+                                "id": 55
+                              }
+                            },
+                            {
+                              "k": "narrativeChecks",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "grey-bridge-escort",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "choiceId",
+                                          "v": "insight"
+                                        },
+                                        {
+                                          "k": "chance",
+                                          "v": 92
+                                        },
+                                        {
+                                          "k": "roll",
+                                          "v": 66
+                                        },
+                                        {
+                                          "k": "outcome",
+                                          "v": "clear"
+                                        }
+                                      ],
+                                      "id": 57
+                                    }
+                                  }
+                                ],
+                                "id": 56
+                              }
+                            },
+                            {
+                              "k": "relationshipMemories",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "grey-bridge-escort",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "missionId",
+                                          "v": "grey-bridge-escort"
+                                        },
+                                        {
+                                          "k": "companionId",
+                                          "v": "hadori"
+                                        },
+                                        {
+                                          "k": "choiceId",
+                                          "v": "insight"
+                                        },
+                                        {
+                                          "k": "text",
+                                          "v": "하도리은(는) 라온이 보이는 적보다 그 뒤의 이유를 먼저 의심했다."
+                                        },
+                                        {
+                                          "k": "reaction",
+                                          "v": "동료는 라온이 자신이 놓친 틈까지 읽었다고 인정했다."
+                                        },
+                                        {
+                                          "k": "outcome",
+                                          "v": "clear"
+                                        }
+                                      ],
+                                      "id": 59
+                                    }
+                                  }
+                                ],
+                                "id": 58
+                              }
+                            },
+                            {
+                              "k": "world",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "minutes",
+                                    "v": 360
+                                  },
+                                  {
+                                    "k": "phase",
+                                    "v": "dawn"
+                                  },
+                                  {
+                                    "k": "weather",
+                                    "v": "clear"
+                                  },
+                                  {
+                                    "k": "currentRegion",
+                                    "v": "frontier-village"
+                                  },
+                                  {
+                                    "k": "discoveredLocations",
+                                    "v": {
+                                      "a": [
+                                        "frontier-village"
+                                      ],
+                                      "id": 61
+                                    }
+                                  },
+                                  {
+                                    "k": "npcMemories",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "kazrin",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 16
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "change-old-rhythm"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+                                                    "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+                                                    "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+                                                    "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다.",
+                                                    "대결에서 보여 줄 검을 정했다: 카즈린이 기억하는 라온의 박자를 버린다",
+                                                    "마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다."
+                                                  ],
+                                                  "id": 64
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 63
+                                          }
+                                        },
+                                        {
+                                          "k": "kain",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 8
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "use-sixteenth-gap"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.",
+                                                    "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다",
+                                                    "카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다."
+                                                  ],
+                                                  "id": 66
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 65
+                                          }
+                                        },
+                                        {
+                                          "k": "bellatrice",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 2
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "learn-what-i-saw"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "이능 적성 검사가 라온의 선발 과정에 추가된다."
+                                                  ],
+                                                  "id": 68
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 67
+                                          }
+                                        },
+                                        {
+                                          "k": "jinhwon",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 4
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "oath-question"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다.",
+                                                    "라온은 삭제된 역사를 추적하는 관찰자의 길을 택한다."
+                                                  ],
+                                                  "id": 70
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 69
+                                          }
+                                        },
+                                        {
+                                          "k": "kangrim",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 2
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "study-sight"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+                                                  ],
+                                                  "id": 72
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 71
+                                          }
+                                        },
+                                        {
+                                          "k": "leo",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 4
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "split-route"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+                                                    "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+                                                  ],
+                                                  "id": 74
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 73
+                                          }
+                                        },
+                                        {
+                                          "k": "hadori",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 8
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "ask-what-she-saw"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다.",
+                                                    "하도리는 열두 번째 꽃잎부터 라온의 다리가 무너졌다고 정확히 말해 준다."
+                                                  ],
+                                                  "id": 76
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 75
+                                          }
+                                        },
+                                        {
+                                          "k": "maru",
+                                          "v": {
+                                            "o": [
+                                              {
+                                                "k": "affinity",
+                                                "v": 4
+                                              },
+                                              {
+                                                "k": "lastChoice",
+                                                "v": "distribute-weight"
+                                              },
+                                              {
+                                                "k": "rememberedFacts",
+                                                "v": {
+                                                  "a": [
+                                                    "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+                                                    "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+                                                    "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+                                                  ],
+                                                  "id": 78
+                                                }
+                                              },
+                                              {
+                                                "k": "lastSeenDay",
+                                                "v": 1
+                                              }
+                                            ],
+                                            "id": 77
+                                          }
+                                        }
+                                      ],
+                                      "id": 62
+                                    }
+                                  },
+                                  {
+                                    "k": "village",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "playerX",
+                                          "v": 982
+                                        },
+                                        {
+                                          "k": "playerY",
+                                          "v": 270
+                                        },
+                                        {
+                                          "k": "visitedLandmarks",
+                                          "v": {
+                                            "a": [
+                                              "마을 공동회관",
+                                              "폐풍차 훈련터",
+                                              "저주받은 수로",
+                                              "오래된 풍차 언덕"
+                                            ],
+                                            "id": 80
+                                          }
+                                        },
+                                        {
+                                          "k": "completedErrands",
+                                          "v": {
+                                            "a": [],
+                                            "id": 81
+                                          }
+                                        }
+                                      ],
+                                      "id": 79
+                                    }
+                                  },
+                                  {
+                                    "k": "headquartersLayout",
+                                    "v": {
+                                      "a": [
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "slot",
+                                              "v": 0
+                                            },
+                                            {
+                                              "k": "facilityId",
+                                              "v": "training"
+                                            }
+                                          ],
+                                          "id": 83
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "slot",
+                                              "v": 1
+                                            },
+                                            {
+                                              "k": "facilityId",
+                                              "v": "archive"
+                                            }
+                                          ],
+                                          "id": 84
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "slot",
+                                              "v": 2
+                                            },
+                                            {
+                                              "k": "facilityId",
+                                              "v": "infirmary"
+                                            }
+                                          ],
+                                          "id": 85
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "slot",
+                                              "v": 3
+                                            },
+                                            {
+                                              "k": "facilityId",
+                                              "v": "forge"
+                                            }
+                                          ],
+                                          "id": 86
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "slot",
+                                              "v": 4
+                                            },
+                                            {
+                                              "k": "facilityId",
+                                              "v": "violet"
+                                            }
+                                          ],
+                                          "id": 87
+                                        }
+                                      ],
+                                      "id": 82
+                                    }
+                                  },
+                                  {
+                                    "k": "eventJournal",
+                                    "v": {
+                                      "a": [
+                                        "jinhwon은(는) 라온의 선택을 기억한다.",
+                                        "hadori은(는) 라온의 선택을 기억한다.",
+                                        "kazrin은(는) 라온의 선택을 기억한다.",
+                                        "kazrin은(는) 라온의 선택을 기억한다.",
+                                        "kain은(는) 라온의 선택을 기억한다.",
+                                        "kain은(는) 라온의 선택을 기억한다.",
+                                        "maru은(는) 라온의 선택을 기억한다.",
+                                        "maru은(는) 라온의 선택을 기억한다.",
+                                        "maru은(는) 라온의 선택을 기억한다.",
+                                        "hadori은(는) 라온의 선택을 기억한다.",
+                                        "leo은(는) 라온의 선택을 기억한다.",
+                                        "leo은(는) 라온의 선택을 기억한다.",
+                                        "kangrim은(는) 라온의 선택을 기억한다.",
+                                        "jinhwon은(는) 라온의 선택을 기억한다.",
+                                        "kazrin은(는) 라온의 선택을 기억한다.",
+                                        "새 장소 발견 · 오래된 풍차 언덕",
+                                        "bellatrice은(는) 라온의 선택을 기억한다.",
+                                        "kazrin은(는) 라온의 선택을 기억한다.",
+                                        "kazrin은(는) 라온의 선택을 기억한다.",
+                                        "새 장소 발견 · 저주받은 수로",
+                                        "kain은(는) 라온의 선택을 기억한다.",
+                                        "kazrin은(는) 라온의 선택을 기억한다.",
+                                        "새 장소 발견 · 폐풍차 훈련터",
+                                        "새 장소 발견 · 마을 공동회관",
+                                        "A.S. 84 · 변방 마을의 새벽이 밝았다."
+                                      ],
+                                      "id": 88
+                                    }
+                                  }
+                                ],
+                                "id": 60
+                              }
+                            },
+                            {
+                              "k": "battleAttempt",
+                              "v": {
+                                "o": [
+                                  {
+                                    "k": "id",
+                                    "v": "c302cfdf-04fc-421c-9988-bf53eab02db4"
+                                  },
+                                  {
+                                    "k": "missionId",
+                                    "v": "grey-bridge-escort"
+                                  },
+                                  {
+                                    "k": "doctrine",
+                                    "v": "counterfire"
+                                  },
+                                  {
+                                    "k": "difficulty",
+                                    "v": "standard"
+                                  },
+                                  {
+                                    "k": "raonStance",
+                                    "v": "insight"
+                                  },
+                                  {
+                                    "k": "warPressure",
+                                    "v": 18
+                                  },
+                                  {
+                                    "k": "bondSupport",
+                                    "v": 16
+                                  },
+                                  {
+                                    "k": "heroes",
+                                    "v": {
+                                      "a": [
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "id",
+                                              "v": "hadori"
+                                            },
+                                            {
+                                              "k": "name",
+                                              "v": "하도리"
+                                            },
+                                            {
+                                              "k": "title",
+                                              "v": "제1조장 · 전선 지휘"
+                                            },
+                                            {
+                                              "k": "maxHp",
+                                              "v": 197
+                                            },
+                                            {
+                                              "k": "armor",
+                                              "v": 24
+                                            },
+                                            {
+                                              "k": "art",
+                                              "v": "/art/portraits/hadori-v1.webp"
+                                            },
+                                            {
+                                              "k": "accent",
+                                              "v": "#8ea1ac"
+                                            },
+                                            {
+                                              "k": "position",
+                                              "v": {
+                                                "o": [
+                                                  {
+                                                    "k": "x",
+                                                    "v": 18
+                                                  },
+                                                  {
+                                                    "k": "y",
+                                                    "v": 57
+                                                  }
+                                                ],
+                                                "id": 92
+                                              }
+                                            },
+                                            {
+                                              "k": "skills",
+                                              "v": {
+                                                "a": [
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "iron-gate"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "철문"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "호송 마차 앞에 서서 32의 방벽을 세운다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "guard"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 37
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 12
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "carriage"
+                                                      }
+                                                    ],
+                                                    "id": 94
+                                                  },
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "ground-break"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "지반 파쇄"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "적 하나를 강타하고 다음 적 행동을 봉쇄한다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 47
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 10
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 95
+                                                  }
+                                                ],
+                                                "id": 93
+                                              }
+                                            }
+                                          ],
+                                          "id": 91
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "id",
+                                              "v": "raon"
+                                            },
+                                            {
+                                              "k": "name",
+                                              "v": "라온"
+                                            },
+                                            {
+                                              "k": "title",
+                                              "v": "제2조장 · 미완의 검"
+                                            },
+                                            {
+                                              "k": "maxHp",
+                                              "v": 139
+                                            },
+                                            {
+                                              "k": "armor",
+                                              "v": 12
+                                            },
+                                            {
+                                              "k": "art",
+                                              "v": "/art/portraits/raon-v1.webp"
+                                            },
+                                            {
+                                              "k": "accent",
+                                              "v": "#cb9150"
+                                            },
+                                            {
+                                              "k": "position",
+                                              "v": {
+                                                "o": [
+                                                  {
+                                                    "k": "x",
+                                                    "v": 30
+                                                  },
+                                                  {
+                                                    "k": "y",
+                                                    "v": 42
+                                                  }
+                                                ],
+                                                "id": 97
+                                              }
+                                            },
+                                            {
+                                              "k": "skills",
+                                              "v": {
+                                                "a": [
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "sixteen-petals"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "16꽃잎"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "마루의 기억에서 복원한 해찬류. 노출된 적에게 더 깊이 파고든다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 53
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 18
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 99
+                                                  },
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "unfinished-flow"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "미완의 유동"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "검로를 흩어 모든 확인된 적에게 피해를 준다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "area"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 34
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 14
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "all-enemies"
+                                                      }
+                                                    ],
+                                                    "id": 100
+                                                  }
+                                                ],
+                                                "id": 98
+                                              }
+                                            }
+                                          ],
+                                          "id": 96
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "id",
+                                              "v": "kazrin"
+                                            },
+                                            {
+                                              "k": "name",
+                                              "v": "카즈린"
+                                            },
+                                            {
+                                              "k": "title",
+                                              "v": "제3조장 · 백은의 창"
+                                            },
+                                            {
+                                              "k": "maxHp",
+                                              "v": 142
+                                            },
+                                            {
+                                              "k": "armor",
+                                              "v": 15
+                                            },
+                                            {
+                                              "k": "art",
+                                              "v": "/art/portraits/kazrin-v1.webp"
+                                            },
+                                            {
+                                              "k": "accent",
+                                              "v": "#d8d9cf"
+                                            },
+                                            {
+                                              "k": "position",
+                                              "v": {
+                                                "o": [
+                                                  {
+                                                    "k": "x",
+                                                    "v": 38
+                                                  },
+                                                  {
+                                                    "k": "y",
+                                                    "v": 63
+                                                  }
+                                                ],
+                                                "id": 102
+                                              }
+                                            },
+                                            {
+                                              "k": "skills",
+                                              "v": {
+                                                "a": [
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "silver-line"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "백은 궤도"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "방어를 꿰뚫는 정밀한 라티계 앤류 찌르기."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 54
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 11
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 104
+                                                  },
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "guardian-orbit"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "호위 궤도"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "승리보다 보호를 택해 호송 마차에 24의 방벽을 세운다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "guard"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 31
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 18
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "carriage"
+                                                      }
+                                                    ],
+                                                    "id": 105
+                                                  }
+                                                ],
+                                                "id": 103
+                                              }
+                                            }
+                                          ],
+                                          "id": 101
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "id",
+                                              "v": "kain"
+                                            },
+                                            {
+                                              "k": "name",
+                                              "v": "카인"
+                                            },
+                                            {
+                                              "k": "title",
+                                              "v": "제4조장 · 발데르의 창"
+                                            },
+                                            {
+                                              "k": "maxHp",
+                                              "v": 152
+                                            },
+                                            {
+                                              "k": "armor",
+                                              "v": 16
+                                            },
+                                            {
+                                              "k": "art",
+                                              "v": "/art/portraits/kain-v1.webp"
+                                            },
+                                            {
+                                              "k": "accent",
+                                              "v": "#a88b70"
+                                            },
+                                            {
+                                              "k": "position",
+                                              "v": {
+                                                "o": [
+                                                  {
+                                                    "k": "x",
+                                                    "v": 22
+                                                  },
+                                                  {
+                                                    "k": "y",
+                                                    "v": 74
+                                                  }
+                                                ],
+                                                "id": 107
+                                              }
+                                            },
+                                            {
+                                              "k": "skills",
+                                              "v": {
+                                                "a": [
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "duel-mark"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "결투 표식"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "적의 중심을 읽고 공격한 뒤 노출 상태를 남긴다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 45
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 10
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 109
+                                                  },
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "valder-pierce"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "발데르 관통"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "자신의 체력 12를 대가로 오만할 만큼 강한 일격을 가한다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 66
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 8
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 110
+                                                  }
+                                                ],
+                                                "id": 108
+                                              }
+                                            }
+                                          ],
+                                          "id": 106
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "id",
+                                              "v": "leo"
+                                            },
+                                            {
+                                              "k": "name",
+                                              "v": "레오"
+                                            },
+                                            {
+                                              "k": "title",
+                                              "v": "제5조장 · 침묵의 중심"
+                                            },
+                                            {
+                                              "k": "maxHp",
+                                              "v": 174
+                                            },
+                                            {
+                                              "k": "armor",
+                                              "v": 21
+                                            },
+                                            {
+                                              "k": "art",
+                                              "v": "/art/portraits/leo-v1.webp"
+                                            },
+                                            {
+                                              "k": "accent",
+                                              "v": "#b7a98e"
+                                            },
+                                            {
+                                              "k": "position",
+                                              "v": {
+                                                "o": [
+                                                  {
+                                                    "k": "x",
+                                                    "v": 31
+                                                  },
+                                                  {
+                                                    "k": "y",
+                                                    "v": 78
+                                                  }
+                                                ],
+                                                "id": 112
+                                              }
+                                            },
+                                            {
+                                              "k": "skills",
+                                              "v": {
+                                                "a": [
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "gate-stance"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "진훤류 수문"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "기본기를 반복해 호송 마차에 36의 방벽을 세운다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "guard"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 40
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 14
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "carriage"
+                                                      }
+                                                    ],
+                                                    "id": 114
+                                                  },
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "silent-counter"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "침묵의 반격"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "흔들리지 않는 자세로 반격하고 자신에게 16의 방벽을 얻는다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 37
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 16
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 115
+                                                  }
+                                                ],
+                                                "id": 113
+                                              }
+                                            }
+                                          ],
+                                          "id": 111
+                                        },
+                                        {
+                                          "o": [
+                                            {
+                                              "k": "id",
+                                              "v": "chris"
+                                            },
+                                            {
+                                              "k": "name",
+                                              "v": "크리스"
+                                            },
+                                            {
+                                              "k": "title",
+                                              "v": "제6조장 · 균형검"
+                                            },
+                                            {
+                                              "k": "maxHp",
+                                              "v": 131
+                                            },
+                                            {
+                                              "k": "armor",
+                                              "v": 11
+                                            },
+                                            {
+                                              "k": "art",
+                                              "v": "/art/portraits/chris-v1.webp"
+                                            },
+                                            {
+                                              "k": "accent",
+                                              "v": "#d4aa64"
+                                            },
+                                            {
+                                              "k": "position",
+                                              "v": {
+                                                "o": [
+                                                  {
+                                                    "k": "x",
+                                                    "v": 42
+                                                  },
+                                                  {
+                                                    "k": "y",
+                                                    "v": 80
+                                                  }
+                                                ],
+                                                "id": 117
+                                              }
+                                            },
+                                            {
+                                              "k": "skills",
+                                              "v": {
+                                                "a": [
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "side-read"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "측면 유도"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "숨은 적을 찾아내고 2중 노출을 남긴다."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "reveal"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 19
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 24
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 119
+                                                  },
+                                                  {
+                                                    "o": [
+                                                      {
+                                                        "k": "id",
+                                                        "v": "equilibrium-blade"
+                                                      },
+                                                      {
+                                                        "k": "name",
+                                                        "v": "리스트류 균형검"
+                                                      },
+                                                      {
+                                                        "k": "description",
+                                                        "v": "가볍게 보이지만 빈틈없는 서양식 연속 베기."
+                                                      },
+                                                      {
+                                                        "k": "kind",
+                                                        "v": "damage"
+                                                      },
+                                                      {
+                                                        "k": "power",
+                                                        "v": 42
+                                                      },
+                                                      {
+                                                        "k": "morale",
+                                                        "v": 17
+                                                      },
+                                                      {
+                                                        "k": "target",
+                                                        "v": "enemy"
+                                                      }
+                                                    ],
+                                                    "id": 120
+                                                  }
+                                                ],
+                                                "id": 118
+                                              }
+                                            }
+                                          ],
+                                          "id": 116
+                                        }
+                                      ],
+                                      "id": 90
+                                    }
+                                  },
+                                  {
+                                    "k": "mode",
+                                    "v": "select"
+                                  },
+                                  {
+                                    "k": "settled",
+                                    "v": false
+                                  },
+                                  {
+                                    "k": "battle",
+                                    "v": {
+                                      "o": [
+                                        {
+                                          "k": "missionId",
+                                          "v": "grey-bridge-escort"
+                                        },
+                                        {
+                                          "k": "difficulty",
+                                          "v": "standard"
+                                        },
+                                        {
+                                          "k": "round",
+                                          "v": 1
+                                        },
+                                        {
+                                          "k": "roundLimit",
+                                          "v": 6
+                                        },
+                                        {
+                                          "k": "commandPoints",
+                                          "v": 3
+                                        },
+                                        {
+                                          "k": "morale",
+                                          "v": 29
+                                        },
+                                        {
+                                          "k": "carriageHp",
+                                          "v": 118
+                                        },
+                                        {
+                                          "k": "carriageShield",
+                                          "v": 0
+                                        },
+                                        {
+                                          "k": "heroes",
+                                          "v": {
+                                            "a": [
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "hadori"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 197
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 123
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "raon"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 139
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 124
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "kazrin"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 142
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 125
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "kain"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 152
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 126
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "leo"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 174
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 127
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "chris"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 131
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 128
+                                              }
+                                            ],
+                                            "id": 122
+                                          }
+                                        },
+                                        {
+                                          "k": "enemies",
+                                          "v": {
+                                            "a": [
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "sky-sniper"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 138
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": false
+                                                  }
+                                                ],
+                                                "id": 130
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "rifleman-a"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 78
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 1
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 131
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "rifleman-b"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 78
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 1
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 132
+                                              },
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": "wing-lancer"
+                                                  },
+                                                  {
+                                                    "k": "hp",
+                                                    "v": 96
+                                                  },
+                                                  {
+                                                    "k": "shield",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "acted",
+                                                    "v": false
+                                                  },
+                                                  {
+                                                    "k": "exposed",
+                                                    "v": 1
+                                                  },
+                                                  {
+                                                    "k": "stunned",
+                                                    "v": 0
+                                                  },
+                                                  {
+                                                    "k": "revealed",
+                                                    "v": true
+                                                  }
+                                                ],
+                                                "id": 133
+                                              }
+                                            ],
+                                            "id": 129
+                                          }
+                                        },
+                                        {
+                                          "k": "log",
+                                          "v": {
+                                            "a": [
+                                              {
+                                                "o": [
+                                                  {
+                                                    "k": "id",
+                                                    "v": 1
+                                                  },
+                                                  {
+                                                    "k": "round",
+                                                    "v": 1
+                                                  },
+                                                  {
+                                                    "k": "speaker",
+                                                    "v": "작전 기록"
+                                                  },
+                                                  {
+                                                    "k": "message",
+                                                    "v": "크리스의 제안으로 선행 정찰을 보냈다. 제7기의 사기가 상승한다."
+                                                  },
+                                                  {
+                                                    "k": "tone",
+                                                    "v": "story"
+                                                  }
+                                                ],
+                                                "id": 135
+                                              }
+                                            ],
+                                            "id": 134
+                                          }
+                                        },
+                                        {
+                                          "k": "outcome",
+                                          "v": "active"
+                                        },
+                                        {
+                                          "k": "finisherUsed",
+                                          "v": false
+                                        },
+                                        {
+                                          "k": "revelationTriggered",
+                                          "v": false
+                                        },
+                                        {
+                                          "k": "focusTargetId",
+                                          "v": {
+                                            "v": "undefined"
+                                          }
+                                        },
+                                        {
+                                          "k": "focusChain",
+                                          "v": {
+                                            "a": [],
+                                            "id": 136
+                                          }
+                                        },
+                                        {
+                                          "k": "breakCount",
+                                          "v": 0
+                                        },
+                                        {
+                                          "k": "raonStance",
+                                          "v": "insight"
+                                        },
+                                        {
+                                          "k": "warPressure",
+                                          "v": 18
+                                        },
+                                        {
+                                          "k": "bondSupport",
+                                          "v": 16
+                                        }
+                                      ],
+                                      "id": 121
+                                    }
+                                  }
+                                ],
+                                "id": 89
+                              }
+                            }
+                          ],
+                          "id": 2
+                        }
+                      },
+                      {
+                        "k": "updatedAt",
+                        "v": "2026-09-15T02:25:02.244Z"
+                      }
+                    ],
+                    "id": 1
+                  }
+                }
+              ],
+              "indexes": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

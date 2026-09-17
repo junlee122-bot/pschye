@@ -1,0 +1,705 @@
+{
+  "origin": "http://127.0.0.1:4408",
+  "tabId": "1908172966",
+  "before": {
+    "baseline": {
+      "beforeMount": {
+        "activeSquad": [
+          "hadori",
+          "raon",
+          "kazrin",
+          "kain",
+          "leo",
+          "chris"
+        ],
+        "activityLog": [
+          "영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choices": {
+          "capital-gate": "identify-poison"
+        },
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night"
+        ],
+        "currentSceneId": "capital-gate",
+        "flags": [
+          "found-selection-sabotage"
+        ],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "npcMemories": {
+          "jinhwon": {
+            "affinity": 2,
+            "lastChoice": "identify-poison",
+            "lastSeenDay": 1,
+            "rememberedFacts": [
+              "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+            ]
+          }
+        },
+        "originCompleted": false,
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "score": 4
+      },
+      "reread": {
+        "activeSquad": [
+          "hadori",
+          "raon",
+          "kazrin",
+          "kain",
+          "leo",
+          "chris"
+        ],
+        "activityLog": [
+          "영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choices": {
+          "capital-gate": "identify-poison"
+        },
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night"
+        ],
+        "currentSceneId": "capital-gate",
+        "flags": [
+          "found-selection-sabotage"
+        ],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "npcMemories": {
+          "jinhwon": {
+            "affinity": 2,
+            "lastChoice": "identify-poison",
+            "lastSeenDay": 1,
+            "rememberedFacts": [
+              "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+            ]
+          }
+        },
+        "originCompleted": false,
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "score": 4
+      },
+      "setup": "앞5장면 완료는 준비. capital-gate에서 실제 chooseOriginStoryPath identify-poison 적용; 실제 진행/결과 플레이가 아님."
+    }
+  },
+  "after": {
+    "baseline": {
+      "beforeMount": {
+        "activeSquad": [
+          "hadori",
+          "raon",
+          "kazrin",
+          "kain",
+          "leo",
+          "chris"
+        ],
+        "activityLog": [
+          "영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choices": {
+          "capital-gate": "identify-poison"
+        },
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night"
+        ],
+        "currentSceneId": "capital-gate",
+        "flags": [
+          "found-selection-sabotage"
+        ],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "npcMemories": {
+          "jinhwon": {
+            "affinity": 2,
+            "lastChoice": "identify-poison",
+            "lastSeenDay": 1,
+            "rememberedFacts": [
+              "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+            ]
+          }
+        },
+        "originCompleted": false,
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "score": 4
+      },
+      "reread": {
+        "activeSquad": [
+          "hadori",
+          "raon",
+          "kazrin",
+          "kain",
+          "leo",
+          "chris"
+        ],
+        "activityLog": [
+          "영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choices": {
+          "capital-gate": "identify-poison"
+        },
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night"
+        ],
+        "currentSceneId": "capital-gate",
+        "flags": [
+          "found-selection-sabotage"
+        ],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "npcMemories": {
+          "jinhwon": {
+            "affinity": 2,
+            "lastChoice": "identify-poison",
+            "lastSeenDay": 1,
+            "rememberedFacts": [
+              "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+            ]
+          }
+        },
+        "originCompleted": false,
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "score": 4
+      },
+      "setup": "앞5장면 완료는 준비. capital-gate에서 실제 chooseOriginStoryPath identify-poison 적용; 실제 진행/결과 플레이가 아님."
+    },
+    "loaded": {
+      "current": {
+        "activeSquad": [
+          "hadori",
+          "raon",
+          "kazrin",
+          "kain",
+          "leo",
+          "chris"
+        ],
+        "activityLog": [
+          "영웅들의 그림자 아래 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choices": {
+          "capital-gate": "identify-poison"
+        },
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night"
+        ],
+        "currentSceneId": "capital-gate",
+        "flags": [
+          "found-selection-sabotage"
+        ],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "npcMemories": {
+          "jinhwon": {
+            "affinity": 2,
+            "lastChoice": "identify-poison",
+            "lastSeenDay": 1,
+            "rememberedFacts": [
+              "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+            ]
+          }
+        },
+        "originCompleted": false,
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "score": 4
+      },
+      "source": "local"
+    }
+  },
+  "checks": {
+    "titleUrl": "http://127.0.0.1:4408/tmp/eighth-keyboard-review/index.html",
+    "sameScene": true,
+    "sameScore": true,
+    "sameChoices": true,
+    "sameCompletedScenes": true,
+    "entireSummaryEqual": true,
+    "scene": "capital-gate",
+    "score": 4
+  },
+  "input": {
+    "action": "Actual locator.press Enter on visible 타이틀 button",
+    "reportedError": "Input.dispatchKeyEvent timeout1312ms; diagnostics then found no title button because page had changed",
+    "recovery": "one getTab succeeded; title URL/AX showed chapter6 capital-gate; actual save inspection followed",
+    "repeatedEnter": false
+  },
+  "mobile": {
+    "viewport": {
+      "width": 320,
+      "height": 844
+    },
+    "titleAndSaveSlotAxObserved": true,
+    "screenshotCaptured": false,
+    "screenshotError": "Timed out after5000ms waiting for CDP command Page.captureScreenshot",
+    "metricsNotExecuted": true,
+    "logsNotExecuted": true
+  },
+  "scope": "Prepared text-scene regression only, not J1 full manual journey"
+}

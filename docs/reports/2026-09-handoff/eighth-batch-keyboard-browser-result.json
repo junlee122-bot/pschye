@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-09-15T01:42:24.004Z",
+  "summary": "최종 수정의 실제 App에서 선택 완료 capital-gate의 타이틀 버튼을 Enter로 실행한 뒤 타이틀 이동과 실제 저장 불변을 확인했다. 입력 도구 timeout은 1회 복구 후 결과를 관찰했고, 320px 스크린샷은 후속 도구 timeout으로 미획득이다.",
+  "origin": "http://127.0.0.1:4408",
+  "sourceBasis": {
+    "finalCommit": "bbcf10eed6a359fc54d37b16caa9f533b939dcf5",
+    "baseCommit": "1d07e4fa0f2e0b0692a66c91ee6207240d88f828",
+    "description": "Root final eighth-batch source after374checks/build; separate fixture imports current realApp and primary styles. No original source/dist mutation.",
+    "productionEntry": "index-BVMjwOsu.js",
+    "productionVillage": "VillageAdventure-CzTBt3ge.js",
+    "fixtureEntry": "index-x3WK5GYv.js",
+    "fixtureVillage": "VillageAdventure-C7v00RsF.js",
+    "fixturePrimaryCss": "index-CUmxpurm.css",
+    "buildSeconds": 44.95
+  },
+  "passed": [
+    "명시한 앞 5장면 준비 후 실제 chooseOriginStoryPath identify-poison으로 capital-gate 선택을 적용하고 실제 save/load가 준비 요약을 그대로 보존했다.",
+    "선택 완료 이야기의 타이틀 버튼에 실제 locator.press Enter를 실행했다. 도구는 timeout을 보고했으나 1회 getTab 후 실제 title URL/화면과 서장 6/영웅들의 그림자 아래 저장 슬롯을 확인했다.",
+    "이동 후 UI 검사 버튼이 호출한 실제 loadCampaignProfile 결과에서 currentSceneId=capital-gate, score 4, choices, completedSceneIds가 모두 불변이었다.",
+    "자원·성장·관계·로그 등을 포함한 전체 저장 요약도 Enter 전 실제 load 요약과 완전히 동일했다."
+  ],
+  "remaining": [
+    "320px 뷰포트의 title/저장 슬롯 AX는 확인했지만 스크린샷과 DOM 폭 측정은 실행 완료하지 못해 시각 잘림/가로 넘침 통과로 판정하지 않는다.",
+    "이 검증은 준비된 텍스트 장면의 Enter 회귀 1개이며 J1 전체 여정 수동 완주를 뜻하지 않는다."
+  ],
+  "limitations": [
+    "Enter 입력 API가 Input.dispatchKeyEvent timeout 1312ms를 보고했다. 1회 getTab 복구 후 결과를 관찰했으며 Enter를 다시 누르지 않았다.",
+    "후속 fullPage 스크린샷에서 Page.captureScreenshot timeout 5000ms가 발생해 추가 캡처/재연결을 중단했다. 같은 호출의 metrics/log 조회는 실행되지 않았다.",
+    "앞 5장면과 capital-gate 선택은 실제 API를 쓴 명시적 준비다. 앞선 서장 플레이나 선택의 수동 실행으로 세지 않는다.",
+    "고유 4408 slot 1만 사용했다. 원본 사용자 storage/src/dist 변경이나 다른 브라우저 백엔드/rawCDP 우회는 없었다."
+  ],
+  "observed": {
+    "titleUrl": "http://127.0.0.1:4408/tmp/eighth-keyboard-review/index.html",
+    "sameScene": true,
+    "sameScore": true,
+    "sameChoices": true,
+    "sameCompletedScenes": true,
+    "entireSummaryEqual": true,
+    "scene": "capital-gate",
+    "score": 4
+  },
+  "screenshots": [],
+  "evidence": [
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-keyboard-browser-evidence.json",
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-keyboard-browser-notes.md"
+  ],
+  "cleanup": {
+    "viewportReset": true,
+    "serverSession": 82508,
+    "serverStopped": true,
+    "port4408Closed": true,
+    "userStorageTouched": false,
+    "originalSourceOrDistModified": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-15T01:33:39.153Z",
+  "summary": "새4407 저장 공간의 실제 새게임·마을 지도·직접 이동까지 확인했다. 동일origin 경량 입력은 정상이나 게임 화면은 연속 입력 timeout과 단일 입력 뒤 DOM timeout이 발생해 첫 대화 전 중단했다. 전체 여정 수동 완주로 판정하지 않는다.",
+  "origin": "http://127.0.0.1:4407",
+  "sourceBasis": {
+    "commit": "1d07e4f",
+    "entry": "index-B3mm0YSY.js",
+    "css": "index-CsP1qHx5.css",
+    "laterRootFixesVerified": false
+  },
+  "passed": [
+    "실제 production App의 새 origin/slot1에서 변방 마을에서 시작 버튼을 눌러 village-dawn 지도와 목표를 열었다. seed는 사용하지 않았다.",
+    "390px 화면에서 목표·지도·모바일 방향 버튼을 시각 확인했다. 실제 마우스/키보드로 이동해 라온 위치 변화가 보였다.",
+    "입력 timeout 뒤 같은 탭·같은4407 origin의 경량 페이지에서 실제 마우스와 Tab/Enter 카운터 증가 및 trusted 이벤트를 확인했다.",
+    "현재 저장 공간의 게임 화면에 재접속해 같은 첫 장면을 열었다. 한 입력/다음호출 DOM 방식에서9개 이동/관찰 쌍이 성공했고10번째 이동 입력 후 DOM 읽기가 실패했다."
+  ],
+  "remaining": [
+    "첫 카즈린 대화 및 이후 서장15장면·입단·첫 작전 준비·전술 모드 진입은 이 CUA 여정에서 미확인이다.",
+    "수로/폐광/수련/조장3대결의 실제 연속 수동 여정은 완료하지 않았다. 이전 묶음 개별 검증과 이번 전체 여정은 구분한다.",
+    "수로 귀환 후 실제 카즈린 접근 등 과거 미확인 경로도 이번에 완료되지 않았다.",
+    "정확한 마을 좌표의 저장 전후 동일성·최종 입력 저장 여부는 확인하지 못했다.",
+    "320px 핵심 화면 및 최종 수정 배포본의 실제 CUA 재검증은 미확인이다."
+  ],
+  "limitations": [
+    "첫 게임 이동 배치에서 Input.dispatchKeyEvent timeout2907ms. 단일 입력/다음호출 관찰에서도 Page.getFrameTree timeout3000ms. 게임 단계마다 정상이라고 확대 해석하지 않는다.",
+    "같은origin 정적 페이지 입력 성공은 완전한 연결 단절이 아님을 보여주지만 원인을 앱 부하·Phaser·저장 처리·간헐적 도구 중 하나로 특정하지는 못한다.",
+    "iab가 제공되지 않아 inventory에서 유일하게 제공된 Edge를 사용했다. CUA 문서화 API만 사용했으며 raw CDP/별도 Playwright 백엔드는 실행하지 않았다.",
+    "게임 입력은 해당 mobile button의 실제 click/locator.press였다. 앱 상태 주입·원본 저장값 변경·원본src/dist 변경 없이 진행했다.",
+    "최근 warn/error(limit20) 조회[]는 제한된 시점의 결과다. 도구 입력/DOM timeout이 없다는 의미가 아니다.",
+    "루트가 별도 DOM/실제 App·저장으로 검증한 흐름은 이 실제 CUA 브라우저 통과 항목과 합치지 않는다."
+  ],
+  "screenshots": [
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-journey-village-390.png",
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-journey-control-390.png"
+  ],
+  "evidence": [
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-journey-input-evidence.json",
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-journey-notes.md",
+    "<LOCAL_WORKSPACE>\\work\\eighth-batch-input-diagnostic-result.json"
+  ],
+  "cleanup": {
+    "viewportReset": true,
+    "serverSession": 87049,
+    "serverStopped": true,
+    "port4407Closed": true,
+    "userStorageTouched": false,
+    "productSourceOrDistModified": false
+  }
+}

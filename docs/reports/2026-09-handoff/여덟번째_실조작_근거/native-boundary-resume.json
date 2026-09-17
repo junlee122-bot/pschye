@@ -1,0 +1,406 @@
+{
+  "origin": "http://127.0.0.1:4409",
+  "sourceCommit": "bbcf10eed6a359fc54d37b16caa9f533b939dcf5",
+  "browserVersion": "153.0.4234.32",
+  "checkpoint": "native-village-near-kazrin-storage.json",
+  "steps": [
+    {
+      "label": "dialogue-scroll-container",
+      "checkedAt": "2026-09-15T02:25:25.803Z",
+      "data": {
+        "clientHeight": 814,
+        "scrollHeight": 850,
+        "overflowY": "auto",
+        "descendantScroll": []
+      }
+    },
+    {
+      "label": "dialogue-bottom-320",
+      "checkedAt": "2026-09-15T02:25:26.244Z",
+      "data": {
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "document": {
+            "client": 320,
+            "scroll": 320
+          },
+          "body": {
+            "client": 320,
+            "scroll": 320
+          },
+          "buttons": [
+            {
+              "name": "타이틀",
+              "x": 26,
+              "y": 23,
+              "width": 76.15625,
+              "height": 36
+            },
+            {
+              "name": "위로 이동",
+              "x": 201,
+              "y": 731,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "왼쪽으로 이동",
+              "x": 151,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "아래로 이동",
+              "x": 201,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "오른쪽으로 이동",
+              "x": 251,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "대화 닫기",
+              "x": 0,
+              "y": 0,
+              "width": 320,
+              "height": 844
+            },
+            {
+              "name": "1연민빵집의 밀가루 자루부터 옮긴다“훈련은 늦어도 되지만, 할머니 혼자 이걸 들게 둘 수는 없지.”",
+              "x": 35,
+              "y": 578.546875,
+              "width": 250,
+              "height": 72
+            },
+            {
+              "name": "2통찰카즈린의 보법을 멀리서 관찰한다“내 몸은 못 따라가도, 어디서 힘이 끊기는지는 보이는데.”",
+              "x": 35,
+              "y": 657.546875,
+              "width": 250,
+              "height": 72
+            },
+            {
+              "name": "3결의늦었지만 카즈린을 따라 달린다“운명은 모르겠고, 오늘 한 번은 먼저 도착해 보자.”",
+              "x": 35,
+              "y": 736.546875,
+              "width": 250,
+              "height": 72
+            }
+          ]
+        },
+        "text": "소꿉친구 · 창술 신동\n카즈린\n기억 친밀도 0\n서장 · 변방의 아이들\n밀밭 너머의 종소리\n\nA.S. 84 · 초여름 새벽\n\n마을의 하루는 제국 수도보다 두 시간 일찍 시작됐다. 우물의 도르래가 울고, 밀가루 냄새가 골목을 채우면 카즈린은 이미 창을 백 번 휘두른 뒤였다.\n\n“또 늦었네. 오늘은 라티 선생님이 수도에서 프시케 선발관이 온다고 했어.”\n라온\n\n“프시케라. 카즈린에게는 운명일지 몰라도, 나한테는 수도 구경보다 조금 무거운 말이었다.”\n\n카즈린이 훈련장으로 뛰어갈 때, 라온은 아침을 어떻게 시작하는가?\n1\n연민\n빵집의 밀가루 자루부터 옮긴다\n“훈련은 늦어도 되지만, 할머니 혼자 이걸 들게 둘 수는 없지.”\n2\n통찰\n카즈린의 보법을 멀리서 관찰한다\n“내 몸은 못 따라가도, 어디서 힘이 끊기는지는 보이는데.”\n3\n결의\n늦었지만 카즈린을 따라 달린다\n“운명은 모르겠고, 오늘 한 번은 먼저 도착해 보자.”"
+      }
+    },
+    {
+      "label": "last-step-title-reload-resume",
+      "checkedAt": "2026-09-15T02:25:28.841Z",
+      "data": {
+        "before": {
+          "x": 758,
+          "y": 382
+        },
+        "finalXY": {
+          "x": 786,
+          "y": 382
+        },
+        "resumed": {
+          "x": 786,
+          "y": 382
+        },
+        "wholeProfileEqual": true,
+        "saved": {
+          "version": 10,
+          "commanderName": "라온",
+          "day": 1,
+          "commandLevel": 1,
+          "renown": 0,
+          "supplies": 320,
+          "intel": 40,
+          "relics": 0,
+          "commandActions": 3,
+          "activeSquad": [
+            "hadori",
+            "raon",
+            "kazrin",
+            "kain",
+            "leo",
+            "chris"
+          ],
+          "inventory": [
+            "breaker-gauntlet",
+            "petal-training-blade",
+            "silver-orbit-lance",
+            "valder-heir-spear",
+            "gate-wraps",
+            "equilibrium-sabre",
+            "field-kit"
+          ],
+          "factions": {
+            "empire": 20,
+            "civilians": 10,
+            "cursed": 0,
+            "cheshi": -10
+          },
+          "completedDispatches": [],
+          "activityCounts": {},
+          "bondLevels": {},
+          "dailyCommandStats": {
+            "training": 0,
+            "bond": 0,
+            "field": 0
+          },
+          "dailyRewardClaimed": false,
+          "careerStats": {
+            "missions": 0,
+            "trainings": 0,
+            "bonds": 0,
+            "fieldActivities": 0,
+            "crafts": 0,
+            "dispatches": 0,
+            "perfectDays": 0
+          },
+          "claimedStrategicOrders": [],
+          "completedMissions": [],
+          "missionGrades": {},
+          "heroProgress": {
+            "hadori": {
+              "level": 3,
+              "xp": 0,
+              "bond": 12,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "breaker-gauntlet",
+                "field-kit"
+              ]
+            },
+            "raon": {
+              "level": 3,
+              "xp": 8,
+              "bond": 15,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "petal-training-blade",
+                "field-kit"
+              ]
+            },
+            "kazrin": {
+              "level": 2,
+              "xp": 16,
+              "bond": 18,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "silver-orbit-lance",
+                "field-kit"
+              ]
+            },
+            "kain": {
+              "level": 2,
+              "xp": 24,
+              "bond": 21,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "valder-heir-spear",
+                "field-kit"
+              ]
+            },
+            "leo": {
+              "level": 2,
+              "xp": 32,
+              "bond": 24,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "gate-wraps",
+                "field-kit"
+              ]
+            },
+            "chris": {
+              "level": 2,
+              "xp": 40,
+              "bond": 27,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "equilibrium-sabre",
+                "field-kit"
+              ]
+            }
+          },
+          "facilities": {
+            "training": 1,
+            "archive": 1,
+            "infirmary": 1,
+            "forge": 0,
+            "violet": 0
+          },
+          "unlockedRecords": [
+            "official-salvation"
+          ],
+          "activityLog": [
+            "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+          ],
+          "raonPath": {
+            "compassion": 0,
+            "insight": 0,
+            "resolve": 0
+          },
+          "originStory": {
+            "currentSceneId": "village-dawn",
+            "completed": false,
+            "completedSceneIds": [],
+            "choices": {},
+            "flags": [],
+            "selectionScore": 0
+          },
+          "storyChoices": {},
+          "narrativeChecks": {},
+          "relationshipMemories": {},
+          "world": {
+            "minutes": 360,
+            "phase": "dawn",
+            "weather": "clear",
+            "currentRegion": "frontier-village",
+            "discoveredLocations": [
+              "frontier-village"
+            ],
+            "npcMemories": {},
+            "village": {
+              "playerX": 786,
+              "playerY": 382,
+              "visitedLandmarks": [
+                "마을 공동회관",
+                "폐풍차 훈련터"
+              ],
+              "completedErrands": []
+            },
+            "headquartersLayout": [
+              {
+                "slot": 0,
+                "facilityId": "training"
+              },
+              {
+                "slot": 1,
+                "facilityId": "archive"
+              },
+              {
+                "slot": 2,
+                "facilityId": "infirmary"
+              },
+              {
+                "slot": 3,
+                "facilityId": "forge"
+              },
+              {
+                "slot": 4,
+                "facilityId": "violet"
+              }
+            ],
+            "eventJournal": [
+              "새 장소 발견 · 폐풍차 훈련터",
+              "새 장소 발견 · 마을 공동회관",
+              "A.S. 84 · 변방 마을의 새벽이 밝았다."
+            ]
+          }
+        },
+        "metrics": {
+          "viewport": {
+            "width": 320,
+            "height": 844
+          },
+          "document": {
+            "client": 320,
+            "scroll": 320
+          },
+          "body": {
+            "client": 320,
+            "scroll": 320
+          },
+          "buttons": [
+            {
+              "name": "타이틀",
+              "x": 26,
+              "y": 23,
+              "width": 76.15625,
+              "height": 36
+            },
+            {
+              "name": "위로 이동",
+              "x": 201,
+              "y": 731,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "왼쪽으로 이동",
+              "x": 151,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "아래로 이동",
+              "x": 201,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "오른쪽으로 이동",
+              "x": 251,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "E소꿉친구 · 창술 신동카즈린에게 오늘의 선발 이야기를 듣는다",
+              "x": 15,
+              "y": 679.8399658203125,
+              "width": 290,
+              "height": 58
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "cleanup",
+      "checkedAt": "2026-09-15T02:25:29.679Z",
+      "data": {
+        "contextClosed": true,
+        "browserClosed": true,
+        "rootServerUnchanged": true
+      }
+    }
+  ],
+  "logs": [],
+  "requests": [],
+  "screenshots": [
+    "<LOCAL_WORKSPACE>\\work\\native-boundary-resume-dialogue-bottom-320.png",
+    "<LOCAL_WORKSPACE>\\work\\native-boundary-resume-village-320.png"
+  ]
+}

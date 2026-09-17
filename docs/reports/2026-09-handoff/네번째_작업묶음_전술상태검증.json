@@ -1,0 +1,70 @@
+{
+  "task": "fourth-batch-tactical-checkpoint-validation",
+  "recordedDate": "2026-09-14",
+  "repository": "<LOCAL_REPOSITORY>",
+  "command": "node node_modules/vitest/vitest.mjs run --config .tmp/tactical-state-audit.config.ts",
+  "shell": "C:\\Windows\\System32\\cmd.exe",
+  "fixtureFiles": [
+    ".tmp/tactical-state-audit.ts",
+    ".tmp/tactical-state-audit.config.ts"
+  ],
+  "sourceChanges": false,
+  "rerunForThisRecord": false,
+  "method": [
+    "Wrapped the real createInitialBattleState, applyHeroSkill, endPlayerTurn and triggerTeamFinisher exports during the temporary test.",
+    "Validated every returned state with isBattleStateCheckpoint and its mission, frozen heroes, doctrine, difficulty, stance, pressure, bond support and tactical mode context.",
+    "Ran the existing runPlaytestAudit(204) unchanged through the wrapped engine.",
+    "Added all 16 Raon-containing deployments of 4 to 6 heroes across 8 missions, 3 difficulties and 2 doctrines.",
+    "The additional scenarios cycled the three stances and war pressure values 75, 85 and 100, with bond support 0 or 100."
+  ],
+  "results": {
+    "testFilesPassed": 1,
+    "testsPassed": 1,
+    "baselineCampaignPaths": 204,
+    "baselineBattles": 1632,
+    "stressBattles": 768,
+    "totalBattles": 2400,
+    "squadVariants": 16,
+    "checkedStates": 48794,
+    "rejectedStates": 0,
+    "statesWith18LogEntries": 26261,
+    "statesWithFocusChainAtLeast3": 4152,
+    "statesAtRoundLimit": 1533,
+    "statesWithWarPressureAtLeast75": 19913,
+    "statesByOperation": {
+      "create": 2400,
+      "skill": 34649,
+      "turn": 9758,
+      "finisher": 1987
+    },
+    "statesByPartySize": {
+      "4": 10094,
+      "5": 4904,
+      "6": 33796
+    },
+    "statesByOutcome": {
+      "active": 46394,
+      "victory": 1917,
+      "defeat": 483
+    },
+    "statesByBattlefieldRule": {
+      "standard": 18341,
+      "aerial-barrage": 6714,
+      "archive-seal": 7378,
+      "fractured-truce": 7387,
+      "temporal-echo": 8974
+    },
+    "failures": []
+  },
+  "limitations": [
+    "Deterministic tactical engine validation, not browser gameplay or a visual/interaction test.",
+    "This run checks tactical BattleState acceptance; it does not independently verify browser storage I/O, slot switching, action-scene timing or the entire CampaignBattleAttempt wrapper.",
+    "The stress fixture cycles stance, pressure and bond settings rather than taking the full Cartesian product of those modifiers.",
+    "No normal state rejection was observed in the exercised paths; this does not prove all possible action sequences are covered."
+  ],
+  "integrationNotes": [
+    "Temporary fixtures are in the ignored .tmp directory.",
+    "The fixture does not use a *.test.* filename and is selected only by its dedicated Vitest config.",
+    "No additional production fix was needed based on this run."
+  ]
+}

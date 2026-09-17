@@ -1,0 +1,167 @@
+{
+  "verifiedAt": "2026-09-15T00:14:23.145Z",
+  "commit": "d059ed53fa5d4d53d4be687195ba65cc2288df95",
+  "previous": "c3a1c933734ec2f50fe6a5b83cc9077170f58d52",
+  "files": 15,
+  "workingTreeClean": true,
+  "sourceStoryUnchanged": true,
+  "tests": {
+    "passed": 278,
+    "files": 20
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "build": {
+    "checkedAt": "2026-09-15T00:04:49.255Z",
+    "productionEntry": "assets/index-Eezlo71U.js",
+    "fieldExamEntry": "assets/FieldExamEncounter-BDjb2J15.js",
+    "fieldExamStyles": [
+      "assets/FieldExamEncounter-BpZXpgZW.css"
+    ],
+    "authorChunksAbsent": true,
+    "battleAndVillageEntriesRetained": true,
+    "chunks": [
+      "_VillagePrologue-CzsfmA2_.js",
+      "_VillagePrologue-DpY55hrw.css",
+      "_icons-nXLdifA7.js",
+      "_phaser-CSP61uFZ.js",
+      "_phaserRuntime-nOZ7DIWJ.js",
+      "_react-9LjzQdLw.js",
+      "index.html",
+      "src/components/FieldExamEncounter.tsx",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx",
+      "src/components/VillageRescueEncounter.tsx"
+    ]
+  },
+  "browser": {
+    "checkedAt": "2026-09-15T00:12:40Z",
+    "summary": "실제 UI로 통찰(split-route) 한 경로의 선택→준비→시작→키보드 명령→타이틀 저장/새로고침/재개→3턴 구조→전원 철수→선발12일차를 완료했다. 저장 재읽기에서 진행·점수·레오 친밀도 보존을 확인했고, API 실패 시드의 실제 재도전도 확인했다. 390px 폼·완료 화면 가로 넘침이 없었다.",
+    "origin": "http://127.0.0.1:4398",
+    "buildBasis": {
+      "sourceBase": "c3a1c933734ec2f50fe6a5b83cc9077170f58d52 + fifth-batch field-exam implementation",
+      "finalCommit": "d059ed5",
+      "difference": "root 보고: 검증 fixture 이후 production 소스 변경 없음. 최종 commit에는 실제 통찰/390px 확인 문서가 추가됨.",
+      "productionEntry": "index-Eezlo71U.js",
+      "productionFieldExam": "FieldExamEncounter-BDjb2J15.js",
+      "fixtureEntry": "index-CRxl8JzP.js",
+      "fixtureFieldExam": "FieldExamEncounter-C-f_Vfy4.js",
+      "fieldExamCss": "FieldExamEncounter-BpZXpgZW.css",
+      "fixtureBuildSeconds": 33.29
+    },
+    "passed": [
+      "선택 전 장면 시드에서 실제 통찰 선택 '레오와 구조하고 카즈린은 깃발을 지킨다'를 눌러 ready 화면에 진입했다. 실제 저장값은 score6·레오친밀도4·leo:raon유대4, 완료flags없음이었다.",
+      "실제 구조 지휘 시작 버튼으로 attempt1/active/turn0/integrity6에 진입했고, 명령을 고르기 전 실행 버튼은 비활성화됐다.",
+      "라온 오른쪽 라디오 클릭 후 Left키로 왼쪽을 선택하고, Tab/Right키로 레오 오른쪽을 선택했다. 실제 DOM checked 값은 raon:left와 leo:right였다.",
+      "Tab/Enter로 폼을 제출하자 정확히1턴, integrity5, left1/right1이 됐다. 선택 라디오가 모두 해제되고 실행 버튼이 다시 비활성화됐다.",
+      "타이틀에 '폐광 구조 중 · 1턴 · 통로 버팀5'가 표시됐다. 실제 새로고침→라온의 이야기 계속 후 같은 상태가 복구됐고, 실제 save-read 요약 전체가 재로드 전후 동일했다.",
+      "실제 폼 명령 두 번을 더 실행해 turn3/integrity2/left3/right3의 return 상태가 됐다. 화면에 두 지원자 출구 도착과 별도 철수 확인이 표시됐고 실제 저장값에는 아직 완료flag/완료 사실이 없었다.",
+      "실제 '모두와 함께 철수'를 누르자 complete가 됐고, '선발12일차·다음장면'을 눌러 suspended-candidate '발전 보류', '선발12일차·심야' 장면으로 이동했다.",
+      "12일차의 실제 save-read에서 exam.complete와 field-exam 완료 장면, field-split-command flag 및 완료 사실이 추가됐다. score6·레오친밀도4·유대4는 선택 직후와 같아 추가 증가가 없었다.",
+      "API로 만든 failed 시드(attempt1/turn3/integrity0)에서 실제 같은 선택 재도전을 눌렀다. save-read에서 split-route 유지, attempt2/active/turn0/integrity6/left0/right0, score6·친밀도4·유대4·완료flags없음을 확인했다.",
+      "390x844에서 명령 폼과 완료 화면의 innerWidth390/clientWidth381/scrollWidth381/body381을 확인했다. 스크린샷에서 명령 라벨과 완료·다음 장면 버튼이 가로 잘림 없이 보였다."
+    ],
+    "remaining": [
+      "연민(rescue-team)·결의(defy-order) 두 경로의 전체 수동 UI 완주는 이번 검증에서 하지 않았다. 세 경로 전체 검증은 root의 core tests 범위이며 수동 완주로 기록하지 않는다."
+    ],
+    "limitations": [
+      "이전 서장 7개 장면 완료는 fixture 설정이며 그 서장을 실제 플레이한 검증이 아니다. currentSceneId field-exam부터의 선택과 통찰 완주는 실제 UI 조작이다.",
+      "실패 상태는 실제 core API의 LL→RR→LR 계획으로 생성한 시드다. 실패까지 브라우저에서 플레이하지 않았고, 시드 이후 재도전 버튼만 실제 UI로 검증했다.",
+      "모든 저장 접근은 새4398 테스트 origin의 슬롯1에 한정했다. 기존 사용자 저장 origin/storage와 사용자 탭은 수정하지 않았다.",
+      "폼의 키보드 검증은 표준 라디오 방향키, Tab, Enter 제출 범위다. 터치 장기 홀드 또는 보조기술 전체 접근성을 검증한 것은 아니다.",
+      "마지막 warn/error 로그 최신12개 조회는 빈 배열이었다. 이는 해당 조회 범위의 관찰이며 전체 애플리케이션 무오류 보장을 의미하지 않는다."
+    ],
+    "screenshots": [
+      "<LOCAL_WORKSPACE>/outputs/fifth-batch-browser-form-390.png",
+      "<LOCAL_WORKSPACE>/outputs/fifth-batch-browser-complete-390.png",
+      "<LOCAL_WORKSPACE>/outputs/fifth-batch-browser-day12-390.png"
+    ],
+    "evidence": [
+      "<LOCAL_WORKSPACE>/outputs/fifth-batch-browser-save-evidence.json"
+    ],
+    "cleanup": {
+      "viewportReset": true,
+      "serverSession": 92672,
+      "serverStopped": true,
+      "serverExitCode": 1,
+      "method": "Ctrl+C",
+      "sourceModified": false,
+      "originalDistModified": false,
+      "userStorageAccessed": false
+    }
+  },
+  "followup": {
+    "checkedAt": "2026-09-14T11:21:37Z",
+    "origin": "http://127.0.0.1:4397",
+    "summary": "최신 c3a1c93의 390px 승리 결과 negative-margin 제거와 보상 안내 문구를 실제 브라우저에서 확인했다. 마을 귀환 확인→일주일 뒤 장면은 새4396 탭의 네트워크/디버거 연결 실패로 접근하지 못해 미확인이다.",
+    "buildBasis": {
+      "commit": "c3a1c933734ec2f50fe6a5b83cc9077170f58d52",
+      "battleFixtureEntry": "index-CVRbMALL.js",
+      "battleFixtureCss": "index-CUmxpurm.css",
+      "method": "이전 마지막에 빌드 완료된 ignored fourth-batch fixture 재사용; 실제 App, 4397 테스트 저장 슬롯1",
+      "returnFixtureEntry": "index-Wxcxb7NC.js",
+      "returnFixtureBasis": "기존 third-batch snapshot. 새 탭 로드 실패로 실제 UI는 확인하지 못함."
+    },
+    "passed": [
+      "390x844 viewport에서 저장된 승리 결과를 실제 '저장된 결과 보기' 버튼으로 열었다.",
+      ".battle-page DOM rect left0/right380.8000183105469/width380.8000183105469: 이전 -14px margin이 제거됐다.",
+      "document clientWidth381/scrollWidth381/body.scrollWidth381, innerWidth390으로 가로 넘침이 없었다.",
+      "실제 결과 화면에 '자원·경험치 보상은 첫 승리 때 한 번 지급됩니다. 재현 작전은 최고 등급과 새 목격 기록을 갱신합니다.' 문구가 표시됐다.",
+      "수정 후 스크린샷에서 결과 카드와 다시 시도/라온의 여정으로 버튼이 390px 안에 보였다."
+    ],
+    "remaining": [
+      "마을 return 상태에서 실제 카즈린 귀환 확인과 '일주일 뒤' 선발 공고 장면 진입은 미확인.",
+      "이 후속에서는 전술/액션/중복 보상 동작을 다시 실행하지 않았다. 이전 fourth-batch 관찰 범위를 유지한다."
+    ],
+    "limitations": [
+      "기존 사용자 origin/storage는 접근하지 않았다. 4397 테스트 origin의 기존 승리 기록을 사용했으며 새 프로필 시드/실전 승리를 수행한 검증은 아니다.",
+      "4397 새 탭1908172950은 처음 navigate timeout이 발생했지만 getTab으로 로드된 App을 확인하고 제어 연결을 확보했다.",
+      "마을용 새4396 탭1908172951의 createBrowserTab이 net::ERR_NETWORK_IO_SUSPENDED로 실패했고 한 번의 getTab 복구도 Debugger unattached로 실패했다. 추가 재시도 없이 중단했다.",
+      "이번 후속에서 browser warn/error 로그 수집은 하지 않았으므로 전체 무오류라고 주장하지 않는다."
+    ],
+    "metrics": {
+      "width": 390,
+      "client": 381,
+      "scroll": 381,
+      "body": 381,
+      "battle": {
+        "left": 0,
+        "right": 380.8000183105469,
+        "width": 380.8000183105469
+      }
+    },
+    "cleanup": {
+      "viewportReset": true,
+      "returnViewportNeverSet": true,
+      "servers": [
+        {
+          "origin": "http://127.0.0.1:4397",
+          "sessionId": 56975,
+          "stopped": true,
+          "exitCode": 1
+        },
+        {
+          "origin": "http://127.0.0.1:4396",
+          "sessionId": 37056,
+          "stopped": true,
+          "exitCode": 1
+        }
+      ],
+      "method": "Ctrl+C",
+      "sourceModified": false,
+      "originalDistModified": false
+    },
+    "screenshots": [
+      "<LOCAL_WORKSPACE>/outputs/fifth-batch-followup-victory-390.png"
+    ],
+    "evidence": [
+      "<LOCAL_WORKSPACE>/outputs/fifth-batch-followup-victory-metrics.json"
+    ]
+  },
+  "remotePush": false
+}

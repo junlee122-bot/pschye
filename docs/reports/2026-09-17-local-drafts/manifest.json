@@ -1,0 +1,32 @@
+[
+  {
+    "source": ".tmp/battle-desktop-fixed.png",
+    "published": "battle-desktop-fixed.png",
+    "sourceBytes": 370298,
+    "sourceSha256": "35c107d15638c53e9569221b8801ff77ee622139f95ec08b4fc91800f1b993f9"
+  },
+  {
+    "source": ".tmp/battle-desktop.png",
+    "published": "battle-desktop.png",
+    "sourceBytes": 329765,
+    "sourceSha256": "5e83c7b3dd7b422119d772d681e3884dd0ce54e747808d9e6e231d729c8268d3"
+  },
+  {
+    "source": ".tmp/episode-lines.txt",
+    "published": "episode-lines.md",
+    "sourceBytes": 34136,
+    "sourceSha256": "7f4a25b202528a2f1d21e1e7d4019a60ed210ebf0136b5df99af30643ade776b"
+  },
+  {
+    "source": ".tmp/tactical-state-audit.config.ts",
+    "published": "tactical-state-audit.config.ts",
+    "sourceBytes": 153,
+    "sourceSha256": "bd25ff6f23df28f77f371cb1feed3bf30f51212c0ca8ec58fefc3e551f1d4178"
+  },
+  {
+    "source": ".tmp/tactical-state-audit.ts",
+    "published": "tactical-state-audit.ts",
+    "sourceBytes": 5775,
+    "sourceSha256": "15913823a31ad311a32b95362a9a566f805be5014ca3e1741df265c37c05a2b8"
+  }
+]

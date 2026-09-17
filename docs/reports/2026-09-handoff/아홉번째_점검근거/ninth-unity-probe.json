@@ -1,0 +1,43 @@
+{
+  "checkedAtUtc": "2026-09-15T06:21:37.2448995Z",
+  "scriptPath": "<LOCAL_REPOSITORY>\\tools\\unity\\Invoke-Adventure.ps1",
+  "sourceSha256": "AB9BEE9C5D31D101078320FDF9CBA2B3C74B21DA6EBCC7FB3D1FABEFD4DB9848",
+  "parser": {
+    "errorCount": 0,
+    "engineVersion": "7.6.5",
+    "errors": []
+  },
+  "executionEngine": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "probe": {
+    "exitCode": 0,
+    "output": "{\r\n    \"action\":  \"Probe\",\r\n    \"repositoryPath\":  \"C:\\\\Users\\\\이승준\\\\Documents\\\\Codex\\\\2026-07-14\\\\junlee122-bot-pschye-https-github-com\\\\work\\\\pschye\",\r\n    \"projectPath\":  \"C:\\\\Users\\\\이승준\\\\Documents\\\\Codex\\\\2026-07-14\\\\junlee122-bot-pschye-https-github-com\\\\work\\\\pschye\\\\unity\\\\PsycheAdventure\",\r\n    \"projectExists\":  true,\r\n    \"requiredEditorVersion\":  \"6000.0.75f1\",\r\n    \"editorPath\":  null,\r\n    \"editorExists\":  false,\r\n    \"editorVersion\":  null,\r\n    \"rawProductVersion\":  null,\r\n    \"matchesRequiredVersion\":  false,\r\n    \"discoverySource\":  \"default-install-locations\",\r\n    \"discoveredCandidates\":  [\r\n\r\n                             ]\r\n}",
+    "result": {
+      "action": "Probe",
+      "repositoryPath": "<LOCAL_REPOSITORY>",
+      "projectPath": "<LOCAL_REPOSITORY>\\unity\\PsycheAdventure",
+      "projectExists": true,
+      "requiredEditorVersion": "6000.0.75f1",
+      "editorPath": null,
+      "editorExists": false,
+      "editorVersion": null,
+      "rawProductVersion": null,
+      "matchesRequiredVersion": false,
+      "discoverySource": "default-install-locations",
+      "discoveredCandidates": []
+    }
+  },
+  "missingEditor": {
+    "exitCode": 1,
+    "action": "Verify",
+    "pathExists": false,
+    "output": "{\r\n    \"status\":  \"failed\",\r\n    \"action\":  \"Verify\",\r\n    \"message\":  \"Unity Editor was not found. Install/activate it separately, then supply -UnityEditorPath or UNITY_EDITOR_PATH. This tool does not install software or sign in.\",\r\n    \"probe\":  {\r\n                  \"action\":  \"Verify\",\r\n                  \"repositoryPath\":  \"C:\\\\Users\\\\이승준\\\\Documents\\\\Codex\\\\2026-07-14\\\\junlee122-bot-pschye-https-github-com\\\\work\\\\pschye\",\r\n                  \"projectPath\":  \"C:\\\\Users\\\\이승준\\\\Documents\\\\Codex\\\\2026-07-14\\\\junlee122-bot-pschye-https-github-com\\\\work\\\\pschye\\\\unity\\\\PsycheAdventure\",\r\n                  \"projectExists\":  true,\r\n                  \"requiredEditorVersion\":  \"6000.0.75f1\",\r\n                  \"editorPath\":  \"C:\\\\Users\\\\이승준\\\\Documents\\\\Codex\\\\2026-09-10\\\\new-chat-3\\\\work\\\\missing Unity editor\\\\Editor\\\\Unity.exe\",\r\n                  \"editorExists\":  false,\r\n                  \"editorVersion\":  null,\r\n                  \"rawProductVersion\":  null,\r\n                  \"matchesRequiredVersion\":  false,\r\n                  \"discoverySource\":  \"parameter\",\r\n                  \"discoveredCandidates\":  [\r\n\r\n                                           ]\r\n              },\r\n    \"editorExitCode\":  null,\r\n    \"logPath\":  null,\r\n    \"testResultsPath\":  null,\r\n    \"tests\":  null,\r\n    \"verification\":  null\r\n}\r\nUnity Editor was not found. Install/activate it separately, then supply -UnityEditorPath or UNITY_EDITOR_PATH. This tool does not install software or sign in.",
+    "path": "<LOCAL_WORKSPACE>\\work\\missing Unity editor\\Editor\\Unity.exe"
+  },
+  "passed": true,
+  "unityExecuted": false,
+  "csharpCompilation": false,
+  "editModeExecuted": false,
+  "playModeExecuted": false,
+  "buildExecuted": false,
+  "scope": "Final launcher: PowerShell parser, Windows PowerShell Probe, and missing Editor failure only. No Unity process, install, sign-in, project compile, test run, or build. Verify/Build runId and NUnit XML gates were implemented but cannot be exercised without Editor."
+}

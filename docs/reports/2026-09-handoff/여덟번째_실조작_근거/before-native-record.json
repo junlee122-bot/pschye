@@ -1,0 +1,260 @@
+{
+  "verifiedAt": "2026-09-15T01:44:47.005Z",
+  "commit": "bbcf10eed6a359fc54d37b16caa9f533b939dcf5",
+  "previous": "1d07e4fa0f2e0b0692a66c91ee6207240d88f828",
+  "changedFiles": [
+    "docs/FULL_JOURNEY_VERIFICATION.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "src/App.flow.test.tsx",
+    "src/App.session.test.tsx",
+    "src/App.tsx",
+    "src/components/OriginStory.keyboard.test.tsx",
+    "src/components/OriginStory.tsx",
+    "src/game/journeyVerification.test.ts"
+  ],
+  "workingTreeClean": true,
+  "status": "code-and-automated-verification-complete; native-full-journey-incomplete",
+  "nativeFullJourneyComplete": false,
+  "sourceStoryAndFormalCombatUnchanged": true,
+  "preservedPaths": [
+    "docs/source",
+    "public/content/world-bible-v3.1.json",
+    "src/data/originStory.ts",
+    "src/data/grandStory.ts",
+    "src/data/battle.ts",
+    "src/game/actionBattleRules.ts"
+  ],
+  "tests": {
+    "passed": 374,
+    "files": 28,
+    "added": 18,
+    "newCases": {
+      "ruleApiJourney": 6,
+      "appSessionBoundaries": 5,
+      "keyboardDom": 6,
+      "realAppDomFlow": 1
+    }
+  },
+  "regressionEvidence": {
+    "appSessionBoundariesFailedBefore": 5,
+    "appSessionBoundariesPassedAfter": 5,
+    "controlledCallbackInjection": true,
+    "naturalPhaserRaceReproduced": false
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "automatedScope": {
+    "realAppFlow": "Insight path from field exam to first mission mode selection; actual components, reducers, save/load and jsdom LocalStorage without IndexedDB. Prior seven scenes are setup seeds. Includes mid-exam unmount/remount.",
+    "ruleApiJourney": "Three stances through origin scenes and encounters, six engine-played first-mission wins for 4/6 squads, engine-produced defeat, retry and abandon. Storage is a Map-backed mock without IndexedDB; setItem failures are injected. Failed victory persistence preserves last active save; a retained valid victory state is resubmitted before settlement. Failed settlement reloads saved victory without duplicate rewards.",
+    "physicalInputAndCanvasRenderingCoveredByDomTests": false
+  },
+  "build": {
+    "checkedAt": "2026-09-15T01:36:22.646Z",
+    "productionEntry": "assets/index-BVMjwOsu.js",
+    "authorAndTestChunksAbsent": true,
+    "existingPlayableAndBattleEntriesRetained": true,
+    "chunks": [
+      "_VillagePrologue-CzsfmA2_.js",
+      "_VillagePrologue-DpY55hrw.css",
+      "_icons-Bpcrx_db.js",
+      "_phaser-CSP61uFZ.js",
+      "_phaserRuntime-nOZ7DIWJ.js",
+      "_react-9LjzQdLw.js",
+      "index.html",
+      "src/components/CaptainTrialEncounter.tsx",
+      "src/components/FieldExamEncounter.tsx",
+      "src/components/PetalTrainingEncounter.tsx",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx",
+      "src/components/VillageRescueEncounter.tsx"
+    ]
+  },
+  "nativeEvidence": {
+    "lightweightInputDiagnostic": {
+      "checkedAt": "2026-09-15T01:20:42.683Z",
+      "summary": "iab는 현재 사용할 수 없었으며 제공되는 새 Edge 탭의 경량 정적 페이지에서 실제 마우스·키보드 입력과 DOM 갱신은 정상 확인했다.",
+      "origin": "http://127.0.0.1:4406",
+      "passed": [
+        "마우스 실제 클릭으로 카운터0→1, trusted=true/detail1 확인",
+        "Tab→Enter 키보드 활성화로 카운터0→1, trusted=true/detail0 확인",
+        "두 입력 뒤 DOM과 AX 카운터 변화 확인"
+      ],
+      "remaining": [
+        "실제 production 게임 화면에서 장시간 입력·전체 여정은 아직 검증하지 않았다."
+      ],
+      "limitations": [
+        "iab createBrowserTab은 Browser is not available: iab로 반환됐고 inventory에는 Edge만 제공됐다. iab를 반복 호출하지 않았다.",
+        "정적 페이지의 짧은 성공만으로 지난 게임 입력 timeout 원인이 앱 부하라고 결론내릴 수 없다.",
+        "최근 warn/error(limit12) 조회는 빈 배열이며 모든 브라우저 오류가 없다는 주장은 아니다."
+      ],
+      "evidence": [
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-input-diagnostic-evidence.json",
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-input-diagnostic-notes.md"
+      ],
+      "screenshots": [
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-input-diagnostic.png"
+      ],
+      "observed": {
+        "requestedSurface": "iab",
+        "iabResult": "Browser is not available: iab",
+        "availableSurface": "Edge id1",
+        "tabId": "1908172962",
+        "origin": "http://127.0.0.1:4406",
+        "mouse": {
+          "event": {
+            "count": 1,
+            "detail": 1,
+            "target": "mouse",
+            "trusted": true,
+            "type": "click"
+          },
+          "keyboard": "키보드: 0",
+          "mouse": "마우스: 1"
+        },
+        "keyboard": {
+          "event": {
+            "count": 1,
+            "detail": 0,
+            "target": "keyboard",
+            "trusted": true,
+            "type": "click"
+          },
+          "keyboard": "키보드: 1",
+          "mouse": "마우스: 1"
+        },
+        "warnErrorLogs": {
+          "limit": 12,
+          "entries": []
+        },
+        "inputTransportErrors": [],
+        "scope": "Static HTML only; actual trusted click and Tab/Enter. No game/framework/storage/third-party assets."
+      },
+      "cleanup": {
+        "diagnosticServerSession": 68653,
+        "diagnosticServerStopped": true,
+        "port4406Closed": true,
+        "viewportChanged": false,
+        "userStorageTouched": false,
+        "productionSourceOrDistModified": false
+      },
+      "nextPreparation": {
+        "server": "<LOCAL_WORKSPACE>\\work\\eighth-batch-app-server.mjs",
+        "origin": "http://127.0.0.1:4407",
+        "started": false,
+        "description": "Reads original production dist without rebuilding or modifying it; /__input-diagnostic serves the same light control page. No seed or App wrapper yet; manual journey scope pending root coordination."
+      }
+    },
+    "freshGameOnPreviousBatch": {
+      "checkedAt": "2026-09-15T01:33:39.153Z",
+      "summary": "새4407 저장 공간의 실제 새게임·마을 지도·직접 이동까지 확인했다. 동일origin 경량 입력은 정상이나 게임 화면은 연속 입력 timeout과 단일 입력 뒤 DOM timeout이 발생해 첫 대화 전 중단했다. 전체 여정 수동 완주로 판정하지 않는다.",
+      "origin": "http://127.0.0.1:4407",
+      "sourceBasis": {
+        "commit": "1d07e4f",
+        "entry": "index-B3mm0YSY.js",
+        "css": "index-CsP1qHx5.css",
+        "laterRootFixesVerified": false
+      },
+      "passed": [
+        "실제 production App의 새 origin/slot1에서 변방 마을에서 시작 버튼을 눌러 village-dawn 지도와 목표를 열었다. seed는 사용하지 않았다.",
+        "390px 화면에서 목표·지도·모바일 방향 버튼을 시각 확인했다. 실제 마우스/키보드로 이동해 라온 위치 변화가 보였다.",
+        "입력 timeout 뒤 같은 탭·같은4407 origin의 경량 페이지에서 실제 마우스와 Tab/Enter 카운터 증가 및 trusted 이벤트를 확인했다.",
+        "현재 저장 공간의 게임 화면에 재접속해 같은 첫 장면을 열었다. 한 입력/다음호출 DOM 방식에서9개 이동/관찰 쌍이 성공했고10번째 이동 입력 후 DOM 읽기가 실패했다."
+      ],
+      "remaining": [
+        "첫 카즈린 대화 및 이후 서장15장면·입단·첫 작전 준비·전술 모드 진입은 이 CUA 여정에서 미확인이다.",
+        "수로/폐광/수련/조장3대결의 실제 연속 수동 여정은 완료하지 않았다. 이전 묶음 개별 검증과 이번 전체 여정은 구분한다.",
+        "수로 귀환 후 실제 카즈린 접근 등 과거 미확인 경로도 이번에 완료되지 않았다.",
+        "정확한 마을 좌표의 저장 전후 동일성·최종 입력 저장 여부는 확인하지 못했다.",
+        "320px 핵심 화면 및 최종 수정 배포본의 실제 CUA 재검증은 미확인이다."
+      ],
+      "limitations": [
+        "첫 게임 이동 배치에서 Input.dispatchKeyEvent timeout2907ms. 단일 입력/다음호출 관찰에서도 Page.getFrameTree timeout3000ms. 게임 단계마다 정상이라고 확대 해석하지 않는다.",
+        "같은origin 정적 페이지 입력 성공은 완전한 연결 단절이 아님을 보여주지만 원인을 앱 부하·Phaser·저장 처리·간헐적 도구 중 하나로 특정하지는 못한다.",
+        "iab가 제공되지 않아 inventory에서 유일하게 제공된 Edge를 사용했다. CUA 문서화 API만 사용했으며 raw CDP/별도 Playwright 백엔드는 실행하지 않았다.",
+        "게임 입력은 해당 mobile button의 실제 click/locator.press였다. 앱 상태 주입·원본 저장값 변경·원본src/dist 변경 없이 진행했다.",
+        "최근 warn/error(limit20) 조회[]는 제한된 시점의 결과다. 도구 입력/DOM timeout이 없다는 의미가 아니다.",
+        "루트가 별도 DOM/실제 App·저장으로 검증한 흐름은 이 실제 CUA 브라우저 통과 항목과 합치지 않는다."
+      ],
+      "screenshots": [
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-journey-village-390.png",
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-journey-control-390.png"
+      ],
+      "evidence": [
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-journey-input-evidence.json",
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-journey-notes.md",
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-input-diagnostic-result.json"
+      ],
+      "cleanup": {
+        "viewportReset": true,
+        "serverSession": 87049,
+        "serverStopped": true,
+        "port4407Closed": true,
+        "userStorageTouched": false,
+        "productSourceOrDistModified": false
+      }
+    },
+    "finalSourceKeyboardCase": {
+      "checkedAt": "2026-09-15T01:42:24.004Z",
+      "summary": "최종 수정의 실제 App에서 선택 완료 capital-gate의 타이틀 버튼을 Enter로 실행한 뒤 타이틀 이동과 실제 저장 불변을 확인했다. 입력 도구 timeout은 1회 복구 후 결과를 관찰했고, 320px 스크린샷은 후속 도구 timeout으로 미획득이다.",
+      "origin": "http://127.0.0.1:4408",
+      "sourceBasis": {
+        "finalCommit": "bbcf10eed6a359fc54d37b16caa9f533b939dcf5",
+        "baseCommit": "1d07e4fa0f2e0b0692a66c91ee6207240d88f828",
+        "description": "Root final eighth-batch source after374checks/build; separate fixture imports current realApp and primary styles. No original source/dist mutation.",
+        "productionEntry": "index-BVMjwOsu.js",
+        "productionVillage": "VillageAdventure-CzTBt3ge.js",
+        "fixtureEntry": "index-x3WK5GYv.js",
+        "fixtureVillage": "VillageAdventure-C7v00RsF.js",
+        "fixturePrimaryCss": "index-CUmxpurm.css",
+        "buildSeconds": 44.95
+      },
+      "passed": [
+        "명시한 앞 5장면 준비 후 실제 chooseOriginStoryPath identify-poison으로 capital-gate 선택을 적용하고 실제 save/load가 준비 요약을 그대로 보존했다.",
+        "선택 완료 이야기의 타이틀 버튼에 실제 locator.press Enter를 실행했다. 도구는 timeout을 보고했으나 1회 getTab 후 실제 title URL/화면과 서장 6/영웅들의 그림자 아래 저장 슬롯을 확인했다.",
+        "이동 후 UI 검사 버튼이 호출한 실제 loadCampaignProfile 결과에서 currentSceneId=capital-gate, score 4, choices, completedSceneIds가 모두 불변이었다.",
+        "자원·성장·관계·로그 등을 포함한 전체 저장 요약도 Enter 전 실제 load 요약과 완전히 동일했다."
+      ],
+      "remaining": [
+        "320px 뷰포트의 title/저장 슬롯 AX는 확인했지만 스크린샷과 DOM 폭 측정은 실행 완료하지 못해 시각 잘림/가로 넘침 통과로 판정하지 않는다.",
+        "이 검증은 준비된 텍스트 장면의 Enter 회귀 1개이며 J1 전체 여정 수동 완주를 뜻하지 않는다."
+      ],
+      "limitations": [
+        "Enter 입력 API가 Input.dispatchKeyEvent timeout 1312ms를 보고했다. 1회 getTab 복구 후 결과를 관찰했으며 Enter를 다시 누르지 않았다.",
+        "후속 fullPage 스크린샷에서 Page.captureScreenshot timeout 5000ms가 발생해 추가 캡처/재연결을 중단했다. 같은 호출의 metrics/log 조회는 실행되지 않았다.",
+        "앞 5장면과 capital-gate 선택은 실제 API를 쓴 명시적 준비다. 앞선 서장 플레이나 선택의 수동 실행으로 세지 않는다.",
+        "고유 4408 slot 1만 사용했다. 원본 사용자 storage/src/dist 변경이나 다른 브라우저 백엔드/rawCDP 우회는 없었다."
+      ],
+      "observed": {
+        "titleUrl": "http://127.0.0.1:4408/tmp/eighth-keyboard-review/index.html",
+        "sameScene": true,
+        "sameScore": true,
+        "sameChoices": true,
+        "sameCompletedScenes": true,
+        "entireSummaryEqual": true,
+        "scene": "capital-gate",
+        "score": 4
+      },
+      "screenshots": [],
+      "evidence": [
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-keyboard-browser-evidence.json",
+        "<LOCAL_WORKSPACE>/outputs/eighth-batch-keyboard-browser-notes.md"
+      ],
+      "cleanup": {
+        "viewportReset": true,
+        "serverSession": 82508,
+        "serverStopped": true,
+        "port4408Closed": true,
+        "userStorageTouched": false,
+        "originalSourceOrDistModified": false
+      }
+    }
+  },
+  "remotePush": false,
+  "deployment": false
+}

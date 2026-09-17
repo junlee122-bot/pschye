@@ -1,0 +1,1 @@
+export default async s=>{const p=await s.profile(),t=await s.context.storageState({indexedDB:true});await s.browser.close();s.fs.writeFileSync(s.work+'/native-emergency-storage.json',JSON.stringify(t));s.fs.writeFileSync(s.work+'/native-emergency-profile.json',JSON.stringify(p));s.fs.writeFileSync(s.work+'/native-root-steps.json',JSON.stringify(s.steps));return p.originStory;};

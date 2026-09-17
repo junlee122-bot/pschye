@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-09-15T02:41:53.954Z",
+  "productionEntry": "assets/index-DEx4xGQm.js",
+  "authorAndTestChunksAbsent": true,
+  "existingPlayableAndBattleEntriesRetained": true,
+  "chunks": [
+    "_VillagePrologue-CzsfmA2_.js",
+    "_VillagePrologue-DpY55hrw.css",
+    "_icons-Bpcrx_db.js",
+    "_phaser-CSP61uFZ.js",
+    "_phaserRuntime-nOZ7DIWJ.js",
+    "_react-9LjzQdLw.js",
+    "index.html",
+    "src/components/CaptainTrialEncounter.tsx",
+    "src/components/FieldExamEncounter.tsx",
+    "src/components/PetalTrainingEncounter.tsx",
+    "src/components/PhaserBattlefield.tsx",
+    "src/components/RaonActionBattle.tsx",
+    "src/components/VillageAdventure.tsx",
+    "src/components/VillageRescueEncounter.tsx"
+  ]
+}

@@ -1,0 +1,2680 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-17T06:47:50.563Z",
+  "purpose": "로컬 작업 삭제 전 최종 보고서와 검증 증빙의 저장소 이관",
+  "sourceRoot": "<LOCAL_WORKSPACE>/outputs",
+  "destination": "docs/reports/2026-09-handoff",
+  "normalization": [
+    "사용자 및 설치 경로를 익명화",
+    "로컬 Markdown 링크를 저장소 상대 링크로 변경",
+    "GitHub 저장소 이름 pschye를 raonjena로 변경",
+    "JSON은 값을 보존하며 들여쓰기 정규화"
+  ],
+  "summary": {
+    "sourceFiles": 295,
+    "archived": 285,
+    "existingTrackedIdentical": 7,
+    "deduplicated": 3,
+    "archivedBytes": 21055530,
+    "securityIssueCount": 0
+  },
+  "records": [
+    {
+      "source": "outputs/eighth-batch-browser-result.json",
+      "originalSha256": "680b4db8d74370cf9a8dbe711ed203e7028ff162ca71d4366ed28c1d4e49ae9f",
+      "originalBytes": 3878,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-browser-result.json",
+      "archivedSha256": "697678101de74f54ce1de9fb46d97f75d16d2599b80e46cab8c1288eed035b91",
+      "archivedBytes": 3654
+    },
+    {
+      "source": "outputs/eighth-batch-build-verification.json",
+      "originalSha256": "2afeca7854e14b20c62a4619c4eaf85f174a864ffccc1542675ffb5d4b93849b",
+      "originalBytes": 727,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-build-verification.json",
+      "archivedSha256": "2afeca7854e14b20c62a4619c4eaf85f174a864ffccc1542675ffb5d4b93849b",
+      "archivedBytes": 727
+    },
+    {
+      "source": "outputs/eighth-batch-input-diagnostic-evidence.json",
+      "originalSha256": "6b7864218914fae957a1fddb910e18eeb71b66fb4e8c029cee17621afc92f436",
+      "originalBytes": 800,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-input-diagnostic-evidence.json",
+      "archivedSha256": "45928bc4a33d7e757772b3d66cd716d94cbf38ee26bf88134bab9d53ab9c00d2",
+      "archivedBytes": 801
+    },
+    {
+      "source": "outputs/eighth-batch-input-diagnostic-notes.md",
+      "originalSha256": "1d0ed9c8d8a19529e5a6ee9b9d1ff229a089bf68f164be6d6e090d3ce4b0d7e1",
+      "originalBytes": 1888,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-input-diagnostic-notes.md",
+      "archivedSha256": "1d0ed9c8d8a19529e5a6ee9b9d1ff229a089bf68f164be6d6e090d3ce4b0d7e1",
+      "archivedBytes": 1888
+    },
+    {
+      "source": "outputs/eighth-batch-input-diagnostic-result.json",
+      "originalSha256": "f9ecf9309d303b9c714ad145df07064a388fe96d0ddb4297b4cb2ee6153b6e95",
+      "originalBytes": 3002,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-input-diagnostic-result.json",
+      "archivedSha256": "b9a2897daa4c8c444630dac7af6a5b6cf34ae938890ecb917bdb81d2692d5db0",
+      "archivedBytes": 2823
+    },
+    {
+      "source": "outputs/eighth-batch-input-diagnostic.png",
+      "originalSha256": "47ce3a48021d86be407ac5be920e6e45ffad12440c7c37f7e403d67440525274",
+      "originalBytes": 38478,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-input-diagnostic.png",
+      "archivedSha256": "47ce3a48021d86be407ac5be920e6e45ffad12440c7c37f7e403d67440525274",
+      "archivedBytes": 38478
+    },
+    {
+      "source": "outputs/eighth-batch-journey-control-390.png",
+      "originalSha256": "d85119e4f2547e2f5955c6802b1813c0c0da7ac217eb838422cbb5e214268a8b",
+      "originalBytes": 31246,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-journey-control-390.png",
+      "archivedSha256": "d85119e4f2547e2f5955c6802b1813c0c0da7ac217eb838422cbb5e214268a8b",
+      "archivedBytes": 31246
+    },
+    {
+      "source": "outputs/eighth-batch-journey-input-evidence.json",
+      "originalSha256": "463e1ced2bf575bb676f7d5e0061b05185fc032ac5abce027e99bd3fb0fa4daa",
+      "originalBytes": 2465,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-journey-input-evidence.json",
+      "archivedSha256": "49136acb130a8e7fc38a5966ddb8021340a8a9115be6cedfe9b5cfb79878d53a",
+      "archivedBytes": 2466
+    },
+    {
+      "source": "outputs/eighth-batch-journey-notes.md",
+      "originalSha256": "9f97196ac485196eb418eee70efdea55802f1bfbbfbe30525ca2633688e481d9",
+      "originalBytes": 3275,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-journey-notes.md",
+      "archivedSha256": "9f97196ac485196eb418eee70efdea55802f1bfbbfbe30525ca2633688e481d9",
+      "archivedBytes": 3275
+    },
+    {
+      "source": "outputs/eighth-batch-journey-village-390.png",
+      "originalSha256": "157dcda22ce47559a61ee6b94193ef46c221f77bb970288a22a2bfa1dabf9324",
+      "originalBytes": 38443,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-journey-village-390.png",
+      "archivedSha256": "157dcda22ce47559a61ee6b94193ef46c221f77bb970288a22a2bfa1dabf9324",
+      "archivedBytes": 38443
+    },
+    {
+      "source": "outputs/eighth-batch-keyboard-browser-evidence.json",
+      "originalSha256": "b413eb0a7874b40479fb3c92a893bae110e80a7f2ec0cba601f0d0d892149bc6",
+      "originalBytes": 17849,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-keyboard-browser-evidence.json",
+      "archivedSha256": "a1ee1d3036724211fd8dda6d50b3f703b0828cb32e37d36f8f0041a12221a25b",
+      "archivedBytes": 17850
+    },
+    {
+      "source": "outputs/eighth-batch-keyboard-browser-notes.md",
+      "originalSha256": "917eb08a9e306c75dd9ca0e2d3bdb6c4a901685a65289412ca9dc6bfa57b9ed8",
+      "originalBytes": 2597,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-keyboard-browser-notes.md",
+      "archivedSha256": "917eb08a9e306c75dd9ca0e2d3bdb6c4a901685a65289412ca9dc6bfa57b9ed8",
+      "archivedBytes": 2597
+    },
+    {
+      "source": "outputs/eighth-batch-keyboard-browser-result.json",
+      "originalSha256": "a33f554dadeac1e1a4eee44a4f138b51f38a8e6086c920920f93d7adaf68e63f",
+      "originalBytes": 3553,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-keyboard-browser-result.json",
+      "archivedSha256": "eda689d9b9dd7851d1824d50d03b3223436148a36b34b9b3d42127187309411d",
+      "archivedBytes": 3463
+    },
+    {
+      "source": "outputs/fifth-batch-browser-complete-390.png",
+      "originalSha256": "0aec4512675d5ab3baeda88c7c4b9b762dffdc5c7fa31f5e40f3729c6f69fddb",
+      "originalBytes": 38768,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-browser-complete-390.png",
+      "archivedSha256": "0aec4512675d5ab3baeda88c7c4b9b762dffdc5c7fa31f5e40f3729c6f69fddb",
+      "archivedBytes": 38768
+    },
+    {
+      "source": "outputs/fifth-batch-browser-day12-390.png",
+      "originalSha256": "de9bcd2102500a64d538a1ebb5ec349fe034ebeba1ecf637916ad70013db9127",
+      "originalBytes": 52214,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-browser-day12-390.png",
+      "archivedSha256": "de9bcd2102500a64d538a1ebb5ec349fe034ebeba1ecf637916ad70013db9127",
+      "archivedBytes": 52214
+    },
+    {
+      "source": "outputs/fifth-batch-browser-form-390.png",
+      "originalSha256": "16ce6ec8ef75b3c9cfa54cf22f2405581ef7487e812ca85294a726088d80567e",
+      "originalBytes": 35559,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-browser-form-390.png",
+      "archivedSha256": "16ce6ec8ef75b3c9cfa54cf22f2405581ef7487e812ca85294a726088d80567e",
+      "archivedBytes": 35559
+    },
+    {
+      "source": "outputs/fifth-batch-browser-review.md",
+      "originalSha256": "e45c765e57c9b0a94aa799bad0987bb8a69abb96585893827785c85344d19dbd",
+      "originalBytes": 6135,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-browser-review.md",
+      "archivedSha256": "e45c765e57c9b0a94aa799bad0987bb8a69abb96585893827785c85344d19dbd",
+      "archivedBytes": 6135
+    },
+    {
+      "source": "outputs/fifth-batch-browser-save-evidence.json",
+      "originalSha256": "8789d195112aad09890b0fd6a7eabb8c9ab6fb6a6048336a21a369f8f60c23b8",
+      "originalBytes": 13832,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-browser-save-evidence.json",
+      "archivedSha256": "6c911747747db862c808b6b8d4430a67894c33f4aa1fea6502735c853eb4242e",
+      "archivedBytes": 13833
+    },
+    {
+      "source": "outputs/fifth-batch-followup-review.md",
+      "originalSha256": "b08c8790dd9291c4e13649343e7729193e79b2da3dcf877207639131b8cc54b7",
+      "originalBytes": 2266,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-followup-review.md",
+      "archivedSha256": "b08c8790dd9291c4e13649343e7729193e79b2da3dcf877207639131b8cc54b7",
+      "archivedBytes": 2266
+    },
+    {
+      "source": "outputs/fifth-batch-followup-victory-390.png",
+      "originalSha256": "f520f99898e3d8c2af4fbffc8e17899620145f85c3a8678e70861cd3418f5122",
+      "originalBytes": 32316,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-followup-victory-390.png",
+      "archivedSha256": "f520f99898e3d8c2af4fbffc8e17899620145f85c3a8678e70861cd3418f5122",
+      "archivedBytes": 32316
+    },
+    {
+      "source": "outputs/fifth-batch-followup-victory-metrics.json",
+      "originalSha256": "95847c0d4f9ee347153f54e95936ad42e4551e34a37343c732f6ec27c6862144",
+      "originalBytes": 323,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fifth-batch-followup-victory-metrics.json",
+      "archivedSha256": "239669df07f1ba43eed64c537d8b825c1a4ff180bdce4711b9ecfdfdecd4e23c",
+      "archivedBytes": 324
+    },
+    {
+      "source": "outputs/fourth-batch-action-checkpoint-evidence.json",
+      "originalSha256": "a51ae88ed491de694281978ae284ea942d575fcbfc49461b15aa414b369db996",
+      "originalBytes": 11127,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-action-checkpoint-evidence.json",
+      "archivedSha256": "3cd28369cc71c8befd06bb96fd085dfaeaf00c56f756c8bcdedf1065e6818271",
+      "archivedBytes": 11128
+    },
+    {
+      "source": "outputs/fourth-batch-action-resume-390.png",
+      "originalSha256": "0b0bd2cbefb635ca767b6a8968cea404bd3471cb3250b822463ae04a4b586166",
+      "originalBytes": 28772,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-action-resume-390.png",
+      "archivedSha256": "0b0bd2cbefb635ca767b6a8968cea404bd3471cb3250b822463ae04a4b586166",
+      "archivedBytes": 28772
+    },
+    {
+      "source": "outputs/fourth-batch-battle-hub-390.png",
+      "originalSha256": "d51ebd9449abb4cb8f12c877cda72cf30eca9765046fd7f9ca08f4ec24a0d8df",
+      "originalBytes": 34169,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-battle-hub-390.png",
+      "archivedSha256": "d51ebd9449abb4cb8f12c877cda72cf30eca9765046fd7f9ca08f4ec24a0d8df",
+      "archivedBytes": 34169
+    },
+    {
+      "source": "outputs/fourth-batch-browser-review.md",
+      "originalSha256": "bcbc86f13f6811463d0e87ef69cc595142a60111291a4693d7ddd8e3c976fa24",
+      "originalBytes": 7641,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-browser-review.md",
+      "archivedSha256": "bcbc86f13f6811463d0e87ef69cc595142a60111291a4693d7ddd8e3c976fa24",
+      "archivedBytes": 7641
+    },
+    {
+      "source": "outputs/fourth-batch-tactical-undo-evidence.json",
+      "originalSha256": "5506717a6320197061930b59d6fde0208380240403b35c7749aa71db2e39d5e3",
+      "originalBytes": 4208,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-tactical-undo-evidence.json",
+      "archivedSha256": "681c7ab5a782c68dba5736f8fe6ae40c7eb253510a1b2be5ffe491181a8a1cc4",
+      "archivedBytes": 4209
+    },
+    {
+      "source": "outputs/fourth-batch-victory-result-390.png",
+      "originalSha256": "1befda6930f8859937108f8fc6e26604c40c4be2bb1643bdf9f90decd82639c7",
+      "originalBytes": 30327,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-victory-result-390.png",
+      "archivedSha256": "1befda6930f8859937108f8fc6e26604c40c4be2bb1643bdf9f90decd82639c7",
+      "archivedBytes": 30327
+    },
+    {
+      "source": "outputs/fourth-batch-victory-settlement-evidence.json",
+      "originalSha256": "41a4a198a8e0f57d6faa7b4443a9664be29f7e9e0b566767a42c8291e4d58296",
+      "originalBytes": 19583,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-victory-settlement-evidence.json",
+      "archivedSha256": "e0436f36a0a3c95bcbaf82b99423f7913dcba7cf91613177ffb2d03a11d9bd7e",
+      "archivedBytes": 19584
+    },
+    {
+      "source": "outputs/fourth-batch-village-followup.md",
+      "originalSha256": "be78e0290c43beb4741905e8660790d2c71859023442e050c422c69c93b15631",
+      "originalBytes": 2686,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/fourth-batch-village-followup.md",
+      "archivedSha256": "be78e0290c43beb4741905e8660790d2c71859023442e050c422c69c93b15631",
+      "archivedBytes": 2686
+    },
+    {
+      "source": "outputs/GitHub_푸시_확인.json",
+      "originalSha256": "8266689eb333efc3237e7416e4663fe267922a9b5ddbe567c0c63a08a652ab63",
+      "originalBytes": 556,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/GitHub_푸시_확인.json",
+      "archivedSha256": "542381da7009811563a9deb81033120f46de61105c9f0517b16fc6c170f0a15a",
+      "archivedBytes": 558
+    },
+    {
+      "source": "outputs/raon-glb-inspection.json",
+      "originalSha256": "87ae4f3051c2cf0a70adb9d7e9be5a9adc4b034712b7debe585af139606c592c",
+      "originalBytes": 657,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/raon-glb-inspection.json",
+      "archivedSha256": "154e6a5fbccac834bd3f2d5129e63ef9a0907f510d0e69e67d556fb3cd481ed2",
+      "archivedBytes": 658
+    },
+    {
+      "source": "outputs/reproduction-results.json",
+      "originalSha256": "7d2de20c20106ad65e0c0d5195b34e5c0d4b92fb5672ab1d888bf17a137ad05e",
+      "originalBytes": 1702,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/reproduction-results.json",
+      "archivedSha256": "6b02c743be7139dc0bce38508b4bc84a5050572bfbb752a6de7704e5ec2c2a83",
+      "archivedBytes": 1703
+    },
+    {
+      "source": "outputs/second-batch-browser-review.md",
+      "originalSha256": "c4bee49f53b550bd92eafa302e0fbc83e23e557ae9d50f68ec17cdf56088b460",
+      "originalBytes": 4591,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/second-batch-browser-review.md",
+      "archivedSha256": "c4bee49f53b550bd92eafa302e0fbc83e23e557ae9d50f68ec17cdf56088b460",
+      "archivedBytes": 4591
+    },
+    {
+      "source": "outputs/seventh-batch-browser-form-390.png",
+      "originalSha256": "c43dadf41427b61c5c7c1244e75eecb71d8c075a9b650b69ad8abf70607edfd7",
+      "originalBytes": 34181,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/seventh-batch-browser-form-390.png",
+      "archivedSha256": "c43dadf41427b61c5c7c1244e75eecb71d8c075a9b650b69ad8abf70607edfd7",
+      "archivedBytes": 34181
+    },
+    {
+      "source": "outputs/seventh-batch-browser-review.md",
+      "originalSha256": "f7948be37d9f527d7207818c6044904664c1991c9a4d25e0ffbeb4357db2b087",
+      "originalBytes": 6223,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/seventh-batch-browser-review.md",
+      "archivedSha256": "f7948be37d9f527d7207818c6044904664c1991c9a4d25e0ffbeb4357db2b087",
+      "archivedBytes": 6223
+    },
+    {
+      "source": "outputs/seventh-batch-browser-save-evidence.json",
+      "originalSha256": "2d193ad8110d5bfe642eb4d7b9a796818bbab40ed0a9716e96bc2da846029d2c",
+      "originalBytes": 33119,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/seventh-batch-browser-save-evidence.json",
+      "archivedSha256": "2079998f3959a22baf76b435151fd48a8e62a184af149adc4da8860f426c58f0",
+      "archivedBytes": 33120
+    },
+    {
+      "source": "outputs/sixth-batch-browser-complete-390.png",
+      "originalSha256": "662092d77484d4d33d404fcba19e49c4e270601e293885aed694ca75edcd5f51",
+      "originalBytes": 40824,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-browser-complete-390.png",
+      "archivedSha256": "662092d77484d4d33d404fcba19e49c4e270601e293885aed694ca75edcd5f51",
+      "archivedBytes": 40824
+    },
+    {
+      "source": "outputs/sixth-batch-browser-form-390.png",
+      "originalSha256": "0002a8d4372076ced1e69c64a636f4527d822dab5129a55640b519f338b3639e",
+      "originalBytes": 34340,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-browser-form-390.png",
+      "archivedSha256": "0002a8d4372076ced1e69c64a636f4527d822dab5129a55640b519f338b3639e",
+      "archivedBytes": 34340
+    },
+    {
+      "source": "outputs/sixth-batch-browser-garden-390.png",
+      "originalSha256": "3f27ad4816443d19ef2c39a27e7b376846448c80f067c0cf980c37329fd55b01",
+      "originalBytes": 33519,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-browser-garden-390.png",
+      "archivedSha256": "3f27ad4816443d19ef2c39a27e7b376846448c80f067c0cf980c37329fd55b01",
+      "archivedBytes": 33519
+    },
+    {
+      "source": "outputs/sixth-batch-browser-review.md",
+      "originalSha256": "85fa0de70b6bed1225538eebbce17e95197040eb01eb4b293876586351bf75b7",
+      "originalBytes": 5536,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-browser-review.md",
+      "archivedSha256": "85fa0de70b6bed1225538eebbce17e95197040eb01eb4b293876586351bf75b7",
+      "archivedBytes": 5536
+    },
+    {
+      "source": "outputs/sixth-batch-browser-save-evidence.json",
+      "originalSha256": "315412c75f9bdcdd5662bf87d697dbb076cd3374068e8bbd1076ae1ea5a8b18e",
+      "originalBytes": 92883,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-browser-save-evidence.json",
+      "archivedSha256": "2ee7496742e40b1e98320ad38e47d7982f0169a5a040ac84f3953125326dd186",
+      "archivedBytes": 92884
+    },
+    {
+      "source": "outputs/sixth-batch-followup-fixture-basis.json",
+      "originalSha256": "b588a957f90042982ec3c4aaf148135e12892ab6bc24fb1d594c279c0dd84b81",
+      "originalBytes": 1462,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-followup-fixture-basis.json",
+      "archivedSha256": "7fdfc98d9e730eb467d954658f4166811dd3feadae48c7a703969ca9d431a662",
+      "archivedBytes": 1123
+    },
+    {
+      "source": "outputs/sixth-batch-followup-review.md",
+      "originalSha256": "94bfb49685c412aeb6c78d5332d58455f157e641bc4ab63f76178e7028f76593",
+      "originalBytes": 2147,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/sixth-batch-followup-review.md",
+      "archivedSha256": "94bfb49685c412aeb6c78d5332d58455f157e641bc4ab63f76178e7028f76593",
+      "archivedBytes": 2147
+    },
+    {
+      "source": "outputs/third-batch-browser-review.md",
+      "originalSha256": "188147ee5dbc3e6d955a3b002bb7c4f67d5f224886aac29406c2f329b7deab00",
+      "originalBytes": 7856,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/third-batch-browser-review.md",
+      "archivedSha256": "6804d55af418b2d12466530b1495bf65221b77581d85137e2e89fea9adb6607c",
+      "archivedBytes": 7940
+    },
+    {
+      "source": "outputs/네번째_작업묶음_검증기록.json",
+      "originalSha256": "0529842df75377e469991274aed1e80a2e6a4ff12f3634123d20dd5f73a6ca0f",
+      "originalBytes": 12097,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/네번째_작업묶음_검증기록.json",
+      "archivedSha256": "d89c29f7aee21ec40a72339177b13f2c9bf2e8aa831d2dd29324847da77b0e3c",
+      "archivedBytes": 11778
+    },
+    {
+      "source": "outputs/네번째_작업묶음_완료보고서.md",
+      "originalSha256": "de6d8f9f3a396d0c10ab3d3bde42c4d8f13d2e51cb91c9164b3b1004a7548ace",
+      "originalBytes": 9727,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/네번째_작업묶음_완료보고서.md",
+      "archivedSha256": "1ce83b0415696ba1813225f2e22b099a9ae5c423f192588c275424bf2f523abd",
+      "archivedBytes": 9805
+    },
+    {
+      "source": "outputs/네번째_작업묶음_전술상태검증.json",
+      "originalSha256": "5dfcccfce8abf0779b7ffbeac185b78da8103c6c64a68f88e41eb6157875ee7f",
+      "originalBytes": 2946,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/네번째_작업묶음_전술상태검증.json",
+      "archivedSha256": "6bd48d7058597ee9c61710e6c25ce8f8415c810eb0059a832a838e5861a87bb2",
+      "archivedBytes": 2861
+    },
+    {
+      "source": "outputs/네번째_작업묶음_테스트결과.json",
+      "originalSha256": "aefe5359b322c77445cbf60804ad7c2c5f9a3d44c1c86ef5b0bf6ff6cbd853a2",
+      "originalBytes": 80492,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/네번째_작업묶음_테스트결과.json",
+      "archivedSha256": "bab5cc3b8c75f4c0b3cde5ece427dc0bab94a28d15dab1ff11c0cefaf03116fe",
+      "archivedBytes": 110534
+    },
+    {
+      "source": "outputs/다른_PC_인계안내.md",
+      "originalSha256": "27d7a3ec6e4c59c8de2ba2d8ce46c470ab2f16ed60b157c3ee0656c00969ed2e",
+      "originalBytes": 6229,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/다른_PC_인계안내.md",
+      "archivedSha256": "7cc3984e4e6eb5ee5e424b49fede61b16f700711b53723cc3fbc1a33c184d269",
+      "archivedBytes": 6239
+    },
+    {
+      "source": "outputs/다섯번째_작업묶음_검증기록.json",
+      "originalSha256": "2acd55df489ebaef75372a0b2fcd825c7caf503dacea9b4d6b41ad40ab88f58f",
+      "originalBytes": 10186,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/다섯번째_작업묶음_검증기록.json",
+      "archivedSha256": "cce4fea611f6ecd945bfd84a1aa60b4a90bb19bc017c4489a4af1715f9862eae",
+      "archivedBytes": 9952
+    },
+    {
+      "source": "outputs/다섯번째_작업묶음_완료보고서.md",
+      "originalSha256": "a5757906f179c1dd23eb0aa35558a46f9fa8aea55a8e7f6731bd8d8af534c6a0",
+      "originalBytes": 8881,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/다섯번째_작업묶음_완료보고서.md",
+      "archivedSha256": "a5757906f179c1dd23eb0aa35558a46f9fa8aea55a8e7f6731bd8d8af534c6a0",
+      "archivedBytes": 8881
+    },
+    {
+      "source": "outputs/다섯번째_작업묶음_테스트결과.json",
+      "originalSha256": "534dece583f3cdd4395fb2a0a4fcb8d9514791e23c4c68512b7a447012fa37f0",
+      "originalBytes": 95272,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/다섯번째_작업묶음_테스트결과.json",
+      "archivedSha256": "c7bec994f7c98e9416ab095af881c3c763e825904e40d9bfe40263d9c88e80c6",
+      "archivedBytes": 130204
+    },
+    {
+      "source": "outputs/두번째_작업묶음_검증기록.json",
+      "originalSha256": "f2cb140a2d0b83d462cb0fa083dbb394781bafb42b60d3edfc48a93be362c1e5",
+      "originalBytes": 1523,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/두번째_작업묶음_검증기록.json",
+      "archivedSha256": "f2cb140a2d0b83d462cb0fa083dbb394781bafb42b60d3edfc48a93be362c1e5",
+      "archivedBytes": 1523
+    },
+    {
+      "source": "outputs/두번째_작업묶음_완료보고서.md",
+      "originalSha256": "597dc327858150a55530588610cb3a981672db78d6adc49a04745c3470ce4620",
+      "originalBytes": 5286,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/두번째_작업묶음_완료보고서.md",
+      "archivedSha256": "597dc327858150a55530588610cb3a981672db78d6adc49a04745c3470ce4620",
+      "archivedBytes": 5286
+    },
+    {
+      "source": "outputs/두번째_작업묶음_테스트결과.json",
+      "originalSha256": "deb5bbedba6157e59175caadc639db4008e5041ae5852af08ae8075826cc302a",
+      "originalBytes": 55424,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/두번째_작업묶음_테스트결과.json",
+      "archivedSha256": "7661cca99e591d3a1c82d6a7578dd7ed07c5beb50d7cc28a74041b5168c87104",
+      "archivedBytes": 76568
+    },
+    {
+      "source": "outputs/라온제나_재개_점검보고서.md",
+      "originalSha256": "5cf420b61c85a671ae26f0a4ee8c4b65a5cbc3700eefd0c3ed942b4afd0c14c5",
+      "originalBytes": 14555,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/라온제나_재개_점검보고서.md",
+      "archivedSha256": "46f81a57d3dce0f5328ec82bc136619fccc68cd74a5a1812f43252fb3234e081",
+      "archivedBytes": 14480
+    },
+    {
+      "source": "outputs/세번째_작업묶음_검증기록.json",
+      "originalSha256": "46001593ea11aaa2706bf0114a08632a3f19252d87aae0cbebf0aa443af01dce",
+      "originalBytes": 3278,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/세번째_작업묶음_검증기록.json",
+      "archivedSha256": "46001593ea11aaa2706bf0114a08632a3f19252d87aae0cbebf0aa443af01dce",
+      "archivedBytes": 3278
+    },
+    {
+      "source": "outputs/세번째_작업묶음_완료보고서.md",
+      "originalSha256": "37325890fd2cdc379255a4d710affdb0305d8c4d3a362c95308a0cfb983f1280",
+      "originalBytes": 5162,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/세번째_작업묶음_완료보고서.md",
+      "archivedSha256": "d0819a15ba2837ca0007e77fad6ea6ebe1a608bbb10ce2ed9e8674125f3183f1",
+      "archivedBytes": 5246
+    },
+    {
+      "source": "outputs/세번째_작업묶음_테스트결과.json",
+      "originalSha256": "d5e6b07ee6fbe6e51f3a2d5edd325d16ce9f66088baa0751b1c6e9414d920220",
+      "originalBytes": 61720,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/세번째_작업묶음_테스트결과.json",
+      "archivedSha256": "ba6a75a56c1678074b86d61a7f9c361b9ce8368e13ac66aaa59b980b1d35da97",
+      "archivedBytes": 84994
+    },
+    {
+      "source": "outputs/수로구출_모바일390.png",
+      "originalSha256": "e1829e4f27778d9bb985124d13f4bf3dced94c21727d30927a95f232a5e445ee",
+      "originalBytes": 45191,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/수로구출_모바일390.png",
+      "archivedSha256": "e1829e4f27778d9bb985124d13f4bf3dced94c21727d30927a95f232a5e445ee",
+      "archivedBytes": 45191
+    },
+    {
+      "source": "outputs/수로귀환_모바일390.png",
+      "originalSha256": "3105851e5de2b3b979928ca7499266cb7ef487052c79f4a60b660ebf27e37e49",
+      "originalBytes": 41376,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/수로귀환_모바일390.png",
+      "archivedSha256": "3105851e5de2b3b979928ca7499266cb7ef487052c79f4a60b660ebf27e37e49",
+      "archivedBytes": 41376
+    },
+    {
+      "source": "outputs/아홉번째_시작안내.md",
+      "originalSha256": "9b0119db8edcec9677a0bf69da3fdf5736d89788cc16b0a32b39dec31cc0b49a",
+      "originalBytes": 1970,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_시작안내.md",
+      "archivedSha256": "ee66de9b6bfba557899763e76fa98a24d5dfee410072c3e7e315f26bf1818d58",
+      "archivedBytes": 1893
+    },
+    {
+      "source": "outputs/아홉번째_작업묶음_진행보고서.md",
+      "originalSha256": "a7c3e075fb86d0f962835a5e039a1571cbee00a92e6e318b3ac0fd584a8f9d0e",
+      "originalBytes": 5158,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_작업묶음_진행보고서.md",
+      "archivedSha256": "a575773cb518cbb8fc2a6c272e63c12b4310f19e3442bfb85a27d9f2efae61af",
+      "archivedBytes": 5081
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-csharp-syntax.json",
+      "originalSha256": "d2516092123df69fd7ae387f8cc3d12fe5f15036890d7b4419e6ddcde763f016",
+      "originalBytes": 4009,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-csharp-syntax.json",
+      "archivedSha256": "1a55751a91848fc72138bf97c4226612be0d4040cb327ec445be1adc6425b0d8",
+      "archivedBytes": 2911
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-independent-review.md",
+      "originalSha256": "519d496f47e1fc5966f3fea3e4e06dd3a60f35a11ea1530e468118fc69d82869",
+      "originalBytes": 5584,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-independent-review.md",
+      "archivedSha256": "519d496f47e1fc5966f3fea3e4e06dd3a60f35a11ea1530e468118fc69d82869",
+      "archivedBytes": 5584
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-movement-implementation.md",
+      "originalSha256": "4c9e8ba8a1acec7ce691ef61319105403852a9461a40e32c9efba3054187c153",
+      "originalBytes": 4149,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-movement-implementation.md",
+      "archivedSha256": "4c9e8ba8a1acec7ce691ef61319105403852a9461a40e32c9efba3054187c153",
+      "archivedBytes": 4149
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-raon-asset-audit.json",
+      "originalSha256": "0f6e3f6aaa9d7c545834878126b57ee73a3bf5f020dcd240aec6e3269559dcd5",
+      "originalBytes": 233889,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-raon-asset-audit.json",
+      "archivedSha256": "bf4eaa2b9181c55a3b5a3677b3d3b921c8ffc849dd9595a6fe0c7fb28e2f82ef",
+      "archivedBytes": 233658
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-raon-asset-audit.md",
+      "originalSha256": "735e80187ab8e24da104ee6f6295bc21790bd4ebbc3bf615505ff921b4cd3567",
+      "originalBytes": 7692,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-raon-asset-audit.md",
+      "archivedSha256": "735e80187ab8e24da104ee6f6295bc21790bd4ebbc3bf615505ff921b4cd3567",
+      "archivedBytes": 7692
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-runtime-audit.md",
+      "originalSha256": "77b6cf503f6884924157744730cbfa530459f6a4a15c1248003656822e3753ad",
+      "originalBytes": 6680,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-runtime-audit.md",
+      "archivedSha256": "7c309fed27219b91c2c48a97ba74f4b3d8a5d079a95ea6bd6bca202dbeeff2cf",
+      "archivedBytes": 6616
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-static-audit.json",
+      "originalSha256": "f5245fa211fa139429cc5ce7d2ff45a440cbd75bf4633315d1a0396aad686e06",
+      "originalBytes": 15862,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-static-audit.json",
+      "archivedSha256": "4485f38af8501c9511eab3af136699ada2ece9398436fd3199b6ea76a01523de",
+      "archivedBytes": 15777
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-static-audit.md",
+      "originalSha256": "7546dbeaa8b7a9318524af94ddd00a2d06adc209bbea88708d2c915c7492b7ed",
+      "originalBytes": 4141,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-static-audit.md",
+      "archivedSha256": "5fe7734c3c058a71669a2c16c9e84c99880af6fba9706833d3b8c9ac1607daf6",
+      "archivedBytes": 4139
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/ninth-unity-probe.json",
+      "originalSha256": "f4dbe8051388572a9ea281623e998ed0afc25f2b217bb7090b4520201ad2ca4a",
+      "originalBytes": 4313,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/ninth-unity-probe.json",
+      "archivedSha256": "3b47280d2dca24cb842611947cec5f2a8602a12658b45ce738a1db9b5071609d",
+      "archivedBytes": 3972
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/raon-unity-runtime-conversion.json",
+      "originalSha256": "8b05c7cf2af88a84f63e2d7f61d07fb7d6aef13df390ae9e8435ee9467502093",
+      "originalBytes": 183866,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "artifacts/3d/unity/raon-unity-runtime-conversion.json",
+      "archivedSha256": "8b05c7cf2af88a84f63e2d7f61d07fb7d6aef13df390ae9e8435ee9467502093",
+      "archivedBytes": 183866
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/syntax-checker-source/CheckSyntax.csproj",
+      "originalSha256": "9c7f5c9459569133753097202ecbbaa98e8ec98b8fb0ba3a1e234a6e1706c084",
+      "originalBytes": 529,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/syntax-checker-source/CheckSyntax.csproj",
+      "archivedSha256": "9c7f5c9459569133753097202ecbbaa98e8ec98b8fb0ba3a1e234a6e1706c084",
+      "archivedBytes": 529
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/syntax-checker-source/Program.cs",
+      "originalSha256": "8c0968eed43af4bf4e7ea3a60f928530bed0230766976a15c6074c2cc592591c",
+      "originalBytes": 1646,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/syntax-checker-source/Program.cs",
+      "archivedSha256": "8c0968eed43af4bf4e7ea3a60f928530bed0230766976a15c6074c2cc592591c",
+      "archivedBytes": 1646
+    },
+    {
+      "source": "outputs/아홉번째_점검근거/검증요약.json",
+      "originalSha256": "b76d1c6078ab551ebf8f7f557dd3b5661dd14122d7e839e2501ed3e28ac9c8b3",
+      "originalBytes": 2522,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/아홉번째_점검근거/검증요약.json",
+      "archivedSha256": "b76d1c6078ab551ebf8f7f557dd3b5661dd14122d7e839e2501ed3e28ac9c8b3",
+      "archivedBytes": 2522
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/before-native-record.json",
+      "originalSha256": "622190498352f2785d25686de9e169fbfbf05846a80b191d5af40e46275c4924",
+      "originalBytes": 14215,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/before-native-record.json",
+      "archivedSha256": "a42d75d796dcc07638d6e27a6b394d936d606316758256d445c1a2528f948471",
+      "archivedBytes": 13780
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/before-native-report.md",
+      "originalSha256": "73c65cdd22171146b3b8e3fb04a1c53271dcb44c5064a4f0d974329fec37d416",
+      "originalBytes": 7775,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/before-native-report.md",
+      "archivedSha256": "7bc7115fee7d68e8f102ed6e7e383bea3af987dadb3d0303c255c8d4834c47b0",
+      "archivedBytes": 8012
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/CAMPAIGN_BATTLE_RESUME.md",
+      "originalSha256": "1007ef3f463ea4bdfc498fd97be371dfa245b970194a149bbe4b96ee38696b66",
+      "originalBytes": 5064,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "docs/CAMPAIGN_BATTLE_RESUME.md",
+      "archivedSha256": "1007ef3f463ea4bdfc498fd97be371dfa245b970194a149bbe4b96ee38696b66",
+      "archivedBytes": 5064
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/CAPTAIN_TRIALS_PLAYABLE.md",
+      "originalSha256": "2b665c9182639434a837406cd55ca05f67de58aa0ca07dc2e86a772e10654e74",
+      "originalBytes": 9132,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "docs/CAPTAIN_TRIALS_PLAYABLE.md",
+      "archivedSha256": "2b665c9182639434a837406cd55ca05f67de58aa0ca07dc2e86a772e10654e74",
+      "archivedBytes": 9132
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/eighth-batch-before-native-fixes-build-verification.json",
+      "originalSha256": "2afeca7854e14b20c62a4619c4eaf85f174a864ffccc1542675ffb5d4b93849b",
+      "originalBytes": 727,
+      "action": "same-content-deduplicated",
+      "repositoryPath": "docs/reports/2026-09-handoff/eighth-batch-build-verification.json",
+      "archivedSha256": "2afeca7854e14b20c62a4619c4eaf85f174a864ffccc1542675ffb5d4b93849b",
+      "archivedBytes": 727
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/eighth-batch-build-verification.json",
+      "originalSha256": "1b4983e6b5b8a8278d427cf755f27539f4c1b031f352343ec0815deb6d8ff019",
+      "originalBytes": 727,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/eighth-batch-build-verification.json",
+      "archivedSha256": "1b4983e6b5b8a8278d427cf755f27539f4c1b031f352343ec0815deb6d8ff019",
+      "archivedBytes": 727
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/FIELD_EXAM_PLAYABLE.md",
+      "originalSha256": "8a29140a8cd499eb6d3c64e8875716ce5032e5ecdea15fcff0617bdb04570501",
+      "originalBytes": 7434,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "docs/FIELD_EXAM_PLAYABLE.md",
+      "archivedSha256": "8a29140a8cd499eb6d3c64e8875716ce5032e5ecdea15fcff0617bdb04570501",
+      "archivedBytes": 7434
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/manifest.json",
+      "originalSha256": "035e61587eb38e519410a6298605d34a2a68ee7825283217cc22257422b24d90",
+      "originalBytes": 34685,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/manifest.json",
+      "archivedSha256": "035e61587eb38e519410a6298605d34a2a68ee7825283217cc22257422b24d90",
+      "archivedBytes": 34685
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-academy.mjs",
+      "originalSha256": "459b77f09d10e96a2474c1631cd48d08858387aff969994a673cb1e138f5fe3f",
+      "originalBytes": 2566,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-academy.mjs",
+      "archivedSha256": "459b77f09d10e96a2474c1631cd48d08858387aff969994a673cb1e138f5fe3f",
+      "archivedBytes": 2566
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-captain-trials-compassion-complete.png",
+      "originalSha256": "a955d2ecc011c246a6e9f9a701a1848699f7e249e369becc9940f2c36bdc5267",
+      "originalBytes": 383999,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-captain-trials-compassion-complete.png",
+      "archivedSha256": "a955d2ecc011c246a6e9f9a701a1848699f7e249e369becc9940f2c36bdc5267",
+      "archivedBytes": 383999
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-captain-trials-resolve-complete.png",
+      "originalSha256": "3d688a86b4cc547f0020b24fd4a22f867a8107e21efb48e4607b6436b6bdd50f",
+      "originalBytes": 381164,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-captain-trials-resolve-complete.png",
+      "archivedSha256": "3d688a86b4cc547f0020b24fd4a22f867a8107e21efb48e4607b6436b6bdd50f",
+      "archivedBytes": 381164
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-field-exam-compassion-complete.png",
+      "originalSha256": "71ad42c98369c75a7db3368292017c72b1ede7ac95e8b11a53a4d929a0b8caaa",
+      "originalBytes": 236527,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-field-exam-compassion-complete.png",
+      "archivedSha256": "71ad42c98369c75a7db3368292017c72b1ede7ac95e8b11a53a4d929a0b8caaa",
+      "archivedBytes": 236527
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-field-exam-resolve-complete.png",
+      "originalSha256": "4b28fc0da6dbb0086a236f182b10eeabf616b45c7b2be65239422062e4d092b5",
+      "originalBytes": 248752,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-field-exam-resolve-complete.png",
+      "archivedSha256": "4b28fc0da6dbb0086a236f182b10eeabf616b45c7b2be65239422062e4d092b5",
+      "archivedBytes": 248752
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-forms-result.json",
+      "originalSha256": "d013d008d855e61ee8e4bed2ab673db268e8a7847375a2269560bb54bce45c1d",
+      "originalBytes": 220736,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-forms-result.json",
+      "archivedSha256": "e6b897ef9c55166a83ce1eeebe4c62b47f412eb2e30f844457b38280452a90ae",
+      "archivedBytes": 220425
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-forms.mjs",
+      "originalSha256": "39d0ebda90cc611572ca2dc78eb7b5b3df7f04e628be97b0b15d236ec1a8e5fe",
+      "originalBytes": 6271,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-forms.mjs",
+      "archivedSha256": "81b7a16c81c71f9c734b757dda002e86cd75f6a95f7b1709cc980568e7949ec1",
+      "archivedBytes": 6275
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-kazrin-duel-compassion-complete.png",
+      "originalSha256": "61a783c9fbe7e97cf36c433c7d692dfd5ef23e95f9e66ebb8b5002814e563455",
+      "originalBytes": 390836,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-kazrin-duel-compassion-complete.png",
+      "archivedSha256": "61a783c9fbe7e97cf36c433c7d692dfd5ef23e95f9e66ebb8b5002814e563455",
+      "archivedBytes": 390836
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-kazrin-duel-resolve-complete.png",
+      "originalSha256": "68217860092e91449dd59b3c14bffb7ff5c107a448280c097956d957e343f630",
+      "originalBytes": 391629,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-kazrin-duel-resolve-complete.png",
+      "archivedSha256": "68217860092e91449dd59b3c14bffb7ff5c107a448280c097956d957e343f630",
+      "archivedBytes": 391629
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-notes.md",
+      "originalSha256": "c5e743480e015a9ce05221f9d09ca1301e6c03389344f3971c10524c55b744dd",
+      "originalBytes": 3034,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-notes.md",
+      "archivedSha256": "c5e743480e015a9ce05221f9d09ca1301e6c03389344f3971c10524c55b744dd",
+      "archivedBytes": 3034
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-compassion-error.png",
+      "originalSha256": "40c84f154346db0a45a5274ad52bfaf9d18e51e2e0c18b776be8968f49ddf6a6",
+      "originalBytes": 254967,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-compassion-error.png",
+      "archivedSha256": "40c84f154346db0a45a5274ad52bfaf9d18e51e2e0c18b776be8968f49ddf6a6",
+      "archivedBytes": 254967
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-compassion-failed.png",
+      "originalSha256": "bf6f21b32cafd9e5b16aa1fcc91f8bdd19da7fb858e9a6570ade539e72db6ede",
+      "originalBytes": 191335,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-compassion-failed.png",
+      "archivedSha256": "bf6f21b32cafd9e5b16aa1fcc91f8bdd19da7fb858e9a6570ade539e72db6ede",
+      "archivedBytes": 191335
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-compassion-return-storage.json",
+      "originalSha256": "eb13b877e63204944b572b955bf6e6ba49b46d442fcb4ef2a2d8a745eafd0005",
+      "originalBytes": 18088,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-compassion-return-storage.json",
+      "archivedSha256": "cce6f4afaccef1402ea88eec2fe87070154b6b59973ea41bcdecd01820a577b0",
+      "archivedBytes": 18089
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-compassion-return.png",
+      "originalSha256": "d29dbea2825b1a104f704428c65aa97dcd9861aaf74e85296a3c437961030c88",
+      "originalBytes": 58060,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-compassion-return.png",
+      "archivedSha256": "d29dbea2825b1a104f704428c65aa97dcd9861aaf74e85296a3c437961030c88",
+      "archivedBytes": 58060
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-previous-1789439545668.json",
+      "originalSha256": "07709bab012fc592d6a9ed03beb62fef56bf5537f7600b9620cd6a746ce4168c",
+      "originalBytes": 1627,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-previous-1789439545668.json",
+      "archivedSha256": "09106ca02477a3a7ee3a7280acae1be4b20f914663fb01b5392a1a0abe1f56b9",
+      "archivedBytes": 1448
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-previous-1789439642257.json",
+      "originalSha256": "f30e75ffc5f1129fb7191c03ea45e796615c92ceb5d402029302e9e447502f64",
+      "originalBytes": 6752,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-previous-1789439642257.json",
+      "archivedSha256": "0cbc7c4ce1bb3b663d5c0cb7b9500b8302b2675247469d2d540ea0711ee6cc2b",
+      "archivedBytes": 6483
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-resolve-error.png",
+      "originalSha256": "1e3cf8834d7a4ff8ed161f30672cb24f7d72c760502c8e602ea85193bb908726",
+      "originalBytes": 254399,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-resolve-error.png",
+      "archivedSha256": "1e3cf8834d7a4ff8ed161f30672cb24f7d72c760502c8e602ea85193bb908726",
+      "archivedBytes": 254399
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-resolve-failed.png",
+      "originalSha256": "cd16578911869c1e6d7d8b302c64e674fe0c263d051441368e4db3e37877f628",
+      "originalBytes": 191516,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-resolve-failed.png",
+      "archivedSha256": "cd16578911869c1e6d7d8b302c64e674fe0c263d051441368e4db3e37877f628",
+      "archivedBytes": 191516
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-resolve-return-storage.json",
+      "originalSha256": "d980b869a0180732ff9bafbefb8d47fe0bdfc5171cd8e664e5840ea53c948c6a",
+      "originalBytes": 17895,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-resolve-return-storage.json",
+      "archivedSha256": "d4b61b07568942a7a651c961087348b90cd925df3ad2a1222a7ad22acd0ebbb5",
+      "archivedBytes": 17896
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-resolve-return.png",
+      "originalSha256": "51c23f7c103f80b4e41ecdcdd958c5627450de105c5883e3ec28774bfc03d6b5",
+      "originalBytes": 127115,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-resolve-return.png",
+      "archivedSha256": "51c23f7c103f80b4e41ecdcdd958c5627450de105c5883e3ec28774bfc03d6b5",
+      "archivedBytes": 127115
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river-result.json",
+      "originalSha256": "227b4c6cff5b0a3a3ae6ed86212c9bc4e0c482fd947b7ba4678e5617424640be",
+      "originalBytes": 62078,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river-result.json",
+      "archivedSha256": "e3aacc37bb5211b59f21db6e29c9e1c786c53f4d1697e59176311ed31cc6d313",
+      "archivedBytes": 61923
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-river.cjs",
+      "originalSha256": "48faa1440b1cc9ba5a8669c2130c5c47505c074b362dfe178ac57dfe6b5b3680",
+      "originalBytes": 8828,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-river.cjs",
+      "archivedSha256": "e35cbc6b004ec65dec69154df3585b7b72c6ef42ee01cf3bcb0ab241b1f61b6a",
+      "archivedBytes": 8793
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-sixteen-petals-compassion-complete.png",
+      "originalSha256": "8b9b35f46d330c238f9a9fdd67d1b4db8576ccab1c469cd6797b3e593e4952f7",
+      "originalBytes": 291507,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-sixteen-petals-compassion-complete.png",
+      "archivedSha256": "8b9b35f46d330c238f9a9fdd67d1b4db8576ccab1c469cd6797b3e593e4952f7",
+      "archivedBytes": 291507
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-alternatives-sixteen-petals-resolve-complete.png",
+      "originalSha256": "aba6159b5ff31666535c1f07e0e455a7998d927d8d6d31742ad7272928b5bfcc",
+      "originalBytes": 290941,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-alternatives-sixteen-petals-resolve-complete.png",
+      "archivedSha256": "aba6159b5ff31666535c1f07e0e455a7998d927d8d6d31742ad7272928b5bfcc",
+      "archivedBytes": 290941
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-aptitude-exam-before-choice-profile.json",
+      "originalSha256": "b5fa284b1a7a29edcac429628f7d70e259c10f069125b642bc83494aaa283bfa",
+      "originalBytes": 8303,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-aptitude-exam-before-choice-profile.json",
+      "archivedSha256": "1af89a9cb20e78da2605419ecbc780d4fc73e167e14a2d9ba5868a8bfeab008f",
+      "archivedBytes": 8304
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-aptitude-exam-before-choice-storage.json",
+      "originalSha256": "10da58fb2224a37f974866a655d2b1edf9c01b16d37cbe136cdf1289ad4b3fc3",
+      "originalBytes": 22199,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-aptitude-exam-before-choice-storage.json",
+      "archivedSha256": "dab56fc5d66ac277422136d661d05c7e6791a7b16694097af79ab92c63c32e3a",
+      "archivedBytes": 22200
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-defeat-profile.json",
+      "originalSha256": "1602b1c3a181aa0fc71b1d15de74fafa5aa81a340bb709f0c3efef3a900e97df",
+      "originalBytes": 30940,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-defeat-profile.json",
+      "archivedSha256": "2bb24775fe02d6082dc84c715f03147c3cbbe379d60e84d569f75e67fe8cc9aa",
+      "archivedBytes": 30941
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-defeat.png",
+      "originalSha256": "41bc3a848a81c7f7c60668b8ded3528570b0fed06e7d641a9d2d53b61ad103e8",
+      "originalBytes": 52096,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-defeat.png",
+      "archivedSha256": "41bc3a848a81c7f7c60668b8ded3528570b0fed06e7d641a9d2d53b61ad103e8",
+      "archivedBytes": 52096
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-failure-profile.json",
+      "originalSha256": "4f83661e0f8fcea99b4aa98fb635df35b22a62d3865a5db0944bef6f658c06d9",
+      "originalBytes": 26478,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-failure-profile.json",
+      "archivedSha256": "9dab55a241aa2edbbb478fd713d2d60093b21f6b110345d60ec72262361d4e8c",
+      "archivedBytes": 26479
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-failure.png",
+      "originalSha256": "55a1c4ba5f1432777c3e578fd714b3eb80146093c477094049ffb07c173c9a41",
+      "originalBytes": 218814,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-failure.png",
+      "archivedSha256": "55a1c4ba5f1432777c3e578fd714b3eb80146093c477094049ffb07c173c9a41",
+      "archivedBytes": 218814
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-guide.png",
+      "originalSha256": "59334dc3983995e931e2ab9c6e66bd488c15955fa401ad8bf34ce4d0f6ecdd8c",
+      "originalBytes": 105418,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-guide.png",
+      "archivedSha256": "59334dc3983995e931e2ab9c6e66bd488c15955fa401ad8bf34ce4d0f6ecdd8c",
+      "archivedBytes": 105418
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-mobile-companion.png",
+      "originalSha256": "58a4e4eef67176b9aa6884419728639a626cbefdc2afd0114f983e020b25f8c2",
+      "originalBytes": 170609,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-mobile-companion.png",
+      "archivedSha256": "58a4e4eef67176b9aa6884419728639a626cbefdc2afd0114f983e020b25f8c2",
+      "archivedBytes": 170609
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-paused-profile.json",
+      "originalSha256": "4270e7cce451cb48c502bbf4035a3d7b31385ae01a2ab711cf55155b554f9e1e",
+      "originalBytes": 31036,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-paused-profile.json",
+      "archivedSha256": "99a9d382d912fb47af78d0a73fab44616ecc5485c761a243efca28079eac4c5a",
+      "archivedBytes": 31037
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-paused.png",
+      "originalSha256": "02f77b9e9b95c68c9ea6efdf6fe450511cf0170156190207aba388134297110e",
+      "originalBytes": 104732,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-paused.png",
+      "archivedSha256": "02f77b9e9b95c68c9ea6efdf6fe450511cf0170156190207aba388134297110e",
+      "archivedBytes": 104732
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-results.json",
+      "originalSha256": "0f2aefa2db5867407690be7e950b806af3a19195c8e7301ee8e5a649cf8c84cc",
+      "originalBytes": 5648,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-results.json",
+      "archivedSha256": "089a36f4d58366465ee5e96a6e1189041e92b6ff386b6ed7b290b221df4c9e3e",
+      "archivedBytes": 5649
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action-to-tactical-profile.json",
+      "originalSha256": "7e4a390f451b7a3e32f876394815d7c22e8271a97d3c49ab9c165afec56cc46a",
+      "originalBytes": 26600,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action-to-tactical-profile.json",
+      "archivedSha256": "66f2bb526e862dc37ac1caa0b7cb881d5e9165efac7aabea2e82ce7577540241",
+      "archivedBytes": 26601
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-action.mjs",
+      "originalSha256": "b5fcf7f2d02970fd5e3bf579a01c6dda3910838a462e97fc18d22b1f86d36624",
+      "originalBytes": 9727,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-action.mjs",
+      "archivedSha256": "792714846f66135ec458afc8b8b2889a67e488f621632ce9bd5123548a216a69",
+      "archivedBytes": 9731
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-before-resume-profile.json",
+      "originalSha256": "d22e4cec6a9f23041e81546a8a28f6d183bd54fa477d77902a6668d19a571b4b",
+      "originalBytes": 33948,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-before-resume-profile.json",
+      "archivedSha256": "44196021053f52460db58f1004ebd30eb1b2f2d645da3096610a3ba9b324b178",
+      "archivedBytes": 33949
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-canvas-center-miss.png",
+      "originalSha256": "09cd7337190e22c3c875d3a9dca30c7152c63eaa9f92ebba9182589b58a503ae",
+      "originalBytes": 679412,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-canvas-center-miss.png",
+      "archivedSha256": "09cd7337190e22c3c875d3a9dca30c7152c63eaa9f92ebba9182589b58a503ae",
+      "archivedBytes": 679412
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-before-resume-profile.json",
+      "originalSha256": "bdb0025370423f58a1eb14574ae25ca88c54622144843628f9819a547e94374f",
+      "originalBytes": 30664,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-before-resume-profile.json",
+      "archivedSha256": "d5ad3ebf3e1123f718319fed5d9706aa5be2e451d82e322968468f9000d2fc54",
+      "archivedBytes": 30665
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-replay-victory-profile.json",
+      "originalSha256": "ba52d64472d1c59848d3fb048179d747b17c82a148e90d1553f0141355160173",
+      "originalBytes": 43351,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-replay-victory-profile.json",
+      "archivedSha256": "b920304aaaaa62b1f19d1dd03f7f41cd64b6fde87c48f8678c98152cc15d8c27",
+      "archivedBytes": 43352
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-replay-victory.png",
+      "originalSha256": "a13b75cef10e0803925b7cc4c9ac828c912fac088118f39c17d858b81f847a6b",
+      "originalBytes": 249430,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-replay-victory.png",
+      "archivedSha256": "a13b75cef10e0803925b7cc4c9ac828c912fac088118f39c17d858b81f847a6b",
+      "archivedBytes": 249430
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-start-profile.json",
+      "originalSha256": "b483a44c08175c34baa9a27d548397c799c3af70f728553d1bb804f627532a4a",
+      "originalBytes": 24218,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-start-profile.json",
+      "archivedSha256": "735866af6c6355f8cfc61497b1fcf86eb5e65b18ac9dd9e282913e52e8de603f",
+      "archivedBytes": 24219
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-start.png",
+      "originalSha256": "c614bcb62b85e8568f7c871a60075dee70f3640fee12eb70603727c796e203ee",
+      "originalBytes": 680050,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-start.png",
+      "archivedSha256": "c614bcb62b85e8568f7c871a60075dee70f3640fee12eb70603727c796e203ee",
+      "archivedBytes": 680050
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-suspended-profile.json",
+      "originalSha256": "bdb0025370423f58a1eb14574ae25ca88c54622144843628f9819a547e94374f",
+      "originalBytes": 30664,
+      "action": "same-content-deduplicated",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-before-resume-profile.json",
+      "archivedSha256": "d5ad3ebf3e1123f718319fed5d9706aa5be2e451d82e322968468f9000d2fc54",
+      "archivedBytes": 30665
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-tactical-results.json",
+      "originalSha256": "939ba9fa428142cda0bc7b1bcdf95df00b21ff9105dca2f43f9698d66107e564",
+      "originalBytes": 12040,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-tactical-results.json",
+      "archivedSha256": "1d4e25c08154eb866307427a6334ec79292e50ab716a5536be5f4d3e6d094b43",
+      "archivedBytes": 12041
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-victory-profile.json",
+      "originalSha256": "9ab4d0c46d9a18e199ba656317e10d4e538d06693d424701205ec3ea7727c9aa",
+      "originalBytes": 43351,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-victory-profile.json",
+      "archivedSha256": "2a938b103de249f720d9551928a599e4e01bad4a633f456d0fe0d283c03de9f5",
+      "archivedBytes": 43352
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-victory-storage.json",
+      "originalSha256": "8e6890834be14d79285a706091a2b905c23b1a0b840130599f1c8863771263c7",
+      "originalBytes": 30760,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-victory-storage.json",
+      "archivedSha256": "df2bf5074cce334bf5ca52cc666300e8e34a0e75e57c462eb207b90e1ae74f4c",
+      "archivedBytes": 30761
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-victory.png",
+      "originalSha256": "a55db529a544a9ff177c482549273cc8a3703b5b243fc6b9a910c30e6585847a",
+      "originalBytes": 249624,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-victory.png",
+      "archivedSha256": "a55db529a544a9ff177c482549273cc8a3703b5b243fc6b9a910c30e6585847a",
+      "archivedBytes": 249624
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-four-witness.png",
+      "originalSha256": "0831abcbf4fb1ba8f4493634d15bdf4cd2b14731c332eb7171cc4959543d2ee1",
+      "originalBytes": 687792,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-four-witness.png",
+      "archivedSha256": "0831abcbf4fb1ba8f4493634d15bdf4cd2b14731c332eb7171cc4959543d2ee1",
+      "archivedBytes": 687792
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-six-start-profile.json",
+      "originalSha256": "ad69a088a68e68b4d9651f005499d77e494362888636e12322bdaff85fb8791b",
+      "originalBytes": 26600,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-six-start-profile.json",
+      "archivedSha256": "269ec7d951414c4f3dfb1747ac81698e251a0ece93dceefd7f136e636bed62a6",
+      "archivedBytes": 26601
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-six-start.png",
+      "originalSha256": "7d16928edb53bce9063230e952c59192cbd4cd98eaf5bf1007bfca8858888ad0",
+      "originalBytes": 676855,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-six-start.png",
+      "archivedSha256": "7d16928edb53bce9063230e952c59192cbd4cd98eaf5bf1007bfca8858888ad0",
+      "archivedBytes": 676855
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-six-victory-profile.json",
+      "originalSha256": "377317bba5d95899a3d44332f4bbe501739d8f92072a2dca82981d4dc410258c",
+      "originalBytes": 47129,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-six-victory-profile.json",
+      "archivedSha256": "e97c17fed5ce39905ed49095aa20bb72985b38d09ba4b9634ac938fca45c9008",
+      "archivedBytes": 47130
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-six-victory-storage.json",
+      "originalSha256": "7672613695c1986957807a3b14376dc2fb6c6b22a50fc8a801e1bb463c5c52e0",
+      "originalBytes": 33016,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-six-victory-storage.json",
+      "archivedSha256": "3e7baad96571a7236747dfcc7327806127f8f0c88d6a7afdda3ea91411b903b9",
+      "archivedBytes": 33017
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-six-victory.png",
+      "originalSha256": "ea26db52821a4791f897f8e911695933a86290aa6829f4c4d0499200e2e931fa",
+      "originalBytes": 253074,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-six-victory.png",
+      "archivedSha256": "ea26db52821a4791f897f8e911695933a86290aa6829f4c4d0499200e2e931fa",
+      "archivedBytes": 253074
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-suspended-profile.json",
+      "originalSha256": "d22e4cec6a9f23041e81546a8a28f6d183bd54fa477d77902a6668d19a571b4b",
+      "originalBytes": 33948,
+      "action": "same-content-deduplicated",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-before-resume-profile.json",
+      "archivedSha256": "44196021053f52460db58f1004ebd30eb1b2f2d645da3096610a3ba9b324b178",
+      "archivedBytes": 33949
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-tactical-failure-profile.json",
+      "originalSha256": "e15895611115401fdb6ad336319bc51426dba1294a705135538701629798be7b",
+      "originalBytes": 30037,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-tactical-failure-profile.json",
+      "archivedSha256": "3040075aa79e4664adf095d1bb8ece9e5a5c5fd6cad762e83f6039da0468f0c2",
+      "archivedBytes": 30038
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-tactical-failure.png",
+      "originalSha256": "c125ffd92be3ee4883af8c536b2fee368c9621ac11d30bba913eafa3f4568c5c",
+      "originalBytes": 681601,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-tactical-failure.png",
+      "archivedSha256": "c125ffd92be3ee4883af8c536b2fee368c9621ac11d30bba913eafa3f4568c5c",
+      "archivedBytes": 681601
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-tactical-results.json",
+      "originalSha256": "154748ccb0967574ff3d9b59738fd936fafda9606022a0868560ced33354d95e",
+      "originalBytes": 7231,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-tactical-results.json",
+      "archivedSha256": "44da2040a32d206d3339c9b0a24db53cf6d4ee8b88158825adab31fae30a5fe1",
+      "archivedBytes": 7232
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-tactical.mjs",
+      "originalSha256": "569089d2bb5b72bfd82ccce7511abda7eb8dbd20fbcf2acb287bc2e009a0df9b",
+      "originalBytes": 13119,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-tactical.mjs",
+      "archivedSha256": "78026f41b05e3aa1eabda86e8b838ba68348690a51eb393a401ed8698c2f2707",
+      "archivedBytes": 13123
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-verification.md",
+      "originalSha256": "7dd122a22b6ee8ea8be515fd26a7aeba8f81098bdacf9a556f302c01f1d1a6ef",
+      "originalBytes": 6045,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-verification.md",
+      "archivedSha256": "7dd122a22b6ee8ea8be515fd26a7aeba8f81098bdacf9a556f302c01f1d1a6ef",
+      "archivedBytes": 6045
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-witness.png",
+      "originalSha256": "a42f7534f89c68c0894133b9f416d92f63cb9a26a363eaff2e2c88491019750f",
+      "originalBytes": 683208,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-witness.png",
+      "archivedSha256": "a42f7534f89c68c0894133b9f416d92f63cb9a26a363eaff2e2c88491019750f",
+      "archivedBytes": 683208
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-zoom-contract.cjs",
+      "originalSha256": "a4d6ece8a8212596d69dd8931f1ad4c80acd8d3e932d7a4235561bd3e718ba56",
+      "originalBytes": 1727,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-zoom-contract.cjs",
+      "archivedSha256": "b5503ee178eee4198f04ffe3b6e087638e32455d14b75d699d16673c0a32241e",
+      "archivedBytes": 1650
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-battle-zoom-contract.json",
+      "originalSha256": "1bf86af378e441d66a6c03daaa479e65ab7b66e254749d6901e7d5a8b9d73319",
+      "originalBytes": 1172,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-battle-zoom-contract.json",
+      "archivedSha256": "f58e91ab0386a9c0f787e1a4d2a8092a9be1aadf28de0d907ac3b2819832b6ed",
+      "archivedBytes": 1043
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-common.mjs",
+      "originalSha256": "700fe4221806e04645ae9871608c54fa3a2b894e6a1d4482a143e6b50184bd3e",
+      "originalBytes": 4017,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-common.mjs",
+      "archivedSha256": "633b8c6f70c0623798e145fa991116b961da5f5a1fa4081a32b6d1a35a0489a6",
+      "archivedBytes": 4021
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-corruption-recovery-320.png",
+      "originalSha256": "c9fd5e323688a24892f6258f3d3f99a4d202beaf2d65de029b2a897004fd5f43",
+      "originalBytes": 71685,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-corruption-recovery-320.png",
+      "archivedSha256": "c9fd5e323688a24892f6258f3d3f99a4d202beaf2d65de029b2a897004fd5f43",
+      "archivedBytes": 71685
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-corruption.json",
+      "originalSha256": "79cdb94fbed75c5ad3b83b60e18729b9e65c5e39fe7e12ce3016e32a89315402",
+      "originalBytes": 18397,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-corruption.json",
+      "archivedSha256": "a4e179cb4168e4c4b9d7db6f64e823b5baa7149e554f1da6fe70585a9010fdd7",
+      "archivedBytes": 18353
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-corruption.mjs",
+      "originalSha256": "f191e356e5eec60c4abdd171649d2e8c12b705e2aaf5dece73ecd2b4f66ac182",
+      "originalBytes": 3188,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-corruption.mjs",
+      "archivedSha256": "f191e356e5eec60c4abdd171649d2e8c12b705e2aaf5dece73ecd2b4f66ac182",
+      "archivedBytes": 3188
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-dialogue-dialogue-320.png",
+      "originalSha256": "4ebb1e68f0fc98d68e933f5307fc42b2244be14c7f313afcaf12190fbece743e",
+      "originalBytes": 146465,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-dialogue-dialogue-320.png",
+      "archivedSha256": "4ebb1e68f0fc98d68e933f5307fc42b2244be14c7f313afcaf12190fbece743e",
+      "archivedBytes": 146465
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-dialogue-title-320.png",
+      "originalSha256": "321df3555409594bf032c1b3314410089a89c87b62b01d18ba7fb46cde869ef5",
+      "originalBytes": 273143,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-dialogue-title-320.png",
+      "archivedSha256": "321df3555409594bf032c1b3314410089a89c87b62b01d18ba7fb46cde869ef5",
+      "archivedBytes": 273143
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-dialogue.json",
+      "originalSha256": "4fdb6d3f775972849dc63927251714ad436ee55fa27816cf054a71eb99e81641",
+      "originalBytes": 13392,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-dialogue.json",
+      "archivedSha256": "6810b0ffa0790a86ef52fc4b1fad561fbe5f0e9fb36b8e9edd1e2542ea61779d",
+      "archivedBytes": 13258
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-dialogue.mjs",
+      "originalSha256": "58ef92d74a54cbc2056ca9dc74602338d2f1569a2af761b21b1f305566922f81",
+      "originalBytes": 2583,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-dialogue.mjs",
+      "archivedSha256": "58ef92d74a54cbc2056ca9dc74602338d2f1569a2af761b21b1f305566922f81",
+      "archivedBytes": 2583
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-field-complete-320.png",
+      "originalSha256": "dc282a4b490ab58fc765b9d7c64c876e6ec79f8be949ef5ae6401389a40f4904",
+      "originalBytes": 239061,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-field-complete-320.png",
+      "archivedSha256": "dc282a4b490ab58fc765b9d7c64c876e6ec79f8be949ef5ae6401389a40f4904",
+      "archivedBytes": 239061
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-field-form-320.png",
+      "originalSha256": "41f292407f6a2aea123f86b4e4f2e3716216d9f28323144d912ac2fc56652c6c",
+      "originalBytes": 256281,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-field-form-320.png",
+      "archivedSha256": "41f292407f6a2aea123f86b4e4f2e3716216d9f28323144d912ac2fc56652c6c",
+      "archivedBytes": 256281
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-field.json",
+      "originalSha256": "b97cb1b2bbb371e0b3a99561d0493378cd5f5aa3e91074bf1c9313b1693b362e",
+      "originalBytes": 46062,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-field.json",
+      "archivedSha256": "b9e4a424122d21db5500e92fb128b1c586bd2d1048c4fb1f22e36a46288db6a3",
+      "archivedBytes": 45973
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-field.mjs",
+      "originalSha256": "585167e5310913a92ff8f5a5a7041395e4485c976eb88c925daa533452550466",
+      "originalBytes": 4706,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-field.mjs",
+      "archivedSha256": "585167e5310913a92ff8f5a5a7041395e4485c976eb88c925daa533452550466",
+      "archivedBytes": 4706
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-finalize.mjs",
+      "originalSha256": "c333d99f44c7cfe516c9f6f0ad61eede82c81068d85471de7e7157b75e6f0e6b",
+      "originalBytes": 12934,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-finalize.mjs",
+      "archivedSha256": "c333d99f44c7cfe516c9f6f0ad61eede82c81068d85471de7e7157b75e6f0e6b",
+      "archivedBytes": 12934
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-captain-next-command-320.png",
+      "originalSha256": "f40ad4fadd80684894a9e142a41ad30b05ea2474b1dd0b6bdf3e4f1dba0d96ab",
+      "originalBytes": 431775,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-captain-next-command-320.png",
+      "archivedSha256": "f40ad4fadd80684894a9e142a41ad30b05ea2474b1dd0b6bdf3e4f1dba0d96ab",
+      "archivedBytes": 431775
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-captain.json",
+      "originalSha256": "7e4a69b990a402b47ed9e34bc48015158725ad14ecf75355a55940c0ad703724",
+      "originalBytes": 27896,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-captain.json",
+      "archivedSha256": "4ede51df6c6997b799af11b0b0a52ee76716505e04237872a5d161238429ca23",
+      "archivedBytes": 27852
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-field-next-command-320.png",
+      "originalSha256": "502e04343b1a11980cfac19f72567fe84d83d15bca600916c0af4099c18b7eb9",
+      "originalBytes": 242632,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-field-next-command-320.png",
+      "archivedSha256": "502e04343b1a11980cfac19f72567fe84d83d15bca600916c0af4099c18b7eb9",
+      "archivedBytes": 242632
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-field.json",
+      "originalSha256": "28c191607ff74c5def2c1354bba00a45aabced52abb317942e79f9f0f1fee85f",
+      "originalBytes": 18459,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-field.json",
+      "archivedSha256": "fdba86608598e70a0b63f1d0eff9f5a5c3578315c8ed99bb1490e7ec79eee73a",
+      "archivedBytes": 18415
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-petal-next-command-320.png",
+      "originalSha256": "7662c74f3dd1705e75e2e9f8dba15e8fb00ea53cf1084ccc86a0e13c50457834",
+      "originalBytes": 274640,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-petal-next-command-320.png",
+      "archivedSha256": "7662c74f3dd1705e75e2e9f8dba15e8fb00ea53cf1084ccc86a0e13c50457834",
+      "archivedBytes": 274640
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-petal.json",
+      "originalSha256": "3d531a172e79b37b07f9a02cdc3064246724e5ff316bdbd00d457d1f2921b192",
+      "originalBytes": 27515,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-petal.json",
+      "archivedSha256": "2db6767b7e86af1ac7c0fbce442a2323c3a6bede859a159d741e48e0cc0566f4",
+      "archivedBytes": 27471
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-focus-recheck.mjs",
+      "originalSha256": "3562f7b10c6eeb125bf31618b386cf843e73cc394d6240917095f1e487fb6548",
+      "originalBytes": 4891,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-focus-recheck.mjs",
+      "archivedSha256": "3562f7b10c6eeb125bf31618b386cf843e73cc394d6240917095f1e487fb6548",
+      "archivedBytes": 4891
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-inspect.mjs",
+      "originalSha256": "5548afb71390922ec3579bb7b73ced826f0cd6f216200ad1daae2943dd6ee3f0",
+      "originalBytes": 866,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-inspect.mjs",
+      "archivedSha256": "5548afb71390922ec3579bb7b73ced826f0cd6f216200ad1daae2943dd6ee3f0",
+      "archivedBytes": 866
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-keyboard.json",
+      "originalSha256": "a3c970a7e6cba42972f01726ede7eaafad006204649c3000b3f72cdd4fc3f089",
+      "originalBytes": 35626,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-keyboard.json",
+      "archivedSha256": "0fdadc38eb3c9a433c4c9d215d5213f9ef2dbfac3a39d06b67b47cc9b557f453",
+      "archivedBytes": 35627
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-keyboard.mjs",
+      "originalSha256": "449dd70b232263d7b07c20c7ef4daafce178971ad8916e552b1c26d2052736d6",
+      "originalBytes": 4172,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-keyboard.mjs",
+      "archivedSha256": "449dd70b232263d7b07c20c7ef4daafce178971ad8916e552b1c26d2052736d6",
+      "archivedBytes": 4172
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-mobile-village-390.png",
+      "originalSha256": "78fe0f27d66b9047e8b4ad444970d5bd3a9b0781f611011c24912daab447d78a",
+      "originalBytes": 188748,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-mobile-village-390.png",
+      "archivedSha256": "78fe0f27d66b9047e8b4ad444970d5bd3a9b0781f611011c24912daab447d78a",
+      "archivedBytes": 188748
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-mobile.json",
+      "originalSha256": "14a5c18d0d60d958a84c4b9087f4c0902c4993bef0647dda2ddf6643f3c169f9",
+      "originalBytes": 11921,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-mobile.json",
+      "archivedSha256": "edf75bcef7fee56f41d663e0bcd186df91f0a13085d0d5edf4e4c86c33add6f7",
+      "archivedBytes": 11832
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-mobile.mjs",
+      "originalSha256": "a0649442f0cc488adf69a1627452487a47bd49e11501dd1c0dfaf57695befd1c",
+      "originalBytes": 4289,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-mobile.mjs",
+      "archivedSha256": "a0649442f0cc488adf69a1627452487a47bd49e11501dd1c0dfaf57695befd1c",
+      "archivedBytes": 4289
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-notes.md",
+      "originalSha256": "f4b6fbc28ce189953a92dcc567a5c2559c027e7c8000e72aeff9bfe329ff8efa",
+      "originalBytes": 7016,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-notes.md",
+      "archivedSha256": "f4b6fbc28ce189953a92dcc567a5c2559c027e7c8000e72aeff9bfe329ff8efa",
+      "archivedBytes": 7016
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-reset.json",
+      "originalSha256": "276da9e505cd93a41787119cae9b45a78db9335b1f972efb7352c78103aa718f",
+      "originalBytes": 21865,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-reset.json",
+      "archivedSha256": "d0b2da2f2f247664fc023823e1fa6d73fd4df7bb8769500ca628e3361537374d",
+      "archivedBytes": 21866
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-reset.mjs",
+      "originalSha256": "66ef36e4c40668f2c39047d3173095b31adcb9763eb91ece05ccfd64426dc8de",
+      "originalBytes": 2091,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-reset.mjs",
+      "archivedSha256": "66ef36e4c40668f2c39047d3173095b31adcb9763eb91ece05ccfd64426dc8de",
+      "archivedBytes": 2091
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-result.json",
+      "originalSha256": "4ea88b2ec548c9e39c5eed6e69f14d4b37123bac86e1a463ddfae2105a5d7dfb",
+      "originalBytes": 19020,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-result.json",
+      "archivedSha256": "b89c08741a3e652c2cd67975281caf011218d903b13fad986a53e71a8cc8a186",
+      "archivedBytes": 17941
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-resume-dialogue-bottom-320.png",
+      "originalSha256": "cd43260a7bb59392346bda4d81de50a1708d72558e5369eee255cd1d9ef24b06",
+      "originalBytes": 131332,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-resume-dialogue-bottom-320.png",
+      "archivedSha256": "cd43260a7bb59392346bda4d81de50a1708d72558e5369eee255cd1d9ef24b06",
+      "archivedBytes": 131332
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-resume-village-320.png",
+      "originalSha256": "0caffd1da6f25aa48405f9dcb63bc6685d54c9c51da7c7c829cfc88fef9122ef",
+      "originalBytes": 151899,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-resume-village-320.png",
+      "archivedSha256": "0caffd1da6f25aa48405f9dcb63bc6685d54c9c51da7c7c829cfc88fef9122ef",
+      "archivedBytes": 151899
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-resume.json",
+      "originalSha256": "bb3f79bd0fad32c34f23cbbcbbc1f4b35b605d241284979fe8542b1f2f6906f9",
+      "originalBytes": 11909,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-resume.json",
+      "archivedSha256": "0e10a873bc2b9ea2356c8c2d7aba1fe74feabeef009a0c42b915be99c1197d27",
+      "archivedBytes": 11820
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-resume.mjs",
+      "originalSha256": "abbe43e4b3a2546668abcc76266d1e3118cec37ffde8da31c345524837d86d56",
+      "originalBytes": 2248,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-resume.mjs",
+      "archivedSha256": "abbe43e4b3a2546668abcc76266d1e3118cec37ffde8da31c345524837d86d56",
+      "archivedBytes": 2248
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-slots.json",
+      "originalSha256": "4b72affee0f461c153a8d51c8c720ccf448da5f931cb1d812bf310c76e862bec",
+      "originalBytes": 17749,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-slots.json",
+      "archivedSha256": "151bc9b1d135d4b71db4aa5eee6673ff47761e9237d5e02598b7faa5ba7f65cb",
+      "archivedBytes": 17705
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-slots.mjs",
+      "originalSha256": "b4681d83483df623847c85e5f3db0cc8613f6cfe34cd03bf606f164d002bfc09",
+      "originalBytes": 3185,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-slots.mjs",
+      "archivedSha256": "b4681d83483df623847c85e5f3db0cc8613f6cfe34cd03bf606f164d002bfc09",
+      "archivedBytes": 3185
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-storage-failure-failure-banner-320.png",
+      "originalSha256": "9bfecdafbb70efdbbb6e0fc610bceb0006ac8266ed21f8373dc6816ccfd77636",
+      "originalBytes": 448644,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-storage-failure-failure-banner-320.png",
+      "archivedSha256": "9bfecdafbb70efdbbb6e0fc610bceb0006ac8266ed21f8373dc6816ccfd77636",
+      "archivedBytes": 448644
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-storage-failure.json",
+      "originalSha256": "be8120d354363e0bb31365e8d139d60bbdab1cf259835dc49fc15feaf20dbc79",
+      "originalBytes": 45759,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-storage-failure.json",
+      "archivedSha256": "325e78160a3c3f856aacc9f94d8f7c06f3876b3dcd1fe5b2dff2226cc12f4f83",
+      "archivedBytes": 45715
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-boundary-storage-failure.mjs",
+      "originalSha256": "5182d3a2ca04d1bda55e7b891423ad4d4476caab9f8b4c5ab783b1f0dc22a4a7",
+      "originalBytes": 3751,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-boundary-storage-failure.mjs",
+      "archivedSha256": "5182d3a2ca04d1bda55e7b891423ad4d4476caab9f8b4c5ab783b1f0dc22a4a7",
+      "archivedBytes": 3751
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-browser-host.mjs",
+      "originalSha256": "6408e3ae522f0f024763e41a165b56b34417ca76bcc8ca08e38e0963253932c6",
+      "originalBytes": 4618,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-browser-host.mjs",
+      "archivedSha256": "a926f93da1b5e187ebd44e409cbb36e1bb5d367f2dd20986d81b277f2e019597",
+      "archivedBytes": 4545
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-capital-before-choice-profile.json",
+      "originalSha256": "36edff4b5cae48b3152586b520935d3ab2c5083d1595cfd5172e2f8d7954bcc9",
+      "originalBytes": 7814,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-capital-before-choice-profile.json",
+      "archivedSha256": "777402fb471e31abcb0475f8dfde507c5da7922c436481ae7174533e570b4d2d",
+      "archivedBytes": 7815
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-capital-before-choice-storage.json",
+      "originalSha256": "2757c6d982650dd58b3c9a01eb5b4ddc4bc625e2c0a87bcadac43f3855c3f90f",
+      "originalBytes": 21044,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-capital-before-choice-storage.json",
+      "archivedSha256": "4bd7f0c4feb038abf81e396bee0b89055d3c740a06b780d99b0c58c9f980f653",
+      "archivedBytes": 21045
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-capital-gate-before-choice-profile.json",
+      "originalSha256": "de5d1691347bb8da8a3970f25152031a5c527d64cb6c40ed9ea3327000d6ef85",
+      "originalBytes": 7814,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-capital-gate-before-choice-profile.json",
+      "archivedSha256": "4fe25a34498f96ecb56b27753f0400b087b735102e2fbf2dc515819d1c5d377a",
+      "archivedBytes": 7815
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-capital-gate-before-choice-storage.json",
+      "originalSha256": "5d33cf160375243ca7dc8ac02bddab2e0034eb955d097bcdd6d1623001fc0c26",
+      "originalBytes": 21044,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-capital-gate-before-choice-storage.json",
+      "archivedSha256": "8e57fc567dadb6c693b547d0e4977ffc890e9b9653746dc0ee9b3f86394de370",
+      "archivedBytes": 21045
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-before-choice-profile.json",
+      "originalSha256": "178910e896a5b30bab3690363005cd582c7bd2a582b82a05ee5fdcfd16c86415",
+      "originalBytes": 12846,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-before-choice-profile.json",
+      "archivedSha256": "cf81038813ddd2d3beb2c986b0a4ea698fa72d48ddd50c623586f1031777bcee",
+      "archivedBytes": 12847
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-before-choice-storage.json",
+      "originalSha256": "2dac1409b3d5c5fbcd0c08f9b429d6587cc966dc3becfbe1f7e898f5692141c7",
+      "originalBytes": 32701,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-before-choice-storage.json",
+      "archivedSha256": "0f11a106eb4e661a6dd5a8e7218199934c757b981f950bb683c875b29eb003a5",
+      "archivedBytes": 32702
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-complete-profile.json",
+      "originalSha256": "07d32a0634be399e695a3111d5a29a2ba2aca6c4b4dd7b90695acbc6eddd781c",
+      "originalBytes": 14448,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-complete-profile.json",
+      "archivedSha256": "7df97528c007311de992ad8637315ac26c03102b23ca276638c8d42393ab9b1f",
+      "archivedBytes": 14449
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-complete-storage.json",
+      "originalSha256": "d49b402ebb55bc27067d12ccc7f7856615c7ed55557ff6d10051e30babe3e98a",
+      "originalBytes": 36299,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-complete-storage.json",
+      "archivedSha256": "a77f283c08974f49033806360b525b4f7431b95da255057755724ee1f0714949",
+      "archivedBytes": 36300
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-mid-profile.json",
+      "originalSha256": "cad575753e1cbf09c5d6c004cb69a6d81ca41411a73a669a479a38058f32c4ef",
+      "originalBytes": 13720,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-mid-profile.json",
+      "archivedSha256": "70eabe05f861dc10211365224b638a402fb2e5af8f9381525e2c37a398797ca7",
+      "archivedBytes": 13721
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-mid-storage.json",
+      "originalSha256": "9730e7be9e79f7e21c5eded698c3e5917dd1ba843cda0fae8679b7cf2cbb22ce",
+      "originalBytes": 34736,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-mid-storage.json",
+      "archivedSha256": "f1818ece8064b22a9d090bedb4c2a665ca89cf3b856fd36bf7d9776702e2dbdc",
+      "archivedBytes": 34737
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-resolved-profile.json",
+      "originalSha256": "8bbaf93bcf9ae5cabe67a5e1021777a74e4b0c0cd8ec946c1d120fc46008bc7f",
+      "originalBytes": 14165,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-resolved-profile.json",
+      "archivedSha256": "539abd0596783ccc9ab67901fbae5ed0bc690c65a93091433c412fbbe9a7b54b",
+      "archivedBytes": 14166
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-captain-trials-resolved-storage.json",
+      "originalSha256": "ded5eaa3256fc95bb83ba91fa13d8e15912d70e4117758c7b6e29b5e18ffe754",
+      "originalBytes": 35681,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-captain-trials-resolved-storage.json",
+      "archivedSha256": "8b88ed63d58cf6c348d595e6701989f09904473c2d5bad751043a4b961360f9d",
+      "archivedBytes": 35682
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-close.mjs",
+      "originalSha256": "c5f4c7ca94c362890e539eecf77d0a1e4e217cbd68825055c6b6229b194574bd",
+      "originalBytes": 381,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-close.mjs",
+      "archivedSha256": "c5f4c7ca94c362890e539eecf77d0a1e4e217cbd68825055c6b6229b194574bd",
+      "archivedBytes": 381
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-departure-night-before-choice-profile.json",
+      "originalSha256": "ec1c15aa43020bd77743e0cae9ca5729480d000eeb390e62ef4b5f889d24df3b",
+      "originalBytes": 7457,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-departure-night-before-choice-profile.json",
+      "archivedSha256": "1c172ca1b9b29a681005ea052ea29cf83d3b65675753e998223b7d187be59807",
+      "archivedBytes": 7458
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-departure-night-before-choice-storage.json",
+      "originalSha256": "ed7e01e5fdff514154cbec8d685e9ea3821d7d6efa298ac2515a999c3daa933e",
+      "originalBytes": 20241,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-departure-night-before-choice-storage.json",
+      "archivedSha256": "64d53d56a53f66a70a32830b65ffac16afc2575b57b28fa53820b211228f1bda",
+      "archivedBytes": 20242
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-emergency-profile.json",
+      "originalSha256": "949cbdb7ac8667048dc5d0b31967ed6981ee5d87dce044869114063b4710721b",
+      "originalBytes": 18785,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-emergency-profile.json",
+      "archivedSha256": "c41eb4a0f8267e67225a4d74e612134ce9e524070d562a2715ce3259aed8c663",
+      "archivedBytes": 26479
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-emergency-storage.json",
+      "originalSha256": "779d7ac837e5544e2232510bea4b941062b648a5f091202c275dd48d8dadf73b",
+      "originalBytes": 46859,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-emergency-storage.json",
+      "archivedSha256": "182c2c9fc1d5883c00b49a743a3594c0835cba41b0130c3b05eacfe27845c3b3",
+      "archivedBytes": 176067
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-complete-profile.json",
+      "originalSha256": "4b8e20b169fa56f9c9cd9e62940ba143b17515f945eb4f14d26e111422f5f06d",
+      "originalBytes": 10270,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-complete-profile.json",
+      "archivedSha256": "6e5f47132d3e9bcbf728b0e2a26975d1c4deb560661e4743027be013efe64013",
+      "archivedBytes": 10271
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-complete-storage.json",
+      "originalSha256": "6f63850e49a2340c1c8bd5c9e8a3011c012c624f3d55a118ec2783704535436c",
+      "originalBytes": 26769,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-complete-storage.json",
+      "archivedSha256": "8a48c8c1422846bd0d2445e4d5ef359137d2483db49f196a3d391cf24db62935",
+      "archivedBytes": 26770
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-exam-before-choice-profile.json",
+      "originalSha256": "0635a3e98be379d7f144b1b1fb4566cd8c988dbf10feb089733bc53e7e815c5f",
+      "originalBytes": 8801,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-exam-before-choice-profile.json",
+      "archivedSha256": "42157acb97bb4de94e905c28583ef590b977ad91fb1453bd292b21e2adfdc893",
+      "archivedBytes": 8802
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-exam-before-choice-storage.json",
+      "originalSha256": "55e63e35ada468c078324f3e75853db0631c2e096a770faa9f4c4256c89a0a02",
+      "originalBytes": 23372,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-exam-before-choice-storage.json",
+      "archivedSha256": "8c0968c14cf387bf7a3cb82d194d86ba03e759ef7e594e04680290beda5b0ce5",
+      "archivedBytes": 23373
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-mid-profile.json",
+      "originalSha256": "c0ecf3846fa43b1c0640d6a4fb7f40573466178cf6ec395c7720a176ef4d620e",
+      "originalBytes": 9610,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-mid-profile.json",
+      "archivedSha256": "163464df0886e19ed4380a5d0e70dc1a1025ab2e3f38414656bddc0903c84298",
+      "archivedBytes": 9611
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-mid-storage.json",
+      "originalSha256": "bdcf1788fc364ea00759b8280adb9cf2acefa6934797dd5fb7f3e56f15bffe37",
+      "originalBytes": 25339,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-mid-storage.json",
+      "archivedSha256": "bba5df70ac972f2429c704c4a0813f9dfbd447c130efa0cda44ee9cd46b28ce4",
+      "archivedBytes": 25340
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-return-profile.json",
+      "originalSha256": "087e35aff83e2dc6e47ba32bb79e7532461302484279a6f6202c9e316e2df1a3",
+      "originalBytes": 9904,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-return-profile.json",
+      "archivedSha256": "ff52ecabd5cfd62abf2282b8f9088485d2eda37a141eac3654fb3b37f52c3648",
+      "archivedBytes": 9905
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-field-return-storage.json",
+      "originalSha256": "46434e929c1577cb16be16ea993ddb90a408cbc5040701a898df7980e2c798d4",
+      "originalBytes": 25966,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-field-return-storage.json",
+      "archivedSha256": "7826c3ae96f12e8085af6714d5ab65f7e655cb76b73555212963a688461369b6",
+      "archivedBytes": 25967
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-final-build-verification.json",
+      "originalSha256": "51dbd2d3edead3e27b34937f740f73079fcff2a042378353eb9b96be829b8c86",
+      "originalBytes": 582,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-final-build-verification.json",
+      "archivedSha256": "3cb1c1016c9d487709b08125b0357ff8ee1f03e956f3260315539e0aed099bb6",
+      "archivedBytes": 583
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-finish-origin.mjs",
+      "originalSha256": "546563b23e148c32d4d6e673c81b790e7ac862f3df7501a866c597084cbe45a2",
+      "originalBytes": 4833,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-finish-origin.mjs",
+      "archivedSha256": "546563b23e148c32d4d6e673c81b790e7ac862f3df7501a866c597084cbe45a2",
+      "archivedBytes": 4833
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-first-mission-prepared-profile.json",
+      "originalSha256": "74262a5f4e83aa615af0ba43a66db59d7a36e4e6a5ffe5ceff0c0341e517dea2",
+      "originalBytes": 17793,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-first-mission-prepared-profile.json",
+      "archivedSha256": "ea1df62c79e8ec93027069c801366b5632e1a59376d9a05703399de7b9f038b4",
+      "archivedBytes": 17794
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-first-mission-prepared-storage.json",
+      "originalSha256": "03f0d256e61d9483e67a5a67325e423bfe93ba75c776724b1c051d5145794199",
+      "originalBytes": 44046,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-first-mission-prepared-storage.json",
+      "archivedSha256": "eb3332f2c178a03f51b13193ee79c39c5a75b8c8d16696097cfd29f65050dd3f",
+      "archivedBytes": 44047
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-first-mode-select-profile.json",
+      "originalSha256": "22b5e3c9e3b70ea2021312617c6ada684fc647ce04e1f85129f485b6e8f5640c",
+      "originalBytes": 26478,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-first-mode-select-profile.json",
+      "archivedSha256": "c41eb4a0f8267e67225a4d74e612134ce9e524070d562a2715ce3259aed8c663",
+      "archivedBytes": 26479
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-first-mode-select-storage.json",
+      "originalSha256": "8dae5043635045287809d1768e7f482124d1d63ec3b74a1af8321a3c42d78a3e",
+      "originalBytes": 176066,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-first-mode-select-storage.json",
+      "archivedSha256": "182c2c9fc1d5883c00b49a743a3594c0835cba41b0130c3b05eacfe27845c3b3",
+      "archivedBytes": 176067
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-ready-profile.json",
+      "originalSha256": "3d3f2ba0a2f316a1729ea4b264ac2b8a67a6b5c55673770c3435144949d68abc",
+      "originalBytes": 16242,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-ready-profile.json",
+      "archivedSha256": "42d4118d6e456e3fdd0a58e0e8a70d76031950bda81d806753654ed0fedecd5d",
+      "archivedBytes": 16243
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-ready-storage.json",
+      "originalSha256": "254f11427a8698c5ebdd192f04664852c1ed22ec425c9a2bd2f5c0ab2ec125f2",
+      "originalBytes": 40296,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-ready-storage.json",
+      "archivedSha256": "b5aaaf059969eb8d6ba5a5f53e8443ab29727bbe6da2fe0daedca6c3967bb779",
+      "archivedBytes": 40297
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-resolved-profile.json",
+      "originalSha256": "792ad8ab18824cff55ad54fcff725f44854be0fac65e91b03aa9acf43356e1b0",
+      "originalBytes": 16646,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-resolved-profile.json",
+      "archivedSha256": "009b87c24a6d19a557a1b36c34d8df472f92ca839c91225359f6f416f57e82a4",
+      "archivedBytes": 16647
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-resolved-storage.json",
+      "originalSha256": "118f400b58333a2b56f7947f5dcdbe31b995b8a47b40156d88907641780cc2fc",
+      "originalBytes": 41276,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-resolved-storage.json",
+      "archivedSha256": "709f48bd5ddb0745ee02450b254ff84a9af3610d168cb2d7b643efc3fe87c2ec",
+      "archivedBytes": 41277
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-resolved.png",
+      "originalSha256": "71fb40d4cc76965d76ef7175333c5ae45478d2673283a63aac761a29ab49757e",
+      "originalBytes": 746768,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-resolved.png",
+      "archivedSha256": "71fb40d4cc76965d76ef7175333c5ae45478d2673283a63aac761a29ab49757e",
+      "archivedBytes": 746768
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-wall-before-choice-profile.json",
+      "originalSha256": "552278b93f1862a89c5a716cd07884059295252ea3ae74cec9ff4e6f5f334e2b",
+      "originalBytes": 16758,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-wall-before-choice-profile.json",
+      "archivedSha256": "2c686cc65d4e9bc83c0cf5f77c112a15f00f9ce4c91edecc6401f9b41b757ede",
+      "archivedBytes": 16759
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-hadori-wall-before-choice-storage.json",
+      "originalSha256": "94a819cbabaaf132c3f4bef91afd2088b724bbfa884dbfb8f1472c79bcb20ff9",
+      "originalBytes": 41511,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-hadori-wall-before-choice-storage.json",
+      "archivedSha256": "01b6579da26b8211d581d03af6f8c74db106112200327e1215e72ed48f15e8aa",
+      "archivedBytes": 41512
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-inducted-profile.json",
+      "originalSha256": "241dad786fde3ae262d593786811857559f71f767df591278e202ee22d5332bc",
+      "originalBytes": 17263,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-inducted-profile.json",
+      "archivedSha256": "3b4849598aa7d6cc1a36cbbde61bc687f0fc002101ff8567d70b893e7fe9a84a",
+      "archivedBytes": 17264
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-inducted-storage.json",
+      "originalSha256": "f0723215666d66d3d9ee9d5d87ae63504498d08583c49fb397df8338af76c8c0",
+      "originalBytes": 42699,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-inducted-storage.json",
+      "archivedSha256": "e67c0ba4394838976d4e56146f0737580bedc9c60be143e289779e65dbd3e1b6",
+      "archivedBytes": 42700
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-inducted.png",
+      "originalSha256": "9b9a7c9121c907780c2ff117d19c36bb2d6f94b8cb577b327d0bd135a354977c",
+      "originalBytes": 1366428,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-inducted.png",
+      "archivedSha256": "9b9a7c9121c907780c2ff117d19c36bb2d6f94b8cb577b327d0bd135a354977c",
+      "archivedBytes": 1366428
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-initial.mjs",
+      "originalSha256": "4dfbe19baec80e013243065cf4d60d7fb4c16ee1da40f64c3f95ed67db133a74",
+      "originalBytes": 454,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-initial.mjs",
+      "archivedSha256": "4dfbe19baec80e013243065cf4d60d7fb4c16ee1da40f64c3f95ed67db133a74",
+      "archivedBytes": 454
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-before-choice-profile.json",
+      "originalSha256": "c7d2d032d1aaa5e109ba2a6c18aff0d9f6e095d08aca92218e8d7d384dd516d4",
+      "originalBytes": 14469,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-before-choice-profile.json",
+      "archivedSha256": "d91a3242d37c81b10a5b554c2ec3b53e6151ef4a738e8a6e074a84111d85e470",
+      "archivedBytes": 14470
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-before-choice-storage.json",
+      "originalSha256": "f6c0354eb1be40d70821e12f33892d8c1b57dd1221ce630fc615efe8b39df963",
+      "originalBytes": 36356,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-before-choice-storage.json",
+      "archivedSha256": "11447d958105bbb2c8ff2ace70d456d685b13c26415d768c1b8e8520544e1d2e",
+      "archivedBytes": 36357
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-complete-profile.json",
+      "originalSha256": "84e279198305be969941e1905020e865bbe1055fd11a1e86086157df5ffa3165",
+      "originalBytes": 16221,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-complete-profile.json",
+      "archivedSha256": "26b8c091c174d6f5b374f3cdefd5917e6005baf103a289f24b1a13dc6d57a4b2",
+      "archivedBytes": 16222
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-complete-storage.json",
+      "originalSha256": "1d3aed722d7b9586a803049b7787d63786148c0cc504b445e0c98c63e8ab49da",
+      "originalBytes": 40239,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-complete-storage.json",
+      "archivedSha256": "08f17b11ed5078d0c1404be9972f81b69e34a2cfcb23b27f2b7cdcaf65929ec6",
+      "archivedBytes": 40240
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-mid-profile.json",
+      "originalSha256": "34e6256840f0ebbb871e558a1f383d3ecbf67b98bd81a78aa46629d9ac953478",
+      "originalBytes": 15239,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-mid-profile.json",
+      "archivedSha256": "48566eaeec12d052887b821e2e3958db3af59b3d94a38297850a3c9cbf05c888",
+      "archivedBytes": 15240
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-mid-storage.json",
+      "originalSha256": "ce9d966ba5a570592e979232666a4d9965cc59459a38b1e2e5eb5ed22bf97350",
+      "originalBytes": 38135,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-mid-storage.json",
+      "archivedSha256": "09ff23f71d44763747d93a811597d090b861ebb25bad616c167813119f5c7870",
+      "archivedBytes": 38136
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-resolved-profile.json",
+      "originalSha256": "5e458ae2028647824dec0aa2924f47467fbe71b6bd80e6884b827d458da4bc45",
+      "originalBytes": 15948,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-resolved-profile.json",
+      "archivedSha256": "078abb500da087e914d3d0b95ed3d1d3d5992377f3d597145752fed5084d6e14",
+      "archivedBytes": 15949
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-kazrin-duel-resolved-storage.json",
+      "originalSha256": "44a6325dca06908a23ce5a7dc40a0e6222e8e6ba8e5f540868442dacda1fa54c",
+      "originalBytes": 39641,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-kazrin-duel-resolved-storage.json",
+      "archivedSha256": "34e3a0465020cc1d399f3ebb1fbe4c41952af75975cce767cf7baecc3002ea06",
+      "archivedBytes": 39642
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-maru-door-before-choice-profile.json",
+      "originalSha256": "c31e16f0c346020b14e16b89eac1fd814b97babb74877011efa4a0a9891cdd6c",
+      "originalBytes": 10825,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-maru-door-before-choice-profile.json",
+      "archivedSha256": "78a482b8917948cf5902eb5b26e46768b060847dfd5b3e19a20346f80e1ac264",
+      "archivedBytes": 10826
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-maru-door-before-choice-storage.json",
+      "originalSha256": "726fd856367777da98b0eeab9cb5fa876d5e9811968f81cdb839bcef57fcdd6d",
+      "originalBytes": 28087,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-maru-door-before-choice-storage.json",
+      "archivedSha256": "8d28b974e413dbe829a7cf7e3a3c9c83c9f6a94325e1071bcca94516b9b899b9",
+      "archivedBytes": 28088
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-petal-review-profile.json",
+      "originalSha256": "a743631a56541990cdef28236e2dda781635cae659e521ec4b07776d55b3ce09",
+      "originalBytes": 12456,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-petal-review-profile.json",
+      "archivedSha256": "d7711c6948856581517cce6fe51e61b4de63f05cf2c4984c92e35bf4aa480b0b",
+      "archivedBytes": 12457
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-petal-review-storage.json",
+      "originalSha256": "34e33579e1658456f890d72f726950a428959b8236ec0ddb1ef4145c30ed208d",
+      "originalBytes": 31835,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-petal-review-storage.json",
+      "archivedSha256": "74af40e84847815cb646509966c4ba1fbf55aee2136db50532cbd547c6ab6c42",
+      "archivedBytes": 31836
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-recruiters-arrive-before-choice-profile.json",
+      "originalSha256": "61ade3e3de2925a74a85010d91044886f1bc09416eb3f7c792a11d5cd2e89703",
+      "originalBytes": 6891,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-recruiters-arrive-before-choice-profile.json",
+      "archivedSha256": "b3aafd03380df1de6ca670734c68f4146f7eee244b9bb29eeccff27a7a160dd6",
+      "archivedBytes": 6892
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-recruiters-arrive-before-choice-storage.json",
+      "originalSha256": "611f014c480b130771857350399048d545b9a3c58b1540b2e013928732ef71d4",
+      "originalBytes": 18904,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-recruiters-arrive-before-choice-storage.json",
+      "archivedSha256": "ac70d31f0debbf8aee0ae1c22524c5b6a54ea40d1950835be999cc38a697f634",
+      "archivedBytes": 18905
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-complete-profile.json",
+      "originalSha256": "1c61024826672406a17b964bb17e047bac0f3b2100968475356f2de3bb2dec8d",
+      "originalBytes": 6864,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-complete-profile.json",
+      "archivedSha256": "89842a799f3ab13ca443dd53d412fe56464e6f060722036a029aacb60e264696",
+      "archivedBytes": 6865
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-complete-storage.json",
+      "originalSha256": "b643aa9131d73950ca9b8254623154836e4e2c031e6d87dcbaa39766c4343d32",
+      "originalBytes": 18835,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-complete-storage.json",
+      "archivedSha256": "251440b109a7bbccc19ba002bb1e116dc6914c79fdc251e88386f978c47cd8ac",
+      "archivedBytes": 18836
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-mid-profile.json",
+      "originalSha256": "57deb91e806039945643969c349f2bcaa59dff627b868c2f77dea6d7f40bc56b",
+      "originalBytes": 6038,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-mid-profile.json",
+      "archivedSha256": "e1c81b02677b59462fe209709ecd184e8c5edce61b19a3a3e23100c8fdb1c0a2",
+      "archivedBytes": 6039
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-mid-storage.json",
+      "originalSha256": "5d2d3a74c20d85830085889706ee047782f3a4cf248a8bd00070f4654d82adab",
+      "originalBytes": 16997,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-mid-storage.json",
+      "archivedSha256": "8814d906afc6273beb918c3f70310a42039a915ced4b05e8936aec719fb0cee9",
+      "archivedBytes": 16998
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-ready-profile.json",
+      "originalSha256": "1b832078f2856cf09e34008fb21ebc012ca6be586bfe6e5f3b8e18da75bbbdde",
+      "originalBytes": 5731,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-ready-profile.json",
+      "archivedSha256": "2fcf1fd665e9ecec21cdcd113965dfdd4bae3af9dc8bb559666b721a3ec0e1a3",
+      "archivedBytes": 5732
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-ready-storage.json",
+      "originalSha256": "b4ba0101f060c13fe57a019bb7fa2b1c6bad369a7fbd9aafedadef51ef45a1fb",
+      "originalBytes": 16283,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-ready-storage.json",
+      "archivedSha256": "686b8b25c19f8545a3851c5253b379c01b1c71e92f2db6355d4164fb33347860",
+      "archivedBytes": 16284
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-return-confirm.png",
+      "originalSha256": "a939c2341c719a0e84ac614bd8429d6abf3319745c9175f5c78fb6fc6634599e",
+      "originalBytes": 150355,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-return-confirm.png",
+      "archivedSha256": "a939c2341c719a0e84ac614bd8429d6abf3319745c9175f5c78fb6fc6634599e",
+      "archivedBytes": 150355
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-return-near-profile.json",
+      "originalSha256": "40053d75fb62d21b2e27d70805a5417f1dfb915a6802fb2da261f8d53c0c3e66",
+      "originalBytes": 6538,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-return-near-profile.json",
+      "archivedSha256": "c0604034abf9e56b79d89d3b042ee820c1b05c354d0e90cfed3b670fba560b37",
+      "archivedBytes": 6539
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-return-near-storage.json",
+      "originalSha256": "14bfe086be61e224603019f89bcbd7c3792ea44f848f3682b7afe6db351725e8",
+      "originalBytes": 18112,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-return-near-storage.json",
+      "archivedSha256": "5e219bc878394dea8bd43103fdd3f88f5331d51a8227faa756c72fd7df27c472",
+      "archivedBytes": 18113
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-rescue-return.mjs",
+      "originalSha256": "c94e3ebf98ff11e0597b8727843712290c3e707ca11cc7e550d1b3864814dd5a",
+      "originalBytes": 2843,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-rescue-return.mjs",
+      "archivedSha256": "c94e3ebf98ff11e0597b8727843712290c3e707ca11cc7e550d1b3864814dd5a",
+      "archivedBytes": 2843
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-resume-setup.mjs",
+      "originalSha256": "bdf3b81c513871b738a409667fd6824b653683560d5934cb7ea916c5059c98c1",
+      "originalBytes": 1737,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-resume-setup.mjs",
+      "archivedSha256": "bdf3b81c513871b738a409667fd6824b653683560d5934cb7ea916c5059c98c1",
+      "archivedBytes": 1737
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-river-incident-before-choice-profile.json",
+      "originalSha256": "ac7b66f532ba0ffd5c8a6478cc3e1207ddbd7a83effcd975f2590d515bdb1c3d",
+      "originalBytes": 5082,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-river-incident-before-choice-profile.json",
+      "archivedSha256": "d14d6561c8ede0659223d1fb8477b6c90e449b0a3877337e62fccf2ca0e1e85b",
+      "archivedBytes": 5083
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-river-incident-before-choice-storage.json",
+      "originalSha256": "461dffc78d461ef880e5f578c16e7adb02ee91d9377e282ae46173510c5ceac4",
+      "originalBytes": 14711,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-river-incident-before-choice-storage.json",
+      "archivedSha256": "34b428d5f02f0951d5d208ca4634daefbdcb8af44cf2d699eec19e2ad3b6cc2c",
+      "archivedBytes": 14712
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-root-last-error.json",
+      "originalSha256": "5288197821d6c4d3fca9c56176b97882bec4fe28471258db0be7f29a763ea0fa",
+      "originalBytes": 609,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-root-last-error.json",
+      "archivedSha256": "5548468358284916f9b09867a6119ad7303c41b4b31f0c42f86b80232fbf925a",
+      "archivedBytes": 553
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-root-steps.json",
+      "originalSha256": "e7236131b63ff5158f22650d2bca2018d1f1c11464efeac32d6894597d43435a",
+      "originalBytes": 67923,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-root-steps.json",
+      "archivedSha256": "e8ecdbdbf4b8e07c6d49245be3a36ea14af1161022929e4808e40039e6418af7",
+      "archivedBytes": 96606
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-run.mjs",
+      "originalSha256": "cbb21e4e7d5d4e09073c19dcea2e2d8a9ef9e2e4759d9645de568db15ea7ec3f",
+      "originalBytes": 198,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-run.mjs",
+      "archivedSha256": "cbb21e4e7d5d4e09073c19dcea2e2d8a9ef9e2e4759d9645de568db15ea7ec3f",
+      "archivedBytes": 198
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-seventh-oath-before-choice-profile.json",
+      "originalSha256": "54ea11e261a1c55d543d35e6bfb12e332845f75d3408775e651818525944b84a",
+      "originalBytes": 17004,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-seventh-oath-before-choice-profile.json",
+      "archivedSha256": "e16ff4b8d3a7cbd628be30426d16ab4df55d1a5dbeb07ec428c5df78753399fc",
+      "archivedBytes": 17005
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-seventh-oath-before-choice-storage.json",
+      "originalSha256": "42195b456cc0c5dd2068f9dcb12031581f45a3df30301ae852b93b5fdaa7b9ad",
+      "originalBytes": 42075,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-seventh-oath-before-choice-storage.json",
+      "archivedSha256": "47efee361a1db13eb073f742f3a244fa373900ce8b3f63906cabb88b5c6f1c58",
+      "archivedBytes": 42076
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-sixteen-petals-before-choice-profile.json",
+      "originalSha256": "d39372b1de6aec048af83759b111390be3fcfcdf820bac00a5305ba88b9c9535",
+      "originalBytes": 11318,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-sixteen-petals-before-choice-profile.json",
+      "archivedSha256": "068e71fa6b1e5774eb6e1d801759c25b79e9d34838ad8756134158affcf94687",
+      "archivedBytes": 11319
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-sixteen-petals-before-choice-storage.json",
+      "originalSha256": "4d8e6d9445c40a6783e9f8fd8563c8bd497b15cea3630ccb64338114a8d6d132",
+      "originalBytes": 29250,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-sixteen-petals-before-choice-storage.json",
+      "archivedSha256": "24f520b588b1ef0fef7e4b9719ae2731bb6729e784c45abc2347bce3ce6de39c",
+      "archivedBytes": 29251
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-suspended-candidate-before-choice-profile.json",
+      "originalSha256": "24c5321e03380347902199eb3891db5116a41cc10f83fb43a1ea0c7eeb5ec71d",
+      "originalBytes": 10299,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-suspended-candidate-before-choice-profile.json",
+      "archivedSha256": "fbf2e580f7f92adbabff7e2e765f26f88a4e0e50c553a25a131eedd7bad31208",
+      "archivedBytes": 10300
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-suspended-candidate-before-choice-storage.json",
+      "originalSha256": "f3411612f2c2c01566f6c8d0a778f10bcf90af7d1e43af8221f0becf1007f9bc",
+      "originalBytes": 26842,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-suspended-candidate-before-choice-storage.json",
+      "archivedSha256": "01bd80b5787881753db93bb11c135fdb89242f2300f2524d9a77d4b29df95396",
+      "archivedBytes": 26843
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-title.png",
+      "originalSha256": "1aa87ba2da878f331004f7e8830c9f2c17a6fe6e04a6a2d4589b3d11e6abfb11",
+      "originalBytes": 1090340,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-title.png",
+      "archivedSha256": "1aa87ba2da878f331004f7e8830c9f2c17a6fe6e04a6a2d4589b3d11e6abfb11",
+      "archivedBytes": 1090340
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-dawn-before-choice-profile.json",
+      "originalSha256": "ba16afb7f7bbcac722a09858835e4ce06eaf569fa10a90ca3daa8f626389892a",
+      "originalBytes": 3970,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-dawn-before-choice-profile.json",
+      "archivedSha256": "f78c99adc480743746eb904612de6af7f4a4bb649d307fb1afd4803130f07bed",
+      "archivedBytes": 3971
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-dawn-before-choice-storage.json",
+      "originalSha256": "adcabecc49246956896cccf862f9838aeb109f85a8cf1a21c3d6e2ba99bc3c47",
+      "originalBytes": 11996,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-dawn-before-choice-storage.json",
+      "archivedSha256": "12fbc8c3465efdaabc88d70a82ae4d7da5be7e3a239b1a7aa11bda362670524f",
+      "archivedBytes": 11997
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-near-kazrin-profile.json",
+      "originalSha256": "7c1d18dfa5012a68899813d8eaa06e039c7246c2569b6a0fba34cafef7545137",
+      "originalBytes": 3970,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-near-kazrin-profile.json",
+      "archivedSha256": "adb2d36102302eea887f77a8928e9fe825e77c5ef21e1e7974fb8f4b2a816b74",
+      "archivedBytes": 3971
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-near-kazrin-storage.json",
+      "originalSha256": "5fbce7c2a3af8fb054ddc5199d4a27f98680121c0db4e857403d71338387d717",
+      "originalBytes": 11996,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-near-kazrin-storage.json",
+      "archivedSha256": "29e71791ef196fcd1a9f219f73ac9d6da34aaec0c5439a810f74b4fb1c6f422f",
+      "archivedBytes": 11997
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-scenes.mjs",
+      "originalSha256": "c8af5670ff885f0730e5121166aea53580cff44a32a5974ae45c84c318499c24",
+      "originalBytes": 1751,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-scenes.mjs",
+      "archivedSha256": "c8af5670ff885f0730e5121166aea53580cff44a32a5974ae45c84c318499c24",
+      "archivedBytes": 1751
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-start-390.png",
+      "originalSha256": "d9d2be842389b1dcb341c002ff94111f34fc15cf566196145c3b9c0c43f48f63",
+      "originalBytes": 205702,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-start-390.png",
+      "archivedSha256": "d9d2be842389b1dcb341c002ff94111f34fc15cf566196145c3b9c0c43f48f63",
+      "archivedBytes": 205702
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-village-start.mjs",
+      "originalSha256": "e0990776328b5ec851b6c9f430c3e00d3482b4d29f6c32f313e8620be80b594b",
+      "originalBytes": 2697,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-village-start.mjs",
+      "archivedSha256": "e0990776328b5ec851b6c9f430c3e00d3482b4d29f6c32f313e8620be80b594b",
+      "archivedBytes": 2697
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-windmill-trouble-before-choice-profile.json",
+      "originalSha256": "59e2b04c4a713b8dff6c5786d14945dc29597cb7d3b4d65cecebee2b302d35ba",
+      "originalBytes": 4484,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-windmill-trouble-before-choice-profile.json",
+      "archivedSha256": "5a64536f806c8f8a5033db29b025e8b9ef325dcfbc7945ba629427118f6a20f8",
+      "archivedBytes": 4485
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/native-windmill-trouble-before-choice-storage.json",
+      "originalSha256": "757cfc9de43f6d7f0210f8a49b1f3f5b84f2137cf0794b181f8c7c199cec69c5",
+      "originalBytes": 13294,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/native-windmill-trouble-before-choice-storage.json",
+      "archivedSha256": "598080c537a9a29a4543c45eb3d29427b51fa5c21363a778e6ca5f785184863b",
+      "archivedBytes": 13295
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/PETAL_TRAINING_PLAYABLE.md",
+      "originalSha256": "72bb7247197abcd60dec6bda754b9ddabe7503f1d9949a278efef8f8a8842635",
+      "originalBytes": 7277,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "docs/PETAL_TRAINING_PLAYABLE.md",
+      "archivedSha256": "72bb7247197abcd60dec6bda754b9ddabe7503f1d9949a278efef8f8a8842635",
+      "archivedBytes": 7277
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/README.md",
+      "originalSha256": "4c80245ca012ad735c8639b2605c75f75371bb4e93168833cd400b284650f244",
+      "originalBytes": 1498,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_근거/README.md",
+      "archivedSha256": "4c80245ca012ad735c8639b2605c75f75371bb4e93168833cd400b284650f244",
+      "archivedBytes": 1498
+    },
+    {
+      "source": "outputs/여덟번째_실조작_근거/VILLAGE_PLAYABLE_LOOP.md",
+      "originalSha256": "b34baf5b4e60c1be2ffc0d3dc779fdd49854cad66c63d60f04238ba695c27405",
+      "originalBytes": 9806,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "docs/VILLAGE_PLAYABLE_LOOP.md",
+      "archivedSha256": "b34baf5b4e60c1be2ffc0d3dc779fdd49854cad66c63d60f04238ba695c27405",
+      "archivedBytes": 9806
+    },
+    {
+      "source": "outputs/여덟번째_실조작_진행상황.md",
+      "originalSha256": "8da9da492b84785ec8d26ea89176396dd7b9a144c735bf2fe86e3944c690b199",
+      "originalBytes": 254,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_실조작_진행상황.md",
+      "archivedSha256": "5545e978acf3efc04b060975c225303ad811337f13526b89f4733aae387abfee",
+      "archivedBytes": 332
+    },
+    {
+      "source": "outputs/여덟번째_작업묶음_검증기록.json",
+      "originalSha256": "4c66206713bccbed491fdcd415c71b73350b2ceb5a51cc0a069f4d230f6f2307",
+      "originalBytes": 7027,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_작업묶음_검증기록.json",
+      "archivedSha256": "4c66206713bccbed491fdcd415c71b73350b2ceb5a51cc0a069f4d230f6f2307",
+      "archivedBytes": 7027
+    },
+    {
+      "source": "outputs/여덟번째_작업묶음_검증보고서.md",
+      "originalSha256": "5997344646a5d6f67203f9e15aa2f4e3b1aada3f43a7df332379cb290df49e9e",
+      "originalBytes": 9655,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_작업묶음_검증보고서.md",
+      "archivedSha256": "cfd9fc1983255a3939c3ecd44c257668bf5f756e104047aff36579151fb4074c",
+      "archivedBytes": 10141
+    },
+    {
+      "source": "outputs/여덟번째_작업묶음_테스트결과.json",
+      "originalSha256": "9df8c340dc3e02e2207f099052b382a074470b91bc024b13f1a4429d8056a5f0",
+      "originalBytes": 136074,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여덟번째_작업묶음_테스트결과.json",
+      "archivedSha256": "07ffc5086860b561b599b7e91bb14af4c740aaaba1fce96310ef71539d6ca541",
+      "archivedBytes": 184014
+    },
+    {
+      "source": "outputs/여섯번째_작업묶음_검증기록.json",
+      "originalSha256": "218625be96b2c8b3f913ea19bdafc84546ec0522d9e92ee6aa6713b92b3b3be4",
+      "originalBytes": 11818,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여섯번째_작업묶음_검증기록.json",
+      "archivedSha256": "2cc4716788ca4d5c4e15ddf5be982b1dfb4aa5da506ee9a2a0fba64b372e4050",
+      "archivedBytes": 11584
+    },
+    {
+      "source": "outputs/여섯번째_작업묶음_완료보고서.md",
+      "originalSha256": "dc4970b3ea9e76c44190c65709703b4985691b88ce015545d6f1bd2ae7f90dd6",
+      "originalBytes": 8434,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여섯번째_작업묶음_완료보고서.md",
+      "archivedSha256": "ae6051a8dd8416d43afb3cc2258f21a0bfdb27084cc5ce36897b0f2f48f93333",
+      "archivedBytes": 8506
+    },
+    {
+      "source": "outputs/여섯번째_작업묶음_테스트결과.json",
+      "originalSha256": "ff2ec6666adca818ad27cc8b0553d5033ad678c769e4e6f7d51cb5c1d94831b9",
+      "originalBytes": 108541,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/여섯번째_작업묶음_테스트결과.json",
+      "archivedSha256": "49ee008415f70c259ee2435334abfd9a8fc52e95172979d40c57e9bec71dd444",
+      "archivedBytes": 147733
+    },
+    {
+      "source": "outputs/일곱번째_작업묶음_검증기록.json",
+      "originalSha256": "1b316865288d7d38ec5b1d3a8ed0efdea12565f73cce661a62ed6ff387e358e8",
+      "originalBytes": 8227,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/일곱번째_작업묶음_검증기록.json",
+      "archivedSha256": "576d3902c6767b939e24f29d885cc9cc953da2819c8409e5adf28cb331c10054",
+      "archivedBytes": 8110
+    },
+    {
+      "source": "outputs/일곱번째_작업묶음_완료보고서.md",
+      "originalSha256": "0657ff95e8bda28ec21c85a943a99a037bea0782517cbd46db7fdcf1addc18be",
+      "originalBytes": 8240,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/일곱번째_작업묶음_완료보고서.md",
+      "archivedSha256": "1646dd7544d602ceadcba35629c2c36fbe0870c2326854e4bd5e2116f5bc7399",
+      "archivedBytes": 8390
+    },
+    {
+      "source": "outputs/일곱번째_작업묶음_테스트결과.json",
+      "originalSha256": "01bdeb15062811b644528a57a0ffd627ab8448f74fb9f03ef632b9595eca0174",
+      "originalBytes": 125177,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/일곱번째_작업묶음_테스트결과.json",
+      "archivedSha256": "108bfa77264cc20a54a75e4f297542ed8e696bfe4384e46bbddcd64972614571",
+      "archivedBytes": 169889
+    },
+    {
+      "source": "outputs/전체_여정_검증_계획과_근거.md",
+      "originalSha256": "344c6ada43f5692ce99ce776a0f46977f60694ca7f1cf1529913e1fbbc3283ad",
+      "originalBytes": 10277,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/전체_여정_검증_계획과_근거.md",
+      "archivedSha256": "f76913fe2a76c82c11f0ee215896fc9bf7e073ad1047f1840184d7dc6d90ec1f",
+      "archivedBytes": 10157
+    },
+    {
+      "source": "outputs/제작조사_검토기록.json",
+      "originalSha256": "353f1f696254f8fbd05de8f79826322dd5da434b7753afd564b3d317da956335",
+      "originalBytes": 4044,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/제작조사_검토기록.json",
+      "archivedSha256": "353f1f696254f8fbd05de8f79826322dd5da434b7753afd564b3d317da956335",
+      "archivedBytes": 4044
+    },
+    {
+      "source": "outputs/젤다_붉은사막급_제작조사.md",
+      "originalSha256": "95e146921e6c14860a4bb72f1ebf80770e73a7c451a13a06e86bee49ed046f87",
+      "originalBytes": 40277,
+      "action": "existing-tracked-identical",
+      "repositoryPath": "docs/AAA_PRODUCTION_RESEARCH.md",
+      "archivedSha256": "95e146921e6c14860a4bb72f1ebf80770e73a7c451a13a06e86bee49ed046f87",
+      "archivedBytes": 40277
+    },
+    {
+      "source": "outputs/첫_작업묶음_검증기록.json",
+      "originalSha256": "778fbb79292beea486ace677a5715b5bb52de8bd18289d17c8b8412486d7fec4",
+      "originalBytes": 1452,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/첫_작업묶음_검증기록.json",
+      "archivedSha256": "9fbcdc7b0bf8945d2db40328c27990966f4029c00d2725e6ea7a646a5f808929",
+      "archivedBytes": 1285
+    },
+    {
+      "source": "outputs/첫_작업묶음_완료보고서.md",
+      "originalSha256": "54dbc4d035016a3a2ac696986db495faaecd6a5a6a48605d702d16dadfc118ef",
+      "originalBytes": 4976,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/첫_작업묶음_완료보고서.md",
+      "archivedSha256": "54dbc4d035016a3a2ac696986db495faaecd6a5a6a48605d702d16dadfc118ef",
+      "archivedBytes": 4976
+    },
+    {
+      "source": "outputs/첫_작업묶음_테스트결과.json",
+      "originalSha256": "5236b574c0aec4d866b6469276ce070387e457e5dd46e679ba7964fe6c7f349c",
+      "originalBytes": 41814,
+      "action": "archived",
+      "repositoryPath": "docs/reports/2026-09-handoff/첫_작업묶음_테스트결과.json",
+      "archivedSha256": "47df4dca398849d49f73dae578217be98d4bd5d1e4de8fb6c25c1dd51af810b3",
+      "archivedBytes": 58218
+    }
+  ],
+  "unresolvedHistoricalLocalLinks": [],
+  "securityIssues": []
+}

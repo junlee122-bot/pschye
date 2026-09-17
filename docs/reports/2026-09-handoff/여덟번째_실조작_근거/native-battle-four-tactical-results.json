@@ -1,0 +1,632 @@
+{
+  "scope": "Actual four-person tactical UI from root-played prologue storage",
+  "fixedBuild": true,
+  "origin": "http://127.0.0.1:4409",
+  "actions": [
+    {
+      "at": "2026-09-15T02:41:56.028Z",
+      "label": "R: Chris reveals hidden sniper",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 1,
+      "cp": 2,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 53,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          131
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:41:58.305Z",
+      "label": "Raon 16 petals: actual canvas target hit",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 1,
+      "cp": 1,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 71,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          68
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false,
+      "pointerOffsetLogicalPixels": 0
+    },
+    {
+      "at": "2026-09-15T02:42:05.014Z",
+      "label": "Undo after restored two-action history",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 1,
+      "cp": 2,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 53,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          131
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:06.808Z",
+      "label": "Repeat witnessed canvas attack after undo",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 1,
+      "cp": 1,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 71,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          68
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:07.688Z",
+      "label": "Recommendation: 하도리 · 지반 파쇄",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 1,
+      "cp": 0,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 100,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:08.773Z",
+      "label": "Team finisher UI",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 1,
+      "cp": 0,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 0,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          11
+        ],
+        [
+          "rifleman-b",
+          11
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:09.652Z",
+      "label": "End turn UI",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 2,
+      "cp": 3,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 0,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          11
+        ],
+        [
+          "rifleman-b",
+          11
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:10.475Z",
+      "label": "Recommendation: 카즈린 · 백은 궤도",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 2,
+      "cp": 2,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 11,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          11
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:11.237Z",
+      "label": "Recommendation: 라온 · 16꽃잎",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 2,
+      "cp": 1,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 29,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          0
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:12.089Z",
+      "label": "Recommendation: 하도리 · 지반 파쇄",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 2,
+      "cp": 0,
+      "outcome": "victory",
+      "objective": 118,
+      "morale": 39,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          0
+        ],
+        [
+          "wing-lancer",
+          0
+        ]
+      ],
+      "settled": true
+    },
+    {
+      "at": "2026-09-15T02:42:20.193Z",
+      "label": "Recommendation: 크리스 · 측면 유도",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 1,
+      "cp": 2,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 53,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          131
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:21.179Z",
+      "label": "Recommendation: 하도리 · 지반 파쇄",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 1,
+      "cp": 1,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 63,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          76
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:22.067Z",
+      "label": "Recommendation: 라온 · 16꽃잎",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 1,
+      "cp": 0,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 100,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          78
+        ],
+        [
+          "rifleman-b",
+          78
+        ],
+        [
+          "wing-lancer",
+          96
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:23.099Z",
+      "label": "Team finisher UI",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 1,
+      "cp": 0,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 0,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          11
+        ],
+        [
+          "rifleman-b",
+          11
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:23.782Z",
+      "label": "End turn UI",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 2,
+      "cp": 3,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 0,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          11
+        ],
+        [
+          "rifleman-b",
+          11
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:24.435Z",
+      "label": "Recommendation: 카즈린 · 백은 궤도",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 2,
+      "cp": 2,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 11,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          11
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:25.203Z",
+      "label": "Recommendation: 라온 · 16꽃잎",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 2,
+      "cp": 1,
+      "outcome": "active",
+      "objective": 118,
+      "morale": 29,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          0
+        ],
+        [
+          "wing-lancer",
+          36
+        ]
+      ],
+      "settled": false
+    },
+    {
+      "at": "2026-09-15T02:42:25.790Z",
+      "label": "Recommendation: 하도리 · 지반 파쇄",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 2,
+      "cp": 0,
+      "outcome": "victory",
+      "objective": 118,
+      "morale": 39,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          0
+        ],
+        [
+          "wing-lancer",
+          0
+        ]
+      ],
+      "settled": true
+    },
+    {
+      "at": "2026-09-15T02:42:26.064Z",
+      "label": "Actual new-deployment replay victory without second rewards",
+      "id": "b0eb58f6-492d-4e2f-989a-981d12d2b7e8",
+      "round": 2,
+      "cp": 0,
+      "outcome": "victory",
+      "objective": 118,
+      "morale": 39,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          0
+        ],
+        [
+          "wing-lancer",
+          0
+        ]
+      ],
+      "settled": true
+    },
+    {
+      "at": "2026-09-15T02:42:27.298Z",
+      "label": "Four-person UI victory, reload and settlement complete",
+      "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+      "round": 2,
+      "cp": 0,
+      "outcome": "victory",
+      "objective": 118,
+      "morale": 39,
+      "enemyHp": [
+        [
+          "sky-sniper",
+          0
+        ],
+        [
+          "rifleman-a",
+          0
+        ],
+        [
+          "rifleman-b",
+          0
+        ],
+        [
+          "wing-lancer",
+          0
+        ]
+      ],
+      "settled": true
+    }
+  ],
+  "errors": [],
+  "checks": {
+    "fourAndSixIdenticalGrowthAndCommonHeroStats": true,
+    "heroCanvasCenterResponds": true,
+    "visibleCanvasCenterResponds": true,
+    "midBattleReloadExact": true,
+    "undoRestoresEarlierBattle": true,
+    "firstClearRewards": true,
+    "witnessFromCanvasHit": true,
+    "resultReloadAndExitNoDuplicateRewards": true,
+    "actualReplayVictoryNoSecondRewards": true
+  },
+  "browser": "153.0.4234.32",
+  "scriptSources": [
+    "http://127.0.0.1:4409/assets/index-DEx4xGQm.js"
+  ],
+  "final": {
+    "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+    "round": 2,
+    "cp": 0,
+    "outcome": "victory",
+    "objective": 118,
+    "morale": 39,
+    "enemyHp": [
+      [
+        "sky-sniper",
+        0
+      ],
+      [
+        "rifleman-a",
+        0
+      ],
+      [
+        "rifleman-b",
+        0
+      ],
+      [
+        "wing-lancer",
+        0
+      ]
+    ],
+    "settled": true
+  },
+  "status": "passed"
+}

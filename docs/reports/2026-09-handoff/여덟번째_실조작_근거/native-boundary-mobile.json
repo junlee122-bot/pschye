@@ -1,0 +1,357 @@
+{
+  "origin": "http://127.0.0.1:4409",
+  "sourceCommit": "bbcf10eed6a359fc54d37b16caa9f533b939dcf5",
+  "checkpoint": "native-village-near-kazrin-storage.json",
+  "steps": [
+    {
+      "label": "initial",
+      "checkedAt": "2026-09-15T01:50:36.750Z",
+      "data": {
+        "xy": {
+          "x": 758,
+          "y": 382
+        },
+        "profile": {
+          "version": 10,
+          "commanderName": "라온",
+          "day": 1,
+          "commandLevel": 1,
+          "renown": 0,
+          "supplies": 320,
+          "intel": 40,
+          "relics": 0,
+          "commandActions": 3,
+          "activeSquad": [
+            "hadori",
+            "raon",
+            "kazrin",
+            "kain",
+            "leo",
+            "chris"
+          ],
+          "inventory": [
+            "breaker-gauntlet",
+            "petal-training-blade",
+            "silver-orbit-lance",
+            "valder-heir-spear",
+            "gate-wraps",
+            "equilibrium-sabre",
+            "field-kit"
+          ],
+          "factions": {
+            "empire": 20,
+            "civilians": 10,
+            "cursed": 0,
+            "cheshi": -10
+          },
+          "completedDispatches": [],
+          "activityCounts": {},
+          "bondLevels": {},
+          "dailyCommandStats": {
+            "training": 0,
+            "bond": 0,
+            "field": 0
+          },
+          "dailyRewardClaimed": false,
+          "careerStats": {
+            "missions": 0,
+            "trainings": 0,
+            "bonds": 0,
+            "fieldActivities": 0,
+            "crafts": 0,
+            "dispatches": 0,
+            "perfectDays": 0
+          },
+          "claimedStrategicOrders": [],
+          "completedMissions": [],
+          "missionGrades": {},
+          "heroProgress": {
+            "hadori": {
+              "level": 3,
+              "xp": 0,
+              "bond": 12,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "breaker-gauntlet",
+                "field-kit"
+              ]
+            },
+            "raon": {
+              "level": 3,
+              "xp": 8,
+              "bond": 15,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "petal-training-blade",
+                "field-kit"
+              ]
+            },
+            "kazrin": {
+              "level": 2,
+              "xp": 16,
+              "bond": 18,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "silver-orbit-lance",
+                "field-kit"
+              ]
+            },
+            "kain": {
+              "level": 2,
+              "xp": 24,
+              "bond": 21,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "valder-heir-spear",
+                "field-kit"
+              ]
+            },
+            "leo": {
+              "level": 2,
+              "xp": 32,
+              "bond": 24,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "gate-wraps",
+                "field-kit"
+              ]
+            },
+            "chris": {
+              "level": 2,
+              "xp": 40,
+              "bond": 27,
+              "skillPoints": 1,
+              "unlockedNodes": [
+                "foundation"
+              ],
+              "equipment": [
+                "equilibrium-sabre",
+                "field-kit"
+              ]
+            }
+          },
+          "facilities": {
+            "training": 1,
+            "archive": 1,
+            "infirmary": 1,
+            "forge": 0,
+            "violet": 0
+          },
+          "unlockedRecords": [
+            "official-salvation"
+          ],
+          "activityLog": [
+            "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+          ],
+          "raonPath": {
+            "compassion": 0,
+            "insight": 0,
+            "resolve": 0
+          },
+          "originStory": {
+            "currentSceneId": "village-dawn",
+            "completed": false,
+            "completedSceneIds": [],
+            "choices": {},
+            "flags": [],
+            "selectionScore": 0
+          },
+          "storyChoices": {},
+          "narrativeChecks": {},
+          "relationshipMemories": {},
+          "world": {
+            "minutes": 360,
+            "phase": "dawn",
+            "weather": "clear",
+            "currentRegion": "frontier-village",
+            "discoveredLocations": [
+              "frontier-village"
+            ],
+            "npcMemories": {},
+            "village": {
+              "playerX": 758,
+              "playerY": 382,
+              "visitedLandmarks": [
+                "마을 공동회관",
+                "폐풍차 훈련터"
+              ],
+              "completedErrands": []
+            },
+            "headquartersLayout": [
+              {
+                "slot": 0,
+                "facilityId": "training"
+              },
+              {
+                "slot": 1,
+                "facilityId": "archive"
+              },
+              {
+                "slot": 2,
+                "facilityId": "infirmary"
+              },
+              {
+                "slot": 3,
+                "facilityId": "forge"
+              },
+              {
+                "slot": 4,
+                "facilityId": "violet"
+              }
+            ],
+            "eventJournal": [
+              "새 장소 발견 · 폐풍차 훈련터",
+              "새 장소 발견 · 마을 공동회관",
+              "A.S. 84 · 변방 마을의 새벽이 밝았다."
+            ]
+          },
+          "_savedAt": "2026-09-15T01:50:36.464Z"
+        },
+        "metrics": {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "document": {
+            "client": 390,
+            "scroll": 390
+          },
+          "body": {
+            "client": 390,
+            "scroll": 390
+          },
+          "buttons": [
+            {
+              "name": "타이틀",
+              "x": 26,
+              "y": 23,
+              "width": 76.15625,
+              "height": 36
+            },
+            {
+              "name": "위로 이동",
+              "x": 271,
+              "y": 731,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "왼쪽으로 이동",
+              "x": 221,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "아래로 이동",
+              "x": 271,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "오른쪽으로 이동",
+              "x": 321,
+              "y": 781,
+              "width": 45,
+              "height": 45
+            },
+            {
+              "name": "E소꿉친구 · 창술 신동카즈린에게 오늘의 선발 이야기를 듣는다",
+              "x": 15,
+              "y": 679.2052001953125,
+              "width": 360,
+              "height": 58
+            }
+          ]
+        },
+        "ax": "- main:\n  - button \"타이틀\":\n    - img\n    - text: 타이틀\n  - strong: 이름 없는 변방 마을\n  - strong: 새벽\n  - complementary:\n    - img\n    - text: 현재 목표\n    - strong: 훈련장의 카즈린을 찾아간다\n    - paragraph:\n      - img\n      - text: 폐풍차 훈련터\n    - text: 마을 서막 1 / 5\n  - button \"위로 이동\":\n    - img\n  - button \"왼쪽으로 이동\":\n    - img\n  - button \"아래로 이동\":\n    - img\n  - button \"오른쪽으로 이동\":\n    - img\n  - button \"E 소꿉친구 · 창술 신동 카즈린에게 오늘의 선발 이야기를 듣는다\":\n    - text: E 소꿉친구 · 창술 신동\n    - strong: 카즈린에게 오늘의 선발 이야기를 듣는다"
+      }
+    },
+    {
+      "label": "mouse-hold-release-outside",
+      "checkedAt": "2026-09-15T01:50:38.484Z",
+      "data": {
+        "before": {
+          "x": 758,
+          "y": 382
+        },
+        "released": {
+          "x": 870,
+          "y": 382
+        },
+        "settled": {
+          "x": 870,
+          "y": 382
+        },
+        "pointerType": "mouse",
+        "durationMs": 330,
+        "saved": {
+          "playerX": 870,
+          "playerY": 382,
+          "visitedLandmarks": [
+            "마을 공동회관",
+            "폐풍차 훈련터"
+          ],
+          "completedErrands": []
+        }
+      }
+    },
+    {
+      "label": "synthetic-cancel-handler",
+      "checkedAt": "2026-09-15T01:50:39.832Z",
+      "data": {
+        "cancelBefore": {
+          "x": 814.0000000000001,
+          "y": 382
+        },
+        "cancelled": {
+          "x": 814.0000000000001,
+          "y": 466.00000000000006
+        },
+        "afterCancel": {
+          "x": 814.0000000000001,
+          "y": 466.00000000000006
+        },
+        "method": "actual mouse hold followed by explicitly synthetic pointercancel; not an OS touch cancellation"
+      }
+    },
+    {
+      "label": "failure",
+      "checkedAt": "2026-09-15T01:50:55.066Z",
+      "data": {
+        "message": "locator.tap: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.village-interact-prompt')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"village-interact-prompt\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    27 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying tap action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+        "stack": "locator.tap: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.village-interact-prompt')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"village-interact-prompt\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    27 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying tap action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at <LOCAL_WORKSPACE>\\work\\native-boundary-mobile.mjs:42:52"
+      }
+    },
+    {
+      "label": "cleanup",
+      "checkedAt": "2026-09-15T01:50:56.130Z",
+      "data": {
+        "contextClosed": true,
+        "browserClosed": true,
+        "rootServerUnchanged": true
+      }
+    }
+  ],
+  "logs": [],
+  "requests": [],
+  "screenshots": [
+    "<LOCAL_WORKSPACE>\\work\\native-boundary-mobile-village-390.png"
+  ]
+}

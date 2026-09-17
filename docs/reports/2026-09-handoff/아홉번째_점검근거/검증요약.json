@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-09-15T06:23:12.896Z",
+  "commit": "2981276dc02561711ef31f6d15117a832bf76a7b",
+  "baseCommit": "3f7922abbeabc0ef936ee56f268bc7d394db58db",
+  "workingTreeClean": true,
+  "protectedPathsUnchanged": true,
+  "changedFiles": 58,
+  "syntax": {
+    "fileCount": 12,
+    "errorCount": 0,
+    "hashesMatchFinalSources": true,
+    "unityCompilation": false
+  },
+  "launcher": {
+    "hashMatchesFinalSource": true,
+    "parserErrors": 0,
+    "probeExit": 0,
+    "missingEditorExit": 1,
+    "editorFound": false
+  },
+  "model": {
+    "hashesMatchFinalSources": true,
+    "sourceSha256": "68f3a381d9a5d6bbc8845d22c8aa747f35223e6a6344aadd079ac7361e4fbed2",
+    "outputSha256": "d8fe6ac954d634bafd36b67428b071bdd141b69cd80032df89fa8795d2e7ad20",
+    "imageCount": 22
+  },
+  "unity": {
+    "packagesResolved": false,
+    "compiled": false,
+    "editMode": {
+      "authored": 21,
+      "executed": false
+    },
+    "playMode": {
+      "authored": 13,
+      "executed": false
+    },
+    "manuallyPlayed": false,
+    "playerBuilt": false
+  },
+  "status": "source-prepared; Unity validation pending",
+  "evidence": [
+    {
+      "file": "ninth-csharp-syntax.json",
+      "sha256": "d2516092123df69fd7ae387f8cc3d12fe5f15036890d7b4419e6ddcde763f016"
+    },
+    {
+      "file": "ninth-independent-review.md",
+      "sha256": "519d496f47e1fc5966f3fea3e4e06dd3a60f35a11ea1530e468118fc69d82869"
+    },
+    {
+      "file": "ninth-movement-implementation.md",
+      "sha256": "4c9e8ba8a1acec7ce691ef61319105403852a9461a40e32c9efba3054187c153"
+    },
+    {
+      "file": "ninth-raon-asset-audit.json",
+      "sha256": "0f6e3f6aaa9d7c545834878126b57ee73a3bf5f020dcd240aec6e3269559dcd5"
+    },
+    {
+      "file": "ninth-raon-asset-audit.md",
+      "sha256": "735e80187ab8e24da104ee6f6295bc21790bd4ebbc3bf615505ff921b4cd3567"
+    },
+    {
+      "file": "ninth-runtime-audit.md",
+      "sha256": "77b6cf503f6884924157744730cbfa530459f6a4a15c1248003656822e3753ad"
+    },
+    {
+      "file": "ninth-static-audit.json",
+      "sha256": "f5245fa211fa139429cc5ce7d2ff45a440cbd75bf4633315d1a0396aad686e06"
+    },
+    {
+      "file": "ninth-static-audit.md",
+      "sha256": "7546dbeaa8b7a9318524af94ddd00a2d06adc209bbea88708d2c915c7492b7ed"
+    },
+    {
+      "file": "ninth-unity-probe.json",
+      "sha256": "f4dbe8051388572a9ea281623e998ed0afc25f2b217bb7090b4520201ad2ca4a"
+    },
+    {
+      "file": "raon-unity-runtime-conversion.json",
+      "sha256": "8b05c7cf2af88a84f63e2d7f61d07fb7d6aef13df390ae9e8435ee9467502093"
+    }
+  ]
+}

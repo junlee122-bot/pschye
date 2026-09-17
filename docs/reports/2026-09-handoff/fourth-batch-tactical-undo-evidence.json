@@ -1,0 +1,202 @@
+{
+  "firstUndoSaved": {
+    "attempt": {
+      "battle": {
+        "carriageHp": 161,
+        "carriageShield": 63,
+        "commandPoints": 3,
+        "enemies": [
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 117,
+            "id": "sky-sniper",
+            "revealed": false,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 66,
+            "id": "rifleman-a",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 66,
+            "id": "rifleman-b",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 82,
+            "id": "wing-lancer",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          }
+        ],
+        "heroes": [
+          {
+            "acted": true,
+            "exposed": 0,
+            "hp": 197,
+            "id": "hadori",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 139,
+            "id": "raon",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 142,
+            "id": "kazrin",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 152,
+            "id": "kain",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 174,
+            "id": "leo",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 131,
+            "id": "chris",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          }
+        ],
+        "morale": 32,
+        "outcome": "active",
+        "round": 1
+      },
+      "difficulty": "story",
+      "doctrine": "shelter",
+      "frozenHeroes": [
+        {
+          "armor": 24,
+          "id": "hadori",
+          "maxHp": 197
+        },
+        {
+          "armor": 12,
+          "id": "raon",
+          "maxHp": 139
+        },
+        {
+          "armor": 15,
+          "id": "kazrin",
+          "maxHp": 142
+        },
+        {
+          "armor": 16,
+          "id": "kain",
+          "maxHp": 152
+        },
+        {
+          "armor": 21,
+          "id": "leo",
+          "maxHp": 174
+        },
+        {
+          "armor": 11,
+          "id": "chris",
+          "maxHp": 131
+        }
+      ],
+      "id": "fixture-tactical",
+      "missionId": "grey-bridge-escort",
+      "mode": "tactical",
+      "raonStance": "resolve",
+      "settled": false,
+      "tactical": {
+        "historyDepth": 1,
+        "selectedHeroId": "raon",
+        "selectedSkillId": "sixteen-petals"
+      }
+    },
+    "careerMissions": 0,
+    "completedMissions": [],
+    "day": 1,
+    "progression": {
+      "chris": {
+        "bond": 27,
+        "level": 2,
+        "xp": 40
+      },
+      "hadori": {
+        "bond": 12,
+        "level": 3,
+        "xp": 0
+      },
+      "kain": {
+        "bond": 21,
+        "level": 2,
+        "xp": 24
+      },
+      "kazrin": {
+        "bond": 18,
+        "level": 2,
+        "xp": 16
+      },
+      "leo": {
+        "bond": 24,
+        "level": 2,
+        "xp": 32
+      },
+      "raon": {
+        "bond": 15,
+        "level": 3,
+        "xp": 8
+      }
+    },
+    "resources": {
+      "intel": 40,
+      "relics": 0,
+      "renown": 0,
+      "supplies": 320
+    }
+  },
+  "afterReloadObserved": {
+    "commandPoints": 3,
+    "morale": 32,
+    "hiddenSniper": true,
+    "undoAvailable": true
+  },
+  "secondUndoExitObserved": {
+    "carriageShield": 26
+  }
+}

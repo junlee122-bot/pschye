@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-09-15T02:44:09.424Z",
+  "entry": "assets/index-DEx4xGQm.js",
+  "entrySha256": "f9c13d5dcce018ac7fad5012722a5c83460ec5d034b3af7ba985927c6b9dc9b6",
+  "publicFilesIdentical": 2181,
+  "publicBytes": 262416491,
+  "allManifestFilesPresent": true,
+  "standaloneDistPublicCopiesRestored": true,
+  "compiledCanvasCorrectionsPresent": true,
+  "largePhaserChunkWarningUnchanged": true,
+  "servingNote": "4409 still maps four public URL prefixes to identical public originals; every corresponding standalone dist public file has now been restored and SHA-256 compared."
+}

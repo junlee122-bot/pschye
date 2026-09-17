@@ -1,0 +1,35 @@
+{
+  "requestedSurface": "iab",
+  "iabResult": "Browser is not available: iab",
+  "availableSurface": "Edge id1",
+  "tabId": "1908172962",
+  "origin": "http://127.0.0.1:4406",
+  "mouse": {
+    "event": {
+      "count": 1,
+      "detail": 1,
+      "target": "mouse",
+      "trusted": true,
+      "type": "click"
+    },
+    "keyboard": "키보드: 0",
+    "mouse": "마우스: 1"
+  },
+  "keyboard": {
+    "event": {
+      "count": 1,
+      "detail": 0,
+      "target": "keyboard",
+      "trusted": true,
+      "type": "click"
+    },
+    "keyboard": "키보드: 1",
+    "mouse": "마우스: 1"
+  },
+  "warnErrorLogs": {
+    "limit": 12,
+    "entries": []
+  },
+  "inputTransportErrors": [],
+  "scope": "Static HTML only; actual trusted click and Tab/Enter. No game/framework/storage/third-party assets."
+}

@@ -1,0 +1,1026 @@
+{
+  "version": 10,
+  "commanderName": "라온",
+  "day": 1,
+  "commandLevel": 1,
+  "renown": 0,
+  "supplies": 320,
+  "intel": 40,
+  "relics": 0,
+  "commandActions": 3,
+  "activeSquad": [
+    "hadori",
+    "raon",
+    "kazrin",
+    "chris"
+  ],
+  "inventory": [
+    "breaker-gauntlet",
+    "petal-training-blade",
+    "silver-orbit-lance",
+    "valder-heir-spear",
+    "gate-wraps",
+    "equilibrium-sabre",
+    "field-kit"
+  ],
+  "factions": {
+    "empire": 20,
+    "civilians": 10,
+    "cursed": 0,
+    "cheshi": -10
+  },
+  "completedDispatches": [],
+  "activityCounts": {},
+  "bondLevels": {
+    "kazrin:raon": 16,
+    "kain:raon": 8,
+    "leo:raon": 4,
+    "hadori:raon": 16
+  },
+  "dailyCommandStats": {
+    "training": 0,
+    "bond": 0,
+    "field": 0
+  },
+  "dailyRewardClaimed": false,
+  "careerStats": {
+    "missions": 0,
+    "trainings": 0,
+    "bonds": 0,
+    "fieldActivities": 0,
+    "crafts": 0,
+    "dispatches": 0,
+    "perfectDays": 0
+  },
+  "claimedStrategicOrders": [],
+  "completedMissions": [],
+  "missionGrades": {},
+  "heroProgress": {
+    "hadori": {
+      "level": 3,
+      "xp": 0,
+      "bond": 12,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "breaker-gauntlet",
+        "field-kit"
+      ]
+    },
+    "raon": {
+      "level": 3,
+      "xp": 8,
+      "bond": 15,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "petal-training-blade",
+        "field-kit"
+      ]
+    },
+    "kazrin": {
+      "level": 2,
+      "xp": 16,
+      "bond": 18,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "silver-orbit-lance",
+        "field-kit"
+      ]
+    },
+    "kain": {
+      "level": 2,
+      "xp": 24,
+      "bond": 21,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "valder-heir-spear",
+        "field-kit"
+      ]
+    },
+    "leo": {
+      "level": 2,
+      "xp": 32,
+      "bond": 24,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "gate-wraps",
+        "field-kit"
+      ]
+    },
+    "chris": {
+      "level": 2,
+      "xp": 40,
+      "bond": 27,
+      "skillPoints": 1,
+      "unlockedNodes": [
+        "foundation"
+      ],
+      "equipment": [
+        "equilibrium-sabre",
+        "field-kit"
+      ]
+    }
+  },
+  "facilities": {
+    "training": 1,
+    "archive": 1,
+    "infirmary": 1,
+    "forge": 0,
+    "violet": 0
+  },
+  "unlockedRecords": [
+    "official-salvation",
+    "psyche-generation-07",
+    "raon-origin"
+  ],
+  "activityLog": [
+    "레오을(를) 예비대로 전환했다.",
+    "카인을(를) 예비대로 전환했다.",
+    "라온은 통찰의 답을 선택했다 · 뜻을 온전히 전했다.",
+    "프시케 제7기 입단 · 라온이 제2조장으로 첫 작전을 배정받았다.",
+    "여섯 명의 조장 · 라온은 통찰의 선택을 남겼다.",
+    "한 방 · 라온은 통찰의 선택을 남겼다.",
+    "조장 선발 대결 · 마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다.",
+    "따라온 사람을 넘어서는 순간 · 라온은 통찰의 선택을 남겼다.",
+    "조장 선발 대결 · 카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다.",
+    "재능이 예상하지 못한 검 · 라온은 통찰의 선택을 남겼다.",
+    "열여섯 꽃잎 수련 완료 · 훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다.",
+    "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+    "라면을 끓이는 현자 · 라온은 통찰의 선택을 남겼다.",
+    "발전 보류 · 라온은 통찰의 선택을 남겼다.",
+    "폐광 구조 완료 · 라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다.",
+    "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다."
+  ],
+  "raonPath": {
+    "compassion": 0,
+    "insight": 16,
+    "resolve": 0
+  },
+  "originStory": {
+    "currentSceneId": "seventh-oath",
+    "completed": true,
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night",
+      "capital-gate",
+      "aptitude-exam",
+      "field-exam",
+      "suspended-candidate",
+      "maru-door",
+      "sixteen-petals",
+      "captain-trials",
+      "kazrin-duel",
+      "hadori-wall",
+      "seventh-oath"
+    ],
+    "choices": {
+      "village-dawn": "watch-kazrin",
+      "windmill-trouble": "read-shoulder",
+      "river-incident": "mark-safe-route",
+      "recruiters-arrive": "learn-what-i-saw",
+      "departure-night": "promise-question",
+      "capital-gate": "identify-poison",
+      "aptitude-exam": "study-sight",
+      "field-exam": "split-route",
+      "suspended-candidate": "trace-forbidden-style",
+      "maru-door": "challenge-analysis",
+      "sixteen-petals": "distribute-weight",
+      "captain-trials": "use-sixteenth-gap",
+      "kazrin-duel": "change-old-rhythm",
+      "hadori-wall": "ask-what-she-saw",
+      "seventh-oath": "oath-question"
+    },
+    "flags": [
+      "observed-ann-style",
+      "read-kain-spear",
+      "awakened-route-sight",
+      "motive-truth",
+      "promise-question-history",
+      "found-selection-sabotage",
+      "studied-route-sight",
+      "field-split-command",
+      "traced-haechan-style",
+      "read-maru-hesitation",
+      "petals-distributed",
+      "countered-kain-perfectly",
+      "outgrew-kazrin-memory",
+      "learned-from-instant-loss",
+      "oath-question"
+    ],
+    "selectionScore": 72,
+    "villageRescue": {
+      "phase": "complete",
+      "choiceId": "mark-safe-route",
+      "attempt": 1,
+      "turn": 9,
+      "hp": 2,
+      "x": 0,
+      "y": 1,
+      "threatRow": 0,
+      "progress": 3,
+      "markedColumns": [
+        1,
+        2,
+        3
+      ],
+      "log": [
+        "카즈린과 모두의 귀환을 확인했다.",
+        "아이와 라온이 둑으로 빠져나왔다. 마을의 카즈린에게 돌아가 확인하자.",
+        "라온이 1열 2행으로 이동했다.",
+        "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+        "라온이 2열 2행으로 이동했다.",
+        "라온이 3열 2행으로 이동했다.",
+        "4열에 안전한 발판을 표시했다. (3/3)",
+        "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+        "라온이 4열 2행으로 이동했다.",
+        "3열에 안전한 발판을 표시했다. (2/3)",
+        "라온이 3열 2행으로 이동했다.",
+        "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+        "2열에 안전한 발판을 표시했다. (1/3)",
+        "라온이 2열 2행으로 이동했다.",
+        "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+      ]
+    },
+    "fieldExam": {
+      "phase": "complete",
+      "choiceId": "split-route",
+      "attempt": 1,
+      "turn": 3,
+      "integrity": 2,
+      "left": 3,
+      "right": 3,
+      "log": [
+        "지원자들과 모두 함께 폐광에서 철수했다.",
+        "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+        "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+        "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ]
+    },
+    "petalTraining": {
+      "phase": "complete",
+      "choiceId": "distribute-weight",
+      "attempt": 1,
+      "turn": 6,
+      "petals": 16,
+      "burden": 6,
+      "log": [
+        "마루 앞에서 이번 수련을 마무리했다.",
+        "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+        "6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8",
+        "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+        "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+        "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+        "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+        "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+        "검로와 몸의 부담을 살피며 수련을 시작했다."
+      ]
+    },
+    "captainTrials": {
+      "captain-trials": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "complete",
+        "attempt": 1,
+        "turn": 6,
+        "poise": 6,
+        "breath": 1,
+        "progress": 3,
+        "opening": false,
+        "log": [
+          "대결의 결과를 확인했다.",
+          "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "4번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      },
+      "kazrin-duel": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "complete",
+        "attempt": 1,
+        "turn": 9,
+        "poise": 6,
+        "breath": 1,
+        "progress": 3,
+        "opening": false,
+        "log": [
+          "대결의 결과를 확인했다.",
+          "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+          "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+          "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "7번째 동작 · 비켜딛기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      },
+      "hadori-wall": {
+        "sceneId": "hadori-wall",
+        "phase": "complete",
+        "attempt": 1,
+        "turn": 1,
+        "poise": 0,
+        "breath": 4,
+        "progress": 0,
+        "opening": false,
+        "log": [
+          "하도리와의 대결이 끝났음을 확인했다. 이제 패배 뒤의 말을 고를 차례다.",
+          "첫발을 내디딘 순간, 하도리의 한 방에 대결이 끝났다.",
+          "하도리가 원형장에서 라온을 기다린다."
+        ]
+      }
+    }
+  },
+  "storyChoices": {
+    "grey-bridge-escort": "insight"
+  },
+  "narrativeChecks": {
+    "grey-bridge-escort": {
+      "choiceId": "insight",
+      "chance": 92,
+      "roll": 66,
+      "outcome": "clear"
+    }
+  },
+  "relationshipMemories": {
+    "grey-bridge-escort": {
+      "missionId": "grey-bridge-escort",
+      "companionId": "hadori",
+      "choiceId": "insight",
+      "text": "하도리은(는) 라온이 보이는 적보다 그 뒤의 이유를 먼저 의심했다.",
+      "reaction": "동료는 라온이 자신이 놓친 틈까지 읽었다고 인정했다.",
+      "outcome": "clear"
+    }
+  },
+  "world": {
+    "minutes": 360,
+    "phase": "dawn",
+    "weather": "clear",
+    "currentRegion": "frontier-village",
+    "discoveredLocations": [
+      "frontier-village"
+    ],
+    "npcMemories": {
+      "kazrin": {
+        "affinity": 16,
+        "lastChoice": "change-old-rhythm",
+        "rememberedFacts": [
+          "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+          "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+          "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+          "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다.",
+          "대결에서 보여 줄 검을 정했다: 카즈린이 기억하는 라온의 박자를 버린다",
+          "마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다."
+        ],
+        "lastSeenDay": 1
+      },
+      "kain": {
+        "affinity": 8,
+        "lastChoice": "use-sixteenth-gap",
+        "rememberedFacts": [
+          "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.",
+          "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다",
+          "카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다."
+        ],
+        "lastSeenDay": 1
+      },
+      "bellatrice": {
+        "affinity": 2,
+        "lastChoice": "learn-what-i-saw",
+        "rememberedFacts": [
+          "이능 적성 검사가 라온의 선발 과정에 추가된다."
+        ],
+        "lastSeenDay": 1
+      },
+      "jinhwon": {
+        "affinity": 4,
+        "lastChoice": "oath-question",
+        "rememberedFacts": [
+          "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다.",
+          "라온은 삭제된 역사를 추적하는 관찰자의 길을 택한다."
+        ],
+        "lastSeenDay": 1
+      },
+      "kangrim": {
+        "affinity": 2,
+        "lastChoice": "study-sight",
+        "rememberedFacts": [
+          "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+        ],
+        "lastSeenDay": 1
+      },
+      "leo": {
+        "affinity": 4,
+        "lastChoice": "split-route",
+        "rememberedFacts": [
+          "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+          "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+        ],
+        "lastSeenDay": 1
+      },
+      "hadori": {
+        "affinity": 8,
+        "lastChoice": "ask-what-she-saw",
+        "rememberedFacts": [
+          "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다.",
+          "하도리는 열두 번째 꽃잎부터 라온의 다리가 무너졌다고 정확히 말해 준다."
+        ],
+        "lastSeenDay": 1
+      },
+      "maru": {
+        "affinity": 4,
+        "lastChoice": "distribute-weight",
+        "rememberedFacts": [
+          "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+          "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+        ],
+        "lastSeenDay": 1
+      }
+    },
+    "village": {
+      "playerX": 982,
+      "playerY": 270,
+      "visitedLandmarks": [
+        "마을 공동회관",
+        "폐풍차 훈련터",
+        "저주받은 수로",
+        "오래된 풍차 언덕"
+      ],
+      "completedErrands": []
+    },
+    "headquartersLayout": [
+      {
+        "slot": 0,
+        "facilityId": "training"
+      },
+      {
+        "slot": 1,
+        "facilityId": "archive"
+      },
+      {
+        "slot": 2,
+        "facilityId": "infirmary"
+      },
+      {
+        "slot": 3,
+        "facilityId": "forge"
+      },
+      {
+        "slot": 4,
+        "facilityId": "violet"
+      }
+    ],
+    "eventJournal": [
+      "jinhwon은(는) 라온의 선택을 기억한다.",
+      "hadori은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "kain은(는) 라온의 선택을 기억한다.",
+      "kain은(는) 라온의 선택을 기억한다.",
+      "maru은(는) 라온의 선택을 기억한다.",
+      "maru은(는) 라온의 선택을 기억한다.",
+      "maru은(는) 라온의 선택을 기억한다.",
+      "hadori은(는) 라온의 선택을 기억한다.",
+      "leo은(는) 라온의 선택을 기억한다.",
+      "leo은(는) 라온의 선택을 기억한다.",
+      "kangrim은(는) 라온의 선택을 기억한다.",
+      "jinhwon은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "새 장소 발견 · 오래된 풍차 언덕",
+      "bellatrice은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "새 장소 발견 · 저주받은 수로",
+      "kain은(는) 라온의 선택을 기억한다.",
+      "kazrin은(는) 라온의 선택을 기억한다.",
+      "새 장소 발견 · 폐풍차 훈련터",
+      "새 장소 발견 · 마을 공동회관",
+      "A.S. 84 · 변방 마을의 새벽이 밝았다."
+    ]
+  },
+  "battleAttempt": {
+    "id": "d1557247-3f1e-4ef1-ac9a-e3683a866fd6",
+    "missionId": "grey-bridge-escort",
+    "doctrine": "counterfire",
+    "difficulty": "standard",
+    "raonStance": "insight",
+    "warPressure": 18,
+    "bondSupport": 16,
+    "heroes": [
+      {
+        "id": "hadori",
+        "name": "하도리",
+        "title": "제1조장 · 전선 지휘",
+        "maxHp": 197,
+        "armor": 24,
+        "art": "/art/portraits/hadori-v1.webp",
+        "accent": "#8ea1ac",
+        "position": {
+          "x": 18,
+          "y": 57
+        },
+        "skills": [
+          {
+            "id": "iron-gate",
+            "name": "철문",
+            "description": "호송 마차 앞에 서서 32의 방벽을 세운다.",
+            "kind": "guard",
+            "power": 37,
+            "morale": 12,
+            "target": "carriage"
+          },
+          {
+            "id": "ground-break",
+            "name": "지반 파쇄",
+            "description": "적 하나를 강타하고 다음 적 행동을 봉쇄한다.",
+            "kind": "damage",
+            "power": 47,
+            "morale": 10,
+            "target": "enemy"
+          }
+        ]
+      },
+      {
+        "id": "raon",
+        "name": "라온",
+        "title": "제2조장 · 미완의 검",
+        "maxHp": 139,
+        "armor": 12,
+        "art": "/art/portraits/raon-v1.webp",
+        "accent": "#cb9150",
+        "position": {
+          "x": 30,
+          "y": 42
+        },
+        "skills": [
+          {
+            "id": "sixteen-petals",
+            "name": "16꽃잎",
+            "description": "마루의 기억에서 복원한 해찬류. 노출된 적에게 더 깊이 파고든다.",
+            "kind": "damage",
+            "power": 53,
+            "morale": 18,
+            "target": "enemy"
+          },
+          {
+            "id": "unfinished-flow",
+            "name": "미완의 유동",
+            "description": "검로를 흩어 모든 확인된 적에게 피해를 준다.",
+            "kind": "area",
+            "power": 34,
+            "morale": 14,
+            "target": "all-enemies"
+          }
+        ]
+      },
+      {
+        "id": "kazrin",
+        "name": "카즈린",
+        "title": "제3조장 · 백은의 창",
+        "maxHp": 142,
+        "armor": 15,
+        "art": "/art/portraits/kazrin-v1.webp",
+        "accent": "#d8d9cf",
+        "position": {
+          "x": 38,
+          "y": 63
+        },
+        "skills": [
+          {
+            "id": "silver-line",
+            "name": "백은 궤도",
+            "description": "방어를 꿰뚫는 정밀한 라티계 앤류 찌르기.",
+            "kind": "damage",
+            "power": 54,
+            "morale": 11,
+            "target": "enemy"
+          },
+          {
+            "id": "guardian-orbit",
+            "name": "호위 궤도",
+            "description": "승리보다 보호를 택해 호송 마차에 24의 방벽을 세운다.",
+            "kind": "guard",
+            "power": 31,
+            "morale": 18,
+            "target": "carriage"
+          }
+        ]
+      },
+      {
+        "id": "chris",
+        "name": "크리스",
+        "title": "제6조장 · 균형검",
+        "maxHp": 131,
+        "armor": 11,
+        "art": "/art/portraits/chris-v1.webp",
+        "accent": "#d4aa64",
+        "position": {
+          "x": 42,
+          "y": 80
+        },
+        "skills": [
+          {
+            "id": "side-read",
+            "name": "측면 유도",
+            "description": "숨은 적을 찾아내고 2중 노출을 남긴다.",
+            "kind": "reveal",
+            "power": 19,
+            "morale": 24,
+            "target": "enemy"
+          },
+          {
+            "id": "equilibrium-blade",
+            "name": "리스트류 균형검",
+            "description": "가볍게 보이지만 빈틈없는 서양식 연속 베기.",
+            "kind": "damage",
+            "power": 42,
+            "morale": 17,
+            "target": "enemy"
+          }
+        ]
+      }
+    ],
+    "mode": "tactical",
+    "settled": false,
+    "battle": {
+      "missionId": "grey-bridge-escort",
+      "difficulty": "standard",
+      "round": 1,
+      "roundLimit": 6,
+      "commandPoints": 1,
+      "morale": 71,
+      "carriageHp": 118,
+      "carriageShield": 0,
+      "heroes": [
+        {
+          "id": "hadori",
+          "hp": 197,
+          "shield": 0,
+          "acted": false,
+          "exposed": 0,
+          "stunned": 0,
+          "revealed": true
+        },
+        {
+          "id": "raon",
+          "hp": 139,
+          "shield": 0,
+          "acted": true,
+          "exposed": 0,
+          "stunned": 0,
+          "revealed": true
+        },
+        {
+          "id": "kazrin",
+          "hp": 142,
+          "shield": 0,
+          "acted": false,
+          "exposed": 0,
+          "stunned": 0,
+          "revealed": true
+        },
+        {
+          "id": "chris",
+          "hp": 131,
+          "shield": 0,
+          "acted": true,
+          "exposed": 0,
+          "stunned": 0,
+          "revealed": true
+        }
+      ],
+      "enemies": [
+        {
+          "id": "sky-sniper",
+          "hp": 68,
+          "shield": 0,
+          "acted": false,
+          "exposed": 2,
+          "stunned": 0,
+          "revealed": true
+        },
+        {
+          "id": "rifleman-a",
+          "hp": 78,
+          "shield": 0,
+          "acted": false,
+          "exposed": 1,
+          "stunned": 0,
+          "revealed": true
+        },
+        {
+          "id": "rifleman-b",
+          "hp": 78,
+          "shield": 0,
+          "acted": false,
+          "exposed": 1,
+          "stunned": 0,
+          "revealed": true
+        },
+        {
+          "id": "wing-lancer",
+          "hp": 96,
+          "shield": 0,
+          "acted": false,
+          "exposed": 1,
+          "stunned": 0,
+          "revealed": true
+        }
+      ],
+      "log": [
+        {
+          "id": 1,
+          "round": 1,
+          "speaker": "작전 기록",
+          "message": "크리스의 제안으로 선행 정찰을 보냈다. 제7기의 사기가 상승한다.",
+          "tone": "story"
+        },
+        {
+          "id": 2,
+          "round": 1,
+          "speaker": "크리스",
+          "message": "측면 유도 — 체시 공중 저격수에게 7 피해.",
+          "tone": "hero"
+        },
+        {
+          "id": 3,
+          "round": 1,
+          "speaker": "라온",
+          "message": "16꽃잎 — 체시 공중 저격수에게 63 피해 · 집중 연계 2.",
+          "tone": "hero"
+        },
+        {
+          "id": 4,
+          "round": 1,
+          "speaker": "체시 공중 저격수",
+          "message": "그 꽃잎… 배신자의 검을 어디서 배웠지?",
+          "tone": "story"
+        }
+      ],
+      "outcome": "active",
+      "finisherUsed": false,
+      "revelationTriggered": true,
+      "focusTargetId": "sky-sniper",
+      "focusChain": [
+        "chris",
+        "raon"
+      ],
+      "breakCount": 0,
+      "raonStance": "insight",
+      "warPressure": 18,
+      "bondSupport": 16
+    },
+    "tactical": {
+      "history": [
+        {
+          "missionId": "grey-bridge-escort",
+          "difficulty": "standard",
+          "round": 1,
+          "roundLimit": 6,
+          "commandPoints": 3,
+          "morale": 29,
+          "carriageHp": 118,
+          "carriageShield": 0,
+          "heroes": [
+            {
+              "id": "hadori",
+              "hp": 197,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "raon",
+              "hp": 139,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "kazrin",
+              "hp": 142,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "chris",
+              "hp": 131,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            }
+          ],
+          "enemies": [
+            {
+              "id": "sky-sniper",
+              "hp": 138,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": false
+            },
+            {
+              "id": "rifleman-a",
+              "hp": 78,
+              "shield": 0,
+              "acted": false,
+              "exposed": 1,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "rifleman-b",
+              "hp": 78,
+              "shield": 0,
+              "acted": false,
+              "exposed": 1,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "wing-lancer",
+              "hp": 96,
+              "shield": 0,
+              "acted": false,
+              "exposed": 1,
+              "stunned": 0,
+              "revealed": true
+            }
+          ],
+          "log": [
+            {
+              "id": 1,
+              "round": 1,
+              "speaker": "작전 기록",
+              "message": "크리스의 제안으로 선행 정찰을 보냈다. 제7기의 사기가 상승한다.",
+              "tone": "story"
+            }
+          ],
+          "outcome": "active",
+          "finisherUsed": false,
+          "revelationTriggered": false,
+          "focusChain": [],
+          "breakCount": 0,
+          "raonStance": "insight",
+          "warPressure": 18,
+          "bondSupport": 16
+        },
+        {
+          "missionId": "grey-bridge-escort",
+          "difficulty": "standard",
+          "round": 1,
+          "roundLimit": 6,
+          "commandPoints": 2,
+          "morale": 53,
+          "carriageHp": 118,
+          "carriageShield": 0,
+          "heroes": [
+            {
+              "id": "hadori",
+              "hp": 197,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "raon",
+              "hp": 139,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "kazrin",
+              "hp": 142,
+              "shield": 0,
+              "acted": false,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "chris",
+              "hp": 131,
+              "shield": 0,
+              "acted": true,
+              "exposed": 0,
+              "stunned": 0,
+              "revealed": true
+            }
+          ],
+          "enemies": [
+            {
+              "id": "sky-sniper",
+              "hp": 131,
+              "shield": 0,
+              "acted": false,
+              "exposed": 2,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "rifleman-a",
+              "hp": 78,
+              "shield": 0,
+              "acted": false,
+              "exposed": 1,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "rifleman-b",
+              "hp": 78,
+              "shield": 0,
+              "acted": false,
+              "exposed": 1,
+              "stunned": 0,
+              "revealed": true
+            },
+            {
+              "id": "wing-lancer",
+              "hp": 96,
+              "shield": 0,
+              "acted": false,
+              "exposed": 1,
+              "stunned": 0,
+              "revealed": true
+            }
+          ],
+          "log": [
+            {
+              "id": 1,
+              "round": 1,
+              "speaker": "작전 기록",
+              "message": "크리스의 제안으로 선행 정찰을 보냈다. 제7기의 사기가 상승한다.",
+              "tone": "story"
+            },
+            {
+              "id": 2,
+              "round": 1,
+              "speaker": "크리스",
+              "message": "측면 유도 — 체시 공중 저격수에게 7 피해.",
+              "tone": "hero"
+            }
+          ],
+          "outcome": "active",
+          "finisherUsed": false,
+          "revelationTriggered": false,
+          "focusTargetId": "sky-sniper",
+          "focusChain": [
+            "chris"
+          ],
+          "breakCount": 0,
+          "raonStance": "insight",
+          "warPressure": 18,
+          "bondSupport": 16
+        }
+      ],
+      "selectedHeroId": "hadori",
+      "selectedSkillId": "iron-gate"
+    }
+  },
+  "_savedAt": "2026-09-15T02:41:57.699Z"
+}

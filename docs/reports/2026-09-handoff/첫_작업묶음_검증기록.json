@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-09-12T04:55:25.837Z",
+  "repository": "<LOCAL_REPOSITORY>",
+  "baselineCommit": "4ddf22bc97bc8bf9556ba635cb04c86ff5760087",
+  "implementationCommit": "c74e47d0efadd0d420c8ea1b1044e7f14cf1c32c",
+  "trackedWorkingTreeClean": true,
+  "tests": {
+    "passed": 130,
+    "failed": 0,
+    "files": 10
+  },
+  "checks": {
+    "typescript": "passed",
+    "eslint": "passed",
+    "productionBuild": "passed",
+    "diffWhitespace": "passed"
+  },
+  "browserVerification": "Incomplete: browser automation transport timeout prevented interactive and mobile verification.",
+  "buildWarning": "Existing Phaser and model-viewer chunks exceed the Vite 500 kB warning threshold.",
+  "remotePush": false,
+  "backup": {
+    "file": "<LOCAL_WORKSPACE>\\outputs\\backups\\pschye-before-first-fixes.zip",
+    "bytes": 547523780,
+    "verification": {
+      "archive": "<LOCAL_WORKSPACE>\\outputs\\backups\\pschye-before-first-fixes.zip",
+      "files": 2548,
+      "uncompressedBytes": 630228883,
+      "sha256": "09eee08aba451b0c227218bf8a0416a6d454b374b55659a8712e03d5e77b102e",
+      "allFilesMatchOriginal": true,
+      "excludedReinstallableDirectories": [
+        ".git",
+        ".tmp",
+        ".tools",
+        "dist",
+        "node_modules",
+        "tmp"
+      ]
+    }
+  }
+}

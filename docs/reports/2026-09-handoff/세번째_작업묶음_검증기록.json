@@ -1,0 +1,69 @@
+{
+  "verifiedAt": "2026-09-14T10:38:11.203Z",
+  "commit": "2b9df5d5190c457a26d3d8a3385c0eaad23e4e4c",
+  "previous": "ebdc906b1d34aa8812bf859c80a5ca55a35e8d36",
+  "files": 14,
+  "workingTreeClean": true,
+  "sourceCanonUnchanged": true,
+  "tests": {
+    "passed": 185,
+    "files": 15
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "build": {
+    "checkedAt": "2026-09-14T10:29:33.067Z",
+    "productionEntry": "assets/index-BneE8KT6.js",
+    "rescueEntry": "assets/VillageRescueEncounter-DZb6wSSx.js",
+    "authorChunksAbsent": true,
+    "chunks": [
+      "_VillagePrologue-CzsfmA2_.js",
+      "_VillagePrologue-DpY55hrw.css",
+      "_icons-DXLbgB-t.js",
+      "_phaser-cpA8IgT_.js",
+      "_phaserRuntime-DZUgS_ig.js",
+      "_react-Shs5Id66.js",
+      "index.html",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx",
+      "src/components/VillageRescueEncounter.tsx"
+    ]
+  },
+  "browser": {
+    "verifiedCodeCommit": "d83c9d25cf5d3fc30c1ed1feb3478c9ecd6f686f",
+    "finalCommitDifference": "Verification checklist documentation only; application source unchanged.",
+    "isolatedOrigins": [
+      "http://127.0.0.1:4395",
+      "http://127.0.0.1:4396"
+    ],
+    "passed": [
+      "Previous batch: switch from progressed isolated slot to empty slot, showing only Raon and locking pre-graduation menus",
+      "Actual right button plus two ArrowRight inputs yield turn 3, HP 4, row 2 / column 4",
+      "Browser reload restores the same turn, HP, position, progress and log",
+      "390x844 viewport: all 15 tiles visible, scrollable actions, no horizontal overflow",
+      "Three E inputs complete compassion rescue, disable assist and show the child safe",
+      "Three ArrowLeft inputs trigger actual withdrawal and render the Phaser return village with Kazrin objective"
+    ],
+    "remainingChecks": [
+      "Full journey from fresh village through dialogue and all three choices",
+      "Walk to Kazrin, return confirmation and scene advance in browser",
+      "Return-position reload, dialogue keyboard lock, failure/retry in browser",
+      "Other two choices, 320px viewport and sustained mobile hold controls",
+      "Prior action battle mobile onboarding, grown/six-person battle and mode switching"
+    ],
+    "summary": "실제 버튼·키보드 3행동 후 새로고침 복원, 390px 가로 넘침 없음, 연민 구출·철수 후 실제 마을 지도와 귀환 목표 표시를 확인했다. 이전 묶음의 빈 슬롯 전환·라온만 표시되는 도감·입단 전 메뉴 잠김도 확인했다.",
+    "remaining": "카즈린까지 도보 귀환·최종 확인·다음 장면 전환, 다른 두 선택과 실패·재시도의 실제 화면 검증. 귀환 도중 브라우저 자동화 연결이 끊겨 이 부분은 자동 테스트와 코드 검토까지만 완료했다.",
+    "interruption": "Debugger is not attached to the tab: two consecutive CUA failures during return walk. Viewport reset also failed; no other tabs changed.",
+    "serversStopped": true,
+    "screenshots": [
+      "수로구출_모바일390.png",
+      "수로귀환_모바일390.png"
+    ]
+  },
+  "remotePush": false
+}

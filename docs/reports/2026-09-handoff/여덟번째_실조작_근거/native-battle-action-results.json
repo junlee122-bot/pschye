@@ -1,0 +1,241 @@
+{
+  "scope": "Actual action movement/orders/pause/reload, enemy-caused defeat, retry and mode switch",
+  "origin": "http://127.0.0.1:4409",
+  "events": [
+    {
+      "at": "2026-09-15T02:37:15.935Z",
+      "label": "Actual action runtime started",
+      "id": "c302cfdf-04fc-421c-9988-bf53eab02db4",
+      "mode": "action",
+      "outcome": "active",
+      "round": 1,
+      "elapsed": 0,
+      "hp": 139,
+      "objectiveHp": 118,
+      "player": {
+        "x": 330,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 100,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 0
+      }
+    },
+    {
+      "at": "2026-09-15T02:37:20.599Z",
+      "label": "Action movement and remaining timers restored exactly",
+      "id": "c302cfdf-04fc-421c-9988-bf53eab02db4",
+      "mode": "action",
+      "outcome": "active",
+      "round": 1,
+      "elapsed": 0.9233066666046778,
+      "hp": 139,
+      "objectiveHp": 118,
+      "player": {
+        "x": 410.2260666853588,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 100,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 8546.050000166893
+      }
+    },
+    {
+      "at": "2026-09-15T02:37:25.810Z",
+      "label": "Enemy-only live interval",
+      "id": "c302cfdf-04fc-421c-9988-bf53eab02db4",
+      "mode": "action",
+      "outcome": "active",
+      "round": 1,
+      "elapsed": 4.957609999179838,
+      "hp": 123,
+      "objectiveHp": 118,
+      "player": {
+        "x": 410.2260666853588,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 84.0696000001907,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 4511.746667591733
+      }
+    },
+    {
+      "at": "2026-09-15T02:37:30.856Z",
+      "label": "Enemy-only live interval",
+      "id": "c302cfdf-04fc-421c-9988-bf53eab02db4",
+      "mode": "action",
+      "outcome": "active",
+      "round": 1,
+      "elapsed": 10.002749999141693,
+      "hp": 95,
+      "objectiveHp": 96,
+      "player": {
+        "x": 410.2260666853588,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 82.87999999980924,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 0
+      }
+    },
+    {
+      "at": "2026-09-15T02:37:35.909Z",
+      "label": "Enemy-only live interval",
+      "id": "c302cfdf-04fc-421c-9988-bf53eab02db4",
+      "mode": "action",
+      "outcome": "active",
+      "round": 1,
+      "elapsed": 15.02564999918938,
+      "hp": 39,
+      "objectiveHp": 52,
+      "player": {
+        "x": 410.2260666853588,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 51.06320000019065,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 0
+      }
+    },
+    {
+      "at": "2026-09-15T02:37:41.019Z",
+      "label": "Enemy-only live interval",
+      "id": "c302cfdf-04fc-421c-9988-bf53eab02db4",
+      "mode": "action",
+      "outcome": "defeat",
+      "round": 1,
+      "elapsed": 18.144159999179838,
+      "hp": 0,
+      "objectiveHp": 30,
+      "player": {
+        "x": 410.2260666853588,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 26.011280000114397,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 0
+      }
+    },
+    {
+      "at": "2026-09-15T02:37:43.923Z",
+      "label": "Actual defeat restored; retry creates fresh ID",
+      "id": "f8a8a78b-e95d-46b9-85c6-eebe8cc4235a",
+      "mode": "action",
+      "outcome": "active",
+      "round": 1,
+      "elapsed": 0.14379333315690357,
+      "hp": 139,
+      "objectiveHp": 118,
+      "player": {
+        "x": 330,
+        "y": 365,
+        "facingX": 1,
+        "facingY": 0,
+        "posture": 100,
+        "combo": 0
+      },
+      "orders": {
+        "hadori": 0,
+        "kazrin": 0,
+        "kain": 0,
+        "leo": 0,
+        "chris": 0
+      }
+    }
+  ],
+  "checks": {
+    "mobile390CompanionActualClick": {
+      "buttons": [
+        {
+          "text": "1하도리 · 철문READY",
+          "x": 200,
+          "y": 252,
+          "width": 180,
+          "height": 40
+        },
+        {
+          "text": "2카즈린 · 백은 궤도READY",
+          "x": 200,
+          "y": 297,
+          "width": 180,
+          "height": 40
+        },
+        {
+          "text": "3카인 · 결투 표식READY",
+          "x": 200,
+          "y": 342,
+          "width": 180,
+          "height": 40
+        },
+        {
+          "text": "4레오 · 진훤류 수문READY",
+          "x": 200,
+          "y": 387,
+          "width": 180,
+          "height": 40
+        },
+        {
+          "text": "5크리스 · 측면 유도9.0s",
+          "x": 200,
+          "y": 432,
+          "width": 180,
+          "height": 40
+        }
+      ],
+      "viewport": 390,
+      "scrollWidth": 390,
+      "cooldown": 9000
+    },
+    "realMovementOrderParryDodgeInputs": true,
+    "pauseStopsSimulation": true,
+    "actionReloadExactAndGuidePaused": true,
+    "actualEnemyDefeatNoRewards": true,
+    "defeatReloadAndRetryFrozenDeployment": true,
+    "modeCancelKeepsIdAcceptResetsWithFrozenStats": true
+  },
+  "errors": [],
+  "browser": "153.0.4234.32",
+  "status": "passed"
+}

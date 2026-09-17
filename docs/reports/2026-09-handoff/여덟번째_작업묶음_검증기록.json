@@ -1,0 +1,213 @@
+{
+  "checkedAt": "2026-09-15T06:00:02.700Z",
+  "status": "core-journey-verification-complete",
+  "batch": 8,
+  "nextBatch": "9: 3D 조작 기반·라온",
+  "source": {
+    "baseline": "1d07e4fa0f2e0b0692a66c91ee6207240d88f828",
+    "firstFixCommit": "bbcf10eed6a359fc54d37b16caa9f533b939dcf5",
+    "finalCommit": "3f7922abbeabc0ef936ee56f268bc7d394db58db",
+    "workingTreeClean": true,
+    "changedFiles": [
+      "docs/FULL_JOURNEY_VERIFICATION.md",
+      "src/components/CaptainTrialEncounter.test.tsx",
+      "src/components/CaptainTrialEncounter.tsx",
+      "src/components/FieldExamEncounter.test.tsx",
+      "src/components/FieldExamEncounter.tsx",
+      "src/components/PetalTrainingEncounter.test.tsx",
+      "src/components/PetalTrainingEncounter.tsx",
+      "src/components/PhaserBattlefield.tsx"
+    ],
+    "protectedPathsUnchanged": [
+      "docs/source",
+      "public/content/world-bible-v3.1.json",
+      "src/data/originStory.ts",
+      "src/data/grandStory.ts",
+      "src/data/battle.ts",
+      "src/game/actionBattleRules.ts",
+      "src/game/battleEngine.ts",
+      "src/game/heroGrowth.ts"
+    ],
+    "remotePushed": false,
+    "deployed": false
+  },
+  "automated": {
+    "files": 28,
+    "passed": 382,
+    "failed": 0,
+    "addedSinceBatch7": 26,
+    "typecheck": "passed",
+    "fullEslint": "passed",
+    "productionBuild": "passed",
+    "gitDiffCheck": "passed",
+    "raw": "여덟번째_작업묶음_테스트결과.json"
+  },
+  "build": {
+    "checkedAt": "2026-09-15T02:44:09.424Z",
+    "entry": "assets/index-DEx4xGQm.js",
+    "entrySha256": "f9c13d5dcce018ac7fad5012722a5c83460ec5d034b3af7ba985927c6b9dc9b6",
+    "publicFilesIdentical": 2181,
+    "publicBytes": 262416491,
+    "allManifestFilesPresent": true,
+    "standaloneDistPublicCopiesRestored": true,
+    "compiledCanvasCorrectionsPresent": true,
+    "largePhaserChunkWarningUnchanged": true,
+    "servingNote": "4409 still maps four public URL prefixes to identical public originals; every corresponding standalone dist public file has now been restored and SHA-256 compared."
+  },
+  "native": {
+    "origin": "http://127.0.0.1:4409",
+    "browser": "Microsoft Edge 153.0.4234.32",
+    "backend": "User-authorized separate Playwright",
+    "isolatedStorage": true,
+    "originalUserStorageTouched": false,
+    "originJourney": {
+      "originallyFresh": true,
+      "stance": "insight",
+      "resumedOwnActualCheckpointsAfterEnvironmentInterruptions": true,
+      "completedScenes": 15,
+      "choices": 15,
+      "selectionScore": 72,
+      "reached": "first formal mission mode select",
+      "oneUninterruptedSession": false
+    },
+    "alternativeSegments": {
+      "passed": 10,
+      "forms": 8,
+      "river": 2,
+      "checkpointClones": true,
+      "previousScenesWereInsight": true
+    },
+    "boundaryNativeFocusRecheck": {
+      "passed": true,
+      "build": "index-DEx4xGQm.js",
+      "fieldTurns": 2,
+      "petalActions": 6,
+      "captainActions": 4,
+      "allThreeResultConfirmations": true,
+      "programmaticFocusUsed": false,
+      "input": "Tab / ArrowRight / Space / Enter only after normal UI checkpoint restore",
+      "width": 320
+    },
+    "sixPersonTactical": {
+      "status": "passed",
+      "checks": {
+        "visibleCanvasCenterResponds": false,
+        "midBattleReloadExact": true,
+        "undoRestoresEarlierBattle": true,
+        "firstClearRewards": true,
+        "witnessFromCanvasHit": true,
+        "resultReloadAndExitNoDuplicateRewards": true
+      },
+      "initialRuntimeErrors": [
+        {
+          "kind": "pageerror",
+          "message": "this.ease is not a function"
+        },
+        {
+          "kind": "pageerror",
+          "message": "this.ease is not a function"
+        }
+      ],
+      "notFinalCanvasValidation": true
+    },
+    "fourPersonFinalTactical": {
+      "status": "passed",
+      "checks": {
+        "fourAndSixIdenticalGrowthAndCommonHeroStats": true,
+        "heroCanvasCenterResponds": true,
+        "visibleCanvasCenterResponds": true,
+        "midBattleReloadExact": true,
+        "undoRestoresEarlierBattle": true,
+        "firstClearRewards": true,
+        "witnessFromCanvasHit": true,
+        "resultReloadAndExitNoDuplicateRewards": true,
+        "actualReplayVictoryNoSecondRewards": true
+      },
+      "errors": [],
+      "actualReplayWinWithoutSecondRewards": true
+    },
+    "action": {
+      "status": "passed",
+      "checks": {
+        "mobile390CompanionActualClick": {
+          "buttons": [
+            {
+              "text": "1하도리 · 철문READY",
+              "x": 200,
+              "y": 252,
+              "width": 180,
+              "height": 40
+            },
+            {
+              "text": "2카즈린 · 백은 궤도READY",
+              "x": 200,
+              "y": 297,
+              "width": 180,
+              "height": 40
+            },
+            {
+              "text": "3카인 · 결투 표식READY",
+              "x": 200,
+              "y": 342,
+              "width": 180,
+              "height": 40
+            },
+            {
+              "text": "4레오 · 진훤류 수문READY",
+              "x": 200,
+              "y": 387,
+              "width": 180,
+              "height": 40
+            },
+            {
+              "text": "5크리스 · 측면 유도9.0s",
+              "x": 200,
+              "y": 432,
+              "width": 180,
+              "height": 40
+            }
+          ],
+          "viewport": 390,
+          "scrollWidth": 390,
+          "cooldown": 9000
+        },
+        "realMovementOrderParryDodgeInputs": true,
+        "pauseStopsSimulation": true,
+        "actionReloadExactAndGuidePaused": true,
+        "actualEnemyDefeatNoRewards": true,
+        "defeatReloadAndRetryFrozenDeployment": true,
+        "modeCancelKeepsIdAcceptResetsWithFrozenStats": true
+      },
+      "errors": []
+    },
+    "browserContextsClosed": true,
+    "staticServerStopped": true
+  },
+  "limitations": [
+    "Physical mobile OS touch hold/cancel and real IME input were not performed.",
+    "Pointer hold/release was mouse; cancel was synthetic; actual touchscreen opened dialogue.",
+    "This fresh native run covers tactical victory and action defeat, not action victory.",
+    "All growth/equipment changes and invalid-squad combinations are covered by rule tests, not exhaustive UI traversal.",
+    "Alternatives and boundary cases cloned normal UI checkpoints; they are not three independent full fresh-game runs.",
+    "Initial CUA failures, disk ENOSPC and harness selector/timing failures are preserved separately from fixed product defects."
+  ],
+  "evidence": {
+    "index": "여덟번째_실조작_근거/README.md",
+    "manifest": "여덟번째_실조작_근거/manifest.json",
+    "files": 199
+  },
+  "finalArtifactChecks": {
+    "checkedAt": "2026-09-15T06:00:46.130Z",
+    "primaryMarkdownLinksExist": true,
+    "serverPorts": [
+      {
+        "port": 4409,
+        "stopped": true
+      },
+      {
+        "port": 4410,
+        "stopped": true
+      }
+    ]
+  }
+}

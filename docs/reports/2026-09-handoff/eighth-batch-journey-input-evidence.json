@@ -1,0 +1,74 @@
+{
+  "status": "ended-with-limitation",
+  "origin": "http://127.0.0.1:4407",
+  "tabId": "1908172964",
+  "sourceBasis": "1d07e4f / index-B3mm0YSY.js / index-CsP1qHx5.css",
+  "main": {
+    "freshSlot": true,
+    "seedUsed": false,
+    "observed": [
+      "title new-game button",
+      "actual new-game click",
+      "village-dawn map and mobile movement controls",
+      "actual two right clicks then downward+right keyboard movement; player moved on map"
+    ],
+    "lastScene": "village-dawn",
+    "firstDialogueReached": false,
+    "error": "Timed out after 2907ms waiting for CDP command Input.dispatchKeyEvent; locator.press on right movement button",
+    "inputPattern": "Multiple sequential locator.press Enter actions within one CUA call; some actions in failing batch may have applied; exact final coordinate not read"
+  },
+  "sameOriginControl": {
+    "url": "http://127.0.0.1:4407/__input-diagnostic",
+    "mouse": {
+      "event": {
+        "count": 1,
+        "detail": 1,
+        "target": "mouse",
+        "trusted": true,
+        "type": "click"
+      },
+      "keyboard": "키보드: 0",
+      "mouse": "마우스: 1"
+    },
+    "keyboard": {
+      "event": {
+        "count": 1,
+        "detail": 0,
+        "target": "keyboard",
+        "trusted": true,
+        "type": "click"
+      },
+      "keyboard": "키보드: 1",
+      "mouse": "마우스: 1"
+    },
+    "inputErrors": [],
+    "interpretation": "Same-tab control input works; does not establish whether prior timeout originated from application workload or intermittent transport."
+  },
+  "warnErrorLogs": {
+    "limit": 20,
+    "entries": []
+  },
+  "cleanup": {
+    "viewportReset": true,
+    "serverSession": 87049,
+    "serverStopped": true,
+    "port4407Closed": true,
+    "userStorageTouched": false,
+    "productSourceOrDistModified": false
+  },
+  "singleInputComparison": {
+    "authorizedByRoot": true,
+    "extraReconnect": false,
+    "pattern": "one movement activation per tool call, next tool call reads DOM",
+    "rightInputs": 3,
+    "upInputs": 7,
+    "successfulInputs": 10,
+    "successfulFollowingDomReads": 9,
+    "lastInputSucceeded": true,
+    "lastDomReadError": "Timed out after 3000ms waiting for CDP command Page.getFrameTree",
+    "lastConfirmedScene": "village-dawn",
+    "firstDialogueReached": false,
+    "coordinateEqualityVerified": false,
+    "decision": "Stop village path after single-input/next-DOM observation also fails; no repeated control test."
+  }
+}

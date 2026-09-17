@@ -1,0 +1,213 @@
+{
+  "startedAt": "2026-09-15T02:32:25.683Z",
+  "origin": "http://127.0.0.1:4409/",
+  "seed": "native-river-incident-before-choice-storage.json",
+  "seedBoundary": "First two prologue scenes were completed through the root agent UI; every alternative choice and subsequent rescue action below is native browser input.",
+  "paths": [
+    {
+      "path": "compassion",
+      "steps": [
+        {
+          "label": "before alternative choice",
+          "sceneId": "river-incident",
+          "score": 5,
+          "paths": {
+            "compassion": 0,
+            "insight": 2,
+            "resolve": 0
+          },
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear"
+          ],
+          "bonds": {
+            "kazrin:raon": 4,
+            "kain:raon": 4
+          },
+          "kazrin": {
+            "affinity": 4,
+            "lastChoice": "watch-kazrin",
+            "rememberedFacts": [
+              "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다."
+            ],
+            "lastSeenDay": 1
+          },
+          "position": {
+            "playerX": 870,
+            "playerY": 522,
+            "visitedLandmarks": [
+              "마을 공동회관",
+              "폐풍차 훈련터",
+              "저주받은 수로"
+            ],
+            "completedErrands": []
+          }
+        },
+        {
+          "label": "choice recorded, result still pending",
+          "sceneId": "river-incident",
+          "rescue": {
+            "phase": "ready",
+            "choiceId": "save-child",
+            "attempt": 0,
+            "turn": 0,
+            "hp": 5,
+            "x": 0,
+            "y": 1,
+            "threatRow": 0,
+            "progress": 0,
+            "markedColumns": [],
+            "log": [
+              "구출 방법을 정했다. 준비되면 수로로 들어가자."
+            ]
+          },
+          "score": 8,
+          "paths": {
+            "compassion": 1,
+            "insight": 2,
+            "resolve": 0
+          },
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear"
+          ],
+          "bonds": {
+            "kazrin:raon": 8,
+            "kain:raon": 4
+          },
+          "kazrin": {
+            "affinity": 8,
+            "lastChoice": "save-child",
+            "rememberedFacts": [
+              "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+              "수로 구출 방법을 정했다: 아이에게 보이는 말로 길을 알려준다"
+            ],
+            "lastSeenDay": 1
+          },
+          "position": {
+            "playerX": 870,
+            "playerY": 522,
+            "visitedLandmarks": [
+              "마을 공동회관",
+              "폐풍차 훈련터",
+              "저주받은 수로"
+            ],
+            "completedErrands": []
+          }
+        }
+      ],
+      "errors": [
+        {
+          "kind": "script",
+          "message": "page.waitForFunction: Timeout 15000ms exceeded.\n    at action (<LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:22:14)\n    at async runPath (<LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:49:36)\n    at async <LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:106:53"
+        }
+      ],
+      "screenshots": [],
+      "completed": false
+    },
+    {
+      "path": "resolve",
+      "steps": [
+        {
+          "label": "before alternative choice",
+          "sceneId": "river-incident",
+          "score": 5,
+          "paths": {
+            "compassion": 0,
+            "insight": 2,
+            "resolve": 0
+          },
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear"
+          ],
+          "bonds": {
+            "kazrin:raon": 4,
+            "kain:raon": 4
+          },
+          "kazrin": {
+            "affinity": 4,
+            "lastChoice": "watch-kazrin",
+            "rememberedFacts": [
+              "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다."
+            ],
+            "lastSeenDay": 1
+          },
+          "position": {
+            "playerX": 870,
+            "playerY": 522,
+            "visitedLandmarks": [
+              "마을 공동회관",
+              "폐풍차 훈련터",
+              "저주받은 수로"
+            ],
+            "completedErrands": []
+          }
+        },
+        {
+          "label": "choice recorded, result still pending",
+          "sceneId": "river-incident",
+          "rescue": {
+            "phase": "ready",
+            "choiceId": "draw-the-beast",
+            "attempt": 0,
+            "turn": 0,
+            "hp": 5,
+            "x": 0,
+            "y": 1,
+            "threatRow": 0,
+            "progress": 0,
+            "markedColumns": [],
+            "log": [
+              "구출 방법을 정했다. 준비되면 수로로 들어가자."
+            ]
+          },
+          "score": 9,
+          "paths": {
+            "compassion": 0,
+            "insight": 2,
+            "resolve": 1
+          },
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear"
+          ],
+          "bonds": {
+            "kazrin:raon": 8,
+            "kain:raon": 4
+          },
+          "kazrin": {
+            "affinity": 8,
+            "lastChoice": "draw-the-beast",
+            "rememberedFacts": [
+              "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+              "수로 구출 방법을 정했다: 물속으로 들어가 실험체의 시선을 끈다"
+            ],
+            "lastSeenDay": 1
+          },
+          "position": {
+            "playerX": 870,
+            "playerY": 522,
+            "visitedLandmarks": [
+              "마을 공동회관",
+              "폐풍차 훈련터",
+              "저주받은 수로"
+            ],
+            "completedErrands": []
+          }
+        }
+      ],
+      "errors": [
+        {
+          "kind": "script",
+          "message": "page.waitForFunction: Timeout 15000ms exceeded.\n    at action (<LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:22:14)\n    at async runPath (<LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:49:36)\n    at async <LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:106:53"
+        }
+      ],
+      "screenshots": [],
+      "completed": false
+    }
+  ],
+  "errors": [],
+  "browser": "153.0.4234.32",
+  "finishedAt": "2026-09-15T02:33:42.974Z"
+}

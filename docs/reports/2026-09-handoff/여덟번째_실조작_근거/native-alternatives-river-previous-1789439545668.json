@@ -1,0 +1,34 @@
+{
+  "startedAt": "2026-09-15T01:53:24.860Z",
+  "origin": "http://127.0.0.1:4409/",
+  "seed": "native-river-incident-before-choice-storage.json",
+  "seedBoundary": "First two prologue scenes were completed through the root agent UI; every alternative choice and subsequent rescue action below is native browser input.",
+  "paths": [
+    {
+      "path": "compassion",
+      "steps": [],
+      "errors": [
+        {
+          "kind": "script",
+          "message": "page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4409/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at runPath (<LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:36:16)\n    at async <LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:82:53"
+        }
+      ],
+      "screenshots": [],
+      "completed": false
+    },
+    {
+      "path": "resolve",
+      "steps": [],
+      "errors": [
+        {
+          "kind": "script",
+          "message": "page.goto: net::ERR_CONNECTION_REFUSED at http://127.0.0.1:4409/\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:4409/\", waiting until \"domcontentloaded\"\u001b[22m\n\n    at runPath (<LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:36:16)\n    at async <LOCAL_WORKSPACE>\\work\\native-alternatives-river.cjs:82:53"
+        }
+      ],
+      "screenshots": [],
+      "completed": false
+    }
+  ],
+  "errors": [],
+  "finishedAt": "2026-09-15T01:54:17.808Z"
+}

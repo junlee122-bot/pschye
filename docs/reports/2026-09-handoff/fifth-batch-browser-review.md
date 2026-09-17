@@ -1,0 +1,46 @@
+# Fifth batch: field-exam browser verification
+
+## Source preparation
+
+- Prepared ignored repository `tmp/fifth-batch-review/{index.html,review.tsx,seeds.ts,build.mjs}` with the real App and global CSS. No original source or production dist modified.
+- Only `http://127.0.0.1:4398` can mount App or use save APIs. Test slot1 only, with baseline metadata in this origin's sessionStorage. Other user origins/storage remain untouched.
+- Server source is task workspace `work/fifth-batch-server.mjs`; separate fixture dist root with read-only production dist fallback for public assets.
+- The fixture was built after the production build completed. Actual browser observations and cleanup are recorded below.
+
+## Seed boundaries
+
+The starting currentSceneId is field-exam, with only earlier originStoryScenes listed in completedSceneIds. This explicitly skips the earlier story for setup and is not evidence of playing it. The actual field-exam steps then use chooseOriginStoryPath/startFieldExam/applyFieldExamPlan/completeFieldExamReturn. No exam phase, integrity, route progress, attempt, or turn is assigned directly.
+
+- choice: before selecting a field-exam approach; real story choice UI expected.
+- ready: actual split-route choice; ready phase, attempt0/turn0.
+- active: actual start, then two left/right plans; turn2, left2/right2, integrity4 expected.
+- failed: actual left/left → right/right → left/right plans. The third turn reaches both exits but integrity0, so failure takes precedence. The real UI should offer retry to attempt2.
+- return: actual three left/right plans, left3/right3 with integrity2; no completion fact/flag should be recorded yet.
+- complete: calls actual completeFieldExamReturn after return, retaining current scene field-exam until the next-scene button is used.
+
+Every seed saves and reloads with the actual campaign persistence APIs, then checks current scene, choice, and the complete saved exam object before App mounting. The inspect button displays only this test profile's story/exam fields and pre-mount baseline.
+
+## Verification procedure
+
+1. Fresh own4398 tab. Seed before choice, follow real story UI into split-route ready, start.
+2. At390px choose one actor's radio with keyboard and the other's via normal UI, submit the paired plan. Verify only one turn advanced and form choices reset.
+3. Exit to title, actual reload, continue. Check turn/integrity/progress and choice before another command.
+4. Finish one split-route path through the actual form, inspect two candidates at exit, use everyone-withdraw confirmation, then advance to selection day12.
+5. Use the API-generated failed seed once, click actual same-choice retry, verify attempt increments and progress resets. This is a seeded-failure retry check, not an actual UI loss.
+6. Capture390px screenshots/DOM width metrics and whitelisted saved summaries. Keep initial seeds distinct from actual UI actions. Three route completions remain core-test evidence unless directly played here.
+7. Repeated CUA transport failure: bounded recovery once, then stop and record the exact unresolved part. Restore viewport and stop only this fixture server.
+
+## Observed result (2026-09-15 00:12:40 UTC)
+
+- Fixture build succeeded in33.29s. Entry `index-CRxl8JzP.js`, field chunk `FieldExamEncounter-C-f_Vfy4.js`, field CSS `FieldExamEncounter-BpZXpgZW.css`. Root production: `index-Eezlo71U.js` / `FieldExamEncounter-BDjb2J15.js`. Source started from c3a1c93 plus the fifth-batch implementation; root's final local commit is d059ed5, with no subsequent production-source changes.
+- Fresh own tab1908172954 opened normally at4398. Only the choice-before scene seed was used for the main playthrough. The ready/active/return/complete shortcut seeds were not used for it.
+- Actual main flow: choose split-route in the origin UI → ready → start → keyboard radio selection → Enter submission → one turn → title → browser reload → continue → two further paired commands → both applicants at exit → everyone withdraws → selection day12, suspended-candidate “발전 보류”.
+- Keyboard evidence: Raon's right radio was clicked, Left selected Raon:left, Tab entered Leo's group, Right selected Leo:right. Read-only DOM reported exactly those two checked radios. Tab/Enter submitted once: turn0→1, integrity6→5, both routes0→1. The form reset both choices and disabled submit again.
+- Reload evidence: the complete sampled story/exam summary before title reload and after continue was identical. It preserved attempt1, turn1, integrity5, left1/right1, score6, Leo affinity4 and bond4.
+- Return evidence: actual third plan yielded return/turn3/integrity2/left3/right3. Before withdrawal, flags remained empty and Leo remembered only the chosen method. After withdrawal and actual day12 navigation, saved exam was complete, field-exam was in completedSceneIds, field-split-command and one completion fact were present. Score6/Leo affinity4/bond4 were unchanged from the choice.
+- Retry evidence: failed state was generated by actual API plans LL→RR→LR, not a UI loss. Actual retry clicked from this state produced attempt2/active/turn0/integrity6/left0/right0; same split-route choice and score6/affinity4/bond4, no completion flag.
+- Mobile390: form and completed stage both measured inner390/client381/scroll381/body381. Screenshots preserve selected keyboard radios, completion/next-scene control, and day12 heading/date. No horizontal overflow observed in these two measured screens.
+- Final warn/error latest12 logs query returned `[]`; no global no-error claim. This field-exam run had no transport failures. No user-origin storage or original source/dist was changed.
+- Three-route full manual completion remains unchecked. Only the insight/split-route route was manually completed; the other routes remain core-test evidence.
+- Cleanup: viewport reset succeeded. Server92672 stopped with Ctrl+C, exit1. No4398 server remains from this agent.
+- Result `work/fifth-batch-browser-result.json`; actual save comparison `work/fifth-batch-browser-save-evidence.json`; screenshot paths are listed in the JSON.

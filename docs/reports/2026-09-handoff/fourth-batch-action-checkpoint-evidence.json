@@ -1,0 +1,506 @@
+{
+  "beforeReload": {
+    "attempt": {
+      "action": {
+        "elapsed": 8.600219999408719,
+        "enemies": [
+          {
+            "id": "sky-sniper",
+            "nextAttack": 2233.333333333336,
+            "posture": 72,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 564.9015467649631,
+            "y": 244.5048781210431
+          },
+          {
+            "id": "rifleman-a",
+            "nextAttack": 640.9366668621678,
+            "posture": 48,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 770.575715600597,
+            "y": 326.75243390864114
+          },
+          {
+            "id": "rifleman-b",
+            "nextAttack": 1350.633333524078,
+            "posture": 48,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 754.539133156824,
+            "y": 393.8804253251979
+          },
+          {
+            "id": "wing-lancer",
+            "nextAttack": 0,
+            "posture": 48,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 585.9489138765276,
+            "y": 422.8897147309792
+          }
+        ],
+        "orders": {
+          "chris": 0,
+          "hadori": 449.78000059128135,
+          "kain": 0,
+          "kazrin": 0,
+          "leo": 5422.3466669003155
+        },
+        "player": {
+          "combo": 0,
+          "facingX": 1,
+          "facingY": 0,
+          "posture": 97.27250666510317,
+          "x": 382,
+          "y": 389
+        },
+        "timers": {
+          "combo": 0,
+          "dodge": 0,
+          "dodgeWindow": 0,
+          "heavy": 0,
+          "invulnerable": 0,
+          "light": 0,
+          "parry": 0,
+          "parryWindow": 0
+        }
+      },
+      "battle": {
+        "carriageHp": 161,
+        "carriageShield": 85,
+        "commandPoints": 4,
+        "enemies": [
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 117,
+            "id": "sky-sniper",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 66,
+            "id": "rifleman-a",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 66,
+            "id": "rifleman-b",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 82,
+            "id": "wing-lancer",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          }
+        ],
+        "heroes": [
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 197,
+            "id": "hadori",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 97,
+            "id": "raon",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 142,
+            "id": "kazrin",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 152,
+            "id": "kain",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 174,
+            "id": "leo",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 131,
+            "id": "chris",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          }
+        ],
+        "morale": 46,
+        "outcome": "active",
+        "round": 1
+      },
+      "difficulty": "story",
+      "doctrine": "shelter",
+      "frozenHeroes": [
+        {
+          "armor": 24,
+          "id": "hadori",
+          "maxHp": 197
+        },
+        {
+          "armor": 12,
+          "id": "raon",
+          "maxHp": 139
+        },
+        {
+          "armor": 15,
+          "id": "kazrin",
+          "maxHp": 142
+        },
+        {
+          "armor": 16,
+          "id": "kain",
+          "maxHp": 152
+        },
+        {
+          "armor": 21,
+          "id": "leo",
+          "maxHp": 174
+        },
+        {
+          "armor": 11,
+          "id": "chris",
+          "maxHp": 131
+        }
+      ],
+      "id": "fixture-action-checkpoint",
+      "missionId": "grey-bridge-escort",
+      "mode": "action",
+      "raonStance": "resolve",
+      "settled": false
+    },
+    "careerMissions": 0,
+    "completedMissions": [],
+    "day": 1,
+    "progression": {
+      "chris": {
+        "bond": 27,
+        "level": 2,
+        "xp": 40
+      },
+      "hadori": {
+        "bond": 12,
+        "level": 3,
+        "xp": 0
+      },
+      "kain": {
+        "bond": 21,
+        "level": 2,
+        "xp": 24
+      },
+      "kazrin": {
+        "bond": 18,
+        "level": 2,
+        "xp": 16
+      },
+      "leo": {
+        "bond": 24,
+        "level": 2,
+        "xp": 32
+      },
+      "raon": {
+        "bond": 15,
+        "level": 3,
+        "xp": 8
+      }
+    },
+    "resources": {
+      "intel": 40,
+      "relics": 0,
+      "renown": 0,
+      "supplies": 320
+    }
+  },
+  "afterReload": {
+    "attempt": {
+      "action": {
+        "elapsed": 8.600219999408719,
+        "enemies": [
+          {
+            "id": "sky-sniper",
+            "nextAttack": 2233.333333333336,
+            "posture": 72,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 564.9015467649631,
+            "y": 244.5048781210431
+          },
+          {
+            "id": "rifleman-a",
+            "nextAttack": 640.9366668621678,
+            "posture": 48,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 770.575715600597,
+            "y": 326.75243390864114
+          },
+          {
+            "id": "rifleman-b",
+            "nextAttack": 1350.633333524078,
+            "posture": 48,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 754.539133156824,
+            "y": 393.8804253251979
+          },
+          {
+            "id": "wing-lancer",
+            "nextAttack": 0,
+            "posture": 48,
+            "stunned": 0,
+            "telegraph": 0,
+            "x": 585.9489138765276,
+            "y": 422.8897147309792
+          }
+        ],
+        "orders": {
+          "chris": 0,
+          "hadori": 449.78000059128135,
+          "kain": 0,
+          "kazrin": 0,
+          "leo": 5422.3466669003155
+        },
+        "player": {
+          "combo": 0,
+          "facingX": 1,
+          "facingY": 0,
+          "posture": 97.27250666510317,
+          "x": 382,
+          "y": 389
+        },
+        "timers": {
+          "combo": 0,
+          "dodge": 0,
+          "dodgeWindow": 0,
+          "heavy": 0,
+          "invulnerable": 0,
+          "light": 0,
+          "parry": 0,
+          "parryWindow": 0
+        }
+      },
+      "battle": {
+        "carriageHp": 161,
+        "carriageShield": 85,
+        "commandPoints": 4,
+        "enemies": [
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 117,
+            "id": "sky-sniper",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 66,
+            "id": "rifleman-a",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 66,
+            "id": "rifleman-b",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 82,
+            "id": "wing-lancer",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          }
+        ],
+        "heroes": [
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 197,
+            "id": "hadori",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 97,
+            "id": "raon",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 142,
+            "id": "kazrin",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 152,
+            "id": "kain",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 174,
+            "id": "leo",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          },
+          {
+            "acted": false,
+            "exposed": 0,
+            "hp": 131,
+            "id": "chris",
+            "revealed": true,
+            "shield": 0,
+            "stunned": 0
+          }
+        ],
+        "morale": 46,
+        "outcome": "active",
+        "round": 1
+      },
+      "difficulty": "story",
+      "doctrine": "shelter",
+      "frozenHeroes": [
+        {
+          "armor": 24,
+          "id": "hadori",
+          "maxHp": 197
+        },
+        {
+          "armor": 12,
+          "id": "raon",
+          "maxHp": 139
+        },
+        {
+          "armor": 15,
+          "id": "kazrin",
+          "maxHp": 142
+        },
+        {
+          "armor": 16,
+          "id": "kain",
+          "maxHp": 152
+        },
+        {
+          "armor": 21,
+          "id": "leo",
+          "maxHp": 174
+        },
+        {
+          "armor": 11,
+          "id": "chris",
+          "maxHp": 131
+        }
+      ],
+      "id": "fixture-action-checkpoint",
+      "missionId": "grey-bridge-escort",
+      "mode": "action",
+      "raonStance": "resolve",
+      "settled": false
+    },
+    "careerMissions": 0,
+    "completedMissions": [],
+    "day": 1,
+    "progression": {
+      "chris": {
+        "bond": 27,
+        "level": 2,
+        "xp": 40
+      },
+      "hadori": {
+        "bond": 12,
+        "level": 3,
+        "xp": 0
+      },
+      "kain": {
+        "bond": 21,
+        "level": 2,
+        "xp": 24
+      },
+      "kazrin": {
+        "bond": 18,
+        "level": 2,
+        "xp": 16
+      },
+      "leo": {
+        "bond": 24,
+        "level": 2,
+        "xp": 32
+      },
+      "raon": {
+        "bond": 15,
+        "level": 3,
+        "xp": 8
+      }
+    },
+    "resources": {
+      "intel": 40,
+      "relics": 0,
+      "renown": 0,
+      "supplies": 320
+    }
+  }
+}

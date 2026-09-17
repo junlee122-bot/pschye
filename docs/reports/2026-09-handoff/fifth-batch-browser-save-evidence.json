@@ -1,0 +1,466 @@
+{
+  "afterChoice": {
+    "activityLog": [
+      "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+      "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+    ],
+    "bondLevels": {
+      "leo:raon": 4
+    },
+    "choice": "split-route",
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night",
+      "capital-gate",
+      "aptitude-exam"
+    ],
+    "currentSceneId": "field-exam",
+    "exam": {
+      "attempt": 0,
+      "choiceId": "split-route",
+      "integrity": 6,
+      "left": 0,
+      "log": [
+        "폐광 안의 두 지원자를 함께 데리고 나올 방법을 정했다."
+      ],
+      "phase": "ready",
+      "right": 0,
+      "turn": 0
+    },
+    "flags": [],
+    "leoAffinity": 4,
+    "leoFacts": [
+      "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+    ],
+    "originCompleted": false,
+    "pendingExam": {
+      "attempt": 0,
+      "choiceId": "split-route",
+      "integrity": 6,
+      "left": 0,
+      "log": [
+        "폐광 안의 두 지원자를 함께 데리고 나올 방법을 정했다."
+      ],
+      "phase": "ready",
+      "right": 0,
+      "turn": 0
+    },
+    "raonPath": {
+      "compassion": 0,
+      "insight": 1,
+      "resolve": 0
+    },
+    "sceneTime": "선발 11일차",
+    "sceneTitle": "이기는 조와 돌아오는 조",
+    "selectionScore": 6
+  },
+  "beforeReload": {
+    "activityLog": [
+      "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+      "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+    ],
+    "bondLevels": {
+      "leo:raon": 4
+    },
+    "choice": "split-route",
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night",
+      "capital-gate",
+      "aptitude-exam"
+    ],
+    "currentSceneId": "field-exam",
+    "exam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 5,
+      "left": 1,
+      "log": [
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "active",
+      "right": 1,
+      "turn": 1
+    },
+    "flags": [],
+    "leoAffinity": 4,
+    "leoFacts": [
+      "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+    ],
+    "originCompleted": false,
+    "pendingExam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 5,
+      "left": 1,
+      "log": [
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "active",
+      "right": 1,
+      "turn": 1
+    },
+    "raonPath": {
+      "compassion": 0,
+      "insight": 1,
+      "resolve": 0
+    },
+    "sceneTime": "선발 11일차",
+    "sceneTitle": "이기는 조와 돌아오는 조",
+    "selectionScore": 6
+  },
+  "afterReload": {
+    "activityLog": [
+      "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+      "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+    ],
+    "bondLevels": {
+      "leo:raon": 4
+    },
+    "choice": "split-route",
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night",
+      "capital-gate",
+      "aptitude-exam"
+    ],
+    "currentSceneId": "field-exam",
+    "exam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 5,
+      "left": 1,
+      "log": [
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "active",
+      "right": 1,
+      "turn": 1
+    },
+    "flags": [],
+    "leoAffinity": 4,
+    "leoFacts": [
+      "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+    ],
+    "originCompleted": false,
+    "pendingExam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 5,
+      "left": 1,
+      "log": [
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "active",
+      "right": 1,
+      "turn": 1
+    },
+    "raonPath": {
+      "compassion": 0,
+      "insight": 1,
+      "resolve": 0
+    },
+    "sceneTime": "선발 11일차",
+    "sceneTitle": "이기는 조와 돌아오는 조",
+    "selectionScore": 6
+  },
+  "beforeReturn": {
+    "activityLog": [
+      "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+      "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+    ],
+    "bondLevels": {
+      "leo:raon": 4
+    },
+    "choice": "split-route",
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night",
+      "capital-gate",
+      "aptitude-exam"
+    ],
+    "currentSceneId": "field-exam",
+    "exam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 2,
+      "left": 3,
+      "log": [
+        "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+        "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+        "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "return",
+      "right": 3,
+      "turn": 3
+    },
+    "flags": [],
+    "leoAffinity": 4,
+    "leoFacts": [
+      "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+    ],
+    "originCompleted": false,
+    "pendingExam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 2,
+      "left": 3,
+      "log": [
+        "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+        "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+        "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "return",
+      "right": 3,
+      "turn": 3
+    },
+    "raonPath": {
+      "compassion": 0,
+      "insight": 1,
+      "resolve": 0
+    },
+    "sceneTime": "선발 11일차",
+    "sceneTitle": "이기는 조와 돌아오는 조",
+    "selectionScore": 6
+  },
+  "afterAdvance": {
+    "activityLog": [
+      "폐광 구조 완료 · 라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다.",
+      "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+      "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+    ],
+    "bondLevels": {
+      "leo:raon": 4
+    },
+    "choice": "split-route",
+    "completedSceneIds": [
+      "village-dawn",
+      "windmill-trouble",
+      "river-incident",
+      "recruiters-arrive",
+      "departure-night",
+      "capital-gate",
+      "aptitude-exam",
+      "field-exam"
+    ],
+    "currentSceneId": "suspended-candidate",
+    "exam": {
+      "attempt": 1,
+      "choiceId": "split-route",
+      "integrity": 2,
+      "left": 3,
+      "log": [
+        "지원자들과 모두 함께 폐광에서 철수했다.",
+        "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+        "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+        "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+        "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+        "라온과 레오가 두 갱도의 상태를 살폈다."
+      ],
+      "phase": "complete",
+      "right": 3,
+      "turn": 3
+    },
+    "flags": [
+      "field-split-command"
+    ],
+    "leoAffinity": 4,
+    "leoFacts": [
+      "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+      "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+    ],
+    "originCompleted": false,
+    "pendingExam": null,
+    "raonPath": {
+      "compassion": 0,
+      "insight": 1,
+      "resolve": 0
+    },
+    "sceneTime": "선발 12일차 · 심야",
+    "sceneTitle": "발전 보류",
+    "selectionScore": 6
+  },
+  "retry": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {
+          "leo:raon": 4
+        },
+        "choice": "split-route",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam"
+        ],
+        "currentSceneId": "field-exam",
+        "exam": {
+          "attempt": 1,
+          "choiceId": "split-route",
+          "integrity": 0,
+          "left": 3,
+          "log": [
+            "통로를 유지하지 못했다. 계획을 다시 세워야 한다.",
+            "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 0",
+            "2턴 · 라온: 오른쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+            "1턴 · 라온: 왼쪽 구조 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 4",
+            "라온과 레오가 두 갱도의 상태를 살폈다."
+          ],
+          "phase": "failed",
+          "right": 3,
+          "turn": 3
+        },
+        "flags": [],
+        "leoAffinity": 4,
+        "leoFacts": [
+          "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+        ],
+        "originCompleted": false,
+        "pendingExam": {
+          "attempt": 1,
+          "choiceId": "split-route",
+          "integrity": 0,
+          "left": 3,
+          "log": [
+            "통로를 유지하지 못했다. 계획을 다시 세워야 한다.",
+            "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 0",
+            "2턴 · 라온: 오른쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+            "1턴 · 라온: 왼쪽 구조 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 4",
+            "라온과 레오가 두 갱도의 상태를 살폈다."
+          ],
+          "phase": "failed",
+          "right": 3,
+          "turn": 3
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "sceneTime": "선발 11일차",
+        "sceneTitle": "이기는 조와 돌아오는 조",
+        "selectionScore": 6
+      },
+      "description": "앞선 서장 완료는 시드. 실습 상태는 실제 API로 생성.",
+      "seed": "failed"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "이기는 조와 돌아오는 조 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {
+          "leo:raon": 4
+        },
+        "choice": "split-route",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam"
+        ],
+        "currentSceneId": "field-exam",
+        "exam": {
+          "attempt": 2,
+          "choiceId": "split-route",
+          "integrity": 6,
+          "left": 0,
+          "log": [
+            "라온과 레오가 두 갱도의 상태를 살폈다."
+          ],
+          "phase": "active",
+          "right": 0,
+          "turn": 0
+        },
+        "flags": [],
+        "leoAffinity": 4,
+        "leoFacts": [
+          "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+        ],
+        "originCompleted": false,
+        "pendingExam": {
+          "attempt": 2,
+          "choiceId": "split-route",
+          "integrity": 6,
+          "left": 0,
+          "log": [
+            "라온과 레오가 두 갱도의 상태를 살폈다."
+          ],
+          "phase": "active",
+          "right": 0,
+          "turn": 0
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "sceneTime": "선발 11일차",
+        "sceneTitle": "이기는 조와 돌아오는 조",
+        "selectionScore": 6
+      },
+      "source": "local"
+    }
+  },
+  "metrics": {
+    "form": {
+      "body": 381,
+      "client": 381,
+      "focused": {
+        "name": "field-exam-leo",
+        "tag": "INPUT",
+        "value": "right"
+      },
+      "scroll": 381,
+      "selected": [
+        {
+          "name": "field-exam-raon",
+          "value": "left"
+        },
+        {
+          "name": "field-exam-leo",
+          "value": "right"
+        }
+      ],
+      "width": 390
+    },
+    "complete": {
+      "body": 381,
+      "client": 381,
+      "scroll": 381,
+      "width": 390
+    }
+  },
+  "logs": []
+}

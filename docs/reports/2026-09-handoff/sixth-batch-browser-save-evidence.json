@@ -1,0 +1,3597 @@
+{
+  "sourceCommit": "f8ae64b",
+  "origin": "http://127.0.0.1:4402",
+  "setup": "앞선 10개 서장 완료는 시드이며 수동 플레이가 아님. 통찰은 선택부터 6동작, 저장 재개, 마무리, 다음 장면까지 실제 UI 조작. 실패는 실제 core API 4동작 시드 후 재도전 버튼을 실제 조작.",
+  "choice": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": null,
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 0,
+        "maruFacts": [],
+        "originCompleted": false,
+        "pendingTraining": null,
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 0,
+        "training": null
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "choice"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "distribute-weight",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 0,
+          "burden": 0,
+          "choiceId": "distribute-weight",
+          "log": [
+            "마루가 기억하는 궤적을 자신의 몸으로 이어 갈 방법을 정했다."
+          ],
+          "petals": 0,
+          "phase": "ready",
+          "turn": 0
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 0,
+          "burden": 0,
+          "choiceId": "distribute-weight",
+          "log": [
+            "마루가 기억하는 궤적을 자신의 몸으로 이어 갈 방법을 정했다."
+          ],
+          "petals": 0,
+          "phase": "ready",
+          "turn": 0
+        }
+      },
+      "source": "local"
+    }
+  },
+  "beforeReload": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": null,
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 0,
+        "maruFacts": [],
+        "originCompleted": false,
+        "pendingTraining": null,
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 0,
+        "training": null
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "choice"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "distribute-weight",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 1,
+          "burden": 1,
+          "choiceId": "distribute-weight",
+          "log": [
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 3,
+          "phase": "active",
+          "turn": 1
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 1,
+          "choiceId": "distribute-weight",
+          "log": [
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 3,
+          "phase": "active",
+          "turn": 1
+        }
+      },
+      "source": "local"
+    }
+  },
+  "afterReload": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": null,
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 0,
+        "maruFacts": [],
+        "originCompleted": false,
+        "pendingTraining": null,
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 0,
+        "training": null
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "choice"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "distribute-weight",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 1,
+          "burden": 1,
+          "choiceId": "distribute-weight",
+          "log": [
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 3,
+          "phase": "active",
+          "turn": 1
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 1,
+          "choiceId": "distribute-weight",
+          "log": [
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 3,
+          "phase": "active",
+          "turn": 1
+        }
+      },
+      "source": "local"
+    }
+  },
+  "resumeEntireSummaryEqual": true,
+  "beforeComplete": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": null,
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 0,
+        "maruFacts": [],
+        "originCompleted": false,
+        "pendingTraining": null,
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 0,
+        "training": null
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "choice"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "distribute-weight",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 1,
+          "burden": 6,
+          "choiceId": "distribute-weight",
+          "log": [
+            "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+            "6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8",
+            "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+            "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+            "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "review",
+          "turn": 6
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 6,
+          "choiceId": "distribute-weight",
+          "log": [
+            "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+            "6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8",
+            "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+            "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+            "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "review",
+          "turn": 6
+        }
+      },
+      "source": "local"
+    }
+  },
+  "afterNextScene": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": null,
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 0,
+        "maruFacts": [],
+        "originCompleted": false,
+        "pendingTraining": null,
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 0,
+        "training": null
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "choice"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "열여섯 꽃잎 수련 완료 · 훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다.",
+          "힘이 빠진 열여섯 꽃잎 · 라온은 통찰의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "distribute-weight",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door",
+          "sixteen-petals"
+        ],
+        "currentSceneId": "captain-trials",
+        "flags": [
+          "petals-distributed"
+        ],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+          "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+        ],
+        "originCompleted": false,
+        "pendingTraining": null,
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 1,
+          "resolve": 0
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "최종 조장 선발전",
+        "sceneTitle": "재능이 예상하지 못한 검",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 6,
+          "choiceId": "distribute-weight",
+          "log": [
+            "마루 앞에서 이번 수련을 마무리했다.",
+            "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+            "6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8",
+            "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+            "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+            "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+            "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "complete",
+          "turn": 6
+        }
+      },
+      "source": "local"
+    }
+  },
+  "finalChecks": {
+    "scene": "captain-trials",
+    "phase": "complete",
+    "score": 7,
+    "maruAffinity": 2,
+    "bondLevels": {},
+    "flags": [
+      "petals-distributed"
+    ],
+    "maruFacts": [
+      "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+      "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+    ],
+    "heroProgressUnchanged": true,
+    "heroStatsUnchanged": true,
+    "resourcesUnchanged": true
+  },
+  "failed": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 결의의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "step-beyond-fall",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 넘어진 자리에서 다음 발을 억지로 잇는다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 1
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        }
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "failed"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 결의의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "step-beyond-fall",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 넘어진 자리에서 다음 발을 억지로 잇는다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 1
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        }
+      },
+      "source": "local"
+    }
+  },
+  "retry": {
+    "baseline": {
+      "beforeMount": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 결의의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "step-beyond-fall",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 넘어진 자리에서 다음 발을 억지로 잇는다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 1
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 1,
+          "burden": 8,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+            "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+            "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+            "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+            "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 16,
+          "phase": "failed",
+          "turn": 4
+        }
+      },
+      "description": "앞선 10개 서장 완료는 시드. 수련 상태는 실제 API로 생성.",
+      "seed": "failed"
+    },
+    "loaded": {
+      "current": {
+        "activityLog": [
+          "힘이 빠진 열여섯 꽃잎 · 라온은 결의의 선택을 남겼다.",
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "bondLevels": {},
+        "choice": "step-beyond-fall",
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble",
+          "river-incident",
+          "recruiters-arrive",
+          "departure-night",
+          "capital-gate",
+          "aptitude-exam",
+          "field-exam",
+          "suspended-candidate",
+          "maru-door"
+        ],
+        "currentSceneId": "sixteen-petals",
+        "flags": [],
+        "heroProgress": {
+          "chris": {
+            "bond": 27,
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 40
+          },
+          "hadori": {
+            "bond": 12,
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 0
+          },
+          "kain": {
+            "bond": 21,
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 24
+          },
+          "kazrin": {
+            "bond": 18,
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 16
+          },
+          "leo": {
+            "bond": 24,
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ],
+            "level": 2,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 32
+          },
+          "raon": {
+            "bond": 15,
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ],
+            "level": 3,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "xp": 8
+          }
+        },
+        "heroStats": [
+          {
+            "armor": 24,
+            "id": "hadori",
+            "maxHp": 197,
+            "skills": [
+              {
+                "id": "iron-gate",
+                "morale": 12,
+                "power": 37
+              },
+              {
+                "id": "ground-break",
+                "morale": 10,
+                "power": 47
+              }
+            ]
+          },
+          {
+            "armor": 12,
+            "id": "raon",
+            "maxHp": 139,
+            "skills": [
+              {
+                "id": "sixteen-petals",
+                "morale": 18,
+                "power": 53
+              },
+              {
+                "id": "unfinished-flow",
+                "morale": 14,
+                "power": 34
+              }
+            ]
+          },
+          {
+            "armor": 15,
+            "id": "kazrin",
+            "maxHp": 142,
+            "skills": [
+              {
+                "id": "silver-line",
+                "morale": 11,
+                "power": 54
+              },
+              {
+                "id": "guardian-orbit",
+                "morale": 18,
+                "power": 31
+              }
+            ]
+          },
+          {
+            "armor": 16,
+            "id": "kain",
+            "maxHp": 152,
+            "skills": [
+              {
+                "id": "duel-mark",
+                "morale": 10,
+                "power": 45
+              },
+              {
+                "id": "valder-pierce",
+                "morale": 8,
+                "power": 66
+              }
+            ]
+          },
+          {
+            "armor": 21,
+            "id": "leo",
+            "maxHp": 174,
+            "skills": [
+              {
+                "id": "gate-stance",
+                "morale": 14,
+                "power": 40
+              },
+              {
+                "id": "silent-counter",
+                "morale": 16,
+                "power": 37
+              }
+            ]
+          },
+          {
+            "armor": 11,
+            "id": "chris",
+            "maxHp": 131,
+            "skills": [
+              {
+                "id": "side-read",
+                "morale": 24,
+                "power": 19
+              },
+              {
+                "id": "equilibrium-blade",
+                "morale": 17,
+                "power": 42
+              }
+            ]
+          }
+        ],
+        "maruAffinity": 2,
+        "maruFacts": [
+          "열여섯 꽃잎을 수련할 방법을 정했다: 넘어진 자리에서 다음 발을 억지로 잇는다"
+        ],
+        "originCompleted": false,
+        "pendingTraining": {
+          "attempt": 2,
+          "burden": 0,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 0,
+          "phase": "active",
+          "turn": 0
+        },
+        "priorEncounters": {
+          "fieldExam": null,
+          "villageRescue": null
+        },
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 1
+        },
+        "resources": {
+          "intel": 40,
+          "relics": 0,
+          "renown": 0,
+          "supplies": 320
+        },
+        "sceneTime": "선발 17일차부터 29일차",
+        "sceneTitle": "힘이 빠진 열여섯 꽃잎",
+        "selectionScore": 7,
+        "training": {
+          "attempt": 2,
+          "burden": 0,
+          "choiceId": "step-beyond-fall",
+          "log": [
+            "검로와 몸의 부담을 살피며 수련을 시작했다."
+          ],
+          "petals": 0,
+          "phase": "active",
+          "turn": 0
+        }
+      },
+      "source": "local"
+    }
+  },
+  "retryChecks": {
+    "failed": {
+      "attempt": 1,
+      "burden": 8,
+      "choiceId": "step-beyond-fall",
+      "log": [
+        "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+        "4번째 동작 · 보법 이어가기 · 궤적 16 / 16, 부담 8 / 8",
+        "3번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 7 / 8",
+        "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+        "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+        "검로와 몸의 부담을 살피며 수련을 시작했다."
+      ],
+      "petals": 16,
+      "phase": "failed",
+      "turn": 4
+    },
+    "retry": {
+      "attempt": 2,
+      "burden": 0,
+      "choiceId": "step-beyond-fall",
+      "log": [
+        "검로와 몸의 부담을 살피며 수련을 시작했다."
+      ],
+      "petals": 0,
+      "phase": "active",
+      "turn": 0
+    },
+    "score": 7,
+    "affinity": 2,
+    "flags": [],
+    "unchangedScore": true,
+    "unchangedAffinity": true,
+    "unchangedHeroes": true,
+    "unchangedStats": true,
+    "unchangedResources": true
+  },
+  "viewport": {
+    "form": {
+      "body": 381,
+      "client": 381,
+      "scroll": 381,
+      "width": 390
+    },
+    "complete": {
+      "body": 381,
+      "client": 381,
+      "scroll": 381,
+      "width": 390
+    },
+    "garden": {
+      "body": 381,
+      "client": 381,
+      "scroll": 381,
+      "width": 390
+    }
+  },
+  "warnErrorLogs": {
+    "requestedLimit": 12,
+    "entries": []
+  }
+}

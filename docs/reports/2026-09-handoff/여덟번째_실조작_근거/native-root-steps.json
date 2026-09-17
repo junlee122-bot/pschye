@@ -1,0 +1,3149 @@
+[
+  {
+    "name": "fresh-title",
+    "at": "2026-09-15T01:47:38.936Z",
+    "data": {
+      "text": "A.S. 84\nTHE SEVENTH GENERATION\n라온제나\nRAONJENA\n\n나는 카즈린을 따라 변방 마을을 나왔다.\n영웅의 검을 빌리기 전, 내 이야기는 그곳에서 시작됐다.\n\n라온 시점 스토리 RPG\n선택 · 동료 관계 · 전투 · 기억이 하나의 여정으로 이어집니다.\n변방 마을에서 시작\n만난 사람\n여정 화첩\n오프라인 자동 저장 · 슬롯 1\nSLOT 01\n밀밭 너머의 종소리\nDAY 1 · 작전 0\nSLOT 02\n새로운 라온\n변방 마을에서 시작\nSLOT 03\n새로운 라온\n변방 마을에서 시작\n아직 어떤 답도 고르지 않은 라온\n서장 1 / 15 · 밀밭 너머의 종소리\nONE BOY · ONE BORROWED SWORD · ONE NEW ANSWER\n 여정 초기화",
+      "storage": {
+        "raonjena-campaign-v10-slot-1-updated": "2026-09-15T01:47:35.719Z",
+        "raonjena-campaign-v10-slot-1": "{\"version\":10,\"commanderName\":\"라온\",\"day\":1,\"commandLevel\":1,\"renown\":0,\"supplies\":320,\"intel\":40,\"relics\":0,\"commandActions\":3,\"activeSquad\":[\"hadori\",\"raon\",\"kazrin\",\"kain\",\"leo\",\"chris\"],\"inventory\":[\"breaker-gauntlet\",\"petal-training-blade\",\"silver-orbit-lance\",\"valder-heir-spear\",\"gate-wraps\",\"equilibrium-sabre\",\"field-kit\"],\"factions\":{\"empire\":20,\"civilians\":10,\"cursed\":0,\"cheshi\":-10},\"completedDispatches\":[],\"activityCounts\":{},\"bondLevels\":{},\"dailyCommandStats\":{\"training\":0,\"bond\":0,\"field\":0},\"dailyRewardClaimed\":false,\"careerStats\":{\"missions\":0,\"trainings\":0,\"bonds\":0,\"fieldActivities\":0,\"crafts\":0,\"dispatches\":0,\"perfectDays\":0},\"claimedStrategicOrders\":[],\"completedMissions\":[],\"missionGrades\":{},\"heroProgress\":{\"hadori\":{\"level\":3,\"xp\":0,\"bond\":12,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"breaker-gauntlet\",\"field-kit\"]},\"raon\":{\"level\":3,\"xp\":8,\"bond\":15,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"petal-training-blade\",\"field-kit\"]},\"kazrin\":{\"level\":2,\"xp\":16,\"bond\":18,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"silver-orbit-lance\",\"field-kit\"]},\"kain\":{\"level\":2,\"xp\":24,\"bond\":21,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"valder-heir-spear\",\"field-kit\"]},\"leo\":{\"level\":2,\"xp\":32,\"bond\":24,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"gate-wraps\",\"field-kit\"]},\"chris\":{\"level\":2,\"xp\":40,\"bond\":27,\"skillPoints\":1,\"unlockedNodes\":[\"foundation\"],\"equipment\":[\"equilibrium-sabre\",\"field-kit\"]}},\"facilities\":{\"training\":1,\"archive\":1,\"infirmary\":1,\"forge\":0,\"violet\":0},\"unlockedRecords\":[\"official-salvation\"],\"activityLog\":[\"A.S. 84 · 변방 마을에 프시케 선발관이 도착했다.\"],\"raonPath\":{\"compassion\":0,\"insight\":0,\"resolve\":0},\"originStory\":{\"currentSceneId\":\"village-dawn\",\"completed\":false,\"completedSceneIds\":[],\"choices\":{},\"flags\":[],\"selectionScore\":0},\"storyChoices\":{},\"narrativeChecks\":{},\"relationshipMemories\":{},\"world\":{\"minutes\":360,\"phase\":\"dawn\",\"weather\":\"clear\",\"currentRegion\":\"frontier-village\",\"discoveredLocations\":[\"frontier-village\"],\"npcMemories\":{},\"village\":{\"playerX\":366,\"playerY\":606,\"visitedLandmarks\":[],\"completedErrands\":[]},\"headquartersLayout\":[{\"slot\":0,\"facilityId\":\"training\"},{\"slot\":1,\"facilityId\":\"archive\"},{\"slot\":2,\"facilityId\":\"infirmary\"},{\"slot\":3,\"facilityId\":\"forge\"},{\"slot\":4,\"facilityId\":\"violet\"}],\"eventJournal\":[\"A.S. 84 · 변방 마을의 새벽이 밝았다.\"]},\"_savedAt\":\"2026-09-15T01:47:35.719Z\"}"
+      },
+      "shot": "<LOCAL_WORKSPACE>\\work\\native-title.png",
+      "errors": [],
+      "failedRequests": []
+    }
+  },
+  {
+    "name": "village-start",
+    "at": "2026-09-15T01:48:46.577Z",
+    "data": {
+      "profile": {
+        "version": 10,
+        "commanderName": "라온",
+        "day": 1,
+        "commandLevel": 1,
+        "renown": 0,
+        "supplies": 320,
+        "intel": 40,
+        "relics": 0,
+        "commandActions": 3,
+        "activeSquad": [
+          "hadori",
+          "raon",
+          "kazrin",
+          "kain",
+          "leo",
+          "chris"
+        ],
+        "inventory": [
+          "breaker-gauntlet",
+          "petal-training-blade",
+          "silver-orbit-lance",
+          "valder-heir-spear",
+          "gate-wraps",
+          "equilibrium-sabre",
+          "field-kit"
+        ],
+        "factions": {
+          "empire": 20,
+          "civilians": 10,
+          "cursed": 0,
+          "cheshi": -10
+        },
+        "completedDispatches": [],
+        "activityCounts": {},
+        "bondLevels": {},
+        "dailyCommandStats": {
+          "training": 0,
+          "bond": 0,
+          "field": 0
+        },
+        "dailyRewardClaimed": false,
+        "careerStats": {
+          "missions": 0,
+          "trainings": 0,
+          "bonds": 0,
+          "fieldActivities": 0,
+          "crafts": 0,
+          "dispatches": 0,
+          "perfectDays": 0
+        },
+        "claimedStrategicOrders": [],
+        "completedMissions": [],
+        "missionGrades": {},
+        "heroProgress": {
+          "hadori": {
+            "level": 3,
+            "xp": 0,
+            "bond": 12,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "equipment": [
+              "breaker-gauntlet",
+              "field-kit"
+            ]
+          },
+          "raon": {
+            "level": 3,
+            "xp": 8,
+            "bond": 15,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "equipment": [
+              "petal-training-blade",
+              "field-kit"
+            ]
+          },
+          "kazrin": {
+            "level": 2,
+            "xp": 16,
+            "bond": 18,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "equipment": [
+              "silver-orbit-lance",
+              "field-kit"
+            ]
+          },
+          "kain": {
+            "level": 2,
+            "xp": 24,
+            "bond": 21,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "equipment": [
+              "valder-heir-spear",
+              "field-kit"
+            ]
+          },
+          "leo": {
+            "level": 2,
+            "xp": 32,
+            "bond": 24,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "equipment": [
+              "gate-wraps",
+              "field-kit"
+            ]
+          },
+          "chris": {
+            "level": 2,
+            "xp": 40,
+            "bond": 27,
+            "skillPoints": 1,
+            "unlockedNodes": [
+              "foundation"
+            ],
+            "equipment": [
+              "equilibrium-sabre",
+              "field-kit"
+            ]
+          }
+        },
+        "facilities": {
+          "training": 1,
+          "archive": 1,
+          "infirmary": 1,
+          "forge": 0,
+          "violet": 0
+        },
+        "unlockedRecords": [
+          "official-salvation"
+        ],
+        "activityLog": [
+          "A.S. 84 · 변방 마을에 프시케 선발관이 도착했다."
+        ],
+        "raonPath": {
+          "compassion": 0,
+          "insight": 0,
+          "resolve": 0
+        },
+        "originStory": {
+          "currentSceneId": "village-dawn",
+          "completed": false,
+          "completedSceneIds": [],
+          "choices": {},
+          "flags": [],
+          "selectionScore": 0
+        },
+        "storyChoices": {},
+        "narrativeChecks": {},
+        "relationshipMemories": {},
+        "world": {
+          "minutes": 360,
+          "phase": "dawn",
+          "weather": "clear",
+          "currentRegion": "frontier-village",
+          "discoveredLocations": [
+            "frontier-village"
+          ],
+          "npcMemories": {},
+          "village": {
+            "playerX": 366,
+            "playerY": 606,
+            "visitedLandmarks": [],
+            "completedErrands": []
+          },
+          "headquartersLayout": [
+            {
+              "slot": 0,
+              "facilityId": "training"
+            },
+            {
+              "slot": 1,
+              "facilityId": "archive"
+            },
+            {
+              "slot": 2,
+              "facilityId": "infirmary"
+            },
+            {
+              "slot": 3,
+              "facilityId": "forge"
+            },
+            {
+              "slot": 4,
+              "facilityId": "violet"
+            }
+          ],
+          "eventJournal": [
+            "A.S. 84 · 변방 마을의 새벽이 밝았다."
+          ]
+        },
+        "_savedAt": "2026-09-15T01:48:44.989Z"
+      },
+      "shot": "<LOCAL_WORKSPACE>\\work\\native-village-start-390.png"
+    }
+  },
+  {
+    "name": "native-move",
+    "at": "2026-09-15T01:48:49.656Z",
+    "data": {
+      "start": {
+        "x": 366,
+        "y": 606
+      },
+      "target": {
+        "x": 810,
+        "y": 346
+      },
+      "end": {
+        "x": 758,
+        "y": 382
+      },
+      "inputs": [
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동"
+      ]
+    }
+  },
+  {
+    "name": "checkpoint-village-near-kazrin",
+    "at": "2026-09-15T01:48:51.161Z",
+    "data": {
+      "scene": "village-dawn",
+      "completed": [],
+      "world": {
+        "playerX": 758,
+        "playerY": 382,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "checkpoint-village-dawn-before-choice",
+    "at": "2026-09-15T01:50:05.520Z",
+    "data": {
+      "scene": "village-dawn",
+      "completed": [],
+      "world": {
+        "playerX": 758,
+        "playerY": 382,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "choose-village-dawn",
+    "at": "2026-09-15T01:50:05.974Z",
+    "data": {
+      "choice": "watch-kazrin",
+      "score": 2,
+      "path": {
+        "compassion": 0,
+        "insight": 1,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 4,
+          "lastChoice": "watch-kazrin",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "native-move",
+    "at": "2026-09-15T01:50:07.061Z",
+    "data": {
+      "start": {
+        "x": 758,
+        "y": 382
+      },
+      "target": {
+        "x": 744,
+        "y": 366
+      },
+      "end": {
+        "x": 758,
+        "y": 382
+      },
+      "inputs": []
+    }
+  },
+  {
+    "name": "checkpoint-windmill-trouble-before-choice",
+    "at": "2026-09-15T01:50:07.498Z",
+    "data": {
+      "scene": "windmill-trouble",
+      "completed": [
+        "village-dawn"
+      ],
+      "world": {
+        "playerX": 758,
+        "playerY": 382,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "choose-windmill-trouble",
+    "at": "2026-09-15T01:50:07.783Z",
+    "data": {
+      "choice": "read-shoulder",
+      "score": 5,
+      "path": {
+        "compassion": 0,
+        "insight": 2,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 4,
+          "lastChoice": "watch-kazrin",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "native-move",
+    "at": "2026-09-15T01:50:09.365Z",
+    "data": {
+      "start": {
+        "x": 758,
+        "y": 382
+      },
+      "target": {
+        "x": 932,
+        "y": 548
+      },
+      "end": {
+        "x": 870,
+        "y": 522
+      },
+      "inputs": [
+        "아래로 이동",
+        "아래로 이동",
+        "아래로 이동",
+        "아래로 이동",
+        "아래로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동"
+      ]
+    }
+  },
+  {
+    "name": "checkpoint-river-incident-before-choice",
+    "at": "2026-09-15T01:50:09.754Z",
+    "data": {
+      "scene": "river-incident",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble"
+      ],
+      "world": {
+        "playerX": 870,
+        "playerY": 522,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "choose-river-incident",
+    "at": "2026-09-15T01:50:09.960Z",
+    "data": {
+      "choice": "mark-safe-route",
+      "score": 9,
+      "path": {
+        "compassion": 0,
+        "insight": 3,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 8,
+          "lastChoice": "mark-safe-route",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다"
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-rescue-ready",
+    "at": "2026-09-15T01:50:10.722Z",
+    "data": {
+      "scene": "river-incident",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble"
+      ],
+      "world": {
+        "playerX": 870,
+        "playerY": 522,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:50:52.644Z",
+    "data": {
+      "action": "right",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 1,
+        "hp": 5,
+        "x": 1,
+        "y": 1,
+        "threatRow": 1,
+        "progress": 0,
+        "markedColumns": [],
+        "log": [
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:50:52.787Z",
+    "data": {
+      "action": "assist",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 2,
+        "hp": 4,
+        "x": 1,
+        "y": 1,
+        "threatRow": 2,
+        "progress": 1,
+        "markedColumns": [
+          1
+        ],
+        "log": [
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:50:52.897Z",
+    "data": {
+      "action": "right",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 3,
+        "hp": 4,
+        "x": 2,
+        "y": 1,
+        "threatRow": 0,
+        "progress": 1,
+        "markedColumns": [
+          1
+        ],
+        "log": [
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:50:52.994Z",
+    "data": {
+      "action": "assist",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 4,
+        "hp": 4,
+        "x": 2,
+        "y": 1,
+        "threatRow": 1,
+        "progress": 2,
+        "markedColumns": [
+          1,
+          2
+        ],
+        "log": [
+          "3열에 안전한 발판을 표시했다. (2/3)",
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-rescue-mid",
+    "at": "2026-09-15T01:50:53.030Z",
+    "data": {
+      "scene": "river-incident",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble"
+      ],
+      "world": {
+        "playerX": 870,
+        "playerY": 522,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "rescue-native-reload",
+    "at": "2026-09-15T01:51:32.238Z",
+    "data": {
+      "equal": true
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:51:32.762Z",
+    "data": {
+      "action": "right",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 5,
+        "hp": 3,
+        "x": 3,
+        "y": 1,
+        "threatRow": 2,
+        "progress": 2,
+        "markedColumns": [
+          1,
+          2
+        ],
+        "log": [
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 4열 2행으로 이동했다.",
+          "3열에 안전한 발판을 표시했다. (2/3)",
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:51:32.887Z",
+    "data": {
+      "action": "assist",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 6,
+        "hp": 3,
+        "x": 3,
+        "y": 1,
+        "threatRow": 0,
+        "progress": 3,
+        "markedColumns": [
+          1,
+          2,
+          3
+        ],
+        "log": [
+          "4열에 안전한 발판을 표시했다. (3/3)",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 4열 2행으로 이동했다.",
+          "3열에 안전한 발판을 표시했다. (2/3)",
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:51:33.032Z",
+    "data": {
+      "action": "left",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 7,
+        "hp": 3,
+        "x": 2,
+        "y": 1,
+        "threatRow": 1,
+        "progress": 3,
+        "markedColumns": [
+          1,
+          2,
+          3
+        ],
+        "log": [
+          "라온이 3열 2행으로 이동했다.",
+          "4열에 안전한 발판을 표시했다. (3/3)",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 4열 2행으로 이동했다.",
+          "3열에 안전한 발판을 표시했다. (2/3)",
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:51:33.150Z",
+    "data": {
+      "action": "left",
+      "state": {
+        "phase": "active",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 8,
+        "hp": 2,
+        "x": 1,
+        "y": 1,
+        "threatRow": 2,
+        "progress": 3,
+        "markedColumns": [
+          1,
+          2,
+          3
+        ],
+        "log": [
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 2열 2행으로 이동했다.",
+          "라온이 3열 2행으로 이동했다.",
+          "4열에 안전한 발판을 표시했다. (3/3)",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 4열 2행으로 이동했다.",
+          "3열에 안전한 발판을 표시했다. (2/3)",
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "rescue-action",
+    "at": "2026-09-15T01:51:33.311Z",
+    "data": {
+      "action": "left",
+      "state": {
+        "phase": "return",
+        "choiceId": "mark-safe-route",
+        "attempt": 1,
+        "turn": 9,
+        "hp": 2,
+        "x": 0,
+        "y": 1,
+        "threatRow": 0,
+        "progress": 3,
+        "markedColumns": [
+          1,
+          2,
+          3
+        ],
+        "log": [
+          "아이와 라온이 둑으로 빠져나왔다. 마을의 카즈린에게 돌아가 확인하자.",
+          "라온이 1열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 2열 2행으로 이동했다.",
+          "라온이 3열 2행으로 이동했다.",
+          "4열에 안전한 발판을 표시했다. (3/3)",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "라온이 4열 2행으로 이동했다.",
+          "3열에 안전한 발판을 표시했다. (2/3)",
+          "라온이 3열 2행으로 이동했다.",
+          "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+          "2열에 안전한 발판을 표시했다. (1/3)",
+          "라온이 2열 2행으로 이동했다.",
+          "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "native-move",
+    "at": "2026-09-15T01:51:38.942Z",
+    "data": {
+      "start": {
+        "x": 870,
+        "y": 522
+      },
+      "target": {
+        "x": 478,
+        "y": 348
+      },
+      "end": {
+        "x": 534,
+        "y": 382
+      },
+      "inputs": [
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동",
+        "왼쪽으로 이동"
+      ]
+    }
+  },
+  {
+    "name": "checkpoint-rescue-return-near",
+    "at": "2026-09-15T01:51:39.068Z",
+    "data": {
+      "scene": "river-incident",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble"
+      ],
+      "world": {
+        "playerX": 534,
+        "playerY": 382,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "checkpoint-rescue-complete",
+    "at": "2026-09-15T01:51:40.045Z",
+    "data": {
+      "scene": "river-incident",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble"
+      ],
+      "world": {
+        "playerX": 534,
+        "playerY": 382,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "rescue-return-confirm",
+    "at": "2026-09-15T01:51:40.403Z",
+    "data": {
+      "profile": {
+        "currentSceneId": "river-incident",
+        "completed": false,
+        "completedSceneIds": [
+          "village-dawn",
+          "windmill-trouble"
+        ],
+        "choices": {
+          "village-dawn": "watch-kazrin",
+          "windmill-trouble": "read-shoulder",
+          "river-incident": "mark-safe-route"
+        },
+        "flags": [
+          "observed-ann-style",
+          "read-kain-spear",
+          "awakened-route-sight"
+        ],
+        "selectionScore": 9,
+        "villageRescue": {
+          "phase": "complete",
+          "choiceId": "mark-safe-route",
+          "attempt": 1,
+          "turn": 9,
+          "hp": 2,
+          "x": 0,
+          "y": 1,
+          "threatRow": 0,
+          "progress": 3,
+          "markedColumns": [
+            1,
+            2,
+            3
+          ],
+          "log": [
+            "카즈린과 모두의 귀환을 확인했다.",
+            "아이와 라온이 둑으로 빠져나왔다. 마을의 카즈린에게 돌아가 확인하자.",
+            "라온이 1열 2행으로 이동했다.",
+            "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+            "라온이 2열 2행으로 이동했다.",
+            "라온이 3열 2행으로 이동했다.",
+            "4열에 안전한 발판을 표시했다. (3/3)",
+            "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+            "라온이 4열 2행으로 이동했다.",
+            "3열에 안전한 발판을 표시했다. (2/3)",
+            "라온이 3열 2행으로 이동했다.",
+            "실험체의 돌진에 휩쓸렸다. 체력 -1.",
+            "2열에 안전한 발판을 표시했다. (1/3)",
+            "라온이 2열 2행으로 이동했다.",
+            "아이를 구한 뒤 왼쪽 둑으로 돌아오자. 실험체를 공격할 필요는 없다."
+          ]
+        }
+      },
+      "shot": "<LOCAL_WORKSPACE>\\work\\native-rescue-return-confirm.png"
+    }
+  },
+  {
+    "name": "native-move",
+    "at": "2026-09-15T01:51:41.270Z",
+    "data": {
+      "start": {
+        "x": 534,
+        "y": 382
+      },
+      "target": {
+        "x": 478,
+        "y": 348
+      },
+      "end": {
+        "x": 534,
+        "y": 382
+      },
+      "inputs": []
+    }
+  },
+  {
+    "name": "checkpoint-recruiters-arrive-before-choice",
+    "at": "2026-09-15T01:51:41.747Z",
+    "data": {
+      "scene": "recruiters-arrive",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident"
+      ],
+      "world": {
+        "playerX": 534,
+        "playerY": 382,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "choose-recruiters-arrive",
+    "at": "2026-09-15T01:51:41.934Z",
+    "data": {
+      "choice": "learn-what-i-saw",
+      "score": 12,
+      "path": {
+        "compassion": 0,
+        "insight": 4,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 8,
+          "lastChoice": "mark-safe-route",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "native-move",
+    "at": "2026-09-15T01:51:43.929Z",
+    "data": {
+      "start": {
+        "x": 534,
+        "y": 382
+      },
+      "target": {
+        "x": 1052,
+        "y": 244
+      },
+      "end": {
+        "x": 982,
+        "y": 270
+      },
+      "inputs": [
+        "위로 이동",
+        "위로 이동",
+        "위로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "오른쪽으로 이동",
+        "위로 이동",
+        "오른쪽으로 이동"
+      ]
+    }
+  },
+  {
+    "name": "checkpoint-departure-night-before-choice",
+    "at": "2026-09-15T01:51:44.481Z",
+    "data": {
+      "scene": "departure-night",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive"
+      ],
+      "world": {
+        "playerX": 982,
+        "playerY": 270,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로",
+          "오래된 풍차 언덕"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "choose-departure-night",
+    "at": "2026-09-15T01:51:44.660Z",
+    "data": {
+      "choice": "promise-question",
+      "score": 14,
+      "path": {
+        "compassion": 0,
+        "insight": 5,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-capital-before-choice",
+    "at": "2026-09-15T01:51:45.566Z",
+    "data": {
+      "scene": "capital-gate",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night"
+      ],
+      "world": {
+        "playerX": 982,
+        "playerY": 270,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로",
+          "오래된 풍차 언덕"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "checkpoint-capital-gate-before-choice",
+    "at": "2026-09-15T01:52:38.059Z",
+    "data": {
+      "scene": "capital-gate",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night"
+      ],
+      "world": {
+        "playerX": 982,
+        "playerY": 270,
+        "visitedLandmarks": [
+          "마을 공동회관",
+          "폐풍차 훈련터",
+          "저주받은 수로",
+          "오래된 풍차 언덕"
+        ],
+        "completedErrands": []
+      }
+    }
+  },
+  {
+    "name": "choose-capital-gate",
+    "at": "2026-09-15T01:52:38.385Z",
+    "data": {
+      "choice": "identify-poison",
+      "score": 18,
+      "path": {
+        "compassion": 0,
+        "insight": 6,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "environment-recovery",
+    "at": "2026-09-15T02:01:05.002Z",
+    "data": {
+      "checkpoint": "native-capital-before-choice-storage.json",
+      "freshRunThroughEarlierFiveScenes": true,
+      "recoveredSameSavedOrigin": true,
+      "traceEnabled": false,
+      "parallelBrowsers": false
+    }
+  },
+  {
+    "name": "checkpoint-capital-gate-before-choice",
+    "at": "2026-09-15T02:01:18.273Z",
+    "data": {
+      "scene": "capital-gate",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night"
+      ],
+      "score": 14
+    }
+  },
+  {
+    "name": "choose-capital-gate",
+    "at": "2026-09-15T02:01:18.652Z",
+    "data": {
+      "choice": "identify-poison",
+      "score": 18,
+      "path": {
+        "compassion": 0,
+        "insight": 6,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-aptitude-exam-before-choice",
+    "at": "2026-09-15T02:01:20.076Z",
+    "data": {
+      "scene": "aptitude-exam",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate"
+      ],
+      "score": 18
+    }
+  },
+  {
+    "name": "choose-aptitude-exam",
+    "at": "2026-09-15T02:01:20.344Z",
+    "data": {
+      "choice": "study-sight",
+      "score": 22,
+      "path": {
+        "compassion": 0,
+        "insight": 7,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-field-exam-before-choice",
+    "at": "2026-09-15T02:01:21.586Z",
+    "data": {
+      "scene": "field-exam",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam"
+      ],
+      "score": 22
+    }
+  },
+  {
+    "name": "choose-field-exam",
+    "at": "2026-09-15T02:01:21.976Z",
+    "data": {
+      "choice": "split-route",
+      "score": 28,
+      "path": {
+        "compassion": 0,
+        "insight": 8,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다"
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "field-native-action",
+    "at": "2026-09-15T02:01:24.296Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "split-route",
+        "attempt": 1,
+        "turn": 1,
+        "integrity": 5,
+        "left": 1,
+        "right": 1,
+        "log": [
+          "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+          "라온과 레오가 두 갱도의 상태를 살폈다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-field-mid",
+    "at": "2026-09-15T02:01:24.339Z",
+    "data": {
+      "scene": "field-exam",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam"
+      ],
+      "score": 28
+    }
+  },
+  {
+    "name": "field-native-action",
+    "at": "2026-09-15T02:01:24.570Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "split-route",
+        "attempt": 1,
+        "turn": 2,
+        "integrity": 4,
+        "left": 2,
+        "right": 2,
+        "log": [
+          "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+          "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+          "라온과 레오가 두 갱도의 상태를 살폈다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "field-native-action",
+    "at": "2026-09-15T02:01:24.850Z",
+    "data": {
+      "state": {
+        "phase": "return",
+        "choiceId": "split-route",
+        "attempt": 1,
+        "turn": 3,
+        "integrity": 2,
+        "left": 3,
+        "right": 3,
+        "log": [
+          "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+          "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 2",
+          "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 4",
+          "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 1, 통로 버팀 5",
+          "라온과 레오가 두 갱도의 상태를 살폈다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-field-return",
+    "at": "2026-09-15T02:01:25.197Z",
+    "data": {
+      "scene": "field-exam",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam"
+      ],
+      "score": 28
+    }
+  },
+  {
+    "name": "checkpoint-field-complete",
+    "at": "2026-09-15T02:01:25.888Z",
+    "data": {
+      "scene": "field-exam",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam"
+      ],
+      "score": 28
+    }
+  },
+  {
+    "name": "checkpoint-suspended-candidate-before-choice",
+    "at": "2026-09-15T02:01:26.389Z",
+    "data": {
+      "scene": "suspended-candidate",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam"
+      ],
+      "score": 28
+    }
+  },
+  {
+    "name": "choose-suspended-candidate",
+    "at": "2026-09-15T02:01:26.829Z",
+    "data": {
+      "choice": "trace-forbidden-style",
+      "score": 33,
+      "path": {
+        "compassion": 0,
+        "insight": 9,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 4,
+          "lastChoice": "trace-forbidden-style",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-maru-door-before-choice",
+    "at": "2026-09-15T02:01:28.118Z",
+    "data": {
+      "scene": "maru-door",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate"
+      ],
+      "score": 33
+    }
+  },
+  {
+    "name": "choose-maru-door",
+    "at": "2026-09-15T02:01:28.422Z",
+    "data": {
+      "choice": "challenge-analysis",
+      "score": 39,
+      "path": {
+        "compassion": 0,
+        "insight": 10,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 4,
+          "lastChoice": "trace-forbidden-style",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다."
+          ],
+          "lastSeenDay": 1
+        },
+        "maru": {
+          "affinity": 2,
+          "lastChoice": "challenge-analysis",
+          "rememberedFacts": [
+            "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-sixteen-petals-before-choice",
+    "at": "2026-09-15T02:01:30.244Z",
+    "data": {
+      "scene": "sixteen-petals",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door"
+      ],
+      "score": 39
+    }
+  },
+  {
+    "name": "choose-sixteen-petals",
+    "at": "2026-09-15T02:01:30.508Z",
+    "data": {
+      "choice": "distribute-weight",
+      "score": 46,
+      "path": {
+        "compassion": 0,
+        "insight": 11,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 4,
+          "lastChoice": "read-shoulder",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 4,
+          "lastChoice": "trace-forbidden-style",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다."
+          ],
+          "lastSeenDay": 1
+        },
+        "maru": {
+          "affinity": 4,
+          "lastChoice": "distribute-weight",
+          "rememberedFacts": [
+            "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+            "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다"
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "petal-native-action",
+    "at": "2026-09-15T02:01:33.830Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "distribute-weight",
+        "attempt": 1,
+        "turn": 1,
+        "petals": 3,
+        "burden": 1,
+        "log": [
+          "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+          "검로와 몸의 부담을 살피며 수련을 시작했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "environment-recovery",
+    "at": "2026-09-15T02:24:32.656Z",
+    "data": {
+      "checkpoint": "native-emergency-storage.json",
+      "recoveredSameSavedOrigin": true,
+      "traceEnabled": false,
+      "parallelBrowsers": false
+    }
+  },
+  {
+    "name": "petal-native-action",
+    "at": "2026-09-15T02:24:49.068Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "distribute-weight",
+        "attempt": 1,
+        "turn": 2,
+        "petals": 6,
+        "burden": 2,
+        "log": [
+          "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+          "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+          "검로와 몸의 부담을 살피며 수련을 시작했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "petal-native-action",
+    "at": "2026-09-15T02:24:49.217Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "distribute-weight",
+        "attempt": 1,
+        "turn": 3,
+        "petals": 9,
+        "burden": 3,
+        "log": [
+          "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+          "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+          "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+          "검로와 몸의 부담을 살피며 수련을 시작했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "petal-native-action",
+    "at": "2026-09-15T02:24:49.365Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "distribute-weight",
+        "attempt": 1,
+        "turn": 4,
+        "petals": 12,
+        "burden": 4,
+        "log": [
+          "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+          "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+          "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+          "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+          "검로와 몸의 부담을 살피며 수련을 시작했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "petal-native-action",
+    "at": "2026-09-15T02:24:49.510Z",
+    "data": {
+      "state": {
+        "phase": "active",
+        "choiceId": "distribute-weight",
+        "attempt": 1,
+        "turn": 5,
+        "petals": 15,
+        "burden": 5,
+        "log": [
+          "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+          "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+          "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+          "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+          "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+          "검로와 몸의 부담을 살피며 수련을 시작했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "petal-native-action",
+    "at": "2026-09-15T02:24:49.658Z",
+    "data": {
+      "state": {
+        "phase": "review",
+        "choiceId": "distribute-weight",
+        "attempt": 1,
+        "turn": 6,
+        "petals": 16,
+        "burden": 6,
+        "log": [
+          "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+          "6번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 6 / 8",
+          "5번째 동작 · 무게 나누기 · 궤적 15 / 16, 부담 5 / 8",
+          "4번째 동작 · 무게 나누기 · 궤적 12 / 16, 부담 4 / 8",
+          "3번째 동작 · 무게 나누기 · 궤적 9 / 16, 부담 3 / 8",
+          "2번째 동작 · 무게 나누기 · 궤적 6 / 16, 부담 2 / 8",
+          "1번째 동작 · 무게 나누기 · 궤적 3 / 16, 부담 1 / 8",
+          "검로와 몸의 부담을 살피며 수련을 시작했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-petal-review",
+    "at": "2026-09-15T02:24:49.708Z",
+    "data": {
+      "scene": "sixteen-petals",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door"
+      ],
+      "score": 46
+    }
+  },
+  {
+    "name": "checkpoint-captain-trials-before-choice",
+    "at": "2026-09-15T02:24:50.226Z",
+    "data": {
+      "scene": "captain-trials",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals"
+      ],
+      "score": 46
+    }
+  },
+  {
+    "name": "choose-captain-trials",
+    "at": "2026-09-15T02:24:51.121Z",
+    "data": {
+      "choice": "use-sixteenth-gap",
+      "score": 54,
+      "path": {
+        "compassion": 0,
+        "insight": 12,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 12,
+          "lastChoice": "promise-question",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 8,
+          "lastChoice": "use-sixteenth-gap",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.",
+            "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다"
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 4,
+          "lastChoice": "trace-forbidden-style",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다."
+          ],
+          "lastSeenDay": 1
+        },
+        "maru": {
+          "affinity": 4,
+          "lastChoice": "distribute-weight",
+          "rememberedFacts": [
+            "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+            "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+            "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:51.775Z",
+    "data": {
+      "scene": "captain-trials",
+      "action": "parry",
+      "state": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 1,
+        "poise": 6,
+        "breath": 4,
+        "progress": 0,
+        "opening": true,
+        "log": [
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:51.938Z",
+    "data": {
+      "scene": "captain-trials",
+      "action": "counter",
+      "state": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 2,
+        "poise": 6,
+        "breath": 3,
+        "progress": 1,
+        "opening": false,
+        "log": [
+          "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-captain-trials-mid",
+    "at": "2026-09-15T02:24:51.971Z",
+    "data": {
+      "scene": "captain-trials",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals"
+      ],
+      "score": 54
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:52.112Z",
+    "data": {
+      "scene": "captain-trials",
+      "action": "sidestep",
+      "state": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 3,
+        "poise": 6,
+        "breath": 3,
+        "progress": 1,
+        "opening": true,
+        "log": [
+          "3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:52.240Z",
+    "data": {
+      "scene": "captain-trials",
+      "action": "counter",
+      "state": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 4,
+        "poise": 6,
+        "breath": 2,
+        "progress": 2,
+        "opening": false,
+        "log": [
+          "4번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:52.373Z",
+    "data": {
+      "scene": "captain-trials",
+      "action": "parry",
+      "state": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 5,
+        "poise": 6,
+        "breath": 2,
+        "progress": 2,
+        "opening": true,
+        "log": [
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "4번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:52.510Z",
+    "data": {
+      "scene": "captain-trials",
+      "action": "counter",
+      "state": {
+        "sceneId": "captain-trials",
+        "choiceId": "use-sixteenth-gap",
+        "phase": "resolved",
+        "attempt": 1,
+        "turn": 6,
+        "poise": 6,
+        "breath": 1,
+        "progress": 3,
+        "opening": false,
+        "log": [
+          "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "4번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "3번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "1번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-captain-trials-resolved",
+    "at": "2026-09-15T02:24:52.539Z",
+    "data": {
+      "scene": "captain-trials",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals"
+      ],
+      "score": 54
+    }
+  },
+  {
+    "name": "checkpoint-captain-trials-complete",
+    "at": "2026-09-15T02:24:52.630Z",
+    "data": {
+      "scene": "captain-trials",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals"
+      ],
+      "score": 54
+    }
+  },
+  {
+    "name": "checkpoint-kazrin-duel-before-choice",
+    "at": "2026-09-15T02:24:52.893Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials"
+      ],
+      "score": 54
+    }
+  },
+  {
+    "name": "choose-kazrin-duel",
+    "at": "2026-09-15T02:24:53.382Z",
+    "data": {
+      "choice": "change-old-rhythm",
+      "score": 62,
+      "path": {
+        "compassion": 0,
+        "insight": 13,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 16,
+          "lastChoice": "change-old-rhythm",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다.",
+            "대결에서 보여 줄 검을 정했다: 카즈린이 기억하는 라온의 박자를 버린다"
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 8,
+          "lastChoice": "use-sixteenth-gap",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.",
+            "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다",
+            "카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 4,
+          "lastChoice": "trace-forbidden-style",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다."
+          ],
+          "lastSeenDay": 1
+        },
+        "maru": {
+          "affinity": 4,
+          "lastChoice": "distribute-weight",
+          "rememberedFacts": [
+            "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+            "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+            "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:53.603Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "sidestep",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 1,
+        "poise": 6,
+        "breath": 4,
+        "progress": 0,
+        "opening": true,
+        "log": [
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:53.729Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "parry",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 2,
+        "poise": 6,
+        "breath": 4,
+        "progress": 0,
+        "opening": true,
+        "log": [
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-kazrin-duel-mid",
+    "at": "2026-09-15T02:24:53.762Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials"
+      ],
+      "score": 62
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:53.882Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "counter",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 3,
+        "poise": 6,
+        "breath": 3,
+        "progress": 1,
+        "opening": false,
+        "log": [
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:54.011Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "sidestep",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 4,
+        "poise": 6,
+        "breath": 3,
+        "progress": 1,
+        "opening": true,
+        "log": [
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:54.127Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "parry",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 5,
+        "poise": 6,
+        "breath": 3,
+        "progress": 1,
+        "opening": true,
+        "log": [
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:54.269Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "counter",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 6,
+        "poise": 6,
+        "breath": 2,
+        "progress": 2,
+        "opening": false,
+        "log": [
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:54.388Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "sidestep",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 7,
+        "poise": 6,
+        "breath": 2,
+        "progress": 2,
+        "opening": true,
+        "log": [
+          "7번째 동작 · 비켜딛기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:54.511Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "parry",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "active",
+        "attempt": 1,
+        "turn": 8,
+        "poise": 6,
+        "breath": 2,
+        "progress": 2,
+        "opening": true,
+        "log": [
+          "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "7번째 동작 · 비켜딛기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "trial-native-action",
+    "at": "2026-09-15T02:24:54.637Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "action": "counter",
+      "state": {
+        "sceneId": "kazrin-duel",
+        "choiceId": "change-old-rhythm",
+        "phase": "resolved",
+        "attempt": 1,
+        "turn": 9,
+        "poise": 6,
+        "breath": 1,
+        "progress": 3,
+        "opening": false,
+        "log": [
+          "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+          "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+          "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "7번째 동작 · 비켜딛기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "6번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+          "5번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "4번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "3번째 동작 · 검로 잇기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+          "2번째 동작 · 창 흘리기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "1번째 동작 · 비켜딛기 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+          "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+        ]
+      }
+    }
+  },
+  {
+    "name": "checkpoint-kazrin-duel-resolved",
+    "at": "2026-09-15T02:24:54.668Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials"
+      ],
+      "score": 62
+    }
+  },
+  {
+    "name": "checkpoint-kazrin-duel-complete",
+    "at": "2026-09-15T02:24:54.770Z",
+    "data": {
+      "scene": "kazrin-duel",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials"
+      ],
+      "score": 62
+    }
+  },
+  {
+    "name": "checkpoint-hadori-ready",
+    "at": "2026-09-15T02:24:54.913Z",
+    "data": {
+      "scene": "hadori-wall",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel"
+      ],
+      "score": 62
+    }
+  },
+  {
+    "name": "checkpoint-hadori-resolved",
+    "at": "2026-09-15T02:24:55.137Z",
+    "data": {
+      "scene": "hadori-wall",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel"
+      ],
+      "score": 62
+    }
+  },
+  {
+    "name": "hadori-native-defeat",
+    "at": "2026-09-15T02:24:55.756Z",
+    "data": {
+      "shot": "<LOCAL_WORKSPACE>\\work\\native-hadori-resolved.png"
+    }
+  },
+  {
+    "name": "checkpoint-hadori-wall-before-choice",
+    "at": "2026-09-15T02:24:55.920Z",
+    "data": {
+      "scene": "hadori-wall",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel"
+      ],
+      "score": 62
+    }
+  },
+  {
+    "name": "choose-hadori-wall",
+    "at": "2026-09-15T02:24:57.084Z",
+    "data": {
+      "choice": "ask-what-she-saw",
+      "score": 67,
+      "path": {
+        "compassion": 0,
+        "insight": 14,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 16,
+          "lastChoice": "change-old-rhythm",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다.",
+            "대결에서 보여 줄 검을 정했다: 카즈린이 기억하는 라온의 박자를 버린다",
+            "마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 8,
+          "lastChoice": "use-sixteenth-gap",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.",
+            "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다",
+            "카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 2,
+          "lastChoice": "identify-poison",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 8,
+          "lastChoice": "ask-what-she-saw",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다.",
+            "하도리는 열두 번째 꽃잎부터 라온의 다리가 무너졌다고 정확히 말해 준다."
+          ],
+          "lastSeenDay": 1
+        },
+        "maru": {
+          "affinity": 4,
+          "lastChoice": "distribute-weight",
+          "rememberedFacts": [
+            "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+            "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+            "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-seventh-oath-before-choice",
+    "at": "2026-09-15T02:24:57.784Z",
+    "data": {
+      "scene": "seventh-oath",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel",
+        "hadori-wall"
+      ],
+      "score": 67
+    }
+  },
+  {
+    "name": "choose-seventh-oath",
+    "at": "2026-09-15T02:24:58.057Z",
+    "data": {
+      "choice": "oath-question",
+      "score": 72,
+      "path": {
+        "compassion": 0,
+        "insight": 15,
+        "resolve": 0
+      },
+      "memories": {
+        "kazrin": {
+          "affinity": 16,
+          "lastChoice": "change-old-rhythm",
+          "rememberedFacts": [
+            "라온은 자신도 모르게 라티계 앤류의 체중 이동을 기억한다.",
+            "수로 구출 방법을 정했다: 겹쳐 보인 안전 경로를 돌로 표시한다",
+            "라온의 이능 적성이 처음으로 명확하게 드러난다.",
+            "카즈린은 동의하지 않지만 라온의 질문을 비겁함이라 부르지 않기로 한다.",
+            "대결에서 보여 줄 검을 정했다: 카즈린이 기억하는 라온의 박자를 버린다",
+            "마을에서 시작된 모든 습관을 역으로 이용해 창의 궤도를 벗어난다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kain": {
+          "affinity": 8,
+          "lastChoice": "use-sixteenth-gap",
+          "rememberedFacts": [
+            "완벽한 회피는 아니었지만 카인의 표정에서 처음으로 웃음이 사라진다.",
+            "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다",
+            "카인은 자신보다 재능이 낮은 라온에게 처음으로 완벽히 읽힌다."
+          ],
+          "lastSeenDay": 1
+        },
+        "bellatrice": {
+          "affinity": 2,
+          "lastChoice": "learn-what-i-saw",
+          "rememberedFacts": [
+            "이능 적성 검사가 라온의 선발 과정에 추가된다."
+          ],
+          "lastSeenDay": 1
+        },
+        "jinhwon": {
+          "affinity": 4,
+          "lastChoice": "oath-question",
+          "rememberedFacts": [
+            "선발 과정에 지원자 방해 공작이 있다는 첫 단서를 확보한다.",
+            "라온은 삭제된 역사를 추적하는 관찰자의 길을 택한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "kangrim": {
+          "affinity": 2,
+          "lastChoice": "study-sight",
+          "rememberedFacts": [
+            "라온은 자신의 이능을 전투 예측이 아닌 선택 경로 감지로 정의하기 시작한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "leo": {
+          "affinity": 4,
+          "lastChoice": "split-route",
+          "rememberedFacts": [
+            "폐광 구조 방법을 정했다: 레오와 구조하고 카즈린은 깃발을 지킨다",
+            "라온은 처음으로 서로 다른 능력을 하나의 명령으로 연결한다."
+          ],
+          "lastSeenDay": 1
+        },
+        "hadori": {
+          "affinity": 8,
+          "lastChoice": "ask-what-she-saw",
+          "rememberedFacts": [
+            "해찬이라는 이름이 지워진 자리에 마루의 출입 기록만 남아 있음을 알아낸다.",
+            "하도리는 열두 번째 꽃잎부터 라온의 다리가 무너졌다고 정확히 말해 준다."
+          ],
+          "lastSeenDay": 1
+        },
+        "maru": {
+          "affinity": 4,
+          "lastChoice": "distribute-weight",
+          "rememberedFacts": [
+            "마루는 처음으로 웃음을 지우고 라온에게 누구의 검을 찾는지 묻는다.",
+            "열여섯 꽃잎을 수련할 방법을 정했다: 다리의 부담을 허리와 어깨로 분산한다",
+            "훗날 라온류가 될 자멸하지 않는 보법의 첫 원리가 태어난다."
+          ],
+          "lastSeenDay": 1
+        }
+      }
+    }
+  },
+  {
+    "name": "checkpoint-inducted",
+    "at": "2026-09-15T02:24:59.517Z",
+    "data": {
+      "scene": "seventh-oath",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel",
+        "hadori-wall",
+        "seventh-oath"
+      ],
+      "score": 72
+    }
+  },
+  {
+    "name": "native-origin-complete",
+    "at": "2026-09-15T02:25:01.176Z",
+    "data": {
+      "originallyFresh": true,
+      "resumedActualStorageAfterDiskFailure": true,
+      "completedScenes": 15,
+      "allStance": "insight",
+      "noGraduationStatInflation": true,
+      "shot": "<LOCAL_WORKSPACE>\\work\\native-inducted.png"
+    }
+  },
+  {
+    "name": "checkpoint-first-mission-prepared",
+    "at": "2026-09-15T02:25:02.178Z",
+    "data": {
+      "scene": "seventh-oath",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel",
+        "hadori-wall",
+        "seventh-oath"
+      ],
+      "score": 72
+    }
+  },
+  {
+    "name": "checkpoint-first-mode-select",
+    "at": "2026-09-15T02:25:02.500Z",
+    "data": {
+      "scene": "seventh-oath",
+      "completed": [
+        "village-dawn",
+        "windmill-trouble",
+        "river-incident",
+        "recruiters-arrive",
+        "departure-night",
+        "capital-gate",
+        "aptitude-exam",
+        "field-exam",
+        "suspended-candidate",
+        "maru-door",
+        "sixteen-petals",
+        "captain-trials",
+        "kazrin-duel",
+        "hadori-wall",
+        "seventh-oath"
+      ],
+      "score": 72
+    }
+  }
+]

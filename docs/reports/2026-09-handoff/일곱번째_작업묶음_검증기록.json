@@ -1,0 +1,174 @@
+{
+  "verifiedAt": "2026-09-15T01:11:17.523Z",
+  "commit": "1d07e4fa0f2e0b0692a66c91ee6207240d88f828",
+  "previous": "f8ae64bde818358353a561952438f1aa9cfc3fbc",
+  "files": 16,
+  "workingTreeClean": true,
+  "sourceStoryAndFormalCombatUnchanged": true,
+  "tests": {
+    "passed": 356,
+    "files": 24
+  },
+  "postReviewSsr": {
+    "passed": 7,
+    "boundaries": [
+      "호흡 0에서 반격 불가 안내",
+      "균형이 남은 18동작 소진 안내"
+    ]
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "build": {
+    "checkedAt": "2026-09-15T01:01:30.744Z",
+    "productionEntry": "assets/index-B3mm0YSY.js",
+    "captainTrialEntry": "assets/CaptainTrialEncounter-DxOF0a23.js",
+    "captainTrialStyles": [
+      "assets/CaptainTrialEncounter-K9DEzc1f.css"
+    ],
+    "authorChunksAbsent": true,
+    "battleVillageFieldAndPetalEntriesRetained": true,
+    "chunks": [
+      "_VillagePrologue-CzsfmA2_.js",
+      "_VillagePrologue-DpY55hrw.css",
+      "_icons-Bpcrx_db.js",
+      "_phaser-CSP61uFZ.js",
+      "_phaserRuntime-nOZ7DIWJ.js",
+      "_react-9LjzQdLw.js",
+      "index.html",
+      "src/components/CaptainTrialEncounter.tsx",
+      "src/components/FieldExamEncounter.tsx",
+      "src/components/PetalTrainingEncounter.tsx",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx",
+      "src/components/VillageRescueEncounter.tsx"
+    ]
+  },
+  "browser": {
+    "checkedAt": "2026-09-15T01:09:06.554Z",
+    "summary": "카인 통찰 선택·대결 시작·키보드 첫 방어·390px 대응 폼까지 확인했다. 마우스 시간 초과가 복구 뒤 재발했고, 추가 재연결 없는 키보드 대안도 시간 초과되어 세 경기/입단/첫 작전 전체 흐름은 검증하지 못했다.",
+    "sourceBasis": {
+      "baseCommit": "f8ae64bde818358353a561952438f1aa9cfc3fbc",
+      "description": "Root seventh-batch final production source after full checks; source not modified by this browser task.",
+      "productionEntry": "index-B3mm0YSY.js",
+      "productionEncounter": "CaptainTrialEncounter-DxOF0a23.js",
+      "encounterCss": "CaptainTrialEncounter-K9DEzc1f.css",
+      "fixtureEntry": "index-kY1FeC-J.js",
+      "fixtureEncounter": "CaptainTrialEncounter-DcjgCGhx.js",
+      "finalCommit": "1d07e4fa0f2e0b0692a66c91ee6207240d88f828"
+    },
+    "origin": "http://127.0.0.1:4404",
+    "passed": [
+      "새 격리 origin 슬롯1에서 실제 save/load API로 준비한 카인 선택 전 화면을 열었다. 앞선10장면은 시드이며 수련만 실제 API 완료 준비이다.",
+      "카인 통찰 선택을 실제 클릭하여 ready에 진입한 저장을 다시 읽었다. 대결 시작 버튼으로 실제 active 화면에 진입했다.",
+      "키보드 Left로 창 흘리기 라디오를 선택하고 Tab으로 제출 버튼에 초점을 옮긴 뒤 Enter로 첫 방어를 실행했다. 실행 후 AX는 turn1/poise6/breath4/progress0 및 창 회수·반격 가능을 표시했다.",
+      "390px 대응 폼 스크린샷에서 라디오·예측·제출 버튼의 배치를 확인했다. document client/scroll/body 폭381, viewport390으로 관찰한 폼의 가로 넘침이 없었다."
+    ],
+    "remaining": [
+      "타이틀 이동 클릭은 도구 시간 초과로 완료 여부 불명. 타이틀 저장·새로고침·재개 및 첫 동작 이후 저장 재읽기는 미확인이다.",
+      "카인 나머지5동작/결과 확인, 카즈린9동작/결과 확인은 실행하지 못했다.",
+      "하도리 선택 전 ready→한 방 패배→의무동 확인→반응 선택 표시 순서는 실제 브라우저에서 미확인이다.",
+      "seventh-oath 선택/입단/입단 저장 재개/첫 작전 선택·준비·mode-select 진입은 실제 브라우저에서 미확인이다.",
+      "각 경기 결과 확인의 추가 보상 없음, 최종 점수/친밀도/유대/입단 기록 대조는 미확인이다.",
+      "보조 실패 시드와 실제 재도전은 준비 코드만 작성했고 브라우저 실행하지 않았다."
+    ],
+    "limitations": [
+      "CDP Input.dispatchMouseEvent timeout703ms가 첫 radio 클릭에서 발생했다. getTab으로 한 차례 복구했고 라디오 선택이 실제 적용된 것을 확인한 뒤 키보드 첫 방어는 성공했다.",
+      "타이틀 이동 클릭에서 동일 CDP Input.dispatchMouseEvent timeout1225ms가 다시 발생해 해당 흐름을 중단했다. 도구 입력 단계의 시간 초과로 게임 기능의 성공·실패를 확정하지 못했다.",
+      "루트 요청으로 기존 연결에서 키보드만 쓰는 대안을 한 차례 추가 확인했다. DOM 읽기는 성공했으나 Tab→Right→Right 시도에서 CDP Input.dispatchKeyEvent timeout10000ms가 발생해 즉시 중단했다. 추가 getTab·마우스 재시도는 없었다.",
+      "자동 검사356개/타입/ESLint/production build 통과는 루트가 수행한 별도 근거다. 미완료 브라우저 흐름을 자동 검사와 합쳐 수동 통과로 주장하지 않는다.",
+      "최근 warn/error 조회(limit12)는 빈 배열이었다. 모든 브라우저 오류가 없었다는 뜻은 아니며 CUA의 마우스·키보드 입력 오류는 별도로 기록했다.",
+      "이전10장면과 수련은 이번 수동 검증 범위 전 준비이고 사용자 기존 origin/storage를 접근하지 않았다. 별도 fixture build로 원본 src/dist는 보존했다."
+    ],
+    "screenshots": [
+      "<LOCAL_WORKSPACE>/outputs/seventh-batch-browser-form-390.png"
+    ],
+    "evidence": [
+      "<LOCAL_WORKSPACE>/outputs/seventh-batch-browser-save-evidence.json",
+      "<LOCAL_WORKSPACE>/outputs/seventh-batch-browser-review.md"
+    ],
+    "observed": {
+      "selectionChecks": {
+        "baselineScore": 7,
+        "readyScore": 15,
+        "scoreDelta": 8,
+        "kainAffinityDelta": 4,
+        "bondLevelsBefore": {},
+        "bondLevelsAfter": {
+          "kain:raon": 4
+        },
+        "trial": {
+          "attempt": 0,
+          "breath": 4,
+          "choiceId": "use-sixteenth-gap",
+          "log": [
+            "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+          ],
+          "opening": false,
+          "phase": "ready",
+          "poise": 6,
+          "progress": 0,
+          "sceneId": "captain-trials",
+          "turn": 0
+        },
+        "flags": [
+          "petals-distributed"
+        ],
+        "kainFacts": [
+          "대결에서 보여 줄 검을 정했다: 열여섯 번째 틈에서만 검을 멈춘다"
+        ],
+        "heroProgressUnchanged": true,
+        "heroStatsUnchanged": true,
+        "resourcesUnchanged": true
+      },
+      "firstAction": {
+        "sceneId": "captain-trials",
+        "phase": "active",
+        "turn": 1,
+        "poise": 6,
+        "breath": 4,
+        "progress": 0,
+        "opening": true,
+        "nextCue": "창 회수 · 반격 가능",
+        "source": "actual UI AX tree after Enter; save reread after this action was not completed"
+      },
+      "formMetrics": {
+        "body": 381,
+        "client": 381,
+        "scroll": 381,
+        "width": 390
+      },
+      "warningsAndErrors": []
+    },
+    "keyboardAlternative": {
+      "authorizedByRoot": true,
+      "currentDomReadSucceeded": true,
+      "lastObservedScene": "captain-trials",
+      "lastObservedTurn": 1,
+      "focusedElement": "타이틀로 · 이어하기",
+      "attemptedKeys": [
+        "Tab",
+        "Right",
+        "Right"
+      ],
+      "error": "Timed out after 10000ms waiting for CDP command Input.dispatchKeyEvent",
+      "furtherGameplayExecuted": false,
+      "extraReconnectOrMouseRetry": false
+    },
+    "cleanup": {
+      "viewportReset": true,
+      "originalServerSession": 41909,
+      "resumedServerSession": 99076,
+      "serverStopped": true,
+      "port4404Closed": true,
+      "originalUserStorageTouched": false,
+      "originalSourceOrDistModified": false,
+      "otherProcessesStopped": false
+    }
+  },
+  "remotePush": false
+}

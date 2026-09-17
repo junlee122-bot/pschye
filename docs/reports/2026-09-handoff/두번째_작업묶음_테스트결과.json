@@ -1,0 +1,2005 @@
+{
+  "numTotalTestSuites": 31,
+  "numPassedTestSuites": 31,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 168,
+  "numPassedTests": 168,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1789189879024,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility renders neither component for a fresh pre-induction profile, even with a late mission focus",
+          "status": "passed",
+          "title": "renders neither component for a fresh pre-induction profile, even with a late mission focus",
+          "duration": 37.49129999999968,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility keeps unreached titles out of visible and accessible world markup",
+          "status": "passed",
+          "title": "keeps unreached titles out of visible and accessible world markup",
+          "duration": 68.79130000000032,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility keeps unreached titles out of visible and accessible campaign markup",
+          "status": "passed",
+          "title": "keeps unreached titles out of visible and accessible campaign markup",
+          "duration": 119.23559999999998,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility ignores a locked focus mission and selects an actually known briefing",
+          "status": "passed",
+          "title": "ignores a locked focus mission and selects an actually known briefing",
+          "duration": 186.65930000000026,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility exposes completed and newly available missions while later missions remain generic",
+          "status": "passed",
+          "title": "exposes completed and newly available missions while later missions remain generic",
+          "duration": 176.92340000000013,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility does not carry a late focus into a regressed profile or empty new journey",
+          "status": "passed",
+          "title": "does not carry a late focus into a regressed profile or empty new journey",
+          "duration": 297.28179999999975,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player-facing mission visibility"
+          ],
+          "fullName": "player-facing mission visibility uses the known mission brief and region name without author-facing region subtitles",
+          "status": "passed",
+          "title": "uses the known mission brief and region name without author-facing region subtitles",
+          "duration": 45.667199999999866,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189899854,
+      "endTime": 1789189900786.6672,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/components/missionVisibility.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas builds the complete public-order saga as 86 episodes and 516 scenes",
+          "status": "passed",
+          "title": "builds the complete public-order saga as 86 episodes and 516 scenes",
+          "duration": 3.305699999999888,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas keeps every episode at six playable or observable scenes",
+          "status": "passed",
+          "title": "keeps every episode at six playable or observable scenes",
+          "duration": 17.11290000000008,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas keeps saga and scene identifiers unique",
+          "status": "passed",
+          "title": "keeps saga and scene identifiers unique",
+          "duration": 1.3088999999999942,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas places a three-path Raon choice in the fifth scene of every episode",
+          "status": "passed",
+          "title": "places a three-path Raon choice in the fifth scene of every episode",
+          "duration": 12.346500000000106,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas preserves the intended reveal order and Raon viewpoint contract",
+          "status": "passed",
+          "title": "preserves the intended reveal order and Raon viewpoint contract",
+          "duration": 0.6802000000000135,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas covers the essential cast across the full narrative",
+          "status": "passed",
+          "title": "covers the essential cast across the full narrative",
+          "duration": 2.2170000000000982,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas locks the decisive canon while keeping uncertain origins explicitly uncertain",
+          "status": "passed",
+          "title": "locks the decisive canon while keeping uncertain origins explicitly uncertain",
+          "duration": 0.6985999999999422,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas gives every scene enough production metadata to become game content",
+          "status": "passed",
+          "title": "gives every scene enough production metadata to become game content",
+          "duration": 70.18529999999987,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas does not promote scene plans to confirmed canon when generating the atlas",
+          "status": "passed",
+          "title": "does not promote scene plans to confirmed canon when generating the atlas",
+          "duration": 26.861200000000053,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas leaves Kain’s outcome unresolved instead of guaranteeing survival, injury, or final battle participation",
+          "status": "passed",
+          "title": "leaves Kain’s outcome unresolved instead of guaranteeing survival, injury, or final battle participation",
+          "duration": 1.2434000000000651,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas does not place Denin traits or remnants of the first light before the first light",
+          "status": "passed",
+          "title": "does not place Denin traits or remnants of the first light before the first light",
+          "duration": 0.7967999999998483,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "grand story atlas"
+          ],
+          "fullName": "grand story atlas preserves the sourced first-light change without deciding Denin ancestry or Lami’s access to the light",
+          "status": "passed",
+          "title": "preserves the sourced first-light change without deciding Denin ancestry or Lami’s access to the light",
+          "duration": 0.34570000000007894,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189886553,
+      "endTime": 1789189886691.3457,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/data/grandStory.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "world location atlas"
+          ],
+          "fullName": "world location atlas covers every grand-story location without duplicates",
+          "status": "passed",
+          "title": "covers every grand-story location without duplicates",
+          "duration": 6.290299999999888,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "world location atlas"
+          ],
+          "fullName": "world location atlas assigns every location to a populated production category",
+          "status": "passed",
+          "title": "assigns every location to a populated production category",
+          "duration": 5.7654,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "world location atlas"
+          ],
+          "fullName": "world location atlas provides eleven production visuals for every episode appearance",
+          "status": "passed",
+          "title": "provides eleven production visuals for every episode appearance",
+          "duration": 89.7355,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "world location atlas"
+          ],
+          "fullName": "world location atlas keeps location search metadata and story links production-ready",
+          "status": "passed",
+          "title": "keeps location search metadata and story links production-ready",
+          "duration": 50.493000000000166,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189903787,
+      "endTime": 1789189903939.493,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/data/locations.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment uses progressed health, armor, power and skill morale in the actual action values",
+          "status": "passed",
+          "title": "uses progressed health, armor, power and skill morale in the actual action values",
+          "duration": 5.230499999999893,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment includes all five selected companions and refuses a missing Raon",
+          "status": "passed",
+          "title": "includes all five selected companions and refuses a missing Raon",
+          "duration": 4.663400000000138,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment never calls an absent companion and uses guard as a shield rather than healing",
+          "status": "passed",
+          "title": "never calls an absent companion and uses guard as a shield rather than healing",
+          "duration": 1.350400000000036,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment preserves doctrine, choices, war pressure and bond bonuses from the shared opening state",
+          "status": "passed",
+          "title": "preserves doctrine, choices, war pressure and bond bonuses from the shared opening state",
+          "duration": 1.323699999999917,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment keeps story and veteran enemy health and damage scales distinct",
+          "status": "passed",
+          "title": "keeps story and veteran enemy health and damage scales distinct",
+          "duration": 1.6868999999999232,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment absorbs enemy damage with the real opening objective shield",
+          "status": "passed",
+          "title": "absorbs enemy damage with the real opening objective shield",
+          "duration": 0.7309000000000196,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battle growth and deployment"
+          ],
+          "fullName": "action battle growth and deployment requires reveal for hidden targets and applies Chris and Kain exposure skills",
+          "status": "passed",
+          "title": "requires reveal for hidden targets and applies Chris and Kain exposure skills",
+          "duration": 2.557800000000043,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks connects the actual companion skill and testimony in 'citizen-cartridge'",
+          "status": "passed",
+          "title": "connects the actual companion skill and testimony in 'citizen-cartridge'",
+          "duration": 2.169300000000021,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks connects the actual companion skill and testimony in 'empty-generation-village'",
+          "status": "passed",
+          "title": "connects the actual companion skill and testimony in 'empty-generation-village'",
+          "duration": 1.1195000000000164,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks connects the actual companion skill and testimony in 'wingless-convoy'",
+          "status": "passed",
+          "title": "connects the actual companion skill and testimony in 'wingless-convoy'",
+          "duration": 1.3448000000000775,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks connects the actual companion skill and testimony in 'violet-infiltration'",
+          "status": "passed",
+          "title": "connects the actual companion skill and testimony in 'violet-infiltration'",
+          "duration": 0.7852000000000317,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks connects the actual companion skill and testimony in 'cursed-border'",
+          "status": "passed",
+          "title": "connects the actual companion skill and testimony in 'cursed-border'",
+          "duration": 0.8961000000001604,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks does not create testimony for a different target or an unwitnessed guard",
+          "status": "passed",
+          "title": "does not create testimony for a different target or an unwitnessed guard",
+          "duration": 0.6159000000000106,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action mission testimony and interrupted attacks"
+          ],
+          "fullName": "action mission testimony and interrupted attacks cancels an old telegraph and leaves preparation time after a posture break",
+          "status": "passed",
+          "title": "cancels an old telegraph and leaves preparation time after a posture break",
+          "duration": 2.9687999999998738,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety fires the surviving artillery core once per completed 24 seconds",
+          "status": "passed",
+          "title": "fires the surviving artillery core once per completed 24 seconds",
+          "duration": 1.3648000000000593,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety reseals only unexposed hidden units after even rounds",
+          "status": "passed",
+          "title": "reseals only unexposed hidden units after even rounds",
+          "duration": 1.6638000000000375,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety damages all deployed heroes and gains 12 morale on temporal rounds",
+          "status": "passed",
+          "title": "damages all deployed heroes and gains 12 morale on temporal rounds",
+          "duration": 1.2835999999999785,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety fails when the final area attack also destroys the neutral objective",
+          "status": "passed",
+          "title": "fails when the final area attack also destroys the neutral objective",
+          "duration": 1.3803000000000338,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety allows a finisher once and records actual use independently of remaining morale",
+          "status": "passed",
+          "title": "allows a finisher once and records actual use independently of remaining morale",
+          "duration": 0.8483000000001084,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety enforces the actual round limit and cannot turn a timed-out attempt into victory",
+          "status": "passed",
+          "title": "enforces the actual round limit and cannot turn a timed-out attempt into victory",
+          "duration": 0.845299999999952,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "action battlefield rules and result safety"
+          ],
+          "fullName": "action battlefield rules and result safety exports actual survivor health, objective shield and morale without rewriting enemies",
+          "status": "passed",
+          "title": "exports actual survivor health, objective shield and morale without rewriting enemies",
+          "duration": 0.839200000000119,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189882932,
+      "endTime": 1789189882969.839,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/actionBattleRules.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "battleDecision"
+          ],
+          "fullName": "battleDecision allows a turn to end when only Kain and a hidden sniper remain",
+          "status": "passed",
+          "title": "allows a turn to end when only Kain and a hidden sniper remain",
+          "duration": 18.40969999999993,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleDecision"
+          ],
+          "fullName": "battleDecision recognizes legal protection and reveal actions without changing the battle",
+          "status": "passed",
+          "title": "recognizes legal protection and reveal actions without changing the battle",
+          "duration": 2.2998000000000047,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleDecision"
+          ],
+          "fullName": "battleDecision reveals a hidden threat before recommending direct damage",
+          "status": "passed",
+          "title": "reveals a hidden threat before recommending direct damage",
+          "duration": 6.940299999999979,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleDecision"
+          ],
+          "fullName": "battleDecision keeps attacking after the cursed-border sniper is revealed",
+          "status": "passed",
+          "title": "keeps attacking after the cursed-border sniper is revealed",
+          "duration": 3.981599999999844,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleDecision"
+          ],
+          "fullName": "battleDecision prioritizes a guard only when the protected objective can collapse",
+          "status": "passed",
+          "title": "prioritizes a guard only when the protected objective can collapse",
+          "duration": 2.1941000000001623,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189894005,
+      "endTime": 1789189894039.194,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/battleDecision.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine applies the selected opening doctrine",
+          "status": "passed",
+          "title": "applies the selected opening doctrine",
+          "duration": 3.0279999999999063,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine scales battlefield pressure by mission difficulty",
+          "status": "passed",
+          "title": "scales battlefield pressure by mission difficulty",
+          "duration": 0.8848999999999023,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine turns Raon story choices into opening battle advantages",
+          "status": "passed",
+          "title": "turns Raon story choices into opening battle advantages",
+          "duration": 1.002299999999991,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine carries campaign pressure and companion trust into the battlefield",
+          "status": "passed",
+          "title": "carries campaign pressure and companion trust into the battlefield",
+          "duration": 0.7121999999999389,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine prevents attacking a hidden sniper before reveal",
+          "status": "passed",
+          "title": "prevents attacking a hidden sniper before reveal",
+          "duration": 1.0312999999999874,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine lets Chris reveal and expose a hidden target",
+          "status": "passed",
+          "title": "lets Chris reveal and expose a hidden target",
+          "duration": 1.3129999999999882,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine triggers the convoy guard revelation once when Kazrin protects a visible living witness",
+          "status": "passed",
+          "title": "triggers the convoy guard revelation once when Kazrin protects a visible living witness",
+          "duration": 6.102900000000091,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine does not trigger a guard revelation when its witness is hidden",
+          "status": "passed",
+          "title": "does not trigger a guard revelation when its witness is hidden",
+          "duration": 0.8614999999999782,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine does not trigger a guard revelation when its witness is dead",
+          "status": "passed",
+          "title": "does not trigger a guard revelation when its witness is dead",
+          "duration": 0.41869999999994434,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine requires the specified hero and guard skill for the convoy revelation",
+          "status": "passed",
+          "title": "requires the specified hero and guard skill for the convoy revelation",
+          "duration": 0.6412000000000262,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine builds a three-captain focus chain and breaks the target",
+          "status": "passed",
+          "title": "builds a three-captain focus chain and breaks the target",
+          "duration": 1.002800000000093,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine starts a new focus chain when the target changes",
+          "status": "passed",
+          "title": "starts a new focus chain when the target changes",
+          "duration": 0.4075000000000273,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine telegraphs enemy targets before their actions resolve",
+          "status": "passed",
+          "title": "telegraphs enemy targets before their actions resolve",
+          "duration": 0.695699999999988,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine clears the focus chain when the next round begins",
+          "status": "passed",
+          "title": "clears the focus chain when the next round begins",
+          "duration": 0.5983999999999696,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine spends full morale on the team finisher",
+          "status": "passed",
+          "title": "spends full morale on the team finisher",
+          "duration": 0.5679000000000087,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine applies aerial battery damage while the sky core survives",
+          "status": "passed",
+          "title": "applies aerial battery damage while the sky core survives",
+          "duration": 0.7174999999999727,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine reseals unexposed infiltrators on even archive rounds",
+          "status": "passed",
+          "title": "reseals unexposed infiltrators on even archive rounds",
+          "duration": 0.648900000000026,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine makes area attacks damage the truce objective",
+          "status": "passed",
+          "title": "makes area attacks damage the truce objective",
+          "duration": 0.5480000000000018,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "battleEngine"
+          ],
+          "fullName": "battleEngine makes temporal echoes strain every deployed hero",
+          "status": "passed",
+          "title": "makes temporal echoes strain every deployed hero",
+          "duration": 0.5791999999999007,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189885355,
+      "endTime": 1789189885377.579,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/battleEngine.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes rejects unknown IDs and out-of-order unlocks without spending points",
+          "status": "passed",
+          "title": "rejects unknown IDs and out-of-order unlocks without spending points",
+          "duration": 4.926000000000045,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes charges each node once and rejects insufficient or invalid points",
+          "status": "passed",
+          "title": "charges each node once and rejects insufficient or invalid points",
+          "duration": 2.808899999999994,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes allows the free foundation node with no skill points",
+          "status": "passed",
+          "title": "allows the free foundation node with no skill points",
+          "duration": 0.49490000000002965,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes preserves the original combat stats for foundation-only saves",
+          "status": "passed",
+          "title": "preserves the original combat stats for foundation-only saves",
+          "duration": 1.3137000000000398,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes applies fieldcraft to starting battle health and actual attack damage",
+          "status": "passed",
+          "title": "applies fieldcraft to starting battle health and actual attack damage",
+          "duration": 4.744399999999928,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes applies fieldcraft power to protection skills as well as damage",
+          "status": "passed",
+          "title": "applies fieldcraft power to protection skills as well as damage",
+          "duration": 1.1476999999999862,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes increases earned battle morale for raon / sixteen-petals",
+          "status": "passed",
+          "title": "increases earned battle morale for raon / sixteen-petals",
+          "duration": 0.7620999999999185,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes increases earned battle morale for raon / unfinished-flow",
+          "status": "passed",
+          "title": "increases earned battle morale for raon / unfinished-flow",
+          "duration": 0.8397999999999683,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes increases earned battle morale for hadori / iron-gate",
+          "status": "passed",
+          "title": "increases earned battle morale for hadori / iron-gate",
+          "duration": 0.6077000000000226,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes increases earned battle morale for chris / side-read",
+          "status": "passed",
+          "title": "increases earned battle morale for chris / side-read",
+          "duration": 0.5772000000000617,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes adds personal style power and armor without reapplying earlier nodes",
+          "status": "passed",
+          "title": "adds personal style power and armor without reapplying earlier nodes",
+          "duration": 1.379199999999969,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hero growth nodes"
+          ],
+          "fullName": "hero growth nodes retains legacy unlocks while ignoring unknown and repeated saved IDs",
+          "status": "passed",
+          "title": "retains legacy unlocks while ignoring unknown and repeated saved IDs",
+          "duration": 4.3215999999999894,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189887715,
+      "endTime": 1789189887740.3215,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/heroGrowth.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery recovers a missing or malformed local save (undefined) from IndexedDB",
+          "status": "passed",
+          "title": "recovers a missing or malformed local save (undefined) from IndexedDB",
+          "duration": 24.09310000000005,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery recovers a missing or malformed local save ({broken JSON) from IndexedDB",
+          "status": "passed",
+          "title": "recovers a missing or malformed local save ({broken JSON) from IndexedDB",
+          "duration": 7.855800000000045,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery recovers a missing or malformed local save (null) from IndexedDB",
+          "status": "passed",
+          "title": "recovers a missing or malformed local save (null) from IndexedDB",
+          "duration": 3.8390999999999167,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery recovers a missing or malformed local save ([]) from IndexedDB",
+          "status": "passed",
+          "title": "recovers a missing or malformed local save ([]) from IndexedDB",
+          "duration": 3.359000000000151,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery recovers a missing or malformed local save ({\"day\":20}) from IndexedDB",
+          "status": "passed",
+          "title": "recovers a missing or malformed local save ({\"day\":20}) from IndexedDB",
+          "duration": 4.6172999999998865,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery rejects structurally invalid local data before migration",
+          "status": "passed",
+          "title": "rejects structurally invalid local data before migration",
+          "duration": 2.3658000000000357,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery rejects structurally invalid local data before migration",
+          "status": "passed",
+          "title": "rejects structurally invalid local data before migration",
+          "duration": 3.246499999999969,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery rejects structurally invalid local data before migration",
+          "status": "passed",
+          "title": "rejects structurally invalid local data before migration",
+          "duration": 2.4440000000001874,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery rejects structurally invalid local data before migration",
+          "status": "passed",
+          "title": "rejects structurally invalid local data before migration",
+          "duration": 2.187700000000177,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery rejects structurally invalid local data before migration",
+          "status": "passed",
+          "title": "rejects structurally invalid local data before migration",
+          "duration": 1.7130999999999403,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery keeps a valid local save playable when IndexedDB is unavailable",
+          "status": "passed",
+          "title": "keeps a valid local save playable when IndexedDB is unavailable",
+          "duration": 4.4529,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery preserves local data and backup when failOpen prevents recovery",
+          "status": "passed",
+          "title": "preserves local data and backup when failOpen prevents recovery",
+          "duration": 2.38149999999996,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery preserves local data and backup when failRead prevents recovery",
+          "status": "passed",
+          "title": "preserves local data and backup when failRead prevents recovery",
+          "duration": 1.363700000000108,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery does not replace corrupt copies with a fresh profile",
+          "status": "passed",
+          "title": "does not replace corrupt copies with a fresh profile",
+          "duration": 1.767699999999877,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery checks the backup before treating an absent local key as a new game",
+          "status": "passed",
+          "title": "checks the backup before treating an absent local key as a new game",
+          "duration": 1.488800000000083,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery migrates legacy fields without losing progress or copying the old flag into other slots",
+          "status": "passed",
+          "title": "migrates legacy fields without losing progress or copying the old flag into other slots",
+          "duration": 1.5440000000000964,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery prefers the current backup over a stale legacy local save",
+          "status": "passed",
+          "title": "prefers the current backup over a stale legacy local save",
+          "duration": 2.0493000000001302,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery can recover and continue saving when localStorage throws",
+          "status": "passed",
+          "title": "can recover and continue saving when localStorage throws",
+          "duration": 6.857600000000048,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery loads the newer backup after local writes fail but an older local save remains readable",
+          "status": "passed",
+          "title": "loads the newer backup after local writes fail but an older local save remains readable",
+          "duration": 5.057299999999941,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery orders saves in the same millisecond when the local store rejects the second save",
+          "status": "passed",
+          "title": "orders saves in the same millisecond when the local store rejects the second save",
+          "duration": 3.5977000000000317,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery orders saves in the same millisecond when the backup store rejects the second save",
+          "status": "passed",
+          "title": "orders saves in the same millisecond when the backup store rejects the second save",
+          "duration": 4.459899999999834,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery keeps data and timestamp atomic when only the separate metadata key and backup fail to write",
+          "status": "passed",
+          "title": "keeps data and timestamp atomic when only the separate metadata key and backup fail to write",
+          "duration": 4.65969999999993,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery retains the newer local save when the backup is older or structurally invalid",
+          "status": "passed",
+          "title": "retains the newer local save when the backup is older or structurally invalid",
+          "duration": 3.32549999999992,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery compares the timestamp belonging to the local snapshot read before async recovery",
+          "status": "passed",
+          "title": "compares the timestamp belonging to the local snapshot read before async recovery",
+          "duration": 2.696999999999889,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery reports a failed save without claiming persistence when both stores reject writes",
+          "status": "passed",
+          "title": "reports a failed save without claiming persistence when both stores reject writes",
+          "duration": 2.502899999999954,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign save recovery"
+          ],
+          "fullName": "campaign save recovery times out an unavailable database without authorizing a new save",
+          "status": "passed",
+          "title": "times out an unavailable database without authorizing a new save",
+          "duration": 12.80619999999999,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hydration ownership and ordered save writes"
+          ],
+          "fullName": "hydration ownership and ordered save writes keeps autosave disabled when a loader unexpectedly throws",
+          "status": "passed",
+          "title": "keeps autosave disabled when a loader unexpectedly throws",
+          "duration": 1.8135999999999513,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hydration ownership and ordered save writes"
+          ],
+          "fullName": "hydration ownership and ordered save writes ignores a previous slot load that finishes after the selected slot",
+          "status": "passed",
+          "title": "ignores a previous slot load that finishes after the selected slot",
+          "duration": 1.207700000000159,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hydration ownership and ordered save writes"
+          ],
+          "fullName": "hydration ownership and ordered save writes ignores the first mount read after StrictMode cleanup and reloading the same slot",
+          "status": "passed",
+          "title": "ignores the first mount read after StrictMode cleanup and reloading the same slot",
+          "duration": 0.9846000000000004,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hydration ownership and ordered save writes"
+          ],
+          "fullName": "hydration ownership and ordered save writes honors an explicit new game even when an older recovery finishes afterward",
+          "status": "passed",
+          "title": "honors an explicit new game even when an older recovery finishes afterward",
+          "duration": 3.912700000000086,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "hydration ownership and ordered save writes"
+          ],
+          "fullName": "hydration ownership and ordered save writes serializes delayed writes and reads so an older snapshot cannot win",
+          "status": "passed",
+          "title": "serializes delayed writes and reads so an older snapshot cannot win",
+          "duration": 2.049400000000105,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189881411,
+      "endTime": 1789189881540.0493,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/persistence.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "200+ deterministic playtest audit"
+          ],
+          "fullName": "200+ deterministic playtest audit executes more than 200 complete campaign paths",
+          "status": "passed",
+          "title": "executes more than 200 complete campaign paths",
+          "duration": 1307.7781,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189905804,
+      "endTime": 1789189907111.778,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/playtestAudit.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression starts Raon in the village and keeps operations locked before induction",
+          "status": "passed",
+          "title": "starts Raon in the village and keeps operations locked before induction",
+          "duration": 4.240200000000186,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression carries fifteen origin choices into Raon’s Psyche induction record",
+          "status": "passed",
+          "title": "carries fifteen origin choices into Raon’s Psyche induction record",
+          "duration": 4.971900000000005,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression does not allow an origin choice to be revised after it becomes memory",
+          "status": "passed",
+          "title": "does not allow an origin choice to be revised after it becomes memory",
+          "duration": 0.6304999999999836,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression tracks Raon story choices without double-counting revisions",
+          "status": "passed",
+          "title": "tracks Raon story choices without double-counting revisions",
+          "duration": 1.087500000000091,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression turns a story choice into a deterministic check and remembered relationship beat",
+          "status": "passed",
+          "title": "turns a story choice into a deterministic check and remembered relationship beat",
+          "duration": 0.8039000000001124,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression raises war pressure when Raon delays and relieves it through completed missions",
+          "status": "passed",
+          "title": "raises war pressure when Raon delays and relieves it through completed missions",
+          "duration": 0.963399999999865,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression unlocks operations in prerequisite order",
+          "status": "passed",
+          "title": "unlocks operations in prerequisite order",
+          "duration": 2.691000000000031,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression does not duplicate first-clear rewards",
+          "status": "passed",
+          "title": "does not duplicate first-clear rewards",
+          "duration": 0.6149000000000342,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression improves replay grades without duplicating rewards",
+          "status": "passed",
+          "title": "improves replay grades without duplicating rewards",
+          "duration": 0.6115999999999531,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression spends supplies for headquarters upgrades",
+          "status": "passed",
+          "title": "spends supplies for headquarters upgrades",
+          "duration": 0.6357000000000426,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression spends a skill point when a hero node is unlocked",
+          "status": "passed",
+          "title": "spends a skill point when a hero node is unlocked",
+          "duration": 0.690599999999904,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression ships eight fully playable operations",
+          "status": "passed",
+          "title": "ships eight fully playable operations",
+          "duration": 0.5534000000000106,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression keeps at least four captains in the active squad",
+          "status": "passed",
+          "title": "keeps at least four captains in the active squad",
+          "duration": 0.7226000000000568,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression equips recovered items and applies their combat bonuses",
+          "status": "passed",
+          "title": "equips recovered items and applies their combat bonuses",
+          "duration": 1.2507000000000517,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression resolves dispatch rewards only once",
+          "status": "passed",
+          "title": "resolves dispatch rewards only once",
+          "duration": 0.7651999999998225,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression changes faction standings when a mission is cleared",
+          "status": "passed",
+          "title": "changes faction standings when a mission is cleared",
+          "duration": 0.41840000000001965,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression spends daily actions on training and restores them next day",
+          "status": "passed",
+          "title": "spends daily actions on training and restores them next day",
+          "duration": 0.8100999999999203,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression prevents free day skipping before any command action",
+          "status": "passed",
+          "title": "prevents free day skipping before any command action",
+          "duration": 0.21179999999981192,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression rewards a balanced daily command plan once per day",
+          "status": "passed",
+          "title": "rewards a balanced daily command plan once per day",
+          "duration": 1.0452999999999975,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression keeps a completed daily plan in place until its reward is claimed",
+          "status": "passed",
+          "title": "keeps a completed daily plan in place until its reward is claimed",
+          "duration": 0.4353000000000975,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression scales veteran first-clear rewards without changing story rewards",
+          "status": "passed",
+          "title": "scales veteran first-clear rewards without changing story rewards",
+          "duration": 1.259900000000016,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression tracks and claims strategic orders exactly once",
+          "status": "passed",
+          "title": "tracks and claims strategic orders exactly once",
+          "duration": 0.7805000000000746,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression builds repeatable pair bonds and unlocks relationship records",
+          "status": "passed",
+          "title": "builds repeatable pair bonds and unlocks relationship records",
+          "duration": 0.5699999999999363,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression runs field activities repeatedly and tracks their completion count",
+          "status": "passed",
+          "title": "runs field activities repeatedly and tracks their completion count",
+          "duration": 0.3410000000001219,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "campaign progression"
+          ],
+          "fullName": "campaign progression crafts legacy equipment when the forge and resources are ready",
+          "status": "passed",
+          "title": "crafts legacy equipment when the forge and resources are ready",
+          "duration": 0.5511999999998807,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189884228,
+      "endTime": 1789189884256.5513,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/progression.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "world simulation"
+          ],
+          "fullName": "world simulation records landmarks once while preserving Raon position",
+          "status": "passed",
+          "title": "records landmarks once while preserving Raon position",
+          "duration": 4.24590000000012,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "world simulation"
+          ],
+          "fullName": "world simulation lets NPCs remember Raon choices across later conversations",
+          "status": "passed",
+          "title": "lets NPCs remember Raon choices across later conversations",
+          "duration": 2.254599999999982,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "world simulation"
+          ],
+          "fullName": "world simulation advances day phases and preserves modular headquarters slots",
+          "status": "passed",
+          "title": "advances day phases and preserves modular headquarters slots",
+          "duration": 2.738199999999779,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "world simulation"
+          ],
+          "fullName": "world simulation ships a dedicated optimized portrait for every seventh-generation captain",
+          "status": "passed",
+          "title": "ships a dedicated optimized portrait for every seventh-generation captain",
+          "duration": 0.866800000000012,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189902218,
+      "endTime": 1789189902228.8667,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/simulation.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure starts with Raon, no future scene images or mission names in player pages",
+          "status": "passed",
+          "title": "starts with Raon, no future scene images or mission names in player pages",
+          "duration": 66.45879999999988,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure unlocks only a completed scene, its speaker and the choice actually made",
+          "status": "passed",
+          "title": "unlocks only a completed scene, its speaker and the choice actually made",
+          "duration": 2.705199999999877,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure reveals the next briefing only after graduation and prerequisites",
+          "status": "passed",
+          "title": "reveals the next briefing only after graduation and prerequisites",
+          "duration": 2.926300000000083,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure does not turn legacy blanket truth tokens or character levels into witnessed testimony",
+          "status": "passed",
+          "title": "does not turn legacy blanket truth tokens or character levels into witnessed testimony",
+          "duration": 2.352899999999863,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure requires a known completed mission as well as a witness token",
+          "status": "passed",
+          "title": "requires a known completed mission as well as a witness token",
+          "duration": 2.755999999999858,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure keeps final truths and author character journeys absent even after every current mission",
+          "status": "passed",
+          "title": "keeps final truths and author character journeys absent even after every current mission",
+          "duration": 9.202800000000025,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure recomputes visible data after switching to a fresh slot without carrying unlocked records",
+          "status": "passed",
+          "title": "recomputes visible data after switching to a fresh slot without carrying unlocked records",
+          "duration": 2.824199999999564,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure blocks author URL parameters in production and requires explicit development entry",
+          "status": "passed",
+          "title": "blocks author URL parameters in production and requires explicit development entry",
+          "duration": 1.4458000000004176,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "player record disclosure"
+          ],
+          "fullName": "player record disclosure disables campaign systems before graduation while retaining safe records",
+          "status": "passed",
+          "title": "disables campaign systems before graduation while retaining safe records",
+          "duration": 19.672900000000027,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189889867,
+      "endTime": 1789189889978.6729,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/storyAccess.test.tsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "village interaction readiness"
+          ],
+          "fullName": "village interaction readiness keeps the interaction available after movement, a position save, and an unchanged model synchronization",
+          "status": "passed",
+          "title": "keeps the interaction available after movement, a position save, and an unchanged model synchronization",
+          "duration": 6.1965999999999894,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "village interaction readiness"
+          ],
+          "fullName": "village interaction readiness does not use a previous scene’s proximity while a new story target is being synchronized",
+          "status": "passed",
+          "title": "does not use a previous scene’s proximity while a new story target is being synchronized",
+          "duration": 3.85349999999994,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "village interaction readiness"
+          ],
+          "fullName": "village interaction readiness re-evaluates a relocated target even when the player has stopped moving",
+          "status": "passed",
+          "title": "re-evaluates a relocated target even when the player has stopped moving",
+          "duration": 0.9221999999999753,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "village interaction readiness"
+          ],
+          "fullName": "village interaction readiness creates a fresh initial snapshot after a scene restart, including a spawn already near the target",
+          "status": "passed",
+          "title": "creates a fresh initial snapshot after a scene restart, including a spawn already near the target",
+          "duration": 1.363399999999956,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "village interaction readiness"
+          ],
+          "fullName": "village interaction readiness disables the interaction upon leaving the radius and enables it on re-entry",
+          "status": "passed",
+          "title": "disables the interaction upon leaving the radius and enables it on re-entry",
+          "duration": 1.337500000000091,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "village interaction readiness"
+          ],
+          "fullName": "village interaction readiness uses the existing circular, strictly less than 94 pixel interaction boundary",
+          "status": "passed",
+          "title": "uses the existing circular, strictly less than 94 pixel interaction boundary",
+          "duration": 0.9787999999998647,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189895998,
+      "endTime": 1789189896013.9788,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/villageInteraction.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records records a matching victorious revelation alongside normal first-clear progression",
+          "status": "passed",
+          "title": "records a matching victorious revelation alongside normal first-clear progression",
+          "duration": 17.177999999999884,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not issue a witness for no battle state",
+          "status": "passed",
+          "title": "does not issue a witness for no battle state",
+          "duration": 3.107100000000173,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not issue a witness for ongoing battle",
+          "status": "passed",
+          "title": "does not issue a witness for ongoing battle",
+          "duration": 2.4367999999999483,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not issue a witness for defeated battle",
+          "status": "passed",
+          "title": "does not issue a witness for defeated battle",
+          "duration": 3.1259999999999764,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not issue a witness for different mission",
+          "status": "passed",
+          "title": "does not issue a witness for different mission",
+          "duration": 2.7291999999999916,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not issue a witness for no actual revelation",
+          "status": "passed",
+          "title": "does not issue a witness for no actual revelation",
+          "duration": 1.9863000000000284,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records requires a revelation defined on the mission",
+          "status": "passed",
+          "title": "requires a revelation defined on the mission",
+          "duration": 2.3903000000000247,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records preserves legacy truth records without treating them as verified witnesses",
+          "status": "passed",
+          "title": "preserves legacy truth records without treating them as verified witnesses",
+          "duration": 4.389599999999973,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records allows a lower-grade replay to add the missing witness without repeating rewards",
+          "status": "passed",
+          "title": "allows a lower-grade replay to add the missing witness without repeating rewards",
+          "duration": 6.445300000000088,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not add witnesses on a failed, unverified, or mismatched replay",
+          "status": "passed",
+          "title": "does not add witnesses on a failed, unverified, or mismatched replay",
+          "duration": 5.192099999999982,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records records a grade improvement and new witness together without another first-clear reward",
+          "status": "passed",
+          "title": "records a grade improvement and new witness together without another first-clear reward",
+          "duration": 2.1540999999999713,
+          "failureMessages": [],
+          "meta": {}
+        },
+        {
+          "ancestorTitles": [
+            "verified mission witness records"
+          ],
+          "fullName": "verified mission witness records does not duplicate a previously acquired witness or replay log",
+          "status": "passed",
+          "title": "does not duplicate a previously acquired witness or replay log",
+          "duration": 2.3726999999998952,
+          "failureMessages": [],
+          "meta": {}
+        }
+      ],
+      "startTime": 1789189891639,
+      "endTime": 1789189891695.3728,
+      "status": "passed",
+      "message": "",
+      "name": "<LOCAL_REPOSITORY>/src/game/witnessProgression.test.ts"
+    }
+  ]
+}

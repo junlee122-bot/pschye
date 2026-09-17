@@ -1,0 +1,4 @@
+{
+  "message": "ENOSPC: no space left on device, write",
+  "stack": "Error: ENOSPC: no space left on device, write\n    at Object.writeFileSync (node:fs:2414:20)\n    at Object.log (file:///<LOCAL_USER_HOME>/Documents/Codex/2026-09-10/new-chat-3/work/native-browser-host.mjs:31:82)\n    at Module.default (file:///<LOCAL_USER_HOME>/Documents/Codex/2026-09-10/new-chat-3/work/native-academy.mjs?v=1789437678070:37:5)\n    at async Server.<anonymous> (file:///<LOCAL_USER_HOME>/Documents/Codex/2026-09-10/new-chat-3/work/native-browser-host.mjs:43:20)"
+}

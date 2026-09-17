@@ -1,0 +1,1002 @@
+{
+  "exportedAt": "2026-09-15T06:00:02.684Z",
+  "commit": "3f7922abbeabc0ef936ee56f268bc7d394db58db",
+  "files": [
+    {
+      "file": "native-academy.mjs",
+      "bytes": 2566,
+      "sha256": "459b77f09d10e96a2474c1631cd48d08858387aff969994a673cb1e138f5fe3f"
+    },
+    {
+      "file": "native-alternatives-captain-trials-compassion-complete.png",
+      "bytes": 383999,
+      "sha256": "a955d2ecc011c246a6e9f9a701a1848699f7e249e369becc9940f2c36bdc5267"
+    },
+    {
+      "file": "native-alternatives-captain-trials-resolve-complete.png",
+      "bytes": 381164,
+      "sha256": "3d688a86b4cc547f0020b24fd4a22f867a8107e21efb48e4607b6436b6bdd50f"
+    },
+    {
+      "file": "native-alternatives-field-exam-compassion-complete.png",
+      "bytes": 236527,
+      "sha256": "71ad42c98369c75a7db3368292017c72b1ede7ac95e8b11a53a4d929a0b8caaa"
+    },
+    {
+      "file": "native-alternatives-field-exam-resolve-complete.png",
+      "bytes": 248752,
+      "sha256": "4b28fc0da6dbb0086a236f182b10eeabf616b45c7b2be65239422062e4d092b5"
+    },
+    {
+      "file": "native-alternatives-forms-result.json",
+      "bytes": 220736,
+      "sha256": "d013d008d855e61ee8e4bed2ab673db268e8a7847375a2269560bb54bce45c1d"
+    },
+    {
+      "file": "native-alternatives-forms.mjs",
+      "bytes": 6271,
+      "sha256": "39d0ebda90cc611572ca2dc78eb7b5b3df7f04e628be97b0b15d236ec1a8e5fe"
+    },
+    {
+      "file": "native-alternatives-kazrin-duel-compassion-complete.png",
+      "bytes": 390836,
+      "sha256": "61a783c9fbe7e97cf36c433c7d692dfd5ef23e95f9e66ebb8b5002814e563455"
+    },
+    {
+      "file": "native-alternatives-kazrin-duel-resolve-complete.png",
+      "bytes": 391629,
+      "sha256": "68217860092e91449dd59b3c14bffb7ff5c107a448280c097956d957e343f630"
+    },
+    {
+      "file": "native-alternatives-notes.md",
+      "bytes": 3034,
+      "sha256": "c5e743480e015a9ce05221f9d09ca1301e6c03389344f3971c10524c55b744dd"
+    },
+    {
+      "file": "native-alternatives-river-compassion-error.png",
+      "bytes": 254967,
+      "sha256": "40c84f154346db0a45a5274ad52bfaf9d18e51e2e0c18b776be8968f49ddf6a6"
+    },
+    {
+      "file": "native-alternatives-river-compassion-failed.png",
+      "bytes": 191335,
+      "sha256": "bf6f21b32cafd9e5b16aa1fcc91f8bdd19da7fb858e9a6570ade539e72db6ede"
+    },
+    {
+      "file": "native-alternatives-river-compassion-return-storage.json",
+      "bytes": 18088,
+      "sha256": "eb13b877e63204944b572b955bf6e6ba49b46d442fcb4ef2a2d8a745eafd0005"
+    },
+    {
+      "file": "native-alternatives-river-compassion-return.png",
+      "bytes": 58060,
+      "sha256": "d29dbea2825b1a104f704428c65aa97dcd9861aaf74e85296a3c437961030c88"
+    },
+    {
+      "file": "native-alternatives-river-previous-1789439545668.json",
+      "bytes": 1627,
+      "sha256": "07709bab012fc592d6a9ed03beb62fef56bf5537f7600b9620cd6a746ce4168c"
+    },
+    {
+      "file": "native-alternatives-river-previous-1789439642257.json",
+      "bytes": 6752,
+      "sha256": "f30e75ffc5f1129fb7191c03ea45e796615c92ceb5d402029302e9e447502f64"
+    },
+    {
+      "file": "native-alternatives-river-resolve-error.png",
+      "bytes": 254399,
+      "sha256": "1e3cf8834d7a4ff8ed161f30672cb24f7d72c760502c8e602ea85193bb908726"
+    },
+    {
+      "file": "native-alternatives-river-resolve-failed.png",
+      "bytes": 191516,
+      "sha256": "cd16578911869c1e6d7d8b302c64e674fe0c263d051441368e4db3e37877f628"
+    },
+    {
+      "file": "native-alternatives-river-resolve-return-storage.json",
+      "bytes": 17895,
+      "sha256": "d980b869a0180732ff9bafbefb8d47fe0bdfc5171cd8e664e5840ea53c948c6a"
+    },
+    {
+      "file": "native-alternatives-river-resolve-return.png",
+      "bytes": 127115,
+      "sha256": "51c23f7c103f80b4e41ecdcdd958c5627450de105c5883e3ec28774bfc03d6b5"
+    },
+    {
+      "file": "native-alternatives-river-result.json",
+      "bytes": 62078,
+      "sha256": "227b4c6cff5b0a3a3ae6ed86212c9bc4e0c482fd947b7ba4678e5617424640be"
+    },
+    {
+      "file": "native-alternatives-river.cjs",
+      "bytes": 8828,
+      "sha256": "48faa1440b1cc9ba5a8669c2130c5c47505c074b362dfe178ac57dfe6b5b3680"
+    },
+    {
+      "file": "native-alternatives-sixteen-petals-compassion-complete.png",
+      "bytes": 291507,
+      "sha256": "8b9b35f46d330c238f9a9fdd67d1b4db8576ccab1c469cd6797b3e593e4952f7"
+    },
+    {
+      "file": "native-alternatives-sixteen-petals-resolve-complete.png",
+      "bytes": 290941,
+      "sha256": "aba6159b5ff31666535c1f07e0e455a7998d927d8d6d31742ad7272928b5bfcc"
+    },
+    {
+      "file": "native-aptitude-exam-before-choice-profile.json",
+      "bytes": 8303,
+      "sha256": "b5fa284b1a7a29edcac429628f7d70e259c10f069125b642bc83494aaa283bfa"
+    },
+    {
+      "file": "native-aptitude-exam-before-choice-storage.json",
+      "bytes": 22199,
+      "sha256": "10da58fb2224a37f974866a655d2b1edf9c01b16d37cbe136cdf1289ad4b3fc3"
+    },
+    {
+      "file": "native-battle-action-defeat-profile.json",
+      "bytes": 30940,
+      "sha256": "1602b1c3a181aa0fc71b1d15de74fafa5aa81a340bb709f0c3efef3a900e97df"
+    },
+    {
+      "file": "native-battle-action-defeat.png",
+      "bytes": 52096,
+      "sha256": "41bc3a848a81c7f7c60668b8ded3528570b0fed06e7d641a9d2d53b61ad103e8"
+    },
+    {
+      "file": "native-battle-action-failure-profile.json",
+      "bytes": 26478,
+      "sha256": "4f83661e0f8fcea99b4aa98fb635df35b22a62d3865a5db0944bef6f658c06d9"
+    },
+    {
+      "file": "native-battle-action-failure.png",
+      "bytes": 218814,
+      "sha256": "55a1c4ba5f1432777c3e578fd714b3eb80146093c477094049ffb07c173c9a41"
+    },
+    {
+      "file": "native-battle-action-guide.png",
+      "bytes": 105418,
+      "sha256": "59334dc3983995e931e2ab9c6e66bd488c15955fa401ad8bf34ce4d0f6ecdd8c"
+    },
+    {
+      "file": "native-battle-action-mobile-companion.png",
+      "bytes": 170609,
+      "sha256": "58a4e4eef67176b9aa6884419728639a626cbefdc2afd0114f983e020b25f8c2"
+    },
+    {
+      "file": "native-battle-action-paused-profile.json",
+      "bytes": 31036,
+      "sha256": "4270e7cce451cb48c502bbf4035a3d7b31385ae01a2ab711cf55155b554f9e1e"
+    },
+    {
+      "file": "native-battle-action-paused.png",
+      "bytes": 104732,
+      "sha256": "02f77b9e9b95c68c9ea6efdf6fe450511cf0170156190207aba388134297110e"
+    },
+    {
+      "file": "native-battle-action-results.json",
+      "bytes": 5648,
+      "sha256": "0f2aefa2db5867407690be7e950b806af3a19195c8e7301ee8e5a649cf8c84cc"
+    },
+    {
+      "file": "native-battle-action-to-tactical-profile.json",
+      "bytes": 26600,
+      "sha256": "7e4a390f451b7a3e32f876394815d7c22e8271a97d3c49ab9c165afec56cc46a"
+    },
+    {
+      "file": "native-battle-action.mjs",
+      "bytes": 9727,
+      "sha256": "b5fcf7f2d02970fd5e3bf579a01c6dda3910838a462e97fc18d22b1f86d36624"
+    },
+    {
+      "file": "native-battle-before-resume-profile.json",
+      "bytes": 33948,
+      "sha256": "d22e4cec6a9f23041e81546a8a28f6d183bd54fa477d77902a6668d19a571b4b"
+    },
+    {
+      "file": "native-battle-canvas-center-miss.png",
+      "bytes": 679412,
+      "sha256": "09cd7337190e22c3c875d3a9dca30c7152c63eaa9f92ebba9182589b58a503ae"
+    },
+    {
+      "file": "native-battle-four-before-resume-profile.json",
+      "bytes": 30664,
+      "sha256": "bdb0025370423f58a1eb14574ae25ca88c54622144843628f9819a547e94374f"
+    },
+    {
+      "file": "native-battle-four-replay-victory-profile.json",
+      "bytes": 43351,
+      "sha256": "ba52d64472d1c59848d3fb048179d747b17c82a148e90d1553f0141355160173"
+    },
+    {
+      "file": "native-battle-four-replay-victory.png",
+      "bytes": 249430,
+      "sha256": "a13b75cef10e0803925b7cc4c9ac828c912fac088118f39c17d858b81f847a6b"
+    },
+    {
+      "file": "native-battle-four-start-profile.json",
+      "bytes": 24218,
+      "sha256": "b483a44c08175c34baa9a27d548397c799c3af70f728553d1bb804f627532a4a"
+    },
+    {
+      "file": "native-battle-four-start.png",
+      "bytes": 680050,
+      "sha256": "c614bcb62b85e8568f7c871a60075dee70f3640fee12eb70603727c796e203ee"
+    },
+    {
+      "file": "native-battle-four-suspended-profile.json",
+      "bytes": 30664,
+      "sha256": "bdb0025370423f58a1eb14574ae25ca88c54622144843628f9819a547e94374f"
+    },
+    {
+      "file": "native-battle-four-tactical-results.json",
+      "bytes": 12040,
+      "sha256": "939ba9fa428142cda0bc7b1bcdf95df00b21ff9105dca2f43f9698d66107e564"
+    },
+    {
+      "file": "native-battle-four-victory-profile.json",
+      "bytes": 43351,
+      "sha256": "9ab4d0c46d9a18e199ba656317e10d4e538d06693d424701205ec3ea7727c9aa"
+    },
+    {
+      "file": "native-battle-four-victory-storage.json",
+      "bytes": 30760,
+      "sha256": "8e6890834be14d79285a706091a2b905c23b1a0b840130599f1c8863771263c7"
+    },
+    {
+      "file": "native-battle-four-victory.png",
+      "bytes": 249624,
+      "sha256": "a55db529a544a9ff177c482549273cc8a3703b5b243fc6b9a910c30e6585847a"
+    },
+    {
+      "file": "native-battle-four-witness.png",
+      "bytes": 687792,
+      "sha256": "0831abcbf4fb1ba8f4493634d15bdf4cd2b14731c332eb7171cc4959543d2ee1"
+    },
+    {
+      "file": "native-battle-six-start-profile.json",
+      "bytes": 26600,
+      "sha256": "ad69a088a68e68b4d9651f005499d77e494362888636e12322bdaff85fb8791b"
+    },
+    {
+      "file": "native-battle-six-start.png",
+      "bytes": 676855,
+      "sha256": "7d16928edb53bce9063230e952c59192cbd4cd98eaf5bf1007bfca8858888ad0"
+    },
+    {
+      "file": "native-battle-six-victory-profile.json",
+      "bytes": 47129,
+      "sha256": "377317bba5d95899a3d44332f4bbe501739d8f92072a2dca82981d4dc410258c"
+    },
+    {
+      "file": "native-battle-six-victory-storage.json",
+      "bytes": 33016,
+      "sha256": "7672613695c1986957807a3b14376dc2fb6c6b22a50fc8a801e1bb463c5c52e0"
+    },
+    {
+      "file": "native-battle-six-victory.png",
+      "bytes": 253074,
+      "sha256": "ea26db52821a4791f897f8e911695933a86290aa6829f4c4d0499200e2e931fa"
+    },
+    {
+      "file": "native-battle-suspended-profile.json",
+      "bytes": 33948,
+      "sha256": "d22e4cec6a9f23041e81546a8a28f6d183bd54fa477d77902a6668d19a571b4b"
+    },
+    {
+      "file": "native-battle-tactical-failure-profile.json",
+      "bytes": 30037,
+      "sha256": "e15895611115401fdb6ad336319bc51426dba1294a705135538701629798be7b"
+    },
+    {
+      "file": "native-battle-tactical-failure.png",
+      "bytes": 681601,
+      "sha256": "c125ffd92be3ee4883af8c536b2fee368c9621ac11d30bba913eafa3f4568c5c"
+    },
+    {
+      "file": "native-battle-tactical-results.json",
+      "bytes": 7231,
+      "sha256": "154748ccb0967574ff3d9b59738fd936fafda9606022a0868560ced33354d95e"
+    },
+    {
+      "file": "native-battle-tactical.mjs",
+      "bytes": 13119,
+      "sha256": "569089d2bb5b72bfd82ccce7511abda7eb8dbd20fbcf2acb287bc2e009a0df9b"
+    },
+    {
+      "file": "native-battle-verification.md",
+      "bytes": 6045,
+      "sha256": "7dd122a22b6ee8ea8be515fd26a7aeba8f81098bdacf9a556f302c01f1d1a6ef"
+    },
+    {
+      "file": "native-battle-witness.png",
+      "bytes": 683208,
+      "sha256": "a42f7534f89c68c0894133b9f416d92f63cb9a26a363eaff2e2c88491019750f"
+    },
+    {
+      "file": "native-battle-zoom-contract.cjs",
+      "bytes": 1727,
+      "sha256": "a4d6ece8a8212596d69dd8931f1ad4c80acd8d3e932d7a4235561bd3e718ba56"
+    },
+    {
+      "file": "native-battle-zoom-contract.json",
+      "bytes": 1172,
+      "sha256": "1bf86af378e441d66a6c03daaa479e65ab7b66e254749d6901e7d5a8b9d73319"
+    },
+    {
+      "file": "native-boundary-common.mjs",
+      "bytes": 4017,
+      "sha256": "700fe4221806e04645ae9871608c54fa3a2b894e6a1d4482a143e6b50184bd3e"
+    },
+    {
+      "file": "native-boundary-corruption-recovery-320.png",
+      "bytes": 71685,
+      "sha256": "c9fd5e323688a24892f6258f3d3f99a4d202beaf2d65de029b2a897004fd5f43"
+    },
+    {
+      "file": "native-boundary-corruption.json",
+      "bytes": 18397,
+      "sha256": "79cdb94fbed75c5ad3b83b60e18729b9e65c5e39fe7e12ce3016e32a89315402"
+    },
+    {
+      "file": "native-boundary-corruption.mjs",
+      "bytes": 3188,
+      "sha256": "f191e356e5eec60c4abdd171649d2e8c12b705e2aaf5dece73ecd2b4f66ac182"
+    },
+    {
+      "file": "native-boundary-dialogue-dialogue-320.png",
+      "bytes": 146465,
+      "sha256": "4ebb1e68f0fc98d68e933f5307fc42b2244be14c7f313afcaf12190fbece743e"
+    },
+    {
+      "file": "native-boundary-dialogue-title-320.png",
+      "bytes": 273143,
+      "sha256": "321df3555409594bf032c1b3314410089a89c87b62b01d18ba7fb46cde869ef5"
+    },
+    {
+      "file": "native-boundary-dialogue.json",
+      "bytes": 13392,
+      "sha256": "4fdb6d3f775972849dc63927251714ad436ee55fa27816cf054a71eb99e81641"
+    },
+    {
+      "file": "native-boundary-dialogue.mjs",
+      "bytes": 2583,
+      "sha256": "58ef92d74a54cbc2056ca9dc74602338d2f1569a2af761b21b1f305566922f81"
+    },
+    {
+      "file": "native-boundary-field-complete-320.png",
+      "bytes": 239061,
+      "sha256": "dc282a4b490ab58fc765b9d7c64c876e6ec79f8be949ef5ae6401389a40f4904"
+    },
+    {
+      "file": "native-boundary-field-form-320.png",
+      "bytes": 256281,
+      "sha256": "41f292407f6a2aea123f86b4e4f2e3716216d9f28323144d912ac2fc56652c6c"
+    },
+    {
+      "file": "native-boundary-field.json",
+      "bytes": 46062,
+      "sha256": "b97cb1b2bbb371e0b3a99561d0493378cd5f5aa3e91074bf1c9313b1693b362e"
+    },
+    {
+      "file": "native-boundary-field.mjs",
+      "bytes": 4706,
+      "sha256": "585167e5310913a92ff8f5a5a7041395e4485c976eb88c925daa533452550466"
+    },
+    {
+      "file": "native-boundary-finalize.mjs",
+      "bytes": 12934,
+      "sha256": "c333d99f44c7cfe516c9f6f0ad61eede82c81068d85471de7e7157b75e6f0e6b"
+    },
+    {
+      "file": "native-boundary-focus-captain-next-command-320.png",
+      "bytes": 431775,
+      "sha256": "f40ad4fadd80684894a9e142a41ad30b05ea2474b1dd0b6bdf3e4f1dba0d96ab"
+    },
+    {
+      "file": "native-boundary-focus-captain.json",
+      "bytes": 27896,
+      "sha256": "7e4a69b990a402b47ed9e34bc48015158725ad14ecf75355a55940c0ad703724"
+    },
+    {
+      "file": "native-boundary-focus-field-next-command-320.png",
+      "bytes": 242632,
+      "sha256": "502e04343b1a11980cfac19f72567fe84d83d15bca600916c0af4099c18b7eb9"
+    },
+    {
+      "file": "native-boundary-focus-field.json",
+      "bytes": 18459,
+      "sha256": "28c191607ff74c5def2c1354bba00a45aabced52abb317942e79f9f0f1fee85f"
+    },
+    {
+      "file": "native-boundary-focus-petal-next-command-320.png",
+      "bytes": 274640,
+      "sha256": "7662c74f3dd1705e75e2e9f8dba15e8fb00ea53cf1084ccc86a0e13c50457834"
+    },
+    {
+      "file": "native-boundary-focus-petal.json",
+      "bytes": 27515,
+      "sha256": "3d531a172e79b37b07f9a02cdc3064246724e5ff316bdbd00d457d1f2921b192"
+    },
+    {
+      "file": "native-boundary-focus-recheck.mjs",
+      "bytes": 4891,
+      "sha256": "3562f7b10c6eeb125bf31618b386cf843e73cc394d6240917095f1e487fb6548"
+    },
+    {
+      "file": "native-boundary-inspect.mjs",
+      "bytes": 866,
+      "sha256": "5548afb71390922ec3579bb7b73ced826f0cd6f216200ad1daae2943dd6ee3f0"
+    },
+    {
+      "file": "native-boundary-keyboard.json",
+      "bytes": 35626,
+      "sha256": "a3c970a7e6cba42972f01726ede7eaafad006204649c3000b3f72cdd4fc3f089"
+    },
+    {
+      "file": "native-boundary-keyboard.mjs",
+      "bytes": 4172,
+      "sha256": "449dd70b232263d7b07c20c7ef4daafce178971ad8916e552b1c26d2052736d6"
+    },
+    {
+      "file": "native-boundary-mobile-village-390.png",
+      "bytes": 188748,
+      "sha256": "78fe0f27d66b9047e8b4ad444970d5bd3a9b0781f611011c24912daab447d78a"
+    },
+    {
+      "file": "native-boundary-mobile.json",
+      "bytes": 11921,
+      "sha256": "14a5c18d0d60d958a84c4b9087f4c0902c4993bef0647dda2ddf6643f3c169f9"
+    },
+    {
+      "file": "native-boundary-mobile.mjs",
+      "bytes": 4289,
+      "sha256": "a0649442f0cc488adf69a1627452487a47bd49e11501dd1c0dfaf57695befd1c"
+    },
+    {
+      "file": "native-boundary-notes.md",
+      "bytes": 7016,
+      "sha256": "f4b6fbc28ce189953a92dcc567a5c2559c027e7c8000e72aeff9bfe329ff8efa"
+    },
+    {
+      "file": "native-boundary-reset.json",
+      "bytes": 21865,
+      "sha256": "276da9e505cd93a41787119cae9b45a78db9335b1f972efb7352c78103aa718f"
+    },
+    {
+      "file": "native-boundary-reset.mjs",
+      "bytes": 2091,
+      "sha256": "66ef36e4c40668f2c39047d3173095b31adcb9763eb91ece05ccfd64426dc8de"
+    },
+    {
+      "file": "native-boundary-result.json",
+      "bytes": 19020,
+      "sha256": "4ea88b2ec548c9e39c5eed6e69f14d4b37123bac86e1a463ddfae2105a5d7dfb"
+    },
+    {
+      "file": "native-boundary-resume-dialogue-bottom-320.png",
+      "bytes": 131332,
+      "sha256": "cd43260a7bb59392346bda4d81de50a1708d72558e5369eee255cd1d9ef24b06"
+    },
+    {
+      "file": "native-boundary-resume-village-320.png",
+      "bytes": 151899,
+      "sha256": "0caffd1da6f25aa48405f9dcb63bc6685d54c9c51da7c7c829cfc88fef9122ef"
+    },
+    {
+      "file": "native-boundary-resume.json",
+      "bytes": 11909,
+      "sha256": "bb3f79bd0fad32c34f23cbbcbbc1f4b35b605d241284979fe8542b1f2f6906f9"
+    },
+    {
+      "file": "native-boundary-resume.mjs",
+      "bytes": 2248,
+      "sha256": "abbe43e4b3a2546668abcc76266d1e3118cec37ffde8da31c345524837d86d56"
+    },
+    {
+      "file": "native-boundary-slots.json",
+      "bytes": 17749,
+      "sha256": "4b72affee0f461c153a8d51c8c720ccf448da5f931cb1d812bf310c76e862bec"
+    },
+    {
+      "file": "native-boundary-slots.mjs",
+      "bytes": 3185,
+      "sha256": "b4681d83483df623847c85e5f3db0cc8613f6cfe34cd03bf606f164d002bfc09"
+    },
+    {
+      "file": "native-boundary-storage-failure-failure-banner-320.png",
+      "bytes": 448644,
+      "sha256": "9bfecdafbb70efdbbb6e0fc610bceb0006ac8266ed21f8373dc6816ccfd77636"
+    },
+    {
+      "file": "native-boundary-storage-failure.json",
+      "bytes": 45759,
+      "sha256": "be8120d354363e0bb31365e8d139d60bbdab1cf259835dc49fc15feaf20dbc79"
+    },
+    {
+      "file": "native-boundary-storage-failure.mjs",
+      "bytes": 3751,
+      "sha256": "5182d3a2ca04d1bda55e7b891423ad4d4476caab9f8b4c5ab783b1f0dc22a4a7"
+    },
+    {
+      "file": "native-browser-host.mjs",
+      "bytes": 4618,
+      "sha256": "6408e3ae522f0f024763e41a165b56b34417ca76bcc8ca08e38e0963253932c6"
+    },
+    {
+      "file": "native-capital-before-choice-profile.json",
+      "bytes": 7814,
+      "sha256": "36edff4b5cae48b3152586b520935d3ab2c5083d1595cfd5172e2f8d7954bcc9"
+    },
+    {
+      "file": "native-capital-before-choice-storage.json",
+      "bytes": 21044,
+      "sha256": "2757c6d982650dd58b3c9a01eb5b4ddc4bc625e2c0a87bcadac43f3855c3f90f"
+    },
+    {
+      "file": "native-capital-gate-before-choice-profile.json",
+      "bytes": 7814,
+      "sha256": "de5d1691347bb8da8a3970f25152031a5c527d64cb6c40ed9ea3327000d6ef85"
+    },
+    {
+      "file": "native-capital-gate-before-choice-storage.json",
+      "bytes": 21044,
+      "sha256": "5d33cf160375243ca7dc8ac02bddab2e0034eb955d097bcdd6d1623001fc0c26"
+    },
+    {
+      "file": "native-captain-trials-before-choice-profile.json",
+      "bytes": 12846,
+      "sha256": "178910e896a5b30bab3690363005cd582c7bd2a582b82a05ee5fdcfd16c86415"
+    },
+    {
+      "file": "native-captain-trials-before-choice-storage.json",
+      "bytes": 32701,
+      "sha256": "2dac1409b3d5c5fbcd0c08f9b429d6587cc966dc3becfbe1f7e898f5692141c7"
+    },
+    {
+      "file": "native-captain-trials-complete-profile.json",
+      "bytes": 14448,
+      "sha256": "07d32a0634be399e695a3111d5a29a2ba2aca6c4b4dd7b90695acbc6eddd781c"
+    },
+    {
+      "file": "native-captain-trials-complete-storage.json",
+      "bytes": 36299,
+      "sha256": "d49b402ebb55bc27067d12ccc7f7856615c7ed55557ff6d10051e30babe3e98a"
+    },
+    {
+      "file": "native-captain-trials-mid-profile.json",
+      "bytes": 13720,
+      "sha256": "cad575753e1cbf09c5d6c004cb69a6d81ca41411a73a669a479a38058f32c4ef"
+    },
+    {
+      "file": "native-captain-trials-mid-storage.json",
+      "bytes": 34736,
+      "sha256": "9730e7be9e79f7e21c5eded698c3e5917dd1ba843cda0fae8679b7cf2cbb22ce"
+    },
+    {
+      "file": "native-captain-trials-resolved-profile.json",
+      "bytes": 14165,
+      "sha256": "8bbaf93bcf9ae5cabe67a5e1021777a74e4b0c0cd8ec946c1d120fc46008bc7f"
+    },
+    {
+      "file": "native-captain-trials-resolved-storage.json",
+      "bytes": 35681,
+      "sha256": "ded5eaa3256fc95bb83ba91fa13d8e15912d70e4117758c7b6e29b5e18ffe754"
+    },
+    {
+      "file": "native-close.mjs",
+      "bytes": 381,
+      "sha256": "c5f4c7ca94c362890e539eecf77d0a1e4e217cbd68825055c6b6229b194574bd"
+    },
+    {
+      "file": "native-departure-night-before-choice-profile.json",
+      "bytes": 7457,
+      "sha256": "ec1c15aa43020bd77743e0cae9ca5729480d000eeb390e62ef4b5f889d24df3b"
+    },
+    {
+      "file": "native-departure-night-before-choice-storage.json",
+      "bytes": 20241,
+      "sha256": "ed7e01e5fdff514154cbec8d685e9ea3821d7d6efa298ac2515a999c3daa933e"
+    },
+    {
+      "file": "native-emergency-profile.json",
+      "bytes": 18785,
+      "sha256": "949cbdb7ac8667048dc5d0b31967ed6981ee5d87dce044869114063b4710721b"
+    },
+    {
+      "file": "native-emergency-storage.json",
+      "bytes": 46859,
+      "sha256": "779d7ac837e5544e2232510bea4b941062b648a5f091202c275dd48d8dadf73b"
+    },
+    {
+      "file": "native-field-complete-profile.json",
+      "bytes": 10270,
+      "sha256": "4b8e20b169fa56f9c9cd9e62940ba143b17515f945eb4f14d26e111422f5f06d"
+    },
+    {
+      "file": "native-field-complete-storage.json",
+      "bytes": 26769,
+      "sha256": "6f63850e49a2340c1c8bd5c9e8a3011c012c624f3d55a118ec2783704535436c"
+    },
+    {
+      "file": "native-field-exam-before-choice-profile.json",
+      "bytes": 8801,
+      "sha256": "0635a3e98be379d7f144b1b1fb4566cd8c988dbf10feb089733bc53e7e815c5f"
+    },
+    {
+      "file": "native-field-exam-before-choice-storage.json",
+      "bytes": 23372,
+      "sha256": "55e63e35ada468c078324f3e75853db0631c2e096a770faa9f4c4256c89a0a02"
+    },
+    {
+      "file": "native-field-mid-profile.json",
+      "bytes": 9610,
+      "sha256": "c0ecf3846fa43b1c0640d6a4fb7f40573466178cf6ec395c7720a176ef4d620e"
+    },
+    {
+      "file": "native-field-mid-storage.json",
+      "bytes": 25339,
+      "sha256": "bdcf1788fc364ea00759b8280adb9cf2acefa6934797dd5fb7f3e56f15bffe37"
+    },
+    {
+      "file": "native-field-return-profile.json",
+      "bytes": 9904,
+      "sha256": "087e35aff83e2dc6e47ba32bb79e7532461302484279a6f6202c9e316e2df1a3"
+    },
+    {
+      "file": "native-field-return-storage.json",
+      "bytes": 25966,
+      "sha256": "46434e929c1577cb16be16ea993ddb90a408cbc5040701a898df7980e2c798d4"
+    },
+    {
+      "file": "native-final-build-verification.json",
+      "bytes": 582,
+      "sha256": "51dbd2d3edead3e27b34937f740f73079fcff2a042378353eb9b96be829b8c86"
+    },
+    {
+      "file": "native-finish-origin.mjs",
+      "bytes": 4833,
+      "sha256": "546563b23e148c32d4d6e673c81b790e7ac862f3df7501a866c597084cbe45a2"
+    },
+    {
+      "file": "native-first-mission-prepared-profile.json",
+      "bytes": 17793,
+      "sha256": "74262a5f4e83aa615af0ba43a66db59d7a36e4e6a5ffe5ceff0c0341e517dea2"
+    },
+    {
+      "file": "native-first-mission-prepared-storage.json",
+      "bytes": 44046,
+      "sha256": "03f0d256e61d9483e67a5a67325e423bfe93ba75c776724b1c051d5145794199"
+    },
+    {
+      "file": "native-first-mode-select-profile.json",
+      "bytes": 26478,
+      "sha256": "22b5e3c9e3b70ea2021312617c6ada684fc647ce04e1f85129f485b6e8f5640c"
+    },
+    {
+      "file": "native-first-mode-select-storage.json",
+      "bytes": 176066,
+      "sha256": "8dae5043635045287809d1768e7f482124d1d63ec3b74a1af8321a3c42d78a3e"
+    },
+    {
+      "file": "native-hadori-ready-profile.json",
+      "bytes": 16242,
+      "sha256": "3d3f2ba0a2f316a1729ea4b264ac2b8a67a6b5c55673770c3435144949d68abc"
+    },
+    {
+      "file": "native-hadori-ready-storage.json",
+      "bytes": 40296,
+      "sha256": "254f11427a8698c5ebdd192f04664852c1ed22ec425c9a2bd2f5c0ab2ec125f2"
+    },
+    {
+      "file": "native-hadori-resolved-profile.json",
+      "bytes": 16646,
+      "sha256": "792ad8ab18824cff55ad54fcff725f44854be0fac65e91b03aa9acf43356e1b0"
+    },
+    {
+      "file": "native-hadori-resolved-storage.json",
+      "bytes": 41276,
+      "sha256": "118f400b58333a2b56f7947f5dcdbe31b995b8a47b40156d88907641780cc2fc"
+    },
+    {
+      "file": "native-hadori-resolved.png",
+      "bytes": 746768,
+      "sha256": "71fb40d4cc76965d76ef7175333c5ae45478d2673283a63aac761a29ab49757e"
+    },
+    {
+      "file": "native-hadori-wall-before-choice-profile.json",
+      "bytes": 16758,
+      "sha256": "552278b93f1862a89c5a716cd07884059295252ea3ae74cec9ff4e6f5f334e2b"
+    },
+    {
+      "file": "native-hadori-wall-before-choice-storage.json",
+      "bytes": 41511,
+      "sha256": "94a819cbabaaf132c3f4bef91afd2088b724bbfa884dbfb8f1472c79bcb20ff9"
+    },
+    {
+      "file": "native-inducted-profile.json",
+      "bytes": 17263,
+      "sha256": "241dad786fde3ae262d593786811857559f71f767df591278e202ee22d5332bc"
+    },
+    {
+      "file": "native-inducted-storage.json",
+      "bytes": 42699,
+      "sha256": "f0723215666d66d3d9ee9d5d87ae63504498d08583c49fb397df8338af76c8c0"
+    },
+    {
+      "file": "native-inducted.png",
+      "bytes": 1366428,
+      "sha256": "9b9a7c9121c907780c2ff117d19c36bb2d6f94b8cb577b327d0bd135a354977c"
+    },
+    {
+      "file": "native-initial.mjs",
+      "bytes": 454,
+      "sha256": "4dfbe19baec80e013243065cf4d60d7fb4c16ee1da40f64c3f95ed67db133a74"
+    },
+    {
+      "file": "native-kazrin-duel-before-choice-profile.json",
+      "bytes": 14469,
+      "sha256": "c7d2d032d1aaa5e109ba2a6c18aff0d9f6e095d08aca92218e8d7d384dd516d4"
+    },
+    {
+      "file": "native-kazrin-duel-before-choice-storage.json",
+      "bytes": 36356,
+      "sha256": "f6c0354eb1be40d70821e12f33892d8c1b57dd1221ce630fc615efe8b39df963"
+    },
+    {
+      "file": "native-kazrin-duel-complete-profile.json",
+      "bytes": 16221,
+      "sha256": "84e279198305be969941e1905020e865bbe1055fd11a1e86086157df5ffa3165"
+    },
+    {
+      "file": "native-kazrin-duel-complete-storage.json",
+      "bytes": 40239,
+      "sha256": "1d3aed722d7b9586a803049b7787d63786148c0cc504b445e0c98c63e8ab49da"
+    },
+    {
+      "file": "native-kazrin-duel-mid-profile.json",
+      "bytes": 15239,
+      "sha256": "34e6256840f0ebbb871e558a1f383d3ecbf67b98bd81a78aa46629d9ac953478"
+    },
+    {
+      "file": "native-kazrin-duel-mid-storage.json",
+      "bytes": 38135,
+      "sha256": "ce9d966ba5a570592e979232666a4d9965cc59459a38b1e2e5eb5ed22bf97350"
+    },
+    {
+      "file": "native-kazrin-duel-resolved-profile.json",
+      "bytes": 15948,
+      "sha256": "5e458ae2028647824dec0aa2924f47467fbe71b6bd80e6884b827d458da4bc45"
+    },
+    {
+      "file": "native-kazrin-duel-resolved-storage.json",
+      "bytes": 39641,
+      "sha256": "44a6325dca06908a23ce5a7dc40a0e6222e8e6ba8e5f540868442dacda1fa54c"
+    },
+    {
+      "file": "native-maru-door-before-choice-profile.json",
+      "bytes": 10825,
+      "sha256": "c31e16f0c346020b14e16b89eac1fd814b97babb74877011efa4a0a9891cdd6c"
+    },
+    {
+      "file": "native-maru-door-before-choice-storage.json",
+      "bytes": 28087,
+      "sha256": "726fd856367777da98b0eeab9cb5fa876d5e9811968f81cdb839bcef57fcdd6d"
+    },
+    {
+      "file": "native-petal-review-profile.json",
+      "bytes": 12456,
+      "sha256": "a743631a56541990cdef28236e2dda781635cae659e521ec4b07776d55b3ce09"
+    },
+    {
+      "file": "native-petal-review-storage.json",
+      "bytes": 31835,
+      "sha256": "34e33579e1658456f890d72f726950a428959b8236ec0ddb1ef4145c30ed208d"
+    },
+    {
+      "file": "native-recruiters-arrive-before-choice-profile.json",
+      "bytes": 6891,
+      "sha256": "61ade3e3de2925a74a85010d91044886f1bc09416eb3f7c792a11d5cd2e89703"
+    },
+    {
+      "file": "native-recruiters-arrive-before-choice-storage.json",
+      "bytes": 18904,
+      "sha256": "611f014c480b130771857350399048d545b9a3c58b1540b2e013928732ef71d4"
+    },
+    {
+      "file": "native-rescue-complete-profile.json",
+      "bytes": 6864,
+      "sha256": "1c61024826672406a17b964bb17e047bac0f3b2100968475356f2de3bb2dec8d"
+    },
+    {
+      "file": "native-rescue-complete-storage.json",
+      "bytes": 18835,
+      "sha256": "b643aa9131d73950ca9b8254623154836e4e2c031e6d87dcbaa39766c4343d32"
+    },
+    {
+      "file": "native-rescue-mid-profile.json",
+      "bytes": 6038,
+      "sha256": "57deb91e806039945643969c349f2bcaa59dff627b868c2f77dea6d7f40bc56b"
+    },
+    {
+      "file": "native-rescue-mid-storage.json",
+      "bytes": 16997,
+      "sha256": "5d2d3a74c20d85830085889706ee047782f3a4cf248a8bd00070f4654d82adab"
+    },
+    {
+      "file": "native-rescue-ready-profile.json",
+      "bytes": 5731,
+      "sha256": "1b832078f2856cf09e34008fb21ebc012ca6be586bfe6e5f3b8e18da75bbbdde"
+    },
+    {
+      "file": "native-rescue-ready-storage.json",
+      "bytes": 16283,
+      "sha256": "b4ba0101f060c13fe57a019bb7fa2b1c6bad369a7fbd9aafedadef51ef45a1fb"
+    },
+    {
+      "file": "native-rescue-return-confirm.png",
+      "bytes": 150355,
+      "sha256": "a939c2341c719a0e84ac614bd8429d6abf3319745c9175f5c78fb6fc6634599e"
+    },
+    {
+      "file": "native-rescue-return-near-profile.json",
+      "bytes": 6538,
+      "sha256": "40053d75fb62d21b2e27d70805a5417f1dfb915a6802fb2da261f8d53c0c3e66"
+    },
+    {
+      "file": "native-rescue-return-near-storage.json",
+      "bytes": 18112,
+      "sha256": "14bfe086be61e224603019f89bcbd7c3792ea44f848f3682b7afe6db351725e8"
+    },
+    {
+      "file": "native-rescue-return.mjs",
+      "bytes": 2843,
+      "sha256": "c94e3ebf98ff11e0597b8727843712290c3e707ca11cc7e550d1b3864814dd5a"
+    },
+    {
+      "file": "native-resume-setup.mjs",
+      "bytes": 1737,
+      "sha256": "bdf3b81c513871b738a409667fd6824b653683560d5934cb7ea916c5059c98c1"
+    },
+    {
+      "file": "native-river-incident-before-choice-profile.json",
+      "bytes": 5082,
+      "sha256": "ac7b66f532ba0ffd5c8a6478cc3e1207ddbd7a83effcd975f2590d515bdb1c3d"
+    },
+    {
+      "file": "native-river-incident-before-choice-storage.json",
+      "bytes": 14711,
+      "sha256": "461dffc78d461ef880e5f578c16e7adb02ee91d9377e282ae46173510c5ceac4"
+    },
+    {
+      "file": "native-root-last-error.json",
+      "bytes": 609,
+      "sha256": "5288197821d6c4d3fca9c56176b97882bec4fe28471258db0be7f29a763ea0fa"
+    },
+    {
+      "file": "native-root-steps.json",
+      "bytes": 67923,
+      "sha256": "e7236131b63ff5158f22650d2bca2018d1f1c11464efeac32d6894597d43435a"
+    },
+    {
+      "file": "native-run.mjs",
+      "bytes": 198,
+      "sha256": "cbb21e4e7d5d4e09073c19dcea2e2d8a9ef9e2e4759d9645de568db15ea7ec3f"
+    },
+    {
+      "file": "native-seventh-oath-before-choice-profile.json",
+      "bytes": 17004,
+      "sha256": "54ea11e261a1c55d543d35e6bfb12e332845f75d3408775e651818525944b84a"
+    },
+    {
+      "file": "native-seventh-oath-before-choice-storage.json",
+      "bytes": 42075,
+      "sha256": "42195b456cc0c5dd2068f9dcb12031581f45a3df30301ae852b93b5fdaa7b9ad"
+    },
+    {
+      "file": "native-sixteen-petals-before-choice-profile.json",
+      "bytes": 11318,
+      "sha256": "d39372b1de6aec048af83759b111390be3fcfcdf820bac00a5305ba88b9c9535"
+    },
+    {
+      "file": "native-sixteen-petals-before-choice-storage.json",
+      "bytes": 29250,
+      "sha256": "4d8e6d9445c40a6783e9f8fd8563c8bd497b15cea3630ccb64338114a8d6d132"
+    },
+    {
+      "file": "native-suspended-candidate-before-choice-profile.json",
+      "bytes": 10299,
+      "sha256": "24c5321e03380347902199eb3891db5116a41cc10f83fb43a1ea0c7eeb5ec71d"
+    },
+    {
+      "file": "native-suspended-candidate-before-choice-storage.json",
+      "bytes": 26842,
+      "sha256": "f3411612f2c2c01566f6c8d0a778f10bcf90af7d1e43af8221f0becf1007f9bc"
+    },
+    {
+      "file": "native-title.png",
+      "bytes": 1090340,
+      "sha256": "1aa87ba2da878f331004f7e8830c9f2c17a6fe6e04a6a2d4589b3d11e6abfb11"
+    },
+    {
+      "file": "native-village-dawn-before-choice-profile.json",
+      "bytes": 3970,
+      "sha256": "ba16afb7f7bbcac722a09858835e4ce06eaf569fa10a90ca3daa8f626389892a"
+    },
+    {
+      "file": "native-village-dawn-before-choice-storage.json",
+      "bytes": 11996,
+      "sha256": "adcabecc49246956896cccf862f9838aeb109f85a8cf1a21c3d6e2ba99bc3c47"
+    },
+    {
+      "file": "native-village-near-kazrin-profile.json",
+      "bytes": 3970,
+      "sha256": "7c1d18dfa5012a68899813d8eaa06e039c7246c2569b6a0fba34cafef7545137"
+    },
+    {
+      "file": "native-village-near-kazrin-storage.json",
+      "bytes": 11996,
+      "sha256": "5fbce7c2a3af8fb054ddc5199d4a27f98680121c0db4e857403d71338387d717"
+    },
+    {
+      "file": "native-village-scenes.mjs",
+      "bytes": 1751,
+      "sha256": "c8af5670ff885f0730e5121166aea53580cff44a32a5974ae45c84c318499c24"
+    },
+    {
+      "file": "native-village-start-390.png",
+      "bytes": 205702,
+      "sha256": "d9d2be842389b1dcb341c002ff94111f34fc15cf566196145c3b9c0c43f48f63"
+    },
+    {
+      "file": "native-village-start.mjs",
+      "bytes": 2697,
+      "sha256": "e0990776328b5ec851b6c9f430c3e00d3482b4d29f6c32f313e8620be80b594b"
+    },
+    {
+      "file": "native-windmill-trouble-before-choice-profile.json",
+      "bytes": 4484,
+      "sha256": "59e2b04c4a713b8dff6c5786d14945dc29597cb7d3b4d65cecebee2b302d35ba"
+    },
+    {
+      "file": "native-windmill-trouble-before-choice-storage.json",
+      "bytes": 13294,
+      "sha256": "757cfc9de43f6d7f0210f8a49b1f3f5b84f2137cf0794b181f8c7c199cec69c5"
+    },
+    {
+      "file": "eighth-batch-build-verification.json",
+      "bytes": 727,
+      "sha256": "1b4983e6b5b8a8278d427cf755f27539f4c1b031f352343ec0815deb6d8ff019"
+    },
+    {
+      "file": "eighth-batch-before-native-fixes-build-verification.json",
+      "bytes": 727,
+      "sha256": "2afeca7854e14b20c62a4619c4eaf85f174a864ffccc1542675ffb5d4b93849b"
+    },
+    {
+      "file": "VILLAGE_PLAYABLE_LOOP.md",
+      "bytes": 9806,
+      "sha256": "b34baf5b4e60c1be2ffc0d3dc779fdd49854cad66c63d60f04238ba695c27405"
+    },
+    {
+      "file": "FIELD_EXAM_PLAYABLE.md",
+      "bytes": 7434,
+      "sha256": "8a29140a8cd499eb6d3c64e8875716ce5032e5ecdea15fcff0617bdb04570501"
+    },
+    {
+      "file": "PETAL_TRAINING_PLAYABLE.md",
+      "bytes": 7277,
+      "sha256": "72bb7247197abcd60dec6bda754b9ddabe7503f1d9949a278efef8f8a8842635"
+    },
+    {
+      "file": "CAPTAIN_TRIALS_PLAYABLE.md",
+      "bytes": 9132,
+      "sha256": "2b665c9182639434a837406cd55ca05f67de58aa0ca07dc2e86a772e10654e74"
+    },
+    {
+      "file": "CAMPAIGN_BATTLE_RESUME.md",
+      "bytes": 5064,
+      "sha256": "1007ef3f463ea4bdfc498fd97be371dfa245b970194a149bbe4b96ee38696b66"
+    }
+  ],
+  "note": "Raw evidence is byte-for-byte copied. Embedded original work paths and historical failed runs are retained; current pass/fail scope is defined by the summary report and consolidated record."
+}

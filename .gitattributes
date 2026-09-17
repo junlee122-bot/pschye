@@ -1,0 +1,3 @@
+# Keep archived evidence and original documents byte-for-byte.
+/docs/reports/2026-09-handoff/** -text
+/docs/source/archive/** -text

@@ -114,3 +114,10 @@ public/
 - [원전 Markdown](docs/source/world-bible-v3.1.md)
 
 이 저장소의 목표는 원전을 축약하는 것이 아니라, **원전을 보존한 채 독자가 진실을 발견하는 순서를 장기 플레이 경험으로 번역하는 것**입니다.
+
+## 작업 보고서와 자산 보존 확인
+
+- [2026년 9월 작업 보고서·검증 증빙](docs/reports/2026-09-handoff/README.md)
+- [GitHub 자산 보존 및 로컬 정리 점검](docs/reports/2026-09-17-backup-audit.md)
+
+GitHub 저장소 이름은 게임명에 맞춰 `junlee122-bot/raonjena`로 변경했다. 새 PC의 시작 절차는 [현재 인계 안내](docs/HANDOFF_CURRENT.md)를 따른다.

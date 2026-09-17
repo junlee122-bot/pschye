@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-09-15T06:20:08.6860777Z",
+  "kind": "Roslyn C# 9 syntax only; not Unity compilation, type checking or engine execution",
+  "fileCount": 12,
+  "errorCount": 0,
+  "files": [
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Editor\\FoundationProject.cs",
+      "sha256": "80176f52dc825d90d47515ba1e04c267506fab04ce0ecbad18dbfdc904ee4b9f",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\FoundationBootstrap.cs",
+      "sha256": "1cbcb79da0c942d20448f77669336b3fd1fe310fd428d638176e238d0e44de87",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\FoundationHud.cs",
+      "sha256": "07326b0826e059c725cd1fcc5f7b841244e2fd3156d3f64180cecd2d071213be",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\FoundationInputDriver.cs",
+      "sha256": "ac6a68bbe4eb3ddf4a2ceb042d866d5f8d6e421aec60444ae1d0ef2ad8fd4f47",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\MovementMath.cs",
+      "sha256": "b153e5c1a1d27b8ac9e29dde4f15cb67039fc23279cbcd6906b54a99917ba791",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\RaonMotor.cs",
+      "sha256": "6a75bda1c3ba7464acde459b94ce70262feb9114683bbc940d0d397900e48f94",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\RaonVisual.cs",
+      "sha256": "99bd7898a4d3754f8f1a9a998182de3a0ea680270a179f6db2cfa213837f9b66",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Runtime\\ThirdPersonCameraRig.cs",
+      "sha256": "82e0b9abcd159d6d41268ed1e197127c3092f8273431ef82a710d3f9593f3d9a",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Tests\\EditMode\\MovementMathTests.cs",
+      "sha256": "ae958552578045017b5374d361997de719b17639efdac6487493a556b181d065",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Tests\\EditMode\\RaonVisualTests.cs",
+      "sha256": "865b345dc2e0a1645d0b41d53ecff342266bb8ec4bc3f6a4404fe03cbfa641f8",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Tests\\PlayMode\\RaonMovementPlayModeTests.cs",
+      "sha256": "7a380abb1e78e1bf1701ea2359b86ee582b7c9cb9b0e948a97ab06685937aaca",
+      "errors": []
+    },
+    {
+      "file": "<LOCAL_REPOSITORY>/unity/PsycheAdventure/Assets\\Adventure\\Tests\\PlayMode\\ThirdPersonCameraPlayModeTests.cs",
+      "sha256": "4d15dadc8b64ed2b944c40624acc8231f615720709206404b2c4f3f06c977ed4",
+      "errors": []
+    }
+  ]
+}

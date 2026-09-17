@@ -1,0 +1,5527 @@
+{
+  "origin": "http://127.0.0.1:4409/",
+  "startedAt": "2026-09-15T02:30:43.462Z",
+  "source": "bbcf10e",
+  "scope": "Copies of actual UI checkpoints; all alternative choices, failures, retries and completions below are real browser inputs.",
+  "cases": [
+    {
+      "scene": "field-exam",
+      "stance": "compassion",
+      "checkpoint": "native-field-exam-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "phase": "ready",
+            "choiceId": "rescue-team",
+            "attempt": 0,
+            "turn": 0,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "폐광 안의 두 지원자를 함께 데리고 나올 방법을 정했다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 1,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 2,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 3,
+            "integrity": 5,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 4,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 5,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 6,
+            "integrity": 5,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 7,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "7턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "failed",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 8,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "구조 제한 턴이 끝났다. 계획을 다시 세워야 한다.",
+              "8턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "7턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "phase": "failed",
+            "choiceId": "rescue-team",
+            "attempt": 1,
+            "turn": 8,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "구조 제한 턴이 끝났다. 계획을 다시 세워야 한다.",
+              "8턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "7턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 0,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"left\",\"right\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 1,
+            "integrity": 4,
+            "left": 1,
+            "right": 1,
+            "log": [
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"left\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 2,
+            "integrity": 5,
+            "left": 2,
+            "right": 1,
+            "log": [
+              "2턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 5",
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"left\",\"right\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 3,
+            "integrity": 2,
+            "left": 3,
+            "right": 2,
+            "log": [
+              "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 2",
+              "2턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 5",
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"right\"]",
+          "state": {
+            "phase": "return",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 3,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 3",
+              "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 2",
+              "2턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 5",
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "phase": "return",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 3,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 3",
+              "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 2",
+              "2턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 5",
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "phase": "complete",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 3,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "지원자들과 모두 함께 폐광에서 철수했다.",
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 3",
+              "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 2",
+              "2턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 5",
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-rescue"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "phase": "complete",
+            "choiceId": "rescue-team",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 3,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "지원자들과 모두 함께 폐광에서 철수했다.",
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 3",
+              "3턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 2",
+              "2턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 5",
+              "1턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-rescue"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-field-exam-compassion-complete.png"
+    },
+    {
+      "scene": "field-exam",
+      "stance": "resolve",
+      "checkpoint": "native-field-exam-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "phase": "ready",
+            "choiceId": "defy-order",
+            "attempt": 0,
+            "turn": 0,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "폐광 안의 두 지원자를 함께 데리고 나올 방법을 정했다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 1,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 2,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 3,
+            "integrity": 5,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 4,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 5,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 6,
+            "integrity": 5,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 7,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "7턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"brace\"]",
+          "state": {
+            "phase": "failed",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 8,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "구조 제한 턴이 끝났다. 계획을 다시 세워야 한다.",
+              "8턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "7턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "phase": "failed",
+            "choiceId": "defy-order",
+            "attempt": 1,
+            "turn": 8,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "구조 제한 턴이 끝났다. 계획을 다시 세워야 한다.",
+              "8턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "7턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "6턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "5턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "4턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "3턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 3, 통로 버팀 5",
+              "2턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 지지대 받치기 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 0,
+            "integrity": 6,
+            "left": 0,
+            "right": 0,
+            "log": [
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"left\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 1,
+            "integrity": 6,
+            "left": 1,
+            "right": 0,
+            "log": [
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"left\",\"right\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 2,
+            "integrity": 4,
+            "left": 2,
+            "right": 1,
+            "log": [
+              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"brace\",\"right\"]",
+          "state": {
+            "phase": "active",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 3,
+            "integrity": 3,
+            "left": 2,
+            "right": 2,
+            "log": [
+              "3턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 3",
+              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "action [\"left\",\"right\"]",
+          "state": {
+            "phase": "return",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 1,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 1",
+              "3턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 3",
+              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "phase": "return",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 1,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 1",
+              "3턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 3",
+              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "phase": "complete",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 1,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "지원자들과 모두 함께 폐광에서 철수했다.",
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 1",
+              "3턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 3",
+              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-defiance"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "phase": "complete",
+            "choiceId": "defy-order",
+            "attempt": 2,
+            "turn": 4,
+            "integrity": 1,
+            "left": 3,
+            "right": 3,
+            "log": [
+              "지원자들과 모두 함께 폐광에서 철수했다.",
+              "두 지원자를 출구까지 이끌었다. 모두와 함께 철수할 준비가 됐다.",
+              "4턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 1",
+              "3턴 · 라온: 지지대 받치기 / 레오: 오른쪽 구조 · 하중 3, 통로 버팀 3",
+              "2턴 · 라온: 왼쪽 구조 / 레오: 오른쪽 구조 · 하중 2, 통로 버팀 4",
+              "하도리가 지지대의 하중을 이어받았다. 라온은 레오와 구조를 계속할 수 있다.",
+              "1턴 · 라온: 지지대 받치기 / 레오: 왼쪽 구조 · 하중 2, 통로 버팀 6",
+              "라온과 레오가 두 갱도의 상태를 살폈다."
+            ]
+          },
+          "score": 27,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-defiance"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-field-exam-resolve-complete.png"
+    },
+    {
+      "scene": "sixteen-petals",
+      "stance": "compassion",
+      "checkpoint": "native-sixteen-petals-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "phase": "ready",
+            "choiceId": "remember-voices",
+            "attempt": 0,
+            "turn": 0,
+            "petals": 0,
+            "burden": 0,
+            "log": [
+              "마루가 기억하는 궤적을 자신의 몸으로 이어 갈 방법을 정했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 1,
+            "turn": 1,
+            "petals": 3,
+            "burden": 2,
+            "log": [
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 1,
+            "turn": 2,
+            "petals": 6,
+            "burden": 4,
+            "log": [
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 1,
+            "turn": 3,
+            "petals": 9,
+            "burden": 6,
+            "log": [
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "failed",
+            "choiceId": "remember-voices",
+            "attempt": 1,
+            "turn": 4,
+            "petals": 12,
+            "burden": 8,
+            "log": [
+              "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+              "4번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 8 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "phase": "failed",
+            "choiceId": "remember-voices",
+            "attempt": 1,
+            "turn": 4,
+            "petals": 12,
+            "burden": 8,
+            "log": [
+              "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+              "4번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 8 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 0,
+            "petals": 0,
+            "burden": 0,
+            "log": [
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 1,
+            "petals": 3,
+            "burden": 2,
+            "log": [
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 2,
+            "petals": 6,
+            "burden": 4,
+            "log": [
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 3,
+            "petals": 9,
+            "burden": 6,
+            "log": [
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"breathe\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 4,
+            "petals": 9,
+            "burden": 2,
+            "log": [
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 5,
+            "petals": 12,
+            "burden": 4,
+            "log": [
+              "5번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 4 / 8",
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 6,
+            "petals": 15,
+            "burden": 6,
+            "log": [
+              "6번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "5번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 4 / 8",
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"balance\"",
+          "state": {
+            "phase": "review",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 7,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "7번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "6번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "5번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 4 / 8",
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "phase": "review",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 7,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "7번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "6번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "5번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 4 / 8",
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "phase": "complete",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 7,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "마루 앞에서 이번 수련을 마무리했다.",
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "7번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "6번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "5번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 4 / 8",
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-from-bonds"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "phase": "complete",
+            "choiceId": "remember-voices",
+            "attempt": 2,
+            "turn": 7,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "마루 앞에서 이번 수련을 마무리했다.",
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "7번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "6번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "5번째 동작 · 보법 이어가기 · 궤적 12 / 16, 부담 4 / 8",
+              "4번째 동작 · 호흡 고르기 · 궤적 9 / 16, 부담 2 / 8",
+              "3번째 동작 · 보법 이어가기 · 궤적 9 / 16, 부담 6 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 6 / 16, 부담 4 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 3 / 16, 부담 2 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 45,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-from-bonds"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-sixteen-petals-compassion-complete.png"
+    },
+    {
+      "scene": "sixteen-petals",
+      "stance": "resolve",
+      "checkpoint": "native-sixteen-petals-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "phase": "ready",
+            "choiceId": "step-beyond-fall",
+            "attempt": 0,
+            "turn": 0,
+            "petals": 0,
+            "burden": 0,
+            "log": [
+              "마루가 기억하는 궤적을 자신의 몸으로 이어 갈 방법을 정했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 1,
+            "turn": 1,
+            "petals": 5,
+            "burden": 3,
+            "log": [
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 1,
+            "turn": 2,
+            "petals": 10,
+            "burden": 6,
+            "log": [
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "failed",
+            "choiceId": "step-beyond-fall",
+            "attempt": 1,
+            "turn": 3,
+            "petals": 15,
+            "burden": 8,
+            "log": [
+              "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+              "3번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 8 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "phase": "failed",
+            "choiceId": "step-beyond-fall",
+            "attempt": 1,
+            "turn": 3,
+            "petals": 15,
+            "burden": 8,
+            "log": [
+              "몸의 부담이 한계에 닿았다. 수련을 멈추고 다시 준비해야 한다.",
+              "3번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 8 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 0,
+            "petals": 0,
+            "burden": 0,
+            "log": [
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 1,
+            "petals": 5,
+            "burden": 3,
+            "log": [
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 2,
+            "petals": 10,
+            "burden": 6,
+            "log": [
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"breathe\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 3,
+            "petals": 10,
+            "burden": 3,
+            "log": [
+              "3번째 동작 · 호흡 고르기 · 궤적 10 / 16, 부담 3 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"trace\"",
+          "state": {
+            "phase": "active",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 4,
+            "petals": 15,
+            "burden": 6,
+            "log": [
+              "4번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "3번째 동작 · 호흡 고르기 · 궤적 10 / 16, 부담 3 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "action \"balance\"",
+          "state": {
+            "phase": "review",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 5,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "5번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "4번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "3번째 동작 · 호흡 고르기 · 궤적 10 / 16, 부담 3 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "phase": "review",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 5,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "5번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "4번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "3번째 동작 · 호흡 고르기 · 궤적 10 / 16, 부담 3 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "phase": "complete",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 5,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "마루 앞에서 이번 수련을 마무리했다.",
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "5번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "4번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "3번째 동작 · 호흡 고르기 · 궤적 10 / 16, 부담 3 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-borrowed-future"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "phase": "complete",
+            "choiceId": "step-beyond-fall",
+            "attempt": 2,
+            "turn": 5,
+            "petals": 16,
+            "burden": 7,
+            "log": [
+              "마루 앞에서 이번 수련을 마무리했다.",
+              "열여섯 움직임을 이었다. 마루 앞에서 이번 수련을 마무리할 준비가 됐다.",
+              "5번째 동작 · 무게 나누기 · 궤적 16 / 16, 부담 7 / 8",
+              "4번째 동작 · 보법 이어가기 · 궤적 15 / 16, 부담 6 / 8",
+              "3번째 동작 · 호흡 고르기 · 궤적 10 / 16, 부담 3 / 8",
+              "2번째 동작 · 보법 이어가기 · 궤적 10 / 16, 부담 6 / 8",
+              "1번째 동작 · 보법 이어가기 · 궤적 5 / 16, 부담 3 / 8",
+              "검로와 몸의 부담을 살피며 수련을 시작했다."
+            ]
+          },
+          "score": 46,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-borrowed-future"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-sixteen-petals-resolve-complete.png"
+    },
+    {
+      "scene": "captain-trials",
+      "stance": "compassion",
+      "checkpoint": "native-captain-trials-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "ready",
+            "attempt": 0,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 1,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 2,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 3,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 4,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 5,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 6,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 7,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 8,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 9,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 10,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 11,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 12,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 13,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 14,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "14번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 15,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "15번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "14번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 16,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "16번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "15번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "14번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 17,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "17번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "16번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "15번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "14번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 18,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "이번 대결의 동작이 끝났다. 다시 준비해야 한다.",
+              "18번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "17번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "16번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "15번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "14번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 18,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "이번 대결의 동작이 끝났다. 다시 준비해야 한다.",
+              "18번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "17번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "16번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "15번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "14번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "13번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "10번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "9번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "8번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "7번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 1,
+            "poise": 6,
+            "breath": 3,
+            "progress": 0,
+            "opening": true,
+            "log": [
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 2,
+            "poise": 6,
+            "breath": 2,
+            "progress": 1,
+            "opening": false,
+            "log": [
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 3,
+            "poise": 6,
+            "breath": 1,
+            "progress": 1,
+            "opening": true,
+            "log": [
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 5,
+            "poise": 4,
+            "breath": 3,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 6,
+            "poise": 6,
+            "breath": 4,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 7,
+            "poise": 6,
+            "breath": 3,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 8,
+            "poise": 6,
+            "breath": 2,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "8번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 3 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 8,
+            "poise": 6,
+            "breath": 2,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "8번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 3 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 8,
+            "poise": 6,
+            "breath": 2,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "8번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 3 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "spared-kain-pride"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "break-spear-not-kain",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 8,
+            "poise": 6,
+            "breath": 2,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "8번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 3 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 52,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "spared-kain-pride"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-captain-trials-compassion-complete.png"
+    },
+    {
+      "scene": "captain-trials",
+      "stance": "resolve",
+      "checkpoint": "native-captain-trials-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "ready",
+            "attempt": 0,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 1,
+            "poise": 3,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 2,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "2번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 3,
+            "poise": 1,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "3번째 동작 · 거리 두고 호흡 · 균형 1, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 4,
+            "poise": 2,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "4번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 1, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 5,
+            "poise": 0,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "균형이 무너졌다. 호흡과 방어를 다시 살펴보자.",
+              "5번째 동작 · 거리 두고 호흡 · 균형 0, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 1, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 5,
+            "poise": 0,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "균형이 무너졌다. 호흡과 방어를 다시 살펴보자.",
+              "5번째 동작 · 거리 두고 호흡 · 균형 0, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 1, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 1,
+            "poise": 6,
+            "breath": 3,
+            "progress": 0,
+            "opening": true,
+            "log": [
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 2,
+            "poise": 6,
+            "breath": 2,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 3,
+            "poise": 6,
+            "breath": 1,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 3 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 3 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 3 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "named-sixteen-petals"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "sceneId": "captain-trials",
+            "choiceId": "declare-my-name",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "4번째 동작 · 검로 잇기 · 균형 6, 호흡 0, 승부 진행 3 / 3",
+              "3번째 동작 · 비켜딛기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 검로 잇기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "1번째 동작 · 창 흘리기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 54,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "named-sixteen-petals"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-captain-trials-resolve-complete.png"
+    },
+    {
+      "scene": "kazrin-duel",
+      "stance": "compassion",
+      "checkpoint": "native-kazrin-duel-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "ready",
+            "attempt": 0,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 1,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 2,
+            "poise": 2,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "2번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 3,
+            "poise": 4,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 4,
+            "poise": 2,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "4번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 5,
+            "poise": 0,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "균형이 무너졌다. 호흡과 방어를 다시 살펴보자.",
+              "5번째 동작 · 거리 두고 호흡 · 균형 0, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 5,
+            "poise": 0,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "균형이 무너졌다. 호흡과 방어를 다시 살펴보자.",
+              "5번째 동작 · 거리 두고 호흡 · 균형 0, 호흡 4, 승부 진행 0 / 3",
+              "4번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "3번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "2번째 동작 · 거리 두고 호흡 · 균형 2, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 1,
+            "poise": 6,
+            "breath": 3,
+            "progress": 0,
+            "opening": true,
+            "log": [
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 2,
+            "poise": 6,
+            "breath": 2,
+            "progress": 0,
+            "opening": true,
+            "log": [
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 3,
+            "poise": 6,
+            "breath": 1,
+            "progress": 1,
+            "opening": false,
+            "log": [
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 1,
+            "opening": true,
+            "log": [
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 5,
+            "poise": 4,
+            "breath": 3,
+            "progress": 1,
+            "opening": false,
+            "log": [
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 6,
+            "poise": 6,
+            "breath": 4,
+            "progress": 1,
+            "opening": false,
+            "log": [
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 7,
+            "poise": 6,
+            "breath": 3,
+            "progress": 1,
+            "opening": true,
+            "log": [
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 8,
+            "poise": 6,
+            "breath": 2,
+            "progress": 1,
+            "opening": true,
+            "log": [
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 9,
+            "poise": 6,
+            "breath": 1,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 10,
+            "poise": 6,
+            "breath": 0,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 11,
+            "poise": 4,
+            "breath": 3,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 12,
+            "poise": 6,
+            "breath": 4,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 13,
+            "poise": 6,
+            "breath": 3,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "13번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 14,
+            "poise": 6,
+            "breath": 2,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "14번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "13번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 15,
+            "poise": 6,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "15번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+              "14번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "13번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 15,
+            "poise": 6,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "15번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+              "14번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "13번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 15,
+            "poise": 6,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "15번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+              "14번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "13번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly",
+            "trusted-kazrin-strength"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "trust-her-recovery",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 15,
+            "poise": 6,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "15번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 3 / 3",
+              "14번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 2 / 3",
+              "13번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 2 / 3",
+              "12번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 2 / 3",
+              "11번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "10번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "9번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 1 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 1 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 6, 호흡 4, 승부 진행 1 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 3, 승부 진행 1 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 1 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 1 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3"
+            ]
+          },
+          "score": 61,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly",
+            "trusted-kazrin-strength"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-kazrin-duel-compassion-complete.png"
+    },
+    {
+      "scene": "kazrin-duel",
+      "stance": "resolve",
+      "checkpoint": "native-kazrin-duel-before-choice-storage.json",
+      "steps": [
+        {
+          "label": "chosen",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "ready",
+            "attempt": 0,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 1,
+            "turn": 1,
+            "poise": 3,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 2,
+            "poise": 0,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "균형이 무너졌다. 호흡과 방어를 다시 살펴보자.",
+              "2번째 동작 · 거리 두고 호흡 · 균형 0, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "actual failure",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "failed",
+            "attempt": 1,
+            "turn": 2,
+            "poise": 0,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "균형이 무너졌다. 호흡과 방어를 다시 살펴보자.",
+              "2번째 동작 · 거리 두고 호흡 · 균형 0, 호흡 4, 승부 진행 0 / 3",
+              "1번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 4, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "retry without repeated rewards",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 0,
+            "poise": 6,
+            "breath": 4,
+            "progress": 0,
+            "opening": false,
+            "log": [
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 1,
+            "poise": 6,
+            "breath": 3,
+            "progress": 0,
+            "opening": true,
+            "log": [
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 2,
+            "poise": 6,
+            "breath": 2,
+            "progress": 0,
+            "opening": true,
+            "log": [
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 3,
+            "poise": 6,
+            "breath": 1,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 4,
+            "poise": 6,
+            "breath": 0,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 5,
+            "poise": 3,
+            "breath": 2,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"recover\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 6,
+            "poise": 4,
+            "breath": 4,
+            "progress": 2,
+            "opening": false,
+            "log": [
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"sidestep\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 7,
+            "poise": 4,
+            "breath": 3,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "7번째 동작 · 비켜딛기 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"parry\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "active",
+            "attempt": 2,
+            "turn": 8,
+            "poise": 4,
+            "breath": 2,
+            "progress": 2,
+            "opening": true,
+            "log": [
+              "8번째 동작 · 창 흘리기 · 균형 4, 호흡 2, 승부 진행 2 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "action \"counter\"",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 9,
+            "poise": 4,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "9번째 동작 · 검로 잇기 · 균형 4, 호흡 1, 승부 진행 3 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 4, 호흡 2, 승부 진행 2 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "pending result",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "resolved",
+            "attempt": 2,
+            "turn": 9,
+            "poise": 4,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "9번째 동작 · 검로 잇기 · 균형 4, 호흡 1, 승부 진행 3 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 4, 호흡 2, 승부 진행 2 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly"
+          ]
+        },
+        {
+          "label": "confirmed once",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 9,
+            "poise": 4,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "9번째 동작 · 검로 잇기 · 균형 4, 호흡 1, 승부 진행 3 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 4, 호흡 2, 승부 진행 2 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly",
+            "stood-beside-kazrin"
+          ]
+        },
+        {
+          "label": "next scene",
+          "state": {
+            "sceneId": "kazrin-duel",
+            "choiceId": "step-beside-not-behind",
+            "phase": "complete",
+            "attempt": 2,
+            "turn": 9,
+            "poise": 4,
+            "breath": 1,
+            "progress": 3,
+            "opening": false,
+            "log": [
+              "대결의 결과를 확인했다.",
+              "상대의 흐름을 끊고 대결을 마쳤다. 결과를 확인할 차례다.",
+              "9번째 동작 · 검로 잇기 · 균형 4, 호흡 1, 승부 진행 3 / 3",
+              "8번째 동작 · 창 흘리기 · 균형 4, 호흡 2, 승부 진행 2 / 3",
+              "7번째 동작 · 비켜딛기 · 균형 4, 호흡 3, 승부 진행 2 / 3",
+              "6번째 동작 · 거리 두고 호흡 · 균형 4, 호흡 4, 승부 진행 2 / 3",
+              "5번째 동작 · 거리 두고 호흡 · 균형 3, 호흡 2, 승부 진행 2 / 3",
+              "4번째 동작 · 비켜딛기 · 균형 6, 호흡 0, 승부 진행 2 / 3",
+              "3번째 동작 · 검로 잇기 · 균형 6, 호흡 1, 승부 진행 2 / 3",
+              "2번째 동작 · 창 흘리기 · 균형 6, 호흡 2, 승부 진행 0 / 3",
+              "1번째 동작 · 비켜딛기 · 균형 6, 호흡 3, 승부 진행 0 / 3",
+              "상대의 움직임과 호흡을 살피며 대결을 준비했다."
+            ]
+          },
+          "score": 62,
+          "flags": [
+            "observed-ann-style",
+            "read-kain-spear",
+            "awakened-route-sight",
+            "motive-truth",
+            "promise-question-history",
+            "found-selection-sabotage",
+            "studied-route-sight",
+            "field-split-command",
+            "traced-haechan-style",
+            "read-maru-hesitation",
+            "petals-distributed",
+            "countered-kain-perfectly",
+            "stood-beside-kazrin"
+          ]
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "screenshot": "<LOCAL_WORKSPACE>/work/native-alternatives-kazrin-duel-resolve-complete.png"
+    }
+  ],
+  "browser": "153.0.4234.32",
+  "finishedAt": "2026-09-15T02:32:15.463Z",
+  "browserClosed": true
+}

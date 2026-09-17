@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-09-15T06:38:59.752Z",
+  "implementationCommit": "2981276dc02561711ef31f6d15117a832bf76a7b",
+  "reportCharacters": 19993,
+  "reportLines": 309,
+  "uniqueExternalSources": 29,
+  "sourceUrls": [
+    "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-9-the-legend-of-zelda-tears-of-the-kingdom-part-1/",
+    "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-9-the-legend-of-zelda-tears-of-the-kingdom-part-4/",
+    "https://www.nintendo.com/us/whatsnew/ask-the-developer-vol-9-the-legend-of-zelda-tears-of-the-kingdom-part-5/",
+    "https://cedec.cesa.or.jp/2017/session/GD/s59007c6395fd6.html",
+    "https://cedec.cesa.or.jp/2017/session/PRD/s58eedbb3d91b9.html",
+    "https://cedec.cesa.or.jp/2024/session/detail/s661ccb97c2589/",
+    "https://www.pearlabyss.com/en-US/Board/Detail?_boardNo=14684",
+    "https://crimsondesert.pearlabyss.com/en-us/News/Notice/Detail?_boardNo=40",
+    "https://www.pearlabyss.com/en-US/Board/Detail?_boardNo=15139",
+    "https://www.pearlabyss.com/en-us/Company/About/Lab",
+    "https://www.pearlabyss.com/en-US/Board/Detail?_boardNo=11979",
+    "https://crimsondesert.pearlabyss.com/en-us/News/Notice/Detail?_boardNo=125",
+    "https://crimsondesert.pearlabyss.com/en-us/News/Notice/Detail?_boardNo=130",
+    "https://crimsondesert.pearlabyss.com/en-us/News/Notice/Detail?_boardNo=68",
+    "https://docs.unity3d.com/6000.0/Documentation/Manual/com.unity.ai.navigation.html",
+    "https://docs.unity3d.com/Packages/com.unity.inputsystem@1.14/manual/ActionBindings.html",
+    "https://docs.unity3d.com/Packages/com.unity.addressables@2.7/manual/index.html",
+    "https://docs.unity3d.com/Packages/com.unity.addressables@2.7/manual/memory-assets.html",
+    "https://dev.epicgames.com/documentation/en-us/unreal-engine/motion-matching-in-unreal-engine",
+    "https://docs.unity3d.com/6000.0/Documentation/Manual/choose-a-render-pipeline.html",
+    "https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine",
+    "https://unity.com/products/pricing-updates",
+    "https://www.unrealengine.com/license",
+    "https://docs.unity3d.com/6000.0/Documentation/Manual/system-requirements.html",
+    "https://dev.epicgames.com/documentation/en-us/unreal-engine/hardware-and-software-specifications-for-unreal-engine",
+    "https://partner.steamgames.com/doc/gettingstarted/contentsurvey?l=english",
+    "https://docs.unity3d.com/6000.0/Documentation/Manual/profiling-collect-data-introduction.html",
+    "https://partner.steamgames.com/doc/accessibility_features",
+    "https://unity.com/solutions/xbox"
+  ],
+  "relativeLinksChecked": true,
+  "outputMatchesRepository": true,
+  "sha256": "95e146921e6c14860a4bb72f1ebf80770e73a7c451a13a06e86bee49ed046f87",
+  "editorExecutionDuringResearch": false,
+  "reviews": [
+    "Nintendo/CEDEC facts and attribution reviewed independently",
+    "Project status, personnel and budget arithmetic reviewed independently"
+  ],
+  "costScenarios": [
+    {
+      "people": 3,
+      "months": 12,
+      "personMonths": 36,
+      "monthlyWon": [
+        6000000,
+        10000000
+      ],
+      "costEok": [
+        2.16,
+        3.6
+      ]
+    },
+    {
+      "people": 10,
+      "months": 18,
+      "personMonths": 180,
+      "monthlyWon": [
+        7000000,
+        11000000
+      ],
+      "costEok": [
+        12.6,
+        19.8
+      ]
+    },
+    {
+      "people": 30,
+      "months": 36,
+      "personMonths": 1080,
+      "monthlyWon": [
+        8000000,
+        13000000
+      ],
+      "costEok": [
+        86.4,
+        140.4
+      ]
+    },
+    {
+      "people": 100,
+      "months": 48,
+      "personMonths": 4800,
+      "monthlyWon": [
+        9000000,
+        15000000
+      ],
+      "costEok": [
+        432,
+        720
+      ]
+    }
+  ],
+  "costScope": "Illustrative assumptions for this project, not industry averages or the actual budgets of Zelda/Crimson Desert",
+  "repositoryCommit": "84225b224d1afb2bedc445ee7458a8a339b9dfd9",
+  "remoteCommitVerified": "84225b224d1afb2bedc445ee7458a8a339b9dfd9"
+}

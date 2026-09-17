@@ -1,13 +1,13 @@
 # 라온제나 — 다른 로컬에서 이어받기
 
-작성일: 2026-09-15. 저장소 이름·보고서 이관 안내 갱신: 2026-09-17. 마지막 게임 소스 작업은 `2981276`(9묶음 Unity 3인칭 기반)이다. 이 문서와 AAA 제작 조사는 그 이후 문서 커밋으로 함께 전달된다. 새 작업은 최신 `main`에서 시작한다.
+작성일: 2026-09-15. 마지막 게임 소스 작업은 `2981276`(9묶음 Unity 3인칭 기반)이다. 이 문서와 AAA 제작 조사는 그 이후 문서 커밋으로 함께 전달된다. 새 작업은 최신 `main`에서 시작한다.
 
 ## 1. 현재 상태
 
-- **웹:** 8묶음의 382개 테스트와 핵심 실브라우저 여정 검증 기록이 있다. 자세한 통과·미검증 범위는 [전체 여정 검증](FULL_JOURNEY_VERIFICATION.md)에 있다.
+- **웹:** 8묶음의 382개 테스트와 핵심 실브라우저 여정 검증 기록이 있다. 자세한 통과·미검증 범위는 [전체 여정 검증](https://github.com/junlee122-bot/raonjena/blob/main/docs/FULL_JOURNEY_VERIFICATION.md)에 있다.
 - **Unity:** `unity/PsycheAdventure`에 이동·점프·충돌·3인칭 카메라·연습장·라온 모델 로더와 테스트 34개를 작성했다. **패키지 해결·Unity 컴파일·테스트 실행·실플레이·Windows 빌드는 아직 미실행이다.**
 - **모델:** Unity용 PNG 텍스처 파생 GLB가 Git에 포함돼 있으므로 첫 실행을 위해 AI 생성이나 변환을 다시 할 필요가 없다. 원본 v2도 보존돼 있다. 최종 스키닝·재질 품질 승인은 남아 있다.
-- **문서:** [3인칭 기반](THIRD_PERSON_FOUNDATION.md), [Unity 시작 안내](../unity/PsycheAdventure/README.md), [젤다·붉은사막 수준 제작 조사](AAA_PRODUCTION_RESEARCH.md)를 먼저 읽는다.
+- **문서:** [3인칭 기반](https://github.com/junlee122-bot/raonjena/blob/main/docs/THIRD_PERSON_FOUNDATION.md), [Unity 시작 안내](https://github.com/junlee122-bot/raonjena/blob/main/unity/PsycheAdventure/README.md), [젤다·붉은사막 수준 제작 조사](https://github.com/junlee122-bot/raonjena/blob/main/docs/AAA_PRODUCTION_RESEARCH.md)를 먼저 읽는다.
 
 ## 2. 저장소 받기
 
@@ -15,14 +15,14 @@
 
 ```powershell
 git clone https://github.com/junlee122-bot/raonjena.git
-Set-Location raonjena
+Set-Location pschye
 git log -1 --oneline
 git status --short
 ```
 
 기존 클론을 쓴다면 자기 변경을 먼저 보존하고 정상적인 fast-forward 갱신을 사용한다. 다른 로컬 변경을 덮어쓰는 강제 reset·force push는 필요 없다.
 
-`Library`, `Temp`, 로컬 빌드·테스트 로그, `node_modules`, 로컬 Blender/AI 런타임, 비밀 환경변수는 저장소 복제로 전달되지 않는다. 기본 Unity 연습장 실행은 유료 AI API 키를 요구하지 않는다. 묶음별 최종 보고서와 검증 증빙은 [작업 보고서 보관함](reports/2026-09-handoff/README.md)에 이관했다. 이전 보고서는 작성 당시의 기록이며 현재 재개 순서와 미검증 범위는 이 인계 문서를 우선한다. 인증정보·브라우저 프로필·임시 다운로드는 공개 저장소에 보관하지 않는다.
+`Library`, `Temp`, 로컬 빌드·테스트 로그, `node_modules`, 로컬 Blender/AI 런타임, 비밀 환경변수는 저장소 복제로 전달되지 않는다. 기본 Unity 연습장 실행은 유료 AI API 키를 요구하지 않는다. 과거 외부 `outputs`의 모든 스크린샷·긴 대화가 복제되는 것은 아니지만 현재 시작 절차와 판정 경계는 이 저장소 안에 있다.
 
 ## 3. 첫 작업은 9묶음의 실제 엔진 검증
 

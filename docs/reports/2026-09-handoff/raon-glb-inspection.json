@@ -1,0 +1,38 @@
+{
+  "file": "public/models/characters/raon/raon-production-v2.glb",
+  "bytes": 5427548,
+  "meshes": 2,
+  "triangles": 42592,
+  "skinJoints": [
+    33
+  ],
+  "animations": [
+    "attackHeavy",
+    "attackLight",
+    "dodge",
+    "guard",
+    "hit",
+    "idle",
+    "jump",
+    "land",
+    "run",
+    "sprint",
+    "talkNeutral",
+    "walk",
+    "expressionSmile",
+    "expressionBlink",
+    "expressionConcern",
+    "expressionTalk"
+  ],
+  "materials": [
+    "Raon_HairCards",
+    "Raon_Skin_PBR",
+    "Raon_Hair_PBR",
+    "Raon_Shirt_PBR",
+    "Raon_Coat_PBR",
+    "Raon_Leather_PBR",
+    "Raon_Metal_PBR",
+    "Raon_Gold_PBR"
+  ],
+  "maxMorphTargets": 20
+}

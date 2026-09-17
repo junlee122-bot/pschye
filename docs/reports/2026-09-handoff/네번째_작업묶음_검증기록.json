@@ -1,0 +1,197 @@
+{
+  "verifiedAt": "2026-09-14T11:12:59.806Z",
+  "commit": "c3a1c933734ec2f50fe6a5b83cc9077170f58d52",
+  "previous": "2b9df5d5190c457a26d3d8a3385c0eaad23e4e4c",
+  "files": 25,
+  "workingTreeClean": true,
+  "sourceCanonUnchanged": true,
+  "tests": {
+    "passed": 239,
+    "files": 18
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "postSuiteChanges": {
+    "files": [
+      "src/styles.css",
+      "src/components/BattleScreen.tsx"
+    ],
+    "scope": "전투 페이지 여백 CSS 한 줄과 보상 안내 문구 한 줄",
+    "verification": "해당 TSX ESLint, 최종 production build 및 diff 검사 통과; 브라우저 재연결 오류로 최종 시각 재확인은 미완"
+  },
+  "build": {
+    "checkedAt": "2026-09-14T11:11:47.270Z",
+    "productionEntry": "assets/index-D03iHl_W.js",
+    "actionEntry": "assets/RaonActionBattle-DoyZQKwL.js",
+    "rescueEntry": "assets/VillageRescueEncounter-BBHVdu7P.js",
+    "authorChunksAbsent": true,
+    "battleResumeIncluded": true,
+    "chunks": [
+      "_VillagePrologue-CzsfmA2_.js",
+      "_VillagePrologue-DpY55hrw.css",
+      "_icons-nXLdifA7.js",
+      "_phaser-CSP61uFZ.js",
+      "_phaserRuntime-nOZ7DIWJ.js",
+      "_react-9LjzQdLw.js",
+      "index.html",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx",
+      "src/components/VillageRescueEncounter.tsx"
+    ]
+  },
+  "tactical": {
+    "task": "fourth-batch-tactical-checkpoint-validation",
+    "recordedDate": "2026-09-14",
+    "repository": "<LOCAL_REPOSITORY>",
+    "command": "node node_modules/vitest/vitest.mjs run --config .tmp/tactical-state-audit.config.ts",
+    "shell": "C:\\Windows\\System32\\cmd.exe",
+    "fixtureFiles": [
+      ".tmp/tactical-state-audit.ts",
+      ".tmp/tactical-state-audit.config.ts"
+    ],
+    "sourceChanges": false,
+    "rerunForThisRecord": false,
+    "method": [
+      "Wrapped the real createInitialBattleState, applyHeroSkill, endPlayerTurn and triggerTeamFinisher exports during the temporary test.",
+      "Validated every returned state with isBattleStateCheckpoint and its mission, frozen heroes, doctrine, difficulty, stance, pressure, bond support and tactical mode context.",
+      "Ran the existing runPlaytestAudit(204) unchanged through the wrapped engine.",
+      "Added all 16 Raon-containing deployments of 4 to 6 heroes across 8 missions, 3 difficulties and 2 doctrines.",
+      "The additional scenarios cycled the three stances and war pressure values 75, 85 and 100, with bond support 0 or 100."
+    ],
+    "results": {
+      "testFilesPassed": 1,
+      "testsPassed": 1,
+      "baselineCampaignPaths": 204,
+      "baselineBattles": 1632,
+      "stressBattles": 768,
+      "totalBattles": 2400,
+      "squadVariants": 16,
+      "checkedStates": 48794,
+      "rejectedStates": 0,
+      "statesWith18LogEntries": 26261,
+      "statesWithFocusChainAtLeast3": 4152,
+      "statesAtRoundLimit": 1533,
+      "statesWithWarPressureAtLeast75": 19913,
+      "statesByOperation": {
+        "create": 2400,
+        "skill": 34649,
+        "turn": 9758,
+        "finisher": 1987
+      },
+      "statesByPartySize": {
+        "4": 10094,
+        "5": 4904,
+        "6": 33796
+      },
+      "statesByOutcome": {
+        "active": 46394,
+        "victory": 1917,
+        "defeat": 483
+      },
+      "statesByBattlefieldRule": {
+        "standard": 18341,
+        "aerial-barrage": 6714,
+        "archive-seal": 7378,
+        "fractured-truce": 7387,
+        "temporal-echo": 8974
+      },
+      "failures": []
+    },
+    "limitations": [
+      "Deterministic tactical engine validation, not browser gameplay or a visual/interaction test.",
+      "This run checks tactical BattleState acceptance; it does not independently verify browser storage I/O, slot switching, action-scene timing or the entire CampaignBattleAttempt wrapper.",
+      "The stress fixture cycles stance, pressure and bond settings rather than taking the full Cartesian product of those modifiers.",
+      "No normal state rejection was observed in the exercised paths; this does not prove all possible action sequences are covered."
+    ],
+    "integrationNotes": [
+      "Temporary fixtures are in the ignored .tmp directory.",
+      "The fixture does not use a *.test.* filename and is selected only by its dedicated Vitest config.",
+      "No additional production fix was needed based on this run."
+    ]
+  },
+  "browser": {
+    "checkedAt": "2026-09-14T11:11:55Z",
+    "summary": "격리 origin에서 전술 실제 undo·저장 종료·새로고침·재개, 액션 실제 명령·저장 종료·새로고침·체크포인트 보존, 승리 자동 정산 후 재로드 중복 방지를 관찰했다. 390px 저장 카드와 액션 재개 안내는 가로 넘침이 없었다. 발견한 승리 화면 넘침·문구는 root가 수정했고 최종 fixture 빌드는 완료했으나 CUA 연결 단절로 수정 화면 재확인은 미완이다.",
+    "origin": "http://127.0.0.1:4397",
+    "buildBasis": {
+      "fixtureBaseHead": "2b9df5d5190c457a26d3d8a3385c0eaad23e4e4c",
+      "description": "당시 미커밋 fourth-batch 전투 저장 구현 포함. 원본 dist 대신 별도 fixture production build.",
+      "fixtureEntry": "index-BhNsPk2c.js",
+      "fixtureAction": "RaonActionBattle-D6ojTgna.js",
+      "finalCodeCommit": "c3a1c93",
+      "finalProductionEntry": "index-D03iHl_W.js",
+      "finalProductionAction": "RaonActionBattle-DoyZQKwL.js",
+      "difference": "fixture 이후 progression.ts의 동일 임무 settled 결과에서 선택 변경 시 이전 battleAttempt 정리 수정. 이 차이는 root의 추가 회귀 3개/전체 239개 테스트로 확인했으며 본 브라우저에서는 미확인.",
+      "finalFixtureEntry": "index-CVRbMALL.js",
+      "finalFixtureAction": "RaonActionBattle-BUSutGAE.js",
+      "finalFixtureCss": "index-CUmxpurm.css",
+      "finalFixtureDescription": "최종 c3a1c93에 해당하는 fd9b941 + BattleScreen.tsx 결과 안내 1줄 + styles.css .app-main-battle .battle-page margin:0. 47.95초 production fixture build 성공. CUA 재확인 실패."
+    },
+    "passed": [
+      "전술 API 시드(철문·측면 유도 2행동)가 타이틀의 '저장된 작전 이어하기'를 통해 실제 전투로 열렸다. 화면에 지휘점 2/4, 사기 56이 표시됐다.",
+      "실제 행동 취소 및 저장하고 나가기 후 실제 저장 재읽기에서 지휘점 3, 사기 32, 이력 깊이 1, 저격수 HP117·은폐·노출0을 확인했다.",
+      "새로고침 후 전술 이어가기에 지휘점 3/4·사기32·숨은 적·활성 행동 취소가 유지됐다. 남은 취소를 실제 클릭하고 나간 뒤 Hub의 방벽이 63에서 초기 26으로 돌아왔다.",
+      "390px Hub 저장 카드는 스크린샷에서 버튼·안내가 보였고 innerWidth390/clientWidth381/scrollWidth381로 가로 넘침이 없었다.",
+      "액션 직렬화 시드가 재개 전 일시정지 안내로 열렸고 생명115/139·사기32·방벽63이 일치했다. 390px 안내와 양쪽 선택 버튼은 화면에 들어왔고 clientWidth/scrollWidth 모두390이었다.",
+      "액션을 실제 재개해 레오 명령을 클릭하자 방벽+40·사기+14 로그와 수치가 표시됐다. 실제 일시정지, 재개, 저장하고 나가기, 새로고침, 이어가기를 수행했다.",
+      "액션 종료 전후 저장 재읽기의 battle/action 객체가 완전히 같았다. elapsed8.600219999408719초, HP97, 좌표382/389, 레오 cooldown5422.3466669003155ms, 하도리449.78000059128135ms가 유지됐고 재개 대기 화면에도 HP97·사기46·방벽85가 일치했다.",
+      "실제 엔진 기술/턴으로 만든 미정산 승리 시드(round2)가 App 로딩에서 정산됐다. 보급320→410·정보40→70·유물0→1·명성0→45·라온XP8→78, 완료 임무1·careerMissions1·settled=true를 확인했다.",
+      "실제 '저장된 결과 보기'와 새로고침 뒤 보상·진행·attempt를 포함한 저장 요약 전체가 최초 정산 값과 같았다."
+    ],
+    "remaining": [
+      "최종 fd9b941의 settled 결과에서 동일 임무 선택 변경·재출전 경로는 이 fixture 이후 수정되어 브라우저 미검증.",
+      "320px 및 연속 터치 홀드 이동은 미검증. 모바일 오른쪽 버튼 단일 클릭은 체크포인트 좌표를 바꾸지 않아 실제 이동 성공으로 기록하지 않았다.",
+      "출전 준비/방식 선택 및 액션 initial 시드는 준비했으나 이번 핵심 검증에서는 직접 사용하지 않았다.",
+      "390px 승리 화면의 14px 넘침과 첫 승리의 재현 안내 문구를 root가 수정했지만, 최종 빌드 뒤 CUA debugger 연결 실패로 실제 화면 재확인은 미완."
+    ],
+    "limitations": [
+      "테스트 전용 4397 origin 슬롯1이며 기존 사용자 origin/storage는 접근하지 않았다.",
+      "서장 완료는 시드 전제다. 전술 시작 2행동과 승리까지의 전투는 엔진 API 시드이며 브라우저 전체 플레이를 의미하지 않는다.",
+      "액션 시드의 최초 좌표382/389·elapsed1.25초·생명 손상·재사용 대기는 검증용 지정값과 실제 순수 규칙/serializer로 구성했다. 이후 레오 명령·전투 시간 진행·저장 종료는 실제 UI에서 수행했다.",
+      "브라우저 제어는 CUA만 사용했다. 비동기 검사 결과를 너무 일찍 읽은 JS 오류와 details summary의 역할 선택자 no_matches가 각1회 있었다. AX 인덱스 확인 후 정상 진행했으며 연속 transport/CDP 장애는 발생하지 않았다.",
+      "마지막 warn/error 최근12개 로그 조회는 빈 배열이었다. 전체 세션 무오류를 보장하는 근거로 사용하지 않는다.",
+      "최종 UI 재검증 때 기존 탭1908172948에 'Debugger is not attached' 발생. 인벤토리 조회 후 getTab으로 한 번 복구했으나 같은 오류로 실패하여 추가 검증을 중단했다."
+    ],
+    "cleanup": {
+      "initialViewportReset": true,
+      "initialServerSession": 57779,
+      "initialServerStopped": true,
+      "finalServerSession": 77866,
+      "finalServerStopped": true,
+      "serverExitCode": 1,
+      "method": "Ctrl+C",
+      "finalViewportSet": "Debugger is not attached 오류로 실행 확인 불가",
+      "finalViewportReset": "정리 호출도 같은 debugger 오류. 최초 세션의 reset 성공만 확인됨.",
+      "originalDistModified": false,
+      "sourceCodeModified": false
+    },
+    "screenshots": [
+      "<LOCAL_WORKSPACE>/outputs/fourth-batch-battle-hub-390.png",
+      "<LOCAL_WORKSPACE>/outputs/fourth-batch-action-resume-390.png",
+      "<LOCAL_WORKSPACE>/outputs/fourth-batch-victory-result-390.png"
+    ],
+    "evidence": [
+      "<LOCAL_WORKSPACE>/outputs/fourth-batch-tactical-undo-evidence.json",
+      "<LOCAL_WORKSPACE>/outputs/fourth-batch-action-checkpoint-evidence.json",
+      "<LOCAL_WORKSPACE>/outputs/fourth-batch-victory-settlement-evidence.json"
+    ],
+    "resolvedInSource": [
+      {
+        "observation": "390px 승리 결과 underlay에서 client381/scroll395, battle-page left-14/width408.8",
+        "change": "styles.css의 .app-main-battle .battle-page { margin: 0; }",
+        "browserRetest": "미완 - CUA debugger 연결 단절"
+      },
+      {
+        "observation": "첫 정산 결과에서 재현 작전 안내가 혼동을 일으킴",
+        "change": "자원·경험치 보상은 첫 승리 때 한 번 지급됩니다. 재현 작전은 최고 등급과 새 목격 기록을 갱신합니다.",
+        "browserRetest": "미완 - CUA debugger 연결 단절"
+      }
+    ]
+  },
+  "remotePush": false
+}

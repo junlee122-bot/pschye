@@ -1,0 +1,50 @@
+{
+  "verifiedAt": "2026-09-12T05:17:07.813Z",
+  "commit": "ebdc906b1d34aa8812bf859c80a5ca55a35e8d36",
+  "previous": "c74e47d0efadd0d420c8ea1b1044e7f14cf1c32c",
+  "workingTreeClean": true,
+  "sourceCanonUnchanged": true,
+  "tests": {
+    "passed": 168,
+    "files": 14
+  },
+  "checks": {
+    "typescript": true,
+    "eslint": true,
+    "productionBuild": true,
+    "diffCheck": true
+  },
+  "build": {
+    "checkedAt": "2026-09-12T05:15:22.643Z",
+    "productionEntry": "assets/index-BfTKkr8I.js",
+    "authorChunksAbsent": true,
+    "chunks": [
+      "_icons-CVhds-vW.js",
+      "_phaser-cpA8IgT_.js",
+      "_phaserRuntime-DZUgS_ig.js",
+      "_react-Shs5Id66.js",
+      "index.html",
+      "src/components/PhaserBattlefield.tsx",
+      "src/components/RaonActionBattle.tsx",
+      "src/components/VillageAdventure.tsx"
+    ],
+    "scope": "Production module manifest; public static source assets are not treated as secret."
+  },
+  "browser": {
+    "verifiedCommit": "c74e47d0efadd0d420c8ea1b1044e7f14cf1c32c",
+    "passed": [
+      "DAY 42 IndexedDB recovery after local corruption",
+      "Four-person action initial HP 139 and armor 12",
+      "Three deployed companion commands",
+      "Objective shield 42 with compassion and shelter"
+    ],
+    "incomplete": [
+      "Final record UI and village interaction retest",
+      "Grown and six-person action runtime",
+      "Mode switching runtime",
+      "Final mobile layout retest"
+    ],
+    "reason": "Repeated CUA/CDP transport timeouts"
+  },
+  "remotePush": false
+}

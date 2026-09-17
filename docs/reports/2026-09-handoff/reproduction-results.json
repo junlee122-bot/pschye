@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-09-10T11:40:30.480Z",
+  "node": {
+    "beforePoints": 1,
+    "afterPoints": 0,
+    "unlocked": [
+      "foundation",
+      "fieldcraft"
+    ],
+    "combatIdentical": true
+  },
+  "tactical": {
+    "commandPoints": 1,
+    "morale": 46,
+    "heroes": [
+      {
+        "id": "raon",
+        "hp": 374,
+        "shield": 0,
+        "acted": true,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      },
+      {
+        "id": "kazrin",
+        "hp": 142,
+        "shield": 0,
+        "acted": true,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      },
+      {
+        "id": "kain",
+        "hp": 152,
+        "shield": 0,
+        "acted": false,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      },
+      {
+        "id": "leo",
+        "hp": 174,
+        "shield": 0,
+        "acted": true,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      }
+    ],
+    "enemies": [
+      {
+        "id": "sky-sniper",
+        "hp": 117,
+        "shield": 0,
+        "acted": false,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": false
+      },
+      {
+        "id": "rifleman-a",
+        "hp": 0,
+        "shield": 0,
+        "acted": false,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      },
+      {
+        "id": "rifleman-b",
+        "hp": 0,
+        "shield": 0,
+        "acted": false,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      },
+      {
+        "id": "wing-lancer",
+        "hp": 0,
+        "shield": 0,
+        "acted": false,
+        "exposed": 0,
+        "stunned": 0,
+        "revealed": true
+      }
+    ]
+  }
+}

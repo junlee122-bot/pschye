@@ -7,7 +7,7 @@
 - 제외: Vercel에 별도로 올렸던 약식 빌드
 - 실행일: 2026-07-24
 - 브랜치: `main`
-- 원격 저장소: `https://github.com/junlee122-bot/pschye.git`
+- 원격 저장소: `https://github.com/junlee122-bot/raonjena.git`
 
 원격 저장소에는 아직 브랜치가 게시되어 있지 않아, 이번 검증은 원격 배포본이 아니라 GitHub에 게시할 전체 로컬 작업 트리를 기준으로 수행했다.
 
